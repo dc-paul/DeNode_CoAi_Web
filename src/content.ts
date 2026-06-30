@@ -4,17 +4,15 @@ import type { Lang } from "./lang";
 // translation (the live site's NL switcher is broken, so it could not be
 // scraped) — Paul to verify/replace with the authentic Dutch.
 
+// Local assets served from the Juno satellite — no dependency on the old Odoo site.
 export const IMG = {
-  hero: "https://www.denode.be/web/image/7025-e31fe066/nico_image%20affinity.webp",
-  workshop:
-    "https://www.denode.be/web/image/7854-56254baa/Foto%209-06-2026%20om%2013.38.webp",
-  katbove:
-    "https://www.denode.be/web/image/6122-0d276fe1/ANNOUNCEMENT-KRISTOF-WEBPUBLICATION2.webp",
-  drawing:
-    "https://www.denode.be/web/image/6121-75e1ec83/modelstudie.webp",
-  paul: "https://www.denode.be/web/image/5577-33b81847/Paul.webp",
-  kristof: "https://www.denode.be/web/image/7020-40794eef/Kristof.webp",
-  hanna: "https://www.denode.be/web/image/5506-a2246389/Hanna%20-%201.webp",
+  hero: "/images/nicolas-van-parys-kashi-rupe.webp",
+  workshop: "/images/workshop-cutting-reality.webp",
+  katbove: "/images/kat-bove-book.webp",
+  drawing: "/images/drawing-sessions.webp",
+  paul: "/images/team-paul-de-canniere.webp",
+  kristof: "/images/team-kristof-vander-cruyssen.webp",
+  hanna: "/images/team-hanna-ouaziz.webp",
 };
 
 interface Nav {

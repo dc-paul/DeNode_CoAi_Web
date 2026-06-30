@@ -2,8 +2,7 @@ import { useState } from "react";
 import { CONTENT } from "../content";
 import { href, LANGS, LANG_LABELS, type Lang } from "../lang";
 
-const LOGO =
-  "https://www.denode.be/web/image/website/1/logo/DeNode%20Foundation?unique=b9ce900";
+const LOGO = "/images/logo-denode.png";
 
 export function Header({ lang, page }: { lang: Lang; page: string }) {
   const [menu, setMenu] = useState(false);
