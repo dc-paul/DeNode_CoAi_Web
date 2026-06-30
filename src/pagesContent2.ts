@@ -192,6 +192,7 @@ export interface ProgramPost {
   teaser: string;
   href: string;
   tint: string;
+  slug?: string; // set when the full post has been migrated to an internal page
 }
 
 const PROGRAM_POSTS: ProgramPost[] = [
@@ -203,6 +204,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
       "In the spiritual heat of Varanasi, Nicolas Van Parys found the seed for his latest work.",
     href: "https://www.denode.be/en/blog/artists-7/nicolas-van-parys-325",
     tint: "#3f5135",
+    slug: "nicolas-van-parys",
   },
   {
     title: "About the hermit deep within us",
@@ -211,6 +213,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "Prof. Em. Freddy Decreus on John Robinson and the absence of a new myth.",
     href: "https://www.denode.be/en/blog/artists-7/about-the-hermit-deep-within-us-329",
     tint: "#6b6358",
+    slug: "about-the-hermit",
   },
   {
     title: "Bodies Eros and Thanatos",
@@ -219,6 +222,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "On the unspeakable in the art of Kat Bové, by Em. Prof. Freddy Decreus.",
     href: "https://www.denode.be/en/blog/artists-7/bodies-eros-and-thanatos-330",
     tint: "#c0397f",
+    slug: "bodies-eros-and-thanatos",
   },
   {
     title: "John Robinson",

@@ -52,7 +52,7 @@ interface HomeContent {
   cards: { title: string; lines: string[]; cta?: string; ctaHref?: string }[];
   blogHeading: string;
   viewEverything: string;
-  posts: { title: string; href: string; tint: string }[];
+  posts: { title: string; slug: string; tint: string }[];
 }
 
 interface LangContent {
@@ -64,17 +64,17 @@ interface LangContent {
 const POSTS = [
   {
     title: "About the hermit deep within us",
-    href: "https://www.denode.be/en/blog/artists-7/about-the-hermit-deep-within-us-329",
+    slug: "about-the-hermit",
     tint: "#6b6358",
   },
   {
     title: "Bodies Eros and Thanatos",
-    href: "https://www.denode.be/en/blog/artists-7/bodies-eros-and-thanatos-330",
+    slug: "bodies-eros-and-thanatos",
     tint: "#c0397f",
   },
   {
     title: "Nicolas Van Parys",
-    href: "https://www.denode.be/en/blog/artists-7/nicolas-van-parys-325",
+    slug: "nicolas-van-parys",
     tint: "#3f5135",
   },
 ];

@@ -10,10 +10,14 @@ import { Shop } from "./pages/Shop";
 import { Mission } from "./pages/Mission";
 import { Team } from "./pages/Team";
 import { Cookie } from "./pages/Cookie";
+import { BlogPost } from "./pages/BlogPost";
 import { Placeholder } from "./pages/Placeholder";
 import { parseHash, type Lang } from "./lang";
 
 function renderPage(page: string, lang: Lang) {
+  if (page.startsWith("blog/")) {
+    return <BlogPost lang={lang} slug={page.slice("blog/".length)} />;
+  }
   switch (page) {
     case "":
       return <Home lang={lang} />;

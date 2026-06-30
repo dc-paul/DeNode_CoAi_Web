@@ -32,7 +32,7 @@ export function Home({ lang }: { lang: Lang }) {
               <p>{h.hours}</p>
               <p>
                 <a
-                  href="https://www.denode.be/en/blog/kunstenaars-7/nicolas-van-parys-325"
+                  href={`#/${lang}/blog/nicolas-van-parys`}
                   className="font-semibold underline"
                   style={{ color: ACCENT }}
                 >
@@ -97,7 +97,7 @@ export function Home({ lang }: { lang: Lang }) {
           {h.posts.map((p) => (
             <a
               key={p.title}
-              href={p.href}
+              href={`#/${lang}/blog/${p.slug}`}
               className="group relative flex h-72 items-center justify-center overflow-hidden rounded-md p-6 text-center"
               style={{ backgroundColor: p.tint }}
             >

@@ -1,5 +1,6 @@
 import { PROGRAM } from "../pagesContent2";
-import type { Lang } from "../lang";
+import { getPost } from "../blogPosts";
+import { type Lang } from "../lang";
 
 const ACCENT = "#c0392b";
 
@@ -14,7 +15,11 @@ export function Program({ lang }: { lang: Lang }) {
         {p.posts.map((post) => (
           <a
             key={post.title}
-            href={post.href}
+            href={
+              post.slug && getPost(post.slug)
+                ? `#/${lang}/blog/${post.slug}`
+                : post.href
+            }
             className="group flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm transition-shadow hover:shadow-md"
           >
             <div
