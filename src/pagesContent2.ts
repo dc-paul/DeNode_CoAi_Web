@@ -231,6 +231,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "Curatorial text for the exhibition.",
     href: "https://www.denode.be/en/blog/exhibitions-11/john-robinson-323",
     tint: "#4a4a4a",
+    slug: "john-robinson",
   },
   {
     title: "Merel",
@@ -239,6 +240,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "The world of Merel Jansen smells of turpentine and oil paint.",
     href: "https://www.denode.be/en/blog/exhibitions-11/merel-321",
     tint: "#7a5230",
+    slug: "merel",
   },
   {
     title: "Lee Ranaldo",
@@ -247,6 +249,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "Recent works, many resulting from a 2025 residency in Krems, Austria.",
     href: "https://www.denode.be/en/blog/exhibitions-11/lee-ranaldo-319",
     tint: "#2f4858",
+    slug: "lee-ranaldo",
   },
   {
     title: "Vestiges — Chantal Pollier & Guillaume Van Moerkercke",
