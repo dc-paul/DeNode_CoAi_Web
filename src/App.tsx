@@ -19,7 +19,7 @@ function App() {
     <div className="relative isolate min-h-[100dvh]">
       <main className="mx-auto max-w-(--breakpoint-2xl) px-8 py-16 md:px-24 [@media(min-height:800px)]:min-h-[calc(100dvh-128px)]">
         <h1 className="text-5xl font-extrabold md:pt-16 md:text-6xl dark:text-white">
-          Welcome to Juno
+          Hello World
         </h1>
 
         <div className="mt-8 grid w-full max-w-2xl grid-cols-2 gap-8">
