@@ -13,6 +13,7 @@ export const IMG = {
   paul: "/images/team-paul-de-canniere.webp",
   kristof: "/images/team-kristof-vander-cruyssen.webp",
   hanna: "/images/team-hanna-ouaziz.webp",
+  katboveSolo: "/images/kat-bove-solo-assenede.webp",
 };
 
 interface Nav {
@@ -138,8 +139,7 @@ export const CONTENT: Record<Lang, LangContent> = {
           title: "Kat Bové - Book for sale",
           lines: ["Reserve a copy of Kat Bové's new book"],
           cta: "Buy the book",
-          ctaHref:
-            "https://www.denode.be/en/shop/kat-bove-give-me-a-sketchbook-to-live-in-132",
+          ctaHref: "#/en/shop",
         },
         {
           title: "Drawing sessions @ DeNode",
@@ -212,8 +212,7 @@ export const CONTENT: Record<Lang, LangContent> = {
           title: "Kat Bové - Livre à vendre",
           lines: ["Réservez une copie du nouveau livre de Kat Bové"],
           cta: "Achetez le livre",
-          ctaHref:
-            "https://www.denode.be/fr/shop/kat-bove-give-me-a-sketchbook-to-live-in-132",
+          ctaHref: "#/fr/shop",
         },
         {
           title: "Séances de dessin @ DeNode",
@@ -288,8 +287,7 @@ export const CONTENT: Record<Lang, LangContent> = {
           title: "Kat Bové - Boek te koop",
           lines: ["Reserveer een exemplaar van het nieuwe boek van Kat Bové"],
           cta: "Koop het boek",
-          ctaHref:
-            "https://www.denode.be/shop/kat-bove-give-me-a-sketchbook-to-live-in-132",
+          ctaHref: "#/nl/shop",
         },
         {
           title: "Tekensessies @ DeNode",
