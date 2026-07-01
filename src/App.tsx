@@ -1,72 +1,79 @@
 import { initSatellite } from "@junobuild/core";
-import { useEffect } from "react";
-import { Article } from "./components/Article";
-import { Background } from "./components/Background";
+import { useEffect, useState } from "react";
+import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
+import { Home } from "./pages/Home";
+import { Program } from "./pages/Program";
+import { Artists } from "./pages/Artists";
+import { Events } from "./pages/Events";
+import { Shop } from "./pages/Shop";
+import { Mission } from "./pages/Mission";
+import { Team } from "./pages/Team";
+import { Cookie } from "./pages/Cookie";
+import { BlogPost } from "./pages/BlogPost";
+import { EventDetail } from "./pages/EventDetail";
+import { ArtistDetail } from "./pages/ArtistDetail";
+import { Placeholder } from "./pages/Placeholder";
+import { parseHash, type Lang } from "./lang";
+
+function renderPage(page: string, lang: Lang) {
+  if (page.startsWith("blog/")) {
+    return <BlogPost lang={lang} slug={page.slice("blog/".length)} />;
+  }
+  if (page.startsWith("event/")) {
+    return <EventDetail lang={lang} slug={page.slice("event/".length)} />;
+  }
+  if (page.startsWith("artist/")) {
+    return <ArtistDetail lang={lang} slug={page.slice("artist/".length)} />;
+  }
+  switch (page) {
+    case "":
+      return <Home lang={lang} />;
+    case "program":
+      return <Program lang={lang} />;
+    case "artists":
+      return <Artists lang={lang} />;
+    case "events":
+      return <Events lang={lang} />;
+    case "shop":
+      return <Shop lang={lang} />;
+    case "team":
+      return <Team lang={lang} />;
+    case "mission":
+      return <Mission lang={lang} />;
+    case "cookie-policy":
+      return <Cookie lang={lang} />;
+    default:
+      return <Placeholder lang={lang} page={page} />;
+  }
+}
 
 function App() {
+  const [route, setRoute] = useState(() => parseHash(window.location.hash));
+
+  useEffect(() => {
+    const onHash = () => {
+      setRoute(parseHash(window.location.hash));
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
   useEffect(() => {
     (async () =>
       await initSatellite({
-        workers: {
-          auth: true,
-        },
+        workers: { auth: true },
       }))();
   }, []);
 
+  const { lang, page } = route;
+
   return (
-    <div className="relative isolate min-h-[100dvh]">
-      <main className="mx-auto max-w-(--breakpoint-2xl) px-8 py-16 md:px-24 [@media(min-height:800px)]:min-h-[calc(100dvh-128px)]">
-        <h1 className="text-5xl font-extrabold md:pt-16 md:text-6xl dark:text-white">
-          Hello World
-        </h1>
-
-        <div className="mt-8 grid w-full max-w-2xl grid-cols-2 gap-8">
-          <Hero
-            href="https://juno.build/docs/add-juno-to-an-app/create-a-satellite"
-            ariaLabel="Discover how to create a Satellite and deploy your project to production"
-          >
-            Not yet live? Launch your Satellite
-          </Hero>
-
-          <Article
-            href="https://juno.build/docs/guides/react"
-            ariaLabel="Open quickstart guides on Juno's website"
-            title="Quickstart"
-          >
-            Discover how to use React with Juno.
-          </Article>
-
-          <Article
-            href="https://juno.build/docs/category/build"
-            ariaLabel="Open the list of features for building apps on Juno's website"
-            title="Documentation"
-          >
-            Learn how Juno works and start building rich features.
-          </Article>
-
-          <Article
-            href="https://juno.build/docs/guides/github-actions"
-            ariaLabel="Open the guide to setting up GitHub Actions for Juno"
-            title="Continuous Integration"
-          >
-            Automate your deployment with GitHub Actions.
-          </Article>
-
-          <Article
-            href="https://discord.gg/wHZ57Z2RAG"
-            ariaLabel="Join Juno's Discord channel for questions or to share the fun"
-            title="Community"
-          >
-            Come say hi to our amazing Discord community. ❤️
-          </Article>
-        </div>
-      </main>
-
-      <Footer />
-
-      <Background />
+    <div className="min-h-[100dvh] bg-white text-black">
+      <Header lang={lang} page={page} />
+      <main>{renderPage(page, lang)}</main>
+      <Footer lang={lang} />
     </div>
   );
 }
