@@ -157,6 +157,31 @@ export const POSTS: Post[] = [
         t: "In Robinson's universe, retreat is therefore not an end, but a necessary threshold: a darkened place where meaning and existential orientation can arise in a completely different way, where the soul, after the collapse of exhausted representations, dares to begin again.",
       },
     ],
+    nl: {
+      title: "Over de kluizenaar diep in ons",
+      subtitle: "Prof. Em. Freddy Decreus",
+      body: [
+        { k: "p", t: "Met John Robinson ontstaat er geen nieuwe mythe in de klassieke zin van het woord. Er staat geen held op om de chaos te overwinnen, er wordt geen goddelijke orde hersteld, en geen enkel verhaal heelt voor eens en voor altijd de breuken van de tijd." },
+        { k: "p", t: "Wat in de plaats daarvan verschijnt is iets dat veel breekbaarder is: een schroomvolle herbetovering van een onttoverde wereld. Het is alsof de mythe niet langer kan bestaan als een gesloten en soeverein systeem, maar alleen nog als een flakkerend spoor, een echo die dwaalt door een hol landschap van tekens." },
+        { k: "p", t: "Binnen deze overgangswereld keren oude figuren terug: de Dood, de Ster, de Maan, de Kluizenaar. Maar ze dragen niet langer de zekerheden met zich mee die hen ooit omringden. Ze verschijnen als spectrale restanten van het culturele geheugen, losgezongen van hun oorspronkelijke context, drijvend door ruimtes van leegte en stilte." },
+        { k: "p", t: "Hun aanwezigheid schept geen helderheid; ze ontregelt. De mythe wordt niet gereconstrueerd maar opengebroken, ontdaan van haar ideologische harnas totdat er alleen nog een kwetsbare kern van existentiële ervaring overblijft." },
+        { k: "p", t: "In het centrum van deze vernieuwde mythologische ruimte staat de figuur van de Kluizenaar. Niet als een wijze meester die de weg kent, maar als een liminaal wezen, zwevend tussen verdwijning en verschijning, tussen cultuur en innerlijkheid, tussen leven en dood." },
+        { k: "p", t: "De Kluizenaar trekt zich terug uit de oververzadigde wereld van beelden en slogans, uit de uitgeputte taal van vooruitgang en identiteit. Zijn eenzaamheid is geen vlucht, maar een noodzakelijk gebaar van verzet. In een tijdperk waarin collectieve betekenissen afbrokkelen, wordt terugtrekking een spirituele daad: een poging om opnieuw te luisteren naar wat er nog ademt onder de ruïnes van de cultuur." },
+        { k: "p", t: "En toch blijft er een verontrustende vraag echoën door Robinsons universum:" },
+        { k: "q", t: "Is dit alles wat we kunnen doen?" },
+        { k: "p", t: "Kluizenaars worden tragische figuren die dwalen door een wereld 'Ohne People', ontdaan van gemeenschappelijke zekerheid en in de steek gelaten door de verhalen die ons ooit overeind hielden. \"Vertrouw nooit de beelden van de wereld,\" lijken de werken te fluisteren, \"want elk beeld is tijdelijk, elke representatie is verstrikt in macht.\" Het podium verandert in een veld van gebroken spiegels waarin het bewustzijn zelf wankelt, waar we er allemaal achter komen dat we ons verhaal niet coherent kunnen houden. Identiteit versplintert. Continuïteit lost op. De mens verliest zijn greep op de verhalen die ooit de werkelijkheid ordenden." },
+        { k: "p", t: "In die zin lijken Robinsons figuren gevangen in een staat van existentiële teruggang ('existential backtracking'). Een beweging die niet vooruitgaat, maar tegelijkertijd naar binnen en naar achteren is gericht: naar de terugtrekking, naar de stilte, naar de ontmanteling van zekerheid." },
+        { k: "p", t: "De Kluizenaar wordt verwant aan de dwalende verschoppeling, aan Herzog, aan Thug, ontheemde zielen die zich bewegen doorheen de ruïnes van uitgeputte betekenis. Men voelt in deze werken impressies van een post-Covid-bewustzijn: een wereld getekend door isolatie, onderbroken rituelen, rouw en de plotselinge kwetsbaarheid van alle menselijke structuren. De dood verschijnt niet langer als abstracte symboliek, maar als een intieme en collectieve wonde die stilzwijgend onder de oppervlakte van het dagelijks leven wordt meegedragen." },
+        { k: "p", t: "Daarom dragen Robinsons rituelen een vreemde, trillende spanning in zich. Ze lijken op spirituele séances, gebaren zonder vast geloof, bewegingen die tegelijkertijd leeg en geladen zijn. En toch, ondanks alles, brengen ze mensen samen; er hangt een gevoel van eenheid in de lucht, maar is die oprecht en betrouwbaar? Het is alsof de performers langzaam de uitgeholde symbolen van de westerse cultuur afpellen om een diepere innerlijke resonantie terug te vinden. Wat telt is niet het herstel van een gedeelde waarheid, maar de ervaring van de onzekerheid zelf, het vertoeven in een liminale toestand waarin oude zekerheden sterven voordat er al nieuwe vormen zijn geboren." },
+        { k: "p", t: "Soms suggereert Robinsons werk een iconoclastische impuls: moeten schilderijen zelf worden geruïneerd omdat ze slechts representaties zijn van een wereld die we moeten achterlaten? Moeten beelden in elkaar storten zodat de waarneming zelf opnieuw kan beginnen? De vernietiging van de representatie is hier niet louter nihilistisch; ze wordt voorbereidend, bijna ritueel, een opruimen van uitgeputte symbolische systemen om de mogelijkheid van een ander begin te heropenen." },
+        { k: "p", t: "Deze liminaliteit bereikt een bijzondere intensiteit in Thangka, waar een nieuwe tussenruimte ontstaat. Een plek waar de oude \"Leviathan\" sterft: de rigide structuren van macht, identiteit en culturele vanzelfsprekendheid. Wat overblijft is geen triomfantelijke wedergeboorte, maar een open veld van mogelijke transformaties. Een breekbaar terrein waarin overtuigingen weer vloeibaar worden en het individu zichzelf opnieuw moet uitvinden tegenover de onmetelijkheid van leven en dood." },
+        { k: "p", t: "Robinsons nieuwe metaforen – de mug, het verkrampte hoofd – functioneren op dezelfde manier. Het zijn geen stabiele symbolen binnen een nieuwe mythologie van het ego, maar symptomen van een wereld die haar vaste betekenissen heeft verloren. Toch ligt precies daarin hun kracht. Want door te weigeren de leegte te verhullen en deze in plaats daarvan zichtbaar te maken, openen ze een ruimte van nederigheid. Geen heroïsche mythologie van het zelf, maar een kwetsbaar bestaan dat leert hoe te vertoeven in onzekerheid." },
+        { k: "p", t: "En zo wordt de Kluizenaar uiteindelijk de centrale figuur van deze overgangstijd. Niet omdat hij antwoorden bezit, maar omdat hij de moed heeft om zich terug te trekken in de stilte tussen oude en nieuwe werelden. Hij bewaakt een innerlijke ruimte waarin de mens, ontdaan van zijn culturele maskers, opnieuw wordt geconfronteerd met de elementaire vragen over sterfelijkheid, verlies en transformatie." },
+        { k: "p", t: "Misschien is deze terugtrekking niet het einde van de reis. Misschien markeert het wat de Tarot de Nulpositie noemt, de plek die de Dwaas inneemt, het archetype van het potentieel. De figuur die aan de rand van de afgrond staat met bijna niets bij zich, ontdaan van zekerheid, identiteit en bestemming. Niet die triomfantelijke held van de klassieke mythe, maar de breekbare reiziger van een verbrijzeld tijdperk. De Dwaas stapt voorwaarts zonder garanties, en begint opnieuw precies ómdat alle voorgaande werelden uit elkaar zijn gevallen." },
+        { k: "p", t: "In Robinsons universum is terugtrekking daarom geen einde, maar een noodzakelijke drempel: een verduisterde plek waar betekenis en existentiële oriëntatie op een totaal andere manier kunnen ontstaan, waar de ziel, na de ineenstorting van uitgeputte representaties, opnieuw durft te beginnen." },
+        { k: "q", t: "Em. Prof. Decreus schreef deze tekst in het kader van de performances en de tentoonstelling PEOPLE RUIN PAINTINGS van John Robinson in stichting DeNode, gecureerd door Hanna Ouaziz — 14 februari - 28 april 2026" },
+      ],
+    },
   },
   {
     slug: "bodies-eros-and-thanatos",
@@ -331,6 +356,16 @@ export const POSTS: Post[] = [
       { k: "p", t: "He paints photographs from the darkroom, photographs drawings, and gives sound a cinematic form. Through short videos and collage loops, he builds installations that also incorporate poetry and typography." },
       { k: "p", t: "Wandels does not aspire to scientific objectivity; his oeuvre is rather a personal translation dictated by the logic and boundaries of the artistic material. The result is inherently ambiguous: a body of work that constantly moves between the tragic and the absurd." },
     ],
+    nl: {
+      title: "Björn Wandels",
+      subtitle: "",
+      body: [
+        { k: "h", t: "Bio Björn Wandels" },
+        { k: "p", t: "Björn Wandels (1979, Gent) hanteert een breed spectrum aan media in een hybride praktijk. Zijn werk bevraagt op ironische wijze de uitgangspunten van zowel analoge als digitale media door ze los te koppelen van hun traditionele context of functie." },
+        { k: "p", t: "Zo schildert hij foto's uit de donkere kamer, fotografeert hij tekeningen en geeft hij geluid een filmische vorm. Via korte video's en collage-loops bouwt hij aan installaties waarin ook poëzie en typografie een plek krijgen." },
+        { k: "p", t: "Wandels ambieert geen wetenschappelijke objectiviteit; zijn oeuvre is veeleer een persoonlijke vertaling gedicteerd door de logica en de grenzen van het artistieke materiaal. Het resultaat is inherent ambigu: een oeuvre dat zich voortdurend beweegt tussen het tragische en het absurde." },
+      ],
+    },
   },
   {
     slug: "robrecht-kessels",
@@ -349,6 +384,19 @@ export const POSTS: Post[] = [
       { k: "p", t: "Also in the theatre and dance world, Robrecht left his mark as a composer. His music can be heard, among other places, on the CD Folies de Flandre." },
       { k: "p", t: "Today he works under the name Ononde on a new phase of his artistic trajectory, in which he gives full scope to his passion for composing. The name Ononde phonetically refers to the repetitive surge of sea waves, to sound waves, and to \"in the name of.\"" },
     ],
+    nl: {
+      title: "Robrecht Kessels",
+      subtitle: "muzikant",
+      body: [
+        { k: "h", t: "Bio Robrecht Kessels" },
+        { k: "p", t: "Robrecht Kessels behaalde zijn Master in de muziek (cello) aan het conservatorium van Gent, waar hij zich tijdens zijn opleiding verdiepte in het klassieke repertoire. Al snel verbreedde hij zijn horizon en werd hij actief in uiteenlopende muzikale contexten. Hij speelde bij bands als Orange Pecco (Kinky Star records), Zjef Vanuytsel, Hooverphonic en Room 13 (met onder anderen Stijn Meuris)." },
+        { k: "p", t: "Met de groep Askanyi zocht hij de dialoog tussen traditionele Afrikaanse vocale muziek en het Westerse strijkkwartet. Dit bijzondere project werd artist in residence bij Espace Senghor in Brussel en kreeg erkenning op festivals als het Festival van Vlaanderen, het Cervantino Festival in Mexico en SIMA in Benin." },
+        { k: "p", t: "Daarnaast is Robrecht vaste cellist bij Ishtar, de band die bekendheid verwierf met de Eurosong-hit O Julissi in Belgrado." },
+        { k: "p", t: "Naast zijn podiumcarrière is hij voltijds verbonden aan de kunstacademie KATZ in Torhout, waar hij cello, improvisatie en muzieklab doceert. Zijn celloklas groeide in de loop der jaren uit tot meer dan 30 leerlingen." },
+        { k: "p", t: "Ook in de theater- en danswereld liet Robrecht zijn sporen na als componist. Zijn muziek is onder meer te horen op de cd Folies de Flandre." },
+        { k: "p", t: "Vandaag werkt hij onder de naam Ononde aan een nieuwe fase in zijn artistieke parcours, waarin hij zijn passie voor het componeren alle ruimte geeft. De naam Ononde verwijst fonetisch naar de repetitieve golfslag van zeewater, naar geluidsgolven, én naar \"in de naam van\"." },
+      ],
+    },
   },
 ];
 
