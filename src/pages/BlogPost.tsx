@@ -69,11 +69,13 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
         {post.date} · {post.author}
       </p>
 
-      <img
-        src={post.image}
-        alt={loc.title}
-        className="mt-8 w-full rounded-md object-cover shadow-sm"
-      />
+      {post.image && (
+        <img
+          src={post.image}
+          alt={loc.title}
+          className="mt-8 w-full rounded-md object-cover shadow-sm"
+        />
+      )}
 
       <div className="mt-10 space-y-5">
         {loc.body.map((b, i) => {

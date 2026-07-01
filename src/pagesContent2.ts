@@ -314,6 +314,24 @@ const PROGRAM_POSTS: ProgramPost[] = [
     tint: "#6b4a5a",
     slug: "the-church-of-kat-bove",
   },
+  {
+    title: "Between mask and identity — Kat Bové",
+    category: "papers",
+    date: "Apr 20, 2025",
+    teaser: "Liesbet Depauw in conversation with Kat Bové on loneliness, masks and the search for the light.",
+    href: "https://www.denode.be/en/blog/papers-9/between-mask-and-identity-the-duality-of-kat-bove-312",
+    tint: "#7a4a4a",
+    slug: "between-mask-and-identity",
+  },
+  {
+    title: "Okan-is-me",
+    category: "papers",
+    date: "Jul 11, 2025",
+    teaser: "Jakob Desmaele on the young Okan Mentes, who finds beauty even in the ugliest of places.",
+    href: "https://www.denode.be/en/blog/papers-9/okan-is-me-315",
+    tint: "#4a4a5a",
+    slug: "okan-is-me",
+  },
 ];
 
 interface ProgramContent {
