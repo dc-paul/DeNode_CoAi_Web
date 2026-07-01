@@ -74,8 +74,6 @@ export const EVENT_DETAILS: EventDetail[] = [
       ],
     },
   },
-];
-
   {
     slug: "drawing-sessions",
     image: "/images/drawing-sessions.webp",
