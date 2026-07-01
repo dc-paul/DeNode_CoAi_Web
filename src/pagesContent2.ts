@@ -141,6 +141,7 @@ interface ShopContent {
   title: string;
   productTitle: string;
   productDesc: string;
+  price: string;
   reserveCta: string;
   note: string;
   mailTo: string;
@@ -148,9 +149,8 @@ interface ShopContent {
   mailBody: string;
 }
 
-// Prijs + rekeningnummer nog te bevestigen door Paul → nu als [placeholder].
-const BOOK_PRICE = "[boekprijs]";
-const IBAN = "[IBAN Stichting DeNode]";
+const BOOK_PRICE = "35";
+const IBAN = "BE35 7350 7162 0037";
 
 export const SHOP: Record<Lang, ShopContent> = {
   en: {
@@ -158,6 +158,7 @@ export const SHOP: Record<Lang, ShopContent> = {
     productTitle: "Kat Bové — Give me a sketchbook to live in",
     productDesc:
       "Reserve a copy of Kat Bové's new book. Limited print run.",
+    price: "€ 35 · + € 7 shipping if posted",
     reserveCta: "Order by email",
     note: "Orders are handled by email for now — we'll confirm as soon as we receive your message.",
     mailTo: "info@denode.be",
@@ -178,6 +179,7 @@ export const SHOP: Record<Lang, ShopContent> = {
       "",
       "Payment:",
       `I have transferred € ${BOOK_PRICE} (+ € 7 shipping if posted) to ${IBAN}.`,
+      "Reference: Book purchase Kat Bové",
       "",
       "Thank you very much!",
       "",
@@ -190,6 +192,7 @@ export const SHOP: Record<Lang, ShopContent> = {
     productTitle: "Kat Bové — Give me a sketchbook to live in",
     productDesc:
       "Réservez une copie du nouveau livre de Kat Bové. Tirage limité.",
+    price: "€ 35 · + € 7 d'envoi le cas échéant",
     reserveCta: "Commander par e-mail",
     note: "Les commandes se font par e-mail pour le moment — nous confirmons dès réception de votre message.",
     mailTo: "info@denode.be",
@@ -210,6 +213,7 @@ export const SHOP: Record<Lang, ShopContent> = {
       "",
       "Paiement :",
       `J'ai viré € ${BOOK_PRICE} (+ € 7 de frais d'envoi le cas échéant) sur ${IBAN}.`,
+      "Communication : Achat livre Kat Bové",
       "",
       "Merci beaucoup !",
       "",
@@ -222,6 +226,7 @@ export const SHOP: Record<Lang, ShopContent> = {
     productTitle: "Kat Bové — Give me a sketchbook to live in",
     productDesc:
       "Reserveer een exemplaar van het nieuwe boek van Kat Bové. Beperkte oplage.",
+    price: "€ 35 · + € 7 verzending indien opsturen",
     reserveCta: "Bestel via e-mail",
     note: "Bestellingen verlopen voorlopig via e-mail — we bevestigen zodra we je bericht ontvangen.",
     mailTo: "info@denode.be",
@@ -242,6 +247,7 @@ export const SHOP: Record<Lang, ShopContent> = {
       "",
       "Betaling:",
       `Ik heb € ${BOOK_PRICE} (+ € 7 verzendingskosten indien opsturen) overgeschreven op ${IBAN}.`,
+      "Mededeling: Aankoop boek Kat Bové",
       "",
       "Alvast heel erg bedankt!",
       "",

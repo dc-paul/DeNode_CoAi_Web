@@ -22,6 +22,9 @@ export function Shop({ lang }: { lang: Lang }) {
         />
         <div>
           <h2 className="text-2xl font-bold text-black">{s.productTitle}</h2>
+          <p className="mt-2 text-xl font-bold" style={{ color: ACCENT }}>
+            {s.price}
+          </p>
           <p className="mt-4 text-[16px] leading-relaxed text-[#333]">
             {s.productDesc}
           </p>
