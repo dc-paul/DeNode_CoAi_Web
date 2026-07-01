@@ -11,6 +11,7 @@ export interface Localized {
   title: string;
   subtitle: string;
   body: Block[];
+  ai?: boolean; // true = AI-generated translation (no authentic source exists in this language)
 }
 
 export interface Post {
@@ -458,6 +459,17 @@ export const POSTS: Post[] = [
         { k: "p", t: "Wandels ambieert geen wetenschappelijke objectiviteit; zijn oeuvre is veeleer een persoonlijke vertaling gedicteerd door de logica en de grenzen van het artistieke materiaal. Het resultaat is inherent ambigu: een oeuvre dat zich voortdurend beweegt tussen het tragische en het absurde." },
       ],
     },
+    fr: {
+      title: "Björn Wandels",
+      subtitle: "",
+      ai: true,
+      body: [
+        { k: "h", t: "Bio Björn Wandels" },
+        { k: "p", t: "Björn Wandels (1979, Gand) déploie un large éventail de médias dans une pratique hybride. Son œuvre interroge avec ironie les présupposés des médias tant analogiques que numériques en les détachant de leur contexte ou de leur fonction traditionnels." },
+        { k: "p", t: "Ainsi peint-il des photographies issues de la chambre noire, photographie-t-il des dessins et donne-t-il au son une forme cinématographique. À travers de courtes vidéos et des boucles de collage, il construit des installations où la poésie et la typographie trouvent également leur place." },
+        { k: "p", t: "Wandels n'ambitionne aucune objectivité scientifique ; son œuvre est plutôt une traduction personnelle dictée par la logique et les limites du matériau artistique. Le résultat est intrinsèquement ambigu : une œuvre qui oscille sans cesse entre le tragique et l'absurde." },
+      ],
+    },
   },
   {
     slug: "robrecht-kessels",
@@ -487,6 +499,20 @@ export const POSTS: Post[] = [
         { k: "p", t: "Naast zijn podiumcarrière is hij voltijds verbonden aan de kunstacademie KATZ in Torhout, waar hij cello, improvisatie en muzieklab doceert. Zijn celloklas groeide in de loop der jaren uit tot meer dan 30 leerlingen." },
         { k: "p", t: "Ook in de theater- en danswereld liet Robrecht zijn sporen na als componist. Zijn muziek is onder meer te horen op de cd Folies de Flandre." },
         { k: "p", t: "Vandaag werkt hij onder de naam Ononde aan een nieuwe fase in zijn artistieke parcours, waarin hij zijn passie voor het componeren alle ruimte geeft. De naam Ononde verwijst fonetisch naar de repetitieve golfslag van zeewater, naar geluidsgolven, én naar \"in de naam van\"." },
+      ],
+    },
+    fr: {
+      title: "Robrecht Kessels",
+      subtitle: "musicien",
+      ai: true,
+      body: [
+        { k: "h", t: "Bio Robrecht Kessels" },
+        { k: "p", t: "Robrecht Kessels a obtenu son Master en musique (violoncelle) au conservatoire de Gand, où il a approfondi le répertoire classique durant ses études. Il a rapidement élargi son horizon et s'est engagé dans des contextes musicaux variés. Il a joué avec des groupes tels qu'Orange Pecco (Kinky Star records), Zjef Vanuytsel, Hooverphonic et Room 13 (avec entre autres Stijn Meuris)." },
+        { k: "p", t: "Avec le groupe Askanyi, il a recherché le dialogue entre la musique vocale traditionnelle africaine et le quatuor à cordes occidental. Ce projet singulier a été artiste en résidence à l'Espace Senghor à Bruxelles et a été salué lors de festivals tels que le Festival de Flandre, le Festival Cervantino au Mexique et le SIMA au Bénin." },
+        { k: "p", t: "Par ailleurs, Robrecht est violoncelliste permanent d'Ishtar, le groupe qui s'est fait connaître avec le tube de l'Eurovision O Julissi à Belgrade." },
+        { k: "p", t: "Outre sa carrière scénique, il est employé à temps plein à l'académie des arts KATZ à Torhout, où il enseigne le violoncelle, l'improvisation et le laboratoire musical. Au fil des ans, sa classe de violoncelle a grandi jusqu'à compter plus de 30 élèves." },
+        { k: "p", t: "Dans le monde du théâtre et de la danse également, Robrecht a laissé son empreinte comme compositeur. Sa musique est notamment audible sur le CD Folies de Flandre." },
+        { k: "p", t: "Aujourd'hui, il travaille sous le nom d'Ononde à une nouvelle phase de son parcours artistique, où il donne libre cours à sa passion pour la composition. Le nom Ononde renvoie phonétiquement au ressac répétitif de l'eau de mer, aux ondes sonores, et à « au nom de »." },
       ],
     },
   },

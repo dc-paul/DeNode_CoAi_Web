@@ -1,4 +1,4 @@
-import { getPost } from "../blogPosts";
+import { getPost, type Localized } from "../blogPosts";
 import { href, type Lang } from "../lang";
 
 const ACCENT = "#c0392b";
@@ -11,6 +11,11 @@ const NOT_FOUND: Record<Lang, string> = {
   nl: "Artikel niet gevonden",
   en: "Article not found",
   fr: "Article introuvable",
+};
+const AI_NOTE: Record<Lang, string> = {
+  nl: "Deze vertaling is automatisch (AI) gegenereerd.",
+  en: "This translation was automatically (AI) generated.",
+  fr: "Cette traduction a été générée automatiquement (IA).",
 };
 
 export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
@@ -31,7 +36,7 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
     );
   }
 
-  const loc =
+  const loc: Localized =
     lang === "nl" && post.nl
       ? post.nl
       : lang === "fr" && post.fr
@@ -47,6 +52,10 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
       >
         {BACK[lang]}
       </a>
+
+      {loc.ai && (
+        <p className="mt-4 text-xs italic text-[#999]">{AI_NOTE[lang]}</p>
+      )}
 
       <h1 className="mt-6 text-4xl font-extrabold leading-tight text-black md:text-5xl">
         {loc.title}
