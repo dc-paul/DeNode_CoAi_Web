@@ -2,9 +2,15 @@ import { getArtist } from "../artistDetails";
 import { exposForArtist } from "../expos";
 import { getPost } from "../blogPosts";
 import { RefCard } from "../components/RefCard";
+import { Breadcrumb } from "../components/Breadcrumb";
 import { href, type Lang } from "../lang";
 
 const ACCENT = "#a23b2d";
+const ROOT: Record<Lang, string> = {
+  nl: "Kunstenaars",
+  en: "Artists",
+  fr: "Artistes",
+};
 const T: Record<
   Lang,
   {
@@ -76,11 +82,12 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
-      <a href={href(lang, "artists")} className="text-sm font-medium" style={{ color: ACCENT }}>
-        {t.back}
-      </a>
+      <Breadcrumb
+        lang={lang}
+        trail={[{ label: ROOT[lang], page: "artists" }, { label: artist.name }]}
+      />
 
-      <h1 className="dn-name mt-6 text-5xl font-medium leading-tight text-black md:text-6xl">
+      <h1 className="dn-name mt-2 text-5xl font-medium leading-tight text-black md:text-6xl">
         {artist.name}
       </h1>
       {artist.role && <p className="mt-3 text-xl text-[#555]">{artist.role[lang]}</p>}

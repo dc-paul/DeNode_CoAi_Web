@@ -1,5 +1,6 @@
 import { CONTENT, IMG } from "../content";
 import { getPost } from "../blogPosts";
+import { Band } from "../components/Band";
 import type { Lang } from "../lang";
 
 const ACCENT = "#a23b2d";
@@ -56,7 +57,9 @@ export function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      <section className="bg-[#f7f7f5] py-14">
+      <Band lang={lang} />
+
+      <section className="bg-[#eae5da] py-14">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-10">
           {h.cards.map((c, i) => {
             const link = CARD_LINKS[i];

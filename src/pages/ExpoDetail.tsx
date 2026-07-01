@@ -1,10 +1,28 @@
 import { getExpo } from "../expos";
 import { getPost } from "../blogPosts";
 import { getEvent } from "../eventDetails";
+import { getArtist } from "../artistDetails";
 import { RefCard } from "../components/RefCard";
+import { Band } from "../components/Band";
+import { Breadcrumb } from "../components/Breadcrumb";
 import { href, type Lang } from "../lang";
 
 const ACCENT = "#a23b2d";
+const ROOT: Record<Lang, string> = {
+  nl: "Tentoonstellingen",
+  en: "Exhibitions",
+  fr: "Expositions",
+};
+const ABOUT_ARTIST: Record<Lang, string> = {
+  nl: "Over de kunstenaar",
+  en: "About the artist",
+  fr: "À propos de l'artiste",
+};
+const VIEW_ARTIST: Record<Lang, string> = {
+  nl: "Bekijk kunstenaar →",
+  en: "View artist →",
+  fr: "Voir l'artiste →",
+};
 const T: Record<
   Lang,
   {
@@ -82,12 +100,14 @@ export function ExpoDetail({ lang, slug }: { lang: Lang; slug: string }) {
   }
 
   return (
+    <>
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
-      <a href={href(lang, "expo")} className="text-sm font-medium" style={{ color: ACCENT }}>
-        {t.back}
-      </a>
+      <Breadcrumb
+        lang={lang}
+        trail={[{ label: ROOT[lang], page: "expo" }, { label: expo.title }]}
+      />
 
-      <p className="mt-6 text-sm font-semibold tabular-nums" style={{ color: ACCENT }}>
+      <p className="mt-2 text-sm font-semibold tabular-nums" style={{ color: ACCENT }}>
         {expo.period}
       </p>
       <h1 className="mt-1 text-4xl font-extrabold leading-tight text-black md:text-5xl">
@@ -207,5 +227,40 @@ export function ExpoDetail({ lang, slug }: { lang: Lang; slug: string }) {
         </div>
       )}
     </article>
+
+      <Band lang={lang} />
+
+      {(() => {
+        const primary = expo.artists.find((a) => a.slug);
+        if (!primary?.slug) return null;
+        const ar = getArtist(primary.slug);
+        return (
+          <section className="bg-[#eae5da]">
+            <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 py-14 md:flex-row md:items-center md:px-8">
+              {ar?.image && (
+                <img
+                  src={ar.image}
+                  alt={primary.name}
+                  className="h-40 w-40 shrink-0 object-cover shadow-sm"
+                />
+              )}
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8a8477]">
+                  {ABOUT_ARTIST[lang]}
+                </p>
+                <p className="dn-name mt-1 text-3xl text-black">{primary.name}</p>
+                <a
+                  href={href(lang, `artist/${primary.slug}`)}
+                  className="mt-3 inline-block font-medium"
+                  style={{ color: ACCENT }}
+                >
+                  {VIEW_ARTIST[lang]}
+                </a>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+    </>
   );
 }
