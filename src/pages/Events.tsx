@@ -6,7 +6,7 @@ const MORE: Record<Lang, string> = {
   en: "More info & registration →",
   fr: "Plus d'infos & inscription →",
 };
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 
 export function Events({ lang }: { lang: Lang }) {
   const e = EVENTS[lang];

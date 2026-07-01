@@ -23,20 +23,20 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
         </a>
 
         <nav className="hidden items-center gap-7 text-[15px] text-black md:flex">
-          <a href={href(lang, "program")} className="hover:text-[#c0392b]">
+          <a href={href(lang, "program")} className="hover:text-[#a23b2d]">
             {t.program}
           </a>
-          <a href={href(lang, "expo")} className="hover:text-[#c0392b]">
+          <a href={href(lang, "expo")} className="hover:text-[#a23b2d]">
             {x.expo}
           </a>
-          <a href={href(lang, "artists")} className="hover:text-[#c0392b]">
+          <a href={href(lang, "artists")} className="hover:text-[#a23b2d]">
             {t.artists}
           </a>
-          <a href={href(lang, "events")} className="hover:text-[#c0392b]">
+          <a href={href(lang, "events")} className="hover:text-[#a23b2d]">
             {x.events}
           </a>
           <div className="group relative">
-            <button className="hover:text-[#c0392b]">{t.foundation} ▾</button>
+            <button className="hover:text-[#a23b2d]">{t.foundation} ▾</button>
             <div className="absolute right-0 hidden min-w-[160px] flex-col rounded-md border border-[#ececec] bg-white py-2 shadow-lg group-hover:flex">
               <a href={href(lang, "team")} className="px-4 py-2 hover:bg-[#f7f7f5]">
                 {t.team}
@@ -49,7 +49,7 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
               </a>
             </div>
           </div>
-          <a href={href(lang, "shop")} className="hover:text-[#c0392b]">
+          <a href={href(lang, "shop")} className="hover:text-[#a23b2d]">
             {x.shop}
           </a>
           <div className="flex items-center gap-2 text-sm">

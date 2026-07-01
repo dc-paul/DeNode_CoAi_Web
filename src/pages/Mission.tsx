@@ -7,7 +7,7 @@ import {
 } from "../pagesContent";
 import type { Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const AI_NOTE: Record<Lang, string> = {
   nl: "Deze vertaling is automatisch (AI) gegenereerd.",
   en: "This translation was automatically (AI) generated.",

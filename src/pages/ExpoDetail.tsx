@@ -4,7 +4,7 @@ import { getEvent } from "../eventDetails";
 import { RefCard } from "../components/RefCard";
 import { href, type Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const T: Record<
   Lang,
   {

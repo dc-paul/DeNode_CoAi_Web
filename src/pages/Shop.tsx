@@ -2,7 +2,7 @@ import { SHOP } from "../pagesContent2";
 import { IMG } from "../content";
 import type { Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 
 export function Shop({ lang }: { lang: Lang }) {
   const s = SHOP[lang];

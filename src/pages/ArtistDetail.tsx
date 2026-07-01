@@ -4,7 +4,7 @@ import { getPost } from "../blogPosts";
 import { RefCard } from "../components/RefCard";
 import { href, type Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const T: Record<
   Lang,
   {
@@ -127,7 +127,7 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
                 </p>
                 <a
                   href={href(lang, `expo/${e.slug}`)}
-                  className="text-lg font-bold text-black hover:text-[#c0392b]"
+                  className="text-lg font-bold text-black hover:text-[#a23b2d]"
                 >
                   {e.title} →
                 </a>

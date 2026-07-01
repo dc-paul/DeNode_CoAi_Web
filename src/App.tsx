@@ -77,7 +77,7 @@ function App() {
   const { lang, page } = route;
 
   return (
-    <div className="min-h-[100dvh] bg-white text-black">
+    <div className="min-h-[100dvh] bg-[#f4f1ea] text-[#0e0e0c]">
       <Header lang={lang} page={page} />
       <main>{renderPage(page, lang)}</main>
       <Footer lang={lang} />

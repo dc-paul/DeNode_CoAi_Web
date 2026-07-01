@@ -19,7 +19,7 @@ export function Placeholder({ lang, page }: { lang: Lang; page: string }) {
       <a
         href={href(lang)}
         className="mt-6 inline-block font-medium"
-        style={{ color: "#c0392b" }}
+        style={{ color: "#a23b2d" }}
       >
         {BACK[lang]}
       </a>

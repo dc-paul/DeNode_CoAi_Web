@@ -48,7 +48,7 @@ export function Artists({ lang }: { lang: Lang }) {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder={SEARCH[lang]}
-          className="w-full rounded-md border border-[#dcdcdc] px-4 py-2.5 text-[15px] outline-none focus:border-[#c0392b]"
+          className="w-full rounded-md border border-[#dcdcdc] px-4 py-2.5 text-[15px] outline-none focus:border-[#a23b2d]"
         />
       </div>
 

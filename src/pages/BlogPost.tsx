@@ -10,7 +10,7 @@ const CTX: Record<Lang, { expo: string; artist: string; author: string }> = {
   fr: { expo: "Exposition", artist: "Artiste", author: "Auteur" },
 };
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const BACK: Record<Lang, string> = {
   nl: "← Terug naar programma",
   en: "← Back to program",

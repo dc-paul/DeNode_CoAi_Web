@@ -1,7 +1,7 @@
 import { CONTENT } from "../content";
 import type { Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 
 export function Footer({ lang }: { lang: Lang }) {
   const f = CONTENT[lang].footer;

@@ -2,7 +2,7 @@ import { getEvent } from "../eventDetails";
 import type { Localized } from "../blogPosts";
 import { href, type Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const BACK: Record<Lang, string> = {
   nl: "← Terug naar evenementen",
   en: "← Back to events",

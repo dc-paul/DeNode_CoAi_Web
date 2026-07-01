@@ -2,7 +2,7 @@ import { CONTENT, IMG } from "../content";
 import { getPost } from "../blogPosts";
 import type { Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const CARD_IMAGES = [IMG.workshop, IMG.katbove, IMG.drawing];
 const MORE: Record<Lang, string> = {
   nl: "Meer info & inschrijven →",

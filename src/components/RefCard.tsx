@@ -33,7 +33,7 @@ export function RefCard({
         )}
       </div>
       <div className="min-w-0">
-        <p className="font-semibold leading-snug text-black group-hover:text-[#c0392b]">
+        <p className="font-semibold leading-snug text-black group-hover:text-[#a23b2d]">
           {title}
         </p>
         {subtitle && (
