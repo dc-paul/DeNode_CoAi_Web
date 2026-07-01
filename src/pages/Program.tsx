@@ -62,10 +62,18 @@ export function Program({ lang }: { lang: Lang }) {
               className="group flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm transition-shadow hover:shadow-md"
             >
               <div
-                className="flex h-40 items-end p-4"
+                className="relative flex h-40 items-end p-4"
                 style={{ backgroundColor: post.tint }}
               >
-                <span className="rounded-sm bg-white/90 px-2 py-0.5 text-xs font-medium text-[#333]">
+                {bp?.image && (
+                  <img
+                    src={bp.image}
+                    alt={title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                )}
+                <span className="relative rounded-sm bg-white/90 px-2 py-0.5 text-xs font-medium text-[#333]">
                   {cat}
                 </span>
               </div>

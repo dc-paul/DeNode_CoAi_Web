@@ -106,7 +106,15 @@ export function Home({ lang }: { lang: Lang }) {
                 className="group relative flex h-72 items-center justify-center overflow-hidden rounded-md p-6 text-center"
                 style={{ backgroundColor: p.tint }}
               >
-                <span className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/35"></span>
+                {bp?.image && (
+                  <img
+                    src={bp.image}
+                    alt={title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                )}
+                <span className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/55"></span>
                 <span className="relative text-2xl font-extrabold leading-tight text-white">
                   {title}
                 </span>
