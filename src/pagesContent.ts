@@ -172,34 +172,34 @@ export const TEAM: Record<Lang, TeamContent> = {
     aboutHeading: "Over Stichting DeNode",
     tagline: "Een platform voor onderzoek, creatie en dialoog.",
     aboutParas: [
-      "Stichting DeNode is een vzw gevestigd in Gent die zich toelegt op de ondersteuning van hedendaagse kunst. We geloven in artistieke praktijken die voorbij de oppervlakte kijken. Daarom richten we ons op langetermijnprojecten en diepgaand onderzoek, waarbij het proces minstens even belangrijk is als het eindresultaat.",
-      "Onze stichting is een levendig ecosysteem waar tentoonstellingen, residenties, publieksprogramma's en redactionele projecten samenkomen. In plaats van ons tot één medium te beperken, omarmen we interdisciplinaire praktijken die in dialoog gaan met de sociale, culturele en filosofische vraagstukken van onze tijd. Zo slaan we een brug tussen de lokale Gentse scene en het internationale kunstveld.",
+      "Stichting DeNode is een Gentse non-profitorganisatie die zich inzet voor de ondersteuning van hedendaagse kunst. Wij geloven in artistieke praktijken die verder kijken dan het oppervlak. Daarom richten wij ons op langdurige trajecten en diepgaand onderzoek, waarbij het proces minstens even belangrijk is als het eindresultaat.",
+      "Onze stichting is een levendig ecosysteem waar tentoonstellingen, residenties, publieke programma's en redactionele projecten samenkomen. In plaats van ons te beperken tot één medium, omarmen we interdisciplinaire praktijken die de dialoog aangaan met sociale, culturele en filosofische vraagstukken van deze tijd. Zo slaan we een brug tussen de lokale Gentse scene en het internationale kunstenveld.",
     ],
     teamHeading: "Team",
-    teamSub: "Het kernteam van DeNode",
+    teamSub: "De vaste kern van DeNode",
     members: [
       {
         name: "Paul De Cannière",
         role: "Oprichter & Strategische Visie",
-        bio: "Gedreven door de wens om een vrije ruimte voor collectieve reflectie te creëren, legde Paul de basis voor DeNode. Met een scherp oog voor technologische innovatie en een sterk maatschappelijk engagement richt hij zich op projecten die conventionele formats overstijgen en duurzame impact willen genereren.",
+        bio: "Gedreven door de wens om een vrije ruimte te creëren voor collectieve reflectie, legde Paul de basis voor DeNode. Met een scherp oog voor technologische innovatie en een sterke sociale bewogenheid, richt hij zich op projecten die conventionele formats overstijgen en een duurzame impact willen genereren.",
         img: IMG.paul,
       },
       {
         name: "Kristof Vander Cruyssen",
-        role: "Curator & Artistieke Ontwikkeling",
-        bio: "Als kunstenaar en curator brengt Kristof een diep inzicht in artistieke ecosystemen naar de stichting. Hij waakt over de artistieke richting en begeleidt de ontwikkeling van tentoonstellingen en residenties. Zijn expertise combineert curatoriale precisie met pragmatische kennis van productieprocessen.",
+        role: "Artistieke leider & curator",
+        bio: "Als kunstwetenschapper en kunstenaar brengt Kristof een diepgaand inzicht in artistieke ecosystemen mee naar de stichting. Hij bewaakt de artistieke koers en begeleidt de ontwikkeling van tentoonstellingen en residenties. Zijn expertise koppelt curatoriële precisie aan een pragmatische kennis van productieprocessen.",
         img: IMG.kristof,
       },
       {
         name: "Hanna Ouaziz",
         role: "Curatoriële & Internationale Programma's",
-        bio: "Hanna geeft vorm aan de inhoudelijke verhalen en internationale samenwerkingen van DeNode. Met een achtergrond in filosofie en antropologie verweeft ze thematisch onderzoek met geëngageerde kunstpraktijken. Ze is de spil van ons internationale netwerk en verantwoordelijk voor de redactionele projecten die onze visie verdiepen.",
+        bio: "Hanna geeft vorm aan de inhoudelijke narratieven en internationale samenwerkingen van DeNode. Vanuit een achtergrond in de filosofie en antropologie weeft zij thematisch onderzoek samen met geëngageerde kunstpraktijken. Zij is de spil in ons internationale netwerk en verantwoordelijk voor de redactionele projecten die onze visie verdiepen.",
         img: IMG.hanna,
       },
     ],
     volunteersHeading: "Vrijwilligers en medewerkers",
     volunteersBody:
-      "De realisatie van ons programma zou onmogelijk zijn zonder de onvermoeibare inzet van onze vele medewerkers en vrijwilligers. We zien hen niet enkel als ondersteuning, maar als mede-makers. Meer informatie over hun individuele praktijken vind je op onze Kunstenaars-pagina, want zij zijn elk de creatieve motor van onze organisatie.",
+      "De realisatie van ons programma zou onmogelijk zijn zonder de tomeloze inzet van onze vele medewerkers en vrijwilligers. Wij beschouwen hen niet alleen als ondersteuning, maar als mede-makers. Meer informatie over hun individuele praktijken is te vinden op onze Kunstenaars-pagina, want zij zijn stuk voor stuk de creatieve motor van onze organisatie.",
   },
 };
 

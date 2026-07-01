@@ -32,11 +32,11 @@ export const ARTISTS: Record<Lang, ArtistsContent> = {
   nl: {
     title: "Kunstenaars",
     intro: [
-      "Stichting DeNode presenteert met trots een selectie van kunstenaars met wie we een langdurige en waardevolle samenwerking onderhouden. Of het nu via groeps- of soloprojecten is, elke kunstenaar heeft op een unieke manier bijgedragen aan de artistieke basis van onze stichting.",
-      "Deze lijst is een work in progress; we willen uiteindelijk een volledig overzicht bieden van alle creatieve partners die onze gemeenschap hebben verrijkt. Onze dank gaat uit naar wie de essentie van Stichting DeNode met passie en toewijding heeft vormgegeven.",
+      "Stichting DeNode presenteert met trots een selectie van kunstenaars met wie wij een langdurige en waardevolle samenwerking onderhouden. Of het nu via groeps- of soloprojecten was, elke kunstenaar heeft op unieke wijze bijgedragen aan het artistieke fundament van onze stichting.",
+      "Deze lijst is een eerbetoon in wording; wij streven ernaar om op termijn een volledig overzicht te bieden van alle creatieve partners die onze gemeenschap hebben verrijkt. Onze dank gaat uit naar hen die met hun passie en toewijding de essentie van Stichting DeNode hebben gevormd.",
     ],
-    devHeading: "De website is volop in ontwikkeling.",
-    devBody: "Kom binnenkort terug voor meer...",
+    devHeading: "De website is in volle ontwikkeling.",
+    devBody: "Kom eerstdaags terug voor meer...",
   },
 };
 
