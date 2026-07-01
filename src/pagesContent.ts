@@ -81,6 +81,166 @@ export const MISSION_SECTIONS: { heading: string; paras: string[] }[] = [
   },
 ];
 
+// Authentic NL/FR of the statutes do not exist on denode.be (the page is English
+// there in every language), so these are AI translations shown with a notice.
+export const MISSION_LOCALES: Partial<
+  Record<Lang, { title: string; sections: { heading: string; paras: string[] }[] }>
+> = {
+  nl: {
+    title: "Statuten van de Stichting DeNode",
+    sections: [
+      {
+        heading: "Doel van de stichting (uit de statuten)",
+        paras: [
+          "De private stichting is opgericht voor de verwezenlijking van het volgende belangeloze doel.",
+          "Het doel van de private stichting is het verwerven, bewaren, beheren, toegankelijk maken, zowel publiek als privaat tentoonstellen, beschermen, veiligstellen en uitbreiden van kunst en kunstwerken.",
+          "In dit kader gaat de private stichting over tot het inventariseren, beschrijven en archiveren van de kunstwerken in de ruimste zin.",
+          "Voorts mag de private stichting haar collectie verbeteren via verkoop, aankoop of ruil met werken die worden aangehouden door andere verzamelaars, kunstenaars of veilinghuizen.",
+        ],
+      },
+      {
+        heading: "Ondersteunende activiteiten",
+        paras: [
+          "Ter ondersteuning van deze activiteiten kan de private stichting instaan voor de organisatie of ondersteuning bieden aan alle artistieke verwezenlijkingen en culturele ontwikkelingen, en voor het inrichten van kunstgalerijen en kunsttentoonstellingen, zowel op haar eigen locatie als elders.",
+          "Zij kan promotiemateriaal publiceren of verspreiden, in druk, digitaal of op elke andere wijze, of daaraan meewerken of daarvoor ondersteuning bieden.",
+        ],
+      },
+      {
+        heading: "Concrete activiteiten",
+        paras: [
+          "In het bijzonder mag de private stichting, met het oog op de verwezenlijking van dit belangeloze doel, de volgende activiteiten uitvoeren, zowel in binnen- als buitenland:",
+          "• Het beheer en de uitbreiding van een kunstcollectie",
+          "• De tentoonstelling van de kunstcollectie",
+          "• De verwerving van middelen en fondsen nodig voor de financiering van voormeld doel",
+          "• Het financieren van activiteiten en projecten om de kunstcollectie beter bekend te maken bij het brede publiek en om jonge kunstenaars te inspireren",
+          "• Het faciliteren van projecten met en voor kunstenaars",
+        ],
+      },
+      {
+        heading: "Weldadigheid",
+        paras: [
+          "De raad van bestuur oefent een discretionaire beoordeling uit met betrekking tot mogelijke uitkeringen. Mogelijke begunstigden hebben geen vorderingsrecht.",
+          "De behartiging van deze belangen omvat de ondersteuning en financiering van wetenschappelijke, materiële, commerciële, educatieve, intellectuele, artistieke en andere projecten, zonder dat deze personen daarop aanspraak kunnen maken en zonder dat er uitkeringen in geld gebeuren.",
+        ],
+      },
+      {
+        heading: "Aanwending van de middelen",
+        paras: [
+          "De private stichting streeft haar belangeloze doel gelijktijdig na en mag daartoe het jaarlijkse rendement van het vermogen van de stichting aanwenden.",
+          "De private stichting kan haar werkingsmiddelen verhogen door kunstwerken in eigendom van de private stichting tegen vergoeding aan een marktconforme prijs over te dragen of uit te lenen, maar enkel voor zover noodzakelijk en met het oog op het behoud van de continuïteit van de werking van de private stichting. De raad beslist hierover naar eigen goeddunken en met eenparigheid.",
+          "Onder 'jaarlijks rendement' wordt verstaan: de inkomsten die het vermogen tijdens dat jaar genereert, verhoogd met gerealiseerde meerwaarden op enig vermogensbestanddeel en niet-gerealiseerde meerwaarden op kapitalisatie-instrumenten, en verminderd met gerealiseerde minderwaarden op enig vermogensbestanddeel en niet-gerealiseerde minderwaarden op kapitalisatie-instrumenten.",
+        ],
+      },
+      {
+        heading: "Vereffening",
+        paras: [
+          "In geval van vereffening van de private stichting worden alle roerende goederen, in het bijzonder alle kunstwerken en het kunstarchief, overgedragen aan gerenommeerde musea, gekozen door de raad, in overeenstemming met het belangeloze doel.",
+        ],
+      },
+      {
+        heading: "Beheer van het vermogen",
+        paras: [
+          "De private stichting beheert haar vermogen als een goede huisvader, met aandacht voor behoud en valorisatie. Zij mag onder meer de volgende verrichtingen uitvoeren:",
+          "• Roerende en/of onroerende verrichtingen, zoals het sluiten van contracten.",
+          "• Het doen van investeringen, rechtstreeks of onrechtstreeks (via de oprichting van vennootschappen, investeringsvennootschappen, levensverzekeringen, enz.).",
+          "• Investeren in roerende goederen en portefeuillewaarden, waaronder effecten en kunstwerken.",
+          "• Het leasen, aankopen en verkopen, en het oprichten, bouwen, renoveren of afbreken van onroerend goed.",
+          "• Het vestigen, aankopen of verlenen van zakelijke rechten, in België of in het buitenland.",
+          "• Leningen aangaan en/of zekerheden verstrekken.",
+          "• Kosten en lasten op zich nemen om de in het doel vermelde personen of instellingen te ontlasten.",
+          "• Samenwerken met, deelnemen in of belangen nemen in ondernemingen van alle aard.",
+          "• Vermogen overdragen aan andere Belgische of buitenlandse stichtingen of soortgelijke rechtspersonen met een overeenstemmend doel.",
+          "• Mandaten uitoefenen (bezoldigd of onbezoldigd) in rechtspersonen.",
+        ],
+      },
+      {
+        heading: "Overige bepalingen",
+        paras: [
+          "De private stichting mag voorts alle handelingen stellen die rechtstreeks of onrechtstreeks verband houden met haar doel. Zij mag medewerking verlenen aan en deelnemen aan elke activiteit die met haar doel overeenstemt.",
+          "De private stichting mag geen enkel materieel voordeel verschaffen aan de stichter(s), bestuurders of enige andere persoon, tenzij dit deel uitmaakt van de verwezenlijking van het belangeloze doel.",
+        ],
+      },
+    ],
+  },
+  fr: {
+    title: "Statuts de la Fondation DeNode",
+    sections: [
+      {
+        heading: "But de la fondation (extrait des statuts)",
+        paras: [
+          "La fondation privée est constituée en vue de la réalisation du but désintéressé suivant.",
+          "Le but de la fondation privée est d'acquérir, de conserver, de gérer, de rendre accessibles, d'exposer tant publiquement que de manière privée, de protéger, de sauvegarder et d'enrichir l'art et les œuvres d'art.",
+          "Dans ce cadre, la fondation privée procède à l'inventaire, à la description et à l'archivage des œuvres d'art au sens le plus large.",
+          "En outre, la fondation privée peut améliorer sa collection par la vente, l'achat ou l'échange d'œuvres détenues par d'autres collectionneurs, artistes ou maisons de vente aux enchères.",
+        ],
+      },
+      {
+        heading: "Activités de soutien",
+        paras: [
+          "Pour soutenir ces activités, la fondation privée peut assurer l'organisation ou apporter son soutien à toutes les réalisations artistiques et développements culturels, ainsi qu'à l'organisation de galeries d'art et d'expositions, tant sur son propre site qu'ailleurs.",
+          "Elle peut publier ou diffuser du matériel promotionnel, sous forme imprimée, numérique ou de toute autre manière, ou y collaborer ou y apporter son soutien.",
+        ],
+      },
+      {
+        heading: "Activités concrètes",
+        paras: [
+          "En particulier, en vue de réaliser ce but désintéressé, la fondation privée peut mener les activités suivantes, tant au niveau national qu'international :",
+          "• La gestion et l'enrichissement d'une collection d'art",
+          "• L'exposition de la collection d'art",
+          "• L'acquisition des moyens et ressources nécessaires au financement du but précité",
+          "• Le financement d'activités et de projets visant à mieux faire connaître la collection d'art auprès du grand public et à inspirer les jeunes artistes",
+          "• La facilitation de projets avec et pour les artistes",
+        ],
+      },
+      {
+        heading: "Bienfaisance",
+        paras: [
+          "Le conseil d'administration exerce un pouvoir d'appréciation discrétionnaire quant aux éventuelles distributions. Les bénéficiaires potentiels ne disposent d'aucun droit de créance.",
+          "La défense de ces intérêts comprend le soutien et le financement de projets scientifiques, matériels, commerciaux, éducatifs, intellectuels, artistiques et autres, sans que ces personnes puissent y prétendre et sans qu'aucune distribution ne soit faite en espèces.",
+        ],
+      },
+      {
+        heading: "Emploi des ressources",
+        paras: [
+          "La fondation privée poursuit son but désintéressé de manière simultanée et peut à cette fin employer le rendement annuel du patrimoine de la fondation.",
+          "La fondation privée peut augmenter ses moyens de fonctionnement en cédant ou en prêtant, contre rémunération à un prix conforme au marché, des œuvres d'art dont elle est propriétaire, mais uniquement dans la mesure nécessaire et en vue de préserver la continuité de son fonctionnement. Le conseil en décide à sa discrétion et à l'unanimité.",
+          "Par « rendement annuel », on entend : les revenus générés par le patrimoine au cours de cette année, augmentés des plus-values réalisées sur tout élément du patrimoine et des plus-values non réalisées sur les instruments de capitalisation, et diminués des moins-values réalisées sur tout élément du patrimoine et des moins-values non réalisées sur les instruments de capitalisation.",
+        ],
+      },
+      {
+        heading: "Liquidation",
+        paras: [
+          "En cas de liquidation de la fondation privée, tous les biens mobiliers, en particulier toutes les œuvres d'art et les archives artistiques, seront transférés à des musées réputés, choisis par le conseil, conformément au but désintéressé.",
+        ],
+      },
+      {
+        heading: "Gestion du patrimoine",
+        paras: [
+          "La fondation privée gère son patrimoine en bon père de famille, avec le souci de sa conservation et de sa valorisation. Elle peut notamment effectuer les opérations suivantes :",
+          "• Des opérations mobilières et/ou immobilières, telles que la conclusion de contrats.",
+          "• Réaliser des investissements, directement ou indirectement (par la constitution de sociétés, de sociétés d'investissement, d'assurances-vie, etc.).",
+          "• Investir dans des biens mobiliers et des valeurs de portefeuille, y compris des titres et des œuvres d'art.",
+          "• Louer, acheter et vendre, ainsi qu'établir, construire, rénover ou démolir des biens immobiliers.",
+          "• Constituer, acquérir ou accorder des droits réels, en Belgique ou à l'étranger.",
+          "• Contracter des emprunts et/ou fournir des sûretés.",
+          "• Assumer des frais et des charges pour décharger les personnes ou institutions mentionnées dans le but.",
+          "• Collaborer avec, participer à ou prendre des intérêts dans des entreprises de toute nature.",
+          "• Transférer des biens à d'autres fondations belges ou étrangères ou à des personnes morales similaires ayant un objet correspondant.",
+          "• Exercer des mandats (rémunérés ou non) dans des personnes morales.",
+        ],
+      },
+      {
+        heading: "Autres dispositions",
+        paras: [
+          "La fondation privée peut en outre accomplir tous les actes se rapportant directement ou indirectement à son but. Elle peut apporter sa collaboration et participer à toute activité conforme à son but.",
+          "La fondation privée ne peut procurer aucun avantage matériel au(x) fondateur(s), aux administrateurs ou à toute autre personne, sauf si cela s'inscrit dans la réalisation du but désintéressé.",
+        ],
+      },
+    ],
+  },
+};
+
+
 // ---- Team -----------------------------------------------------------------
 
 interface Member {

@@ -32,7 +32,7 @@ function renderPage(page: string, lang: Lang) {
     case "team":
       return <Team lang={lang} />;
     case "mission":
-      return <Mission />;
+      return <Mission lang={lang} />;
     case "cookie-policy":
       return <Cookie lang={lang} />;
     default:
