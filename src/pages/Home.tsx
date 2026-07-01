@@ -117,7 +117,7 @@ export function Home({ lang }: { lang: Lang }) {
             {h.blogHeading}
           </h2>
           <a
-            href="https://www.denode.be/en/blog"
+            href={`#/${lang}/program`}
             className="text-[15px] font-medium"
             style={{ color: ACCENT }}
           >

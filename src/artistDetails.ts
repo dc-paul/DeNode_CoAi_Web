@@ -122,6 +122,16 @@ export const ARTIST_DETAILS: ArtistDetail[] = [
       { label: "Interview door Hilde Van Canneyt (2024)", url: "https://www.hildevancanneyt.be/2024/09/interview-met-caroline-baek/" },
     ],
   },
+  {
+    slug: "robrecht-kessels",
+    name: "Robrecht Kessels",
+    image: "/images/blog-robrecht-kessels.jpg",
+    role: {
+      nl: "muzikant (cello) & componist",
+      en: "musician (cello) & composer",
+      fr: "musicien (violoncelle) & compositeur",
+    },
+  },
   { slug: "simon-van-parys", name: "Simon Van Parys", role: VISUAL },
   { slug: "philippe-van-de-velde", name: "Philippe Van De Velde", role: VISUAL },
 

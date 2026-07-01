@@ -2,7 +2,6 @@ import { PROGRAM } from "../pagesContent2";
 import { getPost, type Localized, type Block } from "../blogPosts";
 import { type Lang } from "../lang";
 
-const ACCENT = "#c0392b";
 
 const CAT: Record<Lang, Record<string, string>> = {
   nl: {
@@ -53,7 +52,9 @@ export function Program({ lang }: { lang: Lang }) {
             : undefined;
           const title = loc ? loc.title : post.title;
           const teaser = loc ? firstPara(loc.body) : post.teaser;
-          const url = bp ? `#/${lang}/blog/${post.slug}` : post.href;
+          const url = post.slug
+            ? `#/${lang}/blog/${post.slug}`
+            : `#/${lang}/program`;
           const cat = CAT[lang][post.category] ?? post.category;
           return (
             <a
@@ -89,17 +90,6 @@ export function Program({ lang }: { lang: Lang }) {
             </a>
           );
         })}
-      </div>
-
-      <div className="mt-10 flex flex-col gap-2">
-        <a
-          href="https://www.denode.be/en/blog"
-          className="font-medium"
-          style={{ color: ACCENT }}
-        >
-          {p.viewAll} →
-        </a>
-        <p className="text-xs text-[#999]">{p.note}</p>
       </div>
     </section>
   );

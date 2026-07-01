@@ -280,6 +280,35 @@ export const EVENT_DETAILS: EventDetail[] = [
       ],
     },
   },
+  {
+    slug: "kashi-rupe-vernissage",
+    image: "/images/blog-nicolas-van-parys.jpg",
+    dateLabel: "2026/05/15",
+    location: "Galerie DeNode, Predikherenlei 4, 9000 Gent",
+    nl: {
+      title: "Vernissage — Kashi Rupé, unfolded",
+      subtitle: "Opening van de tentoonstelling van Nicolas Van Parys",
+      body: [
+        { k: "p", t: "Feestelijke opening van de tentoonstelling 'Kashi Rupé — unfolded' van Nicolas Van Parys bij nodenaysteen / DeNode." },
+      ],
+    },
+    en: {
+      title: "Opening — Kashi Rupé, unfolded",
+      subtitle: "Opening of Nicolas Van Parys's exhibition",
+      ai: true,
+      body: [
+        { k: "p", t: "Festive opening of the exhibition 'Kashi Rupé — unfolded' by Nicolas Van Parys at nodenaysteen / DeNode." },
+      ],
+    },
+    fr: {
+      title: "Vernissage — Kashi Rupé, unfolded",
+      subtitle: "Ouverture de l'exposition de Nicolas Van Parys",
+      ai: true,
+      body: [
+        { k: "p", t: "Ouverture festive de l'exposition « Kashi Rupé — unfolded » de Nicolas Van Parys à nodenaysteen / DeNode." },
+      ],
+    },
+  },
 ];
 
 export function getEvent(slug: string): EventDetail | undefined {

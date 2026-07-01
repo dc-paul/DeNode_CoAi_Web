@@ -34,15 +34,9 @@ export function Footer({ lang }: { lang: Lang }) {
 
             <div className="mt-6 flex gap-3">
               <a
-                href="https://www.denode.be/en/website/social/facebook"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white"
-                style={{ backgroundColor: ACCENT }}
-              >
-                f
-              </a>
-              <a
-                href="https://www.denode.be/en/website/social/instagram"
+                href="https://www.instagram.com/denode_foundation/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full font-bold text-white"
                 style={{ backgroundColor: ACCENT }}
