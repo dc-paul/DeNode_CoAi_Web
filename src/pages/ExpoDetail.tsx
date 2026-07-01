@@ -12,6 +12,7 @@ const T: Record<
     notFound: string;
     curator: string;
     artists: string;
+    participants: string;
     texts: string;
     events: string;
   }
@@ -21,6 +22,7 @@ const T: Record<
     notFound: "Tentoonstelling niet gevonden",
     curator: "Curator",
     artists: "Kunstenaar(s)",
+    participants: "Deelnemende kunstenaars",
     texts: "Teksten bij deze tentoonstelling",
     events: "Events",
   },
@@ -29,6 +31,7 @@ const T: Record<
     notFound: "Exhibition not found",
     curator: "Curator",
     artists: "Artist(s)",
+    participants: "Participating artists",
     texts: "Texts for this exhibition",
     events: "Events",
   },
@@ -37,6 +40,7 @@ const T: Record<
     notFound: "Exposition introuvable",
     curator: "Commissaire",
     artists: "Artiste(s)",
+    participants: "Artistes participants",
     texts: "Textes de cette exposition",
     events: "Événements",
   },
@@ -131,6 +135,35 @@ export function ExpoDetail({ lang, slug }: { lang: Lang; slug: string }) {
           </div>
         )}
       </div>
+
+      {expo.participants && expo.participants.length > 0 && (
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-black">
+            {t.participants}{" "}
+            <span className="text-base font-normal text-[#999]">
+              ({expo.participants.length})
+            </span>
+          </h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-[#333]">
+            {expo.participants.map((a, i) => (
+              <span key={a.name}>
+                {i > 0 && " · "}
+                {a.slug ? (
+                  <a
+                    href={href(lang, `artist/${a.slug}`)}
+                    className="font-medium"
+                    style={{ color: ACCENT }}
+                  >
+                    {a.name}
+                  </a>
+                ) : (
+                  a.name
+                )}
+              </span>
+            ))}
+          </p>
+        </div>
+      )}
 
       {expo.articleSlugs && expo.articleSlugs.length > 0 && (
         <div className="mt-10">
