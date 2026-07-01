@@ -1,4 +1,5 @@
 import { CONTENT, IMG } from "../content";
+import { getPost } from "../blogPosts";
 import type { Lang } from "../lang";
 
 const ACCENT = "#c0392b";
@@ -94,19 +95,24 @@ export function Home({ lang }: { lang: Lang }) {
           </a>
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {h.posts.map((p) => (
-            <a
-              key={p.title}
-              href={`#/${lang}/blog/${p.slug}`}
-              className="group relative flex h-72 items-center justify-center overflow-hidden rounded-md p-6 text-center"
-              style={{ backgroundColor: p.tint }}
-            >
-              <span className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/35"></span>
-              <span className="relative text-2xl font-extrabold leading-tight text-white">
-                {p.title}
-              </span>
-            </a>
-          ))}
+          {h.posts.map((p) => {
+            const bp = getPost(p.slug);
+            const title =
+              lang === "nl" && bp?.nl ? bp.nl.title : bp?.title ?? p.title;
+            return (
+              <a
+                key={p.slug}
+                href={`#/${lang}/blog/${p.slug}`}
+                className="group relative flex h-72 items-center justify-center overflow-hidden rounded-md p-6 text-center"
+                style={{ backgroundColor: p.tint }}
+              >
+                <span className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/35"></span>
+                <span className="relative text-2xl font-extrabold leading-tight text-white">
+                  {title}
+                </span>
+              </a>
+            );
+          })}
         </div>
       </section>
     </>
