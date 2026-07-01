@@ -15,6 +15,8 @@ import { EventDetail } from "./pages/EventDetail";
 import { ArtistDetail } from "./pages/ArtistDetail";
 import { Expos } from "./pages/Expos";
 import { ExpoDetail } from "./pages/ExpoDetail";
+import { Publicaties } from "./pages/Publicaties";
+import { Visit } from "./pages/Visit";
 import { Placeholder } from "./pages/Placeholder";
 import { parseHash, type Lang } from "./lang";
 
@@ -40,6 +42,10 @@ function renderPage(page: string, lang: Lang) {
       return <Expos lang={lang} />;
     case "artists":
       return <Artists lang={lang} />;
+    case "publicaties":
+      return <Publicaties lang={lang} />;
+    case "visit":
+      return <Visit lang={lang} />;
     case "events":
       return <Events lang={lang} />;
     case "shop":

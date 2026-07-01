@@ -1,19 +1,59 @@
 import { useState } from "react";
-import { CONTENT } from "../content";
-import { href, LANGS, LANG_LABELS, type Lang } from "../lang";
+import { href, LANGS, type Lang } from "../lang";
 
 const LOGO = "/images/denode-logo-black.png";
 
-const EXTRA: Record<Lang, { expo: string; events: string; shop: string }> = {
-  nl: { expo: "tentoonstellingen", events: "evenementen", shop: "shop" },
-  en: { expo: "exhibitions", events: "events", shop: "shop" },
-  fr: { expo: "expositions", events: "événements", shop: "boutique" },
+const NAV: Record<
+  Lang,
+  {
+    expo: string;
+    artists: string;
+    pub: string;
+    visit: string;
+    about: string;
+    mission: string;
+    team: string;
+  }
+> = {
+  nl: {
+    expo: "tentoonstellingen",
+    artists: "kunstenaars",
+    pub: "publicaties",
+    visit: "bezoek",
+    about: "over",
+    mission: "missie & statuten",
+    team: "team",
+  },
+  en: {
+    expo: "exhibitions",
+    artists: "artists",
+    pub: "publications",
+    visit: "visit",
+    about: "about",
+    mission: "mission & statutes",
+    team: "team",
+  },
+  fr: {
+    expo: "expositions",
+    artists: "artistes",
+    pub: "publications",
+    visit: "visite",
+    about: "à propos",
+    mission: "mission & statuts",
+    team: "équipe",
+  },
 };
 
 export function Header({ lang, page }: { lang: Lang; page: string }) {
   const [menu, setMenu] = useState(false);
-  const t = CONTENT[lang].nav;
-  const x = EXTRA[lang];
+  const t = NAV[lang];
+
+  const main: [string, string][] = [
+    [t.expo, "expo"],
+    [t.artists, "artists"],
+    [t.pub, "publicaties"],
+    [t.visit, "visit"],
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#d8d2c6] bg-[#f4f1ea]/90 backdrop-blur">
@@ -23,35 +63,22 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
         </a>
 
         <nav className="hidden items-center gap-7 text-[15px] text-black md:flex">
-          <a href={href(lang, "program")} className="hover:text-[#a23b2d]">
-            {t.program}
-          </a>
-          <a href={href(lang, "expo")} className="hover:text-[#a23b2d]">
-            {x.expo}
-          </a>
-          <a href={href(lang, "artists")} className="hover:text-[#a23b2d]">
-            {t.artists}
-          </a>
-          <a href={href(lang, "events")} className="hover:text-[#a23b2d]">
-            {x.events}
-          </a>
+          {main.map(([label, route]) => (
+            <a key={route} href={href(lang, route)} className="hover:text-[#a23b2d]">
+              {label}
+            </a>
+          ))}
           <div className="group relative">
-            <button className="hover:text-[#a23b2d]">{t.foundation} ▾</button>
-            <div className="absolute right-0 hidden min-w-[160px] flex-col rounded-md border border-[#ececec] bg-white py-2 shadow-lg group-hover:flex">
-              <a href={href(lang, "team")} className="px-4 py-2 hover:bg-[#f7f7f5]">
-                {t.team}
-              </a>
-              <a
-                href={href(lang, "mission")}
-                className="px-4 py-2 hover:bg-[#f7f7f5]"
-              >
+            <button className="hover:text-[#a23b2d]">{t.about} ▾</button>
+            <div className="absolute right-0 hidden min-w-[180px] flex-col border border-[#d8d2c6] bg-[#f4f1ea] py-2 shadow-lg group-hover:flex">
+              <a href={href(lang, "mission")} className="px-4 py-2 hover:bg-[#eae5da]">
                 {t.mission}
+              </a>
+              <a href={href(lang, "team")} className="px-4 py-2 hover:bg-[#eae5da]">
+                {t.team}
               </a>
             </div>
           </div>
-          <a href={href(lang, "shop")} className="hover:text-[#a23b2d]">
-            {x.shop}
-          </a>
           <div className="flex items-center gap-2 text-sm">
             {LANGS.map((l) => (
               <a
@@ -59,7 +86,7 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
                 href={href(l, page)}
                 className={
                   l === lang
-                    ? "rounded-full border border-[#dcdcdc] px-3 py-1.5"
+                    ? "border border-[#a23b2d] px-3 py-1.5 text-[#a23b2d]"
                     : "px-3 py-1.5 text-[#888] hover:text-black"
                 }
               >
@@ -81,36 +108,26 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
       </div>
 
       {menu && (
-        <nav className="flex flex-col gap-1 border-t border-[#ececec] px-6 py-4 text-[15px] md:hidden">
-          <a href={href(lang, "program")} className="py-2">
-            {t.program}
-          </a>
-          <a href={href(lang, "expo")} className="py-2">
-            {x.expo}
-          </a>
-          <a href={href(lang, "artists")} className="py-2">
-            {t.artists}
-          </a>
-          <a href={href(lang, "events")} className="py-2">
-            {x.events}
+        <nav className="flex flex-col gap-1 border-t border-[#d8d2c6] px-6 py-4 text-[15px] md:hidden">
+          {main.map(([label, route]) => (
+            <a key={route} href={href(lang, route)} className="py-2">
+              {label}
+            </a>
+          ))}
+          <a href={href(lang, "mission")} className="py-2">
+            {t.mission}
           </a>
           <a href={href(lang, "team")} className="py-2">
             {t.team}
           </a>
-          <a href={href(lang, "mission")} className="py-2">
-            {t.mission}
-          </a>
-          <a href={href(lang, "shop")} className="py-2">
-            {x.shop}
-          </a>
-          <div className="mt-2 flex gap-3 border-t border-[#ececec] pt-3">
+          <div className="mt-2 flex gap-3 border-t border-[#d8d2c6] pt-3">
             {LANGS.map((l) => (
               <a
                 key={l}
                 href={href(l, page)}
                 className={l === lang ? "font-semibold" : "text-[#888]"}
               >
-                {LANG_LABELS[l]}
+                {l.toUpperCase()}
               </a>
             ))}
           </div>

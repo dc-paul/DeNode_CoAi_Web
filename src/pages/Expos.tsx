@@ -1,21 +1,27 @@
 import { EXPOS } from "../expos";
 import { href, type Lang } from "../lang";
 
-const T: Record<Lang, { title: string; intro: string; curator: string }> = {
+const T: Record<
+  Lang,
+  { title: string; intro: string; curator: string; agenda: string }
+> = {
   nl: {
     title: "Tentoonstellingen",
     intro: "Alle tentoonstellingen bij nodenaysteen / DeNode, van de recentste tot de eerste.",
     curator: "curator",
+    agenda: "Workshops & events →",
   },
   en: {
     title: "Exhibitions",
     intro: "Every exhibition at nodenaysteen / DeNode, from the most recent to the first.",
     curator: "curator",
+    agenda: "Workshops & events →",
   },
   fr: {
     title: "Expositions",
     intro: "Toutes les expositions à nodenaysteen / DeNode, de la plus récente à la première.",
     curator: "commissaire",
+    agenda: "Ateliers & événements →",
   },
 };
 
@@ -27,6 +33,13 @@ export function Expos({ lang }: { lang: Lang }) {
     <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
       <h1 className="text-4xl font-extrabold text-black md:text-5xl">{t.title}</h1>
       <p className="mt-3 text-[17px] text-[#555]">{t.intro}</p>
+      <a
+        href={href(lang, "events")}
+        className="mt-3 inline-block font-medium"
+        style={{ color: "#a23b2d" }}
+      >
+        {t.agenda}
+      </a>
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {list.map((e) => (
