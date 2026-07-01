@@ -53,7 +53,22 @@ h3 {
   letter-spacing: 0.005em;
 }
 
+/* UI font — Archivo for navigation and buttons. */
+nav a,
+button {
+  font-family: "Archivo", var(--font-display);
+}
+
 /* Literary warmth for quotes / mission lines. */
-blockquote {
+blockquote,
+.dn-lead {
   font-family: "EB Garamond", Georgia, serif;
+}
+
+/* Artist names in serif italic (Ink §3) — overrides the Oswald heading rule. */
+.dn-name {
+  font-family: "EB Garamond", Georgia, serif !important;
+  text-transform: none !important;
+  font-style: italic;
+  letter-spacing: 0;
 }

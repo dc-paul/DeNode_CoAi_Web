@@ -80,7 +80,7 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
         {t.back}
       </a>
 
-      <h1 className="mt-6 text-4xl font-extrabold leading-tight text-black md:text-5xl">
+      <h1 className="dn-name mt-6 text-5xl font-medium leading-tight text-black md:text-6xl">
         {artist.name}
       </h1>
       {artist.role && <p className="mt-3 text-xl text-[#555]">{artist.role[lang]}</p>}

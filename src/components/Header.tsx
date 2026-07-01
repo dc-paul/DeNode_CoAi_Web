@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CONTENT } from "../content";
 import { href, LANGS, LANG_LABELS, type Lang } from "../lang";
 
-const LOGO = "/images/logo-denode.png";
+const LOGO = "/images/denode-logo-black.png";
 
 const EXTRA: Record<Lang, { expo: string; events: string; shop: string }> = {
   nl: { expo: "tentoonstellingen", events: "evenementen", shop: "shop" },
@@ -16,7 +16,7 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
   const x = EXTRA[lang];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#ececec] bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-[#d8d2c6] bg-[#f4f1ea]/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:px-10">
         <a href={href(lang)} aria-label="DeNode Foundation home">
           <img src={LOGO} alt="DeNode Foundation" className="h-9 w-auto" />
