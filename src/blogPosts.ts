@@ -7,6 +7,12 @@ export interface Block {
   t: string;
 }
 
+export interface Localized {
+  title: string;
+  subtitle: string;
+  body: Block[];
+}
+
 export interface Post {
   slug: string;
   title: string;
@@ -16,6 +22,10 @@ export interface Post {
   author: string;
   image: string;
   body: Block[];
+  // Authentic per-language overrides (from denode.be). Falls back to the base
+  // (English/source) fields when a language is not yet filled in.
+  nl?: Localized;
+  fr?: Localized;
 }
 
 export const POSTS: Post[] = [
@@ -59,6 +69,21 @@ export const POSTS: Post[] = [
         t: "Kashi Rupé - Unfolded nodigt u uit om stil te staan bij de vluchtige momenten van transformatie. Het is een plek waar het verleden het heden ontmoet en waar het beeld zichzelf, laag per laag, aan de toeschouwer openbaart.",
       },
     ],
+    nl: {
+      title: "Nicolas Van Parys",
+      subtitle: "KASHI RUPE - unfolded",
+      body: [
+        { k: "p", t: "In de spirituele hitte van Varanasi (Kashi), een stad die ademt op het snijvlak van leven en dood, vond Nicolas Van Parys de kiem voor zijn nieuwste werk. Aan de oevers van de Ganges, waar traditie en transformatie (Rupé) elkaar voortdurend raken, onderging zijn artistieke praktijk een fundamentele verschuiving." },
+        { k: "p", t: "Varanasi is een oord van voortdurende transmutatie. Het is een plek waar materie vergaat en betekenis zich telkens opnieuw vormt in de as en de stroom van de rivier. Deze gelaagde, transcendente atmosfeer vormt de hartslag van de werken in deze tentoonstelling." },
+        { k: "h", t: "Ontvouwen" },
+        { k: "p", t: "Het oeuvre van Van Parys is nooit statisch; het is een continu proces van ontvouwen. Hoewel de collage nog steeds het fundament vormt — als techniek om de werkelijkheid te deconstrueren en te herschikken — gaan deze nieuwe beelden verder dan reconstructie alleen. Fragmenten van herkenbaarheid vloeien over in lyrische, geschilderde vormen, waardoor een magische, bijna droomachtige wereld ontstaat." },
+        { k: "q", t: "Het doek fungeert als een drempel, een poort naar een wereld die tegelijkertijd volkomen vreemd en toch herkenbaar aanvoelt." },
+        { k: "h", t: "Tussenwerelden" },
+        { k: "p", t: "In de 'tussenwereld' van Van Parys lossen vaste vormen op. De gelaagdheid is hier zowel visueel als mentaal: onder de huid van het schilderij schuilt een hunkering naar essentie en verzoening. Hij brengt fragmenten uit onze collectieve beeldcultuur samen om ze vervolgens met verf en durf te transformeren." },
+        { k: "p", t: "Het resultaat is een vloeiend universum waarin kleur en structuur de weg wijzen naar een diep persoonlijke perceptie van de realiteit. Wat verborgen blijft achter de façade van de dagelijkse waarneming, krijgt hier een stem." },
+        { k: "p", t: "Kashi Rupé - Unfolded nodigt u uit om stil te staan bij de vluchtige momenten van transformatie. Het is een plek waar het verleden het heden ontmoet en waar het beeld zichzelf, laag per laag, aan de toeschouwer openbaart." },
+      ],
+    },
   },
   {
     slug: "about-the-hermit",

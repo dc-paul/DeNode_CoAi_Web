@@ -31,6 +31,13 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
     );
   }
 
+  const loc =
+    lang === "nl" && post.nl
+      ? post.nl
+      : lang === "fr" && post.fr
+        ? post.fr
+        : { title: post.title, subtitle: post.subtitle, body: post.body };
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
       <a
@@ -42,10 +49,10 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
       </a>
 
       <h1 className="mt-6 text-4xl font-extrabold leading-tight text-black md:text-5xl">
-        {post.title}
+        {loc.title}
       </h1>
-      {post.subtitle && (
-        <p className="mt-3 text-xl text-[#555]">{post.subtitle}</p>
+      {loc.subtitle && (
+        <p className="mt-3 text-xl text-[#555]">{loc.subtitle}</p>
       )}
       <p className="mt-3 text-sm text-[#999]">
         {post.date} · {post.author}
@@ -53,12 +60,12 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
 
       <img
         src={post.image}
-        alt={post.title}
+        alt={loc.title}
         className="mt-8 w-full rounded-md object-cover shadow-sm"
       />
 
       <div className="mt-10 space-y-5">
-        {post.body.map((b, i) => {
+        {loc.body.map((b, i) => {
           if (b.k === "h") {
             return (
               <h2 key={i} className="pt-4 text-2xl font-bold text-black">
