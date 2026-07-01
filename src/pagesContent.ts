@@ -240,6 +240,87 @@ export const MISSION_LOCALES: Partial<
   },
 };
 
+// Authentic Dutch statutes captured from denode.be (the statutes were originally
+// written in Dutch). Rendered as-is on NL — no AI notice.
+export const MISSION_NL: { title: string; sections: { heading: string; paras: string[] }[] } = {
+  title: "Statuten Stichting DeNode",
+  sections: [
+    {
+      heading: "Doel van de stichting (uit de statuten)",
+      paras: [
+        "De private stichting wordt opgericht ter verwezenlijking van het volgend belangeloos doel:",
+        "Het doel van de private stichting bestaat uit het verwerven, het behouden, het beheren, het toegankelijk maken, het (laten) tentoonstellen zowel publiek als privé, het beschermen, het vrijwaren en het uitbreiden van kunst en kunstwerken.",
+        "In dat verband gaat de private stichting over tot het inventariseren, het beschrijven en het archiveren van de kunstwerken in de meest ruime zin.",
+        "Bovendien is het de private stichting toegelaten haar collectie te verbeteren door verkoop, inkoop of ruiling met werken in handen van andere verzamelaars, kunstenaars of veilinghuizen.",
+      ],
+    },
+    {
+      heading: "Ondersteunende activiteiten",
+      paras: [
+        "Om deze activiteiten te ondersteunen kan de private stichting de organisatie waarnemen of steun verlenen aan alle kunstzinnige prestaties en culturele ontwikkelingen, en aan het organiseren van kunstgalerijen en kunsttentoonstellingen, zowel op haar eigen locatie als elders.",
+        "Zij kan publicaties of promotiemateriaal uitgeven, op papier, digitaal of op enige andere wijze, of eraan meewerken of steun verlenen.",
+      ],
+    },
+    {
+      heading: "Concrete activiteiten",
+      paras: [
+        "In het bijzonder kan de private stichting, met het oog op de realisatie van dit belangeloze doel, onder meer de volgende activiteiten verrichten in binnen- en buitenland:",
+        "• Het beheer en de uitbouw van een kunstcollectie",
+        "• Het tentoonstellen van de kunstcollectie",
+        "• Het verwerven van fondsen en gelden nodig voor de financiering van voormeld doel",
+        "• Het financieren van activiteiten en projecten om de kunstcollectie aan het grote publiek bekender te maken en om jonge kunstenaars te inspireren",
+        "• Het faciliteren van projecten met en voor kunstenaars",
+      ],
+    },
+    {
+      heading: "Begunstiging",
+      paras: [
+        "Het Bestuursorgaan zal discretionair oordelen over een eventuele begunstiging. Mogelijke begunstigden hebben geen vorderingsrecht.",
+        "Onder de behartiging van deze belangen wordt onder meer verstaan: de ondersteuning en financiering van wetenschappelijke, materiële, commerciële, educatieve, intellectuele, kunstzinnige en andere projecten, zonder dat deze personen daartoe een vorderingsrecht hebben en zonder dat er uitkeringen in speciën worden gedaan.",
+      ],
+    },
+    {
+      heading: "Aanwending van middelen",
+      paras: [
+        "De private stichting behartigt haar belangeloos doel gelijktijdig en mag hiervoor het jaarlijks rendement van het vermogen van de stichting aanwenden.",
+        "De private stichting kan haar werkingsmiddelen vergroten door kunstwerken in het bezit van de private stichting ten bezwarende titel over te dragen of uit te lenen tegen een marktconforme prijs, doch enkel in zoverre als noodzakelijk en met het oog op de bewaring van de continuïteit van de werking van de private stichting. Het Bestuursorgaan beslist hierover discretionair met unanimiteit.",
+        "Onder de notie \"jaarlijks rendement\" moet worden verstaan: de vruchten die het vermogen gedurende dat jaar heeft opgeleverd, te verhogen met de gerealiseerde meerwaarden op eender welk actiefbestanddeel en de niet gerealiseerde meerwaarden van de kapitalisatiestukken en te verminderen met de gerealiseerde minwaarden op eender welk actiefbestanddeel en de niet gerealiseerde minwaarden op kapitalisatiestukken.",
+      ],
+    },
+    {
+      heading: "Liquidatie",
+      paras: [
+        "Bij liquidatie van de private stichting worden alle roerende goederen, in het bijzonder alle kunstwerken en het kunstarchief, overgedragen aan gerenommeerde musea, gekozen door het Bestuursorgaan, in overeenstemming met het belangeloos doel.",
+      ],
+    },
+    {
+      heading: "Beheer van het vermogen",
+      paras: [
+        "De private stichting beheert haar vermogen als een goede huisvader, met aandacht voor instandhouding en valorisatie. Zij kan onder meer de volgende verrichtingen stellen:",
+        "• Roerende en/of onroerende verrichtingen, zoals het sluiten van contracten.",
+        "• Beleggingen verrichten, rechtstreeks of onrechtstreeks (via oprichting van vennootschappen, beleggingsvennootschappen, levensverzekeringen, enz.).",
+        "• Investeren in roerende goederen en portefeuillewaarden, waaronder effecten en kunstvoorwerpen.",
+        "• Verhuren, aan- en verkopen, oprichten, bouwen, verbouwen en afbreken van onroerende goederen.",
+        "• Vestigen, aankopen of toestaan van zakelijke rechten, in België of daarbuiten.",
+        "• Leningen aangaan en/of zekerheden verstrekken.",
+        "• Kosten en lasten op zich nemen ter ontlasting van in het doel vernoemde personen of instellingen.",
+        "• Verbintenissen uitvoeren ten laste van die personen of instellingen.",
+        "• Samenwerken met, deelnemen in of belangen nemen in ondernemingen van allerlei aard.",
+        "• Lijfrenteovereenkomsten aangaan met de in het derde doel gedefinieerde personen.",
+        "• Vermogen overdragen aan andere Belgische of buitenlandse stichtingen of gelijkaardige rechtsfiguren met een overeenkomstige doelstelling.",
+        "• Mandaten uitoefenen (bezoldigd of niet) in rechtspersonen.",
+      ],
+    },
+    {
+      heading: "Overige bepalingen",
+      paras: [
+        "De private stichting kan alle handelingen stellen die rechtstreeks of onrechtstreeks betrekking hebben op haar doel. Zij kan medewerking verlenen en deelnemen aan iedere activiteit die met haar doel overeenstemt.",
+        "De private stichting mag geen stoffelijk voordeel verschaffen aan de stichter(s), bestuurders of enig ander persoon, behalve indien dit kadert in de verwezenlijking van het belangeloos doel.",
+      ],
+    },
+  ],
+};
+
 
 // ---- Team -----------------------------------------------------------------
 

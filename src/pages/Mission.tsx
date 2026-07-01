@@ -1,4 +1,9 @@
-import { MISSION_TITLE, MISSION_SECTIONS, MISSION_LOCALES } from "../pagesContent";
+import {
+  MISSION_TITLE,
+  MISSION_SECTIONS,
+  MISSION_LOCALES,
+  MISSION_NL,
+} from "../pagesContent";
 import type { Lang } from "../lang";
 
 const AI_NOTE: Record<Lang, string> = {
@@ -8,15 +13,22 @@ const AI_NOTE: Record<Lang, string> = {
 };
 
 export function Mission({ lang }: { lang: Lang }) {
-  const loc = lang !== "en" ? MISSION_LOCALES[lang] : undefined;
-  const title = loc ? loc.title : MISSION_TITLE;
-  const sections = loc ? loc.sections : MISSION_SECTIONS;
+  let title = MISSION_TITLE;
+  let sections = MISSION_SECTIONS;
+  let ai = false;
+
+  if (lang === "nl") {
+    title = MISSION_NL.title;
+    sections = MISSION_NL.sections;
+  } else if (lang === "fr" && MISSION_LOCALES.fr) {
+    title = MISSION_LOCALES.fr.title;
+    sections = MISSION_LOCALES.fr.sections;
+    ai = true;
+  }
 
   return (
     <section className="mx-auto max-w-3xl px-6 py-16 md:px-8">
-      {loc && (
-        <p className="text-xs italic text-[#999]">{AI_NOTE[lang]}</p>
-      )}
+      {ai && <p className="text-xs italic text-[#999]">{AI_NOTE[lang]}</p>}
       <h1 className="mt-2 text-4xl font-extrabold text-black md:text-5xl">
         {title}
       </h1>
