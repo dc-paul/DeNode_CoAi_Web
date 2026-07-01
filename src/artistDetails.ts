@@ -13,14 +13,22 @@ export interface Exhibition {
   expo?: string;
 }
 
+export interface Work {
+  img: string;
+  title: string; // shown in serif italic
+  meta: Record<Lang, string>; // medium · year
+}
+
 export interface ArtistDetail {
   slug: string;
   name: string;
-  image?: string; // cover / portrait thumbnail
+  image?: string; // cover / portrait thumbnail (grid + fallback hero)
+  heroImage?: string; // large work/portrait image for the detail hero
   role?: Record<Lang, string>;
   bio?: Record<Lang, Block[]>;
   extraExhibitions?: Record<Lang, Exhibition[]>; // non-DeNode shows
   articles?: string[]; // for authors/critics: the texts they wrote
+  works?: Work[]; // selected works (image + title + medium/year)
   external?: { label: string; url: string }[]; // e.g. Hilde Van Canneyt interview
   shop?: boolean;
 }
@@ -87,7 +95,13 @@ export const ARTIST_DETAILS: ArtistDetail[] = [
   },
 
   // ---- Exhibiting artists (bio lives in the linked article) -----------------
-  { slug: "nicolas-van-parys", name: "Nicolas Van Parys", image: "/images/blog-nicolas-van-parys.jpg", role: VISUAL },
+  {
+    slug: "nicolas-van-parys",
+    name: "Nicolas Van Parys",
+    image: "/images/blog-nicolas-van-parys.jpg",
+    heroImage: "/images/nicolas-van-parys-hero.jpg",
+    role: VISUAL,
+  },
   { slug: "john-robinson", name: "John Robinson", image: "/images/blog-john-robinson.webp", role: VISUAL },
   { slug: "merel-jansen", name: "Merel Jansen", image: "/images/blog-merel.jpg", role: VISUAL },
   {
@@ -103,7 +117,38 @@ export const ARTIST_DETAILS: ArtistDetail[] = [
   { slug: "guillaume-van-moerkercke", name: "Guillaume Van Moerkercke", image: "/images/blog-vestiges.webp", role: VISUAL },
   { slug: "okan-mentens", name: "Okan Mentens", image: "/images/blog-okan-is-me.jpg", role: VISUAL },
   { slug: "bjorn-wandels", name: "Björn Wandels", image: "/images/blog-bjorn-wandels.jpg", role: VISUAL },
-  { slug: "ines-claus", name: "Ines Claus", image: "/images/blog-ines-claus.jpg", role: VISUAL },
+  {
+    slug: "ines-claus",
+    name: "Ines Claus",
+    image: "/images/blog-ines-claus.jpg",
+    heroImage: "/images/ines-claus-hero.jpg",
+    role: {
+      nl: "schilderkunst · sculptuur · textiel",
+      en: "painting · sculpture · textile",
+      fr: "peinture · sculpture · textile",
+    },
+    works: [
+      {
+        img: "/images/ines-claus-work-1.jpg",
+        title: "Zonder titel (zaalzicht)",
+        meta: { nl: "Schilderij · 2024", en: "Painting · 2024", fr: "Peinture · 2024" },
+      },
+      {
+        img: "/images/ines-claus-work-2.jpg",
+        title: "Zonder titel (sculptuur)",
+        meta: { nl: "Sculptuur · 2024", en: "Sculpture · 2024", fr: "Sculpture · 2024" },
+      },
+      {
+        img: "/images/ines-claus-work-3.jpg",
+        title: "Triple Cintre (textiel)",
+        meta: {
+          nl: "Textiel op rails · 2024",
+          en: "Textile on rails · 2024",
+          fr: "Textile sur rails · 2024",
+        },
+      },
+    ],
+  },
   {
     slug: "mikhail-bezverkhny",
     name: "Mikhail Bezverkhny",

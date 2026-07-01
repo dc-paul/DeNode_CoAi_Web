@@ -13,6 +13,8 @@ const T: Record<
     role: string;
     about: string;
     atDenode: string;
+    other: string;
+    work: string;
     written: string;
     shop: string;
     links: string;
@@ -24,6 +26,8 @@ const T: Record<
     role: "Kunstenaar",
     about: "Over",
     atDenode: "Bij DeNode",
+    other: "Andere tentoonstellingen",
+    work: "Werk",
     written: "Geschreven voor DeNode",
     shop: "Bekijk het boek in de shop →",
     links: "Elders",
@@ -34,6 +38,8 @@ const T: Record<
     role: "Artist",
     about: "About",
     atDenode: "At DeNode",
+    other: "Other exhibitions",
+    work: "Work",
     written: "Written for DeNode",
     shop: "View the book in the shop →",
     links: "Elsewhere",
@@ -44,6 +50,8 @@ const T: Record<
     role: "Artiste",
     about: "À propos",
     atDenode: "Chez DeNode",
+    other: "Autres expositions",
+    work: "Œuvres",
     written: "Écrit pour DeNode",
     shop: "Voir le livre dans la boutique →",
     links: "Ailleurs",
@@ -104,7 +112,9 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
           )}
         </div>
         <div className="dn-hero__img">
-          {artist.image && <img src={artist.image} alt={artist.name} />}
+          {(artist.heroImage || artist.image) && (
+            <img src={artist.heroImage || artist.image} alt={artist.name} />
+          )}
         </div>
       </section>
 
@@ -185,11 +195,39 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
         </section>
       )}
 
+      {/* Selected work */}
+      {artist.works && artist.works.length > 0 && (
+        <section className="dn-section">
+          <div className="dn-wrap">
+            <div className="dn-head">
+              <h2 className="dn-h2">{t.work}</h2>
+            </div>
+            <div className="dn-grid">
+              {artist.works.map((w, i) => (
+                <figure key={i} className="m-0">
+                  <img
+                    src={w.img}
+                    alt={w.title}
+                    loading="lazy"
+                    className="w-full border border-[#d8d2c6] object-cover"
+                    style={{ aspectRatio: "4/5" }}
+                  />
+                  <figcaption className="mt-2.5">
+                    <div className="dn-serif-it text-lg">{w.title}</div>
+                    <div className="dn-kicker mt-1">{w.meta[lang]}</div>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Non-DeNode exhibitions */}
       {extra && extra.length > 0 && (
         <section className="dn-section">
           <div className="dn-wrap">
-            <h2 className="dn-h2 mb-6">{t.atDenode === "Bij DeNode" ? "Andere tentoonstellingen" : t.atDenode === "At DeNode" ? "Other exhibitions" : "Autres expositions"}</h2>
+            <h2 className="dn-h2 mb-6">{t.other}</h2>
             <ul className="space-y-4">
               {extra.map((ex, i) => (
                 <li key={i} className="grid gap-1 sm:grid-cols-[160px_1fr] sm:gap-6">
