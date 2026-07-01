@@ -305,6 +305,15 @@ const PROGRAM_POSTS: ProgramPost[] = [
     tint: "#3f5646",
     slug: "opening-nodenaysteen",
   },
+  {
+    title: "The church of Kat Bové",
+    category: "papers",
+    date: "Apr 20, 2025",
+    teaser: "Jacob de Smaele on Kat Bové, femininity and the waves of feminism.",
+    href: "https://www.denode.be/en/blog/papers-9/the-church-of-kat-bove-313",
+    tint: "#6b4a5a",
+    slug: "the-church-of-kat-bove",
+  },
 ];
 
 interface ProgramContent {
