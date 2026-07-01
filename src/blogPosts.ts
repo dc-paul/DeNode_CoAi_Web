@@ -24,8 +24,11 @@ export interface Post {
   image: string;
   body: Block[];
   // Authentic per-language overrides (from denode.be). Falls back to the base
-  // (English/source) fields when a language is not yet filled in.
+  // (source-language) fields when a language is not yet filled in. For posts
+  // written in Dutch, the base holds the Dutch text and `en` carries the AI
+  // English version.
   nl?: Localized;
+  en?: Localized;
   fr?: Localized;
 }
 
@@ -650,6 +653,46 @@ export const POSTS: Post[] = [
         { k: "p", t: "Outre sa carrière scénique, il est employé à temps plein à l'académie des arts KATZ à Torhout, où il enseigne le violoncelle, l'improvisation et le laboratoire musical. Au fil des ans, sa classe de violoncelle a grandi jusqu'à compter plus de 30 élèves." },
         { k: "p", t: "Dans le monde du théâtre et de la danse également, Robrecht a laissé son empreinte comme compositeur. Sa musique est notamment audible sur le CD Folies de Flandre." },
         { k: "p", t: "Aujourd'hui, il travaille sous le nom d'Ononde à une nouvelle phase de son parcours artistique, où il donne libre cours à sa passion pour la composition. Le nom Ononde renvoie phonétiquement au ressac répétitif de l'eau de mer, aux ondes sonores, et à « au nom de »." },
+      ],
+    },
+  },
+  {
+    slug: "ines-claus",
+    title: "Ines Claus",
+    subtitle: "",
+    category: "artists",
+    date: "2 februari 2024",
+    author: "Paul De Cannière",
+    image: "/images/blog-ines-claus.jpg",
+    body: [
+      { k: "h", t: "Biografie" },
+      { k: "p", t: "In 2017 studeerde Ines Claus (°1993) af in de Schone Kunsten (autonoom tekenen) aan KASK Gent. Haar werk is een fusie van tekenen, schilderen, collages, publicaties en installaties." },
+      { k: "p", t: "Ines Claus dompelt elementen uit het dagelijks leven, reclame, mode en interieurontwerp onder in een kleurrijk bad. Met gedurfde composities creëert ze een uniek universum. Een universum dat ze onlangs heeft vertaald in een zelfgepubliceerd boek, \"La Sape Paris.\"" },
+      { k: "p", t: "Om haar beelden met een breder publiek te delen, heeft ze naast de daadwerkelijke tentoonstellingen ook Claus Books opgericht." },
+      { k: "p", t: "Ines exposeerde in nodenaysteen met 'Triple Cintre' van 02.02.24 tot 03.03.24." },
+    ],
+    en: {
+      title: "Ines Claus",
+      subtitle: "",
+      ai: true,
+      body: [
+        { k: "h", t: "Biography" },
+        { k: "p", t: "In 2017, Ines Claus (°1993) graduated in Fine Arts (autonomous drawing) at KASK Ghent. Her work is a fusion of drawing, painting, collage, publications and installations." },
+        { k: "p", t: "Ines Claus immerses elements from everyday life, advertising, fashion and interior design in a colourful bath. With bold compositions she creates a unique universe — one she recently translated into a self-published book, \"La Sape Paris.\"" },
+        { k: "p", t: "To share her images with a wider audience, alongside the actual exhibitions she also founded Claus Books." },
+        { k: "p", t: "Ines exhibited at nodenaysteen with 'Triple Cintre' from 02.02.24 to 03.03.24." },
+      ],
+    },
+    fr: {
+      title: "Ines Claus",
+      subtitle: "",
+      ai: true,
+      body: [
+        { k: "h", t: "Biographie" },
+        { k: "p", t: "En 2017, Ines Claus (°1993) est diplômée en Arts plastiques (dessin autonome) au KASK de Gand. Son travail est une fusion de dessin, de peinture, de collages, de publications et d'installations." },
+        { k: "p", t: "Ines Claus plonge des éléments de la vie quotidienne, de la publicité, de la mode et du design d'intérieur dans un bain coloré. Par des compositions audacieuses, elle crée un univers unique — qu'elle a récemment traduit dans un livre auto-édité, « La Sape Paris »." },
+        { k: "p", t: "Pour partager ses images avec un public plus large, elle a également fondé Claus Books, en parallèle des expositions." },
+        { k: "p", t: "Ines a exposé à nodenaysteen avec 'Triple Cintre' du 02.02.24 au 03.03.24." },
       ],
     },
   },

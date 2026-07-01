@@ -278,6 +278,15 @@ const PROGRAM_POSTS: ProgramPost[] = [
     tint: "#5a3a3a",
     slug: "robrecht-kessels",
   },
+  {
+    title: "Ines Claus",
+    category: "artists",
+    date: "Feb 2, 2024",
+    teaser: "Drawing, painting and collage immersed in a colourful universe.",
+    href: "https://www.denode.be/en/blog/artists-7/ines-claus-302",
+    tint: "#8a6d3b",
+    slug: "ines-claus",
+  },
 ];
 
 interface ProgramContent {

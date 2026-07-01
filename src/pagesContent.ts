@@ -455,24 +455,24 @@ export const COOKIE: Record<Lang, CookieContent> = {
   en: {
     title: "Cookie Policy",
     body: [
-      "This website uses only the cookies strictly necessary for its operation. We do not use advertising or tracking cookies.",
-      "By continuing to use this site you agree to the use of essential cookies. You can adjust your browser settings to refuse cookies at any time.",
+      "This website is hosted on the Internet Computer via Juno and runs as a static application. It uses only functional, strictly necessary storage — for example to remember your language choice or to keep you signed in if you use member features. There are no advertising, tracking or analytics cookies.",
+      "No personal data is sold or shared with advertisers. You can clear this storage at any time through your browser settings; the site will keep working.",
       "Questions about this policy? Contact us at info@denode.be.",
     ],
   },
   fr: {
     title: "Politique en matière de cookies",
     body: [
-      "Ce site web n'utilise que les cookies strictement nécessaires à son fonctionnement. Nous n'utilisons pas de cookies publicitaires ou de suivi.",
-      "En continuant à utiliser ce site, vous acceptez l'utilisation des cookies essentiels. Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies.",
+      "Ce site web est hébergé sur l'Internet Computer via Juno et fonctionne comme une application statique. Il n'utilise qu'un stockage fonctionnel et strictement nécessaire — par exemple pour mémoriser votre choix de langue ou vous garder connecté si vous utilisez des fonctions membres. Il n'y a aucun cookie de publicité, de pistage ou d'analyse.",
+      "Aucune donnée personnelle n'est vendue ni partagée avec des annonceurs. Vous pouvez effacer ce stockage à tout moment via les paramètres de votre navigateur ; le site continuera de fonctionner.",
       "Des questions sur cette politique ? Contactez-nous à info@denode.be.",
     ],
   },
   nl: {
     title: "Cookiebeleid",
     body: [
-      "Deze website gebruikt enkel de cookies die strikt noodzakelijk zijn voor de werking ervan. We gebruiken geen advertentie- of trackingcookies.",
-      "Door deze site te blijven gebruiken, ga je akkoord met het gebruik van essentiële cookies. Je kan je browserinstellingen op elk moment aanpassen om cookies te weigeren.",
+      "Deze website wordt gehost op de Internet Computer via Juno en draait als een statische applicatie. Ze gebruikt enkel functionele, strikt noodzakelijke opslag — bijvoorbeeld om je taalkeuze te onthouden of je aangemeld te houden bij ledenfuncties. Er zijn geen advertentie-, tracking- of analysecookies.",
+      "Er worden geen persoonsgegevens verkocht of gedeeld met adverteerders. Je kan deze opslag op elk moment wissen via je browserinstellingen; de site blijft werken.",
       "Vragen over dit beleid? Contacteer ons via info@denode.be.",
     ],
   },

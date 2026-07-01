@@ -39,9 +39,11 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
   const loc: Localized =
     lang === "nl" && post.nl
       ? post.nl
-      : lang === "fr" && post.fr
-        ? post.fr
-        : { title: post.title, subtitle: post.subtitle, body: post.body };
+      : lang === "en" && post.en
+        ? post.en
+        : lang === "fr" && post.fr
+          ? post.fr
+          : { title: post.title, subtitle: post.subtitle, body: post.body };
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
