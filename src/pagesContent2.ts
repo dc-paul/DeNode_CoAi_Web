@@ -287,6 +287,24 @@ const PROGRAM_POSTS: ProgramPost[] = [
     tint: "#8a6d3b",
     slug: "ines-claus",
   },
+  {
+    title: "Bij De Meesters — Gipi & Bezverkhni",
+    category: "news",
+    date: "Jan 25, 2025",
+    teaser: "Two artists born in 1947, in Ghent and Leningrad — fine drawings and explosive paintings.",
+    href: "https://www.denode.be/en/blog/news-8/nodenaysteen-stelt-voor-bij-de-meesters-304",
+    tint: "#4a5a6a",
+    slug: "bij-de-meesters",
+  },
+  {
+    title: "Opening of Nodenaysteen — an art space",
+    category: "news",
+    date: "Dec 31, 2023",
+    teaser: "The opening of nodenaysteen, an art space on the Leie in the heart of Ghent.",
+    href: "https://www.denode.be/en/blog/news-8/opening-of-nodenaysteen-an-art-space-310",
+    tint: "#3f5646",
+    slug: "opening-nodenaysteen",
+  },
 ];
 
 interface ProgramContent {
