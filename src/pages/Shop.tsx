@@ -7,8 +7,10 @@ const ACCENT = "#c0392b";
 export function Shop({ lang }: { lang: Lang }) {
   const s = SHOP[lang];
   const mailto =
-    "mailto:info@denode.be?subject=" +
-    encodeURIComponent("Reservatie boek — Kat Bové");
+    `mailto:${s.mailTo}?subject=` +
+    encodeURIComponent(s.mailSubject) +
+    "&body=" +
+    encodeURIComponent(s.mailBody);
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 md:px-8">
       <h1 className="text-4xl font-extrabold text-black md:text-5xl">{s.title}</h1>

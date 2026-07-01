@@ -138,7 +138,15 @@ export function EventDetail({ lang, slug }: { lang: Lang; slug: string }) {
 
       {ev.register && (
         <a
-          href={`mailto:${ev.register}`}
+          href={
+            `mailto:${ev.register}` +
+            (ev.mailSubject
+              ? `?subject=${encodeURIComponent(ev.mailSubject[lang])}` +
+                (ev.mailBody
+                  ? `&body=${encodeURIComponent(ev.mailBody[lang])}`
+                  : "")
+              : "")
+          }
           className="mt-10 inline-block rounded-md px-6 py-3 text-[15px] font-semibold text-white"
           style={{ backgroundColor: ACCENT }}
         >
