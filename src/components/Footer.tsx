@@ -1,90 +1,138 @@
 import { CONTENT } from "../content";
-import type { Lang } from "../lang";
+import { href, type Lang } from "../lang";
 
-const ACCENT = "#a23b2d";
+const T: Record<
+  Lang,
+  {
+    discover: string;
+    involved: string;
+    friends: string;
+    contact: string;
+    exhibitions: string;
+    artists: string;
+    publications: string;
+    visit: string;
+    about: string;
+    team: string;
+    refrain: string;
+  }
+> = {
+  nl: {
+    discover: "Ontdek",
+    involved: "Betrokken",
+    friends: "Vrienden van DeNode",
+    contact: "Contact",
+    exhibitions: "Tentoonstellingen",
+    artists: "Kunstenaars",
+    publications: "Publicaties",
+    visit: "Bezoek",
+    about: "Over",
+    team: "Team",
+    refrain: "Kunst en technologie — zonder dwang naar timing.",
+  },
+  en: {
+    discover: "Discover",
+    involved: "Get involved",
+    friends: "Friends of DeNode",
+    contact: "Contact",
+    exhibitions: "Exhibitions",
+    artists: "Artists",
+    publications: "Publications",
+    visit: "Visit",
+    about: "About",
+    team: "Team",
+    refrain: "Art and technology — without the pressure of timing.",
+  },
+  fr: {
+    discover: "Découvrir",
+    involved: "S'impliquer",
+    friends: "Amis de DeNode",
+    contact: "Contact",
+    exhibitions: "Expositions",
+    artists: "Artistes",
+    publications: "Publications",
+    visit: "Visite",
+    about: "À propos",
+    team: "Équipe",
+    refrain: "Art et technologie — sans contrainte de calendrier.",
+  },
+};
 
 export function Footer({ lang }: { lang: Lang }) {
   const f = CONTENT[lang].footer;
+  const t = T[lang];
   return (
-    <footer className="mt-8 bg-[#0e0e0c] text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 md:px-10">
-        <div>
-          <img
-            src="/images/denode-logo-white.png"
-            alt="DeNode Foundation"
-            className="h-12 w-auto"
-          />
-          <h2 className="mt-8 text-lg font-bold">{f.welcomeHeading}</h2>
-          {f.welcomeBody.map((p, i) => (
-            <p key={i} className="mt-4 text-[16px] leading-relaxed text-white/70">
-              {p}
+    <footer className="dn-footer">
+      <div className="dn-wrap">
+        <div className="cols">
+          <div>
+            <img src="/images/denode-logo-white.png" alt="DeNode Foundation" />
+            <p className="text-[14px] leading-relaxed text-[#cfc8b8]">
+              {f.address}
             </p>
-          ))}
-          <p className="mt-6 text-[16px] leading-relaxed text-white/70">
-            {f.findUs}
-            <br />
-            {f.address}
-          </p>
-        </div>
-
-        <div>
-          <p className="font-bold">{f.openHeading}</p>
-          {f.openLines.map((l, i) => (
-            <p key={i} className="mt-3 text-[16px] text-white/70">
-              • {l}
+            <p className="mt-3 text-[14px]">
+              <a href="mailto:info@denode.be">info@denode.be</a>
+              <br />
+              <a href="tel:+32488880889">+32 488 88 08 89</a>
             </p>
-          ))}
-          <p className="mt-4 text-[16px] text-white/70">{f.byAppointment}</p>
-
-          <div className="mt-6 flex gap-3">
-            <a
-              href="https://www.facebook.com/profile.php?id=61574359620834"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="flex h-10 w-10 items-center justify-center font-bold text-white"
-              style={{ backgroundColor: ACCENT }}
-            >
-              f
-            </a>
-            <a
-              href="https://www.instagram.com/denode_foundation/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="flex h-10 w-10 items-center justify-center font-bold text-white"
-              style={{ backgroundColor: ACCENT }}
-            >
-              ◉
-            </a>
+            <div className="mt-4 flex gap-4 text-[14px]">
+              <a
+                href="https://www.instagram.com/denode_foundation/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61574359620834"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+            </div>
           </div>
 
-          <p className="mt-6 text-[15px] text-white/70">{f.newsletter}</p>
-          <form
-            className="mt-3 flex max-w-md overflow-hidden border border-white/25"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="email"
-              required
-              placeholder={f.emailPlaceholder}
-              className="flex-1 bg-transparent px-4 py-2.5 text-[15px] text-white placeholder:text-white/40 outline-none"
-            />
-            <button
-              type="submit"
-              className="px-6 py-2.5 font-semibold text-white"
-              style={{ backgroundColor: ACCENT }}
-            >
-              {f.register}
-            </button>
-          </form>
-          <p className="mt-2 text-xs text-white/40">{f.newsletterNote}</p>
-        </div>
-      </div>
+          <div>
+            <h4>{t.discover}</h4>
+            <ul className="fnav">
+              <li>
+                <a href={href(lang, "expo")}>{t.exhibitions}</a>
+              </li>
+              <li>
+                <a href={href(lang, "artists")}>{t.artists}</a>
+              </li>
+              <li>
+                <a href={href(lang, "publicaties")}>{t.publications}</a>
+              </li>
+            </ul>
+          </div>
 
-      <div className="border-t border-white/15 py-8">
-        <div className="mx-auto max-w-7xl px-6 text-sm text-white/50 md:px-10">
-          <p>{f.copyright}</p>
+          <div>
+            <h4>{t.involved}</h4>
+            <ul className="fnav">
+              <li>
+                <a href={href(lang, "visit")}>{t.visit}</a>
+              </li>
+              <li>
+                <a href={href(lang, "mission")}>{t.about}</a>
+              </li>
+              <li>
+                <a href={href(lang, "team")}>{t.team}</a>
+              </li>
+              <li>
+                <a href="mailto:info@denode.be">{t.contact}</a>
+              </li>
+              <li>
+                <span className="text-[#7c7566]">{t.friends}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="fine">
+          <span>{f.copyright} · Predikherenlei 4, 9000 Gent</span>
+          <span className="dn-serif-it text-[#98917f]">{t.refrain}</span>
         </div>
       </div>
     </footer>

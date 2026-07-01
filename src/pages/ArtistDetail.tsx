@@ -5,50 +5,48 @@ import { RefCard } from "../components/RefCard";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { href, type Lang } from "../lang";
 
-const ACCENT = "#a23b2d";
-const ROOT: Record<Lang, string> = {
-  nl: "Kunstenaars",
-  en: "Artists",
-  fr: "Artistes",
-};
 const T: Record<
   Lang,
   {
-    back: string;
+    root: string;
     notFound: string;
-    shop: string;
-    denode: string;
-    other: string;
+    role: string;
+    about: string;
+    atDenode: string;
     written: string;
-    external: string;
+    shop: string;
+    links: string;
   }
 > = {
   nl: {
-    back: "← Terug naar kunstenaars",
+    root: "Kunstenaars",
     notFound: "Kunstenaar niet gevonden",
-    shop: "Bekijk het boek in de shop →",
-    denode: "Tentoonstelling(en) bij DeNode",
-    other: "Andere tentoonstellingen",
+    role: "Kunstenaar",
+    about: "Over",
+    atDenode: "Bij DeNode",
     written: "Geschreven voor DeNode",
-    external: "Elders",
+    shop: "Bekijk het boek in de shop →",
+    links: "Elders",
   },
   en: {
-    back: "← Back to artists",
+    root: "Artists",
     notFound: "Artist not found",
-    shop: "View the book in the shop →",
-    denode: "Exhibition(s) at DeNode",
-    other: "Other exhibitions",
+    role: "Artist",
+    about: "About",
+    atDenode: "At DeNode",
     written: "Written for DeNode",
-    external: "Elsewhere",
+    shop: "View the book in the shop →",
+    links: "Elsewhere",
   },
   fr: {
-    back: "← Retour aux artistes",
+    root: "Artistes",
     notFound: "Artiste introuvable",
-    shop: "Voir le livre dans la boutique →",
-    denode: "Exposition(s) chez DeNode",
-    other: "Autres expositions",
+    role: "Artiste",
+    about: "À propos",
+    atDenode: "Chez DeNode",
     written: "Écrit pour DeNode",
-    external: "Ailleurs",
+    shop: "Voir le livre dans la boutique →",
+    links: "Ailleurs",
   },
 };
 
@@ -67,11 +65,13 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
 
   if (!artist) {
     return (
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h1 className="text-3xl font-extrabold">{t.notFound}</h1>
-        <a href={href(lang, "artists")} className="mt-6 inline-block font-medium" style={{ color: ACCENT }}>
-          {t.back}
-        </a>
+      <section className="dn-section">
+        <div className="dn-wrap text-center">
+          <h1 className="dn-h2">{t.notFound}</h1>
+          <a className="dn-btn mx-auto mt-6" href={href(lang, "artists")}>
+            {t.root}
+          </a>
+        </div>
       </section>
     );
   }
@@ -81,145 +81,151 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
   const extra = artist.extraExhibitions?.[lang];
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
-      <Breadcrumb
-        lang={lang}
-        trail={[{ label: ROOT[lang], page: "artists" }, { label: artist.name }]}
-      />
-
-      <h1 className="dn-name mt-2 text-5xl font-medium leading-tight text-black md:text-6xl">
-        {artist.name}
-      </h1>
-      {artist.role && <p className="mt-3 text-xl text-[#555]">{artist.role[lang]}</p>}
-
-      {artist.image && (
-        <img
-          src={artist.image}
-          alt={artist.name}
-          className="mt-8 w-full rounded-md object-cover shadow-sm"
+    <>
+      <div className="dn-wrap">
+        <Breadcrumb
+          lang={lang}
+          trail={[{ label: t.root, page: "artists" }, { label: artist.name }]}
         />
-      )}
+      </div>
 
-      {bio && (
-        <div className="mt-10 space-y-5">
-          {bio.map((b, i) =>
-            b.k === "h" ? (
-              <h2 key={i} className="pt-4 text-2xl font-bold text-black">
-                {b.t}
-              </h2>
-            ) : (
-              <p key={i} className="text-[17px] leading-relaxed text-[#222]">
-                {b.t}
-              </p>
-            ),
+      {/* Split hero */}
+      <section className="dn-hero mt-4">
+        <div className="dn-hero__txt">
+          <p className="dn-eyebrow">{t.role}</p>
+          <h1 className="dn-h1 mt-2">{artist.name}</h1>
+          {artist.role && (
+            <p className="dn-serif-it mt-2 text-2xl text-[#45433a]">
+              {artist.role[lang]}
+            </p>
+          )}
+          {bio && bio[0]?.k === "p" && (
+            <p className="dn-lead mt-5">{bio[0].t}</p>
           )}
         </div>
-      )}
+        <div className="dn-hero__img">
+          {artist.image && <img src={artist.image} alt={artist.name} />}
+        </div>
+      </section>
 
-      {artist.shop && (
-        <a href={href(lang, "shop")} className="mt-4 inline-block font-medium" style={{ color: ACCENT }}>
-          {t.shop}
-        </a>
-      )}
-
-      {/* DeNode exhibitions — derived automatically from expos.ts */}
-      {expos.length > 0 && (
-        <div className="mt-12 border-t border-[#ececec] pt-8">
-          <h2 className="text-2xl font-bold text-black">{t.denode}</h2>
-          <div className="mt-6 space-y-8">
-            {expos.map((e) => (
-              <div key={e.slug}>
-                <p className="text-sm font-semibold tabular-nums" style={{ color: ACCENT }}>
-                  {e.period}
-                </p>
-                <a
-                  href={href(lang, `expo/${e.slug}`)}
-                  className="text-lg font-bold text-black hover:text-[#a23b2d]"
-                >
-                  {e.title} →
-                </a>
-                {e.articleSlugs && e.articleSlugs.length > 0 && (
-                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                    {e.articleSlugs.map((s) => {
-                      const bp = getPost(s);
-                      return (
-                        <RefCard
-                          key={s}
-                          href={href(lang, `blog/${s}`)}
-                          title={postTitle(s, lang)}
-                          subtitle={bp?.author}
-                          image={bp?.image}
-                          tint={e.tint}
-                        />
-                      );
-                    })}
+      {/* About + aside */}
+      {(bio || artist.external) && (
+        <section className="dn-section">
+          <div className="dn-wrap grid gap-12 md:grid-cols-[1fr_300px]">
+            <div>
+              {bio && (
+                <>
+                  <h2 className="dn-h2 mb-5">{t.about}</h2>
+                  <div className="space-y-4 text-[17px] leading-relaxed text-[#26251f]">
+                    {bio.map((b, i) =>
+                      b.k === "h" ? (
+                        <h3 key={i} className="dn-h3 pt-3">
+                          {b.t}
+                        </h3>
+                      ) : (
+                        <p key={i}>{b.t}</p>
+                      ),
+                    )}
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Non-DeNode exhibitions (manual) */}
-      {extra && extra.length > 0 && (
-        <div className="mt-12 border-t border-[#ececec] pt-8">
-          <h2 className="text-2xl font-bold text-black">{t.other}</h2>
-          <ul className="mt-6 space-y-4">
-            {extra.map((ex, i) => (
-              <li key={i} className="grid gap-1 sm:grid-cols-[150px_1fr] sm:gap-5">
-                <span className="text-sm font-semibold tabular-nums" style={{ color: ACCENT }}>
-                  {ex.date}
-                </span>
-                <p className="text-[16px] leading-relaxed text-[#222]">{ex.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Authored texts (for critics/authors) */}
-      {artist.articles && artist.articles.length > 0 && (
-        <div className="mt-12 border-t border-[#ececec] pt-8">
-          <h2 className="text-2xl font-bold text-black">{t.written}</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {artist.articles.map((s) => {
-              const bp = getPost(s);
-              return (
-                <RefCard
-                  key={s}
-                  href={href(lang, `blog/${s}`)}
-                  title={postTitle(s, lang)}
-                  subtitle={bp?.subtitle}
-                  image={bp?.image}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* External links */}
-      {artist.external && artist.external.length > 0 && (
-        <div className="mt-12 border-t border-[#ececec] pt-8">
-          <h2 className="text-2xl font-bold text-black">{t.external}</h2>
-          <ul className="mt-4 space-y-2">
-            {artist.external.map((x) => (
-              <li key={x.url}>
+                </>
+              )}
+              {artist.shop && (
                 <a
-                  href={x.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium"
-                  style={{ color: ACCENT }}
+                  className="mt-6 inline-block font-medium"
+                  style={{ color: "var(--accent)" }}
+                  href={href(lang, "shop")}
                 >
-                  {x.label} ↗
+                  {t.shop}
                 </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+              )}
+            </div>
+
+            {artist.external && artist.external.length > 0 && (
+              <aside>
+                <dl className="dn-dl" style={{ gridTemplateColumns: "1fr" }}>
+                  <dt>{t.links}</dt>
+                  {artist.external.map((x) => (
+                    <dd key={x.url}>
+                      <a href={x.url} target="_blank" rel="noopener noreferrer">
+                        {x.label} ↗
+                      </a>
+                    </dd>
+                  ))}
+                </dl>
+              </aside>
+            )}
+          </div>
+        </section>
       )}
-    </article>
+
+      {/* At DeNode — dark band with exhibition rows */}
+      {expos.length > 0 && (
+        <section className="dn-band">
+          <div className="dn-wrap">
+            <h2 className="dn-h2" style={{ color: "#fff" }}>
+              {t.atDenode}
+            </h2>
+            <ul className="mt-6">
+              {expos.map((e) => (
+                <li key={e.slug}>
+                  <a
+                    href={href(lang, `expo/${e.slug}`)}
+                    className="flex items-baseline justify-between gap-6 border-t border-white/15 py-4"
+                  >
+                    <span className="dn-kicker shrink-0 text-white/60">
+                      {e.period}
+                    </span>
+                    <span className="flex-1 text-xl text-white">{e.title}</span>
+                    <span style={{ color: "var(--accent)" }}>→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Non-DeNode exhibitions */}
+      {extra && extra.length > 0 && (
+        <section className="dn-section">
+          <div className="dn-wrap">
+            <h2 className="dn-h2 mb-6">{t.atDenode === "Bij DeNode" ? "Andere tentoonstellingen" : t.atDenode === "At DeNode" ? "Other exhibitions" : "Autres expositions"}</h2>
+            <ul className="space-y-4">
+              {extra.map((ex, i) => (
+                <li key={i} className="grid gap-1 sm:grid-cols-[160px_1fr] sm:gap-6">
+                  <span className="dn-kicker">{ex.date}</span>
+                  <p className="text-[16px] leading-relaxed text-[#26251f]">
+                    {ex.text}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Authored texts */}
+      {artist.articles && artist.articles.length > 0 && (
+        <section className="dn-section">
+          <div className="dn-wrap">
+            <h2 className="dn-h2 mb-6">{t.written}</h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {artist.articles.map((s) => {
+                const bp = getPost(s);
+                return (
+                  <RefCard
+                    key={s}
+                    href={href(lang, `blog/${s}`)}
+                    title={postTitle(s, lang)}
+                    subtitle={bp?.subtitle}
+                    image={bp?.image}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 }

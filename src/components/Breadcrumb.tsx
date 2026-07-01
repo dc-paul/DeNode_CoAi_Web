@@ -9,19 +9,17 @@ export function Breadcrumb({
   trail: { label: string; page?: string }[];
 }) {
   return (
-    <nav className="mb-6 text-xs font-semibold uppercase tracking-[0.15em] text-[#8a8477]">
+    <div className="dn-crumb">
       {trail.map((c, i) => (
         <span key={i}>
-          {i > 0 && <span className="mx-2">/</span>}
+          {i > 0 && <span> / </span>}
           {c.page ? (
-            <a href={href(lang, c.page)} className="hover:text-[#a23b2d]">
-              {c.label}
-            </a>
+            <a href={href(lang, c.page)}>{c.label}</a>
           ) : (
-            <span className="text-[#0e0e0c]">{c.label}</span>
+            <span style={{ color: "var(--ink)" }}>{c.label}</span>
           )}
         </span>
       ))}
-    </nav>
+    </div>
   );
 }
