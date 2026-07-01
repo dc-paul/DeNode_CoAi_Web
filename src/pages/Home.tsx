@@ -4,9 +4,20 @@ import type { Lang } from "../lang";
 
 const ACCENT = "#c0392b";
 const CARD_IMAGES = [IMG.workshop, IMG.katbove, IMG.drawing];
+const MORE: Record<Lang, string> = {
+  nl: "Meer info & inschrijven →",
+  en: "More info & registration →",
+  fr: "Plus d'infos & inscription →",
+};
 
 export function Home({ lang }: { lang: Lang }) {
   const h = CONTENT[lang].home;
+  // Local detail pages per home card (index-aligned with h.cards / CARD_IMAGES).
+  const CARD_LINKS: (string | undefined)[] = [
+    `#/${lang}/event/cutting-reality`,
+    undefined, // Kat Bové book → keeps its own shop CTA
+    `#/${lang}/event/drawing-sessions`,
+  ];
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
@@ -47,37 +58,56 @@ export function Home({ lang }: { lang: Lang }) {
 
       <section className="bg-[#f7f7f5] py-14">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-10">
-          {h.cards.map((c, i) => (
-            <article
-              key={i}
-              className="flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm"
-            >
-              <img
-                src={CARD_IMAGES[i]}
-                alt={c.title}
-                className="h-56 w-full object-cover"
-              />
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-xl font-bold text-black">{c.title}</h3>
-                <div className="mt-3 text-[15px] leading-relaxed text-[#333]">
-                  {c.lines.map((l, j) => (
-                    <p key={j} className={j === 0 ? "" : "mt-1"}>
-                      {l}
-                    </p>
-                  ))}
-                  {c.cta && c.ctaHref && (
-                    <a
-                      href={c.ctaHref}
-                      className="mt-4 inline-block rounded-sm px-5 py-2.5 font-semibold text-white"
-                      style={{ backgroundColor: ACCENT }}
-                    >
-                      {c.cta}
-                    </a>
-                  )}
+          {h.cards.map((c, i) => {
+            const link = CARD_LINKS[i];
+            const body = (
+              <>
+                <img
+                  src={CARD_IMAGES[i]}
+                  alt={c.title}
+                  className="h-56 w-full object-cover"
+                />
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-xl font-bold text-black">{c.title}</h3>
+                  <div className="mt-3 text-[15px] leading-relaxed text-[#333]">
+                    {c.lines.map((l, j) => (
+                      <p key={j} className={j === 0 ? "" : "mt-1"}>
+                        {l}
+                      </p>
+                    ))}
+                    {link && (
+                      <span
+                        className="mt-4 inline-block font-medium"
+                        style={{ color: ACCENT }}
+                      >
+                        {MORE[lang]}
+                      </span>
+                    )}
+                    {!link && c.cta && c.ctaHref && (
+                      <a
+                        href={c.ctaHref}
+                        className="mt-4 inline-block rounded-sm px-5 py-2.5 font-semibold text-white"
+                        style={{ backgroundColor: ACCENT }}
+                      >
+                        {c.cta}
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </>
+            );
+            const cls =
+              "flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm";
+            return link ? (
+              <a key={i} href={link} className={`${cls} transition-shadow hover:shadow-md`}>
+                {body}
+              </a>
+            ) : (
+              <article key={i} className={cls}>
+                {body}
+              </article>
+            );
+          })}
         </div>
       </section>
 
