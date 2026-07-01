@@ -23,6 +23,16 @@ const READ: Record<Lang, string> = {
   en: "Read about Kat Bové",
   fr: "Lire à propos de Kat Bové",
 };
+const EXHIBITIONS: Record<Lang, string> = {
+  nl: "Tentoonstellingen & geschiedenis",
+  en: "Exhibitions & history",
+  fr: "Expositions & histoire",
+};
+const SHOP_CTA: Record<Lang, string> = {
+  nl: "Bekijk het boek in de shop →",
+  en: "View the book in the shop →",
+  fr: "Voir le livre dans la boutique →",
+};
 
 export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
   const artist = getArtist(slug);
@@ -105,6 +115,48 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
           ),
         )}
       </div>
+
+      {artist.shop && (
+        <a
+          href={`#/${lang}/shop`}
+          className="mt-4 inline-block font-medium"
+          style={{ color: ACCENT }}
+        >
+          {SHOP_CTA[lang]}
+        </a>
+      )}
+
+      {artist.exhibitions && (
+        <div className="mt-12 border-t border-[#ececec] pt-8">
+          <h2 className="text-2xl font-bold text-black">{EXHIBITIONS[lang]}</h2>
+          <ul className="mt-6 space-y-6">
+            {artist.exhibitions[lang].map((ex, i) => (
+              <li key={i} className="grid gap-1 sm:grid-cols-[150px_1fr] sm:gap-5">
+                <span
+                  className="text-sm font-semibold tabular-nums"
+                  style={{ color: ACCENT }}
+                >
+                  {ex.date}
+                </span>
+                <div>
+                  <p className="text-[16px] leading-relaxed text-[#222]">
+                    {ex.text}
+                  </p>
+                  {ex.link && (
+                    <a
+                      href={`#/${lang}/${ex.link}`}
+                      className="mt-1 inline-block text-[14px] font-medium"
+                      style={{ color: ACCENT }}
+                    >
+                      {ex.linkLabel ?? "→"}
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {related.length > 0 && (
         <div className="mt-12 border-t border-[#ececec] pt-8">
