@@ -12,30 +12,24 @@ export function Shop({ lang }: { lang: Lang }) {
     "&body=" +
     encodeURIComponent(s.mailBody);
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16 md:px-8">
-      <h1 className="text-4xl font-extrabold text-black md:text-5xl">{s.title}</h1>
-      <div className="mt-10 grid items-start gap-10 md:grid-cols-2">
-        <img
-          src={IMG.katbove}
-          alt={s.productTitle}
-          className="w-full rounded-md object-cover shadow-sm"
-        />
-        <div>
-          <h2 className="text-2xl font-bold text-black">{s.productTitle}</h2>
-          <p className="mt-2 text-xl font-bold" style={{ color: ACCENT }}>
-            {s.price}
-          </p>
-          <p className="mt-4 text-[16px] leading-relaxed text-[#333]">
-            {s.productDesc}
-          </p>
-          <a
-            href={mailto}
-            className="mt-6 inline-block rounded-sm px-6 py-3 font-semibold text-white"
-            style={{ backgroundColor: ACCENT }}
-          >
-            {s.reserveCta}
-          </a>
-          <p className="mt-4 text-sm text-[#888]">{s.note}</p>
+    <section className="dn-section">
+      <div className="dn-wrap">
+        <h1 className="dn-h1">{s.title}</h1>
+        <div className="mt-10 grid items-start gap-10 md:grid-cols-2">
+          <img src={IMG.katbove} alt={s.productTitle} className="w-full object-cover" />
+          <div>
+            <h2 className="dn-h3">{s.productTitle}</h2>
+            <p className="mt-2 text-xl font-bold" style={{ color: ACCENT }}>
+              {s.price}
+            </p>
+            <p className="mt-4 text-[16px] leading-relaxed text-[#2a2925]">
+              {s.productDesc}
+            </p>
+            <a href={mailto} className="dn-btn mt-6">
+              {s.reserveCta}
+            </a>
+            <p className="mt-4 text-sm text-[#8a8477]">{s.note}</p>
+          </div>
         </div>
       </div>
     </section>

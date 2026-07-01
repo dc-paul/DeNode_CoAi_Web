@@ -2,6 +2,7 @@ import { getPost, type Localized } from "../blogPosts";
 import { expoForArticle } from "../expos";
 import { getArtist, authorForArticle } from "../artistDetails";
 import { RefCard } from "../components/RefCard";
+import { Breadcrumb } from "../components/Breadcrumb";
 import { href, type Lang } from "../lang";
 
 const CTX: Record<Lang, { expo: string; artist: string; author: string }> = {
@@ -11,10 +12,10 @@ const CTX: Record<Lang, { expo: string; artist: string; author: string }> = {
 };
 
 const ACCENT = "#a23b2d";
-const BACK: Record<Lang, string> = {
-  nl: "← Terug naar programma",
-  en: "← Back to program",
-  fr: "← Retour au programme",
+const ROOT: Record<Lang, string> = {
+  nl: "Publicaties",
+  en: "Publications",
+  fr: "Publications",
 };
 const NOT_FOUND: Record<Lang, string> = {
   nl: "Artikel niet gevonden",
@@ -32,15 +33,13 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
 
   if (!post) {
     return (
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h1 className="text-3xl font-extrabold">{NOT_FOUND[lang]}</h1>
-        <a
-          href={href(lang, "program")}
-          className="mt-6 inline-block font-medium"
-          style={{ color: ACCENT }}
-        >
-          {BACK[lang]}
-        </a>
+      <section className="dn-section">
+        <div className="dn-wrap text-center">
+          <h1 className="dn-h2">{NOT_FOUND[lang]}</h1>
+          <a className="dn-btn mx-auto mt-6" href={href(lang, "publicaties")}>
+            {ROOT[lang]}
+          </a>
+        </div>
       </section>
     );
   }
@@ -56,24 +55,17 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
-      <a
-        href={href(lang, "program")}
-        className="text-sm font-medium"
-        style={{ color: ACCENT }}
-      >
-        {BACK[lang]}
-      </a>
+      <Breadcrumb
+        lang={lang}
+        trail={[{ label: ROOT[lang], page: "publicaties" }, { label: loc.title }]}
+      />
 
       {loc.ai && (
         <p className="mt-4 text-xs italic text-[#999]">{AI_NOTE[lang]}</p>
       )}
 
-      <h1 className="mt-6 text-4xl font-extrabold leading-tight text-black md:text-5xl">
-        {loc.title}
-      </h1>
-      {loc.subtitle && (
-        <p className="mt-3 text-xl text-[#555]">{loc.subtitle}</p>
-      )}
+      <h1 className="dn-h1 mt-4">{loc.title}</h1>
+      {loc.subtitle && <p className="dn-lead mt-3">{loc.subtitle}</p>}
       <p className="mt-3 text-sm text-[#999]">
         {post.date} · {post.author}
       </p>

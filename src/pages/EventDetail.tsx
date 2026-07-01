@@ -1,12 +1,13 @@
 import { getEvent } from "../eventDetails";
 import type { Localized } from "../blogPosts";
+import { Breadcrumb } from "../components/Breadcrumb";
 import { href, type Lang } from "../lang";
 
 const ACCENT = "#a23b2d";
-const BACK: Record<Lang, string> = {
-  nl: "← Terug naar evenementen",
-  en: "← Back to events",
-  fr: "← Retour aux événements",
+const ROOT: Record<Lang, string> = {
+  nl: "Evenementen",
+  en: "Events",
+  fr: "Événements",
 };
 const NOT_FOUND: Record<Lang, string> = {
   nl: "Evenement niet gevonden",
@@ -31,15 +32,13 @@ export function EventDetail({ lang, slug }: { lang: Lang; slug: string }) {
 
   if (!ev) {
     return (
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h1 className="text-3xl font-extrabold">{NOT_FOUND[lang]}</h1>
-        <a
-          href={href(lang, "events")}
-          className="mt-6 inline-block font-medium"
-          style={{ color: ACCENT }}
-        >
-          {BACK[lang]}
-        </a>
+      <section className="dn-section">
+        <div className="dn-wrap text-center">
+          <h1 className="dn-h2">{NOT_FOUND[lang]}</h1>
+          <a className="dn-btn mx-auto mt-6" href={href(lang, "events")}>
+            {ROOT[lang]}
+          </a>
+        </div>
       </section>
     );
   }
@@ -49,22 +48,17 @@ export function EventDetail({ lang, slug }: { lang: Lang; slug: string }) {
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
-      <a
-        href={href(lang, "events")}
-        className="text-sm font-medium"
-        style={{ color: ACCENT }}
-      >
-        {BACK[lang]}
-      </a>
+      <Breadcrumb
+        lang={lang}
+        trail={[{ label: ROOT[lang], page: "events" }, { label: loc.title }]}
+      />
 
       {loc.ai && (
         <p className="mt-4 text-xs italic text-[#999]">{AI_NOTE[lang]}</p>
       )}
 
-      <h1 className="mt-6 text-4xl font-extrabold leading-tight text-black md:text-5xl">
-        {loc.title}
-      </h1>
-      {loc.subtitle && <p className="mt-3 text-xl text-[#555]">{loc.subtitle}</p>}
+      <h1 className="dn-h1 mt-4">{loc.title}</h1>
+      {loc.subtitle && <p className="dn-lead mt-3">{loc.subtitle}</p>}
 
       {ev.image && (
         <img

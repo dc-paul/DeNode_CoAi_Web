@@ -17,10 +17,10 @@ export function RefCard({
   return (
     <a
       href={href}
-      className="group flex items-center gap-4 rounded-md border border-[#ececec] bg-white p-3 shadow-sm transition-shadow hover:shadow-md"
+      className="group flex items-center gap-4 border border-[#d8d2c6] bg-white p-3 transition-colors hover:border-[#a23b2d]"
     >
       <div
-        className="h-16 w-16 flex-shrink-0 overflow-hidden rounded"
+        className="h-16 w-16 flex-shrink-0 overflow-hidden"
         style={{ backgroundColor: tint }}
       >
         {image && (
@@ -37,7 +37,7 @@ export function RefCard({
           {title}
         </p>
         {subtitle && (
-          <p className="mt-0.5 text-[13px] text-[#888]">{subtitle}</p>
+          <p className="mt-0.5 text-[13px] text-[#8a8477]">{subtitle}</p>
         )}
       </div>
     </a>

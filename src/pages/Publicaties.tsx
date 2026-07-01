@@ -48,55 +48,55 @@ export function Publicaties({ lang }: { lang: Lang }) {
   const papers = POSTS.filter((p) => p.category === "papers");
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16 md:px-8">
-      <h1 className="text-4xl font-extrabold text-black md:text-5xl">{t.title}</h1>
-      <p className="mt-3 text-[17px] text-[#555]">{t.intro}</p>
+    <section className="dn-section">
+      <div className="dn-wrap">
+        <h1 className="dn-h1">{t.title}</h1>
+        <p className="dn-lead mt-4 max-w-[60ch]">{t.intro}</p>
 
-      {/* For sale — the book */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold text-black">{t.forSale}</h2>
-        <div className="mt-6 grid items-start gap-8 md:grid-cols-[220px_1fr]">
-          <img
-            src={IMG.katbove}
-            alt={s.productTitle}
-            className="w-full object-cover shadow-sm"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-black">{s.productTitle}</h3>
-            <p className="mt-2 text-xl font-bold" style={{ color: ACCENT }}>
-              {s.price}
-            </p>
-            <p className="mt-3 text-[16px] leading-relaxed text-[#333]">
-              {s.productDesc}
-            </p>
-            <a
-              href={href(lang, "shop")}
-              className="mt-5 inline-block px-6 py-3 font-semibold text-white"
-              style={{ backgroundColor: ACCENT }}
-            >
-              {t.order}
-            </a>
+        {/* For sale — the book */}
+        <div className="mt-12">
+          <div className="dn-head">
+            <h2 className="dn-h2">{t.forSale}</h2>
+          </div>
+          <div className="grid items-start gap-8 md:grid-cols-[240px_1fr]">
+            <div className="thumb-fixed">
+              <img src={IMG.katbove} alt={s.productTitle} className="w-full object-cover" />
+            </div>
+            <div>
+              <h3 className="dn-h3">{s.productTitle}</h3>
+              <p className="mt-2 text-xl font-bold" style={{ color: ACCENT }}>
+                {s.price}
+              </p>
+              <p className="mt-3 max-w-[52ch] text-[16px] leading-relaxed text-[#2a2925]">
+                {s.productDesc}
+              </p>
+              <a className="dn-btn mt-5" href={href(lang, "shop")}>
+                {t.order}
+              </a>
+            </div>
           </div>
         </div>
+
+        {/* Papers & essays */}
+        {papers.length > 0 && (
+          <div className="mt-16">
+            <div className="dn-head">
+              <h2 className="dn-h2">{t.papers}</h2>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {papers.map((p) => (
+                <RefCard
+                  key={p.slug}
+                  href={href(lang, `blog/${p.slug}`)}
+                  title={postTitle(p, lang)}
+                  subtitle={p.author}
+                  image={p.image}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-
-      {/* Papers & essays */}
-      {papers.length > 0 && (
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-black">{t.papers}</h2>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {papers.map((p) => (
-              <RefCard
-                key={p.slug}
-                href={href(lang, `blog/${p.slug}`)}
-                title={postTitle(p, lang)}
-                subtitle={p.author}
-                image={p.image}
-              />
-            ))}
-          </div>
-        </div>
-      )}
     </section>
   );
 }

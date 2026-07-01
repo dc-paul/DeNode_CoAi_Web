@@ -1,7 +1,6 @@
 import { CONTENT } from "../content";
 import type { Lang } from "../lang";
 
-const ACCENT = "#a23b2d";
 const ADDRESS = "Predikherenlei 4, 9000 Gent";
 const MAPS = "https://maps.google.com/?q=Predikherenlei+4,+9000+Gent";
 
@@ -40,48 +39,46 @@ export function Visit({ lang }: { lang: Lang }) {
   const f = CONTENT[lang].footer;
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16 md:px-8">
-      <h1 className="text-4xl font-extrabold text-black md:text-5xl">{t.title}</h1>
-      <p className="mt-3 text-[17px] text-[#555]">{t.intro}</p>
+    <section className="dn-section">
+      <div className="dn-wrap">
+        <h1 className="dn-h1">{t.title}</h1>
+        <p className="dn-lead mt-4 max-w-[60ch]">{t.intro}</p>
 
-      <div className="mt-10 grid gap-10 md:grid-cols-2">
-        <div>
-          <h2 className="text-xl font-bold text-black">{t.where}</h2>
-          <p className="mt-3 text-[16px] leading-relaxed text-[#333]">
-            Galerie DeNode — nodenaysteen
-            <br />
-            {ADDRESS}
-          </p>
-          <a
-            href={MAPS}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-block font-medium"
-            style={{ color: ACCENT }}
-          >
-            {t.route}
-          </a>
+        <div className="mt-10 grid gap-12 md:grid-cols-2">
+          <dl className="dn-dl">
+            <dt>{t.where}</dt>
+            <dd>
+              Galerie DeNode — nodenaysteen
+              <br />
+              {ADDRESS}
+              <br />
+              <a href={MAPS} target="_blank" rel="noopener noreferrer">
+                {t.route}
+              </a>
+            </dd>
+            <dt>{t.hours}</dt>
+            <dd>
+              {f.openLines.map((l, i) => (
+                <div key={i}>{l}</div>
+              ))}
+              <div className="mt-2 text-[#8a8477]">{f.byAppointment}</div>
+            </dd>
+            <dt>{t.contact}</dt>
+            <dd>
+              <a href="mailto:info@denode.be">info@denode.be</a>
+              <br />
+              <a href="tel:+32488880889">+32 488 88 08 89</a>
+            </dd>
+          </dl>
 
-          <h2 className="mt-10 text-xl font-bold text-black">{t.contact}</h2>
-          <p className="mt-3 text-[16px] leading-relaxed text-[#333]">
-            <a href="mailto:info@denode.be" className="font-medium" style={{ color: ACCENT }}>
-              info@denode.be
-            </a>
-            <br />
-            <a href="tel:+32488880889" className="font-medium" style={{ color: ACCENT }}>
-              +32 488 88 08 89
-            </a>
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-bold text-black">{t.hours}</h2>
-          <div className="mt-3 space-y-1 text-[16px] text-[#333]">
-            {f.openLines.map((l, i) => (
-              <p key={i}>• {l}</p>
-            ))}
+          <div className="min-h-[320px] border border-[#d8d2c6]">
+            <iframe
+              title="kaart"
+              className="h-full min-h-[320px] w-full border-0"
+              loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=3.724%2C51.052%2C3.732%2C51.056&marker=51.054%2C3.728"
+            />
           </div>
-          <p className="mt-4 text-[16px] text-[#333]">{f.byAppointment}</p>
         </div>
       </div>
     </section>
