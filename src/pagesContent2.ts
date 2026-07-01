@@ -258,6 +258,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "In Vestiges, time becomes tangible — matter as an ancient manuscript.",
     href: "https://www.denode.be/en/blog/exhibitions-11/vestiges-a-duo-exhibition-by-chantal-pollier-and-guillaume-van-moerkercke-316",
     tint: "#55603f",
+    slug: "vestiges",
   },
   {
     title: "Björn Wandels",
@@ -266,6 +267,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "A hybrid practice that ironically questions analog and digital media.",
     href: "https://www.denode.be/en/blog/artists-7/bjorn-wandels-301",
     tint: "#3d3a44",
+    slug: "bjorn-wandels",
   },
   {
     title: "Robrecht Kessels",
@@ -274,6 +276,7 @@ const PROGRAM_POSTS: ProgramPost[] = [
     teaser: "Master in music (cello) at the Ghent conservatory, deepening the classical repertoire.",
     href: "https://www.denode.be/en/blog/artists-7/robrecht-kessels-317",
     tint: "#5a3a3a",
+    slug: "robrecht-kessels",
   },
 ];
 
