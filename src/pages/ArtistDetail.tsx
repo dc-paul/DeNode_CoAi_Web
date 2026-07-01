@@ -33,6 +33,20 @@ const SHOP_CTA: Record<Lang, string> = {
   en: "View the book in the shop →",
   fr: "Voir le livre dans la boutique →",
 };
+const TEXTS_LABEL: Record<Lang, string> = {
+  nl: "Teksten bij deze tentoonstelling:",
+  en: "Texts for this exhibition:",
+  fr: "Textes de cette exposition :",
+};
+
+function postTitle(slug: string, lang: Lang): string {
+  const bp = getPost(slug);
+  if (!bp) return slug;
+  if (lang === "nl" && bp.nl) return bp.nl.title;
+  if (lang === "en" && bp.en) return bp.en.title;
+  if (lang === "fr" && bp.fr) return bp.fr.title;
+  return bp.title;
+}
 
 export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
   const artist = getArtist(slug);
@@ -142,14 +156,25 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
                   <p className="text-[16px] leading-relaxed text-[#222]">
                     {ex.text}
                   </p>
-                  {ex.link && (
-                    <a
-                      href={`#/${lang}/${ex.link}`}
-                      className="mt-1 inline-block text-[14px] font-medium"
-                      style={{ color: ACCENT }}
-                    >
-                      {ex.linkLabel ?? "→"}
-                    </a>
+                  {ex.posts && ex.posts.length > 0 && (
+                    <div className="mt-2">
+                      <p className="text-[13px] font-semibold text-[#888]">
+                        {TEXTS_LABEL[lang]}
+                      </p>
+                      <ul className="mt-1 space-y-0.5">
+                        {ex.posts.map((slug) => (
+                          <li key={slug}>
+                            <a
+                              href={`#/${lang}/blog/${slug}`}
+                              className="text-[14px] font-medium"
+                              style={{ color: ACCENT }}
+                            >
+                              {postTitle(slug, lang)} →
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
                 </div>
               </li>

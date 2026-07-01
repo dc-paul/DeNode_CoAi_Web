@@ -7,8 +7,7 @@ import type { Localized } from "./blogPosts";
 export interface Exhibition {
   date: string; // display date, e.g. "2026/05/03 – 2026/05/31"
   text: string;
-  link?: string; // path fragment (e.g. "blog/the-church-of-kat-bove"); rendered as #/<lang>/<link>
-  linkLabel?: string; // localized "read the text" label
+  posts?: string[]; // blog-post slugs of the texts written for this exhibition
 }
 
 export interface ArtistDetail {
@@ -39,19 +38,19 @@ export const ARTIST_DETAILS: ArtistDetail[] = [
       nl: [
         { date: "2026/05/03 – 2026/05/31", text: "Kat Bové solo — Pim De Rudder Stichting, Assenede. Presentatie van nieuwe werken." },
         { date: "2026/01 – 2026/03", text: "'Minsterwood' (Wayn Traub) — River City Gallery, Bangkok. Kat Bové verschijnt in de centrale triptiek." },
-        { date: "2025", text: "WHO IS YOUR GOD, WHERE IS SHE — solotentoonstelling bij nodenaysteen / DeNode, Gent. Een zoektocht in zelfportretten naar dualiteit.", link: "blog/the-church-of-kat-bove", linkLabel: "Lees de expotekst" },
+        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — solotentoonstelling bij nodenaysteen / DeNode, Gent (DeNode show #8). Een zoektocht in zelfportretten naar dualiteit.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"] },
         { date: "—", text: "Eerste solotentoonstelling — Zeepziederij, Bree. De half-industriële ruimte waarin ze haar werk voor het eerst publiek toonde." },
       ],
       en: [
         { date: "2026/05/03 – 2026/05/31", text: "Kat Bové solo — Pim De Rudder Foundation, Assenede. A presentation of new works." },
         { date: "2026/01 – 2026/03", text: "'Minsterwood' (Wayn Traub) — River City Gallery, Bangkok. Kat Bové appears in the central triptych." },
-        { date: "2025", text: "WHO IS YOUR GOD, WHERE IS SHE — solo exhibition at nodenaysteen / DeNode, Ghent. A search in self-portraits for duality.", link: "blog/the-church-of-kat-bove", linkLabel: "Read the exhibition text" },
+        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — solo exhibition at nodenaysteen / DeNode, Ghent (DeNode show #8). A search in self-portraits for duality.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"] },
         { date: "—", text: "First solo exhibition — Zeepziederij, Bree. The semi-industrial space where she first showed her work publicly." },
       ],
       fr: [
         { date: "2026/05/03 – 2026/05/31", text: "Kat Bové solo — Fondation Pim De Rudder, Assenede. Présentation de nouvelles œuvres." },
         { date: "2026/01 – 2026/03", text: "« Minsterwood » (Wayn Traub) — River City Gallery, Bangkok. Kat Bové apparaît dans le triptyque central." },
-        { date: "2025", text: "WHO IS YOUR GOD, WHERE IS SHE — exposition personnelle à nodenaysteen / DeNode, Gand. Une quête de la dualité à travers des autoportraits.", link: "blog/the-church-of-kat-bove", linkLabel: "Lire le texte de l'exposition" },
+        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — exposition personnelle à nodenaysteen / DeNode, Gand (DeNode show #8). Une quête de la dualité à travers des autoportraits.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"] },
         { date: "—", text: "Première exposition personnelle — Zeepziederij, Bree. L'espace semi-industriel où elle a montré son travail au public pour la première fois." },
       ],
     },
