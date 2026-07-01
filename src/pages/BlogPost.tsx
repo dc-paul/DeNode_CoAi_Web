@@ -1,5 +1,13 @@
 import { getPost, type Localized } from "../blogPosts";
+import { expoForArticle } from "../expos";
+import { artistForArticle } from "../artistDetails";
 import { href, type Lang } from "../lang";
+
+const CTX: Record<Lang, { expo: string; artist: string }> = {
+  nl: { expo: "Tentoonstelling", artist: "Kunstenaar" },
+  en: { expo: "Exhibition", artist: "Artist" },
+  fr: { expo: "Exposition", artist: "Artiste" },
+};
 
 const ACCENT = "#c0392b";
 const BACK: Record<Lang, string> = {
@@ -68,6 +76,40 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
       <p className="mt-3 text-sm text-[#999]">
         {post.date} · {post.author}
       </p>
+
+      {(() => {
+        const expo = expoForArticle(slug);
+        const artist = artistForArticle(slug);
+        if (!expo && !artist) return null;
+        return (
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-[14px]">
+            {expo && (
+              <span className="text-[#666]">
+                {CTX[lang].expo}:{" "}
+                <a
+                  href={href(lang, `expo/${expo.slug}`)}
+                  className="font-medium"
+                  style={{ color: ACCENT }}
+                >
+                  {expo.title}
+                </a>
+              </span>
+            )}
+            {artist && (
+              <span className="text-[#666]">
+                {CTX[lang].artist}:{" "}
+                <a
+                  href={href(lang, `artist/${artist.slug}`)}
+                  className="font-medium"
+                  style={{ color: ACCENT }}
+                >
+                  {artist.name}
+                </a>
+              </span>
+            )}
+          </div>
+        );
+      })()}
 
       {post.image && (
         <img

@@ -38,6 +38,11 @@ const TEXTS_LABEL: Record<Lang, string> = {
   en: "Texts for this exhibition:",
   fr: "Textes de cette exposition :",
 };
+const EXPO_CTA: Record<Lang, string> = {
+  nl: "Bekijk de tentoonstelling →",
+  en: "View the exhibition →",
+  fr: "Voir l'exposition →",
+};
 
 function postTitle(slug: string, lang: Lang): string {
   const bp = getPost(slug);
@@ -156,6 +161,15 @@ export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
                   <p className="text-[16px] leading-relaxed text-[#222]">
                     {ex.text}
                   </p>
+                  {ex.expo && (
+                    <a
+                      href={`#/${lang}/expo/${ex.expo}`}
+                      className="mt-1 inline-block text-[14px] font-medium"
+                      style={{ color: ACCENT }}
+                    >
+                      {EXPO_CTA[lang]}
+                    </a>
+                  )}
                   {ex.posts && ex.posts.length > 0 && (
                     <div className="mt-2">
                       <p className="text-[13px] font-semibold text-[#888]">

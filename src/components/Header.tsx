@@ -4,10 +4,10 @@ import { href, LANGS, LANG_LABELS, type Lang } from "../lang";
 
 const LOGO = "/images/logo-denode.png";
 
-const EXTRA: Record<Lang, { events: string; shop: string }> = {
-  nl: { events: "evenementen", shop: "shop" },
-  en: { events: "events", shop: "shop" },
-  fr: { events: "événements", shop: "boutique" },
+const EXTRA: Record<Lang, { expo: string; events: string; shop: string }> = {
+  nl: { expo: "tentoonstellingen", events: "evenementen", shop: "shop" },
+  en: { expo: "exhibitions", events: "events", shop: "shop" },
+  fr: { expo: "expositions", events: "événements", shop: "boutique" },
 };
 
 export function Header({ lang, page }: { lang: Lang; page: string }) {
@@ -25,6 +25,9 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
         <nav className="hidden items-center gap-7 text-[15px] text-black md:flex">
           <a href={href(lang, "program")} className="hover:text-[#c0392b]">
             {t.program}
+          </a>
+          <a href={href(lang, "expo")} className="hover:text-[#c0392b]">
+            {x.expo}
           </a>
           <a href={href(lang, "artists")} className="hover:text-[#c0392b]">
             {t.artists}
@@ -81,6 +84,9 @@ export function Header({ lang, page }: { lang: Lang; page: string }) {
         <nav className="flex flex-col gap-1 border-t border-[#ececec] px-6 py-4 text-[15px] md:hidden">
           <a href={href(lang, "program")} className="py-2">
             {t.program}
+          </a>
+          <a href={href(lang, "expo")} className="py-2">
+            {x.expo}
           </a>
           <a href={href(lang, "artists")} className="py-2">
             {t.artists}

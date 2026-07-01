@@ -13,6 +13,8 @@ import { Cookie } from "./pages/Cookie";
 import { BlogPost } from "./pages/BlogPost";
 import { EventDetail } from "./pages/EventDetail";
 import { ArtistDetail } from "./pages/ArtistDetail";
+import { Expos } from "./pages/Expos";
+import { ExpoDetail } from "./pages/ExpoDetail";
 import { Placeholder } from "./pages/Placeholder";
 import { parseHash, type Lang } from "./lang";
 
@@ -26,11 +28,16 @@ function renderPage(page: string, lang: Lang) {
   if (page.startsWith("artist/")) {
     return <ArtistDetail lang={lang} slug={page.slice("artist/".length)} />;
   }
+  if (page.startsWith("expo/")) {
+    return <ExpoDetail lang={lang} slug={page.slice("expo/".length)} />;
+  }
   switch (page) {
     case "":
       return <Home lang={lang} />;
     case "program":
       return <Program lang={lang} />;
+    case "expo":
+      return <Expos lang={lang} />;
     case "artists":
       return <Artists lang={lang} />;
     case "events":

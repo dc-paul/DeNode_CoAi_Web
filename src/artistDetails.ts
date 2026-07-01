@@ -8,6 +8,7 @@ export interface Exhibition {
   date: string; // display date, e.g. "2026/05/03 – 2026/05/31"
   text: string;
   posts?: string[]; // blog-post slugs of the texts written for this exhibition
+  expo?: string; // expo slug, when this was a DeNode show with its own page
 }
 
 export interface ArtistDetail {
@@ -38,19 +39,19 @@ export const ARTIST_DETAILS: ArtistDetail[] = [
       nl: [
         { date: "2026/05/03 – 2026/05/31", text: "Kat Bové solo — Pim De Rudder Stichting, Assenede. Presentatie van nieuwe werken." },
         { date: "2026/01 – 2026/03", text: "'Minsterwood' (Wayn Traub) — River City Gallery, Bangkok. Kat Bové verschijnt in de centrale triptiek." },
-        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — solotentoonstelling bij nodenaysteen / DeNode, Gent (DeNode show #8). Een zoektocht in zelfportretten naar dualiteit.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"] },
+        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — solotentoonstelling bij nodenaysteen / DeNode, Gent (DeNode show #8). Een zoektocht in zelfportretten naar dualiteit.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"], expo: "who-is-your-god" },
         { date: "—", text: "Eerste solotentoonstelling — Zeepziederij, Bree. De half-industriële ruimte waarin ze haar werk voor het eerst publiek toonde." },
       ],
       en: [
         { date: "2026/05/03 – 2026/05/31", text: "Kat Bové solo — Pim De Rudder Foundation, Assenede. A presentation of new works." },
         { date: "2026/01 – 2026/03", text: "'Minsterwood' (Wayn Traub) — River City Gallery, Bangkok. Kat Bové appears in the central triptych." },
-        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — solo exhibition at nodenaysteen / DeNode, Ghent (DeNode show #8). A search in self-portraits for duality.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"] },
+        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — solo exhibition at nodenaysteen / DeNode, Ghent (DeNode show #8). A search in self-portraits for duality.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"], expo: "who-is-your-god" },
         { date: "—", text: "First solo exhibition — Zeepziederij, Bree. The semi-industrial space where she first showed her work publicly." },
       ],
       fr: [
         { date: "2026/05/03 – 2026/05/31", text: "Kat Bové solo — Fondation Pim De Rudder, Assenede. Présentation de nouvelles œuvres." },
         { date: "2026/01 – 2026/03", text: "« Minsterwood » (Wayn Traub) — River City Gallery, Bangkok. Kat Bové apparaît dans le triptyque central." },
-        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — exposition personnelle à nodenaysteen / DeNode, Gand (DeNode show #8). Une quête de la dualité à travers des autoportraits.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"] },
+        { date: "2025/03/15 – 2025/04/13", text: "WHO IS YOUR GOD, WHERE IS SHE — exposition personnelle à nodenaysteen / DeNode, Gand (DeNode show #8). Une quête de la dualité à travers des autoportraits.", posts: ["the-church-of-kat-bove", "bodies-eros-and-thanatos", "between-mask-and-identity"], expo: "who-is-your-god" },
         { date: "—", text: "Première exposition personnelle — Zeepziederij, Bree. L'espace semi-industriel où elle a montré son travail au public pour la première fois." },
       ],
     },
@@ -95,4 +96,9 @@ export const ARTIST_DETAILS: ArtistDetail[] = [
 
 export function getArtist(slug: string): ArtistDetail | undefined {
   return ARTIST_DETAILS.find((a) => a.slug === slug);
+}
+
+// Reverse lookup: which artist wrote/owns a given article (declared once via `related`).
+export function artistForArticle(articleSlug: string): ArtistDetail | undefined {
+  return ARTIST_DETAILS.find((a) => a.related.includes(articleSlug));
 }
