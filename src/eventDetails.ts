@@ -1,6 +1,12 @@
 // Local event detail pages migrated from denode.be (Paul holds the rights).
 // Base = authentic Dutch; en/fr are AI translations flagged with `ai: true`.
+import type { Lang } from "./lang";
 import type { Localized } from "./blogPosts";
+
+export interface Session {
+  label: string; // e.g. "Workshop 1"
+  dates: string; // e.g. "15 – 16 – 17 juli 2026"
+}
 
 export interface EventDetail {
   slug: string;
@@ -8,6 +14,10 @@ export interface EventDetail {
   dateLabel: string; // short date summary shown under the title
   location: string;
   register?: string; // registration email / link, shown as a call-to-action
+  // When an event runs the same programme over several periods, list each one:
+  // rendered as separate date cards. Falls back to `dateLabel` when absent.
+  sessions?: Record<Lang, Session[]>;
+  sessionsNote?: Record<Lang, string>;
   nl: Localized;
   en?: Localized;
   fr?: Localized;
@@ -20,6 +30,25 @@ export const EVENT_DETAILS: EventDetail[] = [
     dateLabel: "Workshop 1: 15–16–17 juli 2026 · Workshop 2: 22–23–24 juli 2026",
     location: "Galerie DeNode, Predikherenlei 4, 9000 Gent",
     register: "sofiebosstudio@gmail.com",
+    sessions: {
+      nl: [
+        { label: "Workshop 1", dates: "15 – 16 – 17 juli 2026" },
+        { label: "Workshop 2", dates: "22 – 23 – 24 juli 2026" },
+      ],
+      en: [
+        { label: "Workshop 1", dates: "15 – 16 – 17 July 2026" },
+        { label: "Workshop 2", dates: "22 – 23 – 24 July 2026" },
+      ],
+      fr: [
+        { label: "Atelier 1", dates: "15 – 16 – 17 juillet 2026" },
+        { label: "Atelier 2", dates: "22 – 23 – 24 juillet 2026" },
+      ],
+    },
+    sessionsNote: {
+      nl: "Twee keer hetzelfde driedaagse programma. Kies één van beide periodes — of doe allebei mee.",
+      en: "The same three-day programme, twice. Choose one of the two periods — or join both.",
+      fr: "Le même programme de trois jours, deux fois. Choisissez l'une des deux périodes — ou participez aux deux.",
+    },
     nl: {
       title: "Cutting Reality — Workshop 1 & 2",
       subtitle: "Workshop met Nicolas Van Parys en Sofie Bos",
