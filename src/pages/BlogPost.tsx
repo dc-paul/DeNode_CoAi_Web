@@ -1,12 +1,13 @@
 import { getPost, type Localized } from "../blogPosts";
 import { expoForArticle } from "../expos";
-import { artistForArticle } from "../artistDetails";
+import { getArtist, authorForArticle } from "../artistDetails";
+import { RefCard } from "../components/RefCard";
 import { href, type Lang } from "../lang";
 
-const CTX: Record<Lang, { expo: string; artist: string }> = {
-  nl: { expo: "Tentoonstelling", artist: "Kunstenaar" },
-  en: { expo: "Exhibition", artist: "Artist" },
-  fr: { expo: "Exposition", artist: "Artiste" },
+const CTX: Record<Lang, { expo: string; artist: string; author: string }> = {
+  nl: { expo: "Tentoonstelling", artist: "Kunstenaar", author: "Auteur" },
+  en: { expo: "Exhibition", artist: "Artist", author: "Author" },
+  fr: { expo: "Exposition", artist: "Artiste", author: "Auteur" },
 };
 
 const ACCENT = "#c0392b";
@@ -79,33 +80,36 @@ export function BlogPost({ lang, slug }: { lang: Lang; slug: string }) {
 
       {(() => {
         const expo = expoForArticle(slug);
-        const artist = artistForArticle(slug);
-        if (!expo && !artist) return null;
+        const subjects = (expo?.artists ?? []).filter((a) => a.slug);
+        const author = authorForArticle(slug);
+        if (!expo && subjects.length === 0 && !author) return null;
         return (
-          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-[14px]">
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
             {expo && (
-              <span className="text-[#666]">
-                {CTX[lang].expo}:{" "}
-                <a
-                  href={href(lang, `expo/${expo.slug}`)}
-                  className="font-medium"
-                  style={{ color: ACCENT }}
-                >
-                  {expo.title}
-                </a>
-              </span>
+              <RefCard
+                href={href(lang, `expo/${expo.slug}`)}
+                title={expo.title}
+                subtitle={`${CTX[lang].expo} · ${expo.period}`}
+                image={expo.image}
+                tint={expo.tint}
+              />
             )}
-            {artist && (
-              <span className="text-[#666]">
-                {CTX[lang].artist}:{" "}
-                <a
-                  href={href(lang, `artist/${artist.slug}`)}
-                  className="font-medium"
-                  style={{ color: ACCENT }}
-                >
-                  {artist.name}
-                </a>
-              </span>
+            {subjects.map((a) => (
+              <RefCard
+                key={a.slug}
+                href={href(lang, `artist/${a.slug}`)}
+                title={a.name}
+                subtitle={CTX[lang].artist}
+                image={getArtist(a.slug!)?.image}
+              />
+            ))}
+            {author && (
+              <RefCard
+                href={href(lang, `artist/${author.slug}`)}
+                title={author.name}
+                subtitle={CTX[lang].author}
+                image={author.image}
+              />
             )}
           </div>
         );

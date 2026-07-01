@@ -1,6 +1,7 @@
 import { getExpo } from "../expos";
 import { getPost } from "../blogPosts";
 import { getEvent } from "../eventDetails";
+import { RefCard } from "../components/RefCard";
 import { href, type Lang } from "../lang";
 
 const ACCENT = "#c0392b";
@@ -134,38 +135,42 @@ export function ExpoDetail({ lang, slug }: { lang: Lang; slug: string }) {
       {expo.articleSlugs && expo.articleSlugs.length > 0 && (
         <div className="mt-10">
           <h2 className="text-2xl font-bold text-black">{t.texts}</h2>
-          <ul className="mt-4 space-y-2">
-            {expo.articleSlugs.map((s) => (
-              <li key={s}>
-                <a
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {expo.articleSlugs.map((s) => {
+              const bp = getPost(s);
+              return (
+                <RefCard
+                  key={s}
                   href={href(lang, `blog/${s}`)}
-                  className="font-medium"
-                  style={{ color: ACCENT }}
-                >
-                  {postTitle(s, lang)} →
-                </a>
-              </li>
-            ))}
-          </ul>
+                  title={postTitle(s, lang)}
+                  subtitle={bp?.author}
+                  image={bp?.image}
+                  tint={expo.tint}
+                />
+              );
+            })}
+          </div>
         </div>
       )}
 
       {expo.eventSlugs && expo.eventSlugs.length > 0 && (
         <div className="mt-8">
           <h2 className="text-2xl font-bold text-black">{t.events}</h2>
-          <ul className="mt-4 space-y-2">
-            {expo.eventSlugs.map((s) => (
-              <li key={s}>
-                <a
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {expo.eventSlugs.map((s) => {
+              const ev = getEvent(s);
+              return (
+                <RefCard
+                  key={s}
                   href={href(lang, `event/${s}`)}
-                  className="font-medium"
-                  style={{ color: ACCENT }}
-                >
-                  {eventTitle(s, lang)} →
-                </a>
-              </li>
-            ))}
-          </ul>
+                  title={eventTitle(s, lang)}
+                  subtitle={ev?.dateLabel}
+                  image={ev?.image}
+                  tint={expo.tint}
+                />
+              );
+            })}
+          </div>
         </div>
       )}
     </article>

@@ -1,47 +1,49 @@
 import { getArtist } from "../artistDetails";
-import { getPost, type Localized } from "../blogPosts";
+import { exposForArtist } from "../expos";
+import { getPost } from "../blogPosts";
+import { RefCard } from "../components/RefCard";
 import { href, type Lang } from "../lang";
 
 const ACCENT = "#c0392b";
-const BACK: Record<Lang, string> = {
-  nl: "← Terug naar kunstenaars",
-  en: "← Back to artists",
-  fr: "← Retour aux artistes",
-};
-const NOT_FOUND: Record<Lang, string> = {
-  nl: "Kunstenaar niet gevonden",
-  en: "Artist not found",
-  fr: "Artiste introuvable",
-};
-const AI_NOTE: Record<Lang, string> = {
-  nl: "Deze vertaling is automatisch (AI) gegenereerd.",
-  en: "This translation was automatically (AI) generated.",
-  fr: "Cette traduction a été générée automatiquement (IA).",
-};
-const READ: Record<Lang, string> = {
-  nl: "Lees over Kat Bové",
-  en: "Read about Kat Bové",
-  fr: "Lire à propos de Kat Bové",
-};
-const EXHIBITIONS: Record<Lang, string> = {
-  nl: "Tentoonstellingen & geschiedenis",
-  en: "Exhibitions & history",
-  fr: "Expositions & histoire",
-};
-const SHOP_CTA: Record<Lang, string> = {
-  nl: "Bekijk het boek in de shop →",
-  en: "View the book in the shop →",
-  fr: "Voir le livre dans la boutique →",
-};
-const TEXTS_LABEL: Record<Lang, string> = {
-  nl: "Teksten bij deze tentoonstelling:",
-  en: "Texts for this exhibition:",
-  fr: "Textes de cette exposition :",
-};
-const EXPO_CTA: Record<Lang, string> = {
-  nl: "Bekijk de tentoonstelling →",
-  en: "View the exhibition →",
-  fr: "Voir l'exposition →",
+const T: Record<
+  Lang,
+  {
+    back: string;
+    notFound: string;
+    shop: string;
+    denode: string;
+    other: string;
+    written: string;
+    external: string;
+  }
+> = {
+  nl: {
+    back: "← Terug naar kunstenaars",
+    notFound: "Kunstenaar niet gevonden",
+    shop: "Bekijk het boek in de shop →",
+    denode: "Tentoonstelling(en) bij DeNode",
+    other: "Andere tentoonstellingen",
+    written: "Geschreven voor DeNode",
+    external: "Elders",
+  },
+  en: {
+    back: "← Back to artists",
+    notFound: "Artist not found",
+    shop: "View the book in the shop →",
+    denode: "Exhibition(s) at DeNode",
+    other: "Other exhibitions",
+    written: "Written for DeNode",
+    external: "Elsewhere",
+  },
+  fr: {
+    back: "← Retour aux artistes",
+    notFound: "Artiste introuvable",
+    shop: "Voir le livre dans la boutique →",
+    denode: "Exposition(s) chez DeNode",
+    other: "Autres expositions",
+    written: "Écrit pour DeNode",
+    external: "Ailleurs",
+  },
 };
 
 function postTitle(slug: string, lang: Lang): string {
@@ -55,160 +57,156 @@ function postTitle(slug: string, lang: Lang): string {
 
 export function ArtistDetail({ lang, slug }: { lang: Lang; slug: string }) {
   const artist = getArtist(slug);
+  const t = T[lang];
 
   if (!artist) {
     return (
       <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h1 className="text-3xl font-extrabold">{NOT_FOUND[lang]}</h1>
-        <a
-          href={href(lang, "artists")}
-          className="mt-6 inline-block font-medium"
-          style={{ color: ACCENT }}
-        >
-          {BACK[lang]}
+        <h1 className="text-3xl font-extrabold">{t.notFound}</h1>
+        <a href={href(lang, "artists")} className="mt-6 inline-block font-medium" style={{ color: ACCENT }}>
+          {t.back}
         </a>
       </section>
     );
   }
 
-  const loc: Localized =
-    lang === "en" && artist.en
-      ? artist.en
-      : lang === "fr" && artist.fr
-        ? artist.fr
-        : artist.nl;
-
-  const related = artist.related
-    .map((s) => {
-      const bp = getPost(s);
-      if (!bp) return null;
-      const rloc =
-        lang === "nl" && bp.nl
-          ? bp.nl
-          : lang === "en" && bp.en
-            ? bp.en
-            : lang === "fr" && bp.fr
-              ? bp.fr
-              : { title: bp.title };
-      return { slug: s, title: rloc.title };
-    })
-    .filter((x): x is { slug: string; title: string } => x !== null);
+  const expos = exposForArtist(slug);
+  const bio = artist.bio?.[lang];
+  const extra = artist.extraExhibitions?.[lang];
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-12 md:px-8">
-      <a
-        href={href(lang, "artists")}
-        className="text-sm font-medium"
-        style={{ color: ACCENT }}
-      >
-        {BACK[lang]}
+      <a href={href(lang, "artists")} className="text-sm font-medium" style={{ color: ACCENT }}>
+        {t.back}
       </a>
 
-      {loc.ai && (
-        <p className="mt-4 text-xs italic text-[#999]">{AI_NOTE[lang]}</p>
-      )}
-
       <h1 className="mt-6 text-4xl font-extrabold leading-tight text-black md:text-5xl">
-        {loc.title}
+        {artist.name}
       </h1>
-      {loc.subtitle && <p className="mt-3 text-xl text-[#555]">{loc.subtitle}</p>}
+      {artist.role && <p className="mt-3 text-xl text-[#555]">{artist.role[lang]}</p>}
 
       {artist.image && (
         <img
           src={artist.image}
-          alt={loc.title}
+          alt={artist.name}
           className="mt-8 w-full rounded-md object-cover shadow-sm"
         />
       )}
 
-      <div className="mt-10 space-y-5">
-        {loc.body.map((b, i) =>
-          b.k === "h" ? (
-            <h2 key={i} className="pt-4 text-2xl font-bold text-black">
-              {b.t}
-            </h2>
-          ) : (
-            <p key={i} className="text-[17px] leading-relaxed text-[#222]">
-              {b.t}
-            </p>
-          ),
-        )}
-      </div>
+      {bio && (
+        <div className="mt-10 space-y-5">
+          {bio.map((b, i) =>
+            b.k === "h" ? (
+              <h2 key={i} className="pt-4 text-2xl font-bold text-black">
+                {b.t}
+              </h2>
+            ) : (
+              <p key={i} className="text-[17px] leading-relaxed text-[#222]">
+                {b.t}
+              </p>
+            ),
+          )}
+        </div>
+      )}
 
       {artist.shop && (
-        <a
-          href={`#/${lang}/shop`}
-          className="mt-4 inline-block font-medium"
-          style={{ color: ACCENT }}
-        >
-          {SHOP_CTA[lang]}
+        <a href={href(lang, "shop")} className="mt-4 inline-block font-medium" style={{ color: ACCENT }}>
+          {t.shop}
         </a>
       )}
 
-      {artist.exhibitions && (
+      {/* DeNode exhibitions — derived automatically from expos.ts */}
+      {expos.length > 0 && (
         <div className="mt-12 border-t border-[#ececec] pt-8">
-          <h2 className="text-2xl font-bold text-black">{EXHIBITIONS[lang]}</h2>
-          <ul className="mt-6 space-y-6">
-            {artist.exhibitions[lang].map((ex, i) => (
-              <li key={i} className="grid gap-1 sm:grid-cols-[150px_1fr] sm:gap-5">
-                <span
-                  className="text-sm font-semibold tabular-nums"
-                  style={{ color: ACCENT }}
+          <h2 className="text-2xl font-bold text-black">{t.denode}</h2>
+          <div className="mt-6 space-y-8">
+            {expos.map((e) => (
+              <div key={e.slug}>
+                <p className="text-sm font-semibold tabular-nums" style={{ color: ACCENT }}>
+                  {e.period}
+                </p>
+                <a
+                  href={href(lang, `expo/${e.slug}`)}
+                  className="text-lg font-bold text-black hover:text-[#c0392b]"
                 >
+                  {e.title} →
+                </a>
+                {e.articleSlugs && e.articleSlugs.length > 0 && (
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    {e.articleSlugs.map((s) => {
+                      const bp = getPost(s);
+                      return (
+                        <RefCard
+                          key={s}
+                          href={href(lang, `blog/${s}`)}
+                          title={postTitle(s, lang)}
+                          subtitle={bp?.author}
+                          image={bp?.image}
+                          tint={e.tint}
+                        />
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Non-DeNode exhibitions (manual) */}
+      {extra && extra.length > 0 && (
+        <div className="mt-12 border-t border-[#ececec] pt-8">
+          <h2 className="text-2xl font-bold text-black">{t.other}</h2>
+          <ul className="mt-6 space-y-4">
+            {extra.map((ex, i) => (
+              <li key={i} className="grid gap-1 sm:grid-cols-[150px_1fr] sm:gap-5">
+                <span className="text-sm font-semibold tabular-nums" style={{ color: ACCENT }}>
                   {ex.date}
                 </span>
-                <div>
-                  <p className="text-[16px] leading-relaxed text-[#222]">
-                    {ex.text}
-                  </p>
-                  {ex.expo && (
-                    <a
-                      href={`#/${lang}/expo/${ex.expo}`}
-                      className="mt-1 inline-block text-[14px] font-medium"
-                      style={{ color: ACCENT }}
-                    >
-                      {EXPO_CTA[lang]}
-                    </a>
-                  )}
-                  {ex.posts && ex.posts.length > 0 && (
-                    <div className="mt-2">
-                      <p className="text-[13px] font-semibold text-[#888]">
-                        {TEXTS_LABEL[lang]}
-                      </p>
-                      <ul className="mt-1 space-y-0.5">
-                        {ex.posts.map((slug) => (
-                          <li key={slug}>
-                            <a
-                              href={`#/${lang}/blog/${slug}`}
-                              className="text-[14px] font-medium"
-                              style={{ color: ACCENT }}
-                            >
-                              {postTitle(slug, lang)} →
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
+                <p className="text-[16px] leading-relaxed text-[#222]">{ex.text}</p>
               </li>
             ))}
           </ul>
         </div>
       )}
 
-      {related.length > 0 && (
+      {/* Authored texts (for critics/authors) */}
+      {artist.articles && artist.articles.length > 0 && (
         <div className="mt-12 border-t border-[#ececec] pt-8">
-          <h2 className="text-2xl font-bold text-black">{READ[lang]}</h2>
+          <h2 className="text-2xl font-bold text-black">{t.written}</h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {artist.articles.map((s) => {
+              const bp = getPost(s);
+              return (
+                <RefCard
+                  key={s}
+                  href={href(lang, `blog/${s}`)}
+                  title={postTitle(s, lang)}
+                  subtitle={bp?.subtitle}
+                  image={bp?.image}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* External links */}
+      {artist.external && artist.external.length > 0 && (
+        <div className="mt-12 border-t border-[#ececec] pt-8">
+          <h2 className="text-2xl font-bold text-black">{t.external}</h2>
           <ul className="mt-4 space-y-2">
-            {related.map((r) => (
-              <li key={r.slug}>
+            {artist.external.map((x) => (
+              <li key={x.url}>
                 <a
-                  href={`#/${lang}/blog/${r.slug}`}
+                  href={x.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-medium"
                   style={{ color: ACCENT }}
                 >
-                  {r.title} →
+                  {x.label} ↗
                 </a>
               </li>
             ))}

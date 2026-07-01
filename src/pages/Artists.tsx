@@ -14,34 +14,30 @@ export function Artists({ lang }: { lang: Lang }) {
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {ARTIST_DETAILS.map((artist) => {
-          const loc =
-            lang === "en" && artist.en
-              ? artist.en
-              : lang === "fr" && artist.fr
-                ? artist.fr
-                : artist.nl;
-          return (
-            <a
-              key={artist.slug}
-              href={`#/${lang}/artist/${artist.slug}`}
-              className="group flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm transition-shadow hover:shadow-md"
-            >
-              <img
-                src={artist.image}
-                alt={artist.name}
-                loading="lazy"
-                className="h-56 w-full object-cover"
-              />
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-black">{artist.name}</h3>
-                {loc.subtitle && (
-                  <p className="mt-1 text-sm text-[#888]">{loc.subtitle}</p>
-                )}
-              </div>
-            </a>
-          );
-        })}
+        {ARTIST_DETAILS.map((artist) => (
+          <a
+            key={artist.slug}
+            href={`#/${lang}/artist/${artist.slug}`}
+            className="group flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm transition-shadow hover:shadow-md"
+          >
+            <div className="h-56 w-full bg-[#ececec]">
+              {artist.image && (
+                <img
+                  src={artist.image}
+                  alt={artist.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              )}
+            </div>
+            <div className="p-5">
+              <h3 className="text-lg font-bold text-black">{artist.name}</h3>
+              {artist.role && (
+                <p className="mt-1 text-sm text-[#888]">{artist.role[lang]}</p>
+              )}
+            </div>
+          </a>
+        ))}
       </div>
 
       <div className="mt-16 border-t border-[#ececec] pt-12 text-center">
