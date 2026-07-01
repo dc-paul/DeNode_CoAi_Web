@@ -47,6 +47,7 @@ interface EventItem {
   image: string;
   lines: string[];
   href: string;
+  slug?: string; // set when a local event detail page exists
 }
 interface EventsContent {
   title: string;
@@ -66,20 +67,17 @@ export const EVENTS: Record<Lang, EventsContent> = {
           "Workshop 2 — July 22 to 24, 2026",
         ],
         href: "https://www.denode.be/en/event/cutting-reality-workshop-1-19",
+        slug: "cutting-reality",
       },
       {
-        title: "Kat Bové solo in Assenede",
-        image: IMG.katboveSolo,
-        lines: [
-          "From May 3 to May 31, new works by Kat Bové are exhibited at the Pim De Rudder Foundation.",
-        ],
-        href: "https://www.denode.be/en/event/kat-bove-solo-16",
-      },
-      {
-        title: "Drawing sessions @ DeNode",
+        title: "Life drawing sessions",
         image: IMG.drawing,
-        lines: ["Every 2 weeks on Thursday we organize a drawing workshop.", "Welcome!"],
+        lines: [
+          "Every two weeks on Thursday, a life drawing session from a live model.",
+          "Resuming from October 2026. Welcome!",
+        ],
         href: "#/en",
+        slug: "drawing-sessions",
       },
     ],
   },
@@ -95,23 +93,17 @@ export const EVENTS: Record<Lang, EventsContent> = {
           "Atelier 2 — 22 au 24 juillet 2026",
         ],
         href: "https://www.denode.be/fr/event/cutting-reality-workshop-1-19",
+        slug: "cutting-reality",
       },
       {
-        title: "Kat Bové solo à Assenede",
-        image: IMG.katboveSolo,
-        lines: [
-          "Du 3 au 31 mai, de nouvelles œuvres de Kat Bové sont exposées à la Fondation Pim De Rudder.",
-        ],
-        href: "https://www.denode.be/fr/event/kat-bove-solo-16",
-      },
-      {
-        title: "Séances de dessin @ DeNode",
+        title: "Séances de dessin d'après modèle",
         image: IMG.drawing,
         lines: [
-          "Nous organisons un atelier de dessin tous les 2 semaines le jeudi.",
-          "Bienvenue !",
+          "Toutes les deux semaines le jeudi, une séance de dessin d'après un modèle vivant.",
+          "Reprise à partir d'octobre 2026. Bienvenue !",
         ],
         href: "#/fr",
+        slug: "drawing-sessions",
       },
     ],
   },
@@ -127,20 +119,17 @@ export const EVENTS: Record<Lang, EventsContent> = {
           "Workshop 2 — 22 tot 24 juli 2026",
         ],
         href: "https://www.denode.be/event/cutting-reality-workshop-1-19",
+        slug: "cutting-reality",
       },
       {
-        title: "Kat Bové solo in Assenede",
-        image: IMG.katboveSolo,
-        lines: [
-          "Van 3 tot 31 mei worden nieuwe werken van Kat Bové tentoongesteld bij de Pim De Rudder Stichting.",
-        ],
-        href: "https://www.denode.be/event/kat-bove-solo-16",
-      },
-      {
-        title: "Tekensessies @ DeNode",
+        title: "Tekensessies op model",
         image: IMG.drawing,
-        lines: ["Om de 2 weken organiseren we op donderdag een tekenworkshop.", "Welkom!"],
+        lines: [
+          "Om de twee weken op donderdag een tekensessie naar levend model.",
+          "Hervatten vanaf oktober 2026. Welkom!",
+        ],
         href: "#/nl",
+        slug: "drawing-sessions",
       },
     ],
   },

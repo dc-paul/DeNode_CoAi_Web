@@ -11,12 +11,20 @@ import { Mission } from "./pages/Mission";
 import { Team } from "./pages/Team";
 import { Cookie } from "./pages/Cookie";
 import { BlogPost } from "./pages/BlogPost";
+import { EventDetail } from "./pages/EventDetail";
+import { ArtistDetail } from "./pages/ArtistDetail";
 import { Placeholder } from "./pages/Placeholder";
 import { parseHash, type Lang } from "./lang";
 
 function renderPage(page: string, lang: Lang) {
   if (page.startsWith("blog/")) {
     return <BlogPost lang={lang} slug={page.slice("blog/".length)} />;
+  }
+  if (page.startsWith("event/")) {
+    return <EventDetail lang={lang} slug={page.slice("event/".length)} />;
+  }
+  if (page.startsWith("artist/")) {
+    return <ArtistDetail lang={lang} slug={page.slice("artist/".length)} />;
   }
   switch (page) {
     case "":
