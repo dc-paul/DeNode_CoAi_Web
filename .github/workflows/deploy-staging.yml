@@ -20,3 +20,7 @@ jobs:
         uses: junobuild/juno-action@main
         with:
           args: hosting deploy --mode staging
+      - name: Prune stale files (oude React-versie opruimen)
+        uses: junobuild/juno-action@main
+        with:
+          args: hosting prune --mode staging
