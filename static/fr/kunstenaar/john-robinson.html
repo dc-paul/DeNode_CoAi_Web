@@ -19,6 +19,11 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -56,9 +61,9 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 <section class="dn-hero"><div class="dn-hero__img"><img src="/images/blog-john-robinson.webp" alt="John Robinson"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Artiste</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">John Robinson</h1>
-<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">artiste plasticien·ne</div>
+<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°1981 · artiste plasticien·ne</div>
 </div></section>
-
+<section class="dn-section" style="padding:40px 0"><div class="dn-wrap"><dl class="dn-dl"><dt>Chez DeNode</dt><dd>1 exposition · 2026</dd></dl></div></section>
 <section class="dn-band"><div class="dn-wrap"><h2 class="dn-h3" style="color:#fff;margin-bottom:20px">Chez DeNode</h2>
 <ul class="dn-rowlist"><li><a href="../expo/people-ruin-paintings.html"><span class="d">2026/02/14 – 2026/04/28</span><span class="t">People Ruin Paintings</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
 
