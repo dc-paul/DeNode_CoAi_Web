@@ -1,0 +1,206 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview avec Simon Van Parys — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-simon-van-parys.html">NL</a><a class="lg" href="../../en/artikel/interview-simon-van-parys.html">EN</a><span class="lg active">FR</span></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview avec Simon Van Parys</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2023-10-16</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview avec <a href="../kunstenaar/simon-van-parys.html">Simon Van Parys</a></h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">Traduction IA</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>INTERVIEW AVEC SIMON VAN PARYS (°1986)</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-01.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-02.jpg" alt=""></figure></div>
+<p><strong>Hilde Van Canneyt (HVC): Cher Simon, merci de m'accueillir ici dans ton atelier au Nucleo Gebouw à Gand sur la Lindenlei. Je n'ai pas préparé l'interview, car nous allons parler d'Intelligence Artificielle tout à l'heure. Je me suis dit : ‘Si l'ordinateur va tout prendre ici, s'il est plus intelligent que moi, pourquoi devrais-je encore me fatiguer ?’ (fait un clin d'œil) Et pour l'instant, je refuse encore de travailler avec l'IA. Bien sûr, je suis ton travail et j'ai consulté ton site web avant notre conversation.</strong></p>
+<p><strong>HVC: Dis-moi, jeune homme : comment tout a commencé ?</strong></p>
+<p>Simon Van Parys (SVP): En 2010, j'ai obtenu mon diplôme au KASK avec un Master en Arts Visuels/Sculpture. Ne rien faire n'est pas vraiment mon truc, donc après deux semaines, je me suis lancé. Pendant les cinq premières années, j'étais un sculpteur à part entière, ce qui signifie : tout modeler, tout faire à la main.</p>
+<p>Depuis 2016, ma pratique a évolué vers beaucoup plus : la sculpture est restée au cœur, mais beaucoup d'éléments dérivés sont venus s'ajouter : aussi des dessins numériques, de la musique techno, des lasers des discothèques, tout cela s'y retrouve. Ma pratique devient de plus en plus un spectacle total. Les sculptures sont toujours conçues de manière autonome, mais elles peuvent aussi fonctionner dans un monde complet.</p>
+<p><strong>HVC: C'est en effet un univers très particulier. Nous voyons des sculptures, souvent basées sur l'astronautique, sur tout ce qui vole dans les airs ou navigue sous la mer, et des machines. Au mur, il y a des objets indéfinissables, où l'on voit des références au passé ou à un avenir lointain. Si nous regardons ton travail en 2D, je vois d'abord des références au monde numérique et cinématographique.</strong></p>
+<p><strong>HVC: À quoi étais-tu concrètement occupé pendant ces cinq premières années après ton diplôme ?</strong></p>
+<p>SVP: Thématiquement, je me vois comme un futuriste. Un peu à l'ancienne : vraiment le futurisme des années 60. On peut presque le créer en le fantasmant. D'ailleurs, au moment où je crée, je ne réfléchis pas vraiment.</p>
+<p>Jusqu'à récemment, je ne m'occupais pas du tout des dernières évolutions en 3D.</p>
+<p><strong>HVC: Veux-tu dire que tu travailles purement de manière intuitive ?</strong></p>
+<p>SVP: Parfois oui : quand je fais un sous-marin, je sais rapidement quel type cela va être et quelle doit être sa longueur par exemple. Mais ensuite, je lâche prise. Quand je sculpte, c'est plus un ressenti venant de mon corps. Thématiquement, les sujets des sous-marins, des satellites, des moteurs à explosion et des vaisseaux spatiaux, ce sont des choses qui me donnent de l'énergie dans la vie. Je les utilise. Je fais tout ce qui m'inspire, je crée un monde propre avec et je le transmets. Je me vois comme un fournisseur d'énergie pour le spectateur.</p>
+<p><strong>HVC: Une œuvre d'art est une suite de l'autre. Elles se tiennent toutes seules, mais dans des compositions, elles se renforcent mutuellement, alors cela devient, comme déjà mentionné, un univers propre.</strong></p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-05.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-06.jpg" alt=""></figure></div>
+<p>SVP: C'est ce que je vise aussi avec une œuvre individuelle. Surtout si elle trouve son chemin chez quelqu'un à la maison. Beaucoup en rêvent : ‘Putain, un sous-marin !‘</p>
+<p><strong>HVC: Le rêve typique des garçons !</strong></p>
+<p>SVP: Cela m'étonne à chaque fois qui se connecte à mon travail et qui ne le fait pas. J'utilise une figuration que l'on ne voit plus beaucoup, les gens ne sont plus habitués à cela. Mon travail effraie tout autant les gens. Mais s'ils entrent et prennent le temps, ils se connectent. Mais je ne suis pas un créateur de tendances, j'en ai aussi conscience.</p>
+<p><strong>HVC: Parles-tu de manière formelle ou de contenu ?</strong></p>
+<p>SVP: Les deux.</p>
+<p><strong>HVC: N'y a-t-il pas aussi une part de nostalgie pour le spectateur ? Pensons à des films comme 2001, l'Odyssée de l'espace par exemple ? Je suppose que lorsque les gens entrent, ils se disent ‘Wouah’.</strong></p>
+<p>SVP: Je suis un enfant des années 90, j'ai été fortement influencé par le design de plateau de cette époque. Je pense qu'à jusqu'au milieu des années 2000, on travaillait encore beaucoup avec des effets pratiques. C'étaient des miniatures en argile qui étaient filmées. Pense à des films comme Independence Day, qui sont si grotesques, mais qui sont bons en tant que divertissement. Ou The Matrix, qui parle de l'ère numérique. Le premier film de la quadrilogie a été presque entièrement réalisé avec des effets pratiques. La culture des discothèques est aussi quelque chose de typique du début des années 90.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-07.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-08.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-09.jpg" alt=""></figure></div>
+<p><strong>HVC: Je suppose que tu reçois – comme tout artiste qui monte sur scène – aussi des critiques.</strong></p>
+<p>SVP: Quand je reçois des commentaires, c'est presque jamais sur la valeur artistique de mon travail. Cela fonctionne plutôt sur les liens avec l'actualité qu'ils font eux-mêmes. Par exemple, tu as un sous-marin dans lequel se trouve un réacteur nucléaire, et ensuite ils ont une opinion sur l'énergie nucléaire. Alors que je suis justement intéressé par l'ingéniosité de l'homme : nous construisons un tube en acier de deux cents mètres, y mettons un réacteur nucléaire et nous sommes sous l'eau pendant trois mois. Que nous puissions construire quelque chose comme ça en tant qu'humains est incroyable. Toute l'humanité est contenue dans ce tube en acier. Pour moi, c'est de cela qu'il s'agit.</p>
+<p><strong>HVC: De ce que nous, en tant qu'humains, pouvons réaliser ?</strong></p>
+<p>SVP: Quand je marche vers mon atelier, je suis encore chaque jour étonné du monde dans lequel nous vivons. Il a des défauts, on peut en dire beaucoup, mais l'alternative, d'où nous venons – la nature sauvage et ses lois naturelles – personne ne la veut plus. Toute l'infrastructure que nous rencontrons a été créée par nos prédécesseurs. Tout ce que nous voyons, jusqu'à la vis la plus insignifiante à visser dans le mur, a été conçu par quelqu'un. Et nous pouvons continuer à construire avec ces outils et cette infrastructure qui nous ont été fournis. Nous pouvons profiter de tout !</p>
+<p>Quand je regarde les maisons dans la rue, qu'elles aient vingt ou deux cents ans, je reste à chaque fois émerveillé. Je ne le vois pas nécessairement comme une expérience romantique, je le ressens comme la vie qui vient à moi : Wouah ! Ça fonctionne parce que tout le monde a décidé d'une certaine manière de collaborer et que nous sommes mutuellement plus fiables. C'est ce que c'est au fond. Si ton système est de facto corrompu, tu ne peux pas avancer, dans aucun domaine. Pour moi, c'est une machine à rouages : quelque chose qui avance toujours et qui est constamment réparé.</p>
+<p><strong>HVC: Ce qui se passe maintenant dans le monde numérique est complètement fou. Pourtant, tu as un travail ‘manuel’, que nous pouvons presque appeler un ‘artisanat’. Si tu réduis à l'essentiel : tu entres dans ton atelier et tu continues à travailler sur ce qui est là : une sculpture doit être terminée, la deuxième est mise en place, une autre doit être moulée, une autre sculpture doit être peinte.</strong></p>
+<p>SVP: C'est exact.</p>
+<p><strong>HVC: Tu n'es pas encore monté dans le train de l'impression 3D, je pense, quelque chose avec lequel beaucoup de sculpteurs ont déjà commencé.</strong></p>
+<p>SVP: Je peux le faire, je l'ai appris. Je trouve cela important : plus tu maîtrises d'outils, plus tu as de possibilités. Le truc avec l'impression 3D, c'est qu'on a longtemps pensé : nous allons remplacer le manuel. Mais en fait, il est toujours le plus rentable de sculpter avec ses mains. Quand cela a explosé, j'étais déjà occupé depuis dix ans. Tu as déjà une certaine expérience. À l'académie, ils l'utilisent déjà dès la première année. Mais dans mon cas, cela n'a (pas encore) les propriétés mécaniques que je désire pour pouvoir créer une sculpture.</p>
+<p><strong>HVC: Tes impressions semblent pourtant avant-gardistes, ainsi que conçues sur l'ordinateur.</strong></p>
+<p>SVP: En 2015, je pensais déjà depuis un certain temps que je voulais travailler avec des photos de mes sculptures. J'étais occupé avec des sculptures énormes que je devais encore mouler. Je travaille autour de la vitesse et de la dynamique, mais je devais passer des mois sur une seule et même œuvre, ensuite faire un moule, ce qui prend encore des semaines, et cela me pesait ‘sur les pieds’. Je voulais techniquement arrêter cela. Un ami m'a conseillé de travailler sur des photos. Je ne suis pas un dessinateur exceptionnel, mais je regardais ce que Rodin faisait : lui aussi travaillait sur des photos de son propre travail, car cela lui donnait plus de vitesse. À l'époque, c'était une technologie toute nouvelle. Et une bonne idée est une bonne idée, donc je me suis mis au travail. Mes sculptures en tant que photo ont été détachées du contexte, mais cette dynamique est restée. J'ai commencé à les coller sur des plaques d'aluminium, car cela donnait un effet net. Cet aluminium fait partie de l'œuvre. L'acier est un segment important de mon travail, pense à la soudure et autres. En quelques mois, cela est devenu presque des compositions abstraites avec beaucoup de dynamique. C'était encore littéralement peint et collé.</p>
+<p><strong>HVC: Je t'écoute…</strong></p>
+<p>SVP: En 2018, je suis allé en Suisse pour un projet, et là, j'ai commencé à dessiner sur une tablette. Il y avait toujours un nerd de l'informatique en moi. Il était endormi depuis mes années académiques, mais pouvait enfin se réveiller ! (rit) C'est ainsi que j'ai commencé à développer mes dessins au laser. Mon atelier est parfois presque une discothèque et j'ai commencé à projeter avec des projecteurs laser – que j'avais achetés pour faire des fêtes – sur mes sculptures. Je trouvais que c'étaient de fortes images et je me suis dit : ‘Et si j'essayais d'en faire des dessins !’ C'étaient des photos de projections laser sur ces sculptures. C'était aussi juste un pas pour obtenir un dessin. Ces photos sont ensuite mises à jour jusqu'à ce que tout ait le bon équilibre. Ensuite, je dessine dessus avec une couche de dessin spéciale sur mon ordinateur et la photo disparaît, de sorte que seule le dessin reste. C'est du pur spectacle. Pourtant, en termes d'énergie : c'est la fête !</p>
+<p><strong>HVC: As-tu cette intention chez le spectateur, qu'il soit heureux de tes œuvres ?</strong></p>
+<p>SVP: Ce n'est pas l'intention qu'ils en sortent tristes, non.</p>
+<p><strong>HVC: Alors que chez certains artistes, c'est justement le but.</strong></p>
+<p>SVP: Ce n'est pas la catharsis que je recherche. C'est plus : je t'offre une énergie dynamique et entraînante, et si tu ne l'aimes pas, tant mieux. Mais tous les autres motifs de mes collègues sont tout aussi valables.</p>
+<p><strong>HVC: Cherches-tu ce genre de dynamiques aussi dans le travail d'autres artistes ?</strong></p>
+<p>SVP: Je regarde plutôt les Beaux-Arts. Je peux énormément apprécier les autoportraits de Rembrandt. J'apprécie Rubens, j'aime aller voir Le Jardin des délices, etc.</p>
+<p><strong>HVC : Et regarder : comment cela a-t-il été fait ?</strong></p>
+<p>SVP : Je trouve que le savoir-faire est très précieux, même si je pense qu'il faut aussi pouvoir être rock’n’roll. Par exemple, je trouve Basquiat très bon. Je regarde cela, mais je ne peux tout simplement pas le saisir. La seule chose que tu peux faire, c'est te rendre à l'évidence : je ne serai probablement jamais aussi bon. Ok, c'est comme ça. Alors, tu te laisses emporter par cette œuvre d'art. Et après deux heures, tu sors, tu es inspiré et tu as à nouveau envie de ‘créer’. Ou pense à Lucian Freud ! Fantastique !</p>
+<p><strong>HVC : Tu aimes faire taire le spectateur. Tu es très motivé, tu travailles douze heures par jour dans ton atelier à Nucleo.</strong></p>
+<p><strong>HVC : Quand décides-tu : cette œuvre est terminée ? L'accroches-tu un moment dans ton espace d'exposition pour la laisser chambrer ?</strong></p>
+<p>SVP : Cette question reçoit une réponse différente à chaque étape de ta carrière. Quand tu viens juste de sortir de l'école, c'est plus difficile. Après treize ans depuis l'obtention de mon diplôme, je sais à peu près quand quelque chose sera terminé. Avec de nouvelles créations, tu ne sais pas, mais avec un sous-marin, je sais juste quand cela va se terminer. Je peux y coller un certain temps. Même si je ne sais pas à quoi cela va ressembler.</p>
+<p><strong>HVC : Tu peux aussi ‘tuer’ une œuvre d'art.</strong></p>
+<p>SVP : Je connais mes compétences techniques. Je fais avec les moyens que j'ai, ce qui a également à voir avec le résultat de ton professionnalisme : tu es le créateur, mais si après dix ans de travail quotidien, tu ne vois toujours rien, je pense que tu as un problème. Ce qui est fou, c'est que pour de grands projets, tu ne sais parfois pas du tout. Tu sais juste : dans trois semaines, cela doit être terminé. C'est aussi un ressenti. Dans la musique que je fais, c'est différent : parce que c'est une compétence que j'apprends depuis seulement six ans.</p>
+<p><strong>HVC : D'où vient cette motivation ? Tu es extrêmement impliqué dans ton métier, tu as une énorme persévérance. Je commencerais presque à penser que le soir, tu fais une liste Excel avec ta planification pour le lendemain.</strong></p>
+<p>SVP : (rit) Ce n'est pas si extrême que ça, Hilde. Je viens ici tous les jours, il y a toujours du travail. Je fonctionne surtout sur l'intuition. Si je me sens moins bien un jour, je peux toujours sculpter un sous-marin, cela me rend toujours heureux.</p>
+<p><strong>HVC : Quand penses-tu que le ‘thème’ sera épuisé ?</strong></p>
+<p>SVP : Tant que je ressens encore du potentiel pour le développer, je continuerai à le faire. Même les sous-marins, cela trouve tant de chemins vers les gens chez eux.</p>
+<p><strong>HVC : Quand une sculpture part, ressens-tu de la ‘douleur’ ?</strong></p>
+<p>SVP : La preuve d'artiste reste avec moi, pour toujours. S'il y a quelque chose qui sort, je vois de nouvelles possibilités pour faire grandir tout cela. C'est pourquoi mon plus grand investissement est toujours dans ma joie de travailler : que tu puisses travailler avec ces moyens et cette volonté et sans frustration.</p>
+<p><strong>HVC : Tu fais beaucoup de résidences…</strong></p>
+<p>SVP : Une résidence est vraiment un stage de haut niveau. Si je construis une œuvre ici à Gand, cela doit être techniquement bien fait. Si tu stockes cela, cela doit pouvoir résister à l'humidité, par exemple, si tu as un atelier humide, etc. Les gens paient beaucoup d'argent pour une œuvre d'art, donc tu dois fournir une qualité technique. Dans une résidence, tu crées des œuvres purement pour le développement, pas pour la vente. À Hong Kong, j'ai eu une fois 23 jours pour monter un spectacle complet. Je n'avais rien avec moi. Tu travailles bien avec une organisation, mais tu dois bien sûr encore l'exécuter. C'est ce stress qui te fait découvrir plein de choses. J'utilise toujours la ville comme source d'inspiration et je travaille avec les moyens de cette ville. Je commence généralement avec des matériaux trouvés, rapides et abordables. Ensuite, tu dois te demander : vas-tu considérer cela comme perdu ou pas ? Un douanier ne peut pas vraiment rire si tu ramènes quelque chose en Belgique qui a l'air un peu spécial. (fait un clin d'œil)</p>
+<p><strong>HVC : Pour le Musée à Menen, tu as travaillé pour l'exposition Het Voorstel, une Biennale d'idées (curateur Hans Martens) sur une sculpture.</strong></p>
+<p>SVP : Fremdkörper était une œuvre extérieure, une tour de sous-marin à taille réelle. Les spectateurs avaient toujours l'impression que le reste du sous-marin était sous terre. Leur imagination complétait l'œuvre. Mais une grande œuvre ne peut être montrée que de manière limitée.</p>
+<p><strong>HVC : Tu veux voir ta pratique croître en hauteur et en largeur, obtenir de plus en plus d'opportunités… Où te vois-tu dans quelques années ?</strong></p>
+<p>SVP : Je ne vois pas grand-chose : je pense en systèmes, pas en objectifs. Mon système doit être bon, c'est le plus important. D'autres appelleraient cela ‘le chemin’. Tu vas dans une direction et tu dois continuer d'avancer. Et si tu tombes, tu te relèves. Tu t'améliores en échouant..</p>
+<p><strong>HVC : Qu'est-ce qui, selon toi, peut être un échec ?</strong></p>
+<p>SVP : Cela peut être n'importe quoi. Ton échec en tant qu'être humain. Et comment tu répares tes échecs et tes erreurs. C'est ainsi que nous nous jugeons les uns les autres. Pas parce que nous faisons tout juste, nous regardons comment nous réparons. Je suis conscient de certaines choses. Par exemple, je ne suis pas dans la tendance du moment, cela avance un peu plus lentement pour moi.</p>
+<p><strong>HVC : Penses-tu que tu fais partie de la scène artistique contemporaine ? Te sens-tu un acteur dans cet art ?</strong></p>
+<p>SVP : Certainement. Tu dois savoir, j'ai obtenu mon diplôme en 2010 avec une grande bataille spatiale figurative de vaisseaux spatiaux qui s'attaquent les uns aux autres, mais nous étions alors dans une période conceptuelle pleine. Si tu n'es pas dans la tendance, cela avance plus lentement à ce moment-là – mais pas à long terme – ce qui n'est pas un problème en soi. Chez nous, dans la région, ils avaient l'expression : ‘On construit sa propre fête.’ Mais si les gens trouvent le chemin vers moi, ils sont toujours super enthousiastes.</p>
+<p><strong>HVC : C'est de toute façon donner et prendre. Tu fais beaucoup de sacrifices en termes de temps. En fait, tu aimes être parmi les gens, alors que tu as un métier très solitaire. Tu es ici de 9 heures du matin à 9 heures du soir, TOUS les jours.</strong></p>
+<p>SVP : J'aime être parmi les gens, je les apprécie beaucoup. Même si je peux bien être seul. D'ailleurs, nous sommes ici avec les artistes de Nucleo, dans une communauté. Nous venons travailler sur nous-mêmes, mais dans notre ‘cour’, il y a beaucoup de dialogue. Je suis loin d'être un ermite.</p>
+<p><strong>HVC : Beaucoup d'artistes se rendent effectivement chaque jour dans un atelier, où ils se retrouvent ensuite seuls avec leur travail. Que pourrait améliorer ton statut d'artiste ?</strong></p>
+<p>SVP : Pour moi, tout doit toujours être possible sur tous les plans. Cela ne doit même pas nécessairement être dans l'art.</p>
+<p><strong>HVC : Cher Simon, parlons un peu de l'IA. Tu t'es, comme tant d'autres avant toi, également plongé dans l'Intelligence Artificielle. Qu'est-ce que tu trouves si fascinant à ce sujet ?</strong></p>
+<p>SVP : Pour moi, c'est comme pour la plupart : j'ai commencé à utiliser chatGTP en février. J'ai immédiatement remarqué que cela offrait une puissance que je n'avais jamais vue. Surtout si tu l'utilises pour ce pour quoi il est fait. Certains disent : ‘Ce n'est pas grand-chose’, jusqu'à ce que je demande pour quoi ils l'ont utilisé. Pour répondre à des questions politiques ? Pour découvrir une vérité ? Ce sont deux choses que tu ne devrais pas faire. Parce que ce n'est pas fait pour ça. Mais comme nous le connaissons maintenant, par exemple comme correcteur de langage, c'est incroyable ! Tu lui demandes quelque chose et il l'exécute. Par exemple : ‘Écris-moi un texte complet à la première personne à partir des informations ci-dessous.’</p>
+<p>Idéal pour les gens qui ont beaucoup d'idées, ils peuvent donner beaucoup d'entrées. Et l'IA en fait un texte cohérent. Tu peux même lui demander de rendre le texte shakespearian !</p>
+<p><strong>HVC : Mon dieu, qu'est-ce que je fais ici à perdre mon temps toute la journée ? Puis-je par exemple entrer mon enregistrement de notre interview ?</strong></p>
+<p>SVP : Dans une certaine mesure, peut-être par paragraphes, car c'est assez long. Je l'utilise beaucoup pour toutes sortes de questions de mots. Mais c'est une IA qui se trouve sur un serveur.</p>
+<p>Il y a en fait eu une accélération : les gens ont eu accès en décembre 22, mais en février 23, cela a vraiment pris un coup. Ils avaient déjà entraîné ce système pendant des années à des coûts de centaines de milliers d'euros par jour, juste pour l'entraîner. Tu es là avec tant de coûts et de développement qui deviennent disponibles en un jour. Ils ont eu un choc de : ‘Wow, qu'est-ce que c'est que ça ?’ C'était sans précédent ! Et tout le monde pensait que cela continuerait à aller aussi vite. J'ai commencé à regarder les IA qui créent des images, et là-dedans, tu as quelques grands acteurs. Tu peux par exemple entrer : ‘Fais une locomotive à vapeur, fais-la rouler à travers les forêts, fais en sorte que cela ait l'air d'être photographié par quelqu'un qui a gagné le prix Magnum.’ Et voilà, il le fait.</p>
+<p><strong>HVC : Incroyable !</strong></p>
+<p>SVP : Nous devons tous suivre, que tu le veuilles ou non. Ignorer n'est plus une option. La puissance est sans précédent, mais cela va faire partie de qui nous sommes. C'est pourquoi je suis monté dans le train. Dès que j'ai réalisé à quel point c'était puissant, j'ai décidé de former moi-même des modèles d'intelligence artificielle sur mes sculptures. Ainsi, je me suis appris.</p>
+<p><strong>HVC : Wow ! Il y a aussi eu beaucoup de discussions sur les NFT dans l'art. Peux-tu nous en parler ?</strong></p>
+<p>SVP : Ce sont deux choses totalement différentes. Les NFT reposent sur la Blockchain qui dépend d'Internet. L'IA fonctionne avec un réseau neuronal qui n'est pas nécessairement dépendant d'Internet.</p>
+<p><strong>HVC : Ah d'accord !</strong></p>
+<p>SVP : Pour créer des réseaux neuronaux, ils ont étudié comment les points de contact du cerveau fonctionnent et comment ils se renvoient. En imitant cela, cela a fonctionné. Mais si tu l'utilises souvent, tu commences aussi à douter de ta propre réalité, bien sûr. Comme nous connaissons l'IA maintenant, c'est une machine de filtrage et de prédiction hyper avancée, mais avec une puissance sans précédent.</p>
+<p><strong>HVC : Je trouve tout cela quand même effrayant. Je vais dans des ateliers d'artistes, où ils sont encore littéralement les mains dans la matière, cela semble être deux mondes différents ! Toi aussi, tu fouilles généralement ‘simplement’ dans l'argile, si je peux le dire ainsi.</strong></p>
+<p><strong>HVC : Pour le Nodenaysteen à Gand, tu es en train de créer quelques œuvres avec de l'intelligence artificielle. Ces œuvres s'appuient-elles tant sur le plan formel que sur le plan du contenu sur ce que nous connaissons de ton œuvre ?</strong></p>
+<p>SVP : C'était juste à partir du moment où j'ai compris ce pouvoir que j'ai réalisé que je devais le faire moi-même. Ce que je fais en fait, c'est entraîner un modèle d'intelligence artificielle : je lui fais connaître mes sculptures. L'idée est que mon œuvre complète prenne vie dans l'IA. L'IA doit en faire sa propre chose. Tu télécharges un modèle et à partir de là, tu peux tout acquérir : tu en sors des personnes, des trains, le cosmos, un trou noir, et cela a par exemple été entraîné sur ce que pourrait être un trou noir. Mais je me suis dit : que se passerait-il si j'y mettais mes sous-marins et que je les laissais vivre différentes aventures dans le cosmos ? C'était mon idée.</p>
+<p>Lorsque tu crées des images avec l'IA, et surtout avec tes propres modèles, il y a beaucoup de choses qui ne devraient pas être là et qui échouent. Mais c'est très intéressant en tant qu'artiste. Par exemple, tu y mets un sous-marin, mais si tu ne fais pas attention, il commencera à influencer tous les sous-marins existants et d'autres sujets avec mon langage formel.</p>
+<p>L'IA travaille avec des sujets. Et mes sculptures peuvent influencer ces sujets. Ces sous-marins ont été sculptés par moi, mais tu demandes une pomme et il en sort une comme si elle avait été sculptée par moi. L'IA fait constamment des erreurs, car elle ne sait pas que c'est un sous-marin. Le résultat visuel est en fait une prédiction qu'elle fait en fonction de ta question. S'assurer que l'IA apprenne à connaître mes œuvres et puisse appliquer le langage formel à des choses totalement différentes, c'est ce que nous appelons dans le jargon 'entraîner'.</p>
+<p>Ce que je fais en fait, c'est sandwich mon processus d'IA dans mon processus analogique. Ensuite, je génère des images et j'y travaille avec un stylo numérique. C'était au départ aussi mon intention. Cela devient un outil à ma disposition, donc je voulais apprendre et apprendre. Plus tu travailles avec, plus tu apprends. Ma plus grande peur – le manque de personnalité – a été résolue, car tu peux en faire un langage artistique qui est propre.</p>
+<p><strong>HVC : Qu'est-ce qui sera 'différent' dans ton expo IA que nous verrons en octobre au Nodenaysteen à Gand ? Le Nodenaysteen est une nouvelle plateforme artistique visant à montrer de l'art qui établit le lien entre l'analogique et le numérique.</strong></p>
+<p>SVP : J'y montrerai des dessins que j'ai réalisés à la main, mais sur les résultats de l'IA. L'exposition s'appelle AI Universe. Ce sera le début de ce que nous pouvons tous faire. C'est le début du voyage de l'IA. Cela s'accorde aussi bien avec le thème des satellites. Nous ne faisons que les envoyer, ce n'est que le début de tout ce que nous devons découvrir de l'infini. Pour moi, ce n'est absolument pas un point final, c'est le début. C'est un spectacle qui doit convaincre les gens, mais aussi une démonstration. Également de : 'N'ayez pas peur, tel que c'est maintenant, cela nous est encore entièrement au service.' Une des choses que j'ai apprises est : tu peux y construire un langage formel, mais à condition d'y mettre quelque chose qui a déjà du sens. Sur le plan formel et thématique, cela sera fermé. Comme cela a été entraîné sur mes sculptures. Cela a déjà une personnalité en soi. Donc tu dois déjà avoir quelque chose. C'est ce langage formel. L'autre réalisation que j'ai, c'est que nous avons besoin de l'illusion que cela a été fait par un humain pour pouvoir en profiter. Je ne suis pas en train de faire des 'trouvailles'. Cela signifierait que tu es dépendant de choses triviales pour construire quelque chose de substantiel. Nous faisons quand même plus ?</p>
+<p>Ce que tu verras, c'est un voyage IA qui a commencé en avril et dans lequel mes sculptures sont littéralement tirées dans un nouvel univers.</p>
+<p><strong>HVC : J'espère que nous les trouverons aussi fascinants que tout ce que tu as créé auparavant !</strong></p>
+<p>SVP : J'en ai toute confiance !</p>
+<p><strong>HVC : Je suis curieux ! (Winks)</strong></p>
+<p>https://nodenaysteen.org</p>
+<p>https://www.studiovanparys.com/</p>
+<p>https://nucleo.be/</p>
+<p>Expo Nodenaysteen : du 28 oct au 3 déc 23, du ven au dim. Predikherenlei 4A, 9000 Gand</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-10.jpg" alt=""></figure>
+<p>Prochains entretiens : Marc Galle, Francis Vanhee, Aaron Willem, Stephanie Gildemyn,…</p></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/simon-van-parys.html">Artiste: Simon Van Parys →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Découvrir</h4><ul class="fnav">
+<li><a href="../expo/index.html">Expositions</a></li>
+<li><a href="../kunstenaar/index.html">Artistes</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../event/index.html">Événements</a></li></ul></div>
+<div><h4>Impliqué</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visite</a></li>
+<li><a href="../over.html">À propos</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origine dans la recherche, le processus et le transfert.</span></div></div></footer>
+</body></html>

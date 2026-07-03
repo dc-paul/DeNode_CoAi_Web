@@ -1,0 +1,187 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview with Caroline Baek — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-caroline-baek.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/artikel/interview-caroline-baek.html">FR</a></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview with Caroline Baek</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2024-10-24</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview with <a href="../kunstenaar/caroline-baek.html">Caroline Baek</a></h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">AI translation</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Ghent, autumn 24 Now on view: Expo VIER, 4 works, 19/10 – 17/11, Nodenaysteen Predikherenlei 4a, 9000 Ghent INTERVIEW WITH CAROLINE BAEK (°1963)</p>
+<p>‘A painter must master line and color.’</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-01.jpg" alt=""></figure>
+<p><strong>Hilde Van Canneyt (HVC): Dear Caroline, you signed up for the Artist Meeting at the Casino of Knokke, where I, along with Willem Elias and Hugo Brutin, am one of the so-called ‘experts’, and look, your work was discovered by the advisory team of Nodenaysteen in Ghent during the four-day expo in August, where you will now exhibit in October 2024. Who knew the bubbles of a vernissage could serve such a purpose! (winks)</strong></p>
+<p>Caroline Baek (CB): Why say ‘no’?</p>
+<p><strong>HVC: Exactly! Life is about daring to say ‘yes’!</strong></p>
+<p>CB I’m actually someone who rarely comes out of my cave, but it is true that every time I exhibited, I mostly kept revolving in my own circle. I found – for myself – that the Artist Meeting was quite an expensive affair, but I lost my mother the year before and inherited about that amount, so I thought: ‘Voila!’ Thank you, mom!</p>
+<p><strong>HVC: I find that beautifully symbolic!</strong></p>
+<p>CB There was a woman who came back four times. She stood there like a little child before Sinterklaas. She said: ‘I know now why I came here.’ Very beautiful. That’s what it’s really about. From the age of seven to nine, I took piano lessons. At nine, I said: ‘No, I want to draw.’ So I walked into the Academy of Berchem and didn’t leave until I was twenty-six. I followed the entire drawing and painting cycle and then sculpting. At that time, I was also working as an interior architect in Brussels. In terms of timing, I couldn’t manage that anymore, so I stopped my art education. But I never stopped painting. That has always been the most important thing.</p>
+<p><strong>HVC: You came out relatively late.</strong></p>
+<p>CB Ten years ago, I stepped out of the corporate world; I worked for thirty years as an interior architect. First freelance, then I was responsible for the interior at BBL for twenty years, then ING. I am the only former ING employee who has had an exhibition at Koningsplein. But then, you know, human nature – read: bullied – and after three years, I was completely done. I got rid of everything, sold my apartment, my car, my furniture, my clothes, my books. Everything, everything gone. I booked a plane ticket and went to Mexico for six months. Once back, I realized, of course, that I had no roof over my head anymore. When I returned, it took me a long time to ‘land’. In the meantime, I knew they shouldn’t ask me to do anything else with what I actually ‘am’ and have always done: painting.</p>
+<p><strong>HVC: You created a series of paintings called ‘Mexican Galleries’. You walked a lot there, but you also drew and painted a lot.</strong></p>
+<p>CB I knew I wanted to go to a place where I had no reference points. I had no idea what I was going to take with me. I thought the most freeing thing would be to take nothing to work with, but apparently, I wasn’t that free. In the end, my carry-on was stuffed with dry pastels. I intuitively felt that this was the material for there. The first two months, I did nothing: I had the impression that they had catapulted me over an ocean and I had arrived there in a thousand pieces.</p>
+<p><strong>HVC: All because of your work?</strong></p>
+<p>CB I actually have to thank them; otherwise, I wouldn’t be where I am now.</p>
+<p><strong>HVC: Along the Mekong is a series you made in Laos. ‘Working with inks is like working as a paddler on an unpredictable current,’ we read on your website.</strong></p>
+<p>CB Laos was much harder. In the sense that the first six months in Mexico had really taken a toll. I spoke with an American writer, and she dropped this line: ‘This country, it works on you.’ That’s true. It’s an incredibly powerful country, and after wandering around there for six months, you have to give yourself time to digest that. But I came back, and six weeks later, I was on my way to Laos. Why Laos? Because after the wildness of Mexico – the yang version – I wanted the same, but in the yin version. Asia was a given. I knew it was going to be difficult for me. The feminine aspect of the yin also turned out to be true. When I arrived in Laos, I had to abandon all my plans. I hadn’t considered the seasons at all, and it was the end of the dry season. I am a child of the north. What I initially wanted to do was to paddle a bit down the Mekong in my boat, but there was no water in the river.</p>
+<p><strong>HVC: Caramba!</strong></p>
+<p>So what has my journey become? Sitting by the Mekong. Because the river is the real encounter. That river is known to be incredibly powerful, truly a secretion of the earth. In that sense, it is immensely feminine. It is something very material as well, something I am currently focusing on in my work. It is also very impure, and that impurity is something that – now that I am actively working with oil paint – is currently occupying me a lot.</p>
+<p><strong>HVC: The sea also doesn’t let you go.</strong></p>
+<p>CB Then I was in Marseille, on a rock of the Lille du Frioul, looking at the sea. Suddenly it was like they say in French: ‘Ca m’a sauté à la gueule.’ The sea gave me a very strong message. You must know, I am a daughter, granddaughter, and at least up to the 15th century descended from sailors. I probably have some saltwater in my veins. Ultimately, it’s not the sea as people see it that interests me, but the matter, because the sea shows such simplicity. That is water and air, and there is always water in the air and always air in the water. Essentially, it is the original unity that doubles itself in the sea, which I am now trying to paint. Also because the sea is so indifferent to its own history. No two fractions of a second are ever the same. Like the Celtic druids, it also keeps no archive. It simply doesn’t care: it always throws away its own kitsch.</p>
+<p><strong>HVC: I've never thought about it that way before.</strong></p>
+<p>CB In that sense, Milan Kundera set me on the path of this reasoning in The Unbearable Lightness of Being. The character goes to a demonstration in India, very bio, bobo, I don't know. The main character says: 'Going to such things is for many people their 'kitsch', only they don't realize it. Ultimately, all our memories, our souvenirs, for each of us, are our own kitsch because we cling to them. They are our references. For me, this is also very important in my work. I have to constantly be attentive to let that go. Not to fall into the trap of continuously going back to what you know or what you've already done and what you think you don't know, but that you do know.</p>
+<p><strong>HVC: You always start with a blank page and express what you feel and see at that moment – although, not literally 'see'. It's complicated. (winks) But it's also not that you paint the sea on the beach like an impressionist.</strong></p>
+<p>Do you have a studio or do you make your work at home at the kitchen table?</p>
+<p>CB Both. At home when it's 'little drawings'. I also have a studio that has no heating, which means that in winter it's almost unusable. I have to adapt. By the way, oil paint doesn't work in such cold conditions. Then I have to start with other materials. That's how those large black drawings that were also displayed at Artist Meeting in Knokke came about.</p>
+<p><strong>HVC: Does everything start with the typical sketchbook?</strong></p>
+<p>CB Like everyone, I have a little book. What do you write in it? Unfortunately, the lists of what you practically need to do. But then it starts with a little scribble here and a little scribble there, and that's how everything begins to gain more and more body. Then you want to make such a scribble bigger, and so on. From one little book came the next little book, and each time you try harder... Such a sketchbook is more than a hundred hours of work.</p>
+<p><strong>HVC: Is it the intention that you take the works out of there and frame them individually? Or do you see it as a kind of intimate inspiration book that not many people see?</strong></p>
+<p>CB It's working in a way that's almost theoretical on one of the two facets of my work. For me, a painter must master the line and the color.</p>
+<p><strong>HVC: You also wrote this in your (email) letter to me: '</strong></p>
+<p>'The line tells the story, the color says what cannot be said.' You also describe the idea that paint is matter, nature is born matter, paint is manufactured matter. It is the philosophical material of your work. We also talked about how images nowadays go by way too fast. And you want exactly the opposite. The only place where we indeed stare into space, contemplate, is at the sea, looking out over the horizon. With your work, you want to achieve that; that people literally pause for a moment. The basic premise of your work stands in stark contrast to our technological superficial and purely economic society, where only – especially now with Instagram and TikTok, only the three-second 'wow' moment counts. And so we must continuously be captivated by new images.</p>
+<p>CB That's why I found it so interesting that those people from Nodenaysteen in Ghent saw the spiritual aspect of that work, despite the fact that the atmosphere in Knokke was anything but spiritual due to so many people and therefore somewhat noisy, of course. That they want to approach it with a church-like perspective for the exhibition doesn't interest me that much. (laughs) But the spiritual aspect does, which is why I find myself in it. If the Nodenaysteen team felt that there, the visitors of the gallery will likely see it too, because it will be presented in that context much more calmly.</p>
+<p><strong>HVC: Can you tell us something about your 'blue' works under the title Outremer 'la préface', sculptur le bleu?</strong></p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-02.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-05.jpg" alt=""></figure></div>
+<p>CB The material is poster paint. I created that series in four months. The roll of paper ran out, so I stopped. (laughs) It sounds a bit caricatural, but I don't want to repeat myself. When I think I've reached the end of a chapter or story, I stop. The Outremer series is something that is still ongoing for me; I don't know if it will ever come to an end.</p>
+<p><strong>HVC: You also try to approach that simplicity by never mixing different techniques. And you told me that there are two main actors, color and line; the line tells the story, the color says what cannot be said. You also say that when painting, the images spontaneously impose themselves on you.</strong></p>
+<p>CB I don't search for images, in the sense that I don't use any visual material. I am someone who tortures his brain. It's actually a mental and philosophical journey of everything I encounter along the way and that I don't actively seek out. Sometimes it's in music, other times it's just something I saw on the bus or in nature or something I heard or saw in a movie... That gives me a spark in a direction that has nothing to do with that, but feeds me in my overall reasoning. I actually try to clarify my own thoughts. That's not always good. (laughs)</p>
+<p><strong>HVC: Do you mean clarifying it for yourself, hoping that the viewer recognizes themselves in it? Hence why you still cherish the innocence of childhood. You create images for yourself to capture something, in a kind of concentrate. Then you hope that – whether directly or indirectly – people are touched by it. Do you usually create 'fresh' work for a new exhibition? Or do you prefer not to have a destination while you create it, because then you wouldn't be free? Or do you let exhibition makers just 'pick' from your studio?</strong></p>
+<p>CB Making works for a next exhibition? I don't think I could do that. I might be wrong about this, but I think my work is strong enough to fit into a script AND stand on its own. It has happened to me in exhibitions that people came to me and said: 'I see this and that in it,' and I still reacted: 'No, that's not it at all.' Later I thought: 'Actually, what that person sees in it is obviously related to themselves.'</p>
+<p><strong>HVC: Yes, of course!</strong></p>
+<p>CB As long as that person sees a world in it, there's little chance that it will be the same world as mine, because their head is not my head. And vice versa. Although many people say: 'I see this and that in it.' But then we are talking about well-known artists for whom seven or ten monographs have been written, and people are just repeating what is in them. That is a common phenomenon, but not applicable to me.</p>
+<p><strong>HVC: Do you wait for the desire, need, or muse to come, or do you really try to schedule your creative hours? How does your work in your studio operate? Because you no longer have a job on the side. Do you see being an artist as a daily task? Or as a duty to yourself? Do you make a plan in advance, like an athlete who trains four days a week?</strong></p>
+<p>CB I have quite a bit of discipline. I always go to my studio, I'm always busy, but that doesn't mean I'm always painting. I sometimes spend days and days in my studio just thinking or writing.</p>
+<p><strong>HVC: Do you also want to do something with that writing? Because when you paint, it's usually in the hope that it will be 'seen' or bought through, for example, an exhibition.</strong></p>
+<p>CB I write as I think, without manipulating the style to share it later. I did indeed create a manuscript from my trips to Mexico and Laos, but it was not published. Although I mainly write for myself, to clarify my thoughts. Will something happen with it later? If my work were to gain 'importance', it would provide a useful explanation. But the reader will have to spend quite a few hours. I'm already on manuscript number 13. (laughs)</p>
+<p><strong>HVC: Do you see that as communication as well? On your website, you write that it is an impossible task to talk about your work.</strong></p>
+<p>‘Anyone wishing to immerse themselves in painting embarks on a motionless journey, a hopeless quest of scorching intensity. I have fallen into this trap, this madness, without ever feeling the need to escape it. My life on earth remains an investigation, digging for its true face. Painting must undoubtedly cherish the innocence of childhood.’ For you, life is already a success because you do what you want to do and feel what you must do: creating images for the world.</p>
+<p>CB Well, not in every area, of course. (winks)</p>
+<p><strong>HVC: You do want it to be shared, as if everything needs a kind of right to exist.</strong></p>
+<p>CB Yes, that's difficult because I'm very bad at conveying it.</p>
+<p>If I have the right audience, you're right, otherwise I always have the impression that I'm a bit outside the world, both as a person and as an artist. I want to show my work, I would like to sell it – because in the end, one also needs to eat. But that's a department I'm not at home in. I have to put so much energy into the work itself that this completely passes me by. I always say: ‘That's not my job.’ As an artist, you always hope that other people will support you in that.</p>
+<p><strong>HVC: I understand what you mean. As an artist, on one hand, you can say that it's not your job, but on the other hand, not everyone is lucky enough to be picked up. Then it has to become your job. Although I personally don't like it when an artist smells like a salesperson.</strong></p>
+<p>CB That's true. And in itself, the material aspect is a problem for me, because it accumulates. Here I am, a small piece of living matter with an extra thinking module + creation appendix. What do you do with it? Or do you do nothing with it? By the way, I plan to destroy part of my work…</p>
+<p><strong>HVC: Why?</strong></p>
+<p>CB I can't keep accumulating. Earlier work isn't even on the website anymore. Why now? It's about life choices. Of course, you have to be ready every day and prepared to take a different path, but when it comes to painting, that's not applicable for me; it's simply a basic need: just as one cannot live without sports, another cannot live without… It's always difficult to talk about what it is for someone else. We are not in someone else's body or head. For me, that's obvious. I could say: ‘I need it like water and air,’ but we don't know what we all need outside of water and air when we are in a completely different context and forced to do something else to keep breathing.</p>
+<p><strong>HVC: Do you study how other artists create work?</strong></p>
+<p>CB Yes, mainly artists who have traveled a path interest me. One of the best examples in that regard is Mondrian. I find his trajectory extremely interesting. Not to mention Rothko, because I feel too close to him. For a long time, I felt a strong connection with Nicolas de Staël. The problem is that those two are now so much in the spotlight that it almost comes off as cliché. Of course, if you are dealing with the sea, you can't help but look at Turner. In Turner, I see almost an attempt to transition to Rothko. The time wasn't ripe for it yet, but I do see – and that moves me – that he does something different in his water works than just depicting the sea. If I can read people's search in their work, I find that very fascinating. I find it less interesting when I see artists who repeat themselves. Let everyone make mistakes! And what is ultimately the right path anyway? But everyone can come back and take a different path again. I think an artist must be an eternal seeker. I am a painter; I am not a painting manufacturer. That doesn't interest me.</p>
+<p><strong>HVC: I also read that in your letter: ‘The whole story of paint and sea is a long paradox, in terms of color, transparency, and time. Because oil paint is indeed also a slow material. Everything contradicts logic, and that is precisely what is fascinating. And as a painter, you must constantly be in a state of exile, always ready to take a different path, to adapt. You also wrote: ‘I feel more like a farmer than an artist; it’s a designation I don’t identify with.’ What do you mean by that?</strong></p>
+<p>CB That a farmer must also continuously adapt to the weather conditions. He will have more potatoes in one year and more leeks in another year. Or he will resign himself and perhaps say to his seeds: ‘You’re not going in that soil; I’ll look for something else.’ He will continuously adapt to what happens around him, not adjust the circumstances to himself. I want to go along with the material, want to discover it. And that is equally my material because even my nutrition is decisive for what I paint.</p>
+<p><strong>HVC: Ah, in what sense?</strong></p>
+<p>CB The sea is a volume that is absolutely without sugar.</p>
+<p><strong>HVC: Funny, I never thought about it that way.</strong></p>
+<p>CB I have the need for my body to always be ready to engage with that material. I always say: ‘My material and what comes on the painting are the same.’ If I haven't prepared myself to be ready for it, I will miss the mark.</p>
+<p><strong>HVC: I recently interviewed the Dutch artist Marc Mulders. He too sacrifices everything for art. He gets up early, goes for a run, and then he attacks. I also have to warm up, push away real life, and get into a concentrated state.</strong></p>
+<p>CB It’s not a 9 to 5 job; it’s not something you start and know in advance when it will be finished. That’s just not how it works. There was a piece I absolutely wanted to finish for Knokke. Somewhere in my mind, I knew: if you want that, kid, it’s not going to happen. And indeed, in the meantime, the canvas has already been taken off the stretcher, and another canvas is already up. Because I don’t determine the rhythm. Although, I do determine it, but I’m not in control of what happens inside here.</p>
+<p>Hugo Claus once said that when an artist has found their style, it seemed very suspicious to him. When I heard that, I thought: ‘Aha! Thank you! (laughs) From the moment you end up in some sort of production line, it becomes completely uninteresting.</p>
+<p><strong>HVC: Yes, of course. I notice that immediately. (and it makes me feel nauseous.) For you, it’s indeed about authenticity, genuineness, and imperfection. But look, as an interior architect, you had to adapt to an interior. Now people just have to adapt their interior to you.</strong></p>
+<p>CB Architecture remains important in my work, especially the skeleton of a building.</p>
+<p><strong>HVC: It remains a thing for artists that you always want that confirmation, that little communication with the other, preferably with loud applause included. While a farmer plows his field and at the end of the day, whether or not ‘content’, is independent of feedback or applause.</strong></p>
+<p>CB Yes, I never think about that when I’m working. By the way, I think about far too few things. (laughs) Because, for example, all those works on paper, they just don’t make it into the drawer, of course. I have three words for myself: I am a painter. I think that’s a good word.</p>
+<p><strong>HVC: I agree!</strong></p>
+<p><strong>HVC:</strong></p>
+<p>VIER</p>
+<p>4 works</p>
+<p>19/10 – 17/11</p>
+<p>Nodenaysteen, Predikherenlei 4a, 9000 Gent</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-06.jpg" alt=""></figure>
+<p>nodenaysteen.org carolinebaek.be</p></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/caroline-baek.html">Artist: Caroline Baek →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Discover</h4><ul class="fnav">
+<li><a href="../expo/index.html">Exhibitions</a></li>
+<li><a href="../kunstenaar/index.html">Artists</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Involved</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visit</a></li>
+<li><a href="../over.html">About</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
+</body></html>

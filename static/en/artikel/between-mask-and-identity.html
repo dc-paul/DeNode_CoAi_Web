@@ -23,6 +23,30 @@
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
 @media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
@@ -32,40 +56,69 @@
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">papers · 20 april 2025</div>
-<h1 class="dn-h2" style="margin:10px 0 6px">between mask and identity: the duality of Kat Bové</h1>
-<div class="dn-serif-it" style="font-size:22px">by Liesbet Depauw</div>
-<div class="dn-note" style="margin-top:12px">Stichting DeNode, Kristof Vander Cruyssen</div><div class="dn-note" style="margin-top:10px">AI translation</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">between mask and identity: the duality of <a href="../kunstenaar/kat-bove.html">Kat Bové</a></h1>
+<div class="dn-serif-it" style="font-size:22px">by <a href="../kunstenaar/liesbet-depauw.html">Liesbet Depauw</a></div>
+<div class="dn-note" style="margin-top:12px">Stichting DeNode, <a href="../over.html#kristof-vander-cruyssen">Kristof Vander Cruyssen</a></div><div class="dn-note" style="margin-top:10px">AI translation</div>
 </div></section>
 <div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/images/blog-church-kat-bove.webp" alt=""></figure></div>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Kat Bové is an apparition: in bright colours and leopard prints she seems to dance through life. Yet she also has a dark side, one she rarely shows. Behind the cheerful façade hides an introverted woman who has worked through her demons, doubts and questions on paper for years. For herself, but recently also for a wider public. For her latest exhibition WHO IS YOUR GOD WHERE IS SHE she shares her eternal search for that duality within herself. And she invites others to seek the gods who, in the midst of a dark world, show them the way to the light.</p>
-<h2 class="dn-h3">Many of your works seem funny at first glance, but when you think about them more deeply they also have something lonely about them. Do you see that yourself?</h2>
+<h2 class="dn-h3" id="many-of-your-works-seem-funny-at-first-glance-but-when-you-think-about-them-more-deeply-they-also-have-something-lonely-about-them-do-you-see-that-yourself">Many of your works seem funny at first glance, but when you think about them more deeply they also have something lonely about them. Do you see that yourself?</h2>
 <p>That loneliness often creeps into my work, yes, just as it does in real life. Perhaps everyone is lonely at times, but it can really overwhelm me, like an echo from the past. That past is my childhood, when at the age of eight I was sent to boarding school even though I did not want to at all. I ended up at a girls' boarding school where everyone was older than me.</p>
 <p>I found it hard to connect, even with classmates, and felt intensely unhappy all those years. I sometimes joke about it, 'shall we talk about my traumatic childhood again?', but it was traumatic, there is no getting around it. That seeps into what I make, especially because for a long time I thought I would never want to exhibit. The works I made, I made purely for myself, and gradually they formed a world in which I felt at ease.</p>
-<h2 class="dn-h3">Yet those who look at your works always see strong women, often yourself, who with a healthy dose of humour poke fun at all kinds of clichés…</h2>
+<h2 class="dn-h3" id="yet-those-who-look-at-your-works-always-see-strong-women-often-yourself-who-with-a-healthy-dose-of-humour-poke-fun-at-all-kinds-of-cliches">Yet those who look at your works always see strong women, often yourself, who with a healthy dose of humour poke fun at all kinds of clichés…</h2>
 <p>Those women are who I would like to be. Especially in my self-portraits that element is very strongly present. I make a powerful version of myself, in the hope that I can take on part of that strength. But those who look closely will always discover an extra layer, one in which I puncture that façade. That is something I struggle with: when I go out people see an extroverted version of myself, but when I come home I most want to disappear into my studio, like a hermit, far from everyone. Sometimes I feel like a clown performing an act, which I then work into many of my paintings. Is that extroverted side fake? Or do I simply need it in order to function? I don't know, though I feel those masks are weighing on me ever more heavily. Because my works were in the first place only for myself, you see that search returning again and again. It really is one of the great questions of my life.</p>
-<h2 class="dn-h3">For years you kept your work hidden from the public. What made you decide to exhibit it after all?</h2>
+<h2 class="dn-h3" id="for-years-you-kept-your-work-hidden-from-the-public-what-made-you-decide-to-exhibit-it-after-all">For years you kept your work hidden from the public. What made you decide to exhibit it after all?</h2>
 <p>That idea had to grow. I still prefer to keep every work close to me, in my studio, but gradually I came to understand that my works can also mean something to others. And that that is beautiful too, a painting that finds its way to someone who gets something out of it. Many friends once asked whether they could buy something from me and for a long time I said no, but by now I have grown used to the idea. My brother, an artist himself, played an important role in that. He convinced me to post a work on Instagram now and then. That got me used to the idea of an audience. And when the question came whether I wanted to exhibit at the Zeepziederij in Bree, I gave in. That semi-industrial space simply felt right; I could already see my works hanging there.</p>
-<h2 class="dn-h3"><strong>What did your first exhibition bring about?</strong></h2>
+<h2 class="dn-h3" id="what-did-your-first-exhibition-bring-about"><strong>What did your first exhibition bring about?</strong></h2>
 <p>To my surprise, quite a lot. There was press attention, people began to buy my work and above all: they saw something in it, got something out of it, were touched by it. I heard someone explain that he was buying the work for his girlfriend in the hope that she would draw strength from it. You cannot give me a finer compliment. It also makes it easier to let works go.</p>
-<h2 class="dn-h3">The press attention went mainly to the fact that you are a flight attendant and even on the road constantly take out your brushes.</h2>
+<h2 class="dn-h3" id="the-press-attention-went-mainly-to-the-fact-that-you-are-a-flight-attendant-and-even-on-the-road-constantly-take-out-your-brushes">The press attention went mainly to the fact that you are a flight attendant and even on the road constantly take out your brushes.</h2>
 <p>On the plane, at yet another pool with yet another new crew… Those brushes travel everywhere with me. I have a whole folder full of drawings of colleagues. For me that is a safety. If we are stranded somewhere for two or three days with the crew, my hotel room becomes my studio. When I am among the crew, I always have my cocoon of pen and paper at hand. While my colleagues talk, hang out, play, I sit portraying them.</p>
-<h2 class="dn-h3">In Nodenaysteen we won't be seeing the portraits of your colleagues. What can we expect from WHO IS YOUR GOD, WHERE IS SHE?</h2>
+<h2 class="dn-h3" id="in-nodenaysteen-we-won-t-be-seeing-the-portraits-of-your-colleagues-what-can-we-expect-from-who-is-your-god-where-is-she">In Nodenaysteen we won't be seeing the portraits of your colleagues. What can we expect from WHO IS YOUR GOD, WHERE IS SHE?</h2>
 <p>A search, what did you think? <em>(laughs)</em> I mainly show many self-portraits, but in an idealised form, in the form that I, and by extension many people, want to be: sharp, powerful, sometimes with a big middle finger to society. Above all, do not expect any clear-cut answers; I have more questions than answers. Every image plays with contrast, with confusion, with contradiction. The vulnerability of the naked body versus the power of iconography, the conflict between image and text, the humour of a message versus the deeply sad reality. Light versus dark, colour versus black. I want to show that it is okay to have both in you, as long as you have 'gods' somewhere to point you towards the light. For me those are women: bearers of the world, embodiments of strength. I portray a number of my heroines, but above all that idealised version of myself, which, if you look closely, always has a vulnerable side somewhere. The title of the exhibition, by the way, is plucked from the song Multi-Love by Unknown Mortal Orchestra, as a nod to the way quotes from music and literature often slip into my work.</p>
-<h2 class="dn-h3">Finally this: for years you painted only for yourself, that needed no words, you understood perfectly what you were doing. What is it like to suddenly have to explain your work?</h2>
+<h2 class="dn-h3" id="finally-this-for-years-you-painted-only-for-yourself-that-needed-no-words-you-understood-perfectly-what-you-were-doing-what-is-it-like-to-suddenly-have-to-explain-your-work">Finally this: for years you painted only for yourself, that needed no words, you understood perfectly what you were doing. What is it like to suddenly have to explain your work?</h2>
 <p>That too is a search. For me all those words are actually unnecessary. Just let my works speak for themselves. They already shout more than enough.</p></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/who-is-your-god.html">Exhibitions: Who is your God, Where is She →</a></p>
+
 </div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
 <footer class="dn-footer"><div class="dn-wrap"><div class="cols">
 <div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
 <div><h4>Discover</h4><ul class="fnav">
 <li><a href="../expo/index.html">Exhibitions</a></li>
 <li><a href="../kunstenaar/index.html">Artists</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
 <li><a href="../event/index.html">Events</a></li></ul></div>
 <div><h4>Involved</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visit</a></li>
 <li><a href="../over.html">About</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
-</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from researc…</span></div></div></footer>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
 </body></html>

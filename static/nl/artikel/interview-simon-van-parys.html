@@ -1,0 +1,206 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview met Simon Van Parys — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/artikel/interview-simon-van-parys.html">EN</a><a class="lg" href="../../fr/artikel/interview-simon-van-parys.html">FR</a></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publicaties</a> / Interview met Simon Van Parys</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2023-10-16</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview met <a href="../kunstenaar/simon-van-parys.html">Simon Van Parys</a></h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>INTERVIEW MET SIMON VAN PARYS (°1986)</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-01.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-02.jpg" alt=""></figure></div>
+<p><strong>Hilde Van Canneyt (HVC): Beste Simon, dank om me hier te ontvangen in je atelier in het Nucleo Gebouw te Gent op de Lindenlei. Ik heb het interview niet voorbereid, daar we het straks over Artificiële Intelligentie zullen hebben. Ik dacht: ‘Als de computer het hier allemaal zal overnemen, als deze slimmer is dan mij, waarom zou ik me nog moe maken?’ (knipoogt) En voorlopig weiger ik zelf nog met AI te werken. Al volg ik je werk natuurlijk en heb ik je website bekeken alvorens ons gesprek.</strong></p>
+<p><strong>HVC: Zeg eens jongeman: hoe begon het allemaal?</strong></p>
+<p>Simon Van Parys (SVP): In 2010 studeerde ik af aan het KASK met een Master in Vrije Kunsten/Beeldhouwkunst. Niks doen is niet echt mijn ding, dus na twee weken, ben ik erin gevlogen. Die eerste vijf jaar was ik een volle beeldhouwer, wat wil zeggen: alles boetseren, alles met de hand maken.</p>
+<p>Sinds 2016 is mijn praktijk omgeslagen naar veel meer: beeldhouwkunst bleef de kern, maar er kwamen veel afgeleiden bij: ook digitale tekeningen, techno muziek, lasers uit de discotheken, dat vind je er allemaal in terug. Mijn praktijk wordt meer en meer een totaalspektakel. De beelden worden nog altijd autonoom ontworpen, maar ze kunnen ook in een volledige wereld functioneren.</p>
+<p><strong>HVC: Het is inderdaad een heel eigen universum. We zien sculpturen, veelal gebaseerd op ruimtevaart, op alles wat in de lucht vliegt of onder zee vaart, en machinerieën. Aan de muur hangen onbenoembare objecten, waar je verwijzingen naar vroeger of de verre toekomst ziet. Als we naar je 2D-werk kijken, zie ik in eerste instantie verwijzingen naar de digitale en filmische wereld.</strong></p>
+<p><strong>HVC: Met wat was je concreet bezig die eerste vijf jaar na je afstuderen?</strong></p>
+<p>SVP: Thematisch zie ik mij als een futurist. Een beetje van de oude stempel: echt het futurisme van de jaren 60. Je kan het als het ware maken terwijl je het fantaseert. Trouwens, op het moment dat ik aan het creëren ben, denk ik niet echt na.</p>
+<p>Tot voor kort was ik helemaal niet bezig met de nieuwste ontwikkelingen in 3D.</p>
+<p><strong>HVC: Bedoel je dat je puur intuïtief werkt?</strong></p>
+<p>SVP: Soms wel: als ik een duikboot maak, weet ik snel welk type het wordt en hoe lang hij moet worden bijvoorbeeld. Maar daarna laat ik het los. Als ik aan het boetseren ben, is het meer een gevoel vanuit mijn lichaam. Thematisch, de onderwerpen van de duikboten, de satellieten, de ontploffingsmotoren en de ruimteschepen, zijn dingen die me energie geven in het leven. Die gebruik ik. Ik maak van alles dat me inspireert, creëer daar een eigen wereld mee en geef het door. Ik zie me als een leverancier van energie voor de toeschouwer.</p>
+<p><strong>HVC: Het ene kunstwerk is een vervolg op het ander. Ze staan op zichzelf, maar in composities versterken ze elkaar, dan wordt het, zoals al aangehaald, een eigen universum.</strong></p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-05.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-06.jpg" alt=""></figure></div>
+<p>SVP: Dat betracht ik ook met een individueel beeld. Zeker als dat zijn weg naar iemand thuis vindt. Velen dromen daarvan: ‘Fuck, nen duikboot!‘</p>
+<p><strong>HVC: De typische jongensdroom!</strong></p>
+<p>SVP: Het verbaast me telkens opnieuw wie op mijn werk aansluit en wie niet. Ik gebruik een figuratie die je niet veel meer ziet, mensen zijn dat niet meer gewoon. Mijn werk schrikt even goed mensen af. Maar als ze binnenkomen en de tijd nemen, sluiten ze wel aan. Maar ik ben geen trendsetter, dat besef ik ook.</p>
+<p><strong>HVC: Bedoel je vormelijk of inhoudelijk?</strong></p>
+<p>SVP: Beiden.</p>
+<p><strong>HVC: Zit er ook niet een stukje nostalgie in voor de kijker? Denken we aan films zoals 2001 a Space Odyssey bijvoorbeeld? Ik vermoed als mensen binnenkomen, dat ze iets hebben van ‘Wauw’.</strong></p>
+<p>SVP: Ik ben een jaren 90 kind, ik ben zwaar beïnvloed door het set design van die jaren 90. Ik denk tot midden de jaren 2000 werd er nog veel gewerkt met practical effects. Dat waren miniaturen in klei die werden gefilmd. Denk aan films zoals Independence Day, die zodanig grotesk zijn, maar als entertainment goed zijn. Of The Matrix, dat gaat over het digitale tijdperk. De eerste film van de quadrology is bijna volledig met practical effects gemaakt. Ook de discotheekcultuur is iets typisch van begin de jaren 90.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-07.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-08.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-09.jpg" alt=""></figure></div>
+<p><strong>HVC: Ik vermoed dat je – zoals elke kunstenaar die op een podium stapt – eveneens kritiek krijgt.</strong></p>
+<p>SVP: Als ik commentaar krijg, is dat zo goed als nooit over de artistieke waarde van mijn werk. Dan fungeert dat eerder over de linken met de actualiteit die ze zelf maken. Je hebt bijvoorbeeld een duikboot waarin een kernreactor zit, en dan hebben ze een mening over kernenergie. Terwijl ik net geïnteresseerd ben in de ingenieusiteit van de mens: we construeren een stalen buis van tweehonderd meter, steken er een kernreactor in en we zijn voor drie maanden onder water. Dat we zoiets als mens kunnen bouwen, is ongelooflijk. Al het menselijke kunnen zit in die stalen buis vervat. Voor mij gaat het daar over.</p>
+<p><strong>HVC: Over wat wij als mens kunnen verwezenlijken?</strong></p>
+<p>SVP: Als ik naar mijn atelier wandel, ben ik nog elke dag verbaasd over in welke wereld wij leven. Het heeft mankementen, je kan er veel over zeggen, maar het alternatief, waar wij vandaan komen – de wilde natuur en diens natuurwetten – wil niemand meer. Alle infrastructuur die we tegenkomen, is gemaakt door onze voorgangers. Alles wat we zien, tot de onnozelste vijs om in de muur te draaien, is ooit door iemand ontworpen. En wij kunnen verder bouwen met die tools en infrastructuur die door hen zijn aangereikt. Wij kunnen van alles genieten!</p>
+<p>Als ik naar de huizen op straat kijk, of ze nu twintig of tweehonderd jaar oud zijn, ik blijf me telkens opnieuw verwonderen. Ik zie het niet noodzakelijk als een romantische ervaring, ik voel het aan als het leven dat tot mij komt: Wauw! Het werkt omdat iedereen op een bepaalde manier besliste om samen te werken en we onderling maar beter betrouwbaar zijn. Dat is wat het in de kern is. Als je systeem de facto corrupt is, kan je niet vooruit, op geen enkel gebied. Voor mij is dat een tandwielmachine: iets dat telkens vooruit gaat en alsmaar weer opgelapt wordt.</p>
+<p><strong>HVC: Wat er nu in de digitale wereld gebeurt, is op zich helemaal crazy. Toch heb jij een ‘manuele’ job, wat we bijna een ‘ambacht’ kunnen noemen. Als je het tot de kern brengt: je komt je atelier binnen en werkt verder aan wat er staat: de ene sculptuur moet worden afgewerkt, de tweede zet je op, een volgende moet worden afgegoten, een andere sculptuur moet worden geschilderd.</strong></p>
+<p>SVP: Dat klopt.</p>
+<p><strong>HVC: Jij bent nog niet op de kar van 3D-printing gesprongen, dacht ik, iets waar veel beeldhouwers toch al mee weg zijn.</strong></p>
+<p>SVP: Ik kan dat, ik leerde het allemaal. Ik vind dat belangrijk: hoe meer tools je beheert, hoe meer mogelijkheden je hebt. Het ding met 3D-printing is dat er lang werd gedacht: we gaan dat manuele vervangen. Maar op zich is het nog altijd het meest kosteneffectief om te boetseren met je handen. Toen het is doorgebroken, was ik al tien jaar bezig. Je hebt al een bepaalde ervaring. In de academie gebruiken ze dat nu al in het eerste jaar. Maar in mijn geval heeft het (nog) niet de mechanische eigenschappen die ik verlang om een sculptuur te kunnen maken.</p>
+<p><strong>HVC: Je prints zijn nochtans vooruitstrevend lijkt het, alsook geconcipieerd op de computer.</strong></p>
+<p>SVP: In 2015 was ik eigenlijk al een tijdje aan het bedenken dat ik wilde werken met foto’s van mijn beelden. Ik was bezig met knoerten van sculpturen die ik nog moest afgieten. Ik werk rond snelheid en dynamiek, maar moest maanden aan één en hetzelfde beeld werken, daarna nog een mal maken, dat wéér weken duurt, en dat hing me ‘mijn voeten’ uit. Ik wilde er technisch gezien mee stoppen. Een vriend raadde me aan op foto’s te werken. Ik ben geen steengoede tekenaar, maar ik keek naar wat Rodin deed: ook hij werkte op foto’s van zijn eigen werk, omdat dit hem meer snelheid gaf. Toen was dat gloednieuwe technologie. En een goed idee is een goed idee, dus ging ik ermee aan de slag. Mijn beeldhouwwerken als foto werden losgetrokken van de context, maar die dynamiek bleef wel. Ik begon deze op aluminium platen te kleven, omdat dit een strak effect gaf. Dat aluminium maakt deel uit van het werk. Staal is een belangrijk segment van mijn werk, denk aan lassen enzo. Op een paar maanden tijd werden dat bijna abstracte composities met heel veel dynamiek. Dat was nog letterlijk geschilderd en gekleefd.</p>
+<p><strong>HVC: Ik luister verder…</strong></p>
+<p>SVP: In 2018 ging ik naar Zwitserland voor een project, en daar begon ik te tekenen op een tablet. Er zat altijd al een computernerd in mij. Die was slapende sinds mijn academietijd, maar kon eindelijk weer wakker worden! (lacht) Zo begon ik mijn laserdrawings uit te werken. Mijn atelier is bij momenten bijna een discotheek en ik ben dan met laserprojectors – die ik had gekocht om feesten mee te geven – op mijn sculpturen beginnen projecteren. Ik vond dat sterke beelden en bedacht me: ‘Als ik daar nu eens tekeningen probeer van te maken!’ Het waren foto’s van laserprojecties op die sculpturen. Het was ook maar een stap om een tekening te bekomen. Die foto’s worden dan bijgewerkt tot alles de juiste balans heeft. Dan teken ik erop met een speciale tekenlaag op mijn computer en gaat die foto weg, zodat alleen de tekening overblijft. Het is puur spektakel. Toch qua energie: het is feest!</p>
+<p><strong>HVC: Heb je die betrachting bij de kijker, dat ze blij worden van je werken?</strong></p>
+<p>SVP: Het is niet de bedoeling dat ze er somber van worden, nee.</p>
+<p><strong>HVC: Terwijl dat bij sommige kunstenaars net wél de bedoeling is.</strong></p>
+<p>SVP: Dat is niet de catharsis die ik nastreef. Het is meer: ik bied je een dynamische opzwepende energie aan, en lust je dat niet, even goede vrienden. Maar alle andere motieven van mijn collega’s zijn even geldig.</p>
+<p><strong>HVC: Zoek je dat soort dynamieken ook op in het werk van andere kunstenaars?</strong></p>
+<p>SVP: Ik kijk zelf eerder naar de Schone Kunsten. Ik kan enorm genieten van de zelfportretten van Rembrandt. Ik weet Rubens te appreciëren, hou ervan naar Het Lam Gods te gaan kijken, etc.</p>
+<p><strong>HVC: En kijken van: hoe is dat gemaakt?</strong></p>
+<p>SVP: Ik vind vakkundigheid heel waardevol, al vind ik dat je ook rock’n’roll moet kunnen zijn. Ik vind bijvoorbeeld Basquait heel goed. Ik kijk daarnaar, maar kan het gewoonweg niet vatten. Het enige wat je kan doen, is aan jezelf toegeven: zo goed zal ik waarschijnlijk nooit worden. Oké, tot daaraantoe. Dus geef je jezelf over aan dat kunstwerk. En na twee uur kom je buiten, ben je geïnspireerd en heb je zelf weer goesting om te ‘maken’. Of denk aan Lucian Freud! Fantastisch!</p>
+<p><strong>HVC: Je laat de kijker graag verstommen. Je bent heel gedreven, werkt twaalf uur per dag in je atelier in Nucleo.</strong></p>
+<p><strong>HVC: Wanneer bepaal je: dit werk is klaar? Hang je het een tijdje op in je toonruimte om het te laten chambreren?</strong></p>
+<p>SVP: Die vraag wordt telkens anders beantwoord hoe verder je vordert in je carrière. Als je pas van school komt, is dat moeilijker. Na dertien jaar te zijn afgestudeerd, weet ik ongeveer wanneer iets af zal zijn. Met nieuwe creaties weet je dat niet, maar met een duikboot wéét ik gewoon wanneer het zal eindigen. Ik kan daar een tijd op kleven. Zelfs als ik niet weet hoe het er uit zal zien.</p>
+<p><strong>HVC: Je kan een kunstwerk ook doodwerken.</strong></p>
+<p>SVP: Ik ken mijn technisch kunnen. Ik doe het met de middelen die ik heb, wat eveneens heeft te maken met het resultaat van je professionalisme: je bent de schepper, maar als je het na tien jaar dagelijks doorwerken nog niet ziet, denk ik dat je een probleem hebt. Het zotte is dat je het bij grote projecten soms totaal niet weet. Je weet alleen: binnen drie weken moet het af. Het is daarnaast ook een gevoel. In de muziek die ik maak is dat anders: omdat dat een kundigheid is die ik nog maar zes jaar aan het leren ben.</p>
+<p><strong>HVC: Vanwaar die drive? Je bent extreem bezig met je vak, hebt een enorm doorzettingsvermogen. Ik zou bijna denken dat je ’s avonds een Excel lijst maakt met je planning voor de dag erop.</strong></p>
+<p>SVP: (lacht) Zo extreem is het nu ook niet, Hilde. Ik kom elke dag naar hier, er is altijd werk. Ik drijf vooral op intuïtie. Voel ik me een dag minder lekker, kan ik nog steeds een duikboot boetseren, dat maakt me altijd blij.</p>
+<p><strong>HVC: Wanneer zal het ‘thema’ uitgeput zijn, denk je?</strong></p>
+<p>SVP: Zolang ik nog potentieel voel om het uit te werken, blijf ik het maken. Ook de duikboten, dat vindt zoveel wegen naar mensen thuis.</p>
+<p><strong>HVC: Als een sculptuur vertrekt, voel je daar ‘pijn’ van?</strong></p>
+<p>SVP: De artist proof blijft bij mij, voor altijd. Als er iets buiten gaat, zie ik nieuwe mogelijkheden om alles te laten groeien. Daarom ligt mijn grootste investering steeds in mijn arbeidsvreugde: dat je met die middelen en met die wil en zonder frustratie kan werken.</p>
+<p><strong>HVC: Je gaat veel op residentie…</strong></p>
+<p>SVP: Een residentie is echt een hoogtestage. Als ik hier in Gent een werk construeer, moet dat technisch goed gemaakt zijn. Als je dat stockeert, moet dat als je bijvoorbeeld een vochtig atelier hebt, tegen vocht kunnen, etc. Mensen betalen veel geld voor een kunstwerk, dan moet je technische kwaliteit leveren. Op een residentie creëer je werk puur voor ontwikkeling, niet voor verkoop. In Hongkong had ik eens 23 dagen om een volledige show in elkaar te steken. Ik had niks mee. Je werkt wel samen met een organisatie, maar je moet het natuurlijk nog uitvoeren. Het is die stress die ervoor zorgt dat je van alles ontdekt. Ik gebruik de stad altijd als bron van inspiratie en werk met middelen van die stad. Ik ga meestal aan de slag met gevonden, snelle en betaalbare materialen. Dan moet je je afvragen: ga je dat als verloren beschouwen of niet? Een douane kan niet echt lachen als je iets meeneemt naar België dat er wat speciaal uitziet. (knipoogt)</p>
+<p><strong>HVC: Voor het Museum in Menen werkte je voor de tentoonstelling Het Voorstel, een Biënnale van ideeën (curator Hans Martens) een sculptuur uit.</strong></p>
+<p>SVP: Fremdkörper was een buitenbeeld, een duikboottoren op ware grootte. De toeschouwers hadden steeds het gevoel dat de rest van de duikboot onder de grond stak. Hun verbeelding maakte het werk af. Maar een groot werk kan maar beperkt getoond worden.</p>
+<p><strong>HVC: Je wil je praktijk in de hoogte en breedte zien groeien, telkens meer kansen krijgen… Waar zie je je binnen enkele jaren ‘staan’.</strong></p>
+<p>SVP: Ik zie niet veel: ik denk in systemen, niet in doelen. Mijn systeem moet goed zijn, dat is het belangrijkste. Anderen zouden dat ‘de weg’ noemen. Je gaat een richting uit en je moet blijven gaan. En als je op je bakkes valt, kruip je weer recht. Je verbetert jezelf door te mislukken..</p>
+<p><strong>HVC: Wat kan in jouw ogen falen zijn?</strong></p>
+<p>SVP: Dat kan van alles zijn. Je falen als mens. En hoe je je mislukkingen en fouten – repareert. Het is zo dat we elkaar beoordelen. Niet omdat we alles juist doen, we kijken naar hoe we het repareren. Ik ben me bewust van een aantal dingen. Ik zit bijvoorbeeld niet in de trend van het moment, het gaat wat trager bij mij.</p>
+<p><strong>HVC: Vind je dat je bij de hedendaagse kunstscene hoort? Voel je je een medespeler in die kunst?</strong></p>
+<p>SVP: Zeker. Je moet weten, ik ben in 2010 afgestudeerd met een hele figuratieve spacebattle van ruimteschepen die elkaar aanvallen, maar we zaten toen in een volle conceptuele periode. Als je niet in de trend zit, gaat het op dat moment – maar niet op lange termijn – trager. Wat op zich geen probleem is. Bij ons in de streek hadden ze de uitspraak: ‘Een feestje bouw je zelf.’ Maar als de mensen de weg vinden naar mij, zijn ze altijd super enthousiast.</p>
+<p><strong>HVC: Het is sowieso geven en nemen. Je geeft heel wat offers qua tijd. Eigenlijk ben je wel graag onder de mensen, terwijl je een heel alleene baan hebt. Je bent hier van 9 uur ‘s ochtends tot 9 uur ’s avonds, élke dag.</strong></p>
+<p>SVP: Ik ben graag onder de mensen, ik zie ze heel graag. Al kan ik goed op mezelf zijn. Trouwens, we zitten hier met de kunstenaars van Nucleo, in een gemeenschap. We komen op onszelf werken, maar op onze ‘koer ‘is er veel dialoog. Ik ben verre van een kluizenaar.</p>
+<p><strong>HVC: Veel kunstenaars rijden effectief elke dag naar een atelier, waar ze vervolgens alleen zitten met hun werk. Wat zou je kunstenaarschap nog kunnen verbeteren?</strong></p>
+<p>SVP: Voor mij moet altijd alles mogelijk zijn op alle vlakken. Het moet zelfs niet noodzakelijk in de kunst zijn.</p>
+<p><strong>HVC: Beste Simon, laten we het even over AI hebben. Je hebt je – zoals zovelen je voorgingen – eveneens op Artificiële Intelligentie ‘gesmeten’. Wat vind je daar zo boeiend aan?</strong></p>
+<p>SVP: Bij mij is het zoals bij de meesten: ik begon in februari met chatGTP te gebruiken. Ik merkte onmiddellijk dat dit een krachtigheid gaf die ik nog nooit zag. Toch zeker als je het gebruikt voor wat je het moet gebruiken. Sommigen zeggen: ‘Het stelt niet veel voor’, tot ik vraag waarvoor ze het hebben gebruikt. Om politieke vragen te beantwoorden? Om een waarheid te achterhalen? Dat zijn twee dingen die je net niet mag doen. Omdat het daar niet voor gemaakt is. Maar zoals we het nu kennen, als taalverbeteraar bijvoorbeeld, is het waanzinnig! Je vraagt hem iets en hij voert het uit. Bijvoorbeeld: ‘Schrijf mij een volledige tekst in eerste persoon uit onderstaande informatie.’</p>
+<p>Ideaal voor mensen die veel ideeën hebben, ze kunnen veel insteken geven. En AI maakt daar een coherente tekst van. Je kan hem zelfs vragen de tekst Shakespeareaans te maken!</p>
+<p><strong>HVC: Potverdorie, wat zit ik hier ganse dagen mijn tijd te verliezen? Kan ik bijvoorbeeld mijn opneembandje ingeven van ons gesproken interview?</strong></p>
+<p>SVP: In beperkte mate, misschien in paragrafen, dit omdat het vrij lang is. Ik gebruik het heel veel voor allerhande woordkwesties. Maar dat is AI dat in een server zit.</p>
+<p>Er is eigenlijk een versnelling gebeurd: de mensen kregen toegang in december 22, maar in februari 23 behaalde het een echte boost. Ze waren dat systeem al jaren aan het trainen aan bedragen van honderdduizenden euro’s kostprijs per dag, puur om het te trainen. Je zit daar met zodanig veel kost en ontwikkeling die op één dag beschikbaar komt. Ze kregen een klap van: ‘Wow, wat is dit hier?’ Dat was ongezien! En iedereen dacht dat dit zo snel zou blijven gaan. Ik begon te kijken naar de AI’s die beelden maken, en daarin heb je enkele grote spelers. Daar kan je bijvoorbeeld ingeven: ‘Maak een stoomtrein, laat die door de bossen rijden, zorgt dat het eruitziet alsof het gefotografeerd wordt door iemand die de Magnumprijs heeft gewonnen.’ Et voilà, dat maakt hij dan.</p>
+<p><strong>HVC: On-ge-loof-lijk!</strong></p>
+<p>SVP: We moeten allemaal mee, of je het nu goed of slecht vindt. Negeren is geen optie meer. De kracht is ongezien, maar het gaat deel uitmaken van wie we zijn. Daarom ben ik op de kar gesprongen. Vanaf ik doorhad hoe krachtig het was, heb ik beslist om zelf artificiële intelligentiemodellen te trainen op m’n beeldhouwwerken. Zo heb ik het mezelf geleerd.</p>
+<p><strong>HVC: Amai! Er was ook een hele tijd sprake van NFT’s in de kunst. Kan je daar iets over vertellen?</strong></p>
+<p>SVP: Dat zijn twee totaal verschillende dingen. NFT’s steunen op de Blockchain die afhankelijk is van het internet. AI werkt met een Neuraal netwerk dat niet noodzakelijk afhankelijk is van het internet.</p>
+<p><strong>HVC: Ach zo!</strong></p>
+<p>SVP: Voor het maken van neurale netwerken hebben ze gekeken hoe de contactpunten van het brein werken en hoe die doorverwijzen. Door dit na te apen werkte dat. Maar als je het vaak gebruikt, begin je ook aan je eigen werkelijkheid te twijfelen natuurlijk. Zoals we AI nu kennen, is het een hypergeavanceerde filter- en voorspellingsmachine, maar met een kracht die ongezien is.</p>
+<p><strong>HVC: Ik vind het toch allemaal griezelig. Ik kom op ateliers van kunstenaars, waar ze nog letterlijk met hun handen in de materie zitten, het lijken zo twee verschillende werelden! Ook jij wroet meestal ‘gewoonweg’ in klei, als ik het zo mag uitdrukken.</strong></p>
+<p><strong>HVC: Voor het Nodenaysteen in Gent ben je een paar werken aan het maken met artificiële intelligentie. Leunen deze zowel vormelijk als inhoudelijk aan tegen wat we kennen uit je oeuvre?</strong></p>
+<p>SVP: Het was gewoon vanaf ik die power doorhad, dat ik besefte dat ik het zelf moest maken. Wat ik eigenlijk doe is een artificieel intelligentiemodel trainen: Ik leer het mijn beeldhouwwerken kennen. Het is de bedoeling dat mijn volledige oeuvre tot leven komt in de AI. AI moet er zijn eigen ding van maken. Je download een model en daaruit kun je alles verwerven: je haalt er personen uit, treinen, de kosmos, een zwart gat, en dat is bijvoorbeeld getraind op wat een zwart gat zou kunnen zijn. Maar ik dacht: moest ik daar nu eens mijn duikboten binnensmijten en ik laat deze verschillende avonturen beleven in de kosmos? Dat was mijn idee.</p>
+<p>Wanneer je beelden maakt met AI, en vooral met je eigen modellen, zijn er veel dingen die er niet horen en die mislopen. Maar dat is als artiest heel interessant. Je steekt daar bijvoorbeeld een duikboot in, maar als je niet oplet, zal hij alle bestaande duikboten en andere onderwerpen beginnen beïnvloeden met mijn vormentaal.</p>
+<p>AI werkt met onderwerpen. En mijn beelden kunnen die onderwerpen beïnvloeden. Die duikboten zijn geboetseerd door mij, maar je vraagt een appel en er komt een appel uit alsof die door mij is geboetseerd. AI maakt constant fouten, want het weet niet dat het een duikboot is. Het beeldend resultaat is eigenlijk een voorspelling die hij maakt aan de hand van jouw vraagstelling. Zorgen dat AI mijn beelden leert kennen en de vormentaal kan toepassen op totaal andere zaken, is wat we in het jargon ‘trainen’ noemen.</p>
+<p>Wat ik eigenlijk doe, is mijn AI proces sandwichen in mijn analoog proces. Dan genereer ik afbeeldingen en daar werk ik op verder met een digitale tekenpen. Dat was aanvankelijk ook mijn opzet. Dit wordt een tool die tot mijn beschikking staat, dus ik wilde leren en leren. Hoe meer je er mee werkt, hoe meer je leert. Mijn grootste vrees – het ontbreken van persoonlijkheid – is opgelost geraakt, want je kan er een artistieke taal mee maken die eigen is.</p>
+<p><strong>HVC: Wat zal er ‘anders’ zijn aan je AI expo die we in oktober in het Nodenaysteen in Gent te zien krijgen? Het Nodenaysteen is een nieuw kunstplatform met als doel kunst te tonen die de link legt tussen analoog en digitaal.</strong></p>
+<p>SVP: Ik toon er tekeningen die ik met de hand maakte, maar op de resultaten van AI. De tentoonstelling heet AI Universe. Het zal het begin zijn van wat we allemaal kunnen doen. Het is het begin van de AI reis. Het gaat ook goed samen met het thema van de satellieten. We zijn ze nog maar aan het uitsturen, dat is nog maar het begin van alles wat we moeten ontdekken van de oneindigheid. Voor mij is dat absoluut geen eindpunt, het is het begin. Het is een show die mensen moet overtuigen, maar evengoed een demonstratie. Ook van: ‘Schrik niet, hoe het nu is, staat het ons nog volledig ten dienste.’ Een van de dingen die ik leerde is: je kan er een vormentaal mee opbouwen, maar op voorwaarde dat je er iets in steekt dat al zinnig is. Vormelijk en thematisch zal het gesloten zijn. Zoals het bij mij is getraind op mijn beeldhouwwerken. Het heeft al persoonlijkheid an sich. Dus je moet al iets hebben. Dat is die vormentaal. De andere realisering die ik heb, is dat we de illusie nodig hebben dat het is gemaakt door een mens om ervan te kunnen genieten. Ik ben niet bezig met ‘vondstjes’. Dat zou betekenen dat je van triviale dingen afhankelijk bent om iets substansieels te bouwen. Wij doen toch meer?</p>
+<p>Wat je zal zien is een AI reis die sinds april is aangevat en waarin mijn beeldhouwwerken letterlijk in een nieuw universum worden getrokken.</p>
+<p><strong>HVC: Hopelijk vinden we ze even fascinerend als al het voorgaande dat je creëerde!</strong></p>
+<p>SVP: Daar heb ik alle vertrouwen in!</p>
+<p><strong>HVC: Ik ben benieuwd! (Knipoogt)</strong></p>
+<p>https://nodenaysteen.org</p>
+<p>https://www.studiovanparys.com/</p>
+<p>https://nucleo.be/</p>
+<p>Expo Nodenaysteen: van 28 okt tot 3 dec 23, van vrij tot zo. Predikherenlei 4A, 9000 Gent</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-10.jpg" alt=""></figure>
+<p>Volgende interviews: Marc Galle, Francis Vanhee, Aaron Willem, Stephanie Gildemyn,…</p></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/simon-van-parys.html">Kunstenaar: Simon Van Parys →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="../expo/index.html">Tentoonstellingen</a></li>
+<li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="../publicaties.html">Publicaties</a></li>
+<li><a href="../collectie.html">Collectie</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="../bezoek.html">Bezoek</a></li>
+<li><a href="../over.html">Over</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode ondersteunt actuele artistieke praktijken die hun oorsprong vinden in onderzoek, proces en overdracht.</span></div></div></footer>
+</body></html>

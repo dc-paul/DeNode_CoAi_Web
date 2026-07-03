@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview with Lee Ranaldo (2) — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-lee-ranaldo-2.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/artikel/interview-lee-ranaldo-2.html">FR</a></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview with Lee Ranaldo (2)</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2018-11-02</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview with <a href="../kunstenaar/lee-ranaldo.html">Lee Ranaldo</a> (2)</h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">AI translation</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p><strong>Hilde Van Canneyt (HVC): Interview (Engels) met Lee Ranaldo (1956), New York, VS, June 18 Interview naar aanleiding van het tijdschrift d'ACADEMIE 5 = Lee's visie op kunsteducatie (ter bevordering van het Deeltijds Kunstonderwijs - verkrijgbaar in alle academies voor beeldende kunst in Vlaanderen)</strong></p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-01.jpg" alt=""></figure>
+<p><strong>HVC: A brief introduction to the New York artist, Lee Ranaldo: An art student back in 1976, became a member of the legendary no wave/noise band Sonic Youth in 1981. He played the guitar. Together with Thurston Moore, Kim Gordon and Steve Shelley he traveled around for thirty years. They conquered the world with their concerts, without making compromises. Their creative and challenging music inspired a whole new generation of musicians. HILDE: Since the beginning ‘images’ have always been very important for your music (or the music of Sonic Youth) - take the album cover artwork for example. If one would look closer into the album covers of the Sonic Youth back catalogue, one could find a lot of important artists: Gerhard Richter (Daydream Nation), Raymond Pettibon (Goo), Richard Prince (Sonic Nurse), Jeff Wall (The destroyed Room) and Mike Kelley (Dirty). What was the relation between the images and the music? LEE: We always wanted to find a visual corollary of the music. We didn’t want to be simple and put our faces on the cover, as is the norm. We thought that space – a 12” square image, back in those days, which was substantial – could be used more interestingly. Album covers through the years have always sought a relationship with the music within. As our influences were often from other genres outside music – especially visual art – so that’s where our eyes looked for inspiration. The mighty Sonic Youth broke up, does that mean you have more time for your visual art? Because you also tour with your band Lee Ranaldo and the Dust. And what is the link between your music and visual art now?</strong></p>
+<p>Lee Ranaldo (LR): I’ve always kept up a bit of visual activity, but in the last decade I’ve tried to devote more time to it. I really do love making images. Lately I’ve found a couple subjects – records and roads – that have intrigued me consistently enough that I’ve been a little more active in pursuing them. My other visual outlet is Instagram – it’s the one social media form that has really grabbed me. I’m often obsessing over little 60-sec films for my feed!</p>
+<p><strong>HVC: Art, music and literature were around since you were a boy. Was culture in general a wandering spirit in the house then? Were your parents creative in some sort of way? Did you go to museums with your parents?</strong></p>
+<p>LR: Aside from records of all sorts that were around the house – Italian songs, big band, later pop and rock music – there was very little in the way of culture in my upbringing in regards to visual art or literature. My mom played classical piano, so there was always a piano and someone making music in the house. She was also a seamstress and there is a definite creative process there as well. I learned how to sew at an early age.</p>
+<p><strong>HVC: In Belgium, from 6 years on, children can go to 'the part-time art school'. It means: every Wednesday afternoon and Saturday, they can follow art classes. Almost every village offers a wide variety of educational possibilities in visual art, music, theater, … It's not a private initiative, it’s covered by the government. Have the kids in the USA (or New York) the same amount of possibilities?</strong></p>
+<p>LR: Yes we have after-school art classes and weekend classes and things like that in the US too! I dabbled in those classes but didn’t really get serious about working in visual art until I went to University and saw other students devoting their time to it. In Belgium, a 16 year old can go to the ‘high school art school’, or he/she can choose a regular high school education and choose for part-time classes in the evening art school. (about twelve hours a week)</p>
+<p><strong>HVC: Is that comparable to New York?</strong></p>
+<p>LR: Well, for instance, our younger son, who is 16 and a junior in high school, attends a specialized high school for music and art in New York City – once known as the “Fame” school (the school the movie is based on), it’s a place where children get both a traditional high school education and also study either visual arts, music, drama, theatre, etc. A very special environment for some kids! The majority here chooses to go to Art Academy once they’re 18, where they choose the ‘free arts’. Afterwards, after four years of study, when they have their degree. 70% of the students are picking up a one year education 'teaching in arts'. It's quite a heavy program. What about art students in New York? What are their possibilities? Are they as the cliché says: most become waiters and waitresses?</p>
+<p>LR: Yes, haha, most become waiters or something like that, to earn money while pursuing their craft. That’s true for any cultural workers-to-be – I guess you can train to teach art and then teach right out of school, but for those wanting to MAKE art – literature, cinema, whatever – it’s normal to do some other work to support oneself. But these days art schools are churning out artists at a phenomenal rate – “professionally trained” artists by the thousands, who are all trying to make their way in the world, and get someone to notice their work.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-02.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-05.jpg" alt=""></figure></div>
+<p><strong>HVC: Since your 20-ties, you were making drawings of the passing landscapes, on the dashboard of a friend’s van. This later became your well-known Lost Highway series. Do you have a main goal, a reason (big or small) for drawing these landscapes? Do you want to tell a story or pass along a message? Because they stay, till today, an inexhaustible inspiration source.</strong></p>
+<p>LR: I’m looking for some basic, inherent forms and also looking for a reason to put marks on papers. It’s as simple as that. For many years I kept written journals on the road, and some of these writings were turned into books along the way. These days I’m more keeping a visual journal of the many highways I find myself on. There is a zen quality to the work – the road is moving, changing – always different yet always the same. I’m hoping the forms I see in the landscape can be translated into something visceral on the page. It keeps me engaged on the many long drives that are part of every musician’s life. And the road imagery – in stories and song – is so full of metaphor.</p>
+<p><strong>HVC: How does your white sheet come alive? You compared it with a free music concert, as pure improvisatory creations. I think it’s pure concentration... LEE: The drawings usually start with a few quick gestures. In the best moments I am keyed up like an athlete before a race, focused and able in 10 or 20 seconds to catch the structure of the landscape in front of me, before it shifts. So the drawings usually start with a burst of energy and fast marking. After that it’s a process of responding to and refining what’s on the page, and grabbing new information from the landscape as we round the next turn and it’s shifted in front of us. For awhile I was trying to make the drawings ‘more precise’ and now I’m trying to make them sloppier, more messy, to see what might happen.</strong></p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-06.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-07.jpg" alt=""></figure></div>
+<p><strong>HVC: I personally really like your relief rolls of scratched vinyls … and also your relief constellation drawings you need to print. You must do those in an atelier. That is a completely different thing – a different kind of concentration - than your on the road drawings ...</strong></p>
+<p>LR: Working on the drypoint record prints – collectively called Black Noise – has been a way for me to keep up a printmaking practice that began in my university days. I love the process of printmaking so much. To do this work requires access to an atelier or ‘shop’ with the presses, acid baths, etc. to do this work. I’ve gone for long periods of time without access to such places, but I’ve sought them out when I have been able, and have done residences in print shops in Paris and Nice, France and Halifax, Nova Scotia. Lately I’ve found a print shop in New York City where I’ve been making my latest prints. The markings are jagged and gestural, scratched into old vinyl records of varying sizes, thereby ‘drypoint’ – without need of acid or chemicals to process what is usually a metal plate in the Intaglio process. I’m making small editions of these prints, usually no more than 10 in an edition, and experimenting with the inking process as well.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-08.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-09.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-10.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-11.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-12.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-13.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-14.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-15.jpg" alt=""></figure></div>
+<p><strong>HVC: views museum 't schippershof , Menen + galerie Jan Dhaese, Gent From the calm of a piece of drawing to the noise and restlessness of the guitar and rock ‘n’ roll, it seems there is a huge gap of dynamics between those two activities. Also: music, except composing, is a social collaborative given. How do you feel about this paradox. What is the big difference (if there is one for you) between a pencil and a guitar?</strong></p>
+<p><strong>HVC: The link with music/rock ‘n’ roll is felt everywhere, is that a conscious decision or can you simply not hide the true nature of the artist?</strong></p>
+<p>LR: Whether is visual realm, literary, filmic or music, the idea is to access some area of creativity in one’s self and make it manifest. The sensibility is the same – mine – whether I have an electric guitar and an amplifier, or a drawing in front of me, whether a new music ensemble playing my composition or a short film on Instagram, the sensibility on display is mine. The thought process – the creative process – is mine.</p>
+<p><strong>HVC: There were two parallel exhibitions last winter in Belgium, I went to both of them. You had a major retrospective in the museum of Menen, curated by Jan van Woensel, the other show was at the Jan Dhaese gallery in Ghent. The raw noise and rock ‘n’ roll is reflected in your work … How was it to see forty years of your own visual art in one exhibition in Menen? 40 years of memories … Did you see a common thread? A recurring universal theme throughout your work over those years? And of course, everybody could see you love the guitar. (wink) LEE: It was great to have both shows almost simultaneously. One showing the work I’ve been doing over the last year or so – at Jan Dhaese Galerie – with the records and the roads, and the other in Menen where I could see for the first time works from many different periods – stretching back 30 years to my early days working in New York City. It was very interesting to see all of these things together. I put much more of my energy over this period into music than I did into visual art, but I still managed to come up with some things that I was happy to see again, on exhibit. No LEE-exhibition without written texts on a mural. Do you see them as something complementary to the artworks, do they stand alone or as an extra message? (Social/political for example)</strong></p>
+<p>LR: The texts bind everything together – they bring the visual art in line with literary tendencies and with song lyrics and therefore the music activity. I like seeing the words, visuals and sounds all interacting and informing each other.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-16.jpg" alt=""></figure>
+<p><strong>HVC: Next to the exhibitions, there was a successful 'Lee Ranaldo noise event'. You even organized a ‘musical procession’?</strong></p>
+<p>LR: The ‘procession’ was the recreation of a work from 2006 called Shibuya Displacement. A ‘sound walk’ taking the sound environment of one location – in this case the platform sounds of the Shibuya Prefecture train station in Tokyo, Japan, and transporting it to a new location. We did march through the streets in Menen and across the border into France at one point, displacing the local sound environment with a new one, from another location. A sort of science fiction experiment! It also made for a nice afternoon parade with a very nice group of people! Meantime, at the gallery, we saw work from the last months, with the original title (cough) New works. Some weren’t even dry. Was it another feeling being surrounded by new work? Did you see your own progression from the last years? LEE: The new works in the show felt in some ways quite transitional to me. The roads and records and rock portraits all came together around the same time, and I’m pushing already further ahead with all these subjects. I think the evolution over the coming year or two will be very interesting.</p>
+<p><strong>HVC: Your wife, Leah Singer, is also a visual artist, specialised in films. Are you stimulating each other? Is she your hardest critic?</strong></p>
+<p><strong>HVC: You follow the fresh artblood that undoubtedly runs in New York/USA? LEE: New York is a very creative and inspiring place to be. There is always some new stimulus. Yes, Leah often sees my work and offers her opinion first, and of course we continue to work together on performances as well.</strong></p>
+<p><strong>HVC: Which American artists should we discover?</strong></p>
+<p>LR: Haha – you’ll have to find them for yourself!</p>
+<p><strong>HVC:</strong></p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-17.jpg" alt=""></figure>
+<p>www.leeranaldo.be www.jandhaese.com</p></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/lee-ranaldo.html">Artist: Lee Ranaldo →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Discover</h4><ul class="fnav">
+<li><a href="../expo/index.html">Exhibitions</a></li>
+<li><a href="../kunstenaar/index.html">Artists</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Involved</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visit</a></li>
+<li><a href="../over.html">About</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
+</body></html>

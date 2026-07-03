@@ -1,0 +1,197 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview with Johan De Wilde — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-johan-de-wilde.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/index.html">FR</a></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview with Johan De Wilde</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2010-07-12</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview with <a href="../kunstenaar/johan-de-wilde.html">Johan De Wilde</a></h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">AI translation</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Ghent, January 29, 2009.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-01.jpg" alt=""></figure>
+<p>Johan De Wilde (1964) welcomes me to his studio near the Dr. Guislain Museum. He creates drawings about the large and small movements that intersect his life. His drawings are subtle fine gems that require some effort from the viewer. Once you dare to venture into his universe, it only becomes more interesting. He makes his drawings with a lot of pleasure, but not for his own enjoyment…</p>
+<p><strong>Hilde Van Canneyt (HVC): Hello Johan, let's start with some quotes from your book 'Particles'. This way, you can clarify your vision of your work to the reader. But perhaps I should first ask you what the purpose of your Crox book was.</strong></p>
+<p>Johan De Wilde (JDW): As you can read on the last page of my book, my texts arise in the periphery of my drawings. Drawings that I make at the work table where you are now sitting, my biotope if you will. You could say that I enter a state of concentration.</p>
+<p>When I create a drawing, the intention is for that drawing to evoke as many other images as possible in the viewer, because the drawing could be a summary of many images that I have carried with me my entire life. A possible condensation that results in a drawing. The drawing emerges as a result of a long process with various stages. It flows from a kind of funnel that channels and brings together diverse impressions. The intention is that the viewer has some work to do; it is not just a print.</p>
+<p>In my book Particles, I did the same: I inserted images that could connect with those texts, so that possible connections arise. Because from those connections, other images emerge. For me, that is what art is about: the continual re-filling of images. If images are not filled in, they lose their right to exist.</p>
+<p>Let's highlight some statements from your book.</p>
+<p>Your first sentence reads: A STORY THAT HESITATES SOMEWHERE.</p>
+<p>De Wilde: In case you suspect me of wanting to impose a narrative structure on my work, I would like to clarify that each drawing may be based on my biography, but that it plays no further role. The way you do something is important, the style with which you approach things and the attention you give to them. Throughout art history, you see that art is about this, because no new themes really emerge: all themes are already there, and all images have been touched upon before. It’s about the same things, but they are filled in differently each time. Let’s say that life is held together with hooks and eyes. If you are susceptible to the explosion of images, it can simultaneously become a kind of hell because you are constantly aware of it. I try to evoke a perspective on life in an attempt to deal with it.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-02.jpg" alt=""></figure>
+<p>EVERYTHING IS WHITE. AGAINST THIS WHITE LIGHT, I FORM AN IMAGE.</p>
+<p>De Wilde: White is important because it is an abstract concept. But white is also the color that contains all other colors. On a philosophical level, that is also the case; you then speak of possibilities, of how things could present themselves. That perfectly aligns with what I want to do through my drawings: I present an image and I expect the viewer to derive other images from it, depending on his/her baggage, background, and construction. The core idea is that I have nothing to do with it and cannot have anything to do with it. The new images that present themselves to the viewer are a very personal matter. As a result, the copyright of my images lies with the viewer. That image only exists when it is filled in, just as I as a person only exist when someone speaks about me. I find that an interesting starting point because from that perspective, I can continue to question much.</p>
+<p>A BLACK BALL WITH IMAGINATION BEHIND IT.</p>
+<p>De Wilde: I had drawn a blue circle in a black field and as a pendant, a black circle in a blue field. On a figurative level, that could represent a pupil in an eye with imagination behind it, or just as well a hopeless planet. The drawing works introspectively on one hand, and on the other hand, it refers to the infinity that we like to look at but which – the more I think about it – may not even be that important.</p>
+<p>AN A-NOSTALGIC COLLECTION OF MOMENT CAPTURES, AN INVENTORY OF AWAKENINGS.</p>
+<p>De Wilde: My patient slow way of working – the thousands of lines I draw – can be seen as an attempt to inventory the things that surround me. They work hand in hand because that slow way of working allows thoughts and images the time to find their way and culminate in a report that invites the formation of other images. By a-nostalgic, I mean that while I do draw elements from the past for the work I create, it is based on a possibility.</p>
+<p>IDEAL EXHIBITION: THE IMAGINATION OF ALL THE PEOPLE TO WHOM I SHOW THE WORDS 'DEATH', 'LIFE', 'STEAK', 'TOOTHPASTE', 'KUALA LUMPUR'…</p>
+<p>De Wilde: That is the ideal exhibition because it arises in the minds of those people, almost an invisible exhibition. When I say the word steak, you immediately have an image of it. I can approximate how that image looks, but I cannot know it very precisely. Those associations that the viewer makes are very important to me. In that sense, I give away a lot, but you have to be willing to invest something for it.</p>
+<p>INSPIRATION DOES NOT EXIST; RATHER CALL THE AWAKENING AN INCREASED STATE OF READINESS.</p>
+<p>De Wilde: Increased state of readiness is a clear description; that’s what it’s about. Inspiration is a mushy, unclear, contentless, worn-out word. Creating visual work is about concentration, making decisions. I constantly have problems with reality, also with how it translates into words.</p>
+<p><strong>HVC: On November 20, 2008, you recited a text in a video at the North Sea on the occasion of your solo exhibition 'L’Oiseau Blanc' at PocketRoom in Antwerp. Where did this idea come from?</strong></p>
+<p>De Wilde: It is a recurring initiative from Pocketroom itself. Instead of making a video in my studio, I wanted a filmed image of myself by the sea, on the beach, hence.</p>
+<p>(check: www.pocketroom.be)</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-03.jpg" alt=""></figure>
+<p>The text collection that accompanies your exhibition is the text you spoke by the sea. In it, we read: THERE IS A LOT TO EXPLAIN REGARDING MY WORK, ONLY THERE IS NOTHING TO EXPLAIN ABOUT MY WORK. De Wilde: The eternal 'why' question. Questions about, for example, 'my' technique have little meaning; they don't get you anywhere. I do create a work for a specific reason, but there is only something to say about the ideas I relate to it. I make that work solely for myself, and I do it with a lot of pleasure, but not for my pleasure. For my pleasure, I would rather stroll around in Rimini. But the work is apparently more compelling.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-04.jpg" alt=""></figure>
+<p><strong>HVC: IS IT NOT ANNOYING THAT I ALREADY KNOW WHAT THE FINAL IMAGE WILL LOOK LIKE?</strong></p>
+<p>De Wilde: Usually, I have a pretty good idea of how the image will look. I want to refer to how my images actually come into being. Compare it to rainwater that seeps quietly through the ground. A funnel forms – a long process – and eventually, a drawing presents itself. But then it still needs to be seen whether the image matches what I had in mind and whether my image meets a number of other criteria that I have set for myself. Ultimately, during the drawing process, a sea of sensations and feelings flows, very emotional things that try to unite with my rigid way of working. Those two are constantly in a pleasant conflict with each other.</p>
+<p>I WANT TO AFFECT THE ACCEPTABLE OR UNACCEPTABLE REALITY BY MAKING IT MY OWN</p>
+<p>De Wilde: I have a problem with reality. Through a kind of cubism applied to my own life, I can keep turning things around so that they present themselves in different ways depending on the context in which I place them. For example, in the drawings from the exhibition 'Trigger' at the OneTwentygallery, I have viewed some figures from various angles and attached a shadow to them that I consider just as important as the figure itself. In this way, I touch that reality, I kind of caress it.</p>
+<p>You touch a hint of reality on paper…</p>
+<p>De Wilde: Don't get too poetic, Hilde, or it will get tricky…</p>
+<p>THE MOST FIGURATIVE IMAGE CAN AT THE SAME TIME BE THE MOST ABSTRACT. IN REALITY, THEY FORM AN ILLUSION</p>
+<p>De Wilde: How certain can you be about things? Let's take the recent baby murder as an example; that is unbelievably abstract. So much concretization in one particular place that has such impact and consequences. Countless lives are involved in that death. Knowing what people are capable of, the suggestive power of things, that is what my work is about.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-05.jpg" alt=""></figure>
+<p><strong>HVC: How did you conceive the exhibition 'L’Oiseau Blanc' at the Pocketroom gallery in Antwerp?</strong></p>
+<p>De Wilde: L’Oiseau Blanc is an example of how reality can be distorted. In the collection that accompanies the exhibition, you see the front page of two French newspapers from 1927, which state in black and white that the pilots succeeded in their transatlantic flight with their biplane L’Oiseau Blanc. A lie, a story invented by the newspapers. That distortion fascinates me.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-06.jpg" alt=""></figure>
+<p>Among your subtle grid drawings, there hangs out of the blue a childishly drawn head, named Bert.</p>
+<p>De Wilde: Bert is there contemplatively; he observes 'the scene' a bit, let's call him an alter ego who looks with the necessary doubt at what is going on there.</p>
+<p>There is a series of gray drawings with seemingly undefinable spots on them at first glance.</p>
+<p>De Wilde: That is the beginning of a self-portrait that I have titled Ecce Homo. I offer a different figuration than one would expect. I am pleased that I receive the most diverse reactions from people who recognize all sorts of other things in it.</p>
+<p>On the outside of PocketRoom, we see a drawing hanging with the words: 'What will you be doing on October 30, 1994, around this time?'</p>
+<p>De Wilde: This work has a moralistic aspect. First, I turn the notion of time around and therefore took a very modest date. The distance that now separates us from 1994 seems large but is getting smaller and smaller. Ultimately, perhaps September 11, 2001, will remain, or the election of B. Obama. Those will then have to form the structure to which the rest of our time frame will be attached.</p>
+<p>We also see drawings at your exhibition with pierced holes 'drawn'…</p>
+<p>De Wilde: It will not escape anyone that those little holes are in braille. Together, they form the complete text of the Song of Songs from the Bible. Why am I now making a work with a reference to the Bible for the third time? The Bible has shaped Western history and art history like no other book. But the Bible has gained such a status that I want to tinker with it, in the sense that I use the Bible as a metaphor for our fundamental impossibility of communication with each other.</p>
+<p>How do I visualize that? By using reversed braille, making the text unreadable. We are fundamentally blind (and deaf).</p>
+<p>Through my slow way of working – which some call monk-like labor – I am part of the army of copyists, another link to (art) history.</p>
+<p>The viewer may also think of Fontana if he/she feels like it.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-07.jpg" alt=""></figure>
+<p><strong>HVC: On your website, you categorize your drawings into A4, A2, 50X50 cm. Why are those sizes so important to you?</strong></p>
+<p>De Wilde: The story of those sizes begins with the 50X50 size. I lived in Norway for a long time. At a certain point, I saw myself standing on a piece of melting snow of approximately 50X50 cm, and I realized that in that place, with all that loneliness around me, I occupy exactly that physical place in the world and that I look at the things surrounding me from there. At that moment, I decided to make that size my own. Gradually, that evolved into A4, because that is the most commonly used size in the world, and that fit as a successor. In the meantime, A2 has been added.</p>
+<p><strong>HVC: Back to your studio. You work incredibly hard and long on your drawings; you could call it hard labor. For whom or what do you find that necessary?</strong></p>
+<p>De Wilde: One: I find it necessary. Two: I have something to say.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-08.jpg" alt=""></figure>
+<p>You could also just do that verbally, without images, right? Because you are strong verbally.</p>
+<p>De Wilde: If I were to express what I have to say without those images, I might be writing a book. Apparently, it’s about something else. I am simply fascinated by the visual, and that seems to take precedence.</p>
+<p><strong>HVC: Your drawings are not about psychologically processing something? Drawing as therapy?</strong></p>
+<p>De Wilde: They have nothing to do with that.</p>
+<p><strong>HVC: Wouldn't it be clearer to people if you put what you want to tell us into written text?</strong></p>
+<p>De Wilde: It’s not about being clear; I don’t want to please anyone; I’m not bowing down. The fact that I’m not writing a book means that I want to express what I have to say in a different way. For example, I can make a drawing of the word ‘Oslo’. Then I ask myself what image the viewer forms of the city of Oslo. Those works might be the core of my work. Because they are about imagery that often cannot even exist at first glance. What arises in someone’s mind when looking? I think I am generous with the setups.</p>
+<p><strong>HVC: At first glance, your drawings seem like monochrome surfaces with a word or a small piece of image in them. They seem like suggestions, but in the meantime, you have spent hours drawing short and long lines to convey that to us. Why do you make it so difficult for us and for yourself? Why do you want to tell us in those layers?</strong></p>
+<p>De Wilde: The images I have in mind can only arise in that manner. It is important that they emerge in those layers. What I mean – and I fear it is difficult to explain – is that I consider the way of working as a medium. Most people see pencils as a medium; I view my approach and drawing – right down to the framing – as my medium.</p>
+<p><strong>HVC: But you just enjoy drawing those lines for hours?</strong></p>
+<p>De Wilde: Of course, I enjoy that because I love what I do. It is, of course, a solitary activity. I am not working on a theater piece; I do not receive applause. The few hours of a vernissage, the duration of actual contact with the viewer is negligible.</p>
+<p><strong>HVC: Is that action a drive or rather a task?</strong></p>
+<p>De Wilde: It is not a task.</p>
+<p><strong>HVC: Do you feel obligated to work, for example, six hours every day?</strong></p>
+<p>De Wilde: That's not an obligation, I just do it.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-johan-de-wilde/johan-de-wilde-09.jpg" alt=""></figure>
+<p>You studied graphics. On the day you graduated, what did you think? Now I am an artist!</p>
+<p><strong>HVC: De Wilde: Since I was young, I had the ambition to clarify things and bring them to people. Recognition has never been a real driving force; I mainly work for myself. I am now shifting a bit from the periphery to the center of 'the art world', but it is here in my studio that I ultimately sit and work. You have exhibited a lot, your works are being viewed, and people are picking up on it. If that hadn't been the case, you might have given up earlier, even though you know you have something to say. De Wilde: No way! You can't get a pin between that. The work is so strongly present in me that I want to do it that way and I do it that way. I have gone far in the past and have tested some boundaries. This has led me to certain conclusions for myself. I haven't rushed into it. At a certain point, I realized: I have this and that to say, and I am going to do it this way or that way. But in fact, I want to be as little of an artist as possible in the sense of the prototype image that people have of an artist. Why?</strong></p>
+<p><strong>HVC: De Wilde: Because I am not more tormented than anyone else in this world, for example. Of course, I am tormented, but that doesn't play a role in my work. Do you have someone in mind when you are working in your studio, someone you compare yourself to?</strong></p>
+<p>De Wilde: Yes, that could be someone like Andrei Rubliev from Andrei Tarkovsky, or Fra Angelico the fresco painter.</p>
+<p><strong>HVC: Do you follow the work of your colleagues?</strong></p>
+<p>De Wilde: As much as I can.</p>
+<p><strong>HVC: To see if you are still in touch with contemporary art or to see if what you make is contemporary art?</strong></p>
+<p><strong>HVC: De Wilde: I am not interested in whether I make contemporary art or not. Of course, I am, because I live now. But what interests me is what contemporary art is. Painting and drawing are said to be passé, right?</strong></p>
+<p><strong>HVC: De Wilde: That might be to keep the speculators busy. You either have something interesting to do or you don't, regardless of the material or technique. Any further dreams, prospects, ambitions?</strong></p>
+<p>De Wilde: Making my work! If I want to continuously create what I currently have in my head, I will be busy for at least three years. So you already know that you will spend more than 1000 days at this worktable making drawings that are already in your head and that you desperately want to show us? De Wilde: The broad outlines, yes…</p>
+<p><strong>HVC: These are not snapshots you are working on?</strong></p>
+<p><strong>HVC: De Wilde: In itself, yes, because the feeling is embedded in it; all the observations and feelings crystallize into one drawing. It has to do with the unceasing blending of feeling and reason. Is your studio your cocoon from which you perceive the world around you?</strong></p>
+<p>De Wilde: You need a place from which to view reality, and that happens to be my studio in Ghent.</p>
+<p>Much courage still, Johan.</p>
+<p>Hilde Van Canneyt, Copyright 2009.</p>
+<p>www.pocketroom.be www.johandewilde.be www.onetwenty.be Thanks to Croxhapox.</p>
+<p>--&gt; 10.10.2009 – 02.05.2010 Museum Dr. Guislain, Ghent (BE) From Memory. On Knowing and Forgetting Group show http://www.museumdrguislain.be/ 12.11.2009 – 30.06.2010 Orpheus Institute, Ghent (BE) Triadic Memories Solo show http://www.orpheusinstituut.be/en/seminars/exhibition-2009-2010 08.11.2009 – 07.02.2010 Z33 Center for Contemporary Art and Design, Hasselt (un)balanced Cabinet 'Relationships' Group show http://www.z33.be/blogs/verwantschappen-voorkamer 31.01.2010 – 21.03.2010 Galerie Tatjana Pieters, Ghent (BE) TIR Solo show http://www.tatjanapieters.com 05.02.2010 – 25.02.2010 Project Space 1646, The Hague (NL)</p>
+<p>About spoken, monsters, flesh spirits, and other crooked appearances Group show http://www.enter1646.com/ 07.03.2010 SMAK, Museum of Contemporary Art Ghent (BE) at 11 am: Presentation of Rens Oomens' documentary film about Johan De Wilde’s work. Book presentation 'So far, everything has been fine': letters from Johan De Wilde to Hans Theys (Published by SMAK)</p></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/johan-de-wilde.html">Artist: Johan De Wilde →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Discover</h4><ul class="fnav">
+<li><a href="../expo/index.html">Exhibitions</a></li>
+<li><a href="../kunstenaar/index.html">Artists</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Involved</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visit</a></li>
+<li><a href="../over.html">About</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
+</body></html>

@@ -23,6 +23,30 @@
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
 @media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
@@ -32,44 +56,73 @@
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">exhibitions · January 29, 2026</div>
-<h1 class="dn-h2" style="margin:10px 0 6px">John Robinson</h1>
+<h1 class="dn-h2" style="margin:10px 0 6px"><a href="../kunstenaar/john-robinson.html">John Robinson</a></h1>
 <div class="dn-serif-it" style="font-size:22px">People Ruin Paintings</div>
-<div class="dn-note" style="margin-top:12px">Stichting DeNode, Hanna Ouaziz</div>
+<div class="dn-note" style="margin-top:12px">Stichting DeNode, <a href="../over.html#hanna-ouaziz">Hanna Ouaziz</a></div>
 </div></section>
 <div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/images/blog-john-robinson.webp" alt=""></figure></div>
-<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3">Curatoriële tekst bij de tentoonstelling</h2>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="curatoriele-tekst-bij-de-tentoonstelling">Curatoriële tekst bij de tentoonstelling</h2>
 <p>Hij staat midden op een tafel, bedekt met een zwart doek. Ook hij is erin gewikkeld, vastgezet in zijn eigen enscenering. Telkens wanneer hij zich omdraait, blijft de stof haken en dreigt ze de tafel mee te sleuren. Het gebaar is onhandig, bijna potsierlijk. We lachen — een nerveuze lach.</p>
 <p>John Robinson trekt kaarten uit het tarotdeck en vraagt ieder van ons er drie te kiezen — het verleden, het heden, de toekomst. Hij spreekt onophoudelijk, gedragen door die onstuitbare, bijtende Engelse humor. Alles lijkt geïmproviseerd, absurd zelfs — en toch valt elk woord met een bijna meedogenloze precisie op zijn plaats. Wat hij blootlegt, snijdt tot op het bot: liefde, verraad, ontgoocheling, schaamte. Het publiek wankelt tussen vermaak en ongemak.</p>
 <p>Hij zweet, stuntelt, verliest zijn vorm terwijl slagroom naar hem wordt gegooid. Het zwarte doek raakt bevuild, de scène glijdt langzaam af naar chaos. En toch houdt iets stand. Iets onzichtbaars. Uit het belachelijke rijst een waarheid op: dat zeldzame moment waarop kunst ophoudt performance te zijn en eenvoudigweg menselijk wordt. Ik voelde tegelijk de opwelling om te lachen en een vreemde, zachte tederheid — het soort dat alleen ontstaat uit heldere moedeloosheid.</p>
 <p>Toen begreep ik: voor hem begint schilderkunst waar de performance bezwijkt. In het residu. In de chaos. Vanuit de onmogelijkheid iets anders te zijn dan schilder.</p>
 <p>John Robinson is geen schilder van overtuiging of schoonheid. Wat voor hem telt, is de daad van het schilderen zelf — een handeling ontdaan van moraal, geloof of troost. Hij heeft er alles aan opgeofferd: verleiding, logica, soms zelfs zijn verstand. Schilderen is voor hem geen verlossing, maar een vitale leugen die overleven mogelijk maakt, een noodzakelijke misleiding om in leven te blijven.</p>
-<figure class="dn-fig"><img src="/_assets/images/artikel/john-robinson/260122_John_Robinson_White_or_all_gacked_up_.webp" alt=""></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_White_or_all_gacked_up_.webp" alt=""></figure>
 <p>Zijn werk is oneerbiedig, maar nooit ironisch. Het ontwapent eerder dan dat het vermaakt. Hij maakt van zijn eigen tegenstrijdigheden een methode en transformeert zwakte tot helderheid. Alles buiten het schilderen — religie, moraal, empathie, rechtvaardigheid — is slechts surrogaat: een vervanging, een spookachtig residu dat rond de ware handeling cirkelt. Hij schildert vanuit die leegte, vanuit de plaats waar waarheid tegelijk onmogelijk en noodzakelijk is.</p>
 <p>De kunstenaar wordt illusionist én profeet, een groteske clown wiens podium zijn eigen ondergang is. Onder het zwarte doek, zwetend en bedekt met room, verbeeldt hij de farce die de wereld is — en uit die farce wordt het schilderij geboren.</p>
 <p>In de reeks <em>Hermits</em> — Courbet, Basquiat, Blake, Smiley — keert dezelfde figuur terug, nu zwijgend, frontaal, getransformeerd. Dit zijn geen eerbetonen maar incarnaties. Hij schildert zichzelf door anderen heen, vermomt zich om te kunnen spreken. Hij wordt Courbet de arbeider, Basquiat de martelaar, Blake de mysticus, Smiley de dwaas van de moderniteit. Elk portret is een bekentenis: een zelfportret van de bedrieger die verklaart: "Ik ben allen die liegen om te overleven."</p>
-<figure class="dn-fig"><img src="/_assets/images/artikel/john-robinson/260122_John_Robinson_2945.webp" alt=""></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_2945.webp" alt=""></figure>
 <p>De tarot wordt schilderkunst. Het lachen verstilt. Het onhandige gebaar wordt een icoon. De Hermits vormen een koor van gefragmenteerde identiteiten. Hun stilstand herinnert aan de Vlaamse altaarstukken, maar ontdaan van geloof — alleen vermoeidheid, volharding, uithoudingsvermogen blijven over. Het zijn heiligen van een omgekeerd geloof, getuigen van een kunst die niets belooft en toch weigert te verdwijnen.</p>
 <p>In andere cycli — <em>Seance</em>, <em>Tarot</em>, <em>Leviathan</em>, <em>The Woman</em> — zet dezelfde strijd zich voort. Het groteske en de vlek, zweet en residu, worden de substantie van het schilderen zelf. Wat op het podium druipt en instort, wordt op het doek een oppervlak van stille openbaring. Maar die rust is bedrieglijk. Elk werk draagt de chaos van zijn eigen wording in zich, de wanhoop van het gebaar dat eraan voorafging.</p>
-<figure class="dn-fig"><img src="/_assets/images/artikel/john-robinson/260122_John_Robinson_Courbet-Modern_Hermit.webp" alt=""></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_Courbet-Modern_Hermit.webp" alt=""></figure>
 <p>Dit is schilderkunst van de nasleep — na het lachen, na de schaamte, na de val.</p>
 <p>De tentoonstelling in Gent ontvouwt zich langs deze broze lijn tussen lach en genade. We betreden haar via de performance — het onhandige, komische lichaam — en bewegen richting schilderkunst, richting stilte, richting iets wat aan het sacrale raakt. Alles gebeurt op die rand: noch komisch, noch tragisch, noch gelovig, noch cynisch.</p>
 <p>De schoonheid van John Robinson schuilt precies in die onmogelijkheid te kiezen tussen het belachelijke en het goddelijke. Zijn doeken zijn moderne relieken: beladen oppervlakken van uithouding en uitputting. Hij schildert de ramp zoals anderen het licht.</p>
-<figure class="dn-fig"><img src="/_assets/images/artikel/john-robinson/260122_John_Robinson_f_lower_head.webp" alt=""></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_f_lower_head.webp" alt=""></figure>
 <p>En onder het zwarte doek, onder het gelach, onder de lagen room en stof, blijft hij koppig zoeken — niet naar waarheid, maar naar de mogelijkheid nog in leven te blijven.</p>
-<blockquote class="dn-quote">Curatoriële tekst door Hanna Ouaziz — DeNode Foundation, Gent, 2026</blockquote></div>
+<blockquote class="dn-quote">Curatoriële tekst door Hanna Ouaziz — Stichting DeNode, Gent, 2026</blockquote></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/people-ruin-paintings.html">Tentoonstellingen: People Ruin Paintings →</a></p>
+
 </div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
 <footer class="dn-footer"><div class="dn-wrap"><div class="cols">
 <div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
 <div><h4>Ontdek</h4><ul class="fnav">
 <li><a href="../expo/index.html">Tentoonstellingen</a></li>
 <li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
 <li><a href="../publicaties.html">Publicaties</a></li>
+<li><a href="../collectie.html">Collectie</a></li>
 <li><a href="../event/index.html">Events</a></li></ul></div>
 <div><h4>Betrokken</h4><ul class="fnav">
 <li><a href="../bezoek.html">Bezoek</a></li>
 <li><a href="../over.html">Over</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
-</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode ondersteunt actuele artistieke praktijken die hun oorsprong vinden in ond…</span></div></div></footer>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode ondersteunt actuele artistieke praktijken die hun oorsprong vinden in onderzoek, proces en overdracht.</span></div></div></footer>
 </body></html>

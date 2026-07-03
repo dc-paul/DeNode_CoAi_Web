@@ -23,6 +23,30 @@
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
 @media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
@@ -30,9 +54,9 @@
 </div></div></header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Exhibitions</a> / Who is your God, Where is She</div></div>
 
-<section class="dn-hero-full"><img src="/images/blog-church-kat-bove.webp" alt="Who is your God, Where is She"><div class="veil"></div><div class="cap"><div class="in">
+<section class="dn-hero-full"><img src="/_assets/images/expo/who-is-your-god/15mrt2025_6621.jpg" alt="Who is your God, Where is She"><div class="veil"></div><div class="cap"><div class="in">
 <div class="dn-eyebrow">EXPO #8 · 2025/03/15 – 2025/04/13</div><h1 class="dn-h1">Who is your God, Where is She</h1>
-<div class="dn-serif-it" style="font-size:22px">Kat Bové</div></div></div></section>
+<div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/kat-bove.html">Kat Bové</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">No one could have painted a Van Eyck before the development of oil paint, no one could have made a Courbet before the industrial revolution, and no one could have created a Dalí before the emergence of psychoanalysis. So it turns out that the art we call timeless is in reality always very timely. It is always the product of the technology and ideology in which it was baptised. So it is too with the work of Kat Bové.</p><p>Her work shamelessly imitates mirror selfies, references the Instagram interface and parodies influencer culture. It is made with materials such as fluorescent acrylic paint, graffiti and Posca markers. Her style draws on cartoons and advertising art. The hyper-contemporary iconography she uses will be as cryptic to future generations as that of Greek amphorae or Egyptian sarcophagi. In every possible way, Bové's art reflects the moment it was made. Nowhere is this clearer to me than in how the artist deals with one of the exhibition's central themes: femininity.</p>
 <p><a href="../artikel/the-church-of-kat-bove.html">Read the full text →</a></p></div>
@@ -41,27 +65,57 @@
 <dt>Period</dt><dd>2025/03/15 – 2025/04/13</dd>
 <dt>Curator</dt><dd>—</dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
-
+<dt>Event</dt><dd><a href="../event/finissage-kat-bove.html">Kat Bové — Finissage</a></dd>
 </dl></div></div></section>
 
 
+<section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="installation-views">Installation views</h2>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/15mrt2025_6621.jpg" alt="15mrt2025 6621 — Foto: Kobe Wens"><figcaption>15mrt2025 6621 — Foto: Kobe Wens</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/15mrt2025_6670.jpg" alt="15mrt2025 6670 — Foto: Kobe Wens"><figcaption>15mrt2025 6670 — Foto: Kobe Wens</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/_74A9933.jpg" alt="74A9933"><figcaption>74A9933</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/_74A9938.jpg" alt="74A9938"><figcaption>74A9938</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/j_74A0138.jpg" alt="j 74A0138"><figcaption>j 74A0138</figcaption></figure></div></div></div></section>
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/images/kat-bove-solo-assenede.webp" alt="Kat Bové">
 <div class="in"><div class="dn-eyebrow">About the artist</div><h3 class="dn-h2">Kat Bové</h3>
-<p style="margin:12px 0 20px">Kat Bové (°1984) is a Belgian artist who seems to dance through life in bright colours and leopard prints. Behind that cheerful façade hides an introverted maker who has worked through her demons, doubts and questions on paper for years. For a long time she painted only for…</p>
+<p style="margin:12px 0 20px">Kat Bové is a Belgian artist who seems to dance through life in bright colours and leopard prints. Behind that cheerful façade hides an introverted maker who has worked through her demons, doubts and questions on paper for years. For a long time she painted only for herself; only…</p>
 <a class="dn-btn" href="../kunstenaar/kat-bove.html">View artist →</a></div></div></div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
 <footer class="dn-footer"><div class="dn-wrap"><div class="cols">
 <div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
 <div><h4>Discover</h4><ul class="fnav">
 <li><a href="../expo/index.html">Exhibitions</a></li>
 <li><a href="../kunstenaar/index.html">Artists</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
 <li><a href="../event/index.html">Events</a></li></ul></div>
 <div><h4>Involved</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visit</a></li>
 <li><a href="../over.html">About</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
-</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from researc…</span></div></div></footer>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
 </body></html>

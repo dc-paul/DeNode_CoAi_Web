@@ -1,0 +1,202 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview with Nicolas Van Parys — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-nicolas-van-parys.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/artikel/interview-nicolas-van-parys.html">FR</a></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview with Nicolas Van Parys</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2026-05-11</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview with <a href="../kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">AI translation</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>spring 2026 INTERVIEW WITH NICOLAS VAN PARYS</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-01.jpg" alt=""></figure>
+<p><strong>Hilde Van Canneyt (HVC): Nicolas, thank you for having me here in your studio. I see a lot of paintings and documentation hanging on the walls. There is also a lot of light here; in short, you have a beautiful and solid studio. Is this a nice place for you to spend time?</strong></p>
+<p>Nicolas Van Parys (NVP): Undoubtedly.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-02.jpg" alt=""></figure>
+<p><strong>HVC: You also had a coworking studio in Nucleo – the now infamous Floor 0 – but that was more for your collage work. Do you see that as two different practices, or is it just one practice?</strong></p>
+<p>NVP: I still see my collages as a preliminary study. Technically, I could do anything with painting; I just started with collages for inspiration. I once saw an exhibition by Adrian Ghenie, who always starts from collages, hence the approach. About twelve years ago, I decided to start from that as well, because it provides a foundation for creating my image or generating new images and further developing my existing ones, thus bringing a touch of surrealism into my work. I have shown them in the past, but I never presented them alongside my paintings. For me, they are two different materials. I always say: 'I have fun twice: once when making the collage, and then when translating it into the painting.' In recent years, I have deviated from that more. I still start from the image of my collage, but I take steps further, making it at some point no longer recognizable. Well, sometimes it is, though. But I allow myself to work further on the painting to create a dynamic or coherence that you don't always feel otherwise.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-05.jpg" alt=""></figure></div>
+<p><strong>HVC: Do you usually start a collage thoughtlessly, without a plan?</strong></p>
+<p>NVP: Yes. That might be one of the reasons why I feel a spontaneity there that I sometimes miss or would miss when I paint immediately. I allow that spontaneity. Because of that, it becomes easier for me to take another step further in painting, as that threshold becomes smaller.</p>
+<p><strong>HVC: Let's “rewind”: has drawing and painting always been in you? Or how did you ultimately become an “artist”? How would you briefly introduce yourself in a pub?</strong></p>
+<p>NVP: It's the typical story: I always drew from a young age. It was a different time, and the most important thing I always had with me was a sketchbook and pencils. Wherever I went, I was drawing, as well as doing a lot of copying. I think I looked around a lot at what was happening and what interested me and what I personally liked. I taught myself a lot.</p>
+<p><strong>HVC: Did you do that through education as well?</strong></p>
+<p>NVP: I followed a graphic direction at the Kunsthumaniora Sint-Lucas Ghent. I didn't have the opportunity to pursue higher studies, but the motivation has always remained. I took six years of model drawing and a few years of sculpture in evening classes because the desire was always there. I started surrounding myself with people I looked up to, especially in Ghent, who have since become friends. And I also learned – I actually come from the corporate world – to persevere in what you do. It's a completely different world, by the way. The most important step, as everyone says, is to keep working and researching. At some point, directions will come your way.</p>
+<p>In the last five years, I felt that everything has come together. The collages and paintings used to be two separate things, but they have gradually started to merge. I feel that I am now at a point where I have developed a kind of signature in my work. Despite working with very different imagery, I still found a way to create recognition.</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-06.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-07.jpg" alt=""></figure></div>
+<p><strong>HVC: A recognition from others AND from yourself.</strong></p>
+<p>NVP: I think we all strive for that a bit: to leave a kind of signature. The way someone works, paints, and so on. I think you only get there by working a lot. In the past, I did everything technically in painting, but I didn't know which direction I wanted to go.</p>
+<p><strong>HVC: We are here in your studio, which smells pleasantly of oil paint and turpentine. It is, if I may say so, the old craft that has stood the test of time against all art movements and art media. You could have just as easily continued in graphics, for example. But it is the paint and the brush that have “won.”</strong></p>
+<p>NVP: Yes, there is still so much to do with painting. I think every painter today asks themselves the question: ‘What are we actually still working on? Is it still relevant?’ But if painting continues to exist, that in itself is already important. The desire to paint remains, especially on a large scale. Even though I have also created a series of small works, which was equally quite intense. I find the combination of large and small interesting. Large works allow you to almost step into the work itself, which is fascinating to explore. Especially when you start from collages that are very small: the translation to a large format gives a completely different experience.</p>
+<p>What I did in the past at exhibitions is also addressing the environment of the painting with color fields or elements on the ground, so that you can almost step into the work and become part of that environment.</p>
+<p><strong>HVC: Do you find it important that the viewer can, as it were, step into your work? Are those collages also intuitively constructed? I see magazines here that you tear up. Is that also a way to draw society into your work?</strong></p>
+<p>NVP: I think there is certainly a form of nostalgia in my work because I often reach for catalogs and magazines from the 60s to 90s. They have a certain color palette. The attention to photography had a different meaning back then than it does now. Today, the image has become very fleeting. The fact that people sometimes had to wait days or weeks to photograph an animal is quite imaginative. I have also worked with images of interiors from the 70s, which play a role in my work in terms of both color and architecture.</p>
+<p><strong>HVC: You compile a collage, finish your painting, and then give it a title. Is this linked to the collage, or more to the painted end result?</strong></p>
+<p>NVP: Nine times out of ten, that title comes afterwards. I used to work with postcards, which inspired me mainly through the communication between two people. It often revolved around, for example, the journey that inspired a particular sentence in combination with an image. After my own trip to India, I noted down many things: images and fragments that play a role in my paintings. When a series is finished, I refer back to those notes and look for: where does this come from? That helps me to find a title, for example. But starting from a title? No, that's not how it works.</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-08.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-09.jpg" alt=""></figure></div>
+<p><strong>HVC: Your studio is located above the living area. Once you start painting – because such a large work takes time, how should I visualize that? Do you come in here, put on your painter's jacket, and dive right in? Or do you need to get into a certain zone first, with coffee – or something stronger (winks) – flipping through an art book or listening to music, for example? Does it require energy to get started, or do you long for it already from the breakfast table?</strong></p>
+<p>NVP: I think it's important that I can work in blocks and set aside at least a whole day to dive into a large painting. That's the advantage of those small works: I can work on several at once, build layers, and let things dry.</p>
+<p><strong>HVC: The starting point should be “goesting.” Do you force yourself to come here every workday? Because I see there's also a computer, which is dangerous in a studio. Do you put some kind of pressure on yourself? You work a lot towards exhibitions, but is there an “inconvenience” in your body or mind when you go up the stairs? Because the outside world is at a distance here, but on the other hand, you are eager to show everything to that outside world. It's the same as someone making music: they also sit at home strumming on the guitar before eventually performing. But is that something you can easily deal with while painting in your studio? It's not just: what do I think about the end result, but also: what does the other think? And how do I position myself in the field? Am I a “contemporary” artist or not?</strong></p>
+<p>NVP: I understand why you ask that question, because it's probably something that regularly comes up for artists: finding that balance, that discipline, or those habits. I suspect we all strive for that. Some are better at it than others. I also notice that I consciously close the computer or leave it downstairs; that generally works better. The combination of computer and painting is usually not a good idea; setting boundaries is important. And the desire is always there. I've been painting in my studio for six weeks straight, but I just cleaned my brushes because I also feel that I need to take a step back to lay down layers again and look at my work with fresh eyes.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-10.jpg" alt=""></figure>
+<p><strong>HVC: I think that defines a good painter: an artist who doubts. If it goes too easily... That's the strange thing about art; then you feel/see – as a little connoisseur (winks) too easily the 'trick.' That resistance, friction is important in the process, whether it's a small painting or a large one measuring three by two meters. So I think – but I could be wrong – that if something lands on the canvas too easily, the result might also be too 'easy' for the viewer. That makes the difference for me between a good and a 'less good' artist, to put it that way.</strong></p>
+<p>NVP: I feel that depth much more in recent years. What I used to do was translate the collage. I took some parts with me in a more painterly way. Looking back five years ago, I would have been satisfied with a kind of translation of that collage. But now I take steps further. At the moment when I used to think: 'My painting is now finished,' I go further. I take more risks, I go beyond that step, which makes it no longer a 'picture,' but a more profound painting. That is much more interesting to me. How the outside world views it, I don't know.</p>
+<p><strong>HVC: What feedback do you usually receive? Do you feel that extra explanation from you is needed, possibly in writing? (Of course, that's necessary! (winks)) Or do you find that when you let people wander around your exhibition, they relatively quickly understand what it's about?</strong></p>
+<p>NVP: I think it is indeed important how the viewer looks at my work. I tend to give very technical explanations, but that's not always necessary. That might also be the reason why I like to show large paintings. In Blanco, the exhibition space of Nucleo in Ghent, I had an exhibition under the title Chimaera, where I made a selection from the previous five years. Chimaera is a composition from Greek mythology: a creature with different heads. For me, that's also a kind of collage of something animalistic. Nature has always played a significant role in my work, just like the animalistic. I also dare to use color. That's also why I recently traveled to India, because you can't overlook it there. You are overwhelmed by color and scent.</p>
+<p><strong>HVC: Your end result is aesthetic. I look around your studio and notice that this is undoubtedly an important factor. We can speak of a collage between abstract and figurative, but that's a bit simplistic. I suspect that the strength of your work is that people have to search a bit, which fascinates them. I also think you have a painting style that appeals to people who love painting: sometimes built up with a rough brushstroke, different types of paint touches, with a lot or little turpentine, or sometimes almost thick blobs of paint on your brush. You can hardly call your work boring. But is it also a dangerous point for you that, when you're doing well, you might go “overboard”? There must always be a moment when you tell yourself: now it's enough! Or that you feel/experience that your story has been told. And do you see your paintings as a story, a message, or purely as an image for the image's sake? You must ultimately be very confident to send a work of art into the world: 'Here, viewers, do what you will with it!' Maybe my question also comes from my own background... I loved drawing and painting, took courses, but maybe I stopped because it was too much of a struggle. (Although, creating letters is also that. (winks))</strong></p>
+<p>NVP: That's right. I suspect it's good that time passes. At the moment I think something is finished, I leave it in my environment for at least a few months before I show it. Just because you're in a flow – and that can even change in one day – doesn't mean it's really done. In the evening you might think: 'Yes, now it looks good.' But the next morning you look and think: 'Oops, I still need to make an adjustment because it's not what I want.'</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-11.jpg" alt=""></figure>
+<p><strong>HVC: Sometimes it's also the high, or the dream, like someone who works in the evening with a bottle of wine and sobers up the next morning.</strong></p>
+<p>NVP: Yes. But recently I told someone: 'I actually want to find peace while I’m painting.' Everyone has a romantic image of painting calmly, but that's not it. It's a kind of pressure, but it should be a healthy pressure...</p>
+<p><strong>HVC: ... and hopefully sometimes it’s really tough.</strong></p>
+<p>NVP: Yes, because if you clash or don’t take risks and just paint according to your plan – which I used to do more, you might find more serenity. But that's not the tension or the peace I'm looking for.</p>
+<p><strong>HVC: I think you've evolved in recent years, precisely because you used to create more mathematically and now work less calculated. Nowadays, you could even make collages on the computer, but it's that physical intermediate step – the cutting, tearing – that creates layers, resulting in something interesting on canvas. It's precisely in those intermediate layers, in the energy, the physicality, almost the sweat, that gives a work its power. I strongly believe in that. You also need a certain ego to be an artist. How do you feel when you show your work? More 'small'? Or do you think: 'Here I am, look at what I can do!'?</strong></p>
+<p>NVP: I have become much more confident in the last five years. I feel and experience that I stand my ground and can make a distinction within the art world. But there are many of us. That's why I intend to keep working and pushing my boundaries, and letting go of the commercial angle, which is not easy if you want to live from the “arts.”</p>
+<p><strong>HVC: So you see yourself growing as an artist. You are even experimenting with sculpture nowadays.</strong></p>
+<p>NVP: I mainly want to have fun. The project in India is now a separate aspect. For my next exhibition, I chose to explore sculpture as well. Paintings will always take priority, but I am open to other materials. I envision my ideal exhibition as spatial, almost architectural. As I said earlier: I like it when you can stand in my work. Right now, that's sometimes still an intermediate step: a color field, something on the ground, so you can almost step into it. But my ideal scenario is a complete environment, where color and themes connect with the work. Artist Nicolas Party does that fantastically: completely painting gallery spaces and then showing one work. That's a beautiful scenario.</p>
+<p><strong>HVC: Essentially, you dream of your work being in different settings, where the space itself almost becomes a work of art. You are evolving from 2D to 3D, perhaps even to film.</strong></p>
+<p>NVP: That's what I'm looking for. It feels like an intermediate step: what can almost come to life? What can be explored sculpturally from my paintings? The relationship between those different forms seems very interesting to me.</p>
+<p>after a well-deserved coffee+cake break</p>
+<p><strong>HVC: Your studio was here gathering dust for a while because you went on a residency to India, to a residency called Kriti Gallery.</strong></p>
+<p>NVP: India is something nostalgic for me. I was there more than twenty years ago. There was one specific place where I felt: 'One day I will come back here and want to spend more time.' That is Varanasi, in northern India, where the holy river Ganges flows. When we see something about it in the media, it's usually some ritual they perform there. There are cremations 24/7; life and death are very close together there. When I talk about that place with people who have also been to India, they all confirm that there is something there that you cannot describe and cannot compare to anything else. Here, we still tend to hide death, to put the body in a coffin, and so on. Why this theme? There were people around me who are no longer here due to certain circumstances... And there is the awareness: who are we and what are we doing here in the world? My artistry plays a very important role in that, of course.</p>
+<p>The idea arose while I was painting: what step do I want to take? Ideally, you do a regular residency, but it also had to be boundary-pushing and perhaps touch on something that is less known within Western culture. I googled: 'residency India' and that's how I ended up at that specific place, about a fifteen-minute walk from the Ganges. It is run by a couple: a German woman and an Indian man, who built a pavilion for a handful of artists. It is an oasis amidst the hustle and smog. It wasn't ideal for my health, but it was a fantastic journey!</p>
+<p><strong>HVC: Most artists take basic materials with them for the residency and see what is available on site. How did you approach it? 'I'm here in India, I open my eyes and ears and start sketching and painting according to the feel I get here and let the impressions come to me?'</strong></p>
+<p>NVP: That in the first case. But I am someone who likes to have a framework, so I start thinking: 'What can I concretely do there?' So I set out a number of guidelines. On one hand, I contacted Banaras Hindu University and asked if we could collaborate. Because in line with my painting work, I want to create spatial work. I proposed to give a workshop with materials from there, together with Sofie Bos, my partner who assisted me for two weeks. Specifically, that meant going out into the street, collecting materials, and making sculptures to human scale with the students, ultimately developing a performance, something that is actually completely outside my comfort zone.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-12.jpg" alt=""></figure>
+<p><strong>HVC: The basic goal was 'experiment'.</strong></p>
+<p>NVP: Part of it was written down. That was a first direction: working with those students, with the idea that those sculptures would then be spatial and that I might bring them back to Belgium. In the end, I brought one mask back, but it was mainly the research that was very interesting for me. I have a lot of visual material, also from the performance. It is a moving image that stands apart from my paintings. Additionally, I have static images of those works, with which I am also creating collages. That part was quite concretely established.</p>
+<p><strong>HVC: Isn't that the opposite direction of how you usually work?</strong></p>
+<p>NVP: That was indeed a direction. And of course, the interaction and sensing what is alive at the university is an experience in itself. Together with my girlfriend Sofie, we also prepared something. From our Western culture and because I work quite surrealistically, we placed surrealists and fashion designers like Walter Van Beirendonck side by side, because they actually have no notion of it. We talked about it for a few hours, and that created the interaction with the students. We wondered where we could intersect. By the end of it, they started making things, despite their rather traditional background. That was very fascinating for us because you have that questioning and learn more about why they make certain choices. They also indicated that it was an added value for them: they had never seen or experienced such a workshop. It was very educational, but it also took a lot of energy. (laughs)</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-13.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-14.jpg" alt=""></figure></div>
+<p><strong>HVC: What did you concretely take from those workshops, collaborations, and cross-pollination with the university back to your studio?</strong></p>
+<p>NVP: I have set the videos aside for now. I have been back for a few months, but that visual material will undoubtedly play an important role in the exhibition.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-15.webp" alt=""></figure>
+<p><strong>HVC: Before you left for India, you already knew: 'I have an exhibition at DeNode in Ghent afterwards and I will show what I have seen, heard, smelled, and experienced there.' That was nice for you to know in advance, because you can work towards an exhibition that way.</strong></p>
+<p>NVP: What I loved most was wandering the streets without a compass for hours on end, and only then seeing where I ended up.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-16.jpg" alt=""></figure>
+<p><strong>HVC: I always do that too, but I always get lost. (laughs)</strong></p>
+<p>NVP: Yes, but getting lost gives so much. Every street, every corner is a scene in itself. That is so incredible about India: there is so much authenticity. It is chaos, but within that, people find peace. There is honking and jostling in traffic, but no one gets upset. It is a specific setting. Although I am quite sensitive and sometimes wore earplugs or headphones to dampen everything a bit, I still found peace there.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-17.jpg" alt=""></figure>
+<p><strong>HVC: Did you already think during 'Die Wanderung' about how you would translate that into images?</strong></p>
+<p>NVP: There are different aspects. Normally I process existing visual material, but there I consciously chose to take many photos with my phone, have them developed, and start cutting them up on site. I also brought some oil paint, and those photos formed a new basis for my painting work. The advantage of printed photos is that they are more durable, but I don't show them quickly because they are fragile and UV-sensitive. That's why I'm considering a series of collages. I already have a few hanging; I find them very powerful and exotic. Every image you create there is photographically strong, and I have a fairly photographic eye anyway. I could almost create a photography exhibition.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-18.jpg" alt=""></figure>
+<p><strong>HVC: Why not?</strong></p>
+<p>NVP: I have my doubts about that. The things created at the university are so strong that sometimes I let them go, and I might effectively show about five images of what we created there. They can perfectly coexist alongside the collages, paintings, and moving images.</p>
+<p>Specifically: the first approach was the university. The second arose on the train from Delhi to Varanasi, where I found a newspaper from The Indian Times. It was filled with photos of 'missing people,' asking if anyone recognized them. These photos are black-and-white images of people at the moment they died, as well as others who are missing. That had a huge impact on me: images of someone's end, in relation to life and death, identity... There are so many people there. The fact that someone almost receives no identity and is 'called out' through a newspaper, combined with those confronting images, inspired me to create color portraits, starting from those black-and-white images. I hadn't created portraits in recent years, but I dove back into that.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-19.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-20.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-21.jpg" alt=""></figure></div>
+<p><strong>HVC: Those are the small works here on the ground, almost five by four centimeters. You give those people without identity a kind of identity again. Was that your intention?</strong></p>
+<p>NVP: Yes, to give that person attention again, something they no longer receive. I isolate this person, which makes them come back in a way and gain a kind of dignity.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-22.jpg" alt=""></figure>
+<p><strong>HVC: So you want to create an exhibition in which we, as viewers, experience what you physically and mentally experienced in India?</strong></p>
+<p>NVP: Yes. I allow myself to conduct that research. And I think that is also the aim of Foundation DeNode: the crazier, the better. I show that research, which allows me to work on different tracks. I also took those faces to the Ganges. I asked an Indian what he felt about certain people. He looked at my translation of the newspaper into the painting, and I filmed that. This created a connection between my drawing and his feeling; what he sees and experiences with that image. Together with the video, this forms one work.</p>
+<p><strong>HVC: I see a large four-part piece hanging here. Is that also inspired by India?</strong></p>
+<p>NVP: Yes. That is a third approach: the collages I made and cut there. I continue to create collages, but I was able to produce these and the small paintings there because I was limited in space and materials. Now I am translating that into larger canvases and panels. For example, those dogs that I also paint: there were four at the residency. Behind that work, there is also a reference to street dogs. At the residency, they lived in a safe environment, while street dogs have to navigate through traffic and chaos. That contrast interested me and reminds me of our Western culture of overprotection versus street culture.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-23.jpg" alt=""></figure>
+<p><strong>HVC: Specifically: what can we expect to see at the exhibition in DeNode in Ghent?</strong></p>
+<p>NVP: We don't fully know that yet; the setup still needs to happen. But here in the studio, you see that I am working on what I experienced there. I also try to bring the colors from there and immerse the viewer in an Indian atmosphere.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-24.jpg" alt=""></figure>
+<p><strong>HVC: Do you want to address something educational or social? You undoubtedly saw a lot of poverty there.</strong></p>
+<p>NVP: It is, of course, the case that the collaboration and the contrasts between the school-like way of working and how people live there will come through anyway. When I show images and interviews, it also takes on a somewhat documentary character. When I go to an exhibition, I want to be surprised, and I am not easily surprised anymore. I try to challenge myself to create something in which you – without reading anything beforehand – can also feel what it is about. I find that important.</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-25.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-26.jpg" alt=""></figure></div>
+<p><strong>HVC: Is it your intention that the visitors of your exhibition Kashi Rupé – Unfolded at DeNode Foundation are momentarily pulled away from the regular world? NVP Yes. Through one video, my paintings, and the interaction with the people. I'm still figuring out in what form, but I would at least like to tackle one space that leaves an Indian trace, so that it’s not all small white rooms. An ideal image is that I almost create a street scene, with the smell and the hustle and bustle as it were. There are so many facets that play a role, almost like a collage of India. But this still needs to be discussed. (winks) HVC Sounds good! Undoubtedly, you will learn so much from it yourself that it will reflect back in your future work.</strong></p>
+<p>NVP: The fun part is that I allow myself to do as much research as possible, even though I still feel like a painter. As an outsider, you might expect something different, but for me, it is also a challenge. That doesn't make it easier, but I take the time to do it well. HVC That is important, just like art, of course!</p>
+<p><strong>HVC: https://www.hildevancanneyt.be/ http://www.nicolasvanparys.com/ https://www.denode.be/</strong></p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-27.jpg" alt=""></figure></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/nicolas-van-parys.html">Artist: Nicolas Van Parys →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Discover</h4><ul class="fnav">
+<li><a href="../expo/index.html">Exhibitions</a></li>
+<li><a href="../kunstenaar/index.html">Artists</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Involved</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visit</a></li>
+<li><a href="../over.html">About</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
+</body></html>

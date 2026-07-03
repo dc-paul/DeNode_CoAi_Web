@@ -23,6 +23,30 @@
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
 @media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
@@ -36,31 +60,59 @@
 <a class="dn-card dn-card--now" href="kashi-rupe-unfolded.html"><div class="thumb"><img src="/images/blog-nicolas-van-parys.jpg" alt=""></div>
 <div class="meta"><div class="dn-tag">Actuellement</div><div class="dates" style="margin-top:14px">2026/05/15 – 2026/07/26 · Kristof Vander Cruyssen</div>
 <h3>Kashi Rupé — unfolded</h3><div class="who">Nicolas Van Parys</div></div></a>
-<a class="dn-card" href="people-ruin-paintings.html"><div class="thumb"><img src="/images/blog-john-robinson.webp" alt=""></div>
-<div class="dates">#13 · 2026/02/14 – 2026/04/28</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="merel.html"><div class="thumb"><img src="/images/blog-merel.jpg" alt=""></div>
+<a class="dn-card" href="people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/20260213_DeNode_John_Robinson_vernissage-42.jpg" alt=""></div>
+<div class="dates">#13 · 2026/02/14 – 2026/04/28</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/JUR_1571.jpg" alt=""></div>
 <div class="dates">#12 · 2025/11/28 – 2026/01/10</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="again-across-the-river.html"><div class="thumb"><img src="/images/blog-lee-ranaldo.jpg" alt=""></div>
-<div class="dates">#11 · 2025/10/11 – 2025/11/11</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="vestiges.html"><div class="thumb"><img src="/images/blog-vestiges.webp" alt=""></div>
-<div class="dates">#10 · 2025/09/05 – 2025/09/28</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke, Robrecht Kessels</div></a><a class="dn-card" href="okan-is-me.html"><div class="thumb"><img src="/images/blog-okan-is-me.jpg" alt=""></div>
-<div class="dates">#9 · 2025/07/10 – 2025/07/17</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a><a class="dn-card" href="who-is-your-god.html"><div class="thumb"><img src="/images/blog-church-kat-bove.webp" alt=""></div>
-<div class="dates">#8 · 2025/03/15 – 2025/04/13</div><h3>Who is your God, Where is She</h3><div class="who">Kat Bové</div></a><a class="dn-card" href="bij-de-meesters.html"><div class="thumb"><img src="/images/blog-bij-de-meesters.jpg" alt=""></div>
-<div class="dates">#7 · 2025/01/25 – 2025/02/23</div><h3>Bij de Meesters</h3><div class="who">Gipi (Pierre Gillis), Mikhail Bezverkhny</div></a><a class="dn-card" href="exponentieel.html"><div class="thumb"><div class="dn-imgslot"><span>#6</span></div></div>
-<div class="dates">#6 · 2024/12/07 – 2025/01/12</div><h3>(expo)nentieel</h3><div class="who">Kettingbrief-netwerk — 49 kunstenaars, Julie Arphi, Egon Beeckman, Stien Bekaert, Mikhail Bezverkhny, Willem Boel, Clara Borg Verbeke, Kat Bové, Jimena Chávez Delion, Stijn Cole, Bert De Geyter, Maikel De Greve, Johan De Wilde, Damien Degrave, Jonas Delaey, Renee Delcourt, Palatine Demoen, Nikolaas Demoen, Gilles Dusong, François Genicot, Ritsart Gobyn, Hamer Kormeling, Nancy La Rosa, Jan Laroy, Ralph Leeten, Mirre Nimmegeers, Tim Onderbeke, Lisa Ottenburgh, Joost Pauwaert, Julie Poisquet, Ingrid Raymaekers, Shervin/e Sheikh Rezaei, Jari Rijckaert, Pàpoo Thibau, Mariami Tsotadze, Liselotte Van Daele, Merel Van de Casteele, Ruth van Haren Noman, Liesbeth Van Heuverswijn, Jana Van Ongevalle, Wout Vandevenne, Sofie Vandevoorde, Wannes Vanwijnsberghe, Robin Vermeersch, Simon Verougstraete, Maurits Verstraete, Saidjah Vos, Vadim Vosters, Yi Zhang, institute 54</div></a><a class="dn-card" href="vier.html"><div class="thumb"><div class="dn-imgslot"><span>#5</span></div></div>
+<div class="dates">#11 · 2025/10/11 – 2025/11/11</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="vestiges.html"><div class="thumb"><img src="/_assets/images/expo/vestiges/IMG_2883.jpg" alt=""></div>
+<div class="dates">#10 · 2025/09/05 – 2025/09/28</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke, Robrecht Kessels</div></a><a class="dn-card" href="okan-is-me.html"><div class="thumb"><img src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-1.jpg" alt=""></div>
+<div class="dates">#9 · 2025/07/10 – 2025/07/17</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a><a class="dn-card" href="who-is-your-god.html"><div class="thumb"><img src="/_assets/images/expo/who-is-your-god/15mrt2025_6621.jpg" alt=""></div>
+<div class="dates">#8 · 2025/03/15 – 2025/04/13</div><h3>Who is your God, Where is She</h3><div class="who">Kat Bové</div></a><a class="dn-card" href="bij-de-meesters.html"><div class="thumb"><img src="/_assets/images/expo/bij-de-meesters/Gipi_Legt_Uit---1.jpg" alt=""></div>
+<div class="dates">#7 · 2025/01/25 – 2025/02/23</div><h3>Bij de Meesters</h3><div class="who">Gipi (Pierre Gillis), Mikhail Bezverkhny</div></a><a class="dn-card" href="exponentieel.html"><div class="thumb"><img src="/_assets/images/expo/exponentieel/boom_kristof_Lo.jpg" alt=""></div>
+<div class="dates">#6 · 2024/12/07 – 2025/01/12</div><h3>(expo)nentieel</h3><div class="who">Kettingbrief-netwerk — 49 kunstenaars, Julie Arphi, Egon Beeckman, Stien Bekaert, Mikhail Bezverkhny, Willem Boel, Clara Borg Verbeke, Kat Bové, Jimena Chávez Delion, Stijn Cole, Bert De Geyter, Maikel De Greve, Johan De Wilde, Damien Degrave, Jonas Delaey, Renee Delcourt, Palatine Demoen, Nikolaas Demoen, Gilles Dusong, François Genicot, Ritsart Gobyn, Hamer Kormeling, Nancy La Rosa, Jan Laroy, Ralph Leeten, Mirre Nimmegeers, Tim Onderbeke, Lisa Ottenburgh, Joost Pauwaert, Julie Poisquet, Ingrid Raymaekers, Shervin/e Sheikh Rezaei, Jari Rijckaert, Pàpoo Thibau, Mariami Tsotadze, Liselotte Van Daele, Merel Van de Casteele, Ruth van Haren Noman, Liesbeth Van Heuverswijn, Jana Van Ongevalle, Wout Vandevenne, Sofie Vandevoorde, Wannes Vanwijnsberghe, Robin Vermeersch, Simon Verougstraete, Maurits Verstraete, Saidjah Vos, Vadim Vosters, Yi Zhang, institute 54</div></a><a class="dn-card" href="vier.html"><div class="thumb"><img src="/_assets/images/expo/vier/Caroline_Baek_7940.jpg" alt=""></div>
 <div class="dates">#5 · 2024/10/19 – 2024/11/17</div><h3>VIER</h3><div class="who">Caroline Baek</div></a><a class="dn-card" href="bjorn-wandels-vitrine.html"><div class="thumb"><img src="/images/blog-bjorn-wandels.jpg" alt=""></div>
-<div class="dates">#4 · 2024</div><h3>Björn Wandels — vitrineprojectie</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="triple-cintre.html"><div class="thumb"><img src="/images/blog-ines-claus.jpg" alt=""></div>
-<div class="dates">#3 · 2024/02/02 – 2024/03/03</div><h3>Triple Cintre</h3><div class="who">Ines Claus</div></a><a class="dn-card" href="ai-universe.html"><div class="thumb"><div class="dn-imgslot"><span>#2</span></div></div>
-<div class="dates">#2 · 2023/10/27 – 2024/01</div><h3>AI Universe</h3><div class="who">Simon Van Parys</div></a><a class="dn-card" href="exponential-1.html"><div class="thumb"><div class="dn-imgslot"><span>#1</span></div></div>
+<div class="dates">#4 · 2024</div><h3>Björn Wandels — vitrineprojectie</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="triple-cintre.html"><div class="thumb"><img src="/_assets/images/expo/triple-cintre/Ines-Claus_LR.jpg" alt=""></div>
+<div class="dates">#3 · 2024/02/02 – 2024/03/03</div><h3>Triple Cintre</h3><div class="who">Ines Claus</div></a><a class="dn-card" href="ai-universe.html"><div class="thumb"><img src="/_assets/images/expo/ai-universe/AI-Universe---LO.jpg" alt=""></div>
+<div class="dates">#2 · 2023/10/27 – 2024/01</div><h3>AI Universe</h3><div class="who">Simon Van Parys</div></a><a class="dn-card" href="exponential-1.html"><div class="thumb"><img src="/_assets/images/expo/exponential-1/Node_EXPOnential---2.jpg" alt=""></div>
 <div class="dates">#1 · 2023</div><h3>Expo-nential 1</h3><div class="who">Philippe Van De Velde</div></a></div></div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
 <footer class="dn-footer"><div class="dn-wrap"><div class="cols">
 <div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
 <div><h4>Découvrir</h4><ul class="fnav">
 <li><a href="../expo/index.html">Expositions</a></li>
 <li><a href="../kunstenaar/index.html">Artistes</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
 <li><a href="../event/index.html">Événements</a></li></ul></div>
 <div><h4>Impliqué</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
-</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origi…</span></div></div></footer>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origine dans la recherche, le processus et le transfert.</span></div></div></footer>
 </body></html>

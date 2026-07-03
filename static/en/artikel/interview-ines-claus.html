@@ -1,0 +1,187 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview with Ines Claus — DeNode Foundation</title>
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-ines-claus.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/artikel/interview-ines-claus.html">FR</a></div></nav>
+</div></div></header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview with Ines Claus</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2024-02-01</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview with <a href="../kunstenaar/ines-claus.html">Ines Claus</a></h1>
+
+<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">AI translation</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>TRIPLE CINTRE – Ines Claus – Nodenaysteen Gent</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-01.jpg" alt=""></figure>
+<p>Interview with Hilde Van Canneyt</p>
+<p><strong>Hilde Van Canneyt (HVC): – Dear Ines, six years ago you graduated from KASK School of Arts in Ghent. The burden of the teachers has been lifted, and you have been working autonomously for five years now. You didn’t have to fight for that at home, as your parents also studied painting.</strong></p>
+<p>Ines Claus – They studied at the Royal Academy of Fine Arts in Antwerp. For my sister and me, it was always a natural way of engaging with drawing, looking at art books, visiting museums, etc. During puberty, this was less pronounced, but when my sister took her entrance exam for Animation Film at KASK, I started following that website and saw that you could study autonomous Drawing Art there. I was drawn to starting purely from drawing.</p>
+<p><strong>HVC: Starting from the line, you mean? Or were you more attracted to the drawing techniques with pencil, charcoal, chalk, and pastels on paper?</strong></p>
+<p>I don’t know if this was clear back then, but indeed, that ‘simplicity’, directness, and honesty of that pencil on paper appealed to me. Although it’s not an easy program, I loved that freedom. Also, the fact that autonomous drawing is less associated with history than, for example, painting or sculpture creates an openness.</p>
+<p><strong>HVC: How were those lessons approached? In the first years, I assume some framework was provided in the exploration of form, content, and materials?</strong></p>
+<p>Indeed, it was mainly about the question: what does drawing entail? I remember the theme of waste. You literally had to search for it. While you examine all those materials that pass by, you carve out your own path towards a personal visual language. I immediately enjoyed the directness and speed of blind drawing. This quick drawing allows you to abstract and seek a kind of essence.</p>
+<p>In my Master’s, I was working with objects and installations, among other things. I was also looking for more materials to draw on: pieces I found on the street, for example, which I found interesting in color. Or I discovered mops that I liked to work with. But eventually, I found it too restrictive, so I sought materials that had infinity, like ink and graphite. Although I created books with those mops that I laminated. Or I liked to experiment with spray cans and acrylics to have a conversion of drawing ‘in color’, and then you quickly find yourself at the edge of painting. But then I sometimes found the paper too limiting in terms of scale, so I started to be drawn to canvas. (laughs)</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-02.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-05.jpg" alt=""></figure></div>
+<p><strong>HVC: What was your content-related research? Were there specific ‘themes’ you wanted to dive into or address?</strong></p>
+<p>I was increasingly searching for contrasts with themes like the artificial, which was often translated into the kind of material I used: plastic or mops versus more artisanal materials like felt or ‘nature versus city’. I became fascinated by the figure of the palm tree, which would inhabit various contexts as a kind of playful alter ego. Artists like Yto Barrada spoke to me, think of ‘I’m not exotic I’m exhausted’. I discovered how globalization led to the first palm tree arriving in Belgium in the sixteenth century, for example, by chance in an exhibition at KASK during my graduation year. I also felt that the palm tree was underexposed as a historical element and an important ‘non-tree’. The palm tree is often associated with luxury or vacation, but this depends on your perspective. Sometimes I also choose materials like the mop or paper shopping bags for their underexposed status: a mop is used as a tool to clean the floor, a shopping bag has a certain status or is an eye-catcher for the half-hour you stroll around with it on the street, but then it gets thrown away.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-06.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-07.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-08.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-09.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-10.jpg" alt=""></figure></div>
+<p>It’s the freedom and the ‘doing what you want’ that makes you spend a few days a week in your studio making things, I assume. The pleasure of creating that own universe. Then it’s still the art of carving out your own place in the art world, to see and be seen.</p>
+<p>I think everyone does that in their own way; it’s not evident when you start comparing where other artists are already at, but I believe the main thing is how you feel about your work and how you keep moving forward.</p>
+<p><strong>HVC: Did you find it too limiting to just show on the wall?</strong></p>
+<p>Maybe. It’s about wanting to show ‘even more’ especially. (laughs) But particularly for myself, of course. When you’ve made a series, it’s nice to bundle them. Or just take one element from a series and create something from that focus. Purely as a thought exercise sometimes: what was that series of works really about? But it started first with my archive of images that I was going to paste into hand-sewn books made from mops.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-11.jpg" alt=""></figure>
+<p>Series arise spontaneously for you. Just think of your countless works with the Euromillions logo. Before you knew it, you made connections like ‘wiping your feet on’, and suddenly you have a whole series, from which other ideas emerge with image fragments of brand names, legs, costumes, fashion…</p>
+<p>Then there were more series with gates with ornaments.</p>
+<p><strong>HVC: What intrigued you about that?</strong></p>
+<p>I think the combination of the clean lines or outline of the gate’s structure, combined with the curled ornaments. Often, you build your surface on a large canvas in an abstract way, and it’s handy to divide your surface. Those ornaments often unconsciously take on different forms, and suddenly you see something figurative in them, but mainly because it’s delightful to just trust your eyes and let your hand follow. I often work from photos or sketches, as well as from observation, but during the work, an unconscious filling also arises, a spontaneity that allows or controls you. Also, what happens in front of the gate or what is hidden behind it is intriguing to me and creates a mystery and tension as if everything seems okay, but something could also happen.</p>
+<p>Your final work was about ‘Palm Trees’. I remember seeing that exhibition in the Blanco exhibition space in Ghent, being delighted by it, and promptly inviting you for an exhibition for Kunst@poel17. That’s how the ball keeps rolling, and you frolic from exhibition to exhibition, purely because your work is appreciated by viewers.</p>
+<p>That was already about five years ago, which feels like a long time. (laughs) I have had a nice journey, but there is still a kind of pressure that by the time you’re thirty you should be with a gallery, or that you feel you’re only being asked through connections, by knowing the right people... I find it important to present my work in various ways, which can also be through the books I make. This way, you reach a broader audience and – I notice – I attract very diverse people.</p>
+<p>Your young oeuvre is a visual collage of figurative and abstract elements and is characterized by thick black contour lines combined with pastel colors.</p>
+<p>It’s a combination of things. My color palette is quite extensive; I dare to use brown and gray nowadays. I used to think those were ugly colors. (laughs) I sometimes find it strange how people mainly notice the ‘pastel colors’ because I actually use a lot of contrasting colors. First, I visually notice something, an object, a book cover, or a word like Deluxe Palux as the title of a book, for example. What I would then associate with the French word Pas luxe compared to Deluxe, but palux apparently means gold-dust. Or words that are visually appealing because of the way they are written, associated with high and low culture, or song titles like Easy Street by Julie London or Isabelle Antena... Automatically, I associate and seek out those contrasts. And if an image is too frivolous, I dare to tilt it.</p>
+<p>Dampen the lollipop factor! The shoe as a ‘symbol’ often recurs, and that’s no coincidence. You like to walk around. Visually, you disrupt the viewer with all those disharmonious and seemingly unrelated elements together. Both visually and thematically, there is both intrinsic and explicit humor in your work, I suspect.</p>
+<p>I think you can always find connections if you have a bit of imagination, but humor definitely helps here. It’s often the small details that allow you to link a feeling to an image or trigger a certain perspective that makes you think or takes something less seriously.</p>
+<p><strong>HVC: Does such a painted drawing arise ‘directly on canvas’ or do you construct a thorough preparation in your sketchbooks?</strong></p>
+<p>In the past, I made preliminary sketches and executed them on a larger scale, but these were quick sketches, never really developed. Now I have less of an idea of what my final work will look like. It comes more spontaneously nowadays, but the more you sketch beforehand, the better you can construct a kind of intensity in your studio. I also look at photos in the meantime, and I try to combine all those scenes at once; think of the worlds of the present and the past. I find nostalgia a double-edged word, yet I find it interesting to look at how a certain design or clothing is no longer in circulation. But if you look at Italy, for example, you do see that a certain decorum remains.</p>
+<p>You see your practice as ‘capturing’ things. You cut out details from your surroundings, which simultaneously feeds your archive of images. I also feel that collage and assemblage art through it. And you experience the layering of elements that you worked away, allowing you to discern both figurative and amorphous forms, which gives depth to the plastic elements of and in your work.</p>
+<p>It’s always a surprise for me. You never know why you feel that something needs to be worked away. It’s a kind of image you have in your head that needs to fit, just like the right tension. Sometimes it becomes too much and feels too busy or chaotic, and I start to repaint things, but with a work on paper, you can hardly do that: you always have to find a solution more quickly and directly. I often find that interesting because you are then engaged with the medium of drawing itself, or at least you are constantly reminded of it.</p>
+<p><strong>HVC: What reactions do you generally receive?</strong></p>
+<p>They are very varied. I think you have to learn to live with that as an artist. I can’t expect everyone to give me good, in-depth feedback.</p>
+<p><strong>HVC: Do you secretly want everyone to melt for those colorful images of yours?</strong></p>
+<p>Of course, you hope to attract people who really ‘see’ the image and understand my aesthetics. Or who fall for the same references. Often, people feel the dynamism that is in my work, which makes them want to do something active themselves.</p>
+<p><strong>HVC: Do you want to create the good vibes?</strong></p>
+<p>Not necessarily. During my studies, there was a teacher who asked me, ‘Don’t you ever feel sad or bad, because you only make work with bright colors?’ But maybe I use that visual language precisely because it pulls me out! By the way, if I haven’t been in my studio for a few days, I don’t feel good, so ultimately this coincides.</p>
+<p><strong>HVC: When is a work ‘finished’? Do you let it rest a bit in your studio or...?</strong></p>
+<p>I don’t let them hang on my wall for too long. I feel quite quickly when they are ready. And I want to have space to start with fresh work. (winks)</p>
+<p><strong>HVC: You want everything to progress. Additionally, you want to consciously preserve the freshness of your visual language. Is that something you also appreciate in other artists?</strong></p>
+<p>I don’t like things that are too heavily worked. And I can also appreciate it when artists construct total installations. I saw Camille Henrot’s Carte Blanche at Palais de Tokyo some time ago; her installations have stuck with me. I also discovered Ana Jotta, a Portuguese artist, during my residency at two exhibitions in Paris. It’s so fresh how she works with a multitude of images and transitions from a wall drawing to an installation with domestic elements. Also, with the Italian designer Andrea Branzi, you see in his book Animali Domestici that duality between materials that seem light and are actually a kind of metal imitation bamboo. Or in the exhibition about Josef Hoffmann, which is currently running at the Museum of Art &amp; History in Brussels, titled Sous le charme de la beauté, where his design objects are placed in a fresh scenography alongside his drawings and architectural gems.</p>
+<p>How do you determine your dimensions? Is it according to the mood of the day? Because I see even XXXL work hanging here.</p>
+<p>I work simultaneously on different formats. Perhaps that's also to keep challenging myself; each format feels different. You also place everything differently in the image. And with a large size, I am forced to work differently and view my work in another way. This way, you stimulate yourself not to fall into your comfort zone. In my latest series with coat hangers, I find those large works fitting, as if I can hang everything on them. Even within drawing, I find that a nice element. I am drawing fewer human figures, and perhaps a coat hanger is something that makes me think of shoulders; you can literally and figuratively hang anything on it. I like to play with that.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-12.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-13.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-14.jpg" alt=""></figure></div>
+<p><strong>HVC: Is this also ‘the coat hanger’ where you will hang your exhibition Triple Cintre, now in February 24, at the Nodenaysteen in Ghent?</strong></p>
+<p>Partly yes. In my invitation, I describe it among other things as ‘the accrochage of drawn thoughts’. It became a series about ways of hanging, methods of showing a stacking of associations, and a kind of re-organizing of items and thoughts from after my residency in Paris. You see this in works with titles like Garderobe Fridge or Penderie de rue, where I show a kind of clothing rack where street signs (Emblèmes) and boots are hung.</p>
+<p>An exhibition is always a key moment to pause and reflect on your work. Two years ago, you had a solo exhibition at the Ghent Rufus Gallery under the title Mode de vie, referring to the lifestyle and aesthetic language of Parisians. You designed the magazine Paris La Sape to accompany it.</p>
+<p>I was on an artist residency at Cité des Arts in Paris, hence the title. It is always refreshing to start from scratch in a new studio, even though it was much smaller. But it allows you to approach your research in a different way; it broadened my visual language.</p>
+<p><strong>HVC: Paris, of course, leaves no one untouched! That world city gradually seeped into your work. Do you want to make people look at your work differently with your publications?</strong></p>
+<p>I find the combination of work on the wall and looking at my publication at the same time ideal. I don't necessarily want them to look at my work differently, but it often provides a kind of extra insight into visual thought processes. The magazine gives you a glimpse into what I gathered on-site. There is an alphabet in it, where not all letters are present. I started linking certain symbols to a letter. In the beginning, you see a series of bags, the abc portables, with references to these templates or elements from my work that often play with brands/logos or become a kind of literal carriers of drawings. For example, the Lauwerkrans (L) is associated with all images related to food and the kitchen, with, for instance, the drawing Roman Garlic, inspired by the exhibition Natures mortes from the Louvre. Or photos of my countertop with a beautifully served plate and a light green tablecloth with spilled wine. etc. For an Art Book Fair in Milan and the Antwerp Academy Art Book Fair, I created an edition of bags with templates that refer to symbols in my book. Sometimes people know your work on social media, and this gives you the chance to meet at international art book fairs. That’s how I met publisher and artist Dario from Gaffa Worldwide (CH) in Milan, and he will publish a book with a series of drawings in risoprint.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-15.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-16.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-17.jpg" alt=""></figure></div>
+<p>Present and past reflect each other and flow over and into your work in all its layers. You like to play with the everyday nature of materials and images, with the wonder for an ordinary object that leads to another idea or object.</p>
+<p>Nothing is better than when everything coincides. And often, it’s coincidences that strengthen the concept.</p>
+<p>And you artists can’t escape that Instagrammable touch of 2 by 2 cm.</p>
+<p>Such a small format on screen gives a very different impression of your work. It looks much cleaner than in reality. You don’t see those plastic imperfections. Just like in my drawings, I don’t work too methodically on my social media. I post spontaneously about what I’m working on. I find it a nice visual platform because it creates a whole unique world. I also have an account under Claus Books, which is more anonymous, but I find that has its charm.</p>
+<p><strong>HVC: How do you see your practice evolving further?</strong></p>
+<p>During a residency, it’s especially nice to meet other artists from all over the world – there are about three hundred in Paris. There, I felt inspired to collaborate with other artists, whereas before I just wanted to do my own thing. I realize that I also want to be very generous in what I show. Or perhaps I want to explore how to present my work through installations; to show that multitude through collaborations with other artists or designers.</p>
+<p>Your themes are light, and you also start from form. Nothing wrong with that; on the contrary, a work can bring joy, be pleasant to look at. I find that playfulness attractive. The joy of expressing oneself, being in your element, radiates from it. Your works reinforce each other as well. I think many people can appreciate your drawings.</p>
+<p>Thank you! My stories are either created while drawing or only afterwards, which allows for many possible open interpretations. I don’t really start from an existing story or text. It makes sense, I think, that I start from something visual because it ultimately revolves around the image. But sometimes it happens that you stumble upon a piece of text on the back or inside flap of a book, where you have that same feeling. I try to convey that as an underlying concept or feeling. Like in ‘Mode De Vie’: Mode comes from the Latin ‘modus’ (way) and emerged at the end of the Middle Ages. It described the informal codes that directed behavior in society, more specifically the ways of dressing. It’s a kind of critical observation where you select elements from society, but not in a literal way. Is that why it feels light? It feels as if an image is then worth less... It’s more about nuances and hints at what is happening, but those are usually so hidden that not everyone sees them. Even colors or certain color combinations can be used as a political wink.</p>
+<p>You don’t make it easy for yourself; there is little context. And your publications are not uncomplicated either. I find your work difficult to articulate; there are no theories attached to it.</p>
+<p>Why little context? I feel like I might be giving too much. Yet I want to create that openness. I also suspect that my publications are not that difficult: they are just tools to present your work in a different way, and it’s super exciting to work towards them. I never think in advance: this must be the book or so. I assume many artists put too much pressure on this. I would enjoy thinking about how the work of other artists is best represented, or conversely: handing my work over and seeing what comes out if someone were to design and publish a book for me. It’s fun to play with this; so that a book doesn’t become an illustration of what you show, but something in itself, like a visual maze where you take out what you want and where no structure is imposed.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-18.jpg" alt=""></figure>
+<p><strong>HVC: Do you consider yourself an intuitive artist? Does ‘the day’ influence what you create?</strong></p>
+<p>That will definitely have an effect on the choices you make. Maybe on a frustrating day, I’m less cautious, I have more of a ‘Fuck it, I’m going for it!’ attitude. I try to use that power of creation to push through things, to bend that energy; to transform it into another vitality, so you don’t get stuck in it. But I find that label so one-dimensional; there is never just intuition; there is always some framework. I never wait for something to just appear on the page.</p>
+<p>I don’t feel that making work is ‘labor’. Because studio time takes time away from life outside. You really have to be able to pull yourself away from the so-called real and practical life outside.</p>
+<p>On one hand, it is 'work' of course, but I can really work for hours and lose track of time. However, it also helps to clear your head first by doing some 'household' tasks and then heading to the studio fresh. Even when you teach, it takes a while to distance yourself. But right now, that's only eight hours a week, which is manageable.</p>
+<p><strong>HVC: How do you try to make a difference?</strong></p>
+<p><strong>HVC: If you look too long at other artists, you start to compare, and that’s not always motivating. (laughs) I have always felt that by constructing quite personal works, I generate a difference nonetheless. I don’t see many drawings like mine. Do I sound pretentious?</strong></p>
+<p>Not at all! You are also supported, which gives you courage as well. Musician Björk says: ‘You can only do something artistic if the judgment of others doesn’t affect you.’ A statement by artist Wim Delvoye is: ‘Art is not useful, it’s pure entertainment.’</p>
+<p>I don’t agree with that last statement; then your work is only seen as something decorative.</p>
+<p>And it is anything but that, Ines!</p>
+<p><strong>HVC: , January 24</strong></p>
+<p>Photos: STEVEN DECROOS</p>
+<p>Nodenaysteen, Predikherenlei 4a, 9000 Ghent</p>
+<p>Until March 3, 2023, always on Friday, Saturday &amp; Sunday from 1 PM to 6 PM or by appointment.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-19.jpg" alt=""></figure>
+<p>www.nodenaysteen.org, www.inesclaus.com</p></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/ines-claus.html">Artist: Ines Claus →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Discover</h4><ul class="fnav">
+<li><a href="../expo/index.html">Exhibitions</a></li>
+<li><a href="../kunstenaar/index.html">Artists</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Involved</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visit</a></li>
+<li><a href="../over.html">About</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation supports contemporary artistic practices that originate from research, process, and transfer.</span></div></div></footer>
+</body></html>
