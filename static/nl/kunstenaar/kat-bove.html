@@ -1,6 +1,22 @@
 <!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kat Bové — DeNode Foundation</title>
+<meta name="description" content="Kat Bové is een Belgische kunstenares die in felle kleuren en luipaardprints door het leven lijkt te dansen. Achter die vrolijke façade schuilt een introverte maker die haar demonen, twijfels en vrage">
+<meta property="og:title" content="Kat Bové — DeNode Foundation">
+<meta property="og:description" content="Kat Bové is een Belgische kunstenares die in felle kleuren en luipaardprints door het leven lijkt te dansen. Achter die vrolijke façade schuilt een introverte maker die haar demonen, twijfels en vrage">
+<meta property="og:image" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/_assets/images/kunstenaar/kat-bove/portret.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/nl/kunstenaar/kat-bove.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -19,11 +35,18 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
 .dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
-.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -55,22 +78,29 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/kunstenaar/kat-bove.html">EN</a><a class="lg" href="../../fr/kunstenaar/kat-bove.html">FR</a></div></nav>
-</div></div></header>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/kunstenaar/kat-bove.html">EN</a><a class="lg" href="../../fr/kunstenaar/kat-bove.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a></div>
+</header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Kunstenaars</a> / Kat Bové</div></div>
 
-<section class="dn-hero"><div class="dn-hero__img"><img src="/images/kat-bove-solo-assenede.webp" alt="Kat Bové"></div>
+<section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/kunstenaar/kat-bove/portret.jpg" style="object-position:center 18%" alt="Kat Bové"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Kunstenaar</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Kat Bové</h1>
 <div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°1984 · beeldend kunstenaar</div>
 <p class="dn-lead" style="font-size:19px">Kat Bové is een Belgische kunstenares die in felle kleuren en luipaardprints door het leven lijkt te dansen. Achter die vrolijke façade schuilt een introverte maker die haar demonen, twijfels en vragen al jarenlang op papier uitwerkt. Jarenlang schilderde ze uitsluitend voor zichzelf; pas de voorbije jaren deelt ze haar werk met een breder publiek.</p></div></section>
-<section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
-<div class="dn-head"><h2 class="dn-h2">Over</h2></div><p>Naast haar kunstenaarschap werkt Kat als airhostess. Onderweg reizen haar pen en papier altijd mee; ze portretteert er haar collega's en bouwt zo aan een intiem beeldarchief. In haar werk keren dualiteit, maskers en de zoektocht naar een geïdealiseerde, krachtige versie van zichzelf voortdurend terug, vaak met een gezonde dosis (zelf)humor.</p><p>'Give me a sketchbook to live in' (Stichting DeNode, 2026, bijna 300 pagina's) bundelt meer dan twintig jaar innerlijke strijd, bevolkt door engelen en demonen. Het opent met de waarschuwing 'DON'T READ A WORD IN THIS DIARY, OTHERWISE KARMA WILL FIND YOU' en eindigt met 'FUCK DE MENSEN'.</p></div>
-<dl class="dn-dl"><dt>Bij DeNode</dt><dd>2 tentoonstellingen · 2024–2025</dd></dl></div></div></section>
+<section class="dn-section"><div class="dn-wrap"><div class="dn-prose">
+<div class="dn-head"><h2 class="dn-h2">Over</h2></div><p>Naast haar kunstenaarschap werkt Kat als airhostess. Onderweg reizen haar pen en papier altijd mee; ze portretteert er haar collega's en bouwt zo aan een intiem beeldarchief. In haar werk keren dualiteit, maskers en de zoektocht naar een geïdealiseerde, krachtige versie van zichzelf voortdurend terug, vaak met een gezonde dosis (zelf)humor.</p><p>'Give me a sketchbook to live in' (Stichting DeNode, 2026, bijna 300 pagina's) bundelt meer dan twintig jaar innerlijke strijd, bevolkt door engelen en demonen. Het opent met de waarschuwing 'DON'T READ A WORD IN THIS DIARY, OTHERWISE KARMA WILL FIND YOU' en eindigt met 'FUCK DE MENSEN'.</p></div></div></section>
 <section class="dn-band"><div class="dn-wrap"><h2 class="dn-h3" style="color:#fff;margin-bottom:20px">Bij DeNode</h2>
 <ul class="dn-rowlist"><li><a href="../expo/who-is-your-god.html"><span class="d">2025/03/15 – 2025/04/13</span><span class="t">Who is your God, Where is She</span><span style="margin-left:auto">→</span></a></li><li><a href="../expo/exponentieel.html"><span class="d">2024/12/07 – 2025/01/12</span><span class="t">(expo)nentieel</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
 
+<section class="dn-section" style="background:var(--paper2);padding:56px 0"><div class="dn-wrap">
+<div class="dn-eyebrow">Interview · <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
+<p class="dn-lead" style="margin:14px 0 22px">In gesprek met Kat Bové.</p>
+<p><a class="dn-btn dn-btn--ghost" href="../artikel/between-mask-and-identity.html">Lees het interview (20 a) →</a></p>
+</div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Werk</h2></div>
-<div class="dn-gal"><figure><img src="/images/kat-bove-solo-assenede.webp" alt="Kat Bové"><figcaption>Kat Bové</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/3498084608_008.jpg.jpg" alt="3498084608 008.jpg"><figcaption>3498084608 008.jpg</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/Gofuckyourzalf.jpg" alt="Gofuckyourzalf"><figcaption>Gofuckyourzalf</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/airhost.jpg" alt="airhost"><figcaption>airhost</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/givemeasketchbook.jpg" alt="givemeasketchbook"><figcaption>givemeasketchbook</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/groot-kerk.jpg" alt="groot kerk"><figcaption>groot kerk</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/hoofdaf-fluo.jpg" alt="hoofdaf fluo"><figcaption>hoofdaf fluo</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/if-youre-so-hurt.jpg" alt="if youre so hurt"><figcaption>if youre so hurt</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/modelstudie.jpg" alt="modelstudie"><figcaption>modelstudie</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/oldskool.jpg" alt="oldskool"><figcaption>oldskool</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/onlyfans.jpg" alt="onlyfans"><figcaption>onlyfans</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/portret.jpg" alt="portret"><figcaption>portret</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/sextampon.jpg" alt="sextampon"><figcaption>sextampon</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/thelovers.jpg" alt="thelovers"><figcaption>thelovers</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/thevillain.jpg" alt="thevillain"><figcaption>thevillain</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/unnamed-11-kopie.jpg" alt="unnamed 11 kopie"><figcaption>unnamed 11 kopie</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/unnamed-5.jpg" alt="unnamed 5"><figcaption>unnamed 5</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/unnamed.jpg" alt="unnamed"><figcaption>unnamed</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/wanttokillyou.jpg" alt="wanttokillyou"><figcaption>wanttokillyou</figcaption></figure><figure><img src="/_assets/images/kunstenaar/kat-bove/wiener.jpg" alt="wiener"><figcaption>wiener</figcaption></figure></div></div></section>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/images/kat-bove-solo-assenede.webp" alt="Kat Bové"><figcaption>Kat Bové</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/3498084608_008.jpg.jpg" alt="3498084608 008.jpg"><figcaption>3498084608 008.jpg</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/Gofuckyourzalf.jpg" alt="Gofuckyourzalf"><figcaption>Gofuckyourzalf</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/airhost.jpg" alt="airhost"><figcaption>airhost</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/givemeasketchbook.jpg" alt="givemeasketchbook"><figcaption>givemeasketchbook</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/groot-kerk.jpg" alt="groot kerk"><figcaption>groot kerk</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/hoofdaf-fluo.jpg" alt="hoofdaf fluo"><figcaption>hoofdaf fluo</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/if-youre-so-hurt.jpg" alt="if youre so hurt"><figcaption>if youre so hurt</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/modelstudie.jpg" alt="modelstudie"><figcaption>modelstudie</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/oldskool.jpg" alt="oldskool"><figcaption>oldskool</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/onlyfans.jpg" alt="onlyfans"><figcaption>onlyfans</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/portret.jpg" alt="portret"><figcaption>portret</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/sextampon.jpg" alt="sextampon"><figcaption>sextampon</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/thelovers.jpg" alt="thelovers"><figcaption>thelovers</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/thevillain.jpg" alt="thevillain"><figcaption>thevillain</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/unnamed-11-kopie.jpg" alt="unnamed 11 kopie"><figcaption>unnamed 11 kopie</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/unnamed-5.jpg" alt="unnamed 5"><figcaption>unnamed 5</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/unnamed.jpg" alt="unnamed"><figcaption>unnamed</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/wanttokillyou.jpg" alt="wanttokillyou"><figcaption>wanttokillyou</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/wiener.jpg" alt="wiener"><figcaption>wiener</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/katrien-bove-002.jpg" alt="Kat Bové — Foto: Pixelbound"><figcaption>Kat Bové — Foto: Pixelbound</figcaption></figure></div></div></section>
+
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
@@ -83,7 +113,7 @@ if(!beelden.length)return;
 var idx=0;
 function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
-  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
 function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
 beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
@@ -105,11 +135,14 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
 <li><a href="../publicaties.html">Publicaties</a></li>
 <li><a href="../collectie.html">Collectie</a></li>
+<li><a href="../shop.html">Shop</a></li>
 <li><a href="../event/index.html">Events</a></li></ul></div>
 <div><h4>Betrokken</h4><ul class="fnav">
 <li><a href="../bezoek.html">Bezoek</a></li>
 <li><a href="../over.html">Over</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inschrijving%20nieuwsbrief&body=Graag%20schrijf%20ik%20me%20in%20voor%20de%20DeNode-nieuwsbrief.%0ANaam%3A%20">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode ondersteunt actuele artistieke praktijken die hun oorsprong vinden in onderzoek, proces en overdracht.</span></div></div></footer>
 </body></html>

@@ -1,6 +1,22 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Entretien avec Nicolas Van Parys — DeNode Foundation</title>
+<meta name="description" content="printemps 2026 — ENTRETIEN AVEC NICOLAS VAN PARYS">
+<meta property="og:title" content="Entretien avec Nicolas Van Parys — DeNode Foundation">
+<meta property="og:description" content="printemps 2026 — ENTRETIEN AVEC NICOLAS VAN PARYS">
+<meta property="og:image" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-01.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/fr/artikel/interview-nicolas-van-parys.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -19,11 +35,18 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
 .dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
-.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -55,20 +78,22 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-nicolas-van-parys.html">NL</a><a class="lg" href="../../en/artikel/interview-nicolas-van-parys.html">EN</a><span class="lg active">FR</span></div></nav>
-</div></div></header>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-nicolas-van-parys.html">NL</a><a class="lg" href="../../en/artikel/interview-nicolas-van-parys.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+</header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Entretien avec Nicolas Van Parys</div></div>
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">interview · 2026-05-11</div>
 <h1 class="dn-h2" style="margin:10px 0 6px">Entretien avec <a href="../kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></h1>
 
-<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">Traduction IA</div>
+<div class="dn-note" style="margin-top:10px">Traduction IA</div>
 </div></section>
 
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>printemps 2026 — ENTRETIEN AVEC NICOLAS VAN PARYS</p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-01.jpg" alt=""></figure>
-<p><strong>Hilde Van Canneyt (HVC) : Nicolas, merci de me recevoir ici dans ton atelier. Je vois surtout beaucoup de peintures et de documentation accrochées aux murs. Il y a aussi beaucoup de lumière ici — bref, tu as un bel atelier, solide. Est-ce un endroit où tu aimes passer du temps ?</strong></p>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC) : Nicolas, merci de me recevoir ici dans ton atelier. Je vois surtout beaucoup de peintures et de documentation accrochées aux murs. Il y a aussi beaucoup de lumière ici — bref, tu as un bel atelier, solide. Est-ce un endroit où tu aimes passer du temps ?</strong></p>
 <p>Nicolas Van Parys (NVP) : Sans aucun doute.</p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-02.jpg" alt=""></figure>
 <p><strong>HVC : Tu as longtemps eu aussi un atelier partagé chez Nucleo – le désormais fameux Vloer 0 – mais c'était plutôt pour ton travail de collage. Vois-tu cela comme deux pratiques différentes, ou est-ce une seule et même pratique ?</strong></p>
@@ -156,10 +181,14 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p><strong>HVC : Veux-tu aborder quelque chose d'éducatif ou de sociétal ? Tu y as sans doute vu beaucoup de pauvreté.</strong></p>
 <p>NVP : Il est naturellement vrai que la collaboration et les contrastes entre la manière scolaire de travailler et la façon dont les gens y vivent ressortent de toute façon. Quand je montre des images et des interviews, cela prend aussi un caractère un peu documentaire. Quand je vais à une expo, je veux être surpris, et je ne le suis plus facilement. J'essaie de me mettre au défi de créer quelque chose dans lequel — sans rien lire au préalable — on sent aussi de quoi il s'agit. Je trouve cela important.</p>
 <div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-25.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-26.jpg" alt=""></figure></div>
-<p><strong>HVC : Ton ambition est-elle que les visiteurs de ton expo Kashi Rupé – Unfolded à la Fondation DeNode soient un instant arrachés au monde ordinaire ? NVP : Oui. Par une vidéo, mes peintures et l'interaction avec les gens. Je n'ai pas encore décidé sous quelle forme, mais je voudrais au moins traiter un espace qui laisse une trace indienne, pour que tout ne soit pas fait de petites salles blanches. L'image idéale serait que je crée presque une scène de rue, avec pour ainsi dire l'odeur et l'agitation en prime. Il y a tant de facettes qui jouent un rôle, presque comme un collage de l'Inde. Mais cela reste à discuter. (clin d'œil) HVC : Sounds good ! Tu en apprendras sans doute toi-même tellement que cela transparaîtra dans ton travail futur.</strong></p>
-<p>NVP : Ce qui est chouette, c'est que je me permets de faire un maximum de recherche, même si je me sens toujours peintre. En tant qu'extérieur, on attend peut-être autre chose, mais pour moi c'est aussi un défi. Cela ne rend pas les choses plus faciles, mais je prends le temps de bien faire. HVC : C'est important — comme l'art, naturellement !</p>
+<p><strong>HVC : Ton ambition est-elle que les visiteurs de ton expo Kashi Rupé – Unfolded à la Fondation DeNode soient un instant arrachés au monde ordinaire ?</strong></p>
+<p>NVP : Oui. Par une vidéo, mes peintures et l'interaction avec les gens. Je n'ai pas encore décidé sous quelle forme, mais je voudrais au moins traiter un espace qui laisse une trace indienne, pour que tout ne soit pas fait de petites salles blanches. L'image idéale serait que je crée presque une scène de rue, avec pour ainsi dire l'odeur et l'agitation en prime. Il y a tant de facettes qui jouent un rôle, presque comme un collage de l'Inde. Mais cela reste à discuter. (clin d'œil)</p>
+<p><strong>HVC : Sounds good ! Tu en apprendras sans doute toi-même tellement que cela transparaîtra dans ton travail futur.</strong></p>
+<p>NVP : Ce qui est chouette, c'est que je me permets de faire un maximum de recherche, même si je me sens toujours peintre. En tant qu'extérieur, on attend peut-être autre chose, mais pour moi c'est aussi un défi. Cela ne rend pas les choses plus faciles, mais je prends le temps de bien faire.</p>
+<p><strong>HVC : C'est important — comme l'art, naturellement !</strong></p>
 <p><strong>HVC : <a href="https://www.hildevancanneyt.be/">hildevancanneyt.be</a> · <a href="http://www.nicolasvanparys.com/">nicolasvanparys.com</a> · <a href="https://www.denode.be/">denode.be</a></strong></p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-27.jpg" alt=""></figure></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
 
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/nicolas-van-parys.html">Artiste: Nicolas Van Parys →</a></p>
 </div></section>
@@ -175,7 +204,7 @@ if(!beelden.length)return;
 var idx=0;
 function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
-  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
 function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
 beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
@@ -197,11 +226,14 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../kunstenaar/index.html">Artistes</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
 <li><a href="../collectie.html">Collection</a></li>
+<li><a href="../shop.html">Boutique</a></li>
 <li><a href="../event/index.html">Événements</a></li></ul></div>
 <div><h4>Impliqué</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origine dans la recherche, le processus et le transfert.</span></div></div></footer>
 </body></html>

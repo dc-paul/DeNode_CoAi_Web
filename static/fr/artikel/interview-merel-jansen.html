@@ -1,6 +1,22 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Entretien avec Merel Jansen — DeNode Foundation</title>
+<meta name="description" content="DeNode présente @Nodenaysteen : Merel Jansen (NL) Predikherenlei 4, 9000 Gand. Dernier week-end pour voir l'exposition ! 10 et 11 janvier 26. Gand, automne 2025 ENTRETIEN AVEC MEREL JANSEN (°1990)">
+<meta property="og:title" content="Entretien avec Merel Jansen — DeNode Foundation">
+<meta property="og:description" content="DeNode présente @Nodenaysteen : Merel Jansen (NL) Predikherenlei 4, 9000 Gand. Dernier week-end pour voir l'exposition ! 10 et 11 janvier 26. Gand, automne 2025 ENTRETIEN AVEC MEREL JANSEN (°1990)">
+<meta property="og:image" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/_assets/images/interview/interview-merel-jansen/merel-jansen-02.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/fr/artikel/interview-merel-jansen.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -19,11 +35,18 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
 .dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
-.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -55,19 +78,21 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-merel-jansen.html">NL</a><a class="lg" href="../../en/artikel/interview-merel-jansen.html">EN</a><span class="lg active">FR</span></div></nav>
-</div></div></header>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-merel-jansen.html">NL</a><a class="lg" href="../../en/artikel/interview-merel-jansen.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+</header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Entretien avec Merel Jansen</div></div>
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">interview · 2026-01-04</div>
 <h1 class="dn-h2" style="margin:10px 0 6px">Entretien avec <a href="../kunstenaar/merel-jansen.html">Merel Jansen</a></h1>
 
-<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">Traduction IA</div>
+<div class="dn-note" style="margin-top:10px">Traduction IA</div>
 </div></section>
 
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>DeNode présente @Nodenaysteen : Merel Jansen (NL) Predikherenlei 4, 9000 Gand. Dernier week-end pour voir l'exposition ! 10 et 11 janvier 26. Gand, automne 2025 ENTRETIEN AVEC MEREL JANSEN (°1990)</p>
-<p><strong>Hilde Van Canneyt (HVC) : Chère Merel, je t'ai rencontrée à Nodenaysteen à Gand, où tu présentes en quelque sorte une duo-exposition avec toi-même : la galerie a récemment été doublée d'un espace supplémentaire et tu y montres à la fois des œuvres figuratives et abstraites. Mais avant d'y aller, faisons un petit ‘rewind’. Est-ce que tu dessinais et bricolais sans cesse étant enfant ? Ou étaient-ce tes parents qui t'emmenaient dans des musées ? Ou peut-être que ton père était un artiste célèbre ? (sourit)</strong></p>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC) : Chère Merel, je t'ai rencontrée à Nodenaysteen à Gand, où tu présentes en quelque sorte une duo-exposition avec toi-même : la galerie a récemment été doublée d'un espace supplémentaire et tu y montres à la fois des œuvres figuratives et abstraites. Mais avant d'y aller, faisons un petit ‘rewind’. Est-ce que tu dessinais et bricolais sans cesse étant enfant ? Ou étaient-ce tes parents qui t'emmenaient dans des musées ? Ou peut-être que ton père était un artiste célèbre ? (sourit)</strong></p>
 <p>Merel Jansen (MJ) : (rit) Nous visitions peu de musées. Cela venait vraiment de moi. Mes parents étaient créatifs : il y avait toujours du matériel à la maison et tout était possible. On pouvait se salir, le bazar pouvait rester là, expérimenter était une évidence. Mais la question de ce que je voulais devenir n'a en fait jamais existé, c'était toujours clair. Et à la maison, cela n'a fait que m'encourager. Je voulais surtout découvrir par moi-même, pas à travers des musées ou l'histoire de l'art. Cela est venu plus tard. Combien je savais peu de choses sur l'art chrétien, par exemple ! Alors qu'il est bien sûr omniprésent en Belgique ! C'est là que j'ai finalement trouvé beaucoup d'inspiration. L'histoire de l'art me passionne énormément ; j'ai vraiment commencé à remplir mon sac à dos. J'ai étudié à l'AKI ArtEZ Academy of Art and Design à Enschede, une académie fantastique où l'on obtient énormément de liberté. Cela signifiait beaucoup d'expérimentation, mais moins de focus théorique. J'avais 21 ans quand j'ai obtenu mon diplôme. Presque tout mon travail a été acheté à la minute par AkzoNobel, c'était tout de suite bam. Les galeries ont montré de l'intérêt, alors que j'avais grandi avec l'idée qu'il ne fallait pas trop s'attendre à une vie d'artiste. Mais depuis le jour où j'ai eu mon diplôme, ça a en fait incroyablement bien fonctionné. Je n'étais pas du tout préparée à cela, et encore moins à la vie après l'académie.</p>
 <p>Je suis retournée vivre chez mes parents et j'ai aménagé un atelier dans le grenier. À partir de ce moment-là, c'était juste faire, faire, faire. Je travaillais avec du textile, j'ai reçu de l'attention et de la publicité, mais j'étais en même temps profondément malheureuse, car je n'expérimentais plus. Tout à coup, c'était sérieux : c'est ce que tu fais. Alors que ma jeunesse et mon temps à l'académie consistaient justement en ouverture, apprentissage et échec. Je me sentais oppressée, comme si j'étais coincée, parce que les gens s'attendaient à ce que je fasse des portraits à l'aquarelle sur toile. À ce moment-là, j'ai en fait fui vers la Belgique (rit). J'ai vu qu'il y avait une formation textile et j'ai pensé : ok, que puis-je encore découvrir là-bas ? C'est ainsi que je suis arrivée à Sint-Lucas Gand. Mais là, j'ai vite réalisé que j'étais trop libre d'esprit et trop originale pour le cadre académique. Les enseignants ne savaient pas quoi faire avec moi et inversement. Le système scolaire était très différent de celui des Pays-Bas et j'avais du mal à trouver ma place. J'ai trouvé Gand fantastique, l'école moins. Mais cette résistance m'a aidée à me replonger dans la peinture.</p>
 <p>Grâce au yoga, j'ai rencontré une amie qui étudiait la peinture à Sint-Lucas. Je me souviens d'être entrée dans l'atelier, d'avoir senti l'odeur de la térébenthine et d'avoir pensé : qu'est-ce que je fais ici ? Je dois être ici ! Je suis retournée à Arnhem, où j'ai obtenu mon master. Nous sommes en 2017. Entre-temps, j'ai reçu une offre d'emploi comme conseillère technique dans une grande usine de peinture – Royal Talens – et ainsi cela a continué.</p>
@@ -110,6 +135,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>MJ Regarder ce que cela fait lorsqu'ils s'y perdent, sans paniquer. Qu'est-ce qui est là et qu'est-ce que je ressens là ? Peut-être que ce sont aussi des miroirs de ce que cela fait avec toi ? HVC Une réflexion !</p>
 <p><strong>HVC : DeNode présente @ Nodenaysteen, Gand : Merel Jansen (NL), Predikherenlei 4, 9000 Gand. Dernier week-end : 10 et 11 janvier 26. https://www.merel-jansen.nl/ https://www.hildevancanneyt.be/</strong></p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-merel-jansen/merel-jansen-20.jpg" alt=""></figure></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
 
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/merel-jansen.html">Artiste: Merel Jansen →</a></p>
 </div></section>
@@ -125,7 +151,7 @@ if(!beelden.length)return;
 var idx=0;
 function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
-  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
 function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
 beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
@@ -147,11 +173,14 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../kunstenaar/index.html">Artistes</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
 <li><a href="../collectie.html">Collection</a></li>
+<li><a href="../shop.html">Boutique</a></li>
 <li><a href="../event/index.html">Événements</a></li></ul></div>
 <div><h4>Impliqué</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origine dans la recherche, le processus et le transfert.</span></div></div></footer>
 </body></html>

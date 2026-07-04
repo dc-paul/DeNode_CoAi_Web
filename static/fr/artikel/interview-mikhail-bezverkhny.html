@@ -1,6 +1,22 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Interview avec Bezverkhni de Gand/Mikhail Bezverkhni — DeNode Foundation</title>
+<meta name="description" content="Automne 2024">
+<meta property="og:title" content="Interview avec Bezverkhni de Gand/Mikhail Bezverkhni — DeNode Foundation">
+<meta property="og:description" content="Automne 2024">
+<meta property="og:image" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/_assets/images/expo/bij-de-meesters/Paul-De-Roo_Misha.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/fr/artikel/interview-mikhail-bezverkhny.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -19,11 +35,18 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
 .dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
-.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -55,20 +78,22 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-mikhail-bezverkhny.html">NL</a><a class="lg" href="../../en/artikel/interview-mikhail-bezverkhny.html">EN</a><span class="lg active">FR</span></div></nav>
-</div></div></header>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-mikhail-bezverkhny.html">NL</a><a class="lg" href="../../en/artikel/interview-mikhail-bezverkhny.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+</header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview avec Bezverkhni de Gand/Mikhail Bezverkhni</div></div>
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">interview · 2026-03-21</div>
 <h1 class="dn-h2" style="margin:10px 0 6px">Interview avec Bezverkhni de Gand/Mikhail Bezverkhni</h1>
 
-<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">Traduction IA</div>
+<div class="dn-note" style="margin-top:10px">Traduction IA</div>
 </div></section>
 
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Automne 2024</p>
 <p>Interview avec Bezverkhni de Gand/Mikhail Bezverkhni (°1947)</p>
-<p><strong>Hilde Van Canneyt (HVC): Cher Bezverkhni, quand avez-vous commencé à peindre ?</strong></p>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC): Cher Bezverkhni, quand avez-vous commencé à peindre ?</strong></p>
 <p>BvG Quand j'avais 29 ans, j'ai suivi une formation artistique large pendant quatorze ans, avec quatre piliers : la musique, la peinture, la poésie et la philosophie. J'ai reçu cela du grand maestro Vladimir Raykov, élève de Rafaël Falk, un artiste soviétique renommé. Jusqu'aux années 90, j'étais son élève et je le visitais plusieurs fois par semaine. Il ne m'a pas seulement enseigné les fondamentaux techniques, mais surtout l'essence de ce qu'est réellement l'art. Beaucoup possèdent la technique, mais cela ne fait pas d'eux des artistes. Il est crucial de comprendre pourquoi l'art existe et quel rôle il joue dans la vie.</p>
 <p>Dans les années 90, j'ai déménagé en Belgique, d'abord mon deuxième pays, aujourd'hui ma patrie. Pendant quinze ans, j'ai gardé mes peintures pour moi ; presque personne ne savait que j'étais occupé à cela. À l'extérieur, j'étais surtout musicien et compositeur. Après seize ans, quelque chose de paradoxal s'est produit. En 2007, j'ai organisé un concert à De Rode Pomp à Gand et j'y ai associé une tombola. Le premier prix était une de mes œuvres. J'ai prétendu que je n'avais jamais peint. (rit) Pour la première fois depuis longtemps, j'ai créé à nouveau une peinture et tout s'est débloqué : émotion, désir et faim. Soudain, je peignais à nouveau cinq œuvres par jour. Des expositions à l'étranger ont suivi de manière inattendue. À Boulogne, j'ai donné un concert, où même l'évêque était présent ! À ce moment-là, j'étais à la fois musicien et artiste visuel.</p>
 <p><strong>HVC: Dois-je imaginer que jouer du violon demande une concentration totale, tandis que peindre vous procure plutôt un sentiment de liberté ?</strong></p>
@@ -113,6 +138,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p><strong>HVC : C'est bien ! Restez vous-même, Bezverkhni !</strong></p>
 <p>@hildevancanneyt</p>
 <p>avec Gipi</p></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
 
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/mikhail-bezverkhny.html">Artiste: Mikhail Bezverkhny →</a></p>
 </div></section>
@@ -128,7 +154,7 @@ if(!beelden.length)return;
 var idx=0;
 function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
-  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
 function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
 beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
@@ -150,11 +176,14 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../kunstenaar/index.html">Artistes</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
 <li><a href="../collectie.html">Collection</a></li>
+<li><a href="../shop.html">Boutique</a></li>
 <li><a href="../event/index.html">Événements</a></li></ul></div>
 <div><h4>Impliqué</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origine dans la recherche, le processus et le transfert.</span></div></div></footer>
 </body></html>

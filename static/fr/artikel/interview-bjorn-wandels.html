@@ -1,6 +1,22 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Entretien avec Björn Wandels — DeNode Foundation</title>
+<meta name="description" content="Gand, printemps 24 ENTRETIEN AVEC BJORN WANDELS (1979)">
+<meta property="og:title" content="Entretien avec Björn Wandels — DeNode Foundation">
+<meta property="og:description" content="Gand, printemps 24 ENTRETIEN AVEC BJORN WANDELS (1979)">
+<meta property="og:image" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/_assets/images/interview/interview-bjorn-wandels/bjorn-wandels-01.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/fr/artikel/interview-bjorn-wandels.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -19,11 +35,18 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
 .dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
-.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -55,20 +78,22 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-bjorn-wandels.html">NL</a><a class="lg" href="../../en/artikel/interview-bjorn-wandels.html">EN</a><span class="lg active">FR</span></div></nav>
-</div></div></header>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-bjorn-wandels.html">NL</a><a class="lg" href="../../en/artikel/interview-bjorn-wandels.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+</header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Entretien avec Björn Wandels</div></div>
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">interview · 2024-05-01</div>
 <h1 class="dn-h2" style="margin:10px 0 6px">Entretien avec <a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a></h1>
 
-<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div><div class="dn-note" style="margin-top:10px">Traduction IA</div>
+<div class="dn-note" style="margin-top:10px">Traduction IA</div>
 </div></section>
 
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Gand, printemps 24 ENTRETIEN AVEC BJORN WANDELS (1979)</p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-bjorn-wandels/bjorn-wandels-01.jpg" alt=""></figure>
-<p><strong>Hilde Van Canneyt (HVC): Cher Björn, nous sommes ici sous le premier soleil de printemps avec une tasse de café sur la terrasse de LaBath à Gand. En ce moment, tu as une présentation en vitrine à Nodenaysteen – qui se trouve dans le prolongement de la Graslei. Comment décrirais-tu ta pratique artistique ? Peut-être de manière chronologique ? Je dirais : lance-toi.</strong></p>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC): Cher Björn, nous sommes ici sous le premier soleil de printemps avec une tasse de café sur la terrasse de LaBath à Gand. En ce moment, tu as une présentation en vitrine à Nodenaysteen – qui se trouve dans le prolongement de la Graslei. Comment décrirais-tu ta pratique artistique ? Peut-être de manière chronologique ? Je dirais : lance-toi.</strong></p>
 <p>Björn Wandels (BW): J'ai étudié la photographie pendant quelques années au KASK, où j'ai rapidement eu le sentiment d'être 'déjà diplômé'. Je voulais m'obliger à chercher par moi-même, à m'identifier à mon choix de vivre en tant qu'individu. J'ai donc passé du temps dans la chambre noire. Il est important pour le public de voir qu'un photographe est généralement occupé à extraire des images du monde extérieur. Il ou elle cherche le bon angle, la bonne lumière, attend le bon moment. Il y a là, à mon avis, une trop grande valorisation, presque une aveuglement par rapport à la référence dans la soi-disant réalité. Même si je respecte cette tradition de la photographie de reportage et documentaire, je ne voulais pas cela. En fait, j'ai toujours eu une envie intérieure de mettre une sorte de monde émotionnel sur papier. Dans un grand geste, j'ai donc dirigé la caméra vers le photographe lui-même. Un peu de pathétique ne m'est pas étranger.</p>
 <p>Rapidement, j'ai ressenti que je voulais m'occuper de l'autoportrait. Je voulais, dans une deuxième phase, représenter plus largement ma vie personnelle. En fait, j'ai commencé à me limiter en termes de portée. J'ai commencé à photographier mon environnement domestique : la cuisine, ma mère, mon père, moi-même, la chambre à coucher, la salle de bain… Cela concernait des éléments privés très intimes. À cet égard, il est également important d'établir un lien avec l'album familial personnel comme un archive familiale mensongère. Chez nous, dans le salon, nous avions sous la télévision des tiroirs remplis d'albums photo, comme dans les familles typiques. Pour moi, le lien émotionnel avec la photographie était surtout cela. Comment peux-tu représenter ta propre histoire privée à travers l'album photo ? Ce sont les voyages en famille, la grand-mère qui vient en visite, toutes sortes de gribouillis et de billets d'entrée, etc. À cet égard, c'était aussi une découverte rétroactive de voir ma mère s'occuper, qui prenait très souvent des photos avec des appareils jetables, un petit Kodak, pour ensuite coller ces photos de manière assez disciplinée dans des albums à table certains dimanches. Ce qui est important, c'est que nous n'avons pas ici un rapport correct, qu'il y a une erreur, quelque chose qui manque ou est douteux, ou qu'il y a quelque chose au mauvais endroit. L'album nous montre ici physiquement que la mémoire est de toute façon à méfiance. C'était pour moi le point de départ pour introduire l'erreur dans ma pratique en tant que collectionneur d'images : ordonner, réordonner, désordonner intentionnellement, travailler contre la chronologie.</p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-bjorn-wandels/bjorn-wandels-02.jpg" alt=""></figure>
@@ -188,6 +213,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>www.nodenaysteen.</p>
 <p>https://www.instagram.com/bjorn_wandels/</p>
 <p>https://bemerkungenuberdiefarben.wordpress.com/</p></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
 
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/bjorn-wandels.html">Artiste: Björn Wandels →</a></p>
 </div></section>
@@ -203,7 +229,7 @@ if(!beelden.length)return;
 var idx=0;
 function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
-  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
 function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
 beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
@@ -225,11 +251,14 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../kunstenaar/index.html">Artistes</a></li>
 <li><a href="../publicaties.html">Publications</a></li>
 <li><a href="../collectie.html">Collection</a></li>
+<li><a href="../shop.html">Boutique</a></li>
 <li><a href="../event/index.html">Événements</a></li></ul></div>
 <div><h4>Impliqué</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode soutient des pratiques artistiques contemporaines qui trouvent leur origine dans la recherche, le processus et le transfert.</span></div></div></footer>
 </body></html>

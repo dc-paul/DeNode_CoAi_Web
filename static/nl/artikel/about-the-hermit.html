@@ -1,6 +1,22 @@
 <!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Over de kluizenaar diep in ons — DeNode Foundation</title>
+<meta name="description" content="Prof. Em. Freddy Decreus">
+<meta property="og:title" content="Over de kluizenaar diep in ons — DeNode Foundation">
+<meta property="og:description" content="Prof. Em. Freddy Decreus">
+<meta property="og:image" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/images/blog-about-the-hermit.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uaw2u-wqaaa-aaaal-as2cq-cai.icp0.io/nl/artikel/about-the-hermit.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -19,11 +35,18 @@
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);font-family:var(--font-ui);font-size:14px;border-radius:0;}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
 .dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
-.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;border-radius:0;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
 .dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
@@ -55,15 +78,17 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/artikel/about-the-hermit.html">EN</a><a class="lg" href="../../fr/artikel/about-the-hermit.html">FR</a></div></nav>
-</div></div></header>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/artikel/about-the-hermit.html">EN</a><a class="lg" href="../../fr/artikel/about-the-hermit.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a></div>
+</header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publicaties</a> / Over de kluizenaar diep in ons</div></div>
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
-<div class="dn-kicker">artists · June 6, 2026</div>
+<div class="dn-kicker">papers · June 6, 2026</div>
 <h1 class="dn-h2" style="margin:10px 0 6px">Over de kluizenaar diep in ons</h1>
 <div class="dn-serif-it" style="font-size:22px">Prof. Em. <a href="../kunstenaar/freddy-decreus.html">Freddy Decreus</a></div>
-<div class="dn-note" style="margin-top:12px"><a href="../kunstenaar/freddy-decreus.html">Em. Prof. Freddy Decreus</a></div>
+
 </div></section>
 <div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/images/blog-about-the-hermit.webp" alt=""></figure></div>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Met <a href="../kunstenaar/john-robinson.html">John Robinson</a> ontstaat er geen nieuwe mythe in de klassieke zin van het woord. Er staat geen held op om de chaos te overwinnen, er wordt geen goddelijke orde hersteld, en geen enkel verhaal heelt voor eens en voor altijd de breuken van de tijd.</p>
@@ -85,6 +110,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>Misschien is deze terugtrekking niet het einde van de reis. Misschien markeert het wat de Tarot de Nulpositie noemt, de plek die de Dwaas inneemt, het archetype van het potentieel. De figuur die aan de rand van de afgrond staat met bijna niets bij zich, ontdaan van zekerheid, identiteit en bestemming. Niet die triomfantelijke held van de klassieke mythe, maar de breekbare reiziger van een verbrijzeld tijdperk. De Dwaas stapt voorwaarts zonder garanties, en begint opnieuw precies ómdat alle voorgaande werelden uit elkaar zijn gevallen.</p>
 <p>In Robinsons universum is terugtrekking daarom geen einde, maar een noodzakelijke drempel: een verduisterde plek waar betekenis en existentiële oriëntatie op een totaal andere manier kunnen ontstaan, waar de ziel, na de ineenstorting van uitgeputte representaties, opnieuw durft te beginnen.</p>
 <blockquote class="dn-quote">Em. Prof. Decreus schreef deze tekst in het kader van de performances en de tentoonstelling PEOPLE RUIN PAINTINGS van John Robinson in stichting DeNode, gecureerd door <a href="../over.html#hanna-ouaziz">Hanna Ouaziz</a> — 14 februari - 28 april 2026</blockquote></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/freddy-decreus.html">Em. Prof. Freddy Decreus</a></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/people-ruin-paintings.html">Tentoonstellingen: People Ruin Paintings →</a></p>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/john-robinson.html">Kunstenaar: John Robinson →</a></p>
 </div></section>
@@ -100,7 +126,7 @@ if(!beelden.length)return;
 var idx=0;
 function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
-  cap.textContent=fc?fc.textContent:(el.alt||'');cnt.textContent=(idx+1)+' / '+beelden.length;}
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
 function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
 beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
@@ -122,11 +148,14 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
 <li><a href="../publicaties.html">Publicaties</a></li>
 <li><a href="../collectie.html">Collectie</a></li>
+<li><a href="../shop.html">Shop</a></li>
 <li><a href="../event/index.html">Events</a></li></ul></div>
 <div><h4>Betrokken</h4><ul class="fnav">
 <li><a href="../bezoek.html">Bezoek</a></li>
 <li><a href="../over.html">Over</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inschrijving%20nieuwsbrief&body=Graag%20schrijf%20ik%20me%20in%20voor%20de%20DeNode-nieuwsbrief.%0ANaam%3A%20">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode ondersteunt actuele artistieke praktijken die hun oorsprong vinden in onderzoek, proces en overdracht.</span></div></div></footer>
 </body></html>
