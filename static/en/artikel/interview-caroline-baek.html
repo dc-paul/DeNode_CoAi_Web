@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -93,7 +95,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Ghent, autumn 24 Now on view: Expo VIER, 4 works, 19/10 – 17/11, Nodenaysteen Predikherenlei 4a, 9000 Ghent INTERVIEW WITH CAROLINE BAEK (°1963)</p>
 <p>‘A painter must master line and color.’</p>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-01.jpg" alt=""></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-01.jpg" alt="" data-cap=""></figure>
 <p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC): Dear Caroline, you signed up for the Artist Meeting at the Casino of Knokke, where I, along with Willem Elias and Hugo Brutin, am one of the so-called ‘experts’, and look, your work was discovered by the advisory team of Nodenaysteen in Ghent during the four-day expo in August, where you will now exhibit in October 2024. Who knew the bubbles of a vernissage could serve such a purpose! (winks)</strong></p>
 <p>Caroline Baek (CB): Why say ‘no’?</p>
 <p><strong>HVC: Exactly! Life is about daring to say ‘yes’!</strong></p>
@@ -125,7 +127,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>'The line tells the story, the color says what cannot be said.' You also describe the idea that paint is matter, nature is born matter, paint is manufactured matter. It is the philosophical material of your work. We also talked about how images nowadays go by way too fast. And you want exactly the opposite. The only place where we indeed stare into space, contemplate, is at the sea, looking out over the horizon. With your work, you want to achieve that; that people literally pause for a moment. The basic premise of your work stands in stark contrast to our technological superficial and purely economic society, where only – especially now with Instagram and TikTok, only the three-second 'wow' moment counts. And so we must continuously be captivated by new images.</p>
 <p>CB That's why I found it so interesting that those people from Nodenaysteen in Ghent saw the spiritual aspect of that work, despite the fact that the atmosphere in Knokke was anything but spiritual due to so many people and therefore somewhat noisy, of course. That they want to approach it with a church-like perspective for the exhibition doesn't interest me that much. (laughs) But the spiritual aspect does, which is why I find myself in it. If the Nodenaysteen team felt that there, the visitors of the gallery will likely see it too, because it will be presented in that context much more calmly.</p>
 <p><strong>HVC: Can you tell us something about your 'blue' works under the title Outremer 'la préface', sculptur le bleu?</strong></p>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-02.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-03.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-04.jpg" alt=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-05.jpg" alt=""></figure></div>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-02.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-03.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-04.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-05.jpg" alt="" data-cap=""></figure></div>
 <p>CB The material is poster paint. I created that series in four months. The roll of paper ran out, so I stopped. (laughs) It sounds a bit caricatural, but I don't want to repeat myself. When I think I've reached the end of a chapter or story, I stop. The Outremer series is something that is still ongoing for me; I don't know if it will ever come to an end.</p>
 <p><strong>HVC: You also try to approach that simplicity by never mixing different techniques. And you told me that there are two main actors, color and line; the line tells the story, the color says what cannot be said. You also say that when painting, the images spontaneously impose themselves on you.</strong></p>
 <p>CB I don't search for images, in the sense that I don't use any visual material. I am someone who tortures his brain. It's actually a mental and philosophical journey of everything I encounter along the way and that I don't actively seek out. Sometimes it's in music, other times it's just something I saw on the bus or in nature or something I heard or saw in a movie... That gives me a spark in a direction that has nothing to do with that, but feeds me in my overall reasoning. I actually try to clarify my own thoughts. That's not always good. (laughs)</p>
@@ -168,7 +170,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>4 works</p>
 <p>19/10 – 17/11</p>
 <p>Nodenaysteen, Predikherenlei 4a, 9000 Gent</p>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-06.jpg" alt=""></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-06.jpg" alt="" data-cap=""></figure>
 <p>nodenaysteen.org carolinebaek.be</p></div>
 <div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
 

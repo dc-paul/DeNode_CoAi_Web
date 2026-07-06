@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -87,9 +89,9 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/kunstenaar/freddy-decreus/freddy-decreus.jpg" alt="Em. Prof. Freddy Decreus"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Artiste</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Em. Prof. Freddy Decreus</h1>
 <div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">auteur &amp; critique</div>
-<p class="dn-lead" style="font-size:19px">Prof. ém. Freddy Decreus (°1949) a été attaché pendant trente ans au département des Langues classiques de l'Université de Gand. Il y a également fondé le cours de Théâtre rituel pour le département des Études théâtrales et a écrit sur le fonctionnement bio-énergétique du corps de l'acteur. Sa récente monographie 'The Ritual Theatre of Theodoros Terzopoulos' (Routledge, 2019) a…</p></div></section>
+<p class="dn-lead" style="font-size:19px">Prof. ém. Freddy Decreus (°1949) a été attaché pendant trente ans au département des Langues classiques de l'Université de Gand. Il y a également fondé le cours de Théâtre rituel pour le département des Études théâtrales et a écrit sur le fonctionnement bio-énergétique du corps de l'acteur.</p></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
-<div class="dn-head"><h2 class="dn-h2">À propos</h2></div><p>Prof. ém. Freddy Decreus (°1949) a été attaché pendant trente ans au département des Langues classiques de l'Université de Gand. Il y a également fondé le cours de Théâtre rituel pour le département des Études théâtrales et a écrit sur le fonctionnement bio-énergétique du corps de l'acteur. Sa récente monographie 'The Ritual Theatre of Theodoros Terzopoulos' (Routledge, 2019) a pleinement développé cette perspective, en termes d'une montée progressive de l'énergie qui traverse le corps et l'esprit (the bodymind) des acteurs — traduite métaphoriquement comme la venue et la prise de possession par Dionysos ! Ses publications sur la mythologie grecque s'appuient également sur des théories issues de la psychanalyse, des études féministes et de la psycho-énergétique, plaçant l'être humain qui se raconte au centre de sa recherche.</p></div>
+<div class="dn-head"><h2 class="dn-h2">À propos</h2></div><p>Sa récente monographie 'The Ritual Theatre of Theodoros Terzopoulos' (Routledge, 2019) a pleinement développé cette perspective, en termes d'une montée progressive de l'énergie qui traverse le corps et l'esprit (the bodymind) des acteurs — traduite métaphoriquement comme la venue et la prise de possession par Dionysos ! Ses publications sur la mythologie grecque s'appuient également sur des théories issues de la psychanalyse, des études féministes et de la psycho-énergétique, plaçant l'être humain qui se raconte au centre de sa recherche.</p></div>
 <dl class="dn-dl"><dt>Textes</dt><dd><a href="../artikel/about-the-hermit.html">L'ermite au plus profond de nous</a><br><a href="../artikel/bodies-eros-and-thanatos.html">Corps entre Éros et Thanatos</a></dd></dl></div></div></section>
 
 

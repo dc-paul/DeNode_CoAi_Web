@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -85,12 +87,12 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section"><div class="dn-wrap"><h1 class="dn-h2" style="margin-bottom:30px">Visite</h1>
-<div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/nodenaysteen_gevel_004.jpg" alt="nodenaysteen, Predikherenlei 4, Gent"><figcaption>nodenaysteen, Predikherenlei 4, Gent</figcaption></figure>
+<div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/nodenaysteen_gevel_004.jpg" alt="nodenaysteen, Predikherenlei 4, Gent" data-cap="nodenaysteen, Predikherenlei 4, Gent"><figcaption>nodenaysteen, Predikherenlei 4, Gent</figcaption></figure>
 <p>nodenaysteen / DeNode se situe au bord de la Lys, au cœur de Gand — près du pont Saint-Michel, à quelques minutes du Korenmarkt. La rue est piétonne : le dernier tronçon se fait toujours à pied, le long de l'eau.</p>
 <h2 class="dn-h3" id="adresse">Adresse</h2>
 <p>Galerie DeNode — nodenaysteen</p>
 <p><a href="https://maps.google.com/?q=Predikherenlei+4,+9000+Gent">Predikherenlei 4, 9000 Gand</a></p>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/plan-nodenaysteen.svg" alt="Plan schématique : nodenaysteen près du pont Saint-Michel"><figcaption>Plan schématique : nodenaysteen près du pont Saint-Michel</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/plan-nodenaysteen.svg" alt="Plan schématique : nodenaysteen près du pont Saint-Michel" data-cap="Plan schématique : nodenaysteen près du pont Saint-Michel"><figcaption>Plan schématique : nodenaysteen près du pont Saint-Michel</figcaption></figure>
 <h2 class="dn-h3" id="a-pied">À pied</h2>
 <p>Depuis le Korenmarkt, marchez vers le pont Saint-Michel et descendez sur le quai à gauche juste avant le pont : c'est la Predikherenlei — le numéro 4 se trouve au bord de l'eau, juste en face de l'église Saint-Michel et du Pand (± 3 minutes, sans traverser l'eau). Depuis la gare de Gand-Saint-Pierre, comptez ± 30 minutes de marche à travers le centre.</p>
 <h2 class="dn-h3" id="a-velo">À vélo</h2>

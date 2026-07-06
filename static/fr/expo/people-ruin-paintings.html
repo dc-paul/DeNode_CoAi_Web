@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -109,7 +111,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p><strong>Performance #2 — lors du vernissage (13 février 2026).</strong> Sur une table, enveloppé d'un drap noir peu à peu souillé de crème fouettée, Robinson tire des cartes du tarot et fait choisir à chacun trois cartes : le passé, le présent, l'avenir. Ce qu'il révèle coupe jusqu'à l'os — amour, trahison, déception, honte. Le corps comme étude pour la peinture, entre le comique et le sacré.</p>
 <p><strong>Performance #3 — In the tub.</strong> Le baptême : clôture de la série, dont sont issues les œuvres <em>Tub</em>.</p>
 <h2 class="dn-h3" id="vues-d-exposition">Vues d'exposition</h2>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/people-ruin-paintings/20260213_DeNode_John_Robinson_vernissage-42.jpg" alt="20260213 DeNode John Robinson vernissage 42"><figcaption>20260213 DeNode John Robinson vernissage 42</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/people-ruin-paintings/John_Robinson_Poster.jpg" alt="John Robinson Poster"><figcaption>John Robinson Poster</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/people-ruin-paintings/John_Robinson_Poster_A1.jpg" alt="John Robinson Poster A1"><figcaption>John Robinson Poster A1</figcaption></figure></div>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/people-ruin-paintings/20260213_DeNode_John_Robinson_vernissage-42.jpg" alt="20260213 DeNode John Robinson vernissage 42" data-cap="20260213 DeNode John Robinson vernissage 42"><figcaption>20260213 DeNode John Robinson vernissage 42</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/people-ruin-paintings/John_Robinson_Poster.jpg" alt="John Robinson Poster" data-cap="John Robinson Poster"><figcaption>John Robinson Poster</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/people-ruin-paintings/John_Robinson_Poster_A1.jpg" alt="John Robinson Poster A1" data-cap="John Robinson Poster A1"><figcaption>John Robinson Poster A1</figcaption></figure></div>
 <h2 class="dn-h3" id="video">Vidéo</h2>
 <figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/jr-preparation-vernissage.mp4"></video><figcaption>Preparation before the vernissage — John Robinson</figcaption></figure></div></div></section>
 

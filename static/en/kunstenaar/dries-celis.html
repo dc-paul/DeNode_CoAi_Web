@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -91,7 +93,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Work</h2></div>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_2.jpg" alt="Installation view Vestiges — Photo: Dries Celis"><figcaption>Installation view Vestiges — Photo: Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_9.jpg" alt="Installation view Vestiges — Photo: Dries Celis"><figcaption>Installation view Vestiges — Photo: Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_20.jpg" alt="Installation view Vestiges — Photo: Dries Celis"><figcaption>Installation view Vestiges — Photo: Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_308.jpg" alt="Chantal Pollier and Guillaume Van Moerkercke — Vestiges — Photo: Dries Celis"><figcaption><a href="../kunstenaar/chantal-pollier.html">Chantal Pollier</a> and <a href="../kunstenaar/guillaume-van-moerkercke.html">Guillaume Van Moerkercke</a> — Vestiges — Photo: Dries Celis</figcaption></figure></div></div></section>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_2.jpg" alt="Installation view Vestiges — Photo: Dries Celis"><figcaption>Installation view Vestiges — Photo: Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_9.jpg" alt="Installation view Vestiges — Photo: Dries Celis"><figcaption>Installation view Vestiges — Photo: Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_20.jpg" alt="Installation view Vestiges — Photo: Dries Celis"><figcaption>Installation view Vestiges — Photo: Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_308.jpg" alt="Chantal Pollier and Guillaume Van Moerkercke — Vestiges — Photo: Dries Celis"><figcaption>Chantal Pollier and Guillaume Van Moerkercke — Vestiges — Photo: Dries Celis</figcaption></figure></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-film.mp4"></video><figcaption>Bij De Meesters — film: Dries Celis</figcaption></figure></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>

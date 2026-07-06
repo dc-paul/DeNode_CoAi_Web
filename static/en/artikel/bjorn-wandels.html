@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -97,7 +99,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>He paints photographs from the darkroom, photographs drawings, and gives sound a cinematic form. Through short videos and collage loops, he builds installations that also incorporate poetry and typography.</p>
 <p>Wandels does not aspire to scientific objectivity; his oeuvre is rather a personal translation dictated by the logic and boundaries of the artistic material. The result is inherently ambiguous: a body of work that constantly moves between the tragic and the absurd.</p>
 <h2 class="dn-h3" id="beelden-bij-dit-artikel">Beelden bij dit artikel</h2>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/bjorn-wandels/abigswipe2-ezgif.com-rotate.gif" alt=""></figure></div>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/bjorn-wandels/abigswipe2-ezgif.com-rotate.gif" alt="" data-cap=""></figure></div>
 <div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../over.html#paul-de-canniere">Paul De Cannière</a></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/bjorn-wandels-vitrine.html">Exhibitions: Björn Wandels — vitrineprojectie →</a></p>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/bjorn-wandels.html">Artist: Björn Wandels →</a></p>

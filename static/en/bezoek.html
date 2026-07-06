@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -85,12 +87,12 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section"><div class="dn-wrap"><h1 class="dn-h2" style="margin-bottom:30px">Visit</h1>
-<div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/nodenaysteen_gevel_004.jpg" alt="nodenaysteen, Predikherenlei 4, Gent"><figcaption>nodenaysteen, Predikherenlei 4, Gent</figcaption></figure>
+<div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/nodenaysteen_gevel_004.jpg" alt="nodenaysteen, Predikherenlei 4, Gent" data-cap="nodenaysteen, Predikherenlei 4, Gent"><figcaption>nodenaysteen, Predikherenlei 4, Gent</figcaption></figure>
 <p>nodenaysteen / DeNode sits on the river Leie, in the heart of Ghent — by St Michael's Bridge, a few minutes from the Korenmarkt. The street is car-free: the last stretch is always on foot, along the water.</p>
 <h2 class="dn-h3" id="address">Address</h2>
 <p>Galerie DeNode — nodenaysteen</p>
 <p><a href="https://maps.google.com/?q=Predikherenlei+4,+9000+Gent">Predikherenlei 4, 9000 Ghent</a></p>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/plan-nodenaysteen.svg" alt="Schematic plan: nodenaysteen by St Michael's Bridge"><figcaption>Schematic plan: nodenaysteen by St Michael's Bridge</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/plan-nodenaysteen.svg" alt="Schematic plan: nodenaysteen by St Michael's Bridge" data-cap="Schematic plan: nodenaysteen by St Michael's Bridge"><figcaption>Schematic plan: nodenaysteen by St Michael's Bridge</figcaption></figure>
 <h2 class="dn-h3" id="on-foot">On foot</h2>
 <p>From the Korenmarkt, walk towards St Michael's Bridge and take the quay down to your left just before the bridge: that is Predikherenlei — number 4 sits on the waterfront, directly opposite St Michael's Church and Het Pand (± 3 minutes, without crossing the water). From Ghent-Sint-Pieters railway station it is a ± 30-minute walk through the city centre.</p>
 <h2 class="dn-h3" id="by-bike">By bike</h2>

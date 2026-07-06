@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -87,9 +89,9 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/kunstenaar/freddy-decreus/freddy-decreus.jpg" alt="Em. Prof. Freddy Decreus"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Artist</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Em. Prof. Freddy Decreus</h1>
 <div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">author &amp; critic</div>
-<p class="dn-lead" style="font-size:19px">Prof. Em. Freddy Decreus (°1949) was affiliated with the Department of Classics at Ghent University for thirty years. He also founded the course Ritual Theatre for the Department of Theatre Studies and wrote about the bio-energetic functioning of the actor's body. His recent monograph 'The Ritual Theatre of Theodoros Terzopoulos' (Routledge, 2019) developed this perspective in…</p></div></section>
+<p class="dn-lead" style="font-size:19px">Prof. Em. Freddy Decreus (°1949) was affiliated with the Department of Classics at Ghent University for thirty years. He also founded the course Ritual Theatre for the Department of Theatre Studies and wrote about the bio-energetic functioning of the actor's body.</p></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
-<div class="dn-head"><h2 class="dn-h2">About</h2></div><p>Prof. Em. Freddy Decreus (°1949) was affiliated with the Department of Classics at Ghent University for thirty years. He also founded the course Ritual Theatre for the Department of Theatre Studies and wrote about the bio-energetic functioning of the actor's body. His recent monograph 'The Ritual Theatre of Theodoros Terzopoulos' (Routledge, 2019) developed this perspective in full, in terms of a gradual build-up of energy flowing through the actors' body &amp; mind (the bodymind) — metaphorically rendered as the arrival and possession by Dionysus! His publications on Greek mythology also draw on theories from psychoanalysis, women's studies and psycho-energetics, placing the self-narrating human being at the centre of his research.</p></div>
+<div class="dn-head"><h2 class="dn-h2">About</h2></div><p>His recent monograph 'The Ritual Theatre of Theodoros Terzopoulos' (Routledge, 2019) developed this perspective in full, in terms of a gradual build-up of energy flowing through the actors' body &amp; mind (the bodymind) — metaphorically rendered as the arrival and possession by Dionysus! His publications on Greek mythology also draw on theories from psychoanalysis, women's studies and psycho-energetics, placing the self-narrating human being at the centre of his research.</p></div>
 <dl class="dn-dl"><dt>Texts</dt><dd><a href="../artikel/about-the-hermit.html">About the hermit deep within us</a><br><a href="../artikel/bodies-eros-and-thanatos.html">Bodies Eros and Thanatos</a></dd></dl></div></div></section>
 
 

@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -85,12 +87,12 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section"><div class="dn-wrap"><h1 class="dn-h2" style="margin-bottom:30px">Bezoek</h1>
-<div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/nodenaysteen_gevel_004.jpg" alt="nodenaysteen, Predikherenlei 4, Gent"><figcaption>nodenaysteen, Predikherenlei 4, Gent</figcaption></figure>
+<div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/nodenaysteen_gevel_004.jpg" alt="nodenaysteen, Predikherenlei 4, Gent" data-cap="nodenaysteen, Predikherenlei 4, Gent"><figcaption>nodenaysteen, Predikherenlei 4, Gent</figcaption></figure>
 <p>nodenaysteen / DeNode ligt aan de Leie, in het hart van Gent — bij de Sint-Michielsbrug, op een paar minuten van de Korenmarkt. De straat is autovrij: het laatste stukje doe je altijd te voet, langs het water.</p>
 <h2 class="dn-h3" id="adres">Adres</h2>
 <p>Galerie DeNode — nodenaysteen</p>
 <p><a href="https://maps.google.com/?q=Predikherenlei+4,+9000+Gent">Predikherenlei 4, 9000 Gent</a></p>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/plan-nodenaysteen.svg" alt="Schematisch plan: nodenaysteen bij de Sint-Michielsbrug"><figcaption>Schematisch plan: nodenaysteen bij de Sint-Michielsbrug</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/site/plan-nodenaysteen.svg" alt="Schematisch plan: nodenaysteen bij de Sint-Michielsbrug" data-cap="Schematisch plan: nodenaysteen bij de Sint-Michielsbrug"><figcaption>Schematisch plan: nodenaysteen bij de Sint-Michielsbrug</figcaption></figure>
 <h2 class="dn-h3" id="te-voet">Te voet</h2>
 <p>Vanaf de Korenmarkt wandel je richting de Sint-Michielsbrug en ga je nét vóór de brug links de kade af: dat is de Predikherenlei — nummer 4 ligt aan het water, recht tegenover de Sint-Michielskerk en Het Pand (± 3 minuten, je steekt het water niet over). Vanaf station Gent-Sint-Pieters wandel je in ± 30 minuten door het centrum naar de galerie.</p>
 <h2 class="dn-h3" id="met-de-fiets">Met de fiets</h2>

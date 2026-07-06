@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -96,7 +98,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>Björn Wandels (1979, Gent) hanteert een breed spectrum aan media in een hybride praktijk. Zijn werk bevraagt op ironische wijze de uitgangspunten van zowel analoge als digitale media door ze los te koppelen van hun traditionele context of functie.</p>
 <p>Zo schildert hij foto's uit de donkere kamer, fotografeert hij tekeningen en geeft hij geluid een filmische vorm. Via korte video's en collage-loops bouwt hij aan installaties waarin ook poëzie en typografie een plek krijgen.</p>
 <p>Wandels ambieert geen wetenschappelijke objectiviteit; zijn oeuvre is veeleer een persoonlijke vertaling gedicteerd door de logica en de grenzen van het artistieke materiaal. Het resultaat is inherent ambigu: een oeuvre dat zich voortdurend beweegt tussen het tragische en het absurde.</p>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/bjorn-wandels/abigswipe2-ezgif.com-rotate.gif" alt=""></figure></div>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/artikel/bjorn-wandels/abigswipe2-ezgif.com-rotate.gif" alt="" data-cap=""></figure></div>
 <div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../over.html#paul-de-canniere">Paul De Cannière</a></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/bjorn-wandels-vitrine.html">Tentoonstellingen: Björn Wandels — vitrineprojectie →</a></p>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/bjorn-wandels.html">Kunstenaar: Björn Wandels →</a></p>

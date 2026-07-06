@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -104,9 +106,9 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="installation-views">Installation views</h2>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Gipi_Legt_Uit---1.jpg" alt="Gipi Legt Uit 1"><figcaption>Gipi Legt Uit 1</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Gipi_en-zijn-24.jpg" alt="Gipi en zijn 24"><figcaption>Gipi en zijn 24</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Nodenaysteen---expo-januari-2025-pagina001.jpg" alt="Nodenaysteen expo januari 2025 pagina001"><figcaption>Nodenaysteen expo januari 2025 pagina001</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Nodenaysteen---expo-januari-2025-pagina002.jpg" alt="Nodenaysteen expo januari 2025 pagina002"><figcaption>Nodenaysteen expo januari 2025 pagina002</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Paul-De-Roo_Misha.jpg" alt="Paul De Roo Misha"><figcaption>Paul De Roo Misha</figcaption></figure></div>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Gipi_Legt_Uit---1.jpg" alt="Gipi Legt Uit 1" data-cap="Gipi Legt Uit 1"><figcaption>Gipi Legt Uit 1</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Gipi_en-zijn-24.jpg" alt="Gipi en zijn 24" data-cap="Gipi en zijn 24"><figcaption>Gipi en zijn 24</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Nodenaysteen---expo-januari-2025-pagina001.jpg" alt="Nodenaysteen expo januari 2025 pagina001" data-cap="Nodenaysteen expo januari 2025 pagina001"><figcaption>Nodenaysteen expo januari 2025 pagina001</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Nodenaysteen---expo-januari-2025-pagina002.jpg" alt="Nodenaysteen expo januari 2025 pagina002" data-cap="Nodenaysteen expo januari 2025 pagina002"><figcaption>Nodenaysteen expo januari 2025 pagina002</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Paul-De-Roo_Misha.jpg" alt="Paul De Roo Misha" data-cap="Paul De Roo Misha"><figcaption>Paul De Roo Misha</figcaption></figure></div>
 <h2 class="dn-h3" id="video">Video</h2>
-<figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-film.mp4"></video><figcaption>Bij De Meesters — film: <a href="../kunstenaar/dries-celis.html">Dries Celis</a></figcaption></figure>
+<figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-film.mp4"></video><figcaption>Bij De Meesters — film: Dries Celis</figcaption></figure>
 <figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-micha-plays.mp4"></video><figcaption>Mikhail Bezverkhny speelt tijdens de opening (25 januari 2025)</figcaption></figure></div></div></section>
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">

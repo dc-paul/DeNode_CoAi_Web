@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -92,7 +94,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 <dt>Expo</dt><dd><a href="../expo/kashi-rupe-unfolded.html">Kashi Rupé — unfolded</a></dd></dl>
 </div></section>
-<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/images/blog-nicolas-van-parys.jpg" alt=""></figure>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/images/blog-nicolas-van-parys.jpg" alt="" data-cap=""></figure>
 <p>Festive opening of the exhibition 'Kashi Rupé — unfolded' by <a href="../kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a> at nodenaysteen / DeNode.</p></div></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>

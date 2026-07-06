@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -92,7 +94,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <dt>Info</dt><dd><a href="mailto:info@denode.be">info@denode.be</a></dd>
 </dl>
 </div></section>
-<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/images/drawing-sessions.webp" alt=""></figure>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/images/drawing-sessions.webp" alt="" data-cap=""></figure>
 <h2 class="dn-h3" id="samen-tekenen-naar-levend-model">Samen tekenen naar levend model</h2>
 <p>Om de twee weken organiseren we op donderdag een tekensessie naar levend model. Of je nu ervaren bent of net begint: iedereen is welkom om in een ontspannen sfeer te werken en te schetsen.</p>
 <p>Na een onderbreking hervatten we de tekensessies op model vanaf oktober 2026.</p>

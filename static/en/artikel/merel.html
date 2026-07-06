@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -99,7 +101,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>Her paintings do not aim to explain, but to invite. They ask us to pause, to look, and to discover what authenticity means for each of us.</p>
 <blockquote class="dn-quote"><strong>Welcome to the opening on Friday, 28/11/2025 at 6 PM.</strong> <strong>The exhibition runs until Sunday, 11/01/2026.</strong></blockquote>
 <h2 class="dn-h3" id="beelden-bij-dit-artikel">Beelden bij dit artikel</h2>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/artikel/merel/Merel_Jansen_Portret.webp" alt=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/merel/MerelJansen.webp" alt=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/merel/MerelJansen_2.webp" alt=""></figure></div></div>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/artikel/merel/Merel_Jansen_Portret.webp" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/merel/MerelJansen.webp" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/merel/MerelJansen_2.webp" alt="" data-cap=""></figure></div></div>
 <div class="dn-serif-it" style="font-size:18px;margin-top:44px">— Stichting DeNode, <a href="../kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/merel.html">Exhibitions: Merel →</a></p>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/merel-jansen.html">Artist: Merel Jansen →</a></p>

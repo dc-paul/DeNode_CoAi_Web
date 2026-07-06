@@ -12,6 +12,8 @@
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -91,15 +93,15 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="team">Team</h2>
 <p>The core team of DeNode</p>
 <h3 class="dn-h3" id="paul-de-canniere">Paul De Cannière</h3>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière — Foto: Steven Decroos</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière — Foto: Steven Decroos</figcaption></figure>
 <p><em>Founder &amp; Strategic Vision</em></p>
 <p>Driven by the desire to create a free space for collective reflection, Paul — together with his wife Mieke Van Loo — founded the DeNode Foundation. With a keen eye for technological innovation and a strong social commitment, he focuses on projects that transcend conventional formats and aim to generate sustainable impact.</p>
 <h3 class="dn-h3" id="kristof-vander-cruyssen"><a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></h3>
-<figure class="dn-fig"><img loading="lazy" src="/images/team-kristof-vander-cruyssen.webp" alt="Kristof Vander Cruyssen"><figcaption>Kristof Vander Cruyssen</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/images/team-kristof-vander-cruyssen.webp" alt="Kristof Vander Cruyssen" data-cap="Kristof Vander Cruyssen"><figcaption>Kristof Vander Cruyssen</figcaption></figure>
 <p><em>Curator &amp; Artistic Development</em></p>
 <p>As an artist and curator, Kristof brings deep insight into artistic ecosystems to the foundation. He oversees the artistic direction and guides the development of exhibitions and residencies. His expertise combines curatorial precision with pragmatic knowledge of production processes.</p>
 <h3 class="dn-h3" id="hanna-ouaziz">Hanna Ouaziz</h3>
-<figure class="dn-fig"><img loading="lazy" src="/images/team-hanna-ouaziz.webp" alt="Hanna Ouaziz"><figcaption>Hanna Ouaziz</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/images/team-hanna-ouaziz.webp" alt="Hanna Ouaziz" data-cap="Hanna Ouaziz"><figcaption>Hanna Ouaziz</figcaption></figure>
 <p><em>Curatorial &amp; International Programs</em></p>
 <p>Hanna shapes the substantive narratives and international collaborations of DeNode. With a background in philosophy and anthropology, she weaves thematic research together with engaged art practices. She is the linchpin of our international network and responsible for the editorial projects that deepen our vision.</p>
 <h2 class="dn-h3" id="volunteers-and-staff">Volunteers and staff</h2>
