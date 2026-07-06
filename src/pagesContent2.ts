@@ -141,9 +141,16 @@ interface ShopContent {
   title: string;
   productTitle: string;
   productDesc: string;
+  price: string;
   reserveCta: string;
   note: string;
+  mailTo: string;
+  mailSubject: string;
+  mailBody: string;
 }
+
+const BOOK_PRICE = "35";
+const IBAN = "BE35 7350 7162 0037";
 
 export const SHOP: Record<Lang, ShopContent> = {
   en: {
@@ -151,24 +158,102 @@ export const SHOP: Record<Lang, ShopContent> = {
     productTitle: "Kat Bové — Give me a sketchbook to live in",
     productDesc:
       "Reserve a copy of Kat Bové's new book. Limited print run.",
-    reserveCta: "Reserve by email",
-    note: "Reservations are handled by email for now — we'll confirm availability and pickup or shipping.",
+    price: "€ 35 · + € 7 shipping if posted",
+    reserveCta: "Order by email",
+    note: "Orders are handled by email for now — we'll confirm as soon as we receive your message.",
+    mailTo: "info@denode.be",
+    mailSubject: "Book order — Kat Bové: Give me a sketchbook to live in",
+    mailBody: [
+      "Dear DeNode team,",
+      "",
+      "I would like to order the book by Kat Bové, \"Give me a sketchbook to live in\".",
+      "",
+      "My details:",
+      "- Name: [first name and surname]",
+      "- Email: [your email]",
+      "- Phone: [your phone number]",
+      "",
+      "Delivery:",
+      "- [ ] I will pick it up at DeNode (Predikherenlei 4, 9000 Ghent)",
+      "- [ ] Please ship it to: [street and number], [postal code and town], [country]",
+      "",
+      "Payment:",
+      `I have transferred € ${BOOK_PRICE} (+ € 7 shipping if posted) to ${IBAN}.`,
+      "Reference: Book purchase Kat Bové",
+      "",
+      "Thank you very much!",
+      "",
+      "Kind regards,",
+      "[your name]",
+    ].join("\n"),
   },
   fr: {
     title: "Boutique",
     productTitle: "Kat Bové — Give me a sketchbook to live in",
     productDesc:
       "Réservez une copie du nouveau livre de Kat Bové. Tirage limité.",
-    reserveCta: "Réserver par e-mail",
-    note: "Les réservations se font par e-mail pour le moment — nous confirmerons la disponibilité et l'enlèvement ou l'envoi.",
+    price: "€ 35 · + € 7 d'envoi le cas échéant",
+    reserveCta: "Commander par e-mail",
+    note: "Les commandes se font par e-mail pour le moment — nous confirmons dès réception de votre message.",
+    mailTo: "info@denode.be",
+    mailSubject: "Commande du livre — Kat Bové : Give me a sketchbook to live in",
+    mailBody: [
+      "Bonjour l'équipe DeNode,",
+      "",
+      "Je souhaite commander le livre de Kat Bové, « Give me a sketchbook to live in ».",
+      "",
+      "Mes coordonnées :",
+      "- Nom : [prénom et nom]",
+      "- E-mail : [votre e-mail]",
+      "- Téléphone : [votre numéro de téléphone]",
+      "",
+      "Livraison :",
+      "- [ ] Je viens le chercher chez DeNode (Predikherenlei 4, 9000 Gand)",
+      "- [ ] Merci de l'envoyer à : [rue et numéro], [code postal et commune], [pays]",
+      "",
+      "Paiement :",
+      `J'ai viré € ${BOOK_PRICE} (+ € 7 de frais d'envoi le cas échéant) sur ${IBAN}.`,
+      "Communication : Achat livre Kat Bové",
+      "",
+      "Merci beaucoup !",
+      "",
+      "Cordialement,",
+      "[votre nom]",
+    ].join("\n"),
   },
   nl: {
     title: "Shop",
     productTitle: "Kat Bové — Give me a sketchbook to live in",
     productDesc:
       "Reserveer een exemplaar van het nieuwe boek van Kat Bové. Beperkte oplage.",
-    reserveCta: "Reserveer via e-mail",
-    note: "Reservaties verlopen voorlopig via e-mail — we bevestigen beschikbaarheid en afhaling of verzending.",
+    price: "€ 35 · + € 7 verzending indien opsturen",
+    reserveCta: "Bestel via e-mail",
+    note: "Bestellingen verlopen voorlopig via e-mail — we bevestigen zodra we je bericht ontvangen.",
+    mailTo: "info@denode.be",
+    mailSubject: "Bestelling boek — Kat Bové: Give me a sketchbook to live in",
+    mailBody: [
+      "Beste DeNode-team,",
+      "",
+      "Graag bestel ik het boek van Kat Bové, \"Give me a sketchbook to live in\".",
+      "",
+      "Mijn gegevens:",
+      "- Naam: [voornaam en naam]",
+      "- E-mail: [je e-mailadres]",
+      "- Telefoon: [je telefoonnummer]",
+      "",
+      "Levering:",
+      "- [ ] Ik haal het boek af bij DeNode (Predikherenlei 4, 9000 Gent)",
+      "- [ ] Graag opsturen naar: [straat en nummer], [postcode en gemeente], [land]",
+      "",
+      "Betaling:",
+      `Ik heb € ${BOOK_PRICE} (+ € 7 verzendingskosten indien opsturen) overgeschreven op ${IBAN}.`,
+      "Mededeling: Aankoop boek Kat Bové",
+      "",
+      "Alvast heel erg bedankt!",
+      "",
+      "Met vriendelijke groeten,",
+      "[je naam]",
+    ].join("\n"),
   },
 };
 

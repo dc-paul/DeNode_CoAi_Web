@@ -13,6 +13,10 @@ import { Cookie } from "./pages/Cookie";
 import { BlogPost } from "./pages/BlogPost";
 import { EventDetail } from "./pages/EventDetail";
 import { ArtistDetail } from "./pages/ArtistDetail";
+import { Expos } from "./pages/Expos";
+import { ExpoDetail } from "./pages/ExpoDetail";
+import { Publicaties } from "./pages/Publicaties";
+import { Visit } from "./pages/Visit";
 import { Placeholder } from "./pages/Placeholder";
 import { parseHash, type Lang } from "./lang";
 
@@ -26,13 +30,22 @@ function renderPage(page: string, lang: Lang) {
   if (page.startsWith("artist/")) {
     return <ArtistDetail lang={lang} slug={page.slice("artist/".length)} />;
   }
+  if (page.startsWith("expo/")) {
+    return <ExpoDetail lang={lang} slug={page.slice("expo/".length)} />;
+  }
   switch (page) {
     case "":
       return <Home lang={lang} />;
     case "program":
       return <Program lang={lang} />;
+    case "expo":
+      return <Expos lang={lang} />;
     case "artists":
       return <Artists lang={lang} />;
+    case "publicaties":
+      return <Publicaties lang={lang} />;
+    case "visit":
+      return <Visit lang={lang} />;
     case "events":
       return <Events lang={lang} />;
     case "shop":
@@ -70,7 +83,7 @@ function App() {
   const { lang, page } = route;
 
   return (
-    <div className="min-h-[100dvh] bg-white text-black">
+    <div className="min-h-[100dvh] bg-[#f4f1ea] text-[#0e0e0c]">
       <Header lang={lang} page={page} />
       <main>{renderPage(page, lang)}</main>
       <Footer lang={lang} />

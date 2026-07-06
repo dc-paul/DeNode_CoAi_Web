@@ -1,0 +1,149 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publicaties — DeNode Foundation</title>
+<meta name="description" content="Stichting DeNode is een huis voor actuele kunst in het hart van Gent.">
+<meta property="og:title" content="Publicaties — DeNode Foundation">
+<meta property="og:description" content="Stichting DeNode is een huis voor actuele kunst in het hart van Gent.">
+<meta property="og:image" content="https://icp.denode.be/assets/denode-logo-black.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://icp.denode.be/nl/publicaties.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="index.html"><img src="../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="expo/index.html">Tentoonstellingen</a></li><li><a href="kunstenaar/index.html">Kunstenaars</a></li><li><a href="publicaties.html">Publicaties</a></li><li><a href="shop.html">Shop</a></li><li><a href="bezoek.html">Bezoek</a></li><li><a href="over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../en/publicaties.html">EN</a><a class="lg" href="../fr/publicaties.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="expo/index.html">Tentoonstellingen</a><a href="kunstenaar/index.html">Kunstenaars</a><a href="publicaties.html">Publicaties</a><a href="collectie.html">Collectie</a><a href="shop.html">Shop</a><a href="event/index.html">Events</a><a href="bezoek.html">Bezoek</a><a href="over.html">Over</a></div>
+</header>
+
+
+<section class="dn-section"><div class="dn-wrap">
+<div class="dn-head"><h1 class="dn-h2">Publicaties</h1></div>
+<div class="dn-teaser" style="margin-bottom:60px"><img src="/images/kat-bove-book.webp" alt="">
+<div class="in"><h3 class="dn-h2">Boeken &amp; edities</h3>
+<p style="margin:12px 0 20px">Afhalen kan tijdens de openingsuren in <a href="bezoek.html">nodenaysteen</a>; opsturen tegen de vermelde verzendkost.</p><a class="dn-btn" href="shop.html">Naar de shop →</a></div></div>
+<div class="dn-head"><h2 class="dn-h2">Papers & essays</h2></div>
+<div class="dn-grid"><a class="dn-card" href="artikel/about-the-hermit.html"><div class="thumb"><img src="/images/blog-about-the-hermit.webp" alt=""></div><h3>Over de kluizenaar diep in ons</h3><div class="who">Em. Prof. Freddy Decreus</div></a><a class="dn-card" href="artikel/bodies-eros-and-thanatos.html"><div class="thumb"><img src="/images/blog-bodies-eros-thanatos.jpg" alt=""></div><h3>Lichamen tussen Eros en Thanatos</h3><div class="who">Em. Prof. Freddy Decreus</div></a><a class="dn-card" href="artikel/okan-is-me.html"><div class="thumb"><img src="/images/blog-okan-is-me.jpg" alt=""></div><h3>Okan-is-me</h3><div class="who">Jakob de Smaele</div></a><a class="dn-card" href="artikel/the-church-of-kat-bove.html"><div class="thumb"><img src="/_assets/images/expo/who-is-your-god/15mrt2025_6670.jpg" alt=""></div><h3>The church of Kat Bové</h3><div class="who">Jakob de Smaele</div></a></div>
+<div class="dn-head" style="margin-top:70px"><h2 class="dn-h2">Alle teksten</h2></div>
+<input class="dn-zoek" type="search" placeholder="Zoek op naam, titel of auteur…" oninput="dnTZoek()" id="dn-tzoek">
+<div class="dn-filterknoppen" id="dn-tcats"><button class="actief" data-cat="">Alles</button><button data-cat="artists">Kunstenaars</button><button data-cat="exhibitions">Expo-teksten</button><button data-cat="papers">Essays</button><button data-cat="news">Nieuws</button><button data-cat="interview">Interviews</button></div>
+<div class="dn-grid" id="dn-tgrid"><a class="dn-card" href="artikel/bjorn-wandels.html" data-cat="artists" data-zoek="björn wandels paul de cannière björn wandels"><div class="thumb"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/portret_Bjorn.jpg" alt=""></div><div class="dates">September 7, 2025 · Kunstenaars</div><h3>Björn Wandels</h3><div class="who">Paul De Cannière</div></a><a class="dn-card" href="artikel/vestiges.html" data-cat="exhibitions" data-zoek="vestiges stichting denode, kristof vander cruyssen chantal pollier"><div class="thumb"><img loading="lazy" src="/images/blog-vestiges.webp" alt=""></div><div class="dates">September 28, 2025 · Expo-teksten</div><h3>Vestiges</h3><div class="who">Stichting DeNode, Kristof Vander Cruyssen</div></a><a class="dn-card" href="artikel/lee-ranaldo.html" data-cat="exhibitions" data-zoek="lee ranaldo lee ranaldo lee ranaldo"><div class="thumb"><img loading="lazy" src="/images/blog-lee-ranaldo.jpg" alt=""></div><div class="dates">October 6, 2025 · Expo-teksten</div><h3>Lee Ranaldo</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="artikel/merel.html" data-cat="exhibitions" data-zoek="merel jansen stichting denode, kristof vander cruyssen merel jansen"><div class="thumb"><img loading="lazy" src="/images/blog-merel.jpg" alt=""></div><div class="dates">November 14, 2025 · Expo-teksten</div><h3>Merel Jansen</h3><div class="who">Stichting DeNode, Kristof Vander Cruyssen</div></a><a class="dn-card" href="artikel/about-the-hermit.html" data-cat="papers" data-zoek="over de kluizenaar diep in ons em. prof. freddy decreus john robinson"><div class="thumb"><img loading="lazy" src="/images/blog-about-the-hermit.webp" alt=""></div><div class="dates">June 6, 2026 · Essays</div><h3>Over de kluizenaar diep in ons</h3><div class="who">Em. Prof. Freddy Decreus</div></a><a class="dn-card" href="artikel/bodies-eros-and-thanatos.html" data-cat="papers" data-zoek="lichamen tussen eros en thanatos em. prof. freddy decreus kat bové"><div class="thumb"><img loading="lazy" src="/images/blog-bodies-eros-thanatos.jpg" alt=""></div><div class="dates">June 6, 2026 · Essays</div><h3>Lichamen tussen Eros en Thanatos</h3><div class="who">Em. Prof. Freddy Decreus</div></a><a class="dn-card" href="artikel/nicolas-van-parys.html" data-cat="artists" data-zoek="nicolas van parys stichting denode, kristof vander cruyssen nicolas van parys"><div class="thumb"><img loading="lazy" src="/images/blog-nicolas-van-parys.jpg" alt=""></div><div class="dates">June 5, 2026 · Kunstenaars</div><h3>Nicolas Van Parys</h3><div class="who">Stichting DeNode, Kristof Vander Cruyssen</div></a><a class="dn-card" href="artikel/john-robinson.html" data-cat="exhibitions" data-zoek="john robinson stichting denode, hanna ouaziz john robinson"><div class="thumb"><img loading="lazy" src="/images/blog-john-robinson.webp" alt=""></div><div class="dates">January 29, 2026 · Expo-teksten</div><h3>John Robinson</h3><div class="who">Stichting DeNode, Hanna Ouaziz</div></a><a class="dn-card" href="artikel/opening-nodenaysteen.html" data-cat="news" data-zoek="opening van nodenaysteen — een kunstruimte paul de cannière "><div class="thumb"><img loading="lazy" src="/images/blog-opening-nodenaysteen.svg" alt=""></div><div class="dates">December 31, 2023 · Nieuws</div><h3>OPENING VAN NODENAYSTEEN — EEN KUNSTRUIMTE</h3><div class="who">Paul De Cannière</div></a><a class="dn-card" href="artikel/bij-de-meesters.html" data-cat="news" data-zoek="bij de meesters paul de cannière "><div class="thumb"><img loading="lazy" src="/images/blog-bij-de-meesters.jpg" alt=""></div><div class="dates">25 januari 2025 · Nieuws</div><h3>Bij De Meesters</h3><div class="who">Paul De Cannière</div></a><a class="dn-card" href="artikel/interview-nicolas-van-parys.html" data-cat="interview" data-zoek="interview met nicolas van parys hilde van canneyt nicolas van parys"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-01.jpg" alt=""></div><div class="dates">2026-05-11 · Interviews</div><h3>Nicolas Van Parys</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-mikhail-bezverkhny.html" data-cat="interview" data-zoek="interview met bezverkhni van gent/mikhail bezverkhni hilde van canneyt mikhail bezverkhny"><div class="thumb"><img loading="lazy" src="/_assets/images/expo/bij-de-meesters/Paul-De-Roo_Misha.jpg" alt=""></div><div class="dates">2026-03-21 · Interviews</div><h3>Bezverkhni van Gent/Mikhail Bezverkhni</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-merel-jansen.html" data-cat="interview" data-zoek="interview met merel jansen hilde van canneyt merel jansen"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-merel-jansen/merel-jansen-02.jpg" alt=""></div><div class="dates">2026-01-04 · Interviews</div><h3>Merel Jansen</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-caroline-baek.html" data-cat="interview" data-zoek="interview met caroline baek hilde van canneyt caroline baek"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-caroline-baek/caroline-baek-01.jpg" alt=""></div><div class="dates">2024-10-24 · Interviews</div><h3>Caroline Baek</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-bjorn-wandels.html" data-cat="interview" data-zoek="interview met björn wandels hilde van canneyt björn wandels"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-bjorn-wandels/bjorn-wandels-01.jpg" alt=""></div><div class="dates">2024-05-01 · Interviews</div><h3>Björn Wandels</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-ines-claus.html" data-cat="interview" data-zoek="interview met ines claus hilde van canneyt ines claus"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-ines-claus/ines-claus-01.jpg" alt=""></div><div class="dates">2024-02-01 · Interviews</div><h3>Ines Claus</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-simon-van-parys.html" data-cat="interview" data-zoek="interview met simon van parys hilde van canneyt simon van parys"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-simon-van-parys/simon-van-parys-01.jpg" alt=""></div><div class="dates">2023-10-16 · Interviews</div><h3>Simon Van Parys</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-lee-ranaldo-2.html" data-cat="interview" data-zoek="interview met lee ranaldo (2) hilde van canneyt lee ranaldo"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo-2/lee-ranaldo-01.jpg" alt=""></div><div class="dates">2018-11-02 · Interviews</div><h3>Lee Ranaldo (2)</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/interview-lee-ranaldo.html" data-cat="interview" data-zoek="interview met lee ranaldo hilde van canneyt lee ranaldo"><div class="thumb"><img loading="lazy" src="/_assets/images/interview/interview-lee-ranaldo/lee-ranaldo-1631-01.jpg" alt=""></div><div class="dates">2014-03-26 · Interviews</div><h3>Lee Ranaldo</h3><div class="who">Hilde Van Canneyt</div></a><a class="dn-card" href="artikel/between-mask-and-identity.html" data-cat="interview" data-zoek="tussen masker en identiteit: de dualiteit van kat bové liesbet depauw kat bové"><div class="thumb"><img loading="lazy" src="/images/blog-church-kat-bove.webp" alt=""></div><div class="dates">20 april 2025 · Interviews</div><h3>tussen masker en identiteit: de dualiteit van Kat Bové</h3><div class="who">Liesbet Depauw</div></a><a class="dn-card" href="artikel/the-church-of-kat-bove.html" data-cat="papers" data-zoek="the church of kat bové jakob de smaele kat bové"><div class="thumb"><img loading="lazy" src="/_assets/images/expo/who-is-your-god/15mrt2025_6670.jpg" alt=""></div><div class="dates">20 april 2025 · Essays</div><h3>The church of Kat Bové</h3><div class="who">Jakob de Smaele</div></a><a class="dn-card" href="artikel/ines-claus.html" data-cat="artists" data-zoek="ines claus paul de cannière ines claus"><div class="thumb"><img loading="lazy" src="/images/blog-ines-claus.jpg" alt=""></div><div class="dates">2 februari 2024 · Kunstenaars</div><h3>Ines Claus</h3><div class="who">Paul De Cannière</div></a><a class="dn-card" href="artikel/okan-is-me.html" data-cat="papers" data-zoek="okan-is-me jakob de smaele okan mentens"><div class="thumb"><img loading="lazy" src="/images/blog-okan-is-me.jpg" alt=""></div><div class="dates">11 juli 2025 · Essays</div><h3>Okan-is-me</h3><div class="who">Jakob de Smaele</div></a><a class="dn-card" href="artikel/bjorn-wandels-paper.html" data-cat="artists" data-zoek="björn wandels  björn wandels"><div class="thumb"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/portret_Bjorn.jpg" alt=""></div><div class="dates"> · Kunstenaars</div><h3>Björn Wandels</h3></a></div>
+<script>var dnCat="";
+document.querySelectorAll('#dn-tcats button').forEach(function(b){b.onclick=function(){dnCat=b.dataset.cat;document.querySelectorAll('#dn-tcats button').forEach(function(x){x.classList.toggle('actief',x===b);});dnTZoek();};});
+function dnTZoek(){var q=(document.getElementById('dn-tzoek').value||'').toLowerCase().trim();
+document.querySelectorAll('#dn-tgrid .dn-card').forEach(function(c){var ok=(!dnCat||c.dataset.cat===dnCat)&&(!q||c.dataset.zoek.indexOf(q)>=0);c.style.display=ok?'':'none';});}</script>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="expo/index.html">Tentoonstellingen</a></li>
+<li><a href="kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="publicaties.html">Publicaties</a></li>
+<li><a href="collectie.html">Collectie</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="event/index.html">Events</a></li></ul></div>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="bezoek.html">Bezoek</a></li>
+<li><a href="over.html">Over</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inschrijving%20nieuwsbrief&body=Graag%20schrijf%20ik%20me%20in%20voor%20de%20DeNode-nieuwsbrief.%0ANaam%3A%20">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
+</body></html>

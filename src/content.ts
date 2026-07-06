@@ -107,7 +107,7 @@ export const CONTENT: Record<Lang, LangContent> = {
       emailPlaceholder: "Email address",
       register: "Register",
       newsletterNote: "(Newsletter form still to be connected to your email service.)",
-      copyright: "© 2025 Stichting DeNode",
+      copyright: "© 2026 Stichting DeNode",
     },
     home: {
       presents: "DeNode Foundation presents:",
@@ -180,7 +180,7 @@ export const CONTENT: Record<Lang, LangContent> = {
       register: "S'inscrire",
       newsletterNote:
         "(Formulaire newsletter encore à connecter à votre service e-mail.)",
-      copyright: "© 2025 Stichting DeNode",
+      copyright: "© 2026 Stichting DeNode",
     },
     home: {
       presents: "La Fondation DeNode présente :",
@@ -255,7 +255,7 @@ export const CONTENT: Record<Lang, LangContent> = {
       emailPlaceholder: "E-mailadres",
       register: "Inschrijven",
       newsletterNote: "(Nieuwsbriefformulier nog te koppelen aan je e-maildienst.)",
-      copyright: "© 2025 Stichting DeNode",
+      copyright: "© 2026 Stichting DeNode",
     },
     home: {
       presents: "Stichting DeNode presenteert:",

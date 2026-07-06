@@ -1,0 +1,238 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview met Nicolas Van Parys — DeNode Foundation</title>
+<meta name="description" content="lente 2026 INTERVIEW MET NICOLAS VAN PARYS">
+<meta property="og:title" content="Interview met Nicolas Van Parys — DeNode Foundation">
+<meta property="og:description" content="lente 2026 INTERVIEW MET NICOLAS VAN PARYS">
+<meta property="og:image" content="https://icp.denode.be/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-01.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://icp.denode.be/nl/artikel/interview-nicolas-van-parys.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/artikel/interview-nicolas-van-parys.html">EN</a><a class="lg" href="../../fr/artikel/interview-nicolas-van-parys.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a></div>
+</header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publicaties</a> / Interview met Nicolas Van Parys</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2026-05-11</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview met <a href="../kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></h1>
+
+
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>lente 2026 INTERVIEW MET NICOLAS VAN PARYS</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-01.jpg" alt="" data-cap=""></figure>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC): Nicolas, bedankt om mij hier te ontvangen in je atelier. Ik zie vooral veel schilderijen en documentatie aan de muur hangen. Er is hier ook veel licht, kortom, je hebt een mooi en gedegen atelier. Is dit een fijne plek voor jou om te vertoeven?</strong></p>
+<p>Nicolas Van Parys (NVP): Ongetwijfeld.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-02.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Je had lange tijd ook een coworkingatelier in Nucleo – de intussen beruchte Vloer 0 – maar dat was eerder voor je collagewerk. Zie je dat als twee verschillende praktijken, of is dat gewoon één praktijk?</strong></p>
+<p>NVP: Ik zie mijn collages nog altijd als een voorstudie. Schildertechnisch kon ik eigenlijk van alles, ik begon gewoon aan collages ter inspiratie. Ik zag ooit een expo van Adrian Ghenie, die altijd van collages vertrekt, vandaar de insteek. Zo’n twaalf jaar geleden besloot ik om ook daarvan te vertrekken, omdat het een houvast is om mijn beeld te creëren of om nieuwe beelden te genereren en mijn bestaande meer te ontwikkelen en zo een vleug surrealisme in mijn werk te krijgen. Ik toonde ze in het verleden ook al, maar ik presenteerde ze nooit naast mijn schilderijen. Voor mij zijn dat twee verschillende materialen. Ik zeg altijd: ‘Ik amuseer me twee keer: één keer bij het fabriceren van de collage, daarna bij de vertaling naar het schilderij. ‘De laatste jaren wijk ik daar meer van af. Ik vertrek nog wel van het beeld van mijn collage, maar ga stappen verder, waardoor deze op een bepaald moment niet meer herkenbaar is. Enfin, soms wel hoor. Maar ik laat het toe om verder te werken op het schilderij, om een dynamiek of samenhang te creëren die je anders niet altijd voelt.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-03.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-04.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-05.jpg" alt="" data-cap=""></figure></div>
+<p><strong>HVC: Begin je een collage meestal onbezonnen, zonder plan?</strong></p>
+<p>NVP: Yes. Dat is misschien één van de redenen waarom ik daar een spontaniteit voel die ik bij het schilderen soms mis of zou missen als ik meteen zou schilderen. Daar laat ik die spontaniteit toe. Daardoor is het voor mij gemakkelijker om bij het schilderen nog een stap verder te gaan, want die drempel wordt daardoor kleiner.</p>
+<p><strong>HVC: Even “rewind”: zat het tekenen en schilderen al altijd in jou? Of hoe ben je uiteindelijk “kunstenaar” geworden? Hoe zou je jezelf in een kroeg kort voorstellen?</strong></p>
+<p>NVP: Het is het typische verhaal: van kleins af aan tekende ik altijd. Het was een andere tijd, en het belangrijkste dat ik altijd bij me had, was een schetsboek en potloden. Overal waar ik naartoe ging, was ik aan het tekenen, alsook veel aan het natekenen. Ik denk dat ik veel rondgekeek naar wat er leefde en mij interesseerde en naar wat ik zelf goed vond. Ik heb mezelf veel bijgebracht.</p>
+<p><strong>HVC: Deed je dat ook via educatie?</strong></p>
+<p>NVP: Ik volgde een grafische richting aan de Kunsthumaniora Sint-Lucas Gent. Ik kreeg de kans niet om hogere studies te volgen, maar de motivatie is altijd gebleven. Ik volgde zes jaar modeltekenen en een paar jaar beeldhouwen in avondles, omdat de goesting er steeds was. Ik begon me te omringen met mensen naar wie ik opkeek, vooral in Gent, die ondertussen vrienden zijn geworden. En ik leerde ook – ik kom eigenlijk uit de bedrijfswereld – om te volharden in wat je doet. Het is trouwens een totaal andere wereld. De belangrijkste stap, zoals iedereen zegt, is blijven werken en onderzoeken. Op een gegeven moment komen er dan richtingen op je pad.</p>
+<p>De laatste vijf jaar had ik het gevoel dat alles is samengekomen. De collages en schilderijen waren vroeger twee aparte dingen, maar deze zijn stelselmatig beginnen versmelten. Ik heb het gevoel dat ik er nu sta en een soort handtekening in mijn werk ontwikkelde. Ondanks dat ik met heel verschillend beeldmateriaal werk, vond ik toch een manier om herkenning te creëren.</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-06.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-07.jpg" alt="" data-cap=""></figure></div>
+<p><strong>HVC: Een erkenning van anderen én van jezelf.</strong></p>
+<p>NVP: Ik denk dat we daar allemaal een beetje naar streven: een soort handtekening nalaten. De manier waarop iemand werkt, schildert, enzovoort. Ik denk dat je daar alleen maar komt door veel te werken. In het verleden deed ik schildertechnisch van alles, maar wist ik niet welke richting ik uit wilde.</p>
+<p><strong>HVC: We zijn hier in je atelier dat lekker ruikt naar olieverf en terpentijn. Het is toch, als ik het zo mag noemen, het oude ambacht dat heeft standgehouden tegenover alle kunststromingen en kunstmedia. Je had evengoed kunnen doorgaan in grafiek, bijvoorbeeld. Maar het is toch de verf en het penseel die hebben “gewonnen”.</strong></p>
+<p>NVP: Ja, er is nog zoveel te doen met schilderen. Ik denk dat elke schilder zich vandaag wel even de vraag stelt: ‘Waar zijn we eigenlijk nog mee bezig? Is dat nog relevant?’ Maar als het schilderij blijft bestaan, is dat op zich al belangrijk. De goesting om te schilderen blijft, zeker op groot formaat. Ondanks dat ik nu ook een reeks kleine werken maakte, wat evengoed vrij intens was. Ik vind de combinatie tussen groot en klein interessant. Grote werken laten toe om bijna in het werk zelf te gaan staan, wat boeiend is om te onderzoeken. Zeker als je vertrekt van collages die heel klein zijn: de vertaling naar een groot formaat geeft een totaal andere beleving.</p>
+<p>Wat ik in het verleden deed bij exposities, is ook de omgeving van het schilderij aanpakken met kleurvlakken of elementen op de grond, zodat je als het ware in het werk kunt stappen en deel wordt van die omgeving.</p>
+<p><strong>HVC: Vind je het belangrijk dat de kijker als het ware in je werk kan stappen? Zijn die collages ook intuïtief opgebouwd? Ik zie hier bijvoorbeeld tijdschriften die je uitscheurt. Is dat ook een manier om de maatschappij in je werk te trekken?</strong></p>
+<p>NVP: Ik denk dat er zeker een vorm van nostalgie in mijn werk zit, omdat ik vaak naar catalogi en tijdschriften grijp uit de jaren 60 tot 90. Deze hebben een bepaald koloriet. De aandacht voor fotografie had toen een andere betekenis dan nu. Vandaag is het beeld heel vluchtig geworden. Het feit dat mensen vroeger soms dagen of weken moesten wachten om een dier te fotograferen, spreekt tot de verbeelding. Ik heb ook gewerkt met beelden van interieurs uit de jaren ’70, die zowel qua kleur als architectuur een rol spelen in mijn werk.</p>
+<p><strong>HVC: Je compileert een collage, je werkt je schilderij af en dan geef je het een titel. Is deze gelinkt aan de collage, of eerder aan het geschilderde eindresultaat?</strong></p>
+<p>NVP: Negen op de tien keer ontstaat die titel achteraf. Ik werkte vroeger ook met postkaarten, die me vooral inspireerden door de communicatie tussen twee mensen. Dat ging veelal over bijvoorbeeld de reis waardoor een bepaalde zin me inspireerde in combinatie met beeld. Na mijn eigen trip naar India, noteerde ik veel dingen: beelden en fragmenten die een rol spelen in mijn schilderijen. Wanneer een reeks af is, grijp ik daar opnieuw naar terug en zoek ik naar: waar komt dit vandaan? Dat helpt me om bijvoorbeeld een titel te vinden. Maar vanuit een titel vertrekken? Nee, zo werkt het niet.</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-08.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-09.jpg" alt="" data-cap=""></figure></div>
+<p><strong>HVC: Je atelier bevindt zich boven het woongedeelte. Eens je aan het schilderen bent – want zo’n groot werk vraagt tijd, hoe moet ik dat concreet zien? Kom je hier binnen, trek je je schildersjas aan en duik je erin? Of moet je eerst in een bepaalde zone komen, met koffie – of iets sterkers (knipoogt) – door een kunstboek bladeren of muziek bijvoorbeeld? Vraagt dat energie om eraan te beginnen, of verlang je er al naar vanaf de ontbijttafel?</strong></p>
+<p>NVP: Ik denk dat het belangrijk is dat ik in blokken kan werken en minstens een hele dag voorzie om in een groot schilderij te duiken. Dat is het voordeel van die kleine werken: ik kan aan meerdere tegelijk bezig zijn, lagen opbouwen en dingen laten drogen.</p>
+<p><strong>HVC: Het vertrekpunt zou “goesting” moeten zijn. Verplicht je jezelf hier elke werkdag naartoe te komen? Want ik zie dat er ook een computer staat, wat gevaarlijk is in een atelier. Leg je jezelf een soort druk op? Je werkt natuurlijk veel naar expo’s toe, maar is het een “ongemak” in je lichaam of geest als je de trap opgaat? Want de buitenwereld is hier op afstand, maar aan de andere kant popel je natuurlijk om alles aan die buitenwereld te laten zien. Het is hetzelfde als iemand die muziek maakt: die zit ook thuis te pingelen op de gitaar om dan uiteindelijk op te treden. Maar is dat iets waar je tijdens het schilderen makkelijk mee om kan gaan in je atelier? Het is niet alleen: wat denk ik over het eindresultaat, maar ook: wat denkt de ander? En hoe positioneer ik mij in het veld? Ben ik een “hedendaags” kunstenaar of niet?</strong></p>
+<p>NVP: Ik begrijp waarom je die vraag stelt, omdat het waarschijnlijk iets is dat regelmatig terugkomt bij kunstenaars: om juist het evenwicht, die discipline of die gewoontes erin te krijgen. Ik vermoed dat we daar allemaal naar streven. De ene is daar al beter in dan de andere. Ik merk ook dat ik heel bewust de computer dichtklap of beneden laat; wat sowieso beter werkt. De combinatie tussen computer en schilderen is meestal geen goed idee, het afbakenen is belangrijk. En de goesting is er altijd. Ik heb nu zes weken aan een stuk geschilderd in mijn atelier, maar ik heb even mijn borstels uitgekuist omdat ik ook voel dat ik even afstand moet nemen om dan weer lagen te leggen en opnieuw fris te kunnen kijken naar mijn werk.’</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-10.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Ik denk dat dat een goede schilder definieert: een kunstenaar die twijfelt. Als het te makkelijk gaat… Dat is het rare in de kunst, dan voel/zie je – als kleine kenner (knipoogt) te gemakkelijk het ‘kunstje’. Die weerstand, frictie is wel belangrijk in het proces, of dat nu een klein schilderij is of een groot van drie op twee meter. Waardoor ik denk – maar ik kan mis zijn – dat als iets te makkelijk op doek belandt, het resultaat misschien ook te ‘gemakkelijk’ is voor de toeschouwer. Dat maakt voor mij het verschil tussen een goede en ‘minder goede’ kunstenaar, om het zo uit te drukken.</strong></p>
+<p>NVP: Dat doorleefde voel ik de laatste jaren veel meer. Wat ik vroeger deed, was de collage vertalen. Ik nam sommige delen wel schilderkundig op een andere manier mee. Als ik terugkijk naar vijf jaar geleden, zou ik tevreden zijn met een soort vertaling van die collage. Maar nu ga ik stappen verder. Op het moment dat ik vroeger dacht: ‘Mijn schilderij is nu klaar’, ga ik verder. Ik neem meer risico’s, ik ga voorbij die stap, waardoor het geen ‘plaatje’ wordt, maar een meer doorleefd schilderij. Dat is voor mij veel interessanter. Hoe de buitenwereld daar naar kijkt, weet ik niet.</p>
+<p><strong>HVC: Welke feedback krijg je doorgaans? Heb je het gevoel dat extra uitleg van jou nodig is, eventueel tekstueel? (Natuurlijk is dat nodig! (knipoogt)) Of ervaar je dat, als je mensen op je expo laat rondwalen, ze relatief snel begrijpen waarover gaat?</strong></p>
+<p>NVP: Ik denk dat het inderdaad belangrijk is hoe de toeschouwer naar mijn werk kijkt. Ik heb de neiging om heel technisch uitleg te geven, maar dat is niet altijd nodig. Dat is misschien ook de reden waarom ik graag schilderijen op groot formaat toon. In Blanco, de tentoonstellingsruimte van Nucleo te Gent, had ik een expo onder de noemer Chimaera, waar ik een selectie had maakte van de vijf jaren ervoor. Chimaera is een samenstelling uit de Griekse mythologie: een wezen met verschillende koppen. Voor mij is dat ook een soort collage van iets dierlijks. Natuur heeft altijd een grote rol gespeeld in mijn werk, net als het dierlijke. Ook durf ik echt kleur te gebruiken. Dat is ook de reden dat ik onlangs naar India trok, omdat je daar niet naast kan kijken. Je wordt er overspoeld door kleur en geur.</p>
+<p><strong>HVC: Je eindresultaat is esthetisch. Ik kijk hier rond in je atelier en merk op dat dit ongetwijfeld een belangrijke factor is. We kunnen spreken van een collage tussen abstract en figuratief, maar dat is wat kort door de bocht. Ik vermoed dat de sterkte van je werk is dat mensen een beetje moeten zoeken, waardoor ze gefascineerd raken. Ik denk ook dat je een schilderstijl hebt die mensen aanspreekt die van schilderkunst houden: soms met een grovere penseelstreek opgebouwd, verschillende types verftoetsen, met veel of weinig terpentijn of soms bijna vette klodders verf op je penseel. Je kan je werk allerminst saai noemen. Maar is het voor jou ook een gevaarlijk punt om, als je goed bezig bent, “erover” te gaan? Er moet toch altijd een moment zijn waarop je jezelf beveelt: nu is het genoeg! Of dat je voelt/ervaart dat je verhaal is verteld.’ En zie je je schilderijen als een verhaal, een boodschap, of puur als beeld om het beeld? Je moet uiteindelijk heel zelfzeker zijn om een kunstwerk de wereld in te sturen: ‘Hier kijkers, trek er uwe plan mee!’ Misschien komt mijn vraag ook vanuit mijn eigen achtergrond… Ik hield van tekenen en schilderen, volgde opleidingen, maar misschien ben ik gestopt omdat het te veel strijd was. (Alhoewel, dat zijn letters creëren ook. (knipoogt))</strong></p>
+<p>NVP: Dat klopt. Ik vermoed dat het goed is dat er tijd overgaat. Op het moment dat ik denk dat iets klaar is, laat ik het minstens nog een aantal maanden in mijn omgeving staan voordat ik het toon. Het is niet omdat je in een flow zit – en dat kan zelfs op één dag verschillen – dat het ook echt af is. ’s Avonds kan je denken: ‘Ja, nu staat het er.’ Maar de volgende ochtend kijk je en denk je: ‘Oei, ik ga toch nog een ingreep moeten doen, want het is niet wat ik wil.’</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-11.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Soms is het ook de roes, of de droom, zoals iemand die ’s avonds met een fles wijn werkt en de volgende ochtend ontnuchtert.</strong></p>
+<p>NVP: Ja. Maar onlangs zei ik nog tegen iemand: ‘Ik wil eigenlijk rust vinden terwijl ik aan het schilderen ben.’ Iedereen heeft een romantisch beeld van rustig schilderen, maar dat is het niet. Het is een soort druk, maar het mag een gezonde(re) druk zijn…</p>
+<p><strong>HVC: … en hopelijk is het soms eens écht lastig.</strong></p>
+<p>NVP: Ja, want als je botst of geen risico’s neemt en gewoon braaf schildert volgens je plan – wat ik vroeger meer deed, vind je misschien meer sereniteit. Maar dat is niet de spanning of de rust waar ik naar op zoek ben.</p>
+<p><strong>HVC: Ik vind dat je de laatste jaren geëvolueerd bent, precies omdat je vroeger meer mathematisch creëerde en nu minder berekend te werk gaat. Je zou heden ten dage zelfs collages op de computer kunnen maken, maar het is net die fysieke tussenstap – het knippen, scheuren – dat voor gelaagdheid zorgt, met het resultaat dat het interessant wordt op doek. Het zit net in die tussenlagen, in de energie, het fysieke, het zweet bijna, die zorgen dat een werk kracht heeft. Ik geloof daar sterk in. Je moet ook een zeker ego hebben om kunstenaar te zijn. Hoe voel je je wanneer je je werk toont? Eerder ‘klein’? Of denk je: ‘Hier ben ik, kijk eens wat ik kan!’?</strong></p>
+<p>NVP: Ik ben de laatste vijf jaar veel zekerder geworden. Ik voel en ervaar dat ik er wel sta en een onderscheid kan maken binnen de kunstwereld. Maar we zijn met veel. Daarom ik neem me voor om te blijven werken en mijn grenzen te blijven verleggen, en de commerciële insteek los te laten, wat niet evident is als je wil leven van de “kunsten”.</p>
+<p><strong>HVC: Je ziet jezelf dus groeien als kunstenaar. Je experimenteert tegenwoordig zelfs met sculptuur.</strong></p>
+<p>NVP: Ik wil mij vooral amuseren. Het project in India is nu een apart luik. Naar mijn volgende expo toe, koos ik ervoor om ook sculptuur te onderzoeken. Schilderijen zullen altijd prioriteit hebben, maar ik sta open voor andere materialen. Mijn ideale expo zie ik ook ruimtelijk, bijna architecturaal. Zoals ik daarnet zei: ik heb graag dat je in mijn werk kan staan. Nu is dat soms nog een tussenstap: een kleurvlak, iets op de grond, zodat je er bijna in kan stappen. Maar mijn ideale scenario is een volledige omgeving, waarin kleur en thematiek aansluiten bij het werk. Kunstenaar Nicolas Party doet dat fantastisch: galerieruimtes volledig beschilderen en dan één werk tonen. Dat is een prachtig scenario.</p>
+<p><strong>HVC: Eigenlijk droom je ervan dat je werk in verschillende settings komt, dat de ruimte zelf bijna een kunstwerk wordt. Je evolueert er van 2D naar 3D, misschien zelfs naar film.</strong></p>
+<p>NVP: Daar ben ik naar op zoek. Het voelt als een tussenstap: wat kan er bijna levend worden? Wat kan sculpturaal onderzocht worden vanuit mijn schilderijen? De relatie tussen die verschillende vormen lijkt me heel interessant.</p>
+<p>na een welverdiende koffie+taart-pauze</p>
+<p><strong>HVC: Je atelier lag hier even stof te vergaren, want je trok op residentie naar India, naar een residentie Kriti Gallery genaamd.</strong></p>
+<p>NVP: India is iets nostalgisch voor mij. Ik was daar meer dan twintig jaar geleden. Er was één specifieke plaats waarbij ik gevoelsmatig dacht: ‘Ooit kom ik hier terug en wil ik er langere tijd doorbrengen.’ Dat is Varanasi, in het noorden van India, waar de heilige rivier Ganges doorheen stroomt. Als we hier iets te zien krijgen in de media, is het meestal een of ander ritueel dat ze daar uitvoeren. Er zijn 24/24 uur lijkverbrandingen; leven en dood liggen er heel dicht bij elkaar. Als ik over die plek spreek met mensen die ook in India zijn geweest, beamen ze allemaal dat er iets hangt dat je niet kunt beschrijven en met niets kan vergelijken. Hier hebben we nog altijd de neiging om de dood te verbergen, het lichaam in een kist te leggen, enzovoort. Waarom dit thema? Er waren mensen rondom mij die er door bepaalde omstandigheden niet meer zijn… En er is de bewustwording: wie zijn we en waarvoor zijn we hier op de wereld? Mijn kunstenaarschap speelt daarin natuurlijk een heel belangrijke rol.</p>
+<p>Het idee ontstond terwijl ik aan het schilderen was: welke stap wil ik zetten? Idealiter doe je een gewoonweg residentie, maar het moest ook ergens grensverleggend zijn en misschien iets aanraken dat binnen de westerse cultuur minder bekend is. Ik googelde: ‘residentie India’ en zo kwam ik op die specifieke plek terecht, op een kwartiertje van de Ganges. Het is van een koppel: een Duitse vrouw en een Indiase man, die daar een paviljoentje bouwden voor een vijftal kunstenaars. Het is een oase tussen de drukte en de smog. Voor mijn gezondheid was het niet ideaal, maar het was een fantastische reis!</p>
+<p><strong>HVC: De meeste kunstenaars nemen op residentie basis werkmateriaal mee en zien ter plekke wat er aanwezig is. Hoe heb jij het aangepakt? ‘Ik ben hier in India, doe mijn ogen en oren open en begin te schetsen en schilderen volgens de feel die ik hier voel en laat de indrukken op mij afkomen?’</strong></p>
+<p>NVP: Dat in het eerste geval. Maar ik ben iemand die graag een houvast heeft, dus begin ik na te denken: ‘Wat kan ik daar concreet doen?’ Zo zette ik een aantal richtlijnen uit. Enerzijds legde ik contact met de Banaras Hindu University en vroeg ik hen of we een samenwerking konden aangaan. Want in het verlengde van mijn schilderwerk, wil ik ruimtelijk werk maken. Ik stelde voor om een workshop te geven met materialen van ginds, samen met Sofie Bos, mijn partner die me hiervoor twee weken bijstond. Concreet was dat de straat op gaan, materiaal verzamelen en samen met de leerlingen sculpturen op mensenmaat maken, om uiteindelijk een performance uit te werken, iets wat eigenlijk volledig buiten mijn comfortzone ligt.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-12.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Op zich was het basisdoel ‘experiment’.</strong></p>
+<p>NVP: Een deel was uitgeschreven. Dat was een eerste richting: samen met die leerlingen werken, met het idee dat die sculpturen er dan ruimtelijk zouden zijn en dat ik ze misschien mee naar België zou brengen. Uiteindelijk bracht ik één masker mee, maar het was vooral het onderzoek dat voor mij heel interessant was. Ik heb veel beeldmateriaal, ook van de performance. Het is een bewegend beeld dat losstaat van mijn schilderijen. Daarnaast heb ik statische beelden van die werken, waar ik ondertussen ook collages mee opzet. Dat deel lag vrij concreet vast.</p>
+<p><strong>HVC: Is dat niet de omgekeerde richting van hoe je doorgaans werkt?</strong></p>
+<p>NVP: Dat was inderdaad een richting. En vanzelfsprekend is de interactie en het aanvoelen van wat er leeft aan de universiteit een ervaring op zich. Samen met mijn vriendin Sofie hebben we ook iets voorbereid. Vanuit onze westerse cultuur en doordat ik vrij surrealistisch werk, plaatsten we surrealisten en modeontwerpers zoals Walter Van Beirendonck naast elkaar, omdat ze er eigenlijk geen notie van hebben. We praatten er een paar uur over, en zo ontstond de interactie met de leerlingen. We vroegen ons af waar we elkaar konden kruisen. Aan het einde van de rit begonnen ze, ondanks hun eerder traditionele achtergrond, toch dingen te maken. Dat was voor ons heel boeiend, omdat je die vraagstelling hebt en meer te weten komt over waarom ze bepaalde keuzes maken. Zij gaven ook zelf aan dat het voor hen een meerwaarde was: ze hadden nog nooit zo’n workshop gezien of meegemaakt. Het was heel leerrijk, maar het heeft ook veel energie gekost. (lacht)</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-13.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-14.jpg" alt="" data-cap=""></figure></div>
+<p><strong>HVC: Wat heb je concreet uit die workshops, samenwerking en kruisbestuiving met de universiteit meegenomen naar je atelier?</strong></p>
+<p>NVP: Ik heb de filmpjes even losgelaten. Ik ben nu enkele maanden terug, maar dat beeldmateriaal zal in de expo ongetwijfeld een belangrijke rol spelen.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-15.webp" alt="" data-cap=""></figure>
+<p><strong>HVC: Voor je vertrok naar India vertrok, wist je al: ‘Ik heb daarna een expo in DeNode in Gent en toon ik daar wat ik heb gezien, gehoord, geroken en meegemaakt.’ Dat was voor jou fijn om op voorhand te weten, omdat je zo naar een expo toe kunt werken.</strong></p>
+<p>NVP: Wat ik het liefste deed, was zonder kompas door de straten stappen, uren aan een stuk, en pas daarna kijken waar ik terechtkwam.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-16.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Dat doe ik ook altijd, maar ik loop altijd verloren. (lacht)</strong></p>
+<p>NVP: Ja, maar dat verloren lopen geeft zoveel. Elke straat, iedere hoek is een tafereel op zich. Dat is zo ongelooflijk aan India: er hangt zoveel authenticiteit. Het is chaos, maar daarin vinden mensen rust. Er wordt getoeterd en gewrongen in het verkeer, maar niemand maakt zich druk. Het is een welbepaalde setting. Hoewel ik vrij gevoelig ben en soms oordopjes of een koptelefoon droeg om alles wat te dempen, vond ik daar toch rust in.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-17.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Dacht je tijdens ‘Die Wanderung’ al na over hoe je dat in beeld zou omzetten?</strong></p>
+<p>NVP: Er zijn verschillende luiken. Normaal verwerk ik bestaand beeldmateriaal, maar daar koos ik bewust om veel foto’s met mijn telefoon te maken, deze te laten ontwikkelen en daar ter plekke in beginnen (te) snijden. Ik had ook wat olieverf mee en die foto’s vormden opnieuw een basis voor mijn schilderwerk. Het voordeel van afgedrukte foto’s is dat ze duurzamer zijn, maar ik toon ze niet snel, omdat ze fragiel en UV-gevoelig zijn. Daarom overweeg ik een reeks collages. Ik heb er al een aantal hangen, ik vind ze heel krachtig en exotisch. Elk beeld dat je daar maakt, is fotografisch sterk, en sowieso heb ik een vrij fotografisch oog. Ik zou bijna een fototentoonstelling kunnen maken.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-18.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Waarom niet?</strong></p>
+<p>NVP: Ik twijfel daarover. De dingen die aan de universiteit zijn gemaakt, zijn zo sterk dat ik ze soms ook loslaat en misschien een vijftal beelden effectief ga tonen van wat we daar creëerden. Die kunnen perfect naast de collages, schilderijen en het bewegende beeld bestaan.</p>
+<p>Concreet: de eerste insteek was de universiteit. De tweede ontstond op de trein van Delhi naar Varanasi, waar ik een krant van The Indian Times vond. Deze stond vol met foto’s van “missing people”, met de vraag of iemand hen herkende. Die foto’s zijn zwart-witbeelden van mensen op het moment dat ze gestorven zijn, alsook andere die vermist zijn. Dat had een enorme impact op mij: beelden van iemands einde, in relatie tot leven en dood, identiteit… Er zijn daar zoveel mensen. Het feit dat iemand bijna geen identiteit krijgt en via een krant wordt “opgeroepen”, gecombineerd met die confronterende beelden, inspireerde me om kleurportretten te maken, vertrekkend van die zwart-witbeelden. Ik had de laatste jaren geen portretten meer gerealiseerd, maar ben daar opnieuw ingedoken.</p>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-19.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-20.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-21.jpg" alt="" data-cap=""></figure></div>
+<p><strong>HVC: Dat zijn die kleine werken hier op de grond, van bijna vijf op vier centimeter. Je geeft die mensen zonder identiteit opnieuw een soort identiteit. Was dat je bedoeling?</strong></p>
+<p>NVP: Ja, om die persoon opnieuw aandacht te geven, iets wat hij niet meer krijgt. Ik isoleer deze persoon, waardoor die als het ware terugkomt en een soort waardigheid krijgt.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-22.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Je wil dus een expo maken waarin wij als kijker ervaren wat jij in India zowel fysiek als mentaal beleefde?</strong></p>
+<p>NVP: Ja. Ik laat mezelf toe om dat onderzoek te doen. En ik denk dat dat ook de opzet is van Foundation DeNode: hoe zotter, hoe liever. Ik toon dat onderzoek, waardoor ik op verschillende sporen werk. Ik nam die gezichten ook mee naar de Ganges. Ik vroeg aan een Indiër wat hij voelde bij bepaalde personen. Hij keek naar mijn vertaling van de krant naar het schilderij, en ik filmde dat. Zo ontstond er een verbinding tussen mijn tekening en zijn gevoel; wat hij ziet en ervaart bij dat beeld. Dit samen met de video vormt één werk.</p>
+<p><strong>HVC: Ik zie hier een grote vierluik hangen. Is dat ook op India geïnspireerd?</strong></p>
+<p>NVP: Ja. Dat is een derde insteek: de collages die ik daar maakte en heb versneden. Ik blijf collages creëren, maar deze en de kleine schilderijen kon ik daar wel produceren, omdat ik beperkt was in ruimte en materiaal. Nu vertaal ik dat naar grotere canvassen en panelen. Bijvoorbeeld die honden die ik ook schilder: er waren er vier op de residentie. Achter dat werk zit ook een verwijzing naar straathonden. Op de residentie leefden ze in een veilige omgeving, terwijl straathonden zich door het verkeer en de chaos moeten slaan. Dat contrast interesseerde me en doet me denken aan onze westerse cultuur van overbescherming tegenover de straatcultuur.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-23.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Concreet: wat krijgen we te zien op de tentoonstelling in DeNode te Gent?</strong></p>
+<p>NVP: Dat weten we nog niet volledig; de opbouw moet nog gebeuren. Maar hier in het atelier zie je dat ik werk rond wat ik daar ervaarde. Ik probeer ook de kleuren van ginds mee te brengen en de kijker onder te dompelen in een Indische sfeer.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-24.jpg" alt="" data-cap=""></figure>
+<p><strong>HVC: Wil je iets educatiefs of maatschappelijks aankaarten? Je zag daar ongetwijfeld veel armoede.</strong></p>
+<p>NVP: Het is natuurlijk zo dat de samenwerking en de contrasten tussen de schoolse manier van werken en hoe mensen daar in het leven staan, er sowieso uitkomen. Als ik beelden en interviews toon, krijgt het ook een beetje een documentair karakter. Als ik naar een expo ga, wil ik verrast worden, en dat ben ik niet snel meer. Ik probeer mezelf uit te dagen om iets te maken waarin je – zonder vooraf iets over te lezen – ook voelt waarover het gaat. Dat vind ik belangrijk.</p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-25.jpg" alt="" data-cap=""></figure><figure><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-26.jpg" alt="" data-cap=""></figure></div>
+<p><strong>HVC: Is het je betrachting dat de bezoekers van je expo Kashi Rupé – Unfolded in DeNode Foundation, even uit de reguliere wereld worden weggeroepen? NVP Ja. Door één video, mijn schilderijen en de interactie met de mensen. Ik ben er nog niet uit in welke vorm, maar ik zou toch minstens één ruimte willen aanpakken die een Indisch spoor nalaat, zodat het niet allemaal kleine witte ruimtes zijn. Een ideaalbeeld is dat ik bijna een straatbeeld creëer, met de geur en de drukte er als het ware bij. Er zijn zoveel facetten die een rol spelen, bijna als een collage van India. Maar dit valt nog te overleggen. (knipoogt) HVC Sounds good! Ongetwijfeld ga je er zelf ook weer zoveel uit leren, dat het terug in je toekomstig werk zal doorschemeren.</strong></p>
+<p>NVP: Het leuke is dat ik mezelf toelaat om zo veel mogelijk onderzoek te doen, ook al voel ik me nog altijd een schilder. Als buitenstaander verwacht je misschien iets anders, maar voor mij is het ook een uitdaging. Dat maakt het niet gemakkelijker, maar ik neem er de tijd voor om het goed te doen. HVC Dat is belangrijk, net zoals kunst natuurlijk!</p>
+<p><strong>HVC: https://www.hildevancanneyt.be/ http://www.nicolasvanparys.com/ https://www.denode.be/</strong></p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-27.jpg" alt="" data-cap=""></figure></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/nicolas-van-parys.html">Kunstenaar: Nicolas Van Parys →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="../expo/index.html">Tentoonstellingen</a></li>
+<li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="../publicaties.html">Publicaties</a></li>
+<li><a href="../collectie.html">Collectie</a></li>
+<li><a href="../shop.html">Shop</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="../bezoek.html">Bezoek</a></li>
+<li><a href="../over.html">Over</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inschrijving%20nieuwsbrief&body=Graag%20schrijf%20ik%20me%20in%20voor%20de%20DeNode-nieuwsbrief.%0ANaam%3A%20">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
+</body></html>

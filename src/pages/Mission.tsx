@@ -7,7 +7,7 @@ import {
 } from "../pagesContent";
 import type { Lang } from "../lang";
 
-const ACCENT = "#c0392b";
+const ACCENT = "#a23b2d";
 const AI_NOTE: Record<Lang, string> = {
   nl: "Deze vertaling is automatisch (AI) gegenereerd.",
   en: "This translation was automatically (AI) generated.",
@@ -38,50 +38,47 @@ export function Mission({ lang }: { lang: Lang }) {
   };
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:px-8">
-      {ai && <p className="text-xs italic text-[#999]">{AI_NOTE[lang]}</p>}
-      <h1 className="mt-2 text-4xl font-extrabold leading-tight text-black md:text-5xl">
-        {title}
-      </h1>
+    <section className="dn-section">
+      <div className="dn-wrap">
+        {ai && <p className="text-xs italic text-[#8a8477]">{AI_NOTE[lang]}</p>}
+        <h1 className="dn-h1 mt-2">{title}</h1>
 
-      <div className="mt-12 grid gap-10 md:grid-cols-[240px_1fr]">
-        <nav className="self-start md:sticky md:top-24">
-          <ul className="border-l border-[#ececec]">
+        <div className="mt-12 grid gap-10 md:grid-cols-[240px_1fr]">
+          <nav className="self-start md:sticky md:top-24">
+            <ul className="border-l border-[#d8d2c6]">
+              {sections.map((s, i) => (
+                <li key={i}>
+                  <button
+                    type="button"
+                    onClick={() => jump(i)}
+                    className="dn-kicker block w-full py-2 pl-4 text-left leading-snug transition-colors"
+                    style={
+                      active === i
+                        ? { color: ACCENT, boxShadow: `inset 2px 0 0 0 ${ACCENT}` }
+                        : undefined
+                    }
+                  >
+                    {s.heading}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="space-y-10">
             {sections.map((s, i) => (
-              <li key={i}>
-                <button
-                  type="button"
-                  onClick={() => jump(i)}
-                  className="block w-full py-2 pl-4 text-left text-[15px] leading-snug transition-colors"
-                  style={
-                    active === i
-                      ? {
-                          color: "#000",
-                          boxShadow: `inset 2px 0 0 0 ${ACCENT}`,
-                        }
-                      : { color: "#888" }
-                  }
-                >
+              <div key={i} id={`sec-${i}`} className="scroll-mt-24">
+                <h2 className="dn-h3 border-b border-[#d8d2c6] pb-2">
                   {s.heading}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="space-y-10">
-          {sections.map((s, i) => (
-            <div key={i} id={`sec-${i}`} className="scroll-mt-24">
-              <h2 className="border-b border-[#ececec] pb-2 text-2xl font-bold text-black">
-                {s.heading}
-              </h2>
-              <div className="mt-4 space-y-3 text-[16px] leading-relaxed text-[#333]">
-                {s.paras.map((p, j) => (
-                  <p key={j}>{p}</p>
-                ))}
+                </h2>
+                <div className="mt-4 space-y-3 text-[16px] leading-relaxed text-[#2a2925]">
+                  {s.paras.map((p, j) => (
+                    <p key={j}>{p}</p>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

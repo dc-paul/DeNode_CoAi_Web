@@ -1,0 +1,191 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview avec Bezverkhni de Gand/Mikhail Bezverkhni — DeNode Foundation</title>
+<meta name="description" content="Automne 2024">
+<meta property="og:title" content="Interview avec Bezverkhni de Gand/Mikhail Bezverkhni — DeNode Foundation">
+<meta property="og:description" content="Automne 2024">
+<meta property="og:image" content="https://icp.denode.be/_assets/images/expo/bij-de-meesters/Paul-De-Roo_Misha.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://icp.denode.be/fr/artikel/interview-mikhail-bezverkhny.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+.dn-gal--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Boutique</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/artikel/interview-mikhail-bezverkhny.html">NL</a><a class="lg" href="../../en/artikel/interview-mikhail-bezverkhny.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+</header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / Interview avec Bezverkhni de Gand/Mikhail Bezverkhni</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2026-03-21</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview avec Bezverkhni de Gand/Mikhail Bezverkhni</h1>
+
+<div class="dn-note" style="margin-top:10px">Traduction IA</div>
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Automne 2024</p>
+<p>Interview avec Bezverkhni de Gand/Mikhail Bezverkhni (°1947)</p>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC): Cher Bezverkhni, quand avez-vous commencé à peindre ?</strong></p>
+<p>BvG Quand j'avais 29 ans, j'ai suivi une formation artistique large pendant quatorze ans, avec quatre piliers : la musique, la peinture, la poésie et la philosophie. J'ai reçu cela du grand maestro Vladimir Raykov, élève de Rafaël Falk, un artiste soviétique renommé. Jusqu'aux années 90, j'étais son élève et je le visitais plusieurs fois par semaine. Il ne m'a pas seulement enseigné les fondamentaux techniques, mais surtout l'essence de ce qu'est réellement l'art. Beaucoup possèdent la technique, mais cela ne fait pas d'eux des artistes. Il est crucial de comprendre pourquoi l'art existe et quel rôle il joue dans la vie.</p>
+<p>Dans les années 90, j'ai déménagé en Belgique, d'abord mon deuxième pays, aujourd'hui ma patrie. Pendant quinze ans, j'ai gardé mes peintures pour moi ; presque personne ne savait que j'étais occupé à cela. À l'extérieur, j'étais surtout musicien et compositeur. Après seize ans, quelque chose de paradoxal s'est produit. En 2007, j'ai organisé un concert à De Rode Pomp à Gand et j'y ai associé une tombola. Le premier prix était une de mes œuvres. J'ai prétendu que je n'avais jamais peint. (rit) Pour la première fois depuis longtemps, j'ai créé à nouveau une peinture et tout s'est débloqué : émotion, désir et faim. Soudain, je peignais à nouveau cinq œuvres par jour. Des expositions à l'étranger ont suivi de manière inattendue. À Boulogne, j'ai donné un concert, où même l'évêque était présent ! À ce moment-là, j'étais à la fois musicien et artiste visuel.</p>
+<p><strong>HVC: Dois-je imaginer que jouer du violon demande une concentration totale, tandis que peindre vous procure plutôt un sentiment de liberté ?</strong></p>
+<p>BvG Pas nécessairement. En musique, je suis tout aussi illimité que dans ma peinture. Je joue aussi au tennis : quand je joue un match, c'est à fond. La seule différence entre gagner et perdre est : fumer ou ne pas fumer. (rit) Mais peindre semble pour moi plus proche de composer. La musique restera toujours une constante dans ma vie. J'ai laissé la poésie derrière moi.</p>
+<p><strong>HVC: Trouvez-vous des idées pour des portraits en feuilletant des livres dans votre atelier ?</strong></p>
+<p>BvG Cela naît de l'émotion du moment. Un journal à Boulogne a un jour écrit : ‘Une nouvelle direction est née, le momentalisme de Mikhail Bezverkhni.’</p>
+<p>Quand je travaille sur une peinture, je ne peux ni manger ni dormir tant qu'elle n'est pas terminée. Faire continuellement la même chose n'est pas dans ma nature. Mon maître m'a conseillé d'utiliser tout ce qui est à ma disposition : tant thématiquement qu'en matière. J'ai peint avec du café, de la moutarde, du ketchup, en somme des moyens non conventionnels. Aussi avec du sable, c'est un classique. Je mélange même de l'acrylique avec de la peinture à l'huile, techniquement non orthodoxe, mais pour moi une bonne ‘salade’.</p>
+<p><strong>HVC: Dès que vous avez envie de peindre, vous commencez simplement ?</strong></p>
+<p>BvG J'ai toujours envie de peindre — jour et nuit ! Seulement, il me manque parfois du temps. Je travaille actuellement sur une commande pour Berlin : quatre saisons, douze mois. Mais finalement, je suis mon intuition et fais ce que je désire à ce moment-là.</p>
+<p><strong>HVC: Votre atelier est-il chez vous ?</strong></p>
+<p>BvG J'ai une caravane entièrement aménagée en atelier. Là, je trouve tout ce dont j'ai besoin.</p>
+<p><strong>HVC: Dans l'exposition Bij de meesters (Nodenaysteen, Gand 2025), nous voyons des portraits variés : autoportraits, figures historiques… Parfois, vous avez besoin de vingt minutes, parfois cinq heures pour compléter une œuvre. Vous considérez-vous comme expressionniste ?</strong></p>
+<p>BvG Non. Un expressionniste travaille souvent des mois sur une seule œuvre ; je veux terminer une peinture en un seul mouvement.</p>
+<p><strong>HVC: Qu'est-ce qui vous pousse à créer de l'art ? Vous n'avez pas besoin de le faire ‘pour les femmes’ : vous êtes un maître de la musique et vous avez remporté le Concours Reine Élisabeth en 1976.</strong></p>
+<p>BvG Pourquoi vis-je ? J'ai 77 ans. Beaucoup de mes proches sont morts, même ceux qui n'ont jamais fumé ou bu. En tant que violoniste, j'ai souvent joué lors de funérailles. Donc, je me suis souvent demandé : ‘Pourquoi suis-je encore là ?’ Parce que j'ai encore quelque chose à faire dans l'art. Mais ensuite vient la deuxième question : ‘Qu'est-ce que l'art ?’ L'art est une vie concentrée. Et en fait, tout est art, si l'on regarde vraiment.</p>
+<p>Un artiste – peintre, compositeur, photographe ou poète – concentre des moments et les montre aiguisés aux autres. Comme Goya l'a fait. Pas décorativement beau, mais existentiellement. La musique est pour moi l'évangile. Je ne parle pas de musique orientale méditative ; c'est de la “atmosphère”. Notre art illustre notre vie et notre histoire. Moi, Mikhail Bezverkhni, je veux laisser le plus possible lorsque je partirai vers le ciel.</p>
+<p><strong>HVC: Vous avez maintenant une œuvre vaste. Dans le Nodenaysteen, il y a une galerie de portraits de vous.</strong></p>
+<p>BvG La vie est une histoire, l'art est cette histoire sous forme concentrée.</p>
+<p><strong>HVC: Auriez-vous manqué quelque chose si vous n'aviez joué que du violon ?</strong></p>
+<p>BvG Certainement. L'instinct le plus fort est l'instinct sexuel et cela cause beaucoup de catastrophes. J'en ai aussi été esclave. Je voulais une famille, mais j'avais besoin de plus. Cet instinct est physiologique et indépendant de l'art. On dit parfois que je suis marié à mon violon.</p>
+<p><strong>HVC: Vous qualifiez la peinture de romantique. N'est-ce pas une forme de sublimation ?</strong></p>
+<p>BvG Je ne pense pas de manière aussi académique. Je peins des histoires qui se présentent. Une fois, j'ai vu dans la rue un sac poubelle jaune, fermé avec une ficelle. Je me suis senti lié à cela et j'ai pensé : ‘Je vais être tué demain.’ C'est pourquoi j'ai peint un visage sur ce sac poubelle : simple fantaisie !</p>
+<p><strong>HVC: Vous voyez vos œuvres comme des images de rêve ; vous ne voulez pas tenir un miroir aux gens.</strong></p>
+<p>BvG Une personne ordinaire voit la couleur. Un poète voit derrière un mur, un château avec des princesses. C'est la différence. Si vous regardez les pierres sur la place Saint-Bavon, vous pouvez, dans les fissures, du moins dans votre imagination, découvrir d'innombrables portraits. Un artiste n'a pas besoin de fantasmer ; il doit voir ce que les autres ne voient pas et rendre visible ce qui reste caché pour les autres.</p>
+<p><strong>HVC: Que pensez-vous de votre collègue <a href="../kunstenaar/gipi.html">Gipi</a> – Pierre Gillis – qui montre ici ses dessins célèbres avec vous ?</strong></p>
+<p>BvG Pourquoi est-il un grand maître ? Avec seulement du noir et du blanc, il crée des effets de couleur. Il construit ses dessins presque comme des bas-reliefs, alors qu'un dessin est normalement plat. Son niveau n'est pas inférieur à celui de Léonard de Vinci. Pourquoi travaille-t-il avec des personnages photographiques ? Il est un réaliste, comme les artistes du 19e siècle, lorsque la photographie n'existait pas encore. Après l'invention de la photographie, les peintres n'avaient plus besoin d'être photographiques, et la progression ainsi que la régression vers l'abstraction ont commencé. Pensez à Pollock ! Mais le travail de Gipi est à la fois contemporain.</p>
+<p><strong>HVC: Que signifie l'art contemporain pour vous ?</strong></p>
+<p>BvG Qui n'a pas d'histoire n'est pas un artiste.</p>
+<p>Il y a quelques années, il y a eu un événement artistique au Mexique où les gens ont regardé pendant des heures un chien mourir. Personne n'est intervenu. Des protestations ont suivi, et à juste titre ! À Copenhague, une girafe avec des ‘gènes défectueux’ a été tuée et nourrie en direct aux lions. Cela a également été appelé ‘art’. Est-ce de l'art contemporain ?</p>
+<p><strong>HVC: En effet, cela fait réfléchir… Quel est le plus grand compliment que l'on puisse vous faire ?</strong></p>
+<p>BvG Que l'on soit ‘pris’. J'ai été formé par des gens comme Elvis Presley et Édith Piaf, des artistes qui saisissent le public à la gorge. Mon seul principe est : lorsque je crée de l'art, je dois moi-même être touché. Un musicien sur scène doit ressentir cent fois plus que quiconque dans la salle.</p>
+<p><strong>HVC: Il doit y avoir de la friction. Vous n'êtes pas un provocateur.</strong></p>
+<p>BvG La vie provoque suffisamment. Les gens demandent parfois : ‘Trouves-tu cela bon ?’ Le temps est l'élément le plus puissant qui existe. Plus fort que le feu, plus fort que l'eau. Le temps décide de ce qui reste. Certains conservent l'art dans des coffres-forts pour le protéger, mais finalement, quelque chose de plus grand détermine ce qui survit — comme pour Modigliani. Quand je mourrai, je verrai bien quelle place il y a pour mes œuvres.</p>
+<p><strong>HVC: Quand l'art des autres est-il bon ?</strong></p>
+<p>BvG L'art est une histoire concentrée de lignes. C'est pourquoi je me méfie de l'art qui veut simplement être ‘beau’. L'art peut être tranchant et rock'n'roll, un miroir avec beaucoup de dioptries. Je suis extrêmement sensible : les films restent des mois en moi. Récemment, j'ai vu Milano (2024), un film belge sur un garçon de quatorze ans. Ou The Deer Hunter (1978) avec Robert De Niro, qui m'a incroyablement touché. De tels films n'ont pas besoin de faire moins que Shakespeare.</p>
+<p><strong>HVC : Auriez-vous travaillé différemment si vous étiez resté en Russie ?</strong></p>
+<p>BvG Là-bas, il y a plus de liberté qu'on ne le pense ici. Seules les personnes qui défient activement le régime sont punies ; les autres ne le sont pas.</p>
+<p><strong>HVC : Êtes-vous croyant ?</strong></p>
+<p>BvG La religion devait vivre dans l'ombre. Le régime communiste ne le tolérait pas et qualifiait la religion d'« opium du peuple ».</p>
+<p><strong>HVC : Vous deviez donc vous plier au pouvoir ?</strong></p>
+<p>BvG À Gand aussi, non ? Pensez à la zone à faibles émissions, au plan de circulation, à la fermeture de l'église Saint-Anne… Ici, les mesures portent souvent un masque démocratique. Les Belges sont indifférents. Je m'oppose à cette indifférence.</p>
+<p><strong>HVC : C'est bien ! Restez vous-même, Bezverkhni !</strong></p>
+<p>@hildevancanneyt</p>
+<p>avec Gipi</p></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
+
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/mikhail-bezverkhny.html">Artiste: Mikhail Bezverkhny →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Découvrir</h4><ul class="fnav">
+<li><a href="../expo/index.html">Expositions</a></li>
+<li><a href="../kunstenaar/index.html">Artistes</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../shop.html">Boutique</a></li>
+<li><a href="../event/index.html">Événements</a></li></ul></div>
+<div><h4>Impliqué</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visite</a></li>
+<li><a href="../over.html">À propos</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand.</span></div></div></footer>
+</body></html>

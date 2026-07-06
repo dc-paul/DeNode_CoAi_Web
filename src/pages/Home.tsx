@@ -1,156 +1,161 @@
 import { CONTENT, IMG } from "../content";
-import { getPost } from "../blogPosts";
-import type { Lang } from "../lang";
+import { EXPOS } from "../expos";
+import { Band } from "../components/Band";
+import { href, type Lang } from "../lang";
 
-const ACCENT = "#c0392b";
-const CARD_IMAGES = [IMG.workshop, IMG.katbove, IMG.drawing];
-const MORE: Record<Lang, string> = {
-  nl: "Meer info & inschrijven →",
-  en: "More info & registration →",
-  fr: "Plus d'infos & inscription →",
+const T: Record<
+  Lang,
+  {
+    now: string;
+    visitBtn: string;
+    exhibitions: string;
+    archive: string;
+    visit: string;
+    routeHours: string;
+    address: string;
+    open: string;
+    phone: string;
+  }
+> = {
+  nl: {
+    now: "Nu te zien",
+    visitBtn: "Bezoek de tentoonstelling",
+    exhibitions: "Tentoonstellingen",
+    archive: "Volledig archief →",
+    visit: "Bezoek",
+    routeHours: "Route & uren →",
+    address: "Adres",
+    open: "Open",
+    phone: "Telefoon",
+  },
+  en: {
+    now: "Now on view",
+    visitBtn: "Visit the exhibition",
+    exhibitions: "Exhibitions",
+    archive: "Full archive →",
+    visit: "Visit",
+    routeHours: "Route & hours →",
+    address: "Address",
+    open: "Open",
+    phone: "Phone",
+  },
+  fr: {
+    now: "À voir",
+    visitBtn: "Visiter l'exposition",
+    exhibitions: "Expositions",
+    archive: "Archives complètes →",
+    visit: "Visite",
+    routeHours: "Itinéraire & horaires →",
+    address: "Adresse",
+    open: "Ouvert",
+    phone: "Téléphone",
+  },
 };
 
 export function Home({ lang }: { lang: Lang }) {
+  const t = T[lang];
   const h = CONTENT[lang].home;
-  // Local detail pages per home card (index-aligned with h.cards / CARD_IMAGES).
-  const CARD_LINKS: (string | undefined)[] = [
-    `#/${lang}/event/cutting-reality`,
-    undefined, // Kat Bové book → keeps its own shop CTA
-    `#/${lang}/event/drawing-sessions`,
-  ];
+  const sorted = [...EXPOS].sort((a, b) => b.sortDate.localeCompare(a.sortDate));
+  const current = sorted[0];
+  const recent = sorted.slice(1, 7);
+  const artistsOf = (e: (typeof EXPOS)[number]) =>
+    e.artists.map((a) => a.name).join(", ");
+
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
-        <div className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
-          <img
-            src={IMG.hero}
-            alt={h.exhibitionTitle}
-            className="w-full rounded-sm object-cover shadow-sm"
-          />
-          <div className="text-black">
-            <p className="text-2xl font-semibold md:text-3xl">{h.presents}</p>
-            <h1 className="mt-2 text-5xl font-extrabold leading-[1.05] md:text-6xl">
-              {h.exhibitionTitle}
-            </h1>
-            <p className="mt-4 text-xl">{h.soloBy}</p>
-            <p className="mt-1 text-3xl font-bold md:text-4xl">{h.artist}</p>
-            <div className="mt-8 space-y-4 text-[17px] leading-relaxed text-[#222]">
-              <p className="font-semibold">{h.paragraphs[0]}</p>
-              {h.paragraphs.slice(1).map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-              <p className="italic">{h.italic}</p>
-              <p className="font-semibold">{h.openDates}</p>
-              <p>{h.hours}</p>
-              <p>
-                <a
-                  href={`#/${lang}/blog/nicolas-van-parys`}
-                  className="font-semibold underline"
-                  style={{ color: ACCENT }}
-                >
-                  {h.readText}
-                </a>
-              </p>
-            </div>
+      {/* Hero — split, art-first */}
+      <section className="dn-hero">
+        <div className="dn-hero__txt">
+          <p className="dn-eyebrow">
+            {t.now} · {current.period}
+          </p>
+          <h1 className="dn-h1 mt-3">{current.title}</h1>
+          <p className="dn-lead dn-serif-it mt-3">{artistsOf(current)}</p>
+          <p className="mt-5 max-w-[46ch] text-[17px] leading-relaxed text-[#26251f]">
+            {h.paragraphs[0]}
+          </p>
+          <a className="dn-btn mt-7" href={href(lang, `expo/${current.slug}`)}>
+            {t.visitBtn} <span aria-hidden>→</span>
+          </a>
+        </div>
+        <div className="dn-hero__img">
+          <img src={current.image || IMG.hero} alt={current.title} />
+        </div>
+      </section>
+
+      <Band lang={lang} />
+
+      {/* Exhibitions */}
+      <section className="dn-section">
+        <div className="dn-wrap">
+          <div className="dn-head">
+            <h2 className="dn-h2">{t.exhibitions}</h2>
+            <a href={href(lang, "expo")}>{t.archive}</a>
+          </div>
+
+          <div className="dn-grid">
+            <a
+              className="dn-card dn-card--now"
+              href={href(lang, `expo/${current.slug}`)}
+            >
+              <div className="thumb" style={{ backgroundColor: current.tint }}>
+                {current.image && <img src={current.image} alt={current.title} />}
+              </div>
+              <div className="meta">
+                <span className="dn-tag">{t.now}</span>
+                <p className="dates mt-3">
+                  {current.period}
+                  {current.curator && current.curator !== "—"
+                    ? ` · ${current.curator}`
+                    : ""}
+                </p>
+                <h3>{current.title}</h3>
+                <p className="who">{artistsOf(current)}</p>
+              </div>
+            </a>
+
+            {recent.map((e) => (
+              <a key={e.slug} className="dn-card" href={href(lang, `expo/${e.slug}`)}>
+                <div className="thumb" style={{ backgroundColor: e.tint }}>
+                  {e.image && <img src={e.image} alt={e.title} />}
+                </div>
+                <p className="dates">{e.period}</p>
+                <h3>{e.title}</h3>
+                <p className="who">{artistsOf(e)}</p>
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#f7f7f5] py-14">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3 md:px-10">
-          {h.cards.map((c, i) => {
-            const link = CARD_LINKS[i];
-            const body = (
-              <>
-                <img
-                  src={CARD_IMAGES[i]}
-                  alt={c.title}
-                  className="h-56 w-full object-cover"
-                />
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-bold text-black">{c.title}</h3>
-                  <div className="mt-3 text-[15px] leading-relaxed text-[#333]">
-                    {c.lines.map((l, j) => (
-                      <p key={j} className={j === 0 ? "" : "mt-1"}>
-                        {l}
-                      </p>
-                    ))}
-                    {link && (
-                      <span
-                        className="mt-4 inline-block font-medium"
-                        style={{ color: ACCENT }}
-                      >
-                        {MORE[lang]}
-                      </span>
-                    )}
-                    {!link && c.cta && c.ctaHref && (
-                      <a
-                        href={c.ctaHref}
-                        className="mt-4 inline-block rounded-sm px-5 py-2.5 font-semibold text-white"
-                        style={{ backgroundColor: ACCENT }}
-                      >
-                        {c.cta}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </>
-            );
-            const cls =
-              "flex flex-col overflow-hidden rounded-md border border-[#ececec] bg-white shadow-sm";
-            return link ? (
-              <a key={i} href={link} className={`${cls} transition-shadow hover:shadow-md`}>
-                {body}
-              </a>
-            ) : (
-              <article key={i} className={cls}>
-                {body}
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-14 md:px-10">
-        <div className="flex items-end justify-between border-b border-[#ececec] pb-3">
-          <h2 className="text-lg font-bold tracking-wide text-black">
-            {h.blogHeading}
-          </h2>
-          <a
-            href="https://www.denode.be/en/blog"
-            className="text-[15px] font-medium"
-            style={{ color: ACCENT }}
-          >
-            {h.viewEverything} →
-          </a>
-        </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {h.posts.map((p) => {
-            const bp = getPost(p.slug);
-            const title =
-              lang === "nl" && bp?.nl ? bp.nl.title : bp?.title ?? p.title;
-            return (
-              <a
-                key={p.slug}
-                href={`#/${lang}/blog/${p.slug}`}
-                className="group relative flex h-72 items-center justify-center overflow-hidden rounded-md p-6 text-center"
-                style={{ backgroundColor: p.tint }}
-              >
-                {bp?.image && (
-                  <img
-                    src={bp.image}
-                    alt={title}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                )}
-                <span className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/55"></span>
-                <span className="relative text-2xl font-extrabold leading-tight text-white">
-                  {title}
-                </span>
-              </a>
-            );
-          })}
+      {/* Visit */}
+      <section className="dn-section" style={{ background: "var(--paper2)" }}>
+        <div className="dn-wrap">
+          <div className="dn-head">
+            <h2 className="dn-h2">{t.visit}</h2>
+            <a href={href(lang, "visit")}>{t.routeHours}</a>
+          </div>
+          <div className="grid gap-10 md:grid-cols-2">
+            <dl className="dn-dl">
+              <dt>{t.address}</dt>
+              <dd>Predikherenlei 4, 9000 Gent</dd>
+              <dt>{t.open}</dt>
+              <dd>
+                {CONTENT[lang].footer.openLines.map((l, i) => (
+                  <div key={i}>{l}</div>
+                ))}
+              </dd>
+              <dt>{t.phone}</dt>
+              <dd>
+                <a href="tel:+32488880889">+32 488 88 08 89</a>
+              </dd>
+            </dl>
+            <div className="space-y-4 text-[16px] leading-relaxed text-[#2a2925]">
+              {h.paragraphs.slice(1).map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>
