@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -96,7 +99,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <dl class="dn-dl">
 <dt>Artiste</dt><dd><a href="../kunstenaar/gipi.html">Gipi (Pierre Gillis)</a>, <a href="../kunstenaar/mikhail-bezverkhny.html">Mikhail Bezverkhny</a></dd>
 <dt>Période</dt><dd>2025/01/25 – 2025/02/23</dd>
-<dt>Curator</dt><dd><a href="../over.html#benevoles-et-personnel">Damien Degrave</a></dd>
+<dt>Curator</dt><dd><a href="../kunstenaar/damien-degrave.html">Damien Degrave</a></dd>
 <dt>Lieu</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
 </dl></div></div></section>
@@ -120,7 +123,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/expo/bij-de-meesters/Paul-De-Roo_Misha.jpg" alt="Mikhail Bezverkhny">
 <div class="in"><div class="dn-eyebrow">Sur l'artiste</div><h3 class="dn-h2">Mikhail Bezverkhny</h3>
-<p style="margin:12px 0 20px"></p>
+<p style="margin:12px 0 20px">Mikhail Bezverkhny, violoniste et artiste respecté, est né à Leningrad (ex-URSS). En 1976, il a remporté le premier prix du Concours Reine Élisabeth pour le violon. Après la chute du mur de Berlin en 1989, il s’est installé définitivement en Belgique. Mikhail Bezverkhny s’est…</p>
 <a class="dn-btn" href="../kunstenaar/mikhail-bezverkhny.html">Voir l'artiste →</a></div></div></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>

@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -94,7 +97,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="team">Team</h2>
 <p>De vaste kern van DeNode</p>
 <h3 class="dn-h3" id="paul-de-canniere">Paul De Cannière</h3>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière — Foto: Steven Decroos</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure>
 <p><em>Oprichter &amp; Strategische Visie</em></p>
 <p>Gedreven door de wens om een vrije ruimte te creëren voor collectieve reflectie, richtte Paul — samen met zijn vrouw Mieke Van Loo — Stichting DeNode op. Met een scherp oog voor technologische innovatie en een sterke sociale bewogenheid, richt hij zich op projecten die conventionele formats overstijgen en een duurzame impact willen genereren.</p>
 <h3 class="dn-h3" id="kristof-vander-cruyssen"><a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></h3>
@@ -107,7 +110,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>Hanna geeft vorm aan de inhoudelijke narratieven en internationale samenwerkingen van DeNode. Vanuit een achtergrond in de filosofie en antropologie weeft zij thematisch onderzoek samen met geëngageerde kunstpraktijken. Zij is de spil in ons internationale netwerk en verantwoordelijk voor de redactionele projecten die onze visie verdiepen.</p>
 <h2 class="dn-h3" id="vrijwilligers-en-medewerkers">Vrijwilligers en medewerkers</h2>
 <p>De realisatie van ons programma zou onmogelijk zijn zonder de tomeloze inzet van onze vele medewerkers en vrijwilligers. Wij beschouwen hen niet alleen als ondersteuning, maar als mede-makers. Meer informatie over hun individuele praktijken is te vinden op onze Kunstenaars-pagina, want zij zijn stuk voor stuk de creatieve motor van onze organisatie.</p>
-<p>Doorheen de geschiedenis van DeNode konden we rekenen op de hulp en het meedenken van velen — onder wie <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curator &amp; kunstcriticus), <strong>Damien Degrave</strong> (curator van meerdere tentoonstellingen), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> en <strong>Ruth Vander Beken</strong>.</p></div></div></section>
+<p>Doorheen de geschiedenis van DeNode konden we rekenen op de hulp en het meedenken van velen — onder wie <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curator &amp; kunstcriticus), <strong><a href="kunstenaar/damien-degrave.html">Damien Degrave</a></strong> (curator van meerdere tentoonstellingen), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> en <strong>Ruth Vander Beken</strong>.</p></div></div></section>
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Statuten</h2></div><div class="dn-prose"><h2 class="dn-h3" id="doel-van-de-stichting-uit-de-statuten">Doel van de stichting (uit de statuten)</h2>
 <p>De private stichting wordt opgericht ter verwezenlijking van het volgend belangeloos doel:</p>
 <p>Het doel van de private stichting bestaat uit het verwerven, het behouden, het beheren, het toegankelijk maken, het (laten) tentoonstellen zowel publiek als privé, het beschermen, het vrijwaren en het uitbreiden van kunst en kunstwerken.</p>

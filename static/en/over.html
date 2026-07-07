@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -94,7 +97,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="team">Team</h2>
 <p>The core team of DeNode</p>
 <h3 class="dn-h3" id="paul-de-canniere">Paul De Cannière</h3>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière — Foto: Steven Decroos</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure>
 <p><em>Founder &amp; Strategic Vision</em></p>
 <p>Driven by the desire to create a free space for collective reflection, Paul — together with his wife Mieke Van Loo — founded the DeNode Foundation. With a keen eye for technological innovation and a strong social commitment, he focuses on projects that transcend conventional formats and aim to generate sustainable impact.</p>
 <h3 class="dn-h3" id="kristof-vander-cruyssen"><a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></h3>
@@ -107,7 +110,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>Hanna shapes the substantive narratives and international collaborations of DeNode. With a background in philosophy and anthropology, she weaves thematic research together with engaged art practices. She is the linchpin of our international network and responsible for the editorial projects that deepen our vision.</p>
 <h2 class="dn-h3" id="volunteers-and-staff">Volunteers and staff</h2>
 <p>The realization of our program would be impossible without the tireless dedication of our many staff and volunteers. We see them not just as support, but as co-creators. More information about their individual practices can be found on our Artists page, as they are each the creative engine of our organization.</p>
-<p>Throughout DeNode's history we have been able to count on the help and involvement of many — among them <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curator &amp; art critic), <strong>Damien Degrave</strong> (curator of several exhibitions), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> and <strong>Ruth Vander Beken</strong>.</p></div></div></section>
+<p>Throughout DeNode's history we have been able to count on the help and involvement of many — among them <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curator &amp; art critic), <strong><a href="kunstenaar/damien-degrave.html">Damien Degrave</a></strong> (curator of several exhibitions), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> and <strong>Ruth Vander Beken</strong>.</p></div></div></section>
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Statutes</h2></div><div class="dn-prose"><h2 class="dn-h3" id="purpose-of-the-foundation-from-the-statutes">Purpose of the foundation (from the statutes)</h2>
 <p>The private foundation is established for the pursuit of the following disinterested purpose.</p>
 <p>The purpose of the private foundation is to acquire, preserve, manage, make accessible, exhibit both publicly and privately, protect, safeguard, and expand art and artworks.</p>

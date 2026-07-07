@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -94,7 +97,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Œuvres</h2></div>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me — Photo : Sonny Plasschaert</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-5.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me — Photo : Sonny Plasschaert</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-7.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me — Photo : Sonny Plasschaert</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-8.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me — Photo : Sonny Plasschaert</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-2.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me — Photo : Sonny Plasschaert</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-1.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me — Photo : Sonny Plasschaert</figcaption></figure></div></div></section>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me <span class="dn-credit">— Photo : Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-5.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me <span class="dn-credit">— Photo : Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-7.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me <span class="dn-credit">— Photo : Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-8.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me <span class="dn-credit">— Photo : Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-2.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me <span class="dn-credit">— Photo : Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-1.jpg" alt="Okan-is-me — Photo : Sonny Plasschaert"><figcaption>Okan-is-me <span class="dn-credit">— Photo : Sonny Plasschaert</span></figcaption></figure></div></div></section>
 
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>

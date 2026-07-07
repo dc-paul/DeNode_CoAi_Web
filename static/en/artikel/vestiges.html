@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -90,7 +93,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">exhibitions · September 28, 2025</div>
 <h1 class="dn-h2" style="margin:10px 0 6px">Vestiges</h1>
-<div class="dn-serif-it" style="font-size:22px">A duo exhibition by <a href="../kunstenaar/chantal-pollier.html">Chantal Pollier</a> and <a href="../kunstenaar/guillaume-van-moerkercke.html">Guillaume Van Moerkercke</a> — essay by <a href="../over.html#volunteers-and-staff">Damien Degrave</a></div>
+<div class="dn-serif-it" style="font-size:22px">A duo exhibition by <a href="../kunstenaar/chantal-pollier.html">Chantal Pollier</a> and <a href="../kunstenaar/guillaume-van-moerkercke.html">Guillaume Van Moerkercke</a> — essay by <a href="../kunstenaar/damien-degrave.html">Damien Degrave</a></div>
 
 </div></section>
 <div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/images/blog-vestiges.webp" alt=""></figure></div>

@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -104,7 +107,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="zaalzichten">Zaalzichten</h2>
-<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/expo/exponential-1/Node_EXPOnential---2.jpg" alt="Node EXPOnential 2 — Foto: Paul De Cannière" data-cap="Node EXPOnential 2 — Foto: Paul De Cannière"><figcaption>Node EXPOnential 2 — Foto: Paul De Cannière</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/exponential-1/Node_Philippe---1.jpg" alt="Node Philippe 1 — Foto: Paul De Cannière" data-cap="Node Philippe 1 — Foto: Paul De Cannière"><figcaption>Node Philippe 1 — Foto: Paul De Cannière</figcaption></figure></div></div></div></section>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/expo/exponential-1/Node_EXPOnential---2.jpg" alt="Node EXPOnential 2 — Foto: Paul De Cannière" data-cap="Node EXPOnential 2 — Foto: Paul De Cannière"><figcaption>Node EXPOnential 2 <span class="dn-credit">— Foto: Paul De Cannière</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/exponential-1/Node_Philippe---1.jpg" alt="Node Philippe 1 — Foto: Paul De Cannière" data-cap="Node Philippe 1 — Foto: Paul De Cannière"><figcaption>Node Philippe 1 <span class="dn-credit">— Foto: Paul De Cannière</span></figcaption></figure></div></div></div></section>
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/expo/exponential-1/Node_Philippe---1.jpg" alt="Philippe Van De Velde">

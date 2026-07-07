@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -94,7 +97,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="equipe">Équipe</h2>
 <p>L'équipe principale de DeNode</p>
 <h3 class="dn-h3" id="paul-de-canniere">Paul De Cannière</h3>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière — Foto: Steven Decroos</figcaption></figure>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure>
 <p><em>Fondateur &amp; Vision Stratégique</em></p>
 <p>Animé par le désir de créer un espace libre pour la réflexion collective, Paul a fondé — avec son épouse Mieke Van Loo — la Fondation DeNode. Avec un œil attentif à l'innovation technologique et un fort engagement social, il se concentre sur des projets qui transcendent les formats conventionnels et visent à générer un impact durable.</p>
 <h3 class="dn-h3" id="kristof-vander-cruyssen"><a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></h3>
@@ -107,7 +110,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <p>Hanna façonne les récits substantiels et les collaborations internationales de DeNode. Avec un parcours en philosophie et en anthropologie, elle tisse la recherche thématique avec des pratiques artistiques engagées. Elle est le pivot de notre réseau international et responsable des projets éditoriaux qui approfondissent notre vision.</p>
 <h2 class="dn-h3" id="benevoles-et-personnel">Bénévoles et personnel</h2>
 <p>La réalisation de notre programme serait impossible sans le dévouement inflexible de notre nombreux personnel et bénévoles. Nous les considérons non seulement comme un soutien, mais comme des co-créateurs. Plus d'informations sur leurs pratiques individuelles peuvent être trouvées sur notre page Artistes, car chacun d'eux est le moteur créatif de notre organisation.</p>
-<p>Tout au long de l'histoire de DeNode, nous avons pu compter sur l'aide et l'engagement de nombreuses personnes — parmi lesquelles <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curatrice &amp; critique d'art), <strong>Damien Degrave</strong> (curateur de plusieurs expositions), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> et <strong>Ruth Vander Beken</strong>.</p></div></div></section>
+<p>Tout au long de l'histoire de DeNode, nous avons pu compter sur l'aide et l'engagement de nombreuses personnes — parmi lesquelles <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curatrice &amp; critique d'art), <strong><a href="kunstenaar/damien-degrave.html">Damien Degrave</a></strong> (curateur de plusieurs expositions), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> et <strong>Ruth Vander Beken</strong>.</p></div></div></section>
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Statuts</h2></div><div class="dn-prose"><h2 class="dn-h3" id="but-de-la-fondation-extrait-des-statuts">But de la fondation (extrait des statuts)</h2>
 <p>La fondation privée est constituée en vue de la réalisation du but désintéressé suivant.</p>
 <p>Le but de la fondation privée est d'acquérir, de conserver, de gérer, de rendre accessibles, d'exposer tant publiquement que de manière privée, de protéger, de sauvegarder et d'enrichir l'art et les œuvres d'art.</p>

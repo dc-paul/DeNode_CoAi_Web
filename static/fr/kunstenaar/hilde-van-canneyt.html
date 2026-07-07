@@ -15,6 +15,9 @@
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -96,7 +99,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <dl class="dn-dl"><dt>Textes</dt><dd><a href="../artikel/interview-caroline-baek.html">Entretien avec Caroline Baek</a><br><a href="../artikel/interview-mikhail-bezverkhny.html">Interview avec Bezverkhni de Gand/Mikhail Bezverkhni</a><br><a href="../artikel/interview-ines-claus.html">Entretien avec Ines Claus</a><br><a href="../artikel/interview-merel-jansen.html">Entretien avec Merel Jansen</a><br><a href="../artikel/interview-lee-ranaldo.html">Interview avec Lee Ranaldo</a><br><a href="../artikel/interview-lee-ranaldo-2.html">Interview avec Lee Ranaldo (2)</a><br><a href="../artikel/interview-nicolas-van-parys.html">Entretien avec Nicolas Van Parys</a><br><a href="../artikel/interview-simon-van-parys.html">Interview avec Simon Van Parys</a><br><a href="../artikel/interview-bjorn-wandels.html">Entretien avec Björn Wandels</a></dd><dt>Externe</dt><dd><a href="https://www.hildevancanneyt.be" target="_blank" rel="noopener">hildevancanneyt.be</a></dd></dl></div></div></section>
 
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Œuvres</h2></div>
-<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/kunstenaar/hilde-van-canneyt/Vestiges_DC_322.jpg" alt="Hilde Van Canneyt à Vestiges (2025) — Photo : Dries Celis"><figcaption>Hilde Van Canneyt à Vestiges (2025) — Photo : Dries Celis</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/hilde-van-canneyt/Vestiges_DC_329.jpg" alt="Hilde Van Canneyt à Vestiges (2025) — Photo : Dries Celis"><figcaption>Hilde Van Canneyt à Vestiges (2025) — Photo : Dries Celis</figcaption></figure></div></div></section>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/kunstenaar/hilde-van-canneyt/Vestiges_DC_322.jpg" alt="Hilde Van Canneyt à Vestiges (2025) — Photo : Dries Celis"><figcaption>Hilde Van Canneyt à Vestiges (2025) <span class="dn-credit">— Photo : Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/hilde-van-canneyt/Vestiges_DC_329.jpg" alt="Hilde Van Canneyt à Vestiges (2025) — Photo : Dries Celis"><figcaption>Hilde Van Canneyt à Vestiges (2025) <span class="dn-credit">— Photo : Dries Celis</span></figcaption></figure></div></div></section>
 
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
