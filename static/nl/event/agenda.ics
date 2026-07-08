@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeNode Foundation//NL
+X-WR-CALNAME:DeNode Events
+BEGIN:VEVENT
+UID:bjorn-wandels-midexpo-nl@denode.be
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:Björn Wandels — mid-expo event
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://icp.denode.be/nl/event/bjorn-wandels-midexpo.html
+END:VEVENT
+BEGIN:VEVENT
+UID:cutting-reality-nl@denode.be
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260725
+SUMMARY:Cutting Reality — Workshop 1 & 2
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://icp.denode.be/nl/event/cutting-reality.html
+END:VEVENT
+END:VCALENDAR
