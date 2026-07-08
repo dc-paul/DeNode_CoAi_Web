@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://icp.denode.be/404.html</loc></url>
 <url><loc>https://icp.denode.be/en/artikel/about-the-hermit.html</loc></url>
 <url><loc>https://icp.denode.be/en/artikel/between-mask-and-identity.html</loc></url>
 <url><loc>https://icp.denode.be/en/artikel/bij-de-meesters.html</loc></url>
@@ -85,6 +86,7 @@
 <url><loc>https://icp.denode.be/en/kunstenaar/john-robinson.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/jolien-chielens.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/jonas-delaey.html</loc></url>
+<url><loc>https://icp.denode.be/en/kunstenaar/joost-pauwaert.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/julie-arphi.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/julie-poisquet.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/kat-bove.html</loc></url>
@@ -120,6 +122,7 @@
 <url><loc>https://icp.denode.be/en/kunstenaar/simon-verougstraete.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/sofie-vandevoorde.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/sonny-plasschaert.html</loc></url>
+<url><loc>https://icp.denode.be/en/kunstenaar/steven-decroos.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/stien-bekaert.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/stijn-cole.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/tim-onderbeke.html</loc></url>
@@ -128,9 +131,12 @@
 <url><loc>https://icp.denode.be/en/kunstenaar/willem-boel.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/wout-vandevenne.html</loc></url>
 <url><loc>https://icp.denode.be/en/kunstenaar/yi-zhang.html</loc></url>
+<url><loc>https://icp.denode.be/en/nieuwsbrief.html</loc></url>
 <url><loc>https://icp.denode.be/en/over.html</loc></url>
 <url><loc>https://icp.denode.be/en/publicaties.html</loc></url>
 <url><loc>https://icp.denode.be/en/shop.html</loc></url>
+<url><loc>https://icp.denode.be/en/statuten.html</loc></url>
+<url><loc>https://icp.denode.be/en/zoeken.html</loc></url>
 <url><loc>https://icp.denode.be/fr/artikel/about-the-hermit.html</loc></url>
 <url><loc>https://icp.denode.be/fr/artikel/between-mask-and-identity.html</loc></url>
 <url><loc>https://icp.denode.be/fr/artikel/bij-de-meesters.html</loc></url>
@@ -216,6 +222,7 @@
 <url><loc>https://icp.denode.be/fr/kunstenaar/john-robinson.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/jolien-chielens.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/jonas-delaey.html</loc></url>
+<url><loc>https://icp.denode.be/fr/kunstenaar/joost-pauwaert.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/julie-arphi.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/julie-poisquet.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/kat-bove.html</loc></url>
@@ -251,6 +258,7 @@
 <url><loc>https://icp.denode.be/fr/kunstenaar/simon-verougstraete.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/sofie-vandevoorde.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/sonny-plasschaert.html</loc></url>
+<url><loc>https://icp.denode.be/fr/kunstenaar/steven-decroos.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/stien-bekaert.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/stijn-cole.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/tim-onderbeke.html</loc></url>
@@ -259,9 +267,12 @@
 <url><loc>https://icp.denode.be/fr/kunstenaar/willem-boel.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/wout-vandevenne.html</loc></url>
 <url><loc>https://icp.denode.be/fr/kunstenaar/yi-zhang.html</loc></url>
+<url><loc>https://icp.denode.be/fr/nieuwsbrief.html</loc></url>
 <url><loc>https://icp.denode.be/fr/over.html</loc></url>
 <url><loc>https://icp.denode.be/fr/publicaties.html</loc></url>
 <url><loc>https://icp.denode.be/fr/shop.html</loc></url>
+<url><loc>https://icp.denode.be/fr/statuten.html</loc></url>
+<url><loc>https://icp.denode.be/fr/zoeken.html</loc></url>
 <url><loc>https://icp.denode.be/index.html</loc></url>
 <url><loc>https://icp.denode.be/nl/artikel/about-the-hermit.html</loc></url>
 <url><loc>https://icp.denode.be/nl/artikel/between-mask-and-identity.html</loc></url>
@@ -348,6 +359,7 @@
 <url><loc>https://icp.denode.be/nl/kunstenaar/john-robinson.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/jolien-chielens.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/jonas-delaey.html</loc></url>
+<url><loc>https://icp.denode.be/nl/kunstenaar/joost-pauwaert.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/julie-arphi.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/julie-poisquet.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/kat-bove.html</loc></url>
@@ -383,6 +395,7 @@
 <url><loc>https://icp.denode.be/nl/kunstenaar/simon-verougstraete.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/sofie-vandevoorde.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/sonny-plasschaert.html</loc></url>
+<url><loc>https://icp.denode.be/nl/kunstenaar/steven-decroos.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/stien-bekaert.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/stijn-cole.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/tim-onderbeke.html</loc></url>
@@ -391,7 +404,10 @@
 <url><loc>https://icp.denode.be/nl/kunstenaar/willem-boel.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/wout-vandevenne.html</loc></url>
 <url><loc>https://icp.denode.be/nl/kunstenaar/yi-zhang.html</loc></url>
+<url><loc>https://icp.denode.be/nl/nieuwsbrief.html</loc></url>
 <url><loc>https://icp.denode.be/nl/over.html</loc></url>
 <url><loc>https://icp.denode.be/nl/publicaties.html</loc></url>
 <url><loc>https://icp.denode.be/nl/shop.html</loc></url>
+<url><loc>https://icp.denode.be/nl/statuten.html</loc></url>
+<url><loc>https://icp.denode.be/nl/zoeken.html</loc></url>
 </urlset>

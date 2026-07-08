@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeNode Foundation//NL
+BEGIN:VEVENT
+UID:bjorn-wandels-midexpo-fr@denode.be
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:Björn Wandels — événement à mi-parcours
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://icp.denode.be/fr/event/bjorn-wandels-midexpo.html
+END:VEVENT
+END:VCALENDAR

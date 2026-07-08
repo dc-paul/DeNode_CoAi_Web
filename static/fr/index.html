@@ -9,15 +9,35 @@
 <meta property="og:url" content="https://icp.denode.be/fr/index.html">
 <meta property="og:site_name" content="DeNode Foundation">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/index.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/index.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/index.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/index.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/denode-ink.css"><style>
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
 figure figcaption{color:var(--ink);}
 figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -84,9 +104,9 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="index.html"><img src="../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="expo/index.html">Expositions</a></li><li><a href="kunstenaar/index.html">Artistes</a></li><li><a href="publicaties.html">Publications</a></li><li><a href="shop.html">Boutique</a></li><li><a href="bezoek.html">Visite</a></li><li><a href="over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../nl/index.html">NL</a><a class="lg" href="../en/index.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+<nav class="dn-nav"><ul><li><a href="expo/index.html">Expositions</a></li><li><a href="kunstenaar/index.html">Artistes</a></li><li><a href="publicaties.html">Publications</a></li><li><a href="shop.html">Boutique</a></li><li><a href="bezoek.html">Visite</a></li><li><a href="over.html">À propos</a></li><li><a class="dn-zoekicoon" href="zoeken.html" aria-label="Recherche" title="Recherche"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../nl/index.html">NL</a><a class="lg" href="../en/index.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="expo/index.html">Expositions</a><a href="kunstenaar/index.html">Artistes</a><a href="publicaties.html">Publications</a><a href="collectie.html">Collection</a><a href="shop.html">Boutique</a><a href="event/index.html">Événements</a><a href="bezoek.html">Visite</a><a href="over.html">À propos</a></div>
+<div id="dn-mobielmenu"><a href="expo/index.html">Expositions</a><a href="kunstenaar/index.html">Artistes</a><a href="publicaties.html">Publications</a><a href="collectie.html">Collection</a><a href="shop.html">Boutique</a><a href="event/index.html">Événements</a><a href="bezoek.html">Visite</a><a href="over.html">À propos</a><a href="zoeken.html">Recherche</a></div>
 </header>
 
 
@@ -96,13 +116,14 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-serif-it" style="font-size:22px;margin:10px 0 18px"><a href="kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></div>
 <p style="max-width:46ch;margin-bottom:26px">La Fondation DeNode présente fièrement Kashi Rupé - unfolded, une nouvelle exposition de l'artiste belge Nicolas Van Parys. L'œuvre prend naissance dans la chaleur spirituelle de Varanasi, une ville qui respire à l'intersection de la vie et de la mort, lors d'une résidence en novembre 2025.</p>
 <a class="dn-btn" href="expo/kashi-rupe-unfolded.html">Visiter l'exposition</a></div>
-<div class="dn-hero__img"><img src="/images/blog-nicolas-van-parys.jpg" alt="Kashi Rupé — unfolded"></div></section>
+<div class="dn-hero__img"><img src="/images/blog-nicolas-van-parys.jpg" alt="Kashi Rupé — unfolded"><img src="/_assets/images/expo/kashi-rupe-unfolded/nicolasvanparys-flyer-verso.jpg" alt="Kashi Rupé — unfolded" class="dn-wissel" aria-hidden="true"></div></section>
+<script>(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;var w=document.querySelector('.dn-hero__img img.dn-wissel');if(w)setInterval(function(){w.classList.toggle('aan')},5000);})();</script>
 <section class="dn-band"><div class="dn-wrap" style="display:flex;gap:36px;align-items:center;flex-wrap:wrap">
 <img src="../assets/denode-logo-white.png" alt="" style="width:96px">
 <div style="flex:1;min-width:min(60ch,100%)"><div class="dn-band__by" style="margin:0 0 10px">La Fondation DeNode</div><div class="dn-band__q">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand. Par des expositions, des résidences et des collaborations internationales, nous offrons une place aux artistes, à la recherche et aux rencontres qui les entourent. Pour nous, l'art n'est pas un luxe mais une manière de regarder le monde avec plus d'attention.</div></div></div></section>
 <section class="dn-section" style="padding:56px 0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Agenda</h2><a href="event/index.html">Événements →</a></div>
-<dl class="dn-dl"><dt>2026/05/15 – 2026/07/26</dt><dd>Actuellement: <a href="expo/kashi-rupe-unfolded.html">Kashi Rupé — unfolded</a> — Nicolas Van Parys</dd><dt>automne 2026 — dates exactes à venir</dt><dd>Programme: <a href="expo/bjorn-wandels-allesgut.html">Björn Wandels — allesgut</a> — <a href="kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd><dt>dimanche 27 septembre 2026</dt><dd><a href="event/bjorn-wandels-midexpo.html">Björn Wandels — événement à mi-parcours</a></dd><dt>Workshop 1: 15–16–17 juli 2026 · Workshop 2: 22–23–24 juli 2026</dt><dd><a href="event/cutting-reality.html">Cutting Reality — Atelier 1 &amp; 2</a></dd><dt>Hervatten vanaf oktober 2026 · om de twee weken op donderdag</dt><dd><a href="event/drawing-sessions.html">Séances de dessin d'après modèle</a></dd></dl>
+<dl class="dn-dl"><dt>2026/05/15 – 2026/07/26</dt><dd>Actuellement: <a href="expo/kashi-rupe-unfolded.html">Kashi Rupé — unfolded</a> — Nicolas Van Parys</dd><dt>Workshop 1: 15–16–17 juillet 2026 · Workshop 2: 22–23–24 juillet 2026</dt><dd><a href="event/cutting-reality.html">Cutting Reality — Atelier 1 &amp; 2</a></dd><dt>automne 2026 — dates exactes à venir</dt><dd>Programme: <a href="expo/bjorn-wandels-allesgut.html">Björn Wandels — allesgut</a> — <a href="kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd><dt>dimanche 27 septembre 2026</dt><dd><a href="event/bjorn-wandels-midexpo.html">Björn Wandels — événement à mi-parcours</a></dd><dt>Reprise à partir d'octobre 2026 · un jeudi sur deux</dt><dd><a href="event/drawing-sessions.html">Séances de dessin d'après modèle</a></dd></dl>
 </div></section><script>(function(){var e=document.getElementById('dn-dagen');var d=Math.ceil((new Date('2026-07-26T23:59:59')-new Date())/864e5);if(d>1)e.textContent=' · encore '+d+' jours';else if(d>=0)e.textContent=' · dernier jour !';})();</script>
 <section class="dn-section"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Expositions</h2><a href="expo/index.html">Archives complètes →</a></div>
@@ -110,7 +131,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <a class="dn-card dn-card--now" href="expo/kashi-rupe-unfolded.html"><div class="thumb"><img src="/images/blog-nicolas-van-parys.jpg" alt=""></div>
 <div class="meta"><div class="dn-tag">Actuellement</div><div class="dates" style="margin-top:14px">2026/05/15 – 2026/07/26 · Kristof Vander Cruyssen</div>
 <h3>Kashi Rupé — unfolded</h3><div class="who">Nicolas Van Parys</div></div></a>
-<a class="dn-card" href="expo/bjorn-wandels-allesgut.html"><div class="thumb"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt=""></div><div class="dates">automne 2026 — dates exactes à venir</div><h3>Björn Wandels — allesgut</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="expo/people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/20260213_DeNode_John_Robinson_vernissage-42.jpg" alt=""></div><div class="dates">2026/02/14 – 2026/04/28</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="expo/merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/JUR_1571.jpg" alt=""></div><div class="dates">2025/11/28 – 2026/01/10</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="expo/again-across-the-river.html"><div class="thumb"><img src="/images/blog-lee-ranaldo.jpg" alt=""></div><div class="dates">2025/10/11 – 2025/11/11</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="expo/vestiges.html"><div class="thumb"><img src="/_assets/images/expo/vestiges/IMG_2883.jpg" alt=""></div><div class="dates">2025/09/05 – 2025/09/28</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke, Robrecht Kessels</div></a><a class="dn-card" href="expo/okan-is-me.html"><div class="thumb"><img src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-1.jpg" alt=""></div><div class="dates">2025/07/10 – 2025/07/17</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a>
+<a class="dn-card" href="expo/bjorn-wandels-allesgut.html"><div class="thumb"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt=""></div><div class="dates">automne 2026 — dates exactes à venir</div><h3>Björn Wandels — allesgut</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="expo/people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/affiche-people-ruin-paintings.jpg" alt=""></div><div class="dates">2026/02/14 – 2026/04/28</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="expo/merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/affiche-merel.jpg" alt=""></div><div class="dates">2025/11/28 – 2026/01/10</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="expo/again-across-the-river.html"><div class="thumb"><img src="/_assets/images/kunstenaar/lee-ranaldo/Lee_Ranaldo.jpg" alt=""></div><div class="dates">2025/10/11 – 2025/11/11</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="expo/vestiges.html"><div class="thumb"><img src="/_assets/images/expo/vestiges/affiche-vestiges.jpg" alt=""></div><div class="dates">2025/09/05 – 2025/09/28</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke, Robrecht Kessels</div></a><a class="dn-card" href="expo/okan-is-me.html"><div class="thumb"><img src="/_assets/images/expo/okan-is-me/affiche-okan-is-me.jpg" alt=""></div><div class="dates">2025/07/10 – 2025/07/17</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a>
 </div></div></section>
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Visite</h2><a href="bezoek.html">Itinéraire & heures →</a></div>
@@ -157,7 +178,7 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="bezoek.html">Visite</a></li>
 <li><a href="over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
-<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="nieuwsbrief.html">Newsletter</a></li>
 <li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand.</span></div></div></footer>

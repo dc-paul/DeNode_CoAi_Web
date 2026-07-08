@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeNode Foundation//NL
+BEGIN:VEVENT
+UID:cutting-reality-fr@denode.be
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260725
+SUMMARY:Cutting Reality — Atelier 1 & 2
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://icp.denode.be/fr/event/cutting-reality.html
+END:VEVENT
+END:VCALENDAR

@@ -9,15 +9,35 @@
 <meta property="og:url" content="https://icp.denode.be/fr/kunstenaar/robin-vermeersch.html">
 <meta property="og:site_name" content="DeNode Foundation">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/kunstenaar/robin-vermeersch.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/kunstenaar/robin-vermeersch.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/kunstenaar/robin-vermeersch.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/kunstenaar/robin-vermeersch.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
 figure figcaption{color:var(--ink);}
 figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -84,22 +104,22 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Boutique</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/kunstenaar/robin-vermeersch.html">NL</a><a class="lg" href="../../en/kunstenaar/robin-vermeersch.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Boutique</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Recherche" title="Recherche"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/kunstenaar/robin-vermeersch.html">NL</a><a class="lg" href="../../en/kunstenaar/robin-vermeersch.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a><a href="../zoeken.html">Recherche</a></div>
 </header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Artistes</a> / Robin Vermeersch</div></div>
 
 <section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/expo/exponentieel/Robin-Vermeersch_LR.jpg" alt="Robin Vermeersch"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Artiste</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Robin Vermeersch</h1>
-<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°1977 · artiste plasticien·ne</div>
+<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°1977 · artiste plasticien</div>
 <p class="dn-lead" style="font-size:19px">Robin Vermeersch travaille avec divers médias. Sculptures, peintures et dessins nous montrent une sorte de monde cellulaire qui est assez existentiel et peut être ressenti comme cosmique. Le spectateur peut aborder les images de différentes manières.</p></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-prose">
 <div class="dn-head"><h2 class="dn-h2">À propos</h2></div><p>On peut les voir comme des sculptures et des peintures autonomes qui fonctionnent individuellement, mais on peut aussi les percevoir dans une cohérence plus large, leur donnant chacune un autre sens et formant ensemble un univers étrange. Le travail de Vermeersch renvoie subtilement à la réalité qui nous entoure, sans en être une représentation réaliste. Il ne fait que rappeler le monde que nous connaissons. Il se concentre sur les nuances, les détails. Vermeersch les agrandit, en teste les limites et crée ainsi quelque chose de complètement nouveau. Le reconnaissable est démantelé et recomposé. Des détails naît un nouvel ensemble. De cette façon, l’artiste crée un autre monde dans lequel l’essence du monde existant est cachée. Robin Vermeersch laisse son public jeter un coup d’œil, depuis la réalité quotidienne, à travers une fenêtre sur un nouveau monde. Il vous laisse presque le toucher, mais pas complètement.</p><p>Robin Vermeersch a participé à l'exposition collective <a href="../expo/exponentieel.html">(expo)nentieel</a> chez DeNode (2024–2025, curatrice <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a>).</p></div></div></section>
 <section class="dn-band"><div class="dn-wrap"><h2 class="dn-h3" style="color:#fff;margin-bottom:20px">Chez DeNode</h2>
 <ul class="dn-rowlist"><li><a href="../expo/exponentieel.html"><span class="d">2024/12/07 – 2025/01/12</span><span class="t">(expo)nentieel</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Œuvres</h2></div>
-<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/expo/exponentieel/Robin-Vermeersch_LR.jpg" alt="Robin Vermeersch — présenté à (expo)nentieel — Photo : Pixelbound"><figcaption>Robin Vermeersch — présenté à (expo)nentieel <span class="dn-credit">— Photo : Pixelbound</span></figcaption></figure></div></div></section>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/expo/exponentieel/Robin-Vermeersch_LR.jpg" alt="Robin Vermeersch — présenté à (expo)nentieel — Photo : Steven Decroos"><figcaption>Robin Vermeersch — présenté à (expo)nentieel <span class="dn-credit">— Photo : Steven Decroos</span></figcaption></figure></div></div></section>
 
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
@@ -141,7 +161,7 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
-<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="../nieuwsbrief.html">Newsletter</a></li>
 <li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand.</span></div></div></footer>
