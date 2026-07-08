@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Exhibitions</a> / Kashi Rupé — unfolded</div></div>
 
 <section class="dn-hero-full"><img src="/images/blog-nicolas-van-parys.jpg" alt="Kashi Rupé — unfolded"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #14 · 2026/05/15 – 2026/07/26</div><h1 class="dn-h1">Kashi Rupé — unfolded</h1>
+<div class="dn-eyebrow">EXPO #13 · 2026/05/15 – 2026/07/26</div><h1 class="dn-h1">Kashi Rupé — unfolded</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">In the spiritual heat of Varanasi (Kashi), a city that breathes at the intersection of life and death, Nicolas Van Parys found the seed for his latest work. On the banks of the Ganges, where tradition and transformation (Rupé) constantly touch each other, his artistic practice underwent a fundamental shift.</p><p>Varanasi is a place of continuous transmutation. It is a location where matter decays and meaning is constantly reshaped in the ashes and the flow of the river. This layered, transcendent atmosphere forms the heartbeat of the works in this exhibition.</p>

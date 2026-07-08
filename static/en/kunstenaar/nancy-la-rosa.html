@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}

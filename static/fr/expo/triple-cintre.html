@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Expositions</a> / Triple Cintre</div></div>
 
 <section class="dn-hero-full"><img src="/_assets/images/expo/triple-cintre/affiche-triple-cintre.jpg" alt="Triple Cintre"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #3 · 2024/02/02 – 2024/03/03</div><h1 class="dn-h1">Triple Cintre</h1>
+<div class="dn-eyebrow">EXPO #2 · 2024/02/02 – 2024/03/03</div><h1 class="dn-h1">Triple Cintre</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/ines-claus.html">Ines Claus</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">En 2017, Ines Claus (°1993) est diplômée en Arts plastiques (dessin autonome) au KASK de Gand. Son travail est une fusion de dessin, de peinture, de collages, de publications et d'installations.</p><p>Ines Claus plonge des éléments de la vie quotidienne, de la publicité, de la mode et du design d'intérieur dans un bain coloré. Par des compositions audacieuses, elle crée un univers unique — qu'elle a récemment traduit dans un livre auto-édité, « La Sape Paris ».</p>

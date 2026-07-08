@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Tentoonstellingen</a> / Who is your God, Where is She</div></div>
 
 <section class="dn-hero-full"><img src="/_assets/images/expo/who-is-your-god/expo-folder-front.jpg" alt="Who is your God, Where is She"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #8 · 2025/03/15 – 2025/04/13</div><h1 class="dn-h1">Who is your God, Where is She</h1>
+<div class="dn-eyebrow">EXPO #7 · 2025/03/15 – 2025/04/13</div><h1 class="dn-h1">Who is your God, Where is She</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/kat-bove.html">Kat Bové</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">Niemand had een Van Eyck kunnen schilderen vóór de ontwikkeling van de olieverf, niemand had een Courbet kunnen maken vóór de industriële revolutie en niemand had een Dali kunnen creëren vóór het ontstaan van de psychoanalyse. Zo blijkt dat de kunst die wij tijdloos noemen, in werkelijkheid altijd heel tijdig is. Ze is steeds het product van de technologie en ideologie waarin ze gedoopt werd. Zo is dat ook het geval met het werk van Kat Bové.</p><p>Haar werk imiteert schaamteloos mirror-selfies, verwijst naar het Instagram-interface en parodieert influencercultuur. Haar werk is onder meer vervaardigd met materialen als fluo-acrylverf, graffiti en Posca-stiften. Haar stijl kent invloeden van cartoons en reclamekunst. De hyperactuele iconografie die ze hanteert, zal voor volgende generaties even cryptisch zijn als die van Griekse amforen of Egyptische sarcofagen. Op alle mogelijke manieren weerspiegelt de kunst van Bové het moment waarop het gemaakt werd. Nergens is dit voor mij duidelijker dan in de manier waarop de kunstenaar omgaat met één van de centrale thema's van de tentoonstelling: vrouwelijkheid.</p>

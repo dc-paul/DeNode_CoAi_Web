@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Expositions</a> / People Ruin Paintings</div></div>
 
 <section class="dn-hero-full"><img src="/_assets/images/expo/people-ruin-paintings/affiche-people-ruin-paintings.jpg" alt="People Ruin Paintings"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #13 · 2026/02/14 – 2026/04/28</div><h1 class="dn-h1">People Ruin Paintings</h1>
+<div class="dn-eyebrow">EXPO #12 · 2026/02/14 – 2026/04/28</div><h1 class="dn-h1">People Ruin Paintings</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/john-robinson.html">John Robinson</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">Il se tient au milieu d'une table, recouverte d'un tissu noir. Il en est lui aussi enveloppé, figé dans sa propre mise en scène. Chaque fois qu'il se retourne, le tissu s'accroche et menace d'entraîner la table. Le geste est maladroit, presque comique. Nous rions — d'un rire nerveux.</p><p>John Robinson tire des cartes du jeu de tarot et demande à chacun d'en choisir trois — le passé, le présent, l'avenir. Il parle sans cesse, porté par cet humour anglais mordant et irrépressible. Tout semble improvisé, absurde même — et pourtant chaque mot tombe à sa place avec une précision presque impitoyable. Ce qu'il met à nu tranche jusqu'à l'os : amour, trahison, désillusion, honte. Le public oscille entre amusement et malaise.</p>

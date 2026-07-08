@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Expositions</a> / VIER</div></div>
 
 <section class="dn-hero-full"><img src="/_assets/images/expo/vier/vier-beeld-experiment.jpg" alt="VIER"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #5 · 2024/10/19 – 2024/11/17</div><h1 class="dn-h1">VIER</h1>
+<div class="dn-eyebrow">EXPO #4 · 2024/10/19 – 2024/11/17</div><h1 class="dn-h1">VIER</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/caroline-baek.html">Caroline Baek</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">2024/10/19 – 2024/11/17</p>

@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Expositions</a> / (again) across the river</div></div>
 
 <section class="dn-hero-full"><img src="/_assets/images/kunstenaar/lee-ranaldo/Lee_Ranaldo.jpg" alt="(again) across the river"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #11 · 2025/10/11 – 2025/11/11</div><h1 class="dn-h1">(again) across the river</h1>
+<div class="dn-eyebrow">EXPO #10 · 2025/10/11 – 2025/11/11</div><h1 class="dn-h1">(again) across the river</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/lee-ranaldo.html">Lee Ranaldo</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">Lee Ranaldo à propos de l'exposition à nodenaysteen, 11/10 - 11/11/2025</p><p>Les œuvres présentées sont des créations récentes, dont beaucoup résultent d'une résidence de cinq semaines en août/septembre 2025 dans la ville de Krems, en Autriche, située dans la région viticole de la Wachau. J'ai réalisé un nouvel ensemble de dessins <em>Lost Highway</em>, dans un format plus grand que ce que j'avais tenté auparavant. Ce sont des notations, des improvisations, des impressions spontanées — le plus souvent réalisées assis sur le siège passager d'un véhicule en mouvement. Cette série trouve son origine dans les incessants déplacements de ville en ville qui font partie de la vie d'un musicien. L'activité — dessiner depuis le siège passager d'une voiture en marche — est devenue une habitude. Dans mon atelier de Krems, j'ai commencé à réaliser des images plus grandes (format A3), en me servant de mes petits dessins comme gabarits. Je cherchais à garder vivantes les impressions spontanées initiales tout en faisant « grandir » les œuvres vers un plus grand format.</p>

@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -117,20 +123,20 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="meta"><div class="dn-tag">Actuellement</div><div class="dates" style="margin-top:14px">2026/05/15 – 2026/07/26 · Kristof Vander Cruyssen</div>
 <h3>Kashi Rupé — unfolded</h3><div class="who">Nicolas Van Parys</div></div></a>
 <a class="dn-card" href="bjorn-wandels-allesgut.html"><div class="thumb"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt=""></div>
-<div class="dates">#15 · automne 2026 — dates exactes à venir</div><h3>Björn Wandels — allesgut</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/affiche-people-ruin-paintings.jpg" alt=""></div>
-<div class="dates">#13 · 2026/02/14 – 2026/04/28</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/affiche-merel.jpg" alt=""></div>
-<div class="dates">#12 · 2025/11/28 – 2026/01/10</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="again-across-the-river.html"><div class="thumb"><img src="/_assets/images/kunstenaar/lee-ranaldo/Lee_Ranaldo.jpg" alt=""></div>
-<div class="dates">#11 · 2025/10/11 – 2025/11/11</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="vestiges.html"><div class="thumb"><img src="/_assets/images/expo/vestiges/affiche-vestiges.jpg" alt=""></div>
-<div class="dates">#10 · 2025/09/05 – 2025/09/28</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke, Robrecht Kessels</div></a><a class="dn-card" href="okan-is-me.html"><div class="thumb"><img src="/_assets/images/expo/okan-is-me/affiche-okan-is-me.jpg" alt=""></div>
-<div class="dates">#9 · 2025/07/10 – 2025/07/17</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a><a class="dn-card" href="who-is-your-god.html"><div class="thumb"><img src="/_assets/images/expo/who-is-your-god/expo-folder-front.jpg" alt=""></div>
-<div class="dates">#8 · 2025/03/15 – 2025/04/13</div><h3>Who is your God, Where is She</h3><div class="who">Kat Bové</div></a><a class="dn-card" href="bij-de-meesters.html"><div class="thumb"><img src="/_assets/images/expo/bij-de-meesters/affiche-bij-de-meesters.jpg" alt=""></div>
-<div class="dates">#7 · 2025/01/25 – 2025/02/23</div><h3>Bij de Meesters</h3><div class="who">Gipi (Pierre Gillis), Mikhail Bezverkhny</div></a><a class="dn-card" href="exponentieel.html"><div class="thumb"><img src="/_assets/images/expo/exponentieel/boom_kristof_Lo.jpg" alt=""></div>
-<div class="dates">#6 · 2024/12/07 – 2025/01/12</div><h3>(expo)nentieel</h3><div class="who">Kettingbrief-netwerk — 49 kunstenaars</div></a><a class="dn-card" href="vier.html"><div class="thumb"><img src="/_assets/images/expo/vier/vier-beeld-experiment.jpg" alt=""></div>
-<div class="dates">#5 · 2024/10/19 – 2024/11/17</div><h3>VIER</h3><div class="who">Caroline Baek</div></a><a class="dn-card" href="bjorn-wandels-vitrine.html"><div class="thumb"><img src="/_assets/images/expo/bjorn-wandels-vitrine/vitrine-still.jpg" alt=""></div>
-<div class="dates">#4 · 2024</div><h3>Björn Wandels — vitrineprojectie</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="triple-cintre.html"><div class="thumb"><img src="/_assets/images/expo/triple-cintre/affiche-triple-cintre.jpg" alt=""></div>
-<div class="dates">#3 · 2024/02/02 – 2024/03/03</div><h3>Triple Cintre</h3><div class="who">Ines Claus</div></a><a class="dn-card" href="ai-universe.html"><div class="thumb"><img src="/_assets/images/expo/ai-universe/affiche-ai-universe.jpg" alt=""></div>
-<div class="dates">#2 · 2023/10/27 – 2024/01</div><h3>AI Universe</h3><div class="who">Simon Van Parys</div></a><a class="dn-card" href="exponential-1.html"><div class="thumb"><img src="/_assets/images/expo/exponential-1/Node_EXPOnential---2.jpg" alt=""></div>
-<div class="dates">#1 · été 2021 — à partir du 1er juillet</div><h3>EXPOnential 0.1</h3><div class="who">Philippe Van De Velde</div></a></div></div></section>
+<div class="dn-tag">À venir</div><div class="dates">#14 · automne 2026 — dates exactes à venir</div><h3>Björn Wandels — allesgut</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/affiche-people-ruin-paintings.jpg" alt=""></div>
+<div class="dates">#12 · 2026/02/14 – 2026/04/28</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/affiche-merel.jpg" alt=""></div>
+<div class="dates">#11 · 2025/11/28 – 2026/01/10</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="again-across-the-river.html"><div class="thumb"><img src="/_assets/images/kunstenaar/lee-ranaldo/Lee_Ranaldo.jpg" alt=""></div>
+<div class="dates">#10 · 2025/10/11 – 2025/11/11</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="vestiges.html"><div class="thumb"><img src="/_assets/images/expo/vestiges/affiche-vestiges.jpg" alt=""></div>
+<div class="dates">#9 · 2025/09/05 – 2025/09/28</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke, Robrecht Kessels</div></a><a class="dn-card" href="okan-is-me.html"><div class="thumb"><img src="/_assets/images/expo/okan-is-me/affiche-okan-is-me.jpg" alt=""></div>
+<div class="dates">#8 · 2025/07/10 – 2025/07/17</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a><a class="dn-card" href="who-is-your-god.html"><div class="thumb"><img src="/_assets/images/expo/who-is-your-god/expo-folder-front.jpg" alt=""></div>
+<div class="dates">#7 · 2025/03/15 – 2025/04/13</div><h3>Who is your God, Where is She</h3><div class="who">Kat Bové</div></a><a class="dn-card" href="bij-de-meesters.html"><div class="thumb"><img src="/_assets/images/expo/bij-de-meesters/affiche-bij-de-meesters.jpg" alt=""></div>
+<div class="dates">#6 · 2025/01/25 – 2025/02/23</div><h3>Bij de Meesters</h3><div class="who">Gipi (Pierre Gillis), Mikhail Bezverkhny</div></a><a class="dn-card" href="exponentieel.html"><div class="thumb"><img src="/_assets/images/expo/exponentieel/boom_kristof_Lo.jpg" alt=""></div>
+<div class="dates">#5 · 2024/12/07 – 2025/01/12</div><h3>(expo)nentieel</h3><div class="who">Kettingbrief-netwerk — 49 kunstenaars</div></a><a class="dn-card" href="vier.html"><div class="thumb"><img src="/_assets/images/expo/vier/vier-beeld-experiment.jpg" alt=""></div>
+<div class="dates">#4 · 2024/10/19 – 2024/11/17</div><h3>VIER</h3><div class="who">Caroline Baek</div></a><a class="dn-card" href="bjorn-wandels-vitrine.html"><div class="thumb"><img src="/_assets/images/expo/bjorn-wandels-vitrine/vitrine-still.jpg" alt=""></div>
+<div class="dates">#3 · 2024</div><h3>Björn Wandels — vitrineprojectie</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="triple-cintre.html"><div class="thumb"><img src="/_assets/images/expo/triple-cintre/affiche-triple-cintre.jpg" alt=""></div>
+<div class="dates">#2 · 2024/02/02 – 2024/03/03</div><h3>Triple Cintre</h3><div class="who">Ines Claus</div></a><a class="dn-card" href="ai-universe.html"><div class="thumb"><img src="/_assets/images/expo/ai-universe/affiche-ai-universe.jpg" alt=""></div>
+<div class="dates">#1 · 2023/10/27 – 2024/01</div><h3>AI Universe</h3><div class="who">Simon Van Parys</div></a><a class="dn-card" href="exponential-1.html"><div class="thumb"><img src="/_assets/images/expo/exponential-1/Node_EXPOnential---2.jpg" alt=""></div>
+<div class="dates">#0 · été 2021 — à partir du 1er juillet</div><h3>EXPOnential 0.1</h3><div class="who">Philippe Van De Velde</div></a></div></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

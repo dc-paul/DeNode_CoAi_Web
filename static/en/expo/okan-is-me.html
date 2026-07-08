@@ -35,6 +35,12 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-grid--compact .dn-card .who{display:none;}
 /* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
 .dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
 .dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
 .dn-nav a.dn-zoekicoon svg{display:block;}
@@ -111,7 +117,7 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Exhibitions</a> / Okan-is-me</div></div>
 
 <section class="dn-hero-full"><img src="/_assets/images/expo/okan-is-me/affiche-okan-is-me.jpg" alt="Okan-is-me"><div class="veil"></div><div class="cap"><div class="in">
-<div class="dn-eyebrow">EXPO #9 · 2025/07/10 – 2025/07/17</div><h1 class="dn-h1">Okan-is-me</h1>
+<div class="dn-eyebrow">EXPO #8 · 2025/07/10 – 2025/07/17</div><h1 class="dn-h1">Okan-is-me</h1>
 <div class="dn-serif-it" style="font-size:22px"><a href="../kunstenaar/okan-mentens.html">Okan Mentens</a></div></div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
 <div class="dn-prose"><p class="dn-lead">I can hardly imagine places as unpleasant as the toilet on a train. You don't need to have claustrophobia or germophobia to feel claustrophobic there. It's a place I prefer to avoid. When the need is urgent and I step into the tiny cubicle, whose walls are covered in tags and stickers, while I fly at a speed of 200 kilometers per hour over the Belgian railways, I want to get out of there as quickly as possible. That probably applies to you as well. But not for the artist Okan Mentes. This nineteen-year-old from Brussels knows how to find beauty even in the ugliest places. In this exhibition, there is a photo he took of the water that was cyclone-like sucked into the depths through the stainless steel bottom of the train toilet bowl. This may sound like a joke – a kind of Duchamp-like stunt – but it is not. Okan did not take the photo with the intention of making a conceptual artwork. He took the photo solely because he saw something aesthetic. And the fact that this aesthetic lay in the bottom of a toilet bowl is actually irrelevant.</p><p>Artists are not known for being modest. I can assure you that Okan is an exception to this. When I first met him a few weeks ago, I was surprised by his infectious enthusiasm and eager-to-learn attitude. He seemed to be well aware that as a young artist, he still had much to learn. I see that modesty reflected in his artworks as well. This exhibition is certainly not a loud declaration of a coherent philosophy. It is rather an uncertain search for fragmented beauties.</p>
