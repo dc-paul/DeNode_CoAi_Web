@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeNode Foundation//NL
+BEGIN:VEVENT
+UID:bjorn-wandels-midexpo-fr@denode.be
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:Björn Wandels — booktalk
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://icp.denode.be/fr/event/bjorn-wandels-midexpo.html
+END:VEVENT
+END:VCALENDAR

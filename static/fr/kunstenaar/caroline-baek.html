@@ -1,20 +1,58 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Caroline Baek — DeNode Foundation</title>
 <meta name="robots" content="noindex, nofollow"><!-- testfase icp.denode.be — weghalen bij echte go-live (Paul 6 jul 2026) -->
-<meta name="description" content="°1963 · artiste plasticien·ne">
+<meta name="description" content="Caroline Baek est venue à la peinture par un long détour : pendant trente ans, elle a travaillé comme architecte d'intérieur, d'abord en indépendante, puis chez BBL et ING. Vers 2014, elle a laissé ce">
 <meta property="og:title" content="Caroline Baek — DeNode Foundation">
-<meta property="og:description" content="°1963 · artiste plasticien·ne">
+<meta property="og:description" content="Caroline Baek est venue à la peinture par un long détour : pendant trente ans, elle a travaillé comme architecte d'intérieur, d'abord en indépendante, puis chez BBL et ING. Vers 2014, elle a laissé ce">
 <meta property="og:image" content="https://icp.denode.be/_assets/images/kunstenaar/caroline-baek/portret-caroline-baek.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://icp.denode.be/fr/kunstenaar/caroline-baek.html">
 <meta property="og:site_name" content="DeNode Foundation">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/kunstenaar/caroline-baek.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/kunstenaar/caroline-baek.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/kunstenaar/caroline-baek.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/kunstenaar/caroline-baek.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../../assets/denode-ink.css"><style>
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
+/* expo-kop-beeld: volledig getoond, gecentreerd, nooit gecropt (Kristof 9 jul 2026) */
+.dn-expokop{margin:0;text-align:center;}
+.dn-expokop img{max-width:100%;max-height:62vh;width:auto;height:auto;cursor:zoom-in;}
+/* expo-kop: titelblok naast het beeld (Paul 9 jul 2026) */
+.dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
+.dn-expokop2 .dn-expokop img{max-height:56vh;}
+@media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
+.dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -28,7 +66,7 @@
 .dn-prose .dn-h3{margin:1.6em 0 .6em;}
 .dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
 .dn-fig{margin:2em 0;}
-.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-fig img{border:1px solid var(--line);} /* sizing komt van de max-height-regel hierboven — width:100% rekte staande foto's uit (Paul 9 jul 2026) */
 .dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
 @media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
 .dn-rowlist{list-style:none;}
@@ -46,21 +84,39 @@
 /* mobiel menu (hamburger) — blueprints §7 stond nog open */
 .dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
 @media(max-width:820px){.dn-menuknop{display:block;}}
+/* nav paste niet meer op één lijn na het Programma-item (Paul 9 jul 2026):
+   compactere typografie + hamburger springt al in vanaf 1120px i.p.v. 820px */
+.dn-nav ul{gap:20px;}
+.dn-nav a{letter-spacing:.09em;}
+@media(max-width:1120px){.dn-nav ul{display:none;}.dn-menuknop{display:block;}}
 #dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
 #dn-mobielmenu.open{display:block;}
 #dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
 #dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
-.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser img{width:100%;height:100%;object-fit:contain;aspect-ratio:4/3;}
+/* kunstenaar-portretten in kaarten: nooit croppen — volledige foto zichtbaar; per-kunstenaar override via beeldFit/beeldFocus (Paul 9 jul 2026, consistent site-breed) */
+#dn-kgrid .dn-card .thumb img,#dn-kgrid2 .dn-card .thumb img{object-fit:contain;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
 @media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
-/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
-img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+/* team-portretten (Paul/Kristof/Hanna/Hilde): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
 .dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* eyebrow ("KUNSTENAAR"/"EXPO"-label): ademruimte boven de display-titel — diakrieten (Ö) liepen tegen het label (Paul 9 jul 2026) */
+.dn-eyebrow{margin-bottom:12px;}
+/* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
+.dn-grid--team{grid-template-columns:repeat(2,1fr);}
+@media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
-.dn-gal--3{grid-template-columns:repeat(3,1fr);}
-@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
+   anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
+.dn-gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+.dn-gal figure{min-width:0;}
+.dn-gal img{max-width:100%;height:auto;object-fit:unset;}
+.dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
 /* video-figuur */
 .dn-video{margin:2em 0;}
 .dn-video video{width:100%;border:1px solid var(--line);background:#000;}
@@ -81,19 +137,21 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Boutique</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/kunstenaar/caroline-baek.html">NL</a><a class="lg" href="../../en/kunstenaar/caroline-baek.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Expositions</a></li><li><a href="../programma.html">Programme</a></li><li><a href="../kunstenaar/index.html">Artistes</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Boutique</a></li><li><a href="../bezoek.html">Visite</a></li><li><a href="../over.html">À propos</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Recherche" title="Recherche"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/kunstenaar/caroline-baek.html">NL</a><a class="lg" href="../../en/kunstenaar/caroline-baek.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Expositions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artistes</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Boutique</a><a href="../event/index.html">Événements</a><a href="../bezoek.html">Visite</a><a href="../over.html">À propos</a><a href="../zoeken.html">Recherche</a></div>
 </header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Artistes</a> / Caroline Baek</div></div>
 
 <section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/kunstenaar/caroline-baek/portret-caroline-baek.jpg" alt="Caroline Baek"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Artiste</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Caroline Baek</h1>
-<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°1963 · artiste plasticien·ne</div>
-</div></section>
-<section class="dn-section" style="padding:40px 0"><div class="dn-wrap"><dl class="dn-dl"><dt>Textes</dt><dd><a href="../artikel/interview-caroline-baek.html">Entretien avec Caroline Baek</a> — <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd><dt>Externe</dt><dd><a href="https://www.hildevancanneyt.be/2024/09/interview-met-caroline-baek/" target="_blank" rel="noopener">Interview door Hilde Van Canneyt (2024)</a></dd></dl></div></section>
+<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°1963, BE · artiste plasticienne</div>
+<p class="dn-lead" style="font-size:19px">Caroline Baek est venue à la peinture par un long détour : pendant trente ans, elle a travaillé comme architecte d'intérieur, d'abord en indépendante, puis chez BBL et ING. Vers 2014, elle a laissé ce monde derrière elle pour peindre pleinement.</p></div></section>
+<section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
+<p>Depuis, elle part chaque fois d'une feuille blanche — en voyage au Mexique (<em>Mexicaanse galerijen</em>), le long du Mékong au Laos, ou au bord de la mer, qui ne l'a jamais lâchée. L'eau, l'encre et la peinture ne sont pas pour elle un moyen mais une matière. « Tu n'es pas peintre », lui a dit un jour un ami, « tu es peinture » — le plus beau compliment qu'elle ait reçu, et une mission qui, de son propre aveu, l'occupera encore longtemps.</p><p>Son travail a été remarqué à l'Artist Meeting de Knokke ; à l'automne 2024, elle a présenté l'exposition <a href="../expo/vier.html">VIER</a> chez DeNode.</p></div>
+<dl class="dn-dl"><dt>Textes</dt><dd><a href="../artikel/interview-caroline-baek.html">Entretien avec Caroline Baek</a> — <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd><dt>Externe</dt><dd><a href="https://www.hildevancanneyt.be/2024/09/interview-met-caroline-baek/" target="_blank" rel="noopener">Interview door Hilde Van Canneyt (2024)</a></dd></dl></div></div></section>
 <section class="dn-band"><div class="dn-wrap"><h2 class="dn-h3" style="color:#fff;margin-bottom:20px">Chez DeNode</h2>
-<ul class="dn-rowlist"><li><a href="../expo/vier.html"><span class="d">2024/10/19 – 2024/11/17</span><span class="t">VIER</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
+<ul class="dn-rowlist"><li><a href="../expo/vier.html"><span class="d">19.10.24 – 17.11.24</span><span class="t">VIER</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
 
 
 
@@ -136,7 +194,7 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../bezoek.html">Visite</a></li>
 <li><a href="../over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
-<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="../nieuwsbrief.html">Newsletter</a></li>
 <li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand.</span></div></div></footer>

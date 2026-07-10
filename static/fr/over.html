@@ -9,12 +9,50 @@
 <meta property="og:url" content="https://icp.denode.be/fr/over.html">
 <meta property="og:site_name" content="DeNode Foundation">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/over.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/over.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/over.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/over.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/denode-ink.css"><style>
 /* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
    langste zijde past exact, korte zijde krijgt bone-lucht errond */
 .dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
+/* expo-kop-beeld: volledig getoond, gecentreerd, nooit gecropt (Kristof 9 jul 2026) */
+.dn-expokop{margin:0;text-align:center;}
+.dn-expokop img{max-width:100%;max-height:62vh;width:auto;height:auto;cursor:zoom-in;}
+/* expo-kop: titelblok naast het beeld (Paul 9 jul 2026) */
+.dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
+.dn-expokop2 .dn-expokop img{max-height:56vh;}
+@media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
+.dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
 /* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
@@ -28,7 +66,7 @@
 .dn-prose .dn-h3{margin:1.6em 0 .6em;}
 .dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
 .dn-fig{margin:2em 0;}
-.dn-fig img{width:100%;border:1px solid var(--line);}
+.dn-fig img{border:1px solid var(--line);} /* sizing komt van de max-height-regel hierboven — width:100% rekte staande foto's uit (Paul 9 jul 2026) */
 .dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
 @media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
 .dn-rowlist{list-style:none;}
@@ -46,21 +84,39 @@
 /* mobiel menu (hamburger) — blueprints §7 stond nog open */
 .dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
 @media(max-width:820px){.dn-menuknop{display:block;}}
+/* nav paste niet meer op één lijn na het Programma-item (Paul 9 jul 2026):
+   compactere typografie + hamburger springt al in vanaf 1120px i.p.v. 820px */
+.dn-nav ul{gap:20px;}
+.dn-nav a{letter-spacing:.09em;}
+@media(max-width:1120px){.dn-nav ul{display:none;}.dn-menuknop{display:block;}}
 #dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
 #dn-mobielmenu.open{display:block;}
 #dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
 #dn-mobielmenu a:active{color:var(--accent);}
 .dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
-.dn-teaser img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.dn-teaser img{width:100%;height:100%;object-fit:contain;aspect-ratio:4/3;}
+/* kunstenaar-portretten in kaarten: nooit croppen — volledige foto zichtbaar; per-kunstenaar override via beeldFit/beeldFocus (Paul 9 jul 2026, consistent site-breed) */
+#dn-kgrid .dn-card .thumb img,#dn-kgrid2 .dn-card .thumb img{object-fit:contain;}
 .dn-teaser .in{padding:30px 34px 30px 0;}
 @media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
-/* team-portretten (Paul/Kristof/Hanna): klein, rond, enkel het gezicht — niet bombastisch */
-img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+/* team-portretten (Paul/Kristof/Hanna/Hilde): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
 .dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* eyebrow ("KUNSTENAAR"/"EXPO"-label): ademruimte boven de display-titel — diakrieten (Ö) liepen tegen het label (Paul 9 jul 2026) */
+.dn-eyebrow{margin-bottom:12px;}
+/* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
+.dn-grid--team{grid-template-columns:repeat(2,1fr);}
+@media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
-.dn-gal--3{grid-template-columns:repeat(3,1fr);}
-@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){.dn-gal--3{grid-template-columns:1fr;}}
+/* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
+   anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
+.dn-gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+.dn-gal figure{min-width:0;}
+.dn-gal img{max-width:100%;height:auto;object-fit:unset;}
+.dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
 /* video-figuur */
 .dn-video{margin:2em 0;}
 .dn-video video{width:100%;border:1px solid var(--line);background:#000;}
@@ -81,72 +137,35 @@ img[src*="/images/team-"]{width:130px;height:130px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="index.html"><img src="../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="expo/index.html">Expositions</a></li><li><a href="kunstenaar/index.html">Artistes</a></li><li><a href="publicaties.html">Publications</a></li><li><a href="shop.html">Boutique</a></li><li><a href="bezoek.html">Visite</a></li><li><a href="over.html">À propos</a></li></ul><div class="dn-lang"><a class="lg" href="../nl/over.html">NL</a><a class="lg" href="../en/over.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+<nav class="dn-nav"><ul><li><a href="expo/index.html">Expositions</a></li><li><a href="programma.html">Programme</a></li><li><a href="kunstenaar/index.html">Artistes</a></li><li><a href="publicaties.html">Publications</a></li><li><a href="shop.html">Boutique</a></li><li><a href="bezoek.html">Visite</a></li><li><a href="over.html">À propos</a></li><li><a class="dn-zoekicoon" href="zoeken.html" aria-label="Recherche" title="Recherche"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../nl/over.html">NL</a><a class="lg" href="../en/over.html">EN</a><span class="lg active">FR</span></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="expo/index.html">Expositions</a><a href="kunstenaar/index.html">Artistes</a><a href="publicaties.html">Publications</a><a href="collectie.html">Collection</a><a href="shop.html">Boutique</a><a href="event/index.html">Événements</a><a href="bezoek.html">Visite</a><a href="over.html">À propos</a></div>
+<div id="dn-mobielmenu"><a href="expo/index.html">Expositions</a><a href="programma.html">Programme</a><a href="kunstenaar/index.html">Artistes</a><a href="publicaties.html">Publications</a><a href="collectie.html">Collection</a><a href="shop.html">Boutique</a><a href="event/index.html">Événements</a><a href="bezoek.html">Visite</a><a href="over.html">À propos</a><a href="zoeken.html">Recherche</a></div>
 </header>
 
 
 <section class="dn-band"><div class="dn-wrap"><div class="dn-band__q">La Fondation DeNode est une organisation à but non lucratif basée à Gand, dédiée au soutien de l'art contemporain. Nous croyons en des pratiques artistiques qui vont au-delà de la surface. Par conséquent, nous nous concentrons sur des projets à long terme et des recherches approfondies, où le processus est au moins aussi important que le résultat final.</div><div class="dn-band__by">La Fondation DeNode</div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-prose"><p><em>Une plateforme pour la recherche, la création et le dialogue.</em></p>
 <p>La Fondation DeNode est une organisation à but non lucratif basée à Gand, dédiée au soutien de l'art contemporain. Nous croyons en des pratiques artistiques qui vont au-delà de la surface. Par conséquent, nous nous concentrons sur des projets à long terme et des recherches approfondies, où le processus est au moins aussi important que le résultat final.</p>
-<p>Notre fondation est un écosystème dynamique où les expositions, les résidences, les programmes publics et les projets éditoriaux se rejoignent. Au lieu de nous limiter à un seul médium, nous embrassons des pratiques interdisciplinaires qui dialoguent avec les enjeux sociaux, culturels et philosophiques de notre époque. De cette manière, nous faisons le lien entre la scène locale de Gand et le domaine artistique international.</p>
-<h2 class="dn-h3" id="equipe">Équipe</h2>
-<p>L'équipe principale de DeNode</p>
-<h3 class="dn-h3" id="paul-de-canniere">Paul De Cannière</h3>
-<figure class="dn-fig"><img loading="lazy" src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière — Foto: Steven Decroos" data-cap="Paul De Cannière — Foto: Steven Decroos"><figcaption>Paul De Cannière — Foto: Steven Decroos</figcaption></figure>
-<p><em>Fondateur &amp; Vision Stratégique</em></p>
-<p>Animé par le désir de créer un espace libre pour la réflexion collective, Paul a fondé — avec son épouse Mieke Van Loo — la Fondation DeNode. Avec un œil attentif à l'innovation technologique et un fort engagement social, il se concentre sur des projets qui transcendent les formats conventionnels et visent à générer un impact durable.</p>
-<h3 class="dn-h3" id="kristof-vander-cruyssen"><a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></h3>
-<figure class="dn-fig"><img loading="lazy" src="/images/team-kristof-vander-cruyssen.webp" alt="Kristof Vander Cruyssen" data-cap="Kristof Vander Cruyssen"><figcaption>Kristof Vander Cruyssen</figcaption></figure>
-<p><em>Directeur artistique &amp; curateur</em></p>
-<p>En tant que chercheur en art et artiste, Kristof apporte à la fondation une compréhension approfondie des écosystèmes artistiques. Il veille à la direction artistique et accompagne le développement des expositions et des résidences. Son expertise associe une précision curatoriale à une connaissance pragmatique des processus de production.</p>
-<h3 class="dn-h3" id="hanna-ouaziz">Hanna Ouaziz</h3>
-<figure class="dn-fig"><img loading="lazy" src="/images/team-hanna-ouaziz.webp" alt="Hanna Ouaziz" data-cap="Hanna Ouaziz"><figcaption>Hanna Ouaziz</figcaption></figure>
-<p><em>Programmes de conservation et internationaux</em></p>
-<p>Hanna façonne les récits substantiels et les collaborations internationales de DeNode. Avec un parcours en philosophie et en anthropologie, elle tisse la recherche thématique avec des pratiques artistiques engagées. Elle est le pivot de notre réseau international et responsable des projets éditoriaux qui approfondissent notre vision.</p>
-<h2 class="dn-h3" id="benevoles-et-personnel">Bénévoles et personnel</h2>
-<p>La réalisation de notre programme serait impossible sans le dévouement inflexible de notre nombreux personnel et bénévoles. Nous les considérons non seulement comme un soutien, mais comme des co-créateurs. Plus d'informations sur leurs pratiques individuelles peuvent être trouvées sur notre page Artistes, car chacun d'eux est le moteur créatif de notre organisation.</p>
-<p>Tout au long de l'histoire de DeNode, nous avons pu compter sur l'aide et l'engagement de nombreuses personnes — parmi lesquelles <strong><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></strong> (curatrice &amp; critique d'art), <strong>Damien Degrave</strong> (curateur de plusieurs expositions), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> et <strong>Ruth Vander Beken</strong>.</p></div></div></section>
-<section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Statuts</h2></div><div class="dn-prose"><h2 class="dn-h3" id="but-de-la-fondation-extrait-des-statuts">But de la fondation (extrait des statuts)</h2>
-<p>La fondation privée est constituée en vue de la réalisation du but désintéressé suivant.</p>
-<p>Le but de la fondation privée est d'acquérir, de conserver, de gérer, de rendre accessibles, d'exposer tant publiquement que de manière privée, de protéger, de sauvegarder et d'enrichir l'art et les œuvres d'art.</p>
-<p>Dans ce cadre, la fondation privée procède à l'inventaire, à la description et à l'archivage des œuvres d'art au sens le plus large.</p>
-<p>En outre, la fondation privée peut améliorer sa collection par la vente, l'achat ou l'échange d'œuvres détenues par d'autres collectionneurs, artistes ou maisons de vente aux enchères.</p>
-<h2 class="dn-h3" id="activites-de-soutien">Activités de soutien</h2>
-<p>Pour soutenir ces activités, la fondation privée peut assurer l'organisation ou apporter son soutien à toutes les réalisations artistiques et développements culturels, ainsi qu'à l'organisation de galeries d'art et d'expositions, tant sur son propre site qu'ailleurs.</p>
-<p>Elle peut publier ou diffuser du matériel promotionnel, sous forme imprimée, numérique ou de toute autre manière, ou y collaborer ou y apporter son soutien.</p>
-<h2 class="dn-h3" id="activites-concretes">Activités concrètes</h2>
-<p>En particulier, en vue de réaliser ce but désintéressé, la fondation privée peut mener les activités suivantes, tant au niveau national qu'international :</p>
-<p>• La gestion et l'enrichissement d'une collection d'art</p>
-<p>• L'exposition de la collection d'art</p>
-<p>• L'acquisition des moyens et ressources nécessaires au financement du but précité</p>
-<p>• Le financement d'activités et de projets visant à mieux faire connaître la collection d'art auprès du grand public et à inspirer les jeunes artistes</p>
-<p>• La facilitation de projets avec et pour les artistes</p>
-<h2 class="dn-h3" id="bienfaisance">Bienfaisance</h2>
-<p>Le conseil d'administration exerce un pouvoir d'appréciation discrétionnaire quant aux éventuelles distributions. Les bénéficiaires potentiels ne disposent d'aucun droit de créance.</p>
-<p>La défense de ces intérêts comprend le soutien et le financement de projets scientifiques, matériels, commerciaux, éducatifs, intellectuels, artistiques et autres, sans que ces personnes puissent y prétendre et sans qu'aucune distribution ne soit faite en espèces.</p>
-<h2 class="dn-h3" id="emploi-des-ressources">Emploi des ressources</h2>
-<p>La fondation privée poursuit son but désintéressé de manière simultanée et peut à cette fin employer le rendement annuel du patrimoine de la fondation.</p>
-<p>La fondation privée peut augmenter ses moyens de fonctionnement en cédant ou en prêtant, contre rémunération à un prix conforme au marché, des œuvres d'art dont elle est propriétaire, mais uniquement dans la mesure nécessaire et en vue de préserver la continuité de son fonctionnement. Le conseil en décide à sa discrétion et à l'unanimité.</p>
-<p>Par « rendement annuel », on entend : les revenus générés par le patrimoine au cours de cette année, augmentés des plus-values réalisées sur tout élément du patrimoine et des plus-values non réalisées sur les instruments de capitalisation, et diminués des moins-values réalisées sur tout élément du patrimoine et des moins-values non réalisées sur les instruments de capitalisation.</p>
-<h2 class="dn-h3" id="liquidation">Liquidation</h2>
-<p>En cas de liquidation de la fondation privée, tous les biens mobiliers, en particulier toutes les œuvres d'art et les archives artistiques, seront transférés à des musées réputés, choisis par le conseil, conformément au but désintéressé.</p>
-<h2 class="dn-h3" id="gestion-du-patrimoine">Gestion du patrimoine</h2>
-<p>La fondation privée gère son patrimoine en bon père de famille, avec le souci de sa conservation et de sa valorisation. Elle peut notamment effectuer les opérations suivantes :</p>
-<p>• Des opérations mobilières et/ou immobilières, telles que la conclusion de contrats.</p>
-<p>• Réaliser des investissements, directement ou indirectement (par la constitution de sociétés, de sociétés d'investissement, d'assurances-vie, etc.).</p>
-<p>• Investir dans des biens mobiliers et des valeurs de portefeuille, y compris des titres et des œuvres d'art.</p>
-<p>• Louer, acheter et vendre, ainsi qu'établir, construire, rénover ou démolir des biens immobiliers.</p>
-<p>• Constituer, acquérir ou accorder des droits réels, en Belgique ou à l'étranger.</p>
-<p>• Contracter des emprunts et/ou fournir des sûretés.</p>
-<p>• Assumer des frais et des charges pour décharger les personnes ou institutions mentionnées dans le but.</p>
-<p>• Collaborer avec, participer à ou prendre des intérêts dans des entreprises de toute nature.</p>
-<p>• Transférer des biens à d'autres fondations belges ou étrangères ou à des personnes morales similaires ayant un objet correspondant.</p>
-<p>• Exercer des mandats (rémunérés ou non) dans des personnes morales.</p>
-<h2 class="dn-h3" id="autres-dispositions">Autres dispositions</h2>
-<p>La fondation privée peut en outre accomplir tous les actes se rapportant directement ou indirectement à son but. Elle peut apporter sa collaboration et participer à toute activité conforme à son but.</p>
-<p>La fondation privée ne peut procurer aucun avantage matériel au(x) fondateur(s), aux administrateurs ou à toute autre personne, sauf si cela s'inscrit dans la réalisation du but désintéressé.</p></div></div></section>
+<p>Notre fondation est un écosystème dynamique où les expositions, les résidences, les programmes publics et les projets éditoriaux se rejoignent. Au lieu de nous limiter à un seul médium, nous embrassons des pratiques interdisciplinaires qui dialoguent avec les enjeux sociaux, culturels et philosophiques de notre époque. De cette manière, nous faisons le lien entre la scène locale de Gand et le domaine artistique international.</p><p>DeNode est en grande partie financée à titre privé par ses fondateurs.</p></div></div></section>
+<section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Équipe</h2></div><div class="dn-grid dn-grid--team"><div class="dn-card" style="text-align:center"><img src="/_assets/images/team-paul-de-canniere.jpg" alt="Paul De Cannière" style="margin:0 auto 14px"><h3 style="font-size:19px">Paul De Cannière</h3><div class="who">Fondateur &amp; Vision Stratégique</div><p style="font-size:14px;text-align:left;margin-top:10px">Animé par le désir de créer un espace libre pour la réflexion collective, Paul a fondé — avec son épouse Mieke Van Loo — la Fondation DeNode. Avec un œil attentif à l'innovation technologique et un fort engagement social, il se concentre sur des projets qui transcendent les formats conventionnels et visent à générer un impact durable.</p></div><div class="dn-card" style="text-align:center"><img src="/images/team-kristof-vander-cruyssen.webp" alt="Kristof Vander Cruyssen" style="margin:0 auto 14px"><h3 style="font-size:19px"><a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></h3><div class="who">Directeur artistique &amp; curateur</div><p style="font-size:14px;text-align:left;margin-top:10px">En tant que chercheur en art et artiste, Kristof apporte à la fondation une compréhension approfondie des écosystèmes artistiques. Il veille à la direction artistique et accompagne le développement des expositions et des résidences. Son expertise associe une précision curatoriale à une connaissance pragmatique des processus de production.</p></div><div class="dn-card" style="text-align:center"><img src="/images/team-hanna-ouaziz.webp" alt="Hanna Ouaziz" style="margin:0 auto 14px"><h3 style="font-size:19px">Hanna Ouaziz</h3><div class="who">Programmes de conservation et internationaux</div><p style="font-size:14px;text-align:left;margin-top:10px">Hanna Ouaziz façonne les lignes thématiques et les collaborations internationales de DeNode. Forte d'une formation de juriste et d'une expertise en stratégie culturelle et en développement de projets artistiques, elle relie la recherche thématique à des pratiques artistiques engagées. Elle développe le réseau international de la fondation et contribue à ses projets éditoriaux, aidant à approfondir et à articuler sa vision.</p></div><div class="dn-card" style="text-align:center"><img src="/_assets/images/team-hilde-van-canneyt.jpg" alt="Hilde Van Canneyt" style="margin:0 auto 14px"><h3 style="font-size:19px"><a href="kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></h3><div class="who">Médiatrice artistique, écrivaine &amp; curatrice indépendante</div><p style="font-size:14px;text-align:left;margin-top:10px">Hilde explore les pratiques artistiques par l'écriture, la conversation et la médiation — créant des liens signifiants entre artistes, œuvres et publics. Elle a assuré le commissariat de l'exposition collective <em>(expo)nentieel</em> et de l'exposition solo de <a href="kunstenaar/lee-ranaldo.html">Lee Ranaldo</a>, et réalise les entretiens avec les artistes de DeNode. Depuis plus de quinze ans, elle interviewe des artistes plasticiens de Belgique et des Pays-Bas — des entretiens réunis dans <em>4321 Vragen aan 123 Kunstenaars</em> et publiés en continu sur hildevancanneyt.be.</p></div></div></div></section>
+<section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2" id="collaborateurs">Collaborateurs</h2></div><div class="dn-prose"><p>La réalisation de notre programme serait impossible sans l'engagement inlassable de nos nombreux collaborateurs et bénévoles. Nous les considérons non pas comme un simple soutien, mais comme des co-créateurs.</p>
+<h3 class="dn-h3" id="photographie-film">Photographie &amp; film</h3>
+<ul>
+<li><a href="kunstenaar/steven-decroos.html">Steven Decroos</a> — photographie d'exposition et de documentation</li>
+<li><a href="kunstenaar/dries-celis.html">Dries Celis</a> — photographie &amp; film</li>
+<li><a href="kunstenaar/sonny-plasschaert.html">Sonny Plasschaert</a> — photographie</li>
+<li><a href="kunstenaar/jolien-chielens.html">Jolien Chielens</a> — photographie</li>
+<li>Kobe Wens — photographie d'exposition</li>
+</ul>
+<h3 class="dn-h3" id="ecrivains">Écrivains</h3>
+<ul>
+<li><a href="kunstenaar/liesbet-depauw.html">Liesbet Depauw</a> — auteure &amp; critique</li>
+<li><a href="kunstenaar/jakob-de-smaele.html">Jakob de Smaele</a> — essais</li>
+<li><a href="kunstenaar/freddy-decreus.html">Em. Prof. Freddy Decreus</a> — essais</li>
+</ul>
+<h3 class="dn-h3" id="et-au-dela">Et au-delà</h3>
+<p>Tout au long de l'histoire de DeNode, nous avons pu compter sur l'aide et la réflexion de beaucoup — parmi eux <strong><a href="kunstenaar/damien-degrave.html">Damien Degrave</a></strong> (curateur de plusieurs expositions), <strong>Serafien Hulpiau</strong>, <strong>Marian Decroos</strong> et <strong>Ruth Vander Beken</strong>. Cette liste grandit avec la fondation.</p></div></div></section>
+<section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Statuts</h2></div><div class="dn-prose"><p>La Fondation DeNode est une fondation privée belge. Son but désintéressé et son fonctionnement sont fixés dans les statuts.</p></div><p style="margin-top:18px"><a class="dn-btn dn-btn--ghost" href="statuten.html">Lire les statuts →</a></p></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
@@ -187,7 +206,7 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="bezoek.html">Visite</a></li>
 <li><a href="over.html">À propos</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
-<li><a href="mailto:info@denode.be?subject=Inscription%20%C3%A0%20la%20newsletter&body=Je%20souhaite%20m'inscrire%20%C3%A0%20la%20newsletter%20de%20DeNode.%0ANom%20%3A%20">Newsletter</a></li>
+<li><a href="nieuwsbrief.html">Newsletter</a></li>
 <li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="cookie.html">Cookie</a></li></ul></div>
 </div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand.</span></div></div></footer>
