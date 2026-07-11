@@ -80,6 +80,14 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
 .dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
 .dn-rowlist a:hover .t{color:#e8a99f;}
+/* nieuwsbriefarchief: sobere tekstlijst — datum · titel · kunstenaars, geen kaarten/display-kapitalen (Paul 11 jul 2026) */
+.dn-nblijst{list-style:none;margin:0;padding:0;}
+.dn-nblijst li{border-bottom:1px solid var(--line);}
+.dn-nblijst a{display:block;padding:14px 0;text-decoration:none;color:var(--ink);font-family:var(--font-ui);font-size:15px;line-height:1.55;}
+.dn-nblijst .d{color:#7a7466;font-size:13px;letter-spacing:.08em;margin-right:14px;white-space:nowrap;}
+.dn-nblijst .t{font-weight:600;}
+.dn-nblijst .wie{color:#7a7466;}
+.dn-nblijst a:hover .t{color:var(--accent);}
 .dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
 .dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
 .dn-zoek:focus{outline:2px solid var(--accent);}
@@ -132,6 +140,10 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 .dn-video{margin:2em 0;}
 .dn-video video{width:100%;border:1px solid var(--line);background:#000;}
 .dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* Instagram-blok: merknaam "DeNode" niet uppercasen + posts volledig tonen (portret-frame, geen crop) */
+#dn-ig-sectie .dn-h2{text-transform:none;}
+#dn-ig-grid .thumb{aspect-ratio:4/5;background:var(--paper2);}
+#dn-ig-grid .thumb img{object-fit:contain;}
 /* lightbox — fullscreen beeldweergave met pijl-navigatie */
 .dn-gal img,.dn-fig img{cursor:zoom-in;}
 #dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
