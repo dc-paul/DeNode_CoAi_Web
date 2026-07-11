@@ -1,15 +1,15 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Okan Mentens — DeNode Foundation</title>
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Last weekend Kat Bové — Finissage — DeNode Foundation</title>
 <meta name="robots" content="noindex, nofollow"><!-- testfase icp.denode.be — weghalen bij echte go-live (Paul 6 jul 2026) -->
-<meta name="description" content="Okan Mentens photographs in black and white what most people overlook: the aesthetics of everyday and even decidedly ugly places — a traffic sign, a paving stone, the water swirling down a train toile">
-<meta property="og:title" content="Okan Mentens — DeNode Foundation">
-<meta property="og:description" content="Okan Mentens photographs in black and white what most people overlook: the aesthetics of everyday and even decidedly ugly places — a traffic sign, a paving stone, the water swirling down a train toile">
-<meta property="og:image" content="https://icp.denode.be/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg">
+<meta name="description" content="Stichting DeNode is een huis voor actuele kunst in het hart van Gent.">
+<meta property="og:title" content="Last weekend Kat Bové — Finissage — DeNode Foundation">
+<meta property="og:description" content="Stichting DeNode is een huis voor actuele kunst in het hart van Gent.">
+<meta property="og:image" content="https://icp.denode.be/assets/denode-logo-black.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://icp.denode.be/en/kunstenaar/okan-mentens.html">
+<meta property="og:url" content="https://icp.denode.be/nl/nieuwsbrief/2025-04-finissage-kat-bove.html">
 <meta property="og:site_name" content="DeNode Foundation">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/kunstenaar/okan-mentens.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/kunstenaar/okan-mentens.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/kunstenaar/okan-mentens.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/kunstenaar/okan-mentens.html">
+<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/nieuwsbrief/2025-04-finissage-kat-bove.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/nieuwsbrief/2025-04-finissage-kat-bove.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/nieuwsbrief/2025-04-finissage-kat-bove.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/nieuwsbrief/2025-04-finissage-kat-bove.html">
 <link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
 <link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -137,24 +148,39 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </style></head><body>
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
-<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../programma.html">Programme</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Search" title="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/kunstenaar/okan-mentens.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/kunstenaar/okan-mentens.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../programma.html">Programma</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Zoeken" title="Zoeken"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/index.html">EN</a><a class="lg" href="../../fr/index.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="../expo/index.html">Exhibitions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artists</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Visit</a><a href="../over.html">About</a><a href="../zoeken.html">Search</a></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../programma.html">Programma</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a><a href="../zoeken.html">Zoeken</a></div>
 </header>
-<div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Artists</a> / Okan Mentens</div></div>
+<div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Nieuwsbriefarchief</a> / Last weekend Kat Bové — Finissage</div></div>
 
-<section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg" alt="Okan Mentens"></div>
-<div class="dn-hero__txt"><div class="dn-eyebrow">Artist</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Okan Mentens</h1>
-<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">°2006, BE · visual artist</div>
-<p class="dn-lead" style="font-size:19px">Okan Mentens photographs in black and white what most people overlook: the aesthetics of everyday and even decidedly ugly places — a traffic sign, a paving stone, the water swirling down a train toilet. Who, what, where and when are irrelevant; what remains is the pure experience of the composition.</p></div></section>
-<section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
-<p>As a nineteen-year-old from Brussels he presented the solo exhibition <a href="../expo/okan-is-me.html">Okan-is-me</a> at DeNode (2025, curator <a href="../kunstenaar/damien-degrave.html">Damien Degrave</a>) — not a loud declaration of a coherent philosophy, but an inquisitive search for scattered beauty, accompanied by an essay by <a href="../kunstenaar/jakob-de-smaele.html">Jakob de Smaele</a>.</p></div>
-<dl class="dn-dl"><dt>Texts</dt><dd><a href="../artikel/okan-is-me.html">Okan-is-me</a> — Jakob de Smaele</dd></dl></div></div></section>
-<section class="dn-band"><div class="dn-wrap"><h2 class="dn-h3" style="color:#fff;margin-bottom:20px">At DeNode</h2>
-<ul class="dn-rowlist"><li><a href="../expo/okan-is-me.html"><span class="d">10.07.25 – 17.07.25</span><span class="t">Okan-is-me</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
-<section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Work</h2></div>
-<div class="dn-gal"><figure><img loading="lazy" src="/images/blog-okan-is-me.jpg" alt="Okan Mentens"><figcaption>Okan Mentens</figcaption></figure></div></div></section>
-
+<section class="dn-section" style="padding-bottom:30px"><div class="dn-wrap">
+<div class="dn-tag" style="margin-bottom:14px">Nieuwsbrief</div>
+<h1 class="dn-h2">Last weekend <a href="../kunstenaar/kat-bove.html">Kat Bové</a> — Finissage</h1>
+<p style="color:var(--muted);margin-top:14px">Oorspronkelijk verzonden per e-mail op 24.04.25.</p>
+<dl class="dn-dl" style="margin-top:26px">
+<dt>Expo</dt><dd><a href="../expo/who-is-your-god.html">Who is your God, Where is She</a></dd>
+<dt>Event</dt><dd><a href="../event/finissage-kat-bove.html">Kat Bové — Finissage</a></dd>
+<dt>Kunstenaar</dt><dd><a href="../kunstenaar/kat-bove.html">Kat Bové</a></dd></dl>
+</div></section>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p><em>nodenaysteen nieuwsbrief april '25</em></p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/unnamed-5.jpg" alt="Kat Bové" data-cap="Kat Bové"><figcaption>Kat Bové</figcaption></figure>
+<h2 class="dn-h3" id="kat-bove-who-is-your-god-where-is-she">KAT BOVÉ — who is your god, where is she</h2>
+<p><strong>De laatste drie dagen van de expo!</strong></p>
+<p>Grijp je kans om deze uitzonderlijke tentoonstelling te zien of te herbeleven:</p>
+<p><strong>Vrijdag 25/4 en Zaterdag 26/4 van 14u tot 18u</strong></p>
+<p>of tijdens de</p>
+<p><strong>FINISSAGE — Zondag 27 april van 11u tot 18u</strong></p>
+<p>met een</p>
+<p><strong>MEET THE ARTIST</strong> vanaf 15u (met drankje)</p>
+<p>meer over Kat Bové:</p>
+<ul>
+<li>De Kerk van Kat Bové - Door Jacob de Smaele</li>
+<li>Tussen masker een identiteit: de dualiteit van Kat Bové - Interview met Kat Bové door <a href="../kunstenaar/liesbet-depauw.html">Liesbet Depauw</a></li>
+<li>Kat Bové's instagram account</li>
+</ul></div>
+<p style="margin-top:44px"><a class="dn-btn dn-btn--ghost" href="index.html">← Nieuwsbriefarchief</a></p></div></section>
+<section style="padding:0 0 70px"><div class="dn-wrap"><nav style="display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:26px"><a href="2025-04-meet-the-artist.html" style="max-width:46%;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">← Vorige</span>Meet the artist — Kat Bové (06.04.25)</a><a href="2025-07-vernissage-okan-is-me.html" style="max-width:46%;text-align:right;margin-left:auto;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">Volgende →</span>Okan-is-me — vernissage 10 juli (07.07.25)</a></nav></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
@@ -184,19 +210,19 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 })();</script>
 <footer class="dn-footer"><div class="dn-wrap"><div class="cols">
 <div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
-<div><h4>Discover</h4><ul class="fnav">
-<li><a href="../expo/index.html">Exhibitions</a></li>
-<li><a href="../kunstenaar/index.html">Artists</a></li>
-<li><a href="../publicaties.html">Publications</a></li>
-<li><a href="../collectie.html">Collection</a></li>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="../expo/index.html">Tentoonstellingen</a></li>
+<li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="../publicaties.html">Publicaties</a></li>
+<li><a href="../collectie.html">Collectie</a></li>
 <li><a href="../shop.html">Shop</a></li>
 <li><a href="../event/index.html">Events</a></li></ul></div>
-<div><h4>Involved</h4><ul class="fnav">
-<li><a href="../bezoek.html">Visit</a></li>
-<li><a href="../over.html">About</a></li>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="../bezoek.html">Bezoek</a></li>
+<li><a href="../over.html">Over</a></li>
 <li><a href="mailto:info@denode.be">Contact</a></li>
-<li><a href="../nieuwsbrief.html">Newsletter</a></li>
+<li><a href="../nieuwsbrief.html">Nieuwsbrief</a></li>
 <li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="../cookie.html">Cookie</a></li></ul></div>
-</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation is a home for contemporary art in the heart of Ghent.</span></div></div></footer>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
 </body></html>

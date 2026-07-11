@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -150,13 +161,13 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-note" style="margin-top:10px">Traduction IA</div>
 </div></section>
 <div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/images/blog-okan-is-me.jpg" alt=""></figure></div>
-<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>J'imagine peu d'endroits aussi désagréables que les toilettes d'un train. Nul besoin d'être claustrophobe ou obsédé par l'hygiène pour s'y sentir oppressé. C'est un endroit que je préfère par-dessus tout éviter. Quand le besoin se fait pressant et que j'entre malgré tout dans le minuscule réduit, dont les murs sont couverts de tags et d'autocollants, tandis que je file à 200 kilomètres à l'heure sur les chemins de fer belges, je ne veux qu'une chose : en ressortir au plus vite. C'est probablement votre cas aussi. Mais pas celui de l'artiste Okan Mentes. Ce Bruxellois de dix-neuf ans sait trouver la beauté jusque dans les endroits les plus laids. Ainsi, dans cette exposition, on trouve une photo qu'il a prise de l'eau aspirée en cyclone vers les profondeurs à travers le fond en inox de la cuvette des toilettes du train. Cela peut sonner comme une blague – une sorte de coup à la Duchamp – mais ce n'en est pas une. Okan n'a pas pris la photo dans l'intention d'en faire une œuvre conceptuelle. Il l'a prise uniquement parce qu'il y voyait quelque chose d'esthétique. Et que cette esthétique se trouve au fond d'une cuvette de toilettes est, en réalité, sans importance.</p>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>J'imagine peu d'endroits aussi désagréables que les toilettes d'un train. Nul besoin d'être claustrophobe ou obsédé par l'hygiène pour s'y sentir oppressé. C'est un endroit que je préfère par-dessus tout éviter. Quand le besoin se fait pressant et que j'entre malgré tout dans le minuscule réduit, dont les murs sont couverts de tags et d'autocollants, tandis que je file à 200 kilomètres à l'heure sur les chemins de fer belges, je ne veux qu'une chose : en ressortir au plus vite. C'est probablement votre cas aussi. Mais pas celui de l'artiste <a href="../kunstenaar/okan-mentes.html">Okan Mentes</a>. Ce Bruxellois de dix-neuf ans sait trouver la beauté jusque dans les endroits les plus laids. Ainsi, dans cette exposition, on trouve une photo qu'il a prise de l'eau aspirée en cyclone vers les profondeurs à travers le fond en inox de la cuvette des toilettes du train. Cela peut sonner comme une blague – une sorte de coup à la Duchamp – mais ce n'en est pas une. Okan n'a pas pris la photo dans l'intention d'en faire une œuvre conceptuelle. Il l'a prise uniquement parce qu'il y voyait quelque chose d'esthétique. Et que cette esthétique se trouve au fond d'une cuvette de toilettes est, en réalité, sans importance.</p>
 <p>Les artistes ne sont pas réputés pour leur modestie. Je peux vous assurer qu'Okan fait ici exception. Lorsque je l'ai rencontré pour la première fois il y a quelques semaines, j'ai été surpris par son enthousiasme communicatif et sa soif d'apprendre. Il semblait bien conscient qu'en tant que jeune artiste, il avait encore beaucoup à apprendre. Cette modestie, je la vois aussi reflétée dans ses œuvres. Cette exposition n'est certainement pas la déclaration tonitruante d'une philosophie cohérente. C'est plutôt une quête incertaine de beautés fragmentées.</p>
 <p>Lorsque nous contemplons une sculpture en terre cuite, nous sommes curieux de savoir à qui appartiennent les empreintes de mains dans l'argile. Bien que les photographies ne laissent aucune empreinte littérale de l'artiste, nous sommes tout aussi curieux de ce que le créateur y a mis de lui-même. Même le plus grand adepte de « la mort de l'auteur » ne peut désactiver cette curiosité instinctive. Pourtant, c'est exactement cela que je voudrais vous demander. En regardant le travail d'Okan, essayez un instant d'oublier Okan et de contempler l'œuvre pour ce qu'elle est. De même, vous ressentirez peut-être le besoin de deviner ce que représentent les photos. Mais, comme dit plus haut, qu'une photo ait été prise d'un panneau de signalisation, d'un pavé, ou même d'une cuvette de W.-C., est en réalité sans importance. Vous devriez même oublier que les œuvres que vous contemplez sont des photos. Essayez un instant de laisser de côté le qui, le quoi, le où et le quand. Tout ce qui reste alors, c'est l'expérience pure des compositions en noir et blanc. Et lorsque vous vous y abandonnez pleinement, vous comprenez, selon moi, la véritable valeur de ces œuvres.</p>
 <p>Il est facile de se laisser charmer par le jeune Okan. Surtout lorsque, avec son accent bruxellois et son enthousiasme juvénile, il dévoile les anecdotes amusantes derrière ses œuvres. Si vous vous retrouvez un jour dans une telle situation : soyez vigilant. En tant que spectateur, vous n'êtes pas censé retrouver l'artiste dans ses œuvres. Vous êtes censé vous y perdre !</p></div>
 <div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/jakob-de-smaele.html">Jakob de Smaele</a></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/okan-is-me.html">Expositions: Okan-is-me →</a></p>
-<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/okan-mentens.html">Artiste: Okan Mentens →</a></p>
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/okan-mentes.html">Artiste: Okan Mentes →</a></p>
 </div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>

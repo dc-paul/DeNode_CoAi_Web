@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -149,7 +160,8 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>Friday 13 February 2026, 6:00 PM – 10:00 PM</dd>
 <dt>Location</dt><dd>DeNode / Nodenaysteen, Predikherenlei 4, 9000 Gent</dd>
 
-<dt>Expo</dt><dd><a href="../expo/people-ruin-paintings.html">People Ruin Paintings</a></dd></dl>
+<dt>Expo</dt><dd><a href="../expo/people-ruin-paintings.html">People Ruin Paintings</a></dd>
+<dt>Newsletter</dt><dd><a href="../nieuwsbrief/2026-02-vernissage-john-robinson.html">Vernissage vrijdag 13 februari — John Robinson</a> <span style="color:var(--muted)">(12.02.26)</span></dd></dl>
 
 </div></section>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p><strong>Exhibition:</strong> John Robinson — People Ruin Paintings</p>
@@ -163,7 +175,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p><strong>John Robinson</strong> (b. 1981) lives and works in Worcester, UK. He studied Fine Arts at Falmouth College of Arts while apprenticing with painter Robert Lenkiewicz in Plymouth. Awarded the Richard Ford Scholarship by the Royal Academy of Arts, Robinson spent a formative year as an artist in residence at the Prado Museum in Madrid, where he studied Velázquez and Goya, among others. He remained in Madrid for a decade, interrupted by an MA in Fine Arts at Central Saint Martins in London, where he developed "self-portrait as (other...)" and "painting as disguise."</p>
 <p>Robinson has exhibited internationally and received the Peter Spicer Award for Excellence in Creative Arts (First Place), Richard Ford Award for Painting (Royal Academy, London), Premio de Pintura Focus-Abengoa (Seville), and the Hauser &amp; Wirth Prize (Somerset). His works are in private and public collections, including the University of the Arts London, the Focus-Abengoa Foundation (Seville), the Wellcome Collection (London), the British Council Collection (UK), and the Stedelijk Museum (Amsterdam).</p>
 <h2 class="dn-h3" id="about-the-curator">About the Curator</h2>
-<p><strong>Hanna Ouaziz</strong> is a French curator and cultural strategist whose work bridges critical research, institutional frameworks, and the sensory experience of art. Trained in art history and law, she develops exhibitions and programs that explore process, narrative, and transmission in Europe and Asia. As Associate Curator at DeNode Foundation (Ghent), she leads international artistic initiatives and an independent advisory practice rooted in a rigorous, transformative vision of contemporary art.</p>
+<p><strong>Hanna Ouaziz</strong> shapes DeNode's thematic narratives and international collaborations. With a background as a lawyer and expertise in cultural strategy and artistic project development, she connects thematic research with engaged artistic practices. She develops the foundation's international network and contributes to its editorial projects, helping deepen and articulate its vision.</p>
 <h2 class="dn-h3" id="about-denode">About DeNode</h2>
 <p><strong>DeNode Foundation</strong> is a foundation for contemporary art, based in Ghent. It develops exhibitions and artistic projects that are rooted in attention to process and context. DeNode supports practices that unfold over time and resist simplification, privileging works that engage thought, perception, and lived experience.</p>
 <p><strong>You are welcome to the opening of the exhibition on Friday, February 13 at 6:00 PM.</strong></p>

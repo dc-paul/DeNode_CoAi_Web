@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -154,18 +165,19 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <section class="dn-band"><div class="dn-wrap" style="display:flex;gap:36px;align-items:center;flex-wrap:wrap">
 <img src="../assets/denode-logo-white.png" alt="" style="width:96px">
 <div style="flex:1;min-width:min(60ch,100%)"><div class="dn-band__by" style="margin:0 0 10px">La Fondation DeNode</div><div class="dn-band__q">La Fondation DeNode est une maison pour l'art actuel au cœur de Gand. Par des expositions, des résidences et des collaborations internationales, nous offrons une place aux artistes, à la recherche et aux rencontres qui les entourent. Pour nous, l'art n'est pas un luxe mais une manière de regarder le monde avec plus d'attention.</div></div></div></section>
-<section class="dn-section" style="padding:56px 0"><div class="dn-wrap">
+<section class="dn-section" style="padding:56px 0" id="dn-agenda-sectie"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Agenda</h2><a href="event/index.html">Événements →</a></div>
-<dl class="dn-dl"><dt>15.05.26 – 26.07.26</dt><dd>Actuellement: <a href="expo/kashi-rupe-unfolded.html">Kashi Rupé — unfolded</a> — Nicolas Van Parys</dd><dt>Workshop 1: 15–16–17 juillet 2026 · Workshop 2: 22–23–24 juillet 2026</dt><dd><a href="event/cutting-reality.html">Cutting Reality — Atelier 1 &amp; 2</a></dd><dt>11.09.26 – 04.10.26</dt><dd>À venir: <a href="expo/bjorn-wandels-allesgut.html">allesgut</a> — <a href="kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd><dt>dimanche 20 septembre 2026</dt><dd><a href="event/bjorn-wandels-midexpo.html">Björn Wandels — booktalk</a></dd><dt>Reprise à partir d'octobre 2026 · un jeudi sur deux</dt><dd><a href="event/drawing-sessions.html">Séances de dessin d'après modèle</a></dd></dl>
-</div></section><script>(function(){var e=document.getElementById('dn-dagen');var d=Math.ceil((new Date('2026-07-26T23:59:59')-new Date())/864e5);if(d>1)e.textContent=' · encore '+d+' jours';else if(d>=0)e.textContent=' · dernier jour !';})();</script>
+<div class="dn-grid dn-grid--vol" id="dn-agenda"><a class="dn-card" href="expo/kashi-rupe-unfolded.html" data-eind="2026-07-26"><div class="thumb"><img loading="lazy" src="/images/blog-nicolas-van-parys.jpg" alt=""></div><div class="dn-tag">Actuellement</div><div class="dates" style="margin-top:10px">15.05.26 – 26.07.26</div><h3>Kashi Rupé — unfolded</h3><div class="who">Nicolas Van Parys</div></a><a class="dn-card" href="event/cutting-reality.html" data-eind="2026-07-24"><div class="thumb"><img loading="lazy" src="/images/workshop-cutting-reality.webp" alt=""></div><div class="dn-tag">Événement</div><div class="dates" style="margin-top:10px">Workshop 1: 15–16–17 juillet 2026 · Workshop 2: 22–23–24 juillet 2026</div><h3>Cutting Reality — Atelier 1 &amp; 2</h3></a><a class="dn-card" href="expo/bjorn-wandels-allesgut.html" data-eind="2026-10-04"><div class="thumb"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt=""></div><div class="dn-tag">À venir</div><div class="dates" style="margin-top:10px">11.09.26 – 04.10.26</div><h3>allesgut</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="event/bjorn-wandels-midexpo.html" data-eind="2026-09-20"><div class="thumb"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt=""></div><div class="dn-tag">Événement</div><div class="dates" style="margin-top:10px">dimanche 20 septembre 2026</div><h3>Björn Wandels — booktalk</h3></a><a class="dn-card" href="event/drawing-sessions.html" data-eind="9999"><div class="thumb"><img loading="lazy" src="/images/drawing-sessions.webp" alt=""></div><div class="dn-tag">Événement</div><div class="dates" style="margin-top:10px">Reprise à partir d'octobre 2026 · un jeudi sur deux</div><h3>Séances de dessin d'après modèle</h3></a></div>
+</div></section><script>(function(){var v=new Date();var vandaag=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');var n=0;[].slice.call(document.querySelectorAll('#dn-agenda .dn-card')).forEach(function(c){var e=c.getAttribute('data-eind');if(e&&e<vandaag){c.style.display='none';return;}n++;if(n>6)c.style.display='none';});if(!n){var s=document.getElementById('dn-agenda-sectie');if(s)s.style.display='none';}})();</script><script>(function(){var e=document.getElementById('dn-dagen');var d=Math.ceil((new Date('2026-07-26T23:59:59')-new Date())/864e5);if(d>1)e.textContent=' · encore '+d+' jours';else if(d>=0)e.textContent=' · dernier jour !';})();</script>
 <section class="dn-section"><div class="dn-wrap">
-<div class="dn-head"><h2 class="dn-h2">Expositions</h2><a href="expo/index.html">Archives complètes →</a></div>
-<div class="dn-grid">
-<a class="dn-card dn-card--now" href="expo/kashi-rupe-unfolded.html"><div class="thumb"><img src="/images/blog-nicolas-van-parys.jpg" alt=""></div>
-<div class="meta"><div class="dn-tag">Actuellement</div><div class="dates" style="margin-top:14px">15.05.26 – 26.07.26 · Kristof Vander Cruyssen</div>
-<h3>Kashi Rupé — unfolded</h3><div class="who">Nicolas Van Parys</div></div></a>
-<a class="dn-card" href="expo/bjorn-wandels-allesgut.html"><div class="thumb"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt=""></div><div class="dn-tag">À venir</div><div class="dates">11.09.26 – 04.10.26</div><h3>allesgut</h3><div class="who">Björn Wandels</div></a><a class="dn-card" href="expo/people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/affiche-people-ruin-paintings.jpg" alt=""></div><div class="dates">14.02.26 – 28.04.26</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="expo/merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/affiche-merel.jpg" alt=""></div><div class="dates">28.11.25 – 10.01.26</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="expo/again-across-the-river.html"><div class="thumb"><img src="/_assets/images/kunstenaar/lee-ranaldo/Lee_Ranaldo.jpg" alt=""></div><div class="dates">11.10.25 – 11.11.25</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a><a class="dn-card" href="expo/vestiges.html"><div class="thumb"><img src="/_assets/images/expo/vestiges/affiche-vestiges.jpg" alt=""></div><div class="dates">05.09.25 – 28.09.25</div><h3>Vestiges</h3><div class="who">Chantal Pollier, Guillaume Van Moerkercke</div></a><a class="dn-card" href="expo/okan-is-me.html"><div class="thumb"><img src="/_assets/images/expo/okan-is-me/affiche-okan-is-me.jpg" alt=""></div><div class="dates">10.07.25 – 17.07.25</div><h3>Okan-is-me</h3><div class="who">Okan Mentens</div></a>
+<div class="dn-head"><h2 class="dn-h2">Activités récentes</h2><a href="expo/index.html">Archives complètes →</a></div>
+<div class="dn-grid dn-grid--vol">
+<a class="dn-card" href="expo/people-ruin-paintings.html"><div class="thumb"><img src="/_assets/images/expo/people-ruin-paintings/affiche-people-ruin-paintings.jpg" alt=""></div><div class="dates">14.02.26 – 28.04.26</div><h3>People Ruin Paintings</h3><div class="who">John Robinson</div></a><a class="dn-card" href="expo/merel.html"><div class="thumb"><img src="/_assets/images/expo/merel/affiche-merel.jpg" alt=""></div><div class="dates">28.11.25 – 10.01.26</div><h3>Merel</h3><div class="who">Merel Jansen</div></a><a class="dn-card" href="expo/again-across-the-river.html"><div class="thumb"><img src="/_assets/images/kunstenaar/lee-ranaldo/Lee_Ranaldo.jpg" alt=""></div><div class="dates">11.10.25 – 11.11.25</div><h3>(again) across the river</h3><div class="who">Lee Ranaldo</div></a>
 </div></div></section>
+<section class="dn-section" id="dn-ig-sectie" style="display:none"><div class="dn-wrap">
+<div class="dn-head"><h2 class="dn-h2">DeNode sur Instagram</h2><a href="https://www.instagram.com/denode_foundation/" target="_blank" rel="noopener">@denode_foundation →</a></div>
+<div class="dn-grid" id="dn-ig-grid"></div>
+</div></section><script>(function(){fetch('/assets/ig/feed.json').then(function(r){return r.json()}).then(function(j){var it=Array.isArray(j)?j:(j.posts||j.data||j.items||[]);it=it.slice(0,3);if(!it.length)return;var g=document.getElementById('dn-ig-grid'),s=document.getElementById('dn-ig-sectie');if(!g||!s)return;g.innerHTML=it.map(function(p){var img=p.img||p.local||p.image||p.thumbnail||p.media_url||p.thumbnail_url||'';if(img&&!/^https?:/.test(img))img=''+(img.charAt(0)==='/'?'':'/')+img;var link=p.permalink||p.link||'https://www.instagram.com/denode_foundation/';var cap=(p.caption||p.text||'').slice(0,120);return '<a class="dn-card" href="'+link+'" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="'+img+'" alt=""></div><div class="who" style="margin-top:10px"></div></a>';}).join('');[].slice.call(g.querySelectorAll('.who')).forEach(function(el,i){el.textContent=(it[i].caption||it[i].text||'').slice(0,120)});s.style.display='';}).catch(function(){});})();</script>
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Visite</h2><a href="bezoek.html">Itinéraire & heures →</a></div>
 <div class="dn-cols"><dl class="dn-dl"><dt>Adresse</dt><dd>Galerie DeNode — nodenaysteen<br>Predikherenlei 4, 9000 Gand</dd><dt>Heures d'ouverture</dt><dd>du jeudi au samedi : 14h - 18h<br>dimanche : 11h - 17h<br>ou sur rendez-vous : kristof@denode.be</dd></dl>

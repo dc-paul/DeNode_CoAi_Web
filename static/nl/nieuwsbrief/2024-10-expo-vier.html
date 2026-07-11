@@ -1,0 +1,227 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Expo 'VIER' van Caroline Baek in de Nodenaysteen — DeNode Foundation</title>
+<meta name="robots" content="noindex, nofollow"><!-- testfase icp.denode.be — weghalen bij echte go-live (Paul 6 jul 2026) -->
+<meta name="description" content="Stichting DeNode is een huis voor actuele kunst in het hart van Gent.">
+<meta property="og:title" content="Expo 'VIER' van Caroline Baek in de Nodenaysteen — DeNode Foundation">
+<meta property="og:description" content="Stichting DeNode is een huis voor actuele kunst in het hart van Gent.">
+<meta property="og:image" content="https://icp.denode.be/assets/denode-logo-black.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://icp.denode.be/nl/nieuwsbrief/2024-10-expo-vier.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://icp.denode.be/nl/nieuwsbrief/2024-10-expo-vier.html"><link rel="alternate" hreflang="en" href="https://icp.denode.be/en/nieuwsbrief/2024-10-expo-vier.html"><link rel="alternate" hreflang="fr" href="https://icp.denode.be/fr/nieuwsbrief/2024-10-expo-vier.html"><link rel="alternate" hreflang="x-default" href="https://icp.denode.be/nl/nieuwsbrief/2024-10-expo-vier.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
+/* expo-kop-beeld: volledig getoond, gecentreerd, nooit gecropt (Kristof 9 jul 2026) */
+.dn-expokop{margin:0;text-align:center;}
+.dn-expokop img{max-width:100%;max-height:62vh;width:auto;height:auto;cursor:zoom-in;}
+/* expo-kop: titelblok naast het beeld (Paul 9 jul 2026) */
+.dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
+.dn-expokop2 .dn-expokop img{max-height:56vh;}
+@media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
+/* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
+.dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{border:1px solid var(--line);} /* sizing komt van de max-height-regel hierboven — width:100% rekte staande foto's uit (Paul 9 jul 2026) */
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+/* nav paste niet meer op één lijn na het Programma-item (Paul 9 jul 2026):
+   compactere typografie + hamburger springt al in vanaf 1120px i.p.v. 820px */
+.dn-nav ul{gap:20px;}
+.dn-nav a{letter-spacing:.09em;}
+@media(max-width:1120px){.dn-nav ul{display:none;}.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:contain;aspect-ratio:4/3;}
+/* kunstenaar-portretten in kaarten: nooit croppen — volledige foto zichtbaar; per-kunstenaar override via beeldFit/beeldFocus (Paul 9 jul 2026, consistent site-breed) */
+#dn-kgrid .dn-card .thumb img,#dn-kgrid2 .dn-card .thumb img{object-fit:contain;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna/Hilde): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* eyebrow ("KUNSTENAAR"/"EXPO"-label): ademruimte boven de display-titel — diakrieten (Ö) liepen tegen het label (Paul 9 jul 2026) */
+.dn-eyebrow{margin-bottom:12px;}
+/* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
+.dn-grid--team{grid-template-columns:repeat(2,1fr);}
+@media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+/* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
+   anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
+.dn-gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+.dn-gal figure{min-width:0;}
+.dn-gal img{max-width:100%;height:auto;object-fit:unset;}
+.dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../programma.html">Programma</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Zoeken" title="Zoeken"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/index.html">EN</a><a class="lg" href="../../fr/index.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../programma.html">Programma</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a><a href="../zoeken.html">Zoeken</a></div>
+</header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Nieuwsbriefarchief</a> / Expo 'VIER' van Caroline Baek in de Nodenaysteen</div></div>
+
+<section class="dn-section" style="padding-bottom:30px"><div class="dn-wrap">
+<div class="dn-tag" style="margin-bottom:14px">Nieuwsbrief</div>
+<h1 class="dn-h2">Expo 'VIER' van <a href="../kunstenaar/caroline-baek.html">Caroline Baek</a> in de Nodenaysteen</h1>
+<p style="color:var(--muted);margin-top:14px">Oorspronkelijk verzonden per e-mail op 10.10.24.</p>
+<dl class="dn-dl" style="margin-top:26px">
+<dt>Expo</dt><dd><a href="../expo/vier.html">VIER</a></dd>
+
+<dt>Kunstenaar</dt><dd><a href="../kunstenaar/caroline-baek.html">Caroline Baek</a></dd></dl>
+</div></section>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p><em>nodenaysteen nieuwsbrief — oktober 2024</em></p>
+<div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/nieuwsbrief/2024-10-expo-vier/vier-caroline-baek-1.jpg" alt="Caroline Baek — VIER" data-cap="Caroline Baek — VIER"><figcaption>Caroline Baek — VIER</figcaption></figure><figure><img loading="lazy" src="/_assets/images/nieuwsbrief/2024-10-expo-vier/vier-caroline-baek-2.jpg" alt="Caroline Baek — VIER" data-cap="Caroline Baek — VIER"><figcaption>Caroline Baek — VIER</figcaption></figure></div>
+<p>We kindly invite you to visit the new expo @Nodenaysteen with work from Caroline Baek (°1963)</p>
+<h2 class="dn-h3" id="nodenaysteen-stelt-voor-caroline-baek-vier">nodenaysteen stelt voor: Caroline Baek 'VIER'</h2>
+<p>We nodigen u graag uit op zaterdag 19 oktober om 'VIER', de nieuwe expo van Caroline Baek (°1963) te ontdekken in Nodenaysteen te Gent.</p>
+<p>Het werk van de kunstenaar is een reflectie van haar reizen naar Mexico en Laos, alsook haar diepe connectie met de zee. Ze nodigt de kijker uit om stil te staan en te contempleren in een tijdperk van vluchtige beelden. Curator <a href="../kunstenaar/damien-degrave.html">Damien Degrave</a> verbindt haar werk met een tekst van Heidegger over 'het wezen van het zijn'.</p>
+<p>Welkom!</p>
+<ul>
+<li>Van 19/10/24 tot 17/11/24</li>
+<li>Vernissage: 19 oktober 24 - 15u</li>
+<li>Finissage: 17 november 24 om 18u</li>
+<li>Open op do, vrij, zat, zon of op afspraak steeds van 14 tot 18u</li>
+</ul>
+<p>nodenaysteen</p>
+<p>Predikherenlei 4a, Gent</p></div>
+<p style="margin-top:44px"><a class="dn-btn dn-btn--ghost" href="index.html">← Nieuwsbriefarchief</a></p></div></section>
+<section style="padding:0 0 70px"><div class="dn-wrap"><nav style="display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:26px"><a href="2024-02-finissage-ines-claus.html" style="max-width:46%;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">← Vorige</span>Finissage Ines Claus (28.02.24)</a><a href="2024-11-laatste-dagen-vier.html" style="max-width:46%;text-align:right;margin-left:auto;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">Volgende →</span>Laatste IV dagen 'VIER' (13.11.24)</a></nav></div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="../expo/index.html">Tentoonstellingen</a></li>
+<li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="../publicaties.html">Publicaties</a></li>
+<li><a href="../collectie.html">Collectie</a></li>
+<li><a href="../shop.html">Shop</a></li>
+<li><a href="../event/index.html">Events</a></li></ul></div>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="../bezoek.html">Bezoek</a></li>
+<li><a href="../over.html">Over</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../nieuwsbrief.html">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
+</body></html>

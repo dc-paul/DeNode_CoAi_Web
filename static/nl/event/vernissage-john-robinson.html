@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -149,7 +160,8 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>Friday 13 February 2026, 6:00 PM – 10:00 PM</dd>
 <dt>Locatie</dt><dd>DeNode / Nodenaysteen, Predikherenlei 4, 9000 Gent</dd>
 
-<dt>Expo</dt><dd><a href="../expo/people-ruin-paintings.html">People Ruin Paintings</a></dd></dl>
+<dt>Expo</dt><dd><a href="../expo/people-ruin-paintings.html">People Ruin Paintings</a></dd>
+<dt>Nieuwsbrief</dt><dd><a href="../nieuwsbrief/2026-02-vernissage-john-robinson.html">Vernissage vrijdag 13 februari — John Robinson</a> <span style="color:var(--muted)">(12.02.26)</span></dd></dl>
 
 </div></section>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p><strong>Tentoonstelling:</strong> John Robinson — People Ruin Paintings</p>
@@ -163,7 +175,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p><strong>John Robinson</strong> (geb. 1981) woont en werkt in Worcester, VK. Hij studeerde Schone Kunsten aan het Falmouth College of Arts terwijl hij een stage liep bij schilder Robert Lenkiewicz in Plymouth. Robinson ontving de Richard Ford Scholarship van de Royal Academy of Arts en bracht een vormend jaar door als artist-in-residence in het Prado Museum in Madrid, waar hij onder anderen Velázquez en Goya bestudeerde. Hij bleef een decennium in Madrid, onderbroken door een MA in Schone Kunsten aan Central Saint Martins in Londen, waar hij "zelfportret als (ander...)" en "schilderkunst als vermomming" ontwikkelde.</p>
 <p>Robinson heeft internationaal geëxposeerd en ontving de Peter Spicer Award for Excellence in Creative Arts (Eerste Plaats), Richard Ford Award for Painting (Royal Academy, Londen), Premio de Pintura Focus-Abengoa (Sevilla) en de Hauser &amp; Wirth Prize (Somerset). Zijn werken bevinden zich in privé- en openbare collecties, waaronder de University of the Arts London, de Focus-Abengoa Foundation (Sevilla), de Wellcome Collection (Londen), de British Council Collection (VK) en het Stedelijk Museum (Amsterdam).</p>
 <h2 class="dn-h3" id="over-de-curator">Over de Curator</h2>
-<p><strong>Hanna Ouaziz</strong> is een Franse curator en culturele strateeg wiens werk de brug slaat tussen kritisch onderzoek, institutionele kaders en de zintuiglijke ervaring van kunst. Opgeleid in kunstgeschiedenis en recht, ontwikkelt ze tentoonstellingen en programma's die proces, narratief en transmissie in Europa en Azië verkennen. Als Associate Curator bij DeNode Foundation (Gent) leidt ze internationale artistieke initiatieven en een onafhankelijke adviespraktijk die geworteld is in een rigoureuze, transformerende visie op hedendaagse kunst.</p>
+<p><strong>Hanna Ouaziz</strong> geeft vorm aan de thematische verhaallijnen en internationale samenwerkingen van DeNode. Met een achtergrond als juriste en expertise in culturele strategie en artistieke projectontwikkeling verbindt ze thematisch onderzoek met geëngageerde artistieke praktijken. Ze bouwt het internationale netwerk van de stichting uit en draagt bij aan haar redactionele projecten — en helpt zo de visie van de stichting te verdiepen en te verwoorden.</p>
 <h2 class="dn-h3" id="over-denode">Over DeNode</h2>
 <p><strong>DeNode Foundation</strong> is een stichting voor hedendaagse kunst, gevestigd in Gent. Het ontwikkelt tentoonstellingen en artistieke projecten die geworteld zijn in aandacht voor proces en context. DeNode ondersteunt praktijken die zich in de loop van de tijd ontvouwen en vereenvoudiging weerstaan, en geeft de voorkeur aan werken die denken, waarneming en geleefde ervaring aanspreken.</p>
 <p><strong>U bent van harte welkom op de opening van de tentoonstelling op vrijdag 13 februari om 18:00 uur.</strong></p>

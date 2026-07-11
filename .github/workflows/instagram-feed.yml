@@ -1,0 +1,75 @@
+name: Refresh Instagram feed
+
+# Haalt elke 8 uur de laatste 6 posts van @denode_foundation op via de Instagram
+# Graph API, slaat de thumbnails lokaal op in static/assets/ig/ (same-origin op de
+# Juno-site), commit ze, en deployt de site naar de PRODUCTIE-satelliet.
+# Self-contained: hangt NIET af van deploy.yml en NIET van ethereum.be.
+#
+# Vereiste GitHub Secrets (repo dc-paul/DeNode_CoAi_Web):
+#   IG_ACCESS_TOKEN  — long-lived Instagram Graph API token (verplicht)
+#   GH_PAT           — fine-grained PAT met 'Secrets: read/write' op deze repo
+#                      (optioneel; hiermee verlengt de token zichzelf eeuwig)
+# Juno-deploy gebruikt OIDC (id-token) — geen access key nodig, net als deploy.yml.
+
+on:
+  schedule:
+    - cron: "0 */8 * * *"   # elke 8u: 00/08/16 UTC (= 02/10/18 CEST)
+  workflow_dispatch:         # handmatig starten via de Actions-tab
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # om de feed te committen
+      id-token: write        # voor de Juno OIDC-deploy
+    env:
+      GH_PAT: ${{ secrets.GH_PAT }}
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Fetch latest Instagram posts
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node scripts/fetch-instagram.mjs
+
+      # Verleng de token automatisch (alleen als GH_PAT is ingesteld).
+      - name: Persist refreshed token
+        if: ${{ env.GH_PAT != '' }}
+        env:
+          GH_TOKEN: ${{ env.GH_PAT }}
+        run: |
+          if [ -f ig_token.txt ]; then
+            gh secret set IG_ACCESS_TOKEN --body "$(cat ig_token.txt)"
+            echo "IG_ACCESS_TOKEN bijgewerkt."
+          fi
+
+      - name: Clean up token file
+        if: always()
+        run: rm -f ig_token.txt
+
+      # Commit met [skip ci] zodat deploy.yml NIET óók vuurt (deze workflow deployt zelf).
+      - name: Commit refreshed feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/assets/ig
+          if git diff --staged --quiet; then
+            echo "Geen wijzigingen in de feed."
+          else
+            git commit -m "chore: refresh Instagram feed [skip ci]"
+            git push
+          fi
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Deploy to Juno (production)
+        uses: junobuild/juno-action@main
+        with:
+          args: hosting deploy

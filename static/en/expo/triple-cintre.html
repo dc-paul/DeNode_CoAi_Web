@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Triple Cintre — DeNode Foundation</title>
 <meta name="robots" content="noindex, nofollow"><!-- testfase icp.denode.be — weghalen bij echte go-live (Paul 6 jul 2026) -->
-<meta name="description" content="In 2017, Ines Claus (°1993) graduated in Fine Arts (autonomous drawing) at KASK Ghent. Her work is a fusion of drawing, painting, collage, publications and installations.">
+<meta name="description" content="With *Triple Cintre*, Ines Claus showed paintings, sculpture and textile in which elements from everyday life, advertising, fashion and interior design are immersed in a colourful bath. The clothes ha">
 <meta property="og:title" content="Triple Cintre — DeNode Foundation">
-<meta property="og:description" content="In 2017, Ines Claus (°1993) graduated in Fine Arts (autonomous drawing) at KASK Ghent. Her work is a fusion of drawing, painting, collage, publications and installations.">
+<meta property="og:description" content="With *Triple Cintre*, Ines Claus showed paintings, sculpture and textile in which elements from everyday life, advertising, fashion and interior design are immersed in a colourful bath. The clothes ha">
 <meta property="og:image" content="https://icp.denode.be/_assets/images/expo/triple-cintre/affiche-triple-cintre.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://icp.denode.be/en/expo/triple-cintre.html">
@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -149,32 +160,35 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <h1 class="dn-h1">Triple Cintre</h1>
 <div class="dn-serif-it" style="font-size:21px;margin-top:20px"><a href="../kunstenaar/ines-claus.html">Ines Claus</a></div>
 </div>
-<figure class="dn-expokop"><img src="/_assets/images/expo/triple-cintre/affiche-triple-cintre.jpg" alt="Triple Cintre"></figure>
+<figure class="dn-expokop dn-expokop--wissel"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---1.jpg" class="dn-kw aan" alt="Triple Cintre"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---2.jpg" class="dn-kw" alt="Triple Cintre"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---3.jpg" class="dn-kw" alt="Triple Cintre"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---4.jpg" class="dn-kw" alt="Triple Cintre"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---5.jpg" class="dn-kw" alt="Triple Cintre"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---6.jpg" class="dn-kw" alt="Triple Cintre"><img src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---7.jpg" class="dn-kw" alt="Triple Cintre"></figure>
+<script>(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;var ks=[].slice.call(document.querySelectorAll('.dn-expokop--wissel img.dn-kw'));if(ks.length<2)return;var i=0;setInterval(function(){ks[i].classList.remove('aan');i=(i+1)%ks.length;ks[i].classList.add('aan');},2500);})();</script>
 </div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
-<div class="dn-prose"><p class="dn-lead">In 2017, Ines Claus (°1993) graduated in Fine Arts (autonomous drawing) at KASK Ghent. Her work is a fusion of drawing, painting, collage, publications and installations.</p><p>Ines Claus immerses elements from everyday life, advertising, fashion and interior design in a colourful bath. With bold compositions she creates a unique universe — one she recently translated into a self-published book, "La Sape Paris."</p>
-<p><a href="../artikel/ines-claus.html">Read the full text →</a></p></div>
+<div class="dn-prose"><p class="dn-lead">With <em>Triple Cintre</em>, Ines Claus showed paintings, sculpture and textile in which elements from everyday life, advertising, fashion and interior design are immersed in a colourful bath. The clothes hanger — the <em>cintre</em> of the title — returns as a motif throughout.</p>
+</div>
 <dl class="dn-dl">
 <dt>Artist</dt><dd><a href="../kunstenaar/ines-claus.html">Ines Claus</a></dd>
 <dt>Period</dt><dd>02.02.24 – 03.03.24</dd>
 <dt>Curator</dt><dd><a href="../over.html#paul-de-canniere">Paul De Cannière</a></dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
+<dt>Newsletter</dt><dd><a href="../../nl/nieuwsbrief/2024-01-nieuwe-expo-triple-cintre.html">Nieuwe expo Nodenaysteen: Triple Cintre — Ines Claus</a> <span style="color:var(--muted)">(26.01.24)</span><br><a href="../../nl/nieuwsbrief/2024-01-uitnodiging-triple-cintre.html">Uitnodiging opening expo Triple Cintre — Ines Claus</a> <span style="color:var(--muted)">(26.01.24)</span><br><a href="../../nl/nieuwsbrief/2024-02-finissage-ines-claus.html">Finissage Ines Claus</a> <span style="color:var(--muted)">(28.02.24)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Texts</h2></div>
-<dl class="dn-dl"><dt>interview</dt><dd><a href="../artikel/interview-ines-claus.html">Interview with Ines Claus</a> — <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd><dt>artists</dt><dd><a href="../artikel/ines-claus.html">Ines Claus</a> — Paul De Cannière</dd></dl>
+<dl class="dn-dl"><dt>interview</dt><dd><a href="../artikel/interview-ines-claus.html">Interview with Ines Claus</a> — <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd></dl>
 </div></section>
 
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="installation-views">Installation views</h2>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines-Claus_LR.jpg" alt="Ines Claus" data-cap="Ines Claus"><figcaption>Ines Claus</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Claus_Nodenaysteen.jpg" alt="Ines Claus Nodenaysteen" data-cap="Ines Claus Nodenaysteen"><figcaption>Ines Claus Nodenaysteen</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---1.jpg" alt="Ines Mail Flyer 1" data-cap="Ines Mail Flyer 1"><figcaption>Ines Mail Flyer 1</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---2.jpg" alt="Ines Mail Flyer 2" data-cap="Ines Mail Flyer 2"><figcaption>Ines Mail Flyer 2</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---3.jpg" alt="Ines Mail Flyer 3" data-cap="Ines Mail Flyer 3"><figcaption>Ines Mail Flyer 3</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---4.jpg" alt="Ines Mail Flyer 4" data-cap="Ines Mail Flyer 4"><figcaption>Ines Mail Flyer 4</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---5.jpg" alt="Ines Mail Flyer 5" data-cap="Ines Mail Flyer 5"><figcaption>Ines Mail Flyer 5</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---6.jpg" alt="Ines Mail Flyer 6" data-cap="Ines Mail Flyer 6"><figcaption>Ines Mail Flyer 6</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/Ines_Mail_Flyer---7.jpg" alt="Ines Mail Flyer 7" data-cap="Ines Mail Flyer 7"><figcaption>Ines Mail Flyer 7</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/N_InesClaus_Pix_10.jpg" alt="N InesClaus Pix 10" data-cap="N InesClaus Pix 10"><figcaption>N InesClaus Pix 10</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/N_InesClaus_Pix_13.jpg" alt="N InesClaus Pix 13" data-cap="N InesClaus Pix 13"><figcaption>N InesClaus Pix 13</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/N_InesClaus_Pix_2.jpg" alt="N InesClaus Pix 2" data-cap="N InesClaus Pix 2"><figcaption>N InesClaus Pix 2</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/triple-cintre/N_InesClaus_Pix_5.jpg" alt="N InesClaus Pix 5" data-cap="N InesClaus Pix 5"><figcaption>N InesClaus Pix 5</figcaption></figure></div></div></div></section>
+<div class="dn-gal dn-gal--3 dn-gal--serie"><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ001.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ002.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ003.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ004.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ005.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ006.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ007.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ008.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ009.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ010.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ011.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ012.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ013.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ014.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ015.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ016.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ017.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ018.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/Ines_Claus_ZZ019.jpg" alt="Triple Cintre — installation view" data-cap="Triple Cintre — installation view"></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/nodenaysteen_gevel_001.jpg" alt="Triple Cintre — installation view (gevel)" data-cap="Triple Cintre — installation view (gevel)"><figcaption>Triple Cintre — installation view (gevel)</figcaption></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/nodenaysteen_gevel_003.jpg" alt="Triple Cintre — installation view (gevel)" data-cap="Triple Cintre — installation view (gevel)"><figcaption>Triple Cintre — installation view (gevel)</figcaption></figure><figure><img loading="lazy" src="/_assets/images/artikel/ines-claus/nodenaysteen_gevel_004.jpg" alt="Triple Cintre — installation view (gevel)" data-cap="Triple Cintre — installation view (gevel)"><figcaption>Triple Cintre — installation view (gevel)</figcaption></figure></div></div></div></section>
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/artikel/ines-claus/Ines_Claus.jpeg" alt="Ines Claus">
 <div class="in"><div class="dn-eyebrow">About the artist</div><h3 class="dn-h2">Ines Claus</h3>
-<p style="margin:12px 0 20px"></p>
+<p style="margin:12px 0 20px">In 2017, Ines Claus graduated in Fine Arts (autonomous drawing) at KASK Ghent. Her work is a fusion of drawing, painting, collage, publications and installations.</p>
 <a class="dn-btn" href="../kunstenaar/ines-claus.html">View artist →</a></div></div></div></section>
+<section style="padding:0 0 70px"><div class="dn-wrap"><nav style="display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:26px"><a href="ai-universe.html" style="max-width:46%;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">← Previous</span>AI Universe (27.10.23 – mid-January 2024)</a><a href="bjorn-wandels-vitrine.html" style="max-width:46%;text-align:right;margin-left:auto;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">Next →</span>On View (April – September 2024)</a></nav></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

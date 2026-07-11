@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -150,13 +161,13 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 </div></section>
 <div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/images/blog-okan-is-me.jpg" alt=""></figure></div>
-<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Ik kan me weinig plekken inbeelden die zo onaangenaam zijn als het toilet op een trein. U hoeft geen claustrofobie of smetvrees te hebben om er een benauwd gevoel te krijgen. Het is een plek die ik liefst van al vermijd. Wanneer de nood hoog is en toch binnenstap in het piepkleine kotje, waarvan de muren bedekt zijn in tags en stikkers, terwijl ik aan een snelheid van 200 kilometer per uur over de Belgische spoorwegen vlieg, dan wil ik daar liefst zo snel mogelijk weer weg. Dat geldt waarschijnlijk ook voor u. Maar niet voor de kunstenaar Okan Mentes. Deze negentienjarige Brusselaar weet zelfs in de meest lelijke plekken de schoonheid te vinden. Zo is in deze expo een foto te vinden die hij nam van het water dat cycloon-gewijs door de inoxxen boden van de treintoiletpot de diepte ingezogen werd. Dit klinkt misschien als een grap – een soort Duchamp-achtige stunt – maar dat is het niet. Okan trok de foto niet met de intentie er een conceptueel kunstwerk van te maken. Hij trok de foto enkel en alleen omdat hij iets esthetisch zag. En dat die esthetiek in de bodem van een toiletpot lag, is eigenlijk irrelevant.</p>
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Ik kan me weinig plekken inbeelden die zo onaangenaam zijn als het toilet op een trein. U hoeft geen claustrofobie of smetvrees te hebben om er een benauwd gevoel te krijgen. Het is een plek die ik liefst van al vermijd. Wanneer de nood hoog is en toch binnenstap in het piepkleine kotje, waarvan de muren bedekt zijn in tags en stikkers, terwijl ik aan een snelheid van 200 kilometer per uur over de Belgische spoorwegen vlieg, dan wil ik daar liefst zo snel mogelijk weer weg. Dat geldt waarschijnlijk ook voor u. Maar niet voor de kunstenaar <a href="../kunstenaar/okan-mentes.html">Okan Mentes</a>. Deze negentienjarige Brusselaar weet zelfs in de meest lelijke plekken de schoonheid te vinden. Zo is in deze expo een foto te vinden die hij nam van het water dat cycloon-gewijs door de inoxxen boden van de treintoiletpot de diepte ingezogen werd. Dit klinkt misschien als een grap – een soort Duchamp-achtige stunt – maar dat is het niet. Okan trok de foto niet met de intentie er een conceptueel kunstwerk van te maken. Hij trok de foto enkel en alleen omdat hij iets esthetisch zag. En dat die esthetiek in de bodem van een toiletpot lag, is eigenlijk irrelevant.</p>
 <p>Kunstenaars staan er niet bekend om bescheiden te zijn. Ik kan u verzekeren dat Okan hier een uitzondering in is. Wanneer ik hem enkele weken geleden voor het eerst ontmoette was ik verrast door zijn aanstekelijk enthousiasme en leergierige houding. Hij leek goed te beseffen dat hij als jonge kunstenaar nog veel te leren had. Die bescheidenheid zie ik ook weerspiegeld in zijn kunstwerken. Deze expo is zeker geen luide declaratie van een coherente filosofie. Het is veeleer een onzekere zoektocht naar versnipperde schoonheden.</p>
 <p>Wanneer we een terracotta sculptuur aanschouwen dan zijn we nieuwsgierig naar wiens handafdrukken in de klei staan. Hoewel er op foto's geen letterlijke indrukken van de kunstenaar achterblijven, zijn we toch even nieuwsgierig naar wat de maker van zichzelf in diens kunst stak. Zelfs de grootste aanhanger van "de dood van de auteur", kan deze instinctieve nieuwsgierigheid niet uitzetten. Toch zou ik u exact dit willen vragen. Probeer bij het bekijken van Okans werk toch even Okan te vergeten en het werk te aanschouwen voor wat het is. Evenzeer voelt u misschien de nood om te achterhalen wat er op de foto's staat. Maar zoals eerder vermeld, of een foto getrokken werd van een verkeersbord, een stoepsteen, of zelfs een wc-pot, is eigenlijk irrelevant. Eigenlijk zou u zelfs moeten vergeten dat de kunstwerken die u aanschouwt foto's zijn. Probeer even de wie, wat, waar en wanneer buiten beschouwing te laten. Alles wat er dan overblijft is de zuivere belevenis van de zwart-witte composities. En wanneer u dat ten volste tot u laat komen, dan begrijpt u volgens mij de werkelijke waarde van deze kunstwerken.</p>
 <p>Het is makkelijk om gecharmeerd te worden door de jonge Okan. Zeker wanneer hij in zijn Brussels accent en met zijn jeugdig enthousiasme de grappige anekdotes achter zijn kunstwerken onthult. Indien u ooit in zo'n situatie terecht komt: wees waakzaam. Het is niet de bedoeling dat u als toeschouwer de kunstenaar in zijn werken terugvindt. Het is de bedoeling dat u zichzelf erin verliest!</p></div>
 <div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/jakob-de-smaele.html">Jakob de Smaele</a></div>
 <p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/okan-is-me.html">Tentoonstellingen: Okan-is-me →</a></p>
-<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/okan-mentens.html">Kunstenaar: Okan Mentens →</a></p>
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/okan-mentes.html">Kunstenaar: Okan Mentes →</a></p>
 </div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>

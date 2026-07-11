@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -160,6 +171,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd><a href="../kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></dd>
 <dt>Lieu</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 <dt>Event</dt><dd><a href="../event/vestiges-performance.html">Vestiges — performance au violoncelle de Robrecht Kessels</a></dd>
+<dt>Newsletter</dt><dd><a href="../../nl/nieuwsbrief/2025-07-nieuwsbrief-15-finissage-okan.html">Finissage Okan-is-me</a> <span style="color:var(--muted)">(30.07.25)</span><br><a href="../../nl/nieuwsbrief/2025-08-nieuwsbrief-16-vernissage-vestiges.html">Vernissage Vestiges</a> <span style="color:var(--muted)">(19.08.25)</span><br><a href="../../nl/nieuwsbrief/2025-08-nieuwsbrief-16bis-addendum.html">Addendum</a> <span style="color:var(--muted)">(19.08.25)</span><br><a href="../../nl/nieuwsbrief/2025-09-nieuwsbrief-17-save-the-date.html">Save the date</a> <span style="color:var(--muted)">(02.09.25)</span><br><a href="../../nl/nieuwsbrief/2025-09-nieuwsbrief-18-recital-kessels.html">Robrecht Kessels — recital zaterdag 20 september</a> <span style="color:var(--muted)">(13.09.25)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Textes</h2></div>
@@ -182,6 +194,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="in"><div class="dn-eyebrow">Sur l'artiste</div><h3 class="dn-h2">Guillaume Van Moerkercke</h3>
 <p style="margin:12px 0 20px">Guillaume Van Moerkercke dessine au fusain — brut, noir, poussiéreux, à la fois trace et effacement. Ses dessins sont de lentes fouilles issues de carnets, de souvenirs et de visions ; le noir n'y est pas un vide mais une origine, stratifiée et vivante, où des formes oubliées…</p>
 <a class="dn-btn" href="../kunstenaar/guillaume-van-moerkercke.html">Voir l'artiste →</a></div></div></div></section>
+<section style="padding:0 0 70px"><div class="dn-wrap"><nav style="display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:26px"><a href="okan-is-me.html" style="max-width:46%;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">← Précédent</span>Okan-is-me (10.07.25 – 03.08.25)</a><a href="again-across-the-river.html" style="max-width:46%;text-align:right;margin-left:auto;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">Suivant →</span>(again) across the river (11.10.25 – 11.11.25)</a></nav></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -145,9 +156,9 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <section class="dn-section" style="padding-bottom:0"><div class="dn-wrap"><div class="dn-expokop2">
 <div>
-<div class="dn-eyebrow" style="margin-bottom:22px">EXPO #8 · 10.07.25 – 17.07.25</div>
+<div class="dn-eyebrow" style="margin-bottom:22px">EXPO #8 · 10.07.25 – 03.08.25</div>
 <h1 class="dn-h1">Okan-is-me</h1>
-<div class="dn-serif-it" style="font-size:21px;margin-top:20px"><a href="../kunstenaar/okan-mentens.html">Okan Mentens</a></div>
+<div class="dn-serif-it" style="font-size:21px;margin-top:20px"><a href="../kunstenaar/okan-mentes.html">Okan Mentes</a></div>
 </div>
 <figure class="dn-expokop"><img src="/_assets/images/expo/okan-is-me/affiche-okan-is-me.jpg" alt="Okan-is-me"></figure>
 </div></div></section>
@@ -155,11 +166,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p class="dn-lead">I can hardly imagine places as unpleasant as the toilet on a train. You don't need to have claustrophobia or germophobia to feel claustrophobic there. It's a place I prefer to avoid. When the need is urgent and I step into the tiny cubicle, whose walls are covered in tags and stickers, while I fly at a speed of 200 kilometers per hour over the Belgian railways, I want to get out of there as quickly as possible. That probably applies to you as well. But not for the artist Okan Mentes. This nineteen-year-old from Brussels knows how to find beauty even in the ugliest places. In this exhibition, there is a photo he took of the water that was cyclone-like sucked into the depths through the stainless steel bottom of the train toilet bowl. This may sound like a joke – a kind of Duchamp-like stunt – but it is not. Okan did not take the photo with the intention of making a conceptual artwork. He took the photo solely because he saw something aesthetic. And the fact that this aesthetic lay in the bottom of a toilet bowl is actually irrelevant.</p><p>Artists are not known for being modest. I can assure you that Okan is an exception to this. When I first met him a few weeks ago, I was surprised by his infectious enthusiasm and eager-to-learn attitude. He seemed to be well aware that as a young artist, he still had much to learn. I see that modesty reflected in his artworks as well. This exhibition is certainly not a loud declaration of a coherent philosophy. It is rather an uncertain search for fragmented beauties.</p>
 <p><a href="../artikel/okan-is-me.html">Read the full text →</a></p></div>
 <dl class="dn-dl">
-<dt>Artist</dt><dd><a href="../kunstenaar/okan-mentens.html">Okan Mentens</a></dd>
-<dt>Period</dt><dd>10.07.25 – 17.07.25</dd>
+<dt>Artist</dt><dd><a href="../kunstenaar/okan-mentes.html">Okan Mentes</a></dd>
+<dt>Period</dt><dd>10.07.25 – 03.08.25</dd>
 <dt>Curator</dt><dd><a href="../kunstenaar/damien-degrave.html">Damien Degrave</a></dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
+<dt>Newsletter</dt><dd><a href="../../nl/nieuwsbrief/2025-07-vernissage-okan-is-me.html">Okan-is-me — vernissage 10 juli</a> <span style="color:var(--muted)">(07.07.25)</span><br><a href="../../nl/nieuwsbrief/2025-07-nieuwsbrief-15-finissage-okan.html">Finissage Okan-is-me</a> <span style="color:var(--muted)">(30.07.25)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Texts</h2></div>
@@ -171,10 +183,11 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-1.jpg" alt="OKAN foto Sonny 1 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 1 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 1 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-2.jpg" alt="OKAN foto Sonny 2 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 2 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 2 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-3.jpg" alt="OKAN foto Sonny 3 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 3 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 3 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg" alt="OKAN foto Sonny 4 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 4 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 4 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-5.jpg" alt="OKAN foto Sonny 5 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 5 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 5 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-6.jpg" alt="OKAN foto Sonny 6 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 6 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 6 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-7.jpg" alt="OKAN foto Sonny 7 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 7 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 7 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-8.jpg" alt="OKAN foto Sonny 8 — Foto: Sonny Plasschaert" data-cap="OKAN foto Sonny 8 — Foto: Sonny Plasschaert"><figcaption>OKAN foto Sonny 8 <span class="dn-credit">— Foto: Sonny Plasschaert</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/Okan_Nodenaysteen---1.jpg" alt="Okan Nodenaysteen 1" data-cap="Okan Nodenaysteen 1"><figcaption>Okan Nodenaysteen 1</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/Okanisme_A_1.jpg" alt="Okanisme A 1" data-cap="Okanisme A 1"><figcaption>Okanisme A 1</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/Okanisme_A_10.jpg" alt="Okanisme A 10" data-cap="Okanisme A 10"><figcaption>Okanisme A 10</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/Okanisme_A_100.jpg" alt="Okanisme A 100" data-cap="Okanisme A 100"><figcaption>Okanisme A 100</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/Okanisme_A_101.jpg" alt="Okanisme A 101" data-cap="Okanisme A 101"><figcaption>Okanisme A 101</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/okan-is-me/Okanisme_A_102.jpg" alt="Okanisme A 102" data-cap="Okanisme A 102"><figcaption>Okanisme A 102</figcaption></figure></div></div></div></section>
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
-<img src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg" alt="Okan Mentens">
-<div class="in"><div class="dn-eyebrow">About the artist</div><h3 class="dn-h2">Okan Mentens</h3>
-<p style="margin:12px 0 20px">Okan Mentens photographs in black and white what most people overlook: the aesthetics of everyday and even decidedly ugly places — a traffic sign, a paving stone, the water swirling down a train toilet. Who, what, where and when are irrelevant; what remains is the pure experience…</p>
-<a class="dn-btn" href="../kunstenaar/okan-mentens.html">View artist →</a></div></div></div></section>
+<img src="/_assets/images/expo/okan-is-me/OKAN-foto-Sonny-4.jpg" alt="Okan Mentes">
+<div class="in"><div class="dn-eyebrow">About the artist</div><h3 class="dn-h2">Okan Mentes</h3>
+<p style="margin:12px 0 20px">Okan Mentes photographs in black and white what most people overlook: the aesthetics of everyday and even decidedly ugly places — a traffic sign, a paving stone, the water swirling down a train toilet. Who, what, where and when are irrelevant; what remains is the pure experience…</p>
+<a class="dn-btn" href="../kunstenaar/okan-mentes.html">View artist →</a></div></div></div></section>
+<section style="padding:0 0 70px"><div class="dn-wrap"><nav style="display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:26px"><a href="who-is-your-god.html" style="max-width:46%;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">← Previous</span>Who is your God, Where is She (15.03.25 – 13.04.25)</a><a href="vestiges.html" style="max-width:46%;text-align:right;margin-left:auto;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">Next →</span>Vestiges (05.09.25 – 28.09.25)</a></nav></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

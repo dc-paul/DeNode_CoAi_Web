@@ -24,7 +24,7 @@
   --paper:#f4f1ea;      /* warm bone — hoofdachtergrond */
   --paper2:#eae5da;     /* iets dieper papier — secties, beeldvlakken */
   --white:#ffffff;
-  --muted:#8a8477;      /* labels, secundaire tekst */
+  --muted:#6f6a5e;      /* labels, secundaire tekst — verdiept voor leesbaarheid/contrast op bone (WCAG AA, 10 jul 2026) */
   --line:#d8d2c6;       /* hairlines, randen */
   --accent:#a23b2d;     /* oxide-rood — SPAARZAAM: eyebrows, links, tags, active, hover */
   --accent-dark:#872f23;/* hover op accent-vlakken */
@@ -47,6 +47,8 @@ html{scroll-behavior:smooth;}
 body{background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.55;-webkit-font-smoothing:antialiased;}
 img{max-width:100%;display:block;}
 a{color:inherit;}
+/* toetsenbord-focus zichtbaar (a11y, 10 jul 2026) — hover had wel, focus niet */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.dn-btn:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
 .dn-wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter);}
 
 /* Dev-only lint/mockup-ribbon (weglaten in productie) */

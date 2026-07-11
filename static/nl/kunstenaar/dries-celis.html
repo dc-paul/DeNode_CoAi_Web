@@ -1,10 +1,10 @@
 <!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dries Celis — DeNode Foundation</title>
 <meta name="robots" content="noindex, nofollow"><!-- testfase icp.denode.be — weghalen bij echte go-live (Paul 6 jul 2026) -->
-<meta name="description" content="Dries Celis documenteert de tentoonstellingen van DeNode in beeld en film — onder meer de zaalzichten van [Vestiges](../expo/vestiges.md) en de film bij [Bij De Meesters](../expo/bij-de-meesters.md).">
+<meta name="description" content="Dries Celis documenteert de tentoonstellingen van DeNode in beeld en film — onder meer de zaalzichten van [Vestiges](../expo/vestiges.md) en de film bij [Bij De Meesters](../expo/bij-de-meesters.md). ">
 <meta property="og:title" content="Dries Celis — DeNode Foundation">
-<meta property="og:description" content="Dries Celis documenteert de tentoonstellingen van DeNode in beeld en film — onder meer de zaalzichten van [Vestiges](../expo/vestiges.md) en de film bij [Bij De Meesters](../expo/bij-de-meesters.md).">
-<meta property="og:image" content="https://icp.denode.be/_assets/images/expo/vestiges/Vestiges_DC_2.jpg">
+<meta property="og:description" content="Dries Celis documenteert de tentoonstellingen van DeNode in beeld en film — onder meer de zaalzichten van [Vestiges](../expo/vestiges.md) en de film bij [Bij De Meesters](../expo/bij-de-meesters.md). ">
+<meta property="og:image" content="https://icp.denode.be/_assets/images/kunstenaar/dries-celis/portret-dries-celis.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://icp.denode.be/nl/kunstenaar/dries-celis.html">
 <meta property="og:site_name" content="DeNode Foundation">
@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -143,15 +154,18 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="../over.html#medewerkers">Medewerkers</a> / Dries Celis</div></div>
 
-<section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/expo/vestiges/Vestiges_DC_2.jpg" alt="Dries Celis"></div>
+<section class="dn-hero"><div class="dn-hero__img"><img src="/_assets/images/kunstenaar/dries-celis/portret-dries-celis.jpg" style="object-position:50% 22%" alt="Dries Celis"></div>
 <div class="dn-hero__txt"><div class="dn-eyebrow">Medewerker</div><h1 class="dn-h1" style="font-size:clamp(36px,5vw,64px)">Dries Celis</h1>
-<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">fotograaf &amp; videomaker</div>
-<p class="dn-lead" style="font-size:19px">Dries Celis documenteert de tentoonstellingen van DeNode in beeld en film — onder meer de zaalzichten van <a href="../expo/vestiges.html">Vestiges</a> en de film bij <a href="../expo/bij-de-meesters.html">Bij De Meesters</a>.</p></div></section>
-
+<div class="dn-serif-it" style="font-size:20px;margin:8px 0 18px">fotograaf &amp; videomaker — Taube Films</div>
+<p class="dn-lead" style="font-size:19px">Dries Celis documenteert de tentoonstellingen van DeNode in beeld en film — onder meer de zaalzichten van <a href="../expo/vestiges.html">Vestiges</a> en de film bij <a href="../expo/bij-de-meesters.html">Bij De Meesters</a>. Hij werkt onder de naam <strong>Taube Films</strong>, zijn eigen productiehuis.</p></div></section>
+<section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
+<p>Taube is Duits voor duif. De naam verwijst naar de postduif, die eeuwenlang berichten overbracht: kleine rolletjes papier, vaak met levensbelangrijke informatie, vastgemaakt aan de poten van de vogel. Taube Films draagt die erfenis verder — als eigentijdse postduif brengt het verhalen via video rechtstreeks naar hun publiek.</p></div>
+<dl class="dn-dl"><dt>Extern</dt><dd><a href="https://www.taube-films.com" target="_blank" rel="noopener">Taube Films</a></dd></dl></div></div></section>
 
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Werk</h2></div>
 <div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_2.jpg" alt="Zaalzicht Vestiges — Foto: Dries Celis"><figcaption>Zaalzicht Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_9.jpg" alt="Zaalzicht Vestiges — Foto: Dries Celis"><figcaption>Zaalzicht Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_20.jpg" alt="Zaalzicht Vestiges — Foto: Dries Celis"><figcaption>Zaalzicht Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_308.jpg" alt="Chantal Pollier en Guillaume Van Moerkercke — Vestiges — Foto: Dries Celis"><figcaption>Chantal Pollier en Guillaume Van Moerkercke — Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_27.jpg" alt="Vestiges — Foto: Dries Celis"><figcaption>Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_312.jpg" alt="Vestiges — Foto: Dries Celis"><figcaption>Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_336.jpg" alt="Vestiges — Foto: Dries Celis"><figcaption>Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_4.jpg" alt="Vestiges — Foto: Dries Celis"><figcaption>Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vestiges/Vestiges_DC_69.jpg" alt="Vestiges — Foto: Dries Celis"><figcaption>Vestiges <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/hilde-van-canneyt/Vestiges_DC_322.jpg" alt="hilde van canneyt — Foto: Dries Celis"><figcaption>hilde van canneyt <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/hilde-van-canneyt/Vestiges_DC_329.jpg" alt="hilde van canneyt — Foto: Dries Celis"><figcaption>hilde van canneyt <span class="dn-credit">— Foto: Dries Celis</span></figcaption></figure></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-film.mp4"></video><figcaption>Bij De Meesters — film: Dries Celis</figcaption></figure></div></section>
+
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

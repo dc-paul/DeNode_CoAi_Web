@@ -48,6 +48,11 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
 .dn-expokop2 .dn-expokop img{max-height:56vh;}
 @media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
 /* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
 .dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
 /* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
@@ -59,7 +64,7 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__by{margin-top:14px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
-.dn-prose{max-width:70ch;font-size:16.5px;color:#26251f;}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
 .dn-prose ul{margin:0 0 1.15em 1.2em;}
 .dn-prose a{color:var(--accent);}
@@ -107,6 +112,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
@@ -149,12 +160,13 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p class="dn-lead" style="font-size:19px">John Robinson (Worcester, UK) studied Fine Art at Falmouth College of Arts, where he was mentored by the painter Robert Lenkiewicz, developing an early engagement with the chromatic potential of grey and an enduring interest in occult literature.</p></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols"><div class="dn-prose">
 <p>Awarded the Richard Ford Scholarship by the Royal Academy of Arts, Robinson spent a formative summer in residence at the Museo del Prado before remaining in Madrid for a decade, interrupted by an MA at Central Saint Martins, London. His work is held in collections including the Stedelijk Museum Amsterdam, the Wellcome Collection, the British Council Collection, the Focus-Abengoa Foundation (Seville), and the Coldwell Banker Collection.</p><p>Robinson's practice centres on the self-portrait as a problem of disguise, and as a contemporary inflection of lineages associated with Velázquez, Goya, and Rembrandt. Each painting originates in performances that are not published but translated into oil. The artist describes the works as "equal parts art history, part performance, and part humiliation culture".</p><p>At DeNode, Robinson presented the solo exhibition <a href="../expo/people-ruin-paintings.html">People Ruin Paintings</a> (14 February – 28 April 2026), opened with a series of performances during the <a href="../event/vernissage-john-robinson.html">vernissage</a>.</p></div>
-<dl class="dn-dl"><dt>Texts</dt><dd><a href="../artikel/about-the-hermit.html">About the hermit deep within us</a> — <a href="../kunstenaar/freddy-decreus.html">Em. Prof. <a href="../kunstenaar/freddy-decreus.html">Freddy Decreus</a></a><br><a href="../artikel/john-robinson.html">John Robinson</a> — Stichting DeNode, <a href="../over.html#hanna-ouaziz">Hanna Ouaziz</a></dd></dl></div></div></section>
+<dl class="dn-dl"><dt>Texts</dt><dd><a href="../artikel/about-the-hermit.html">About the hermit deep within us</a> — <a href="../kunstenaar/freddy-decreus.html">Em. Prof. <a href="../kunstenaar/freddy-decreus.html">Freddy Decreus</a></a><br><a href="../artikel/john-robinson.html">John Robinson</a> — Stichting DeNode, <a href="../over.html#hanna-ouaziz">Hanna Ouaziz</a></dd><dt>Newsletter</dt><dd><a href="../nieuwsbrief/2026-01-people-ruin-paintings.html">Nieuwe expo: 'People Ruin Paintings' — John Robinson (UK)</a> <span style="color:var(--muted)">(29.01.26)</span><br><a href="../nieuwsbrief/2026-02-vernissage-john-robinson.html">Vernissage vrijdag 13 februari — John Robinson</a> <span style="color:var(--muted)">(12.02.26)</span><br><a href="../../nl/nieuwsbrief/2026-03-boekvoorstelling-performance.html">Boekvoorstelling 21/3 — performance 25/3</a> <span style="color:var(--muted)">(18.03.26)</span><br><a href="../../nl/nieuwsbrief/2026-03-performance-verplaatst.html">Performance 25/3 verplaatst naar 25/4</a> <span style="color:var(--muted)">(24.03.26)</span><br><a href="../../nl/nieuwsbrief/2026-04-finissage-john-robinson.html">John Robinson — finissage-performances 25 april</a> <span style="color:var(--muted)">(15.04.26)</span></dd></dl></div></div></section>
 <section class="dn-band"><div class="dn-wrap"><h2 class="dn-h3" style="color:#fff;margin-bottom:20px">At DeNode</h2>
 <ul class="dn-rowlist"><li><a href="../expo/people-ruin-paintings.html"><span class="d">14.02.26 – 28.04.26</span><span class="t">People Ruin Paintings</span><span style="margin-left:auto">→</span></a></li></ul></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-head"><h2 class="dn-h2">Work</h2></div>
-<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/images/blog-john-robinson.webp" alt="John Robinson"><figcaption>John Robinson</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/john-robinson/tub17.jpg" alt="tub17"><figcaption>tub17</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/john-robinson/tub21.jpg" alt="tub21"><figcaption>tub21</figcaption></figure></div></div></section>
+<div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/collectie/john-robinson-triumph-of-death.jpg" alt="The Triumph of Death (for Phil Robinson 1951-2021), 2021 — oil on canvas, 160 × 200 cm"><figcaption>The Triumph of Death (for Phil Robinson 1951-2021), 2021 — oil on canvas, 160 × 200 cm</figcaption></figure><figure><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_White_or_all_gacked_up_.webp" alt=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_2945.webp" alt=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_Courbet-Modern_Hermit.webp" alt=""></figure><figure><img loading="lazy" src="/_assets/images/artikel/john-robinson/260122_John_Robinson_f_lower_head.webp" alt=""></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/john-robinson/tub17.jpg" alt="From the Tub series"><figcaption>From the Tub series</figcaption></figure><figure><img loading="lazy" src="/_assets/images/kunstenaar/john-robinson/tub21.jpg" alt="From the Tub series"><figcaption>From the Tub series</figcaption></figure></div></div></section>
 
+<section style="padding:0 0 70px"><div class="dn-wrap"><nav style="display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding-top:26px"><a href="jari-rijckaert.html" style="max-width:46%;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">← Previous</span>Jari Rijckaert</a><a href="shervine-sheikh-rezaei.html" style="max-width:46%;text-align:right;margin-left:auto;text-decoration:none"><span class="dn-eyebrow" style="display:block;margin-bottom:6px">Next →</span>Shervin/e Sheikh Rezaei</a></nav></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
