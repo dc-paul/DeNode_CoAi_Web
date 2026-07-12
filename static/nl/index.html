@@ -120,18 +120,18 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 /* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
 .dn-grid--team{grid-template-columns:repeat(2,1fr);}
 @media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
-/* beeldserie met identiek bijschrift (dn-gal--serie): egale 3:2-tegels, beeld volledig zichtbaar, geen caption-herhaling (Paul 10 jul 2026) */
+/* beeldserie met identiek bijschrift (dn-gal--serie): natuurlijke verhoudingen met hoogte-plafond — geen 3:2-letterbox meer (Paul 11 jul 2026: lange smalle werken zoals Ines Claus werden 'gepropt'), geen caption-herhaling */
 .dn-gal--serie{align-items:start;row-gap:18px;}
 /* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
 .dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
 .dn-gal--serie figure{margin:0;}
-.dn-gal--serie img{aspect-ratio:3/2;width:100%;object-fit:contain;background:var(--paper2);display:block;}
+.dn-gal--serie img{width:auto;max-width:100%;height:auto;max-height:70vh;object-fit:unset;display:block;margin:0 auto;}
 /* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
 /* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
    anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
 .dn-gal{grid-template-columns:repeat(2,minmax(0,1fr));}
 .dn-gal figure{min-width:0;}
-.dn-gal img{max-width:100%;height:auto;object-fit:unset;}
+.dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
 .dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
 @media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
@@ -170,6 +170,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-eyebrow" style="margin-bottom:18px">Nu te zien · 15.05.26 – 26.07.26<span id="dn-dagen" style="color:var(--ink)"></span></div>
 <h1 class="dn-h1">Kashi Rupé — unfolded</h1>
 <div class="dn-serif-it" style="font-size:21px;margin:20px 0 24px"><a href="kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></div>
+<p style="font-weight:600;max-width:46ch;margin:0 0 18px">Tijdens de Gentse Feesten is de expo elke dag te bezoeken van 14u tot 17u — ook op zondag.</p>
 <p style="max-width:46ch;margin-bottom:26px">Stichting DeNode presenteert met trots Kashi Rupé - unfolded, een nieuwe tentoonstelling van de Belgische kunstenaar Nicolas Van Parys. Het werk vindt zijn oorsprong in de spirituele hitte van Varanasi, een stad die ademt op het snijvlak van leven en dood, tijdens een residentie in november 2025.</p>
 <a class="dn-btn" href="expo/kashi-rupe-unfolded.html">Bezoek de tentoonstelling</a></div>
 <div class="dn-hero__img"><img src="/_assets/images/site/blog-nicolas-van-parys.jpg" alt="Kashi Rupé — unfolded"><img src="/_assets/images/expo/kashi-rupe-unfolded/nicolasvanparys-flyer-verso.jpg" alt="Kashi Rupé — unfolded" class="dn-wissel" aria-hidden="true"></div></section>
@@ -192,7 +193,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </div></section><script>(function(){fetch('/assets/ig/feed.json').then(function(r){return r.json()}).then(function(j){var it=Array.isArray(j)?j:(j.posts||j.data||j.items||[]);it=it.slice(0,3);if(!it.length)return;var g=document.getElementById('dn-ig-grid'),s=document.getElementById('dn-ig-sectie');if(!g||!s)return;g.innerHTML=it.map(function(p){var img=p.img||p.local||p.image||p.thumbnail||p.media_url||p.thumbnail_url||'';if(img&&!/^https?:/.test(img))img=''+(img.charAt(0)==='/'?'':'/')+img;var link=p.permalink||p.link||'https://www.instagram.com/denode_foundation/';var cap=(p.caption||p.text||'').slice(0,120);return '<a class="dn-card" href="'+link+'" target="_blank" rel="noopener"><div class="thumb"><img loading="lazy" src="'+img+'" alt="DeNode Foundation"></div><div class="who" style="margin-top:10px"></div></a>';}).join('');[].slice.call(g.querySelectorAll('.who')).forEach(function(el,i){el.textContent=(it[i].caption||it[i].text||'').slice(0,120)});s.style.display='';}).catch(function(){});})();</script>
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Bezoek</h2><a href="bezoek.html">Route & uren →</a></div>
-<div class="dn-cols"><dl class="dn-dl"><dt>Adres</dt><dd>Galerie DeNode — nodenaysteen<br>Predikherenlei 4, 9000 Gent</dd><dt>Openingsuren</dt><dd>van donderdag t.e.m. zaterdag: 14u - 18u<br>zondag: 11u - 17u<br>of na afspraak: kristof@denode.be</dd></dl>
+<div class="dn-cols"><dl class="dn-dl"><dt>Adres</dt><dd>Galerie DeNode — nodenaysteen<br>Predikherenlei 4, 9000 Gent</dd><dt>Openingsuren</dt><dd>van donderdag t.e.m. zaterdag: 14u - 18u<br>zondag: 11u - 17u</dd></dl>
 <div class="dn-prose"><p class="dn-serif-it" style="font-size:21px">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</p></div></div>
 </div></section>
 
