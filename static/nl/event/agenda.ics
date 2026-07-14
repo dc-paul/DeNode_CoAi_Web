@@ -20,6 +20,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:become-a-fabulist-nl@denode.be
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20261016
+SUMMARY:Become a Fabulist — artist residency
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://icp.denode.be/nl/event/become-a-fabulist.html
+END:VEVENT
+BEGIN:VEVENT
 UID:bjorn-wandels-midexpo-nl@denode.be
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
