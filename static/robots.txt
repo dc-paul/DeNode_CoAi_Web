@@ -1,4 +1,3 @@
-# testfase icp.denode.be — bij go-live: Disallow weghalen, Sitemap-regel activeren
 User-agent: *
-Disallow: /
-# Sitemap: https://icp.denode.be/sitemap.xml
+Allow: /
+Sitemap: https://www.denode.be/sitemap.xml

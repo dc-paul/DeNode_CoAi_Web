@@ -25,7 +25,7 @@ DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20261016
 SUMMARY:Become a Fabulist — résidence d'artiste
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://icp.denode.be/fr/event/become-a-fabulist.html
+URL:https://www.denode.be/fr/event/become-a-fabulist.html
 END:VEVENT
 BEGIN:VEVENT
 UID:bjorn-wandels-midexpo-fr@denode.be
@@ -33,7 +33,7 @@ DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:Björn Wandels — booktalk
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://icp.denode.be/fr/event/bjorn-wandels-midexpo.html
+URL:https://www.denode.be/fr/event/bjorn-wandels-midexpo.html
 END:VEVENT
 BEGIN:VEVENT
 UID:cutting-reality-s1-fr@denode.be
@@ -42,7 +42,7 @@ DTEND;TZID=Europe/Brussels:20260715T170000
 RRULE:FREQ=DAILY;COUNT=3
 SUMMARY:Cutting Reality — Workshop 1
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://icp.denode.be/fr/event/cutting-reality.html
+URL:https://www.denode.be/fr/event/cutting-reality.html
 END:VEVENT
 BEGIN:VEVENT
 UID:cutting-reality-s2-fr@denode.be
@@ -51,6 +51,6 @@ DTEND;TZID=Europe/Brussels:20260722T170000
 RRULE:FREQ=DAILY;COUNT=3
 SUMMARY:Cutting Reality — Workshop 2
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://icp.denode.be/fr/event/cutting-reality.html
+URL:https://www.denode.be/fr/event/cutting-reality.html
 END:VEVENT
 END:VCALENDAR
