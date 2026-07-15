@@ -61,15 +61,19 @@ jobs:
           git add static/assets/ig
           if git diff --staged --quiet; then
             echo "Geen wijzigingen in de feed."
+            echo "FEED_CHANGED=0" >> $GITHUB_ENV
           else
             git commit -m "chore: refresh Instagram feed [skip ci]"
             git push
+            echo "FEED_CHANGED=1" >> $GITHUB_ENV
           fi
 
       - name: Install Dependencies
+        if: env.FEED_CHANGED == '1'
         run: npm ci
 
       - name: Deploy to Juno (production)
+        if: env.FEED_CHANGED == '1'
         uses: junobuild/juno-action@main
         with:
           args: hosting deploy
