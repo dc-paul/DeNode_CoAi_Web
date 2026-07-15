@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf dist && cp -R static dist",
+    "build": "rsync -a --delete static/ dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
