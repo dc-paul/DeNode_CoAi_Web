@@ -8,6 +8,7 @@ export default defineConfig({
     },
     hosting: {
       source: "dist",
+      precompress: false,
       predeploy: ["npm run build"],
     },
   },
