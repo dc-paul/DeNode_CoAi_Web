@@ -16,18 +16,6 @@ export default defineConfig({
       // EXACTE paden (geen globs): wildcard-redirects falen op ICP response-certificatie (503, vastgesteld 15 jul 2026).
       // Bron: vault "juno-redirects (oud denode.be -> nieuw).json". Activeren met: juno config apply
       redirects: [
-        {"source":"/nl/vestiges-lp.html","location":"/nl/shop/vestiges-lp.html","code":301},
-        {"source":"/nl/vestiges-lp","location":"/nl/shop/vestiges-lp.html","code":301},
-        {"source":"/en/vestiges-lp.html","location":"/en/shop/vestiges-lp.html","code":301},
-        {"source":"/en/vestiges-lp","location":"/en/shop/vestiges-lp.html","code":301},
-        {"source":"/fr/vestiges-lp.html","location":"/fr/shop/vestiges-lp.html","code":301},
-        {"source":"/fr/vestiges-lp","location":"/fr/shop/vestiges-lp.html","code":301},
-        {"source":"/shop/kat-bove-give-me-a-sketchbook-to-live-in-132","location":"/nl/shop/kat-bove.html","code":301},
-        {"source":"/shop/kat-bove-give-me-a-sketchbook-to-live-in-132/","location":"/nl/shop/kat-bove.html","code":301},
-        {"source":"/en/shop/kat-bove-give-me-a-sketchbook-to-live-in-132","location":"/en/shop/kat-bove.html","code":301},
-        {"source":"/en/shop/kat-bove-give-me-a-sketchbook-to-live-in-132/","location":"/en/shop/kat-bove.html","code":301},
-        {"source":"/fr/shop/kat-bove-give-me-a-sketchbook-to-live-in-132","location":"/fr/shop/kat-bove.html","code":301},
-        {"source":"/fr/shop/kat-bove-give-me-a-sketchbook-to-live-in-132/","location":"/fr/shop/kat-bove.html","code":301},
         { source: "/blog/papers-9/the-church-of-kat-bove-313", location: "/nl/artikel/the-church-of-kat-bove.html", code: 301 },
         { source: "/blog/papers-9/the-church-of-kat-bove-313/", location: "/nl/artikel/the-church-of-kat-bove.html", code: 301 },
         { source: "/blog/papers-9/bjorn-wandels-314", location: "/nl/artikel/bjorn-wandels-paper.html", code: 301 },
