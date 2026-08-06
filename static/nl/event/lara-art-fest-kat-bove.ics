@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeNode Foundation//NL
+BEGIN:VEVENT
+UID:lara-art-fest-kat-bove-nl@denode.be
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260928
+SUMMARY:Kat Bové op LARA Art Fest\, Laarne
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/nl/event/lara-art-fest-kat-bove.html
+END:VEVENT
+END:VCALENDAR

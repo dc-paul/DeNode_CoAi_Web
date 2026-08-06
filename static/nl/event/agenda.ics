@@ -36,21 +36,11 @@ LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/bjorn-wandels-midexpo.html
 END:VEVENT
 BEGIN:VEVENT
-UID:cutting-reality-s1-nl@denode.be
-DTSTART;TZID=Europe/Brussels:20260715T133000
-DTEND;TZID=Europe/Brussels:20260715T170000
-RRULE:FREQ=DAILY;COUNT=3
-SUMMARY:Cutting Reality — Workshop 1
+UID:lara-art-fest-kat-bove-nl@denode.be
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260928
+SUMMARY:Kat Bové op LARA Art Fest\, Laarne
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://www.denode.be/nl/event/cutting-reality.html
-END:VEVENT
-BEGIN:VEVENT
-UID:cutting-reality-s2-nl@denode.be
-DTSTART;TZID=Europe/Brussels:20260722T133000
-DTEND;TZID=Europe/Brussels:20260722T170000
-RRULE:FREQ=DAILY;COUNT=3
-SUMMARY:Cutting Reality — Workshop 2
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://www.denode.be/nl/event/cutting-reality.html
+URL:https://www.denode.be/nl/event/lara-art-fest-kat-bove.html
 END:VEVENT
 END:VCALENDAR
