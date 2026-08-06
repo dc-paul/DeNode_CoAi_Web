@@ -24,7 +24,7 @@ UID:become-a-fabulist-en@denode.be
 DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20261016
 SUMMARY:Become a Fabulist — artist residency
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
 URL:https://www.denode.be/en/event/become-a-fabulist.html
 END:VEVENT
 BEGIN:VEVENT
@@ -36,11 +36,19 @@ LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/en/event/bjorn-wandels-midexpo.html
 END:VEVENT
 BEGIN:VEVENT
-UID:lara-art-fest-kat-bove-en@denode.be
+UID:lara-art-fest-kat-bove-s1-en@denode.be
 DTSTART;VALUE=DATE:20260829
-DTEND;VALUE=DATE:20260928
-SUMMARY:Kat Bové at LARA Art Fest\, Laarne
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+DTEND;VALUE=DATE:20260831
+SUMMARY:Kat Bové at the Suys pharmacy — LARA Art Fest
+LOCATION:Apotheek Suys\, Dorpsstraat 29\, 9270 Laarne
+URL:https://www.denode.be/en/event/lara-art-fest-kat-bove.html
+END:VEVENT
+BEGIN:VEVENT
+UID:lara-art-fest-kat-bove-s2-en@denode.be
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260907
+SUMMARY:Kat Bové at the Suys pharmacy — LARA Art Fest
+LOCATION:Apotheek Suys\, Dorpsstraat 29\, 9270 Laarne
 URL:https://www.denode.be/en/event/lara-art-fest-kat-bove.html
 END:VEVENT
 END:VCALENDAR

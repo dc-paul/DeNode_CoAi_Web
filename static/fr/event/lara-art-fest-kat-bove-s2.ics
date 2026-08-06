@@ -19,14 +19,6 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:lara-art-fest-kat-bove-s1-fr@denode.be
-DTSTART;VALUE=DATE:20260829
-DTEND;VALUE=DATE:20260831
-SUMMARY:Kat Bové à la pharmacie Suys — LARA Art Fest
-LOCATION:Pharmacie Suys\, Dorpsstraat 29\, 9270 Laarne
-URL:https://www.denode.be/fr/event/lara-art-fest-kat-bove.html
-END:VEVENT
-BEGIN:VEVENT
 UID:lara-art-fest-kat-bove-s2-fr@denode.be
 DTSTART;VALUE=DATE:20260905
 DTEND;VALUE=DATE:20260907

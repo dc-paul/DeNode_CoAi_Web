@@ -1,12 +1,37 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//DeNode Foundation//NL
+BEGIN:VTIMEZONE
+TZID:Europe/Brussels
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
-UID:lara-art-fest-kat-bove-en@denode.be
+UID:lara-art-fest-kat-bove-s1-en@denode.be
 DTSTART;VALUE=DATE:20260829
-DTEND;VALUE=DATE:20260928
-SUMMARY:Kat Bové at LARA Art Fest\, Laarne
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+DTEND;VALUE=DATE:20260831
+SUMMARY:Kat Bové at the Suys pharmacy — LARA Art Fest
+LOCATION:Apotheek Suys\, Dorpsstraat 29\, 9270 Laarne
+URL:https://www.denode.be/en/event/lara-art-fest-kat-bove.html
+END:VEVENT
+BEGIN:VEVENT
+UID:lara-art-fest-kat-bove-s2-en@denode.be
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260907
+SUMMARY:Kat Bové at the Suys pharmacy — LARA Art Fest
+LOCATION:Apotheek Suys\, Dorpsstraat 29\, 9270 Laarne
 URL:https://www.denode.be/en/event/lara-art-fest-kat-bove.html
 END:VEVENT
 END:VCALENDAR
