@@ -183,6 +183,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd>—</dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 <dt>Event</dt><dd><a href="../event/finissage-kat-bove.html">Kat Bové — Finissage</a></dd>
+<dt>Publication</dt><dd><a href="../shop/kat-bove.html">Kat Bové — Give me a sketchbook to live in</a> <span style="color:var(--muted)">— € 35 · + € 7 shipping</span></dd>
 <dt>Newsletter</dt><dd><a href="../nieuwsbrief/2025-02-nieuwsbrief-12.html">Last chance 'At the Masters'</a> <span style="color:var(--muted)">(17.02.25)</span><br><a href="../nieuwsbrief/2025-03-nieuwsbrief-13-kat-bove.html">Expo Kat Bové — Who is your God, Where is She?</a> <span style="color:var(--muted)">(12.03.25)</span><br><a href="../nieuwsbrief/2025-04-meet-the-artist.html">Meet the artist — Kat Bové</a> <span style="color:var(--muted)">(06.04.25)</span><br><a href="../nieuwsbrief/2025-04-finissage-kat-bove.html">Last weekend Kat Bové — Finissage</a> <span style="color:var(--muted)">(24.04.25)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
@@ -193,6 +194,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="installation-views">Installation views</h2>
 <div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/15mrt2025_6621.jpg" alt="15mrt2025 6621 — Foto: Kobe Wens" data-cap="15mrt2025 6621 — Foto: Kobe Wens"><figcaption>15mrt2025 6621 <span class="dn-credit">— Foto: Kobe Wens</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/15mrt2025_6670.jpg" alt="15mrt2025 6670 — Foto: Kobe Wens" data-cap="15mrt2025 6670 — Foto: Kobe Wens"><figcaption>15mrt2025 6670 <span class="dn-credit">— Foto: Kobe Wens</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/_74A9933.jpg" alt="74A9933" data-cap="74A9933"><figcaption>74A9933</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/_74A9938.jpg" alt="74A9938" data-cap="74A9938"><figcaption>74A9938</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/who-is-your-god/j_74A0138.jpg" alt="j 74A0138" data-cap="j 74A0138"><figcaption>j 74A0138</figcaption></figure></div></div></div></section>
+
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/kunstenaar/kat-bove/portret.jpg" style="object-position:center 18%" alt="Kat Bové">
@@ -210,7 +212,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

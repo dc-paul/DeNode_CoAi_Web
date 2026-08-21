@@ -13,6 +13,7 @@
     "postinstall": "npm run postinstall:copy-auth"
   },
   "dependencies": {
+    "@dfinity/identity": "^3.4.3",
     "@junobuild/core": "^5.4.0",
     "@junobuild/functions": "^0.9.0",
     "react": "^19.2.1",

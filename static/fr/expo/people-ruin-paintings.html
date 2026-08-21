@@ -183,6 +183,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd><a href="../over.html#hanna-ouaziz">Hanna Ouaziz</a></dd>
 <dt>Lieu</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 <dt>Event</dt><dd><a href="../event/vernissage-john-robinson.html">Vernissage & exposition — John Robinson</a></dd><dt>Event</dt><dd><a href="../event/hemisphere-of-the-earth.html">John Robinson IV : the Hemisphere of the Earth</a></dd>
+<dt>Publication</dt><dd><a href="../publicatie/john-robinson-people-ruin-paintings.html">John Robinson — People Ruin Paintings</a> <span style="color:var(--muted)">— € 15 · + € 7 de frais d'envoi</span></dd>
 <dt>Newsletter</dt><dd><a href="../nieuwsbrief/2026-01-people-ruin-paintings.html">Nouvelle expo : 'People Ruin Paintings' — John Robinson (R.-U.)</a> <span style="color:var(--muted)">(29.01.26)</span><br><a href="../nieuwsbrief/2026-02-vernissage-john-robinson.html">Vernissage vendredi 13 février — John Robinson</a> <span style="color:var(--muted)">(12.02.26)</span><br><a href="../nieuwsbrief/2026-03-boekvoorstelling-performance.html">Lancement de livre 21/3 — performance 25/3</a> <span style="color:var(--muted)">(18.03.26)</span><br><a href="../nieuwsbrief/2026-03-performance-verplaatst.html">Performance 25/3 déplacée au 25/4</a> <span style="color:var(--muted)">(24.03.26)</span><br><a href="../nieuwsbrief/2026-04-finissage-john-robinson.html">John Robinson — performances de finissage 25 avril</a> <span style="color:var(--muted)">(15.04.26)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
@@ -205,6 +206,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="video">Vidéo</h2>
 <figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/jr-preparation-vernissage.mp4"></video><figcaption>Preparation before the vernissage — John Robinson</figcaption></figure></div></div></section>
 
+<section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-teaser">
+<img src="/_assets/images/publicatie/john-robinson-people-ruin-paintings/p-01.webp" alt="John Robinson — People Ruin Paintings" style="object-fit:contain">
+<div class="in"><div class="dn-eyebrow">Publication</div><h3 class="dn-h2">John Robinson — People Ruin Paintings</h3>
+<p style="margin:12px 0 20px">Catalogue de l'exposition, 14 février – 28 avril 2026</p>
+<a class="dn-btn" href="../publicatie/john-robinson-people-ruin-paintings.html">Feuilleter →</a></div></div></div></section>
+
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/kunstenaar/john-robinson/260122_John-Robinson_White-or-all-gacked-upa_.jpg" alt="John Robinson">
 <div class="in"><div class="dn-eyebrow">Sur l'artiste</div><h3 class="dn-h2">John Robinson</h3>
@@ -221,7 +228,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

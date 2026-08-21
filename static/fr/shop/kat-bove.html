@@ -3,7 +3,7 @@
 <meta name="description" content="Près de 300 pages de lutte intérieure, peuplées d'anges et de démons. *Give me a sketchbook to live in* (Stichting DeNode, 2026) rassemble plus de vingt ans de travail de Kat Bové en tirage limité. Le">
 <meta property="og:title" content="Kat Bové — Give me a sketchbook to live in — DeNode Foundation">
 <meta property="og:description" content="Près de 300 pages de lutte intérieure, peuplées d'anges et de démons. *Give me a sketchbook to live in* (Stichting DeNode, 2026) rassemble plus de vingt ans de travail de Kat Bové en tirage limité. Le">
-<meta property="og:image" content="https://www.denode.be/_assets/images/site/kat-bove-book.webp">
+<meta property="og:image" content="https://www.denode.be/_assets/images/shop/cover-kat-bove-sketchbook.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.denode.be/fr/shop/kat-bove.html">
 <meta property="og:site_name" content="DeNode Foundation">
@@ -166,13 +166,14 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="../shop.html">Boutique</a> / Kat Bové — Give me a sketchbook to live in</div></div>
 
 <section class="dn-section"><div class="dn-wrap">
-<figure class="dn-fig" style="max-width:560px;margin:0 0 34px"><img src="/_assets/images/site/kat-bove-book.webp" alt="Kat Bové — Give me a sketchbook to live in" style="object-fit:contain"></figure>
+<figure class="dn-fig" style="max-width:560px;margin:0 0 34px"><img src="/_assets/images/shop/cover-kat-bove-sketchbook.webp" alt="Kat Bové — Give me a sketchbook to live in" style="object-fit:contain"></figure>
 <h1 class="dn-h2" style="margin-bottom:10px"><a href="../kunstenaar/kat-bove.html">Kat Bové</a> — Give me a sketchbook to live in</h1>
 <p style="margin:0 0 8px"><a href="../kunstenaar/kat-bove.html">Kat Bové →</a></p>
 <div class="dn-eyebrow" style="color:var(--accent);margin:10px 0 26px">€ 35 · + € 7 d'envoi</div>
 <div class="dn-prose"><p>Près de 300 pages de lutte intérieure, peuplées d'anges et de démons. <em>Give me a sketchbook to live in</em> (Stichting DeNode, 2026) rassemble plus de vingt ans de travail de Kat Bové en tirage limité. Le livre s'ouvre sur l'avertissement « DON'T READ A WORD IN THIS DIARY, OTHERWISE KARMA WILL FIND YOU » et se clôt sur « FUCK DE MENSEN ».</p>
 <p>L'œuvre de Bové oscille entre dessin et peinture, entre la façade joyeuse et la vulnérabilité qui s'y cache. En 2024, elle a remporté le prix PUSH à la Picturale de Renaix ; au printemps 2025, elle a montré son travail à nodenaysteen avec l'exposition personnelle <a href="../expo/who-is-your-god.html">Who is your God, Where is She</a> (15 mars – 13 avril 2025, finissage le 27 avril).</p>
 <p>Retrait possible pendant les heures d'ouverture à <a href="../bezoek.html">nodenaysteen</a> ; envoi : € 7 de frais. Paiement sur le compte BE35 7350 7162 0037 de la Stichting DeNode, en mentionnant le titre.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Commande%20%E2%80%94%20Kat%20Bov%C3%A9%20%E2%80%94%20Give%20me%20a%20sketchbook%20to%20live%20in&body=Ch%C3%A8re%20%C3%A9quipe%20DeNode%2C%0A%0AJe%20commande%20volontiers%20%3A%20Kat%20Bov%C3%A9%20%E2%80%94%20Give%20me%20a%20sketchbook%20to%20live%20in%0A%0ANom%20%3A%0AE-mail%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0ARetrait%20ou%20envoi%20%28%2B%20adresse%29%20%3A%0A%0APrix%20%3A%20%E2%82%AC%2035%20%2B%20%E2%82%AC%207%20de%20frais%20d%27envoi%20en%20cas%20d%27envoi.%0AJe%20fais%20le%20paiement%20sur%20le%20compte%20BE35%207350%207162%200037%20de%20la%20Stichting%20DeNode%2C%20en%20mentionnant%20le%20titre.%0A%0AMerci%20%21">Commander par e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Année</dt><dd>2026</dd><dt>Éditeur</dt><dd>Fondation DeNode</dd><dt>Expo</dt><dd><a href="../expo/who-is-your-god.html">Who is your God, Where is She</a></dd><dt>Artiste</dt><dd><a href="../kunstenaar/kat-bove.html">Kat Bové</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Retour à la boutique</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

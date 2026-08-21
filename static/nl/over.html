@@ -183,7 +183,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
@@ -217,5 +217,5 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="nieuwsbrief.html">Nieuwsbrief</a></li>
 <li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
 <li><a href="cookie.html">Cookie</a></li></ul></div>
-</div><div class="fine"><span>© 2021-2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
 </body></html>

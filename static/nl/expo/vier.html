@@ -183,6 +183,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd>Damien Degrave &amp; Kristof Vander Cruyssen</dd>
 <dt>Locatie</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
+
 <dt>Nieuwsbrief</dt><dd><a href="../nieuwsbrief/2024-10-expo-vier.html">Expo 'VIER' van Caroline Baek in de Nodenaysteen</a> <span style="color:var(--muted)">(10.10.24)</span><br><a href="../nieuwsbrief/2024-11-laatste-dagen-vier.html">Laatste IV dagen 'VIER'</a> <span style="color:var(--muted)">(13.11.24)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
@@ -193,6 +194,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="zaalzichten">Zaalzichten</h2>
 <div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/vier/Caroline_Baek_7940.jpg" alt="Caroline Baek 7940 — Foto: Steven Decroos" data-cap="Caroline Baek 7940 — Foto: Steven Decroos"><figcaption>Caroline Baek 7940 <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vier/Caroline_Baek_7941.jpg" alt="Caroline Baek 7941 — Foto: Steven Decroos" data-cap="Caroline Baek 7941 — Foto: Steven Decroos"><figcaption>Caroline Baek 7941 <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vier/Caroline_Baek_7942.jpg" alt="Caroline Baek 7942 — Foto: Steven Decroos" data-cap="Caroline Baek 7942 — Foto: Steven Decroos"><figcaption>Caroline Baek 7942 <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vier/Caroline_Baek_7943.jpg" alt="Caroline Baek 7943 — Foto: Steven Decroos" data-cap="Caroline Baek 7943 — Foto: Steven Decroos"><figcaption>Caroline Baek 7943 <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vier/Caroline_Baek_7946.jpg" alt="Caroline Baek 7946 — Foto: Steven Decroos" data-cap="Caroline Baek 7946 — Foto: Steven Decroos"><figcaption>Caroline Baek 7946 <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/vier/Caroline_Baek_7947.jpg" alt="Caroline Baek 7947 — Foto: Steven Decroos" data-cap="Caroline Baek 7947 — Foto: Steven Decroos"><figcaption>Caroline Baek 7947 <span class="dn-credit">— Foto: Steven Decroos</span></figcaption></figure></div></div></div></section>
+
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/kunstenaar/caroline-baek/portret-caroline-baek.jpg" alt="Caroline Baek">
@@ -210,7 +212,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

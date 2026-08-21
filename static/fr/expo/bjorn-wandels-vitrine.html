@@ -184,6 +184,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Lieu</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
 
+
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Textes</h2></div>
@@ -193,6 +194,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="video">Vidéo</h2>
 <figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bjorn-red-lozenge-loop.mp4"></video><figcaption>red lozenge passing (boucle) — la projection en vitrine</figcaption></figure></div></div></section>
+
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/kunstenaar/bjorn-wandels/portret_Bjorn.jpg" style="object-fit:contain" alt="Björn Wandels">
@@ -210,7 +212,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

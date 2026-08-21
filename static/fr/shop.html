@@ -167,7 +167,13 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <section class="dn-section"><div class="dn-wrap"><h1 class="dn-h2" style="margin-bottom:16px">Shop</h1>
 <p class="dn-lead" style="font-size:18px;max-width:64ch;margin-bottom:40px">Retrait possible pendant les heures d'ouverture à <a href="bezoek.html">nodenaysteen</a> ; envoi au tarif indiqué.</p>
-<div class="dn-grid"><a class="dn-card" href="shop/kat-bove.html"><div class="thumb"><img loading="lazy" src="/_assets/images/site/kat-bove-book.webp" alt="Kat Bové — Give me a sketchbook to live in" style="object-fit:contain"></div>
+<div class="dn-grid"><a class="dn-card" href="publicatie/john-robinson-people-ruin-paintings.html"><div class="thumb"><img loading="lazy" src="/_assets/images/publicatie/john-robinson-people-ruin-paintings/t-01.webp" alt="John Robinson — People Ruin Paintings" style="object-fit:contain"></div>
+<h3>John Robinson — People Ruin Paintings</h3><div class="dates" style="color:var(--accent);margin:6px 0">€ 15 · + € 7 de frais d'envoi</div>
+<p style="font-size:14px;line-height:1.5;margin:6px 0 12px">Catalogue de l'exposition personnelle <em>People Ruin Paintings</em> (2026). 44 pages, en anglais — à feuilleter intégralement sur le site, PDF gratuit.</p>
+<span class="dn-btn dn-btn--ghost" style="font-size:11px;padding:10px 14px">Plus d'infos →</span></a><a class="dn-card" href="shop/lee-ranaldo-again-across-the-river.html"><div class="thumb"><img loading="lazy" src="/_assets/images/shop/cover-lee-ranaldo-again-across-the-river.webp" alt="Lee Ranaldo — (again) across the river" style="object-fit:contain"></div>
+<h3>Lee Ranaldo — (again) across the river</h3><div class="dates" style="color:var(--accent);margin:6px 0">€ 15 · + € 7 de frais d'envoi</div>
+<p style="font-size:14px;line-height:1.5;margin:6px 0 12px">Le livret accompagnant l'exposition de Lee Ranaldo (2025). Un certain nombre d'exemplaires du tirage sont signés par l'artiste.</p>
+<span class="dn-btn dn-btn--ghost" style="font-size:11px;padding:10px 14px">Plus d'infos →</span></a><a class="dn-card" href="shop/kat-bove.html"><div class="thumb"><img loading="lazy" src="/_assets/images/shop/cover-kat-bove-sketchbook.webp" alt="Kat Bové — Give me a sketchbook to live in" style="object-fit:contain"></div>
 <h3>Kat Bové — Give me a sketchbook to live in</h3><div class="dates" style="color:var(--accent);margin:6px 0">€ 35 · + € 7 d'envoi</div>
 <p style="font-size:14px;line-height:1.5;margin:6px 0 12px">Près de 300 pages de lutte intérieure, peuplées d'anges et de démons. Tirage limité.</p>
 <span class="dn-btn dn-btn--ghost" style="font-size:11px;padding:10px 14px">Plus d'infos →</span></a><a class="dn-card" href="shop/nicolas-van-parys-kashi-rupe.html"><div class="thumb"><img loading="lazy" src="/_assets/images/site/blog-nicolas-van-parys.jpg" alt="Nicolas Van Parys — publication accompagnant Kashi Rupé — unfolded" style="object-fit:contain"></div>
@@ -196,7 +202,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

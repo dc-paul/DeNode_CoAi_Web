@@ -173,6 +173,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p>Gesprekken met kunstenaars, door Hilde Van Canneyt. Al meer dan vijftien jaar interviewt ze beeldende kunstenaars uit België en Nederland — het gesprek als werkvorm, doorlopend gepubliceerd op <a href="https://www.hildevancanneyt.be" target="_blank" rel="noopener">hildevancanneyt.be</a>.</p>
 <p>Voor DeNode cureerde ze onder meer de groepstentoonstelling <a href="../expo/exponentieel.html">(expo)nentieel</a> en is ze een vaste stem in het programma; haar interviews met de DeNode-kunstenaars maakt ze in opdracht van DeNode.</p>
 <p>Afhalen kan tijdens de openingsuren in <a href="../bezoek.html">nodenaysteen</a>; opsturen tegen € 7 verzendkost. Betaling op rekening BE35 7350 7162 0037 van Stichting DeNode, met vermelding van de titel.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Bestelling%20%E2%80%94%20Hilde%20Van%20Canneyt%20%E2%80%94%20Hilde%20vraagt&body=Beste%20DeNode-team%2C%0A%0AIk%20bestel%20graag%3A%20Hilde%20Van%20Canneyt%20%E2%80%94%20Hilde%20vraagt%0A%0ANaam%3A%0AE-mail%3A%0ATelefoon%3A%0AAfhalen%20of%20opsturen%20%28%2B%20adres%29%3A%0A%0APrijs%3A%20%E2%82%AC%2025%20%2B%20%E2%82%AC%207%20verzendkost%20bij%20opsturen.%0AIk%20doe%20de%20betaling%20op%20rekening%20BE35%207350%207162%200037%20van%20Stichting%20DeNode%2C%20met%20vermelding%20van%20de%20titel.%0A%0ADank%21">Bestel per e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Jaar</dt><dd>2013</dd><dt>Uitgever</dt><dd>MER Books</dd><dt>Kunstenaar</dt><dd><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Terug naar de shop</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

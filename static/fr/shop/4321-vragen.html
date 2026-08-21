@@ -173,6 +173,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p>Le grand œuvre : <em>4321 vragen aan 123 kunstenaars</em> (4321 questions à 123 artistes) rassemble le corpus d'entretiens de Hilde Van Canneyt — des conversations avec des artistes plasticiens, de Michaël Borremans à Rinus Van de Velde.</p>
 <p>Des centaines d'entretiens issus de plus de quinze ans de pratique, réunis en un seul volume.</p>
 <p>Retrait possible pendant les heures d'ouverture à <a href="../bezoek.html">nodenaysteen</a> ; envoi : € 7 de frais. Paiement sur le compte BE35 7350 7162 0037 de la Stichting DeNode, en mentionnant le titre.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Commande%20%E2%80%94%20Hilde%20Van%20Canneyt%20%E2%80%94%204321%20vragen%20aan%20123%20kunstenaars&body=Ch%C3%A8re%20%C3%A9quipe%20DeNode%2C%0A%0AJe%20commande%20volontiers%20%3A%20Hilde%20Van%20Canneyt%20%E2%80%94%204321%20vragen%20aan%20123%20kunstenaars%0A%0ANom%20%3A%0AE-mail%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0ARetrait%20ou%20envoi%20%28%2B%20adresse%29%20%3A%0A%0APrix%20%3A%20%E2%82%AC%2035%20%2B%20%E2%82%AC%207%20de%20frais%20d%27envoi%20en%20cas%20d%27envoi.%0AJe%20fais%20le%20paiement%20sur%20le%20compte%20BE35%207350%207162%200037%20de%20la%20Stichting%20DeNode%2C%20en%20mentionnant%20le%20titre.%0A%0AMerci%20%21">Commander par e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Année</dt><dd>2020</dd><dt>Éditeur</dt><dd>MER Books · coproduction avec la Fondation DeNode</dd><dt>Artiste</dt><dd><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Retour à la boutique</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

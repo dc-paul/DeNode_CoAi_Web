@@ -145,6 +145,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .dn-gal figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
 .dn-gal figcaption b{color:var(--ink);font-weight:600;}
 
+/* ---------- 10b. BLADERAAR — publicatie-spreads (21 aug 2026) ----------
+   Contactblad van een uitgave: elk blad op zijn eigen breedte, nooit croppen.
+   Erft .dn-gal (de lightbox pikt .dn-gal img op) en overschrijft raster + beeld,
+   zodat bladeren dezelfde viewer gebruikt als alle andere beelden op de site. */
+.dn-gal.dn-blader{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:28px 22px;align-items:end;}
+@media(max-width:720px){.dn-gal.dn-blader{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}}
+.dn-gal.dn-blader img{height:auto;object-fit:contain;background:var(--white);cursor:zoom-in;outline:1px solid transparent;outline-offset:3px;transition:outline-color .15s;}
+.dn-gal.dn-blader img:hover{outline-color:var(--accent);}
+.dn-gal.dn-blader figcaption{margin-top:7px;}
+
+/* publicatie-cover in de paginakop: volledig zichtbaar, géén lightbox-doelwit */
+.dn-pubcover{margin:0;}
+.dn-pubcover img{width:100%;height:auto;border:1px solid var(--line);background:var(--white);}
+
 /* ---------- 11. DEFINITIELIJST (praktisch / meta) ---------- */
 .dn-dl{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;font-size:15px;}
 .dn-dl dt{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px;}

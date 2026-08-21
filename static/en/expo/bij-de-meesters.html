@@ -183,6 +183,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd><a href="../kunstenaar/damien-degrave.html">Damien Degrave</a></dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
+
 <dt>Newsletter</dt><dd><a href="../nieuwsbrief/2025-01-bij-de-meesters.html">New exhibition: At The Masters — Gipi and Bezverkhni Van Gent</a> <span style="color:var(--muted)">(16.01.25)</span><br><a href="../nieuwsbrief/2025-02-nieuwsbrief-12.html">Last chance 'At the Masters'</a> <span style="color:var(--muted)">(17.02.25)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
@@ -196,6 +197,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="video">Video</h2>
 <figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-film.mp4"></video><figcaption>Bij De Meesters — film: Dries Celis</figcaption></figure>
 <figure class="dn-video"><video controls preload="metadata" src="/_assets/videos/bij-de-meesters-micha-plays.mp4"></video><figcaption>Mikhail Bezverkhny speelt tijdens de opening (25 januari 2025)</figcaption></figure></div></div></section>
+
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/expo/bij-de-meesters/Gipi_Legt_Uit---1.jpg" alt="Gipi (Pierre Gillis)">
@@ -218,7 +220,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

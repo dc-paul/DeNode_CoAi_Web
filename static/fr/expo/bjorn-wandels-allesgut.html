@@ -183,12 +183,14 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <dt>Lieu</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 <dt>Event</dt><dd><a href="../event/bjorn-wandels-midexpo.html">Björn Wandels — booktalk</a></dd>
+<dt>Publication</dt><dd><a href="../shop/allesgut.html">Björn Wandels — allesgut</a> <span style="color:var(--muted)">— prix et parution à venir</span></dd>
 
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Textes</h2></div>
 <dl class="dn-dl"><dt>entretien</dt><dd><a href="../artikel/interview-bjorn-wandels.html">Entretien avec Björn Wandels</a> — <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></dd></dl>
 </div></section>
+
 
 
 
@@ -209,7 +211,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

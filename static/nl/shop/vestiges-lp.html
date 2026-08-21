@@ -175,6 +175,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p>De compositie ontstond uit de <a href="../event/vestiges-performance.html">cello-performance</a> die Kessels op 20 september 2025 tussen de werken bracht.</p>
 <p>De LP verschijnt binnenkort — prijs en verschijningsdatum volgen. Voorbestellen kan nu al per e-mail.</p>
 <p>Afhalen kan tijdens de openingsuren in <a href="../bezoek.html">nodenaysteen</a>; opsturen tegen € 7 verzendkost. Betaling op rekening BE35 7350 7162 0037 van Stichting DeNode, met vermelding van de titel.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Voorbestelling%20%E2%80%94%20Robrecht%20Kessels%20%E2%80%94%20Vestiges%20LP&body=Beste%20DeNode-team%2C%0A%0AIk%20bestel%20graag%3A%20Robrecht%20Kessels%20%E2%80%94%20Vestiges%20LP%0A%0ANaam%3A%0AE-mail%3A%0ATelefoon%3A%0AAfhalen%20of%20opsturen%20%28%2B%20adres%29%3A%0A%0APrijs%3A%20wordt%20nog%20meegedeeld%20%28voorbestelling%29%3B%20verzendkost%20%E2%82%AC%207%20bij%20opsturen.%0AIk%20doe%20de%20betaling%20op%20rekening%20BE35%207350%207162%200037%20van%20Stichting%20DeNode%2C%20met%20vermelding%20van%20de%20titel.%0A%0ADank%21">Voorbestelling per e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Jaar</dt><dd>2026</dd><dt>Uitgever</dt><dd>Stichting DeNode</dd><dt>Expo</dt><dd><a href="../expo/vestiges.html">Vestiges</a></dd><dt>Kunstenaar</dt><dd><a href="../kunstenaar/robrecht-kessels.html">Robrecht Kessels</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Terug naar de shop</a></p>
 </div></section>
 
@@ -187,7 +188,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

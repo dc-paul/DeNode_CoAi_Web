@@ -173,6 +173,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p><em>"allesgut is een boek en mogelijk een tentoonstelling, voor zover het tentoongesteld kan worden"</em>, zegt Björn Wandels. Het artistbook (MER Books) put uit een verzameling beeldmateriaal die Wandels gedurende lange tijd verzamelde, ordende en herordende. Het boek gaat niet over werken — het ís er een: in vorm en concept een autonoom werk.</p>
 <p>Het boek verschijnt bij de solotentoonstelling <a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> in nodenaysteen (11 september – 4 oktober 2026). Prijs en verschijningsdatum volgen — voorbestellen kan nu al per e-mail.</p>
 <p>Afhalen kan tijdens de openingsuren in <a href="../bezoek.html">nodenaysteen</a>; opsturen tegen € 7 verzendkost. Betaling op rekening BE35 7350 7162 0037 van Stichting DeNode, met vermelding van de titel.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Voorbestelling%20%E2%80%94%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut&body=Beste%20DeNode-team%2C%0A%0AIk%20bestel%20graag%3A%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut%0A%0ANaam%3A%0AE-mail%3A%0ATelefoon%3A%0AAfhalen%20of%20opsturen%20%28%2B%20adres%29%3A%0A%0APrijs%3A%20wordt%20nog%20meegedeeld%20%28voorbestelling%29%3B%20verzendkost%20%E2%82%AC%207%20bij%20opsturen.%0AIk%20doe%20de%20betaling%20op%20rekening%20BE35%207350%207162%200037%20van%20Stichting%20DeNode%2C%20met%20vermelding%20van%20de%20titel.%0A%0ADank%21">Voorbestelling per e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Jaar</dt><dd>2026</dd><dt>Uitgever</dt><dd>MER Books · coproductie Stichting DeNode</dd><dt>Expo</dt><dd><a href="../expo/bjorn-wandels-allesgut.html">allesgut</a></dd><dt>Kunstenaar</dt><dd><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Terug naar de shop</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

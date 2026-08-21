@@ -183,6 +183,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd><a href="../over.html#paul-de-canniere">Paul De Cannière</a></dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 
+
 <dt>Newsletter</dt><dd><a href="../nieuwsbrief/2023-10-uitnodiging-van-parys.html">Invitation to Expo Simon Van Parys' AI UNIVERSE — October 27 (until December 3)</a> <span style="color:var(--muted)">(21.10.23)</span><br><a href="../nieuwsbrief/2023-12-finissage-van-parys.html">Last days &amp; finissage — Expo Simon Van Parys' AI UNIVERSE</a> <span style="color:var(--muted)">(14.12.23)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
@@ -193,6 +194,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="installation-views">Installation views</h2>
 <div class="dn-gal dn-gal--3"><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/AI-Universe---LO.jpg" alt="AI Universe LO" data-cap="AI Universe LO"><figcaption>AI Universe LO</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---1.jpg" alt="SVP AI Universe NFTReeks 1" data-cap="SVP AI Universe NFTReeks 1"><figcaption>SVP AI Universe NFTReeks 1</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---2.jpg" alt="SVP AI Universe NFTReeks 2" data-cap="SVP AI Universe NFTReeks 2"><figcaption>SVP AI Universe NFTReeks 2</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---3.jpg" alt="SVP AI Universe NFTReeks 3" data-cap="SVP AI Universe NFTReeks 3"><figcaption>SVP AI Universe NFTReeks 3</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---4.jpg" alt="SVP AI Universe NFTReeks 4" data-cap="SVP AI Universe NFTReeks 4"><figcaption>SVP AI Universe NFTReeks 4</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---5.jpg" alt="SVP AI Universe NFTReeks 5" data-cap="SVP AI Universe NFTReeks 5"><figcaption>SVP AI Universe NFTReeks 5</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---6.jpg" alt="SVP AI Universe NFTReeks 6" data-cap="SVP AI Universe NFTReeks 6"><figcaption>SVP AI Universe NFTReeks 6</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---7.jpg" alt="SVP AI Universe NFTReeks 7" data-cap="SVP AI Universe NFTReeks 7"><figcaption>SVP AI Universe NFTReeks 7</figcaption></figure></div></div></div></section>
+
 
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/expo/ai-universe/SVP_AI_Universe_NFTReeks---2.jpg" alt="Simon Van Parys">
@@ -210,7 +212,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

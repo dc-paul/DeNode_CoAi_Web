@@ -3,7 +3,7 @@
 <meta name="description" content="Bijna 300 pagina's innerlijke strijd, bevolkt door engelen en demonen. *Give me a sketchbook to live in* (Stichting DeNode, 2026) bundelt meer dan twintig jaar werk van Kat Bové in een beperkte oplage">
 <meta property="og:title" content="Kat Bové — Give me a sketchbook to live in — DeNode Foundation">
 <meta property="og:description" content="Bijna 300 pagina's innerlijke strijd, bevolkt door engelen en demonen. *Give me a sketchbook to live in* (Stichting DeNode, 2026) bundelt meer dan twintig jaar werk van Kat Bové in een beperkte oplage">
-<meta property="og:image" content="https://www.denode.be/_assets/images/site/kat-bove-book.webp">
+<meta property="og:image" content="https://www.denode.be/_assets/images/shop/cover-kat-bove-sketchbook.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.denode.be/nl/shop/kat-bove.html">
 <meta property="og:site_name" content="DeNode Foundation">
@@ -166,13 +166,14 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="../shop.html">Shop</a> / Kat Bové — Give me a sketchbook to live in</div></div>
 
 <section class="dn-section"><div class="dn-wrap">
-<figure class="dn-fig" style="max-width:560px;margin:0 0 34px"><img src="/_assets/images/site/kat-bove-book.webp" alt="Kat Bové — Give me a sketchbook to live in" style="object-fit:contain"></figure>
+<figure class="dn-fig" style="max-width:560px;margin:0 0 34px"><img src="/_assets/images/shop/cover-kat-bove-sketchbook.webp" alt="Kat Bové — Give me a sketchbook to live in" style="object-fit:contain"></figure>
 <h1 class="dn-h2" style="margin-bottom:10px"><a href="../kunstenaar/kat-bove.html">Kat Bové</a> — Give me a sketchbook to live in</h1>
 <p style="margin:0 0 8px"><a href="../kunstenaar/kat-bove.html">Kat Bové →</a></p>
 <div class="dn-eyebrow" style="color:var(--accent);margin:10px 0 26px">€ 35 · + € 7 verzending</div>
 <div class="dn-prose"><p>Bijna 300 pagina's innerlijke strijd, bevolkt door engelen en demonen. <em>Give me a sketchbook to live in</em> (Stichting DeNode, 2026) bundelt meer dan twintig jaar werk van Kat Bové in een beperkte oplage. Het boek opent met de waarschuwing 'DON'T READ A WORD IN THIS DIARY, OTHERWISE KARMA WILL FIND YOU' en eindigt met 'FUCK DE MENSEN'.</p>
 <p>Bové's werk balanceert tussen tekenen en schilderen, tussen de vrolijke façade en de kwetsbaarheid daarachter. In 2024 won ze de PUSH-prijs op Picturale in Ronse; in het voorjaar van 2025 toonde ze haar werk in nodenaysteen met de solotentoonstelling <a href="../expo/who-is-your-god.html">Who is your God, Where is She</a> (15 maart – 13 april 2025, finissage 27 april).</p>
 <p>Afhalen kan tijdens de openingsuren in <a href="../bezoek.html">nodenaysteen</a>; opsturen tegen € 7 verzendkost. Betaling op rekening BE35 7350 7162 0037 van Stichting DeNode, met vermelding van de titel.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Bestelling%20%E2%80%94%20Kat%20Bov%C3%A9%20%E2%80%94%20Give%20me%20a%20sketchbook%20to%20live%20in&body=Beste%20DeNode-team%2C%0A%0AIk%20bestel%20graag%3A%20Kat%20Bov%C3%A9%20%E2%80%94%20Give%20me%20a%20sketchbook%20to%20live%20in%0A%0ANaam%3A%0AE-mail%3A%0ATelefoon%3A%0AAfhalen%20of%20opsturen%20%28%2B%20adres%29%3A%0A%0APrijs%3A%20%E2%82%AC%2035%20%2B%20%E2%82%AC%207%20verzendkost%20bij%20opsturen.%0AIk%20doe%20de%20betaling%20op%20rekening%20BE35%207350%207162%200037%20van%20Stichting%20DeNode%2C%20met%20vermelding%20van%20de%20titel.%0A%0ADank%21">Bestel per e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Jaar</dt><dd>2026</dd><dt>Uitgever</dt><dd>Stichting DeNode</dd><dt>Expo</dt><dd><a href="../expo/who-is-your-god.html">Who is your God, Where is She</a></dd><dt>Kunstenaar</dt><dd><a href="../kunstenaar/kat-bove.html">Kat Bové</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Terug naar de shop</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

@@ -183,6 +183,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Curator</dt><dd><a href="../kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></dd>
 <dt>Location</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 <dt>Event</dt><dd><a href="../event/kashi-rupe-vernissage.html">Opening — Kashi Rupé, unfolded</a></dd><dt>Event</dt><dd><a href="../event/cutting-reality.html">Cutting Reality Workshop</a></dd>
+<dt>Publication</dt><dd><a href="../shop/nicolas-van-parys-kashi-rupe.html">Nicolas Van Parys — publication accompanying Kashi Rupé — unfolded</a> <span style="color:var(--muted)">— € 13 · + € 7 shipping</span></dd>
 <dt>Newsletter</dt><dd><a href="../nieuwsbrief/2026-05-vernissage-kashi-rupe.html">Nicolas Van Parys — vernissage 'Kashi Rupé - unfolded' Friday, May 15 at 6 PM</a> <span style="color:var(--muted)">(02.05.26)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
@@ -201,6 +202,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <h2 class="dn-h3" id="flyer">Flyer</h2>
 <div class="dn-gal"><figure><img loading="lazy" src="/_assets/images/site/blog-nicolas-van-parys.jpg" alt="Flyer — recto" data-cap="Flyer — recto"><figcaption>Flyer — recto</figcaption></figure><figure><img loading="lazy" src="/_assets/images/expo/kashi-rupe-unfolded/nicolasvanparys-flyer-verso.jpg" alt="Flyer — verso" data-cap="Flyer — verso"><figcaption>Flyer — verso</figcaption></figure></div></div></div></section>
 
+
 <section class="dn-section" style="background:var(--paper2)"><div class="dn-wrap"><div class="dn-teaser">
 <img src="/_assets/images/interview/interview-nicolas-van-parys/nicolas-van-parys-27.jpg" style="object-fit:contain" alt="Nicolas Van Parys">
 <div class="in"><div class="dn-eyebrow">About the artist</div><h3 class="dn-h2">Nicolas Van Parys</h3>
@@ -217,7 +219,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

@@ -173,6 +173,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p>Le livret accompagnant l'exposition <a href="../expo/kashi-rupe-unfolded.html">Kashi Rupé — unfolded</a> (15 mai – 26 juillet 2026, curateur <a href="../kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a>). À Varanasi (Kashi), sur les rives du Gange, Nicolas Van Parys a trouvé le germe de ce nouveau travail : des collages qui se fondent en formes picturales lyriques.</p>
 <p>La publication est disponible en édition néerlandaise et anglaise (pas d'édition française) — précisez votre choix lors de la commande.</p>
 <p>Retrait possible pendant les heures d'ouverture à <a href="../bezoek.html">nodenaysteen</a> ; envoi : € 7 de frais. Paiement sur le compte BE35 7350 7162 0037 de la Stichting DeNode, en mentionnant le titre.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Commande%20%E2%80%94%20Nicolas%20Van%20Parys%20%E2%80%94%20publication%20accompagnant%20Kashi%20Rup%C3%A9%20%E2%80%94%20unfolded&body=Ch%C3%A8re%20%C3%A9quipe%20DeNode%2C%0A%0AJe%20commande%20volontiers%20%3A%20Nicolas%20Van%20Parys%20%E2%80%94%20publication%20accompagnant%20Kashi%20Rup%C3%A9%20%E2%80%94%20unfolded%0ALangue%20%28NL%20ou%20EN%29%20%3A%0A%0ANom%20%3A%0AE-mail%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0ARetrait%20ou%20envoi%20%28%2B%20adresse%29%20%3A%0A%0APrix%20%3A%20%E2%82%AC%2013%20%2B%20%E2%82%AC%207%20de%20frais%20d%27envoi%20en%20cas%20d%27envoi.%0AJe%20fais%20le%20paiement%20sur%20le%20compte%20BE35%207350%207162%200037%20de%20la%20Stichting%20DeNode%2C%20en%20mentionnant%20le%20titre.%0A%0AMerci%20%21">Commander par e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Année</dt><dd>2026</dd><dt>Éditeur</dt><dd>Fondation DeNode</dd><dt>Expo</dt><dd><a href="../expo/kashi-rupe-unfolded.html">Kashi Rupé — unfolded</a></dd><dt>Artiste</dt><dd><a href="../kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Retour à la boutique</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}

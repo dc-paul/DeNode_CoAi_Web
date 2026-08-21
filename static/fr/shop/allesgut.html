@@ -173,6 +173,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p><em>« allesgut est un livre et peut-être une exposition, pour autant qu'il puisse être exposé »</em>, dit Björn Wandels. Le livre d'artiste (MER Books) puise dans une collection d'images que Wandels a longuement rassemblées, ordonnées et réordonnées. Le livre ne porte pas sur des œuvres — il en est une : une œuvre autonome par sa forme et son concept.</p>
 <p>Le livre paraît à l'occasion de l'exposition personnelle <a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> à nodenaysteen (11 septembre – 4 octobre 2026). Prix et parution à venir — la précommande par e-mail est déjà possible.</p>
 <p>Retrait possible pendant les heures d'ouverture à <a href="../bezoek.html">nodenaysteen</a> ; envoi : € 7 de frais. Paiement sur le compte BE35 7350 7162 0037 de la Stichting DeNode, en mentionnant le titre.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Pr%C3%A9commande%20%E2%80%94%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut&body=Ch%C3%A8re%20%C3%A9quipe%20DeNode%2C%0A%0AJe%20commande%20volontiers%20%3A%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut%0A%0ANom%20%3A%0AE-mail%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0ARetrait%20ou%20envoi%20%28%2B%20adresse%29%20%3A%0A%0APrix%20%3A%20%C3%A0%20communiquer%20%28pr%C3%A9commande%29%20%3B%20%E2%82%AC%207%20de%20frais%20d%27envoi%20en%20cas%20d%27envoi.%0AJe%20fais%20le%20paiement%20sur%20le%20compte%20BE35%207350%207162%200037%20de%20la%20Stichting%20DeNode%2C%20en%20mentionnant%20le%20titre.%0A%0AMerci%20%21">Précommande par e-mail</a></p>
+<dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Année</dt><dd>2026</dd><dt>Éditeur</dt><dd>MER Books · coproduction avec la Fondation DeNode</dd><dt>Expo</dt><dd><a href="../expo/bjorn-wandels-allesgut.html">allesgut</a></dd><dt>Artiste</dt><dd><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Retour à la boutique</a></p>
 </div></section>
 
@@ -185,7 +186,7 @@ var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn
   .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
 if(!beelden.length)return;
 var idx=0;
-function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.currentSrc||el.src;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
   var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
   cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
 function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
