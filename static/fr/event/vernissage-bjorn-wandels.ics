@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeNode Foundation//NL
+BEGIN:VEVENT
+UID:vernissage-bjorn-wandels-fr@denode.be
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:Vernissage — allesgut
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/vernissage-bjorn-wandels.html
+END:VEVENT
+END:VCALENDAR

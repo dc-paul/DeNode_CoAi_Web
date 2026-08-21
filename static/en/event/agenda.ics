@@ -99,4 +99,12 @@ SUMMARY:Kat Bové at the Suys pharmacy — LARA Art Fest
 LOCATION:Apotheek Suys\, Dorpsstraat 29\, 9270 Laarne
 URL:https://www.denode.be/en/event/lara-art-fest-kat-bove.html
 END:VEVENT
+BEGIN:VEVENT
+UID:vernissage-bjorn-wandels-en@denode.be
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:Opening — allesgut
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/en/event/vernissage-bjorn-wandels.html
+END:VEVENT
 END:VCALENDAR
