@@ -1,47 +1,47 @@
 {
-  "updated": "2026-08-27T08:17:48.437Z",
+  "updated": "2026-08-28T00:47:49.335Z",
   "posts": [
     {
       "img": "/assets/ig/1.jpg",
+      "permalink": "https://www.instagram.com/p/DcjE-wGgJg5/",
+      "caption": "@whiteduckfinearts @denode_foundation @kat_bove Laarne Art",
+      "type": "CAROUSEL_ALBUM",
+      "timestamp": "2026-08-27T15:10:40+0000"
+    },
+    {
+      "img": "/assets/ig/2.jpg",
+      "permalink": "https://www.instagram.com/p/Dci28LsgKca/",
+      "caption": "Memory is not an archive Before language, sound and video entered his work, Björn Wandels spent years photographing something much closer: …",
+      "type": "CAROUSEL_ALBUM",
+      "timestamp": "2026-08-27T13:07:59+0000"
+    },
+    {
+      "img": "/assets/ig/3.jpg",
       "permalink": "https://www.instagram.com/p/DcOsSgjgB7O/",
       "caption": "Björn Wandels began with photography and self-portraiture. But over time, something shifted. Rather than simply using photography to repres…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-08-19T17:10:06+0000"
     },
     {
-      "img": "/assets/ig/2.jpg",
+      "img": "/assets/ig/4.jpg",
       "permalink": "https://www.instagram.com/p/DbnOOr5ALfL/",
       "caption": "“allesgut is a book and may be an exhibition, as it can be exhibited.” @bjorn_wandels With allesgut, Björn Wandels unfolds years of collect…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-08-04T09:17:03+0000"
     },
     {
-      "img": "/assets/ig/3.jpg",
+      "img": "/assets/ig/5.jpg",
       "permalink": "https://www.instagram.com/p/DauyPWKAMBz/",
       "caption": "Last places available! What if the city became your sketchbook? Inspired by Nicolas Van Parys’ exhibition Kashi Rupé – Unfolding, Cutting R…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-07-13T11:15:00+0000"
     },
     {
-      "img": "/assets/ig/4.jpg",
+      "img": "/assets/ig/6.jpg",
       "permalink": "https://www.instagram.com/p/DagGe5tEZ_L/",
       "caption": "🇬🇧 One sentence. Three languages. Countless interpretations. Because every language tells a slightly different story. In the Fabulisterie…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-07-07T18:23:17+0000"
-    },
-    {
-      "img": "/assets/ig/5.jpg",
-      "permalink": "https://www.instagram.com/p/Daf4ZBlsf8w/",
-      "caption": "✨ OPEN CALL ✨ Together, we will create the scenography and transform the entire DeNode Foundation into the Fabulisterie. Enter the Fabulist…",
-      "type": "IMAGE",
-      "timestamp": "2026-07-07T16:24:14+0000"
-    },
-    {
-      "img": "/assets/ig/6.jpg",
-      "permalink": "https://www.instagram.com/p/DafIIX8xzLf/",
-      "caption": "HUMANIMALITY Every fable begins with a word. Sometimes, that word becomes a creature. Monsieur Térez has spent more than twenty years creat…",
-      "type": "IMAGE",
-      "timestamp": "2026-07-07T09:41:40+0000"
     }
   ]
 }
