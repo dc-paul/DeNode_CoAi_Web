@@ -20,18 +20,50 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:become-a-fabulist-fr@denode.be
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20261016
-SUMMARY:Become a Fabulist — résidence d'artiste
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+UID:become-a-fabulist-s1-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20260919T140000
+DTEND;TZID=Europe/Brussels:20260919T173000
+SUMMARY:Become a Fabulist — Happy Faces
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/become-a-fabulist.html
 END:VEVENT
 BEGIN:VEVENT
-UID:bjorn-wandels-midexpo-fr@denode.be
-DTSTART;VALUE=DATE:20260920
-DTEND;VALUE=DATE:20260921
-SUMMARY:Björn Wandels — booktalk
+UID:become-a-fabulist-s2-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T173000
+SUMMARY:Become a Fabulist — Smile Invasion
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/become-a-fabulist.html
+END:VEVENT
+BEGIN:VEVENT
+UID:become-a-fabulist-s3-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261003T140000
+DTEND;TZID=Europe/Brussels:20261003T173000
+SUMMARY:Become a Fabulist — Build a Humanimal
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/become-a-fabulist.html
+END:VEVENT
+BEGIN:VEVENT
+UID:become-a-fabulist-s4-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261007T140000
+DTEND;TZID=Europe/Brussels:20261007T173000
+SUMMARY:Become a Fabulist — Stage the Exhibition
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/become-a-fabulist.html
+END:VEVENT
+BEGIN:VEVENT
+UID:become-a-fabulist-s5-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261010T140000
+DTEND;TZID=Europe/Brussels:20261010T173000
+SUMMARY:Become a Fabulist — Invent New Fables
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/become-a-fabulist.html
+END:VEVENT
+BEGIN:VEVENT
+UID:bjorn-wandels-midexpo-s1-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20260920T110000
+DTEND;TZID=Europe/Brussels:20260920T130000
+SUMMARY:Booktalk — allesgut\, Björn Wandels
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/bjorn-wandels-midexpo.html
 END:VEVENT
@@ -100,10 +132,10 @@ LOCATION:Pharmacie Suys\, Dorpsstraat 29\, 9270 Laarne
 URL:https://www.denode.be/fr/event/lara-art-fest-kat-bove.html
 END:VEVENT
 BEGIN:VEVENT
-UID:vernissage-bjorn-wandels-fr@denode.be
-DTSTART;VALUE=DATE:20260911
-DTEND;VALUE=DATE:20260912
-SUMMARY:Vernissage — allesgut
+UID:vernissage-bjorn-wandels-s1-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20260911T180000
+DTEND;TZID=Europe/Brussels:20260911T210000
+SUMMARY:Vernissage — allesgut\, Björn Wandels
 LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/vernissage-bjorn-wandels.html
 END:VEVENT

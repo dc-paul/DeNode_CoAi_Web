@@ -62,6 +62,17 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
 .dn-band__by{margin-top:14px;}
 
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
+   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
+#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
+@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -169,9 +180,9 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-prose"><p>DeNode is meer dan tentoonstellingen. De stichting maakt mee, produceert en brengt mensen samen rond kunst — in workshops, gesprekken, publicatietrajecten en, binnenkort, residenties.</p>
 <h2 class="dn-h3" id="workshops-sessies">Workshops &amp; sessies</h2>
 <ul>
+<li><a href="event/become-a-fabulist.html">Become a Fabulist — vijf gratis workshops</a> — met <a href="kunstenaar/monsieur-terez.html">Monsieur Térez</a>: 19 &amp; 26 september, 3, 7 &amp; 10 oktober 2026, telkens 14u–17u30. Gratis, voor iedereen — jong en oud, geen artistieke ervaring nodig.</li>
 <li><a href="event/drawing-sessions.html">Modelstudie op donderdag</a> — herstart 24 september 2026; om de twee weken, 19u30–21u30. Reeks € 50 · losse sessie € 15.</li>
-<li><a href="event/cutting-reality.html">Cutting Reality Workshop</a> — juli 2026.</li>
-<li><a href="event/workshop-abstract-schilderen-kinderen.html">Workshop abstract schilderen voor kinderen</a> en <a href="event/workshop-abstract-schilderen-volwassenen.html">voor volwassenen</a> — archief.</li>
+<li>Archief: <a href="event/cutting-reality.html">Cutting Reality Workshop</a> (juli 2026), <a href="event/workshop-abstract-schilderen-kinderen.html">Workshop abstract schilderen voor kinderen</a> en <a href="event/workshop-abstract-schilderen-volwassenen.html">voor volwassenen</a>.</li>
 </ul>
 <h2 class="dn-h3" id="gesprekken-events">Gesprekken &amp; events</h2>
 <p>Booktalks, artist talks, vernissages en finissages — de volledige kalender staat op de <a href="event/index.html">events-pagina</a>, met een <a href="event/agenda.ics">abonneerbare agenda</a>. Eerstvolgend: de <a href="event/vernissage-bjorn-wandels.html">vernissage van allesgut</a> op vrijdag 11 september 2026, gevolgd door de <a href="event/bjorn-wandels-midexpo.html">booktalk</a> van zondag 20 september.</p>
@@ -181,8 +192,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p>Van 15 september tot 15 oktober 2026 is de Franse kunstenaar <a href="kunstenaar/monsieur-terez.html">Monsieur Térez</a> in residentie bij DeNode: tijdens <a href="event/become-a-fabulist.html">Become a Fabulist</a> wordt de Foundation een open atelier, als aanloop naar zijn solotentoonstelling <a href="expo/humanimality.html">Humanimality</a> (16 oktober – 20 december 2026).</p>
 <h2 class="dn-h3" id="open-calls">Open calls</h2>
 <ul>
-<li><strong><a href="event/become-a-fabulist.html">Become a Fabulist</a></strong> — word deelnemer aan de residentie van <a href="kunstenaar/monsieur-terez.html">Monsieur Térez</a> (15 september – 15 oktober 2026). Scholen, gezinnen, vrijwilligers en nieuwsgierige bezoekers: iedereen welkom, geen artistieke ervaring nodig.</li>
-<li><strong><a href="event/cutting-reality.html">Cutting Reality</a></strong> — workshops met <a href="kunstenaar/nicolas-van-parys.html">Nicolas Van Parys</a>, juli 2026.</li>
+<li><strong><a href="event/become-a-fabulist.html">Become a Fabulist</a></strong> — vijf gratis workshops met Monsieur Térez tijdens zijn residentie (15 september – 15 oktober 2026): 19 &amp; 26 september, 3, 7 &amp; 10 oktober, telkens 14u–17u30. Scholen, gezinnen, vrijwilligers en nieuwsgierige bezoekers: iedereen welkom, geen artistieke ervaring nodig. <a href="https://docs.google.com/forms/d/e/1FAIpQLSe26Czgx1F39_xhAtzCQZcSyWIX4zon_sXef70Kg0MB72ch9g/viewform" target="_blank" rel="noopener">Schrijf je in via het formulier</a>.</li>
 </ul>
 <p>Nieuwe open calls verneem je als eerste via de <a href="nieuwsbrief.html">nieuwsbrief</a>.</p></div></div></section>
 

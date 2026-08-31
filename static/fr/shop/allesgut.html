@@ -1,8 +1,8 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Björn Wandels — allesgut — DeNode Foundation</title>
-<meta name="description" content="Le livre paraît à l'occasion de l'exposition personnelle [allesgut](../expo/bjorn-wandels-allesgut.md) à nodenaysteen (11 septembre – 4 octobre 2026) et peut être commandé dès maintenant.">
+<meta name="description" content="Le livre paraît à l'occasion de l'exposition personnelle [allesgut](../expo/bjorn-wandels-allesgut.md) à nodenaysteen (11 septembre – 4 octobre 2026) et est en vente dès maintenant.">
 <meta property="og:title" content="Björn Wandels — allesgut — DeNode Foundation">
-<meta property="og:description" content="Le livre paraît à l'occasion de l'exposition personnelle [allesgut](../expo/bjorn-wandels-allesgut.md) à nodenaysteen (11 septembre – 4 octobre 2026) et peut être commandé dès maintenant.">
+<meta property="og:description" content="Le livre paraît à l'occasion de l'exposition personnelle [allesgut](../expo/bjorn-wandels-allesgut.md) à nodenaysteen (11 septembre – 4 octobre 2026) et est en vente dès maintenant.">
 <meta property="og:image" content="https://www.denode.be/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.denode.be/fr/shop/allesgut.html">
@@ -61,6 +61,17 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band{padding:28px 0;}
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
 .dn-band__by{margin-top:14px;}
+
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
+   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
+#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
+@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
@@ -171,8 +182,9 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p style="margin:0 0 8px"><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels →</a></p>
 <div class="dn-eyebrow" style="color:var(--accent);margin:10px 0 26px">€ 38 · + € 7 de frais d'envoi</div>
 <div class="dn-prose"><p><em>« allesgut est un livre et peut-être une exposition, pour autant qu'il puisse être exposé »</em>, dit Björn Wandels. Le livre d'artiste (MER Books) puise dans une collection d'images que Wandels a longuement rassemblées, ordonnées et réordonnées. Le livre ne porte pas sur des œuvres — il en est une : une œuvre autonome par sa forme et son concept.</p>
-<p>Le livre paraît à l'occasion de l'exposition personnelle <a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> à nodenaysteen (11 septembre – 4 octobre 2026) et peut être commandé dès maintenant.</p>
-<p>À retirer lors du <a href="../event/vernissage-bjorn-wandels.html">vernissage du 11 septembre</a>, ou ensuite pendant les heures d'ouverture à <a href="../bezoek.html">nodenaysteen</a> ; envoi : € 7 de frais. Paiement sur le compte BE35 7350 7162 0037 de la Stichting DeNode, en mentionnant le titre.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Commande%20%E2%80%94%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut&body=Bonjour%20l%27%C3%A9quipe%20DeNode%2C%0A%0AJe%20souhaite%20commander%20%3A%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut%0A%0ANombre%20d%27exemplaires%20%3A%0ANom%20%3A%0AE-mail%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0A%C3%80%20retirer%20au%20vernissage%20du%2011%20septembre%20%2F%20%C3%A0%20retirer%20pendant%20les%20heures%20d%27ouverture%20%2F%20%C3%A0%20exp%C3%A9dier%20%C3%A0%20%28adresse%29%20%3A%20%20%28supprimez%20ce%20qui%20ne%20convient%20pas%29%0A%0APrix%20%3A%20%E2%82%AC%2038%20par%20exemplaire%2C%20%2B%20%E2%82%AC%207%20de%20frais%20d%27envoi.%0AJe%20paierai%20sur%20le%20compte%20BE35%207350%207162%200037%20de%20la%20Stichting%20DeNode%2C%20en%20mentionnant%20le%20titre.%0A%0AMerci%20%21">Commander par e-mail</a></p>
+<p>Le livre paraît à l'occasion de l'exposition personnelle <a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> à nodenaysteen (11 septembre – 4 octobre 2026) et est en vente dès maintenant.</p>
+<p>Commandez-le dès maintenant et choisissez : recevez le livre lors du <a href="../event/vernissage-bjorn-wandels.html">vernissage du 11 septembre</a>, venez le chercher ensuite pendant les heures d'ouverture à <a href="../bezoek.html">nodenaysteen</a>, ou nous vous l'envoyons plus tard (€ 7 de frais). Paiement sur le compte BE35 7350 7162 0037 de la Stichting DeNode, en mentionnant le titre.</p>
+<p>Vous avez payé les frais d'envoi mais vous passez quand même ? Nous les convertissons en jetons de boisson lors du vernissage.</p></div><p style="margin-top:34px"><a class="dn-btn" href="mailto:info@denode.be?subject=Commande%20%E2%80%94%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut&body=Bonjour%20l%27%C3%A9quipe%20DeNode%2C%0A%0AJe%20souhaite%20commander%20%3A%20Bj%C3%B6rn%20Wandels%20%E2%80%94%20allesgut%0A%0ANombre%20d%27exemplaires%20%3A%0ANom%20%3A%0AE-mail%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0A%C3%80%20retirer%20au%20vernissage%20du%2011%20septembre%20%2F%20%C3%A0%20retirer%20pendant%20les%20heures%20d%27ouverture%20%2F%20%C3%A0%20exp%C3%A9dier%20%C3%A0%20%28adresse%29%20%3A%20%20%28supprimez%20ce%20qui%20ne%20convient%20pas%29%0A%0APrix%20%3A%20%E2%82%AC%2038%20par%20exemplaire%2C%20%2B%20%E2%82%AC%207%20de%20frais%20d%27envoi.%0AJe%20paierai%20sur%20le%20compte%20BE35%207350%207162%200037%20de%20la%20Stichting%20DeNode%2C%20en%20mentionnant%20le%20titre.%0A%0AMerci%20%21">Commander par e-mail</a></p>
 <dl class="dn-dl" style="margin-top:44px;max-width:560px"><dt>Année</dt><dd>2026</dd><dt>Éditeur</dt><dd>MER Books · coproduction avec la Fondation DeNode</dd><dt>Expo</dt><dd><a href="../expo/bjorn-wandels-allesgut.html">allesgut</a></dd><dt>Artiste</dt><dd><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd></dl>
 <p style="margin-top:44px"><a href="../shop.html">← Retour à la boutique</a></p>
 </div></section>

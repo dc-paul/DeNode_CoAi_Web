@@ -62,6 +62,17 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
 .dn-band__by{margin-top:14px;}
 
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
+   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
+#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
+@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -175,7 +186,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <figure class="dn-expokop"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt="allesgut"></figure>
 </div></div></section>
 <section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
-<div class="dn-prose"><p class="dn-lead">“allesgut is een boek en mogelijk een tentoonstelling, voor zover het tentoongesteld kan worden”, zegt Björn Wandels (°1979, Gent).</p><p>Dat klinkt als een woordspel, maar het is de kern van het werk. allesgut put uit een verzameling beeldmateriaal die Wandels gedurende lange tijd verzamelde, ordende en herordende. Beelden worden voor hem altijd variaties op beelden, "mogelijke andere beelden", die hun oorsprong hebben in een afwezig gehouden fotografische afdruk.</p><p>Het boek gaat niet over werken, het is er een. allesgut is in vorm en concept een autonoom werk.</p><p>De tentoonstelling vouwt de logica van het boek open in de ruimte van de galerie. Het boek vraagt tijd, de tentoonstelling geeft er ruimte aan.</p><p>Na de vitrine-projecties van 2024, toen zijn videowerk maandenlang vanuit de etalage de straat in keek, is allesgut Wandels' eerste ruimtelijke solotentoonstelling bij DeNode.</p><p>allesgut verschijnt bij MER Books in coproductie met Stichting DeNode, in een oplage van 400 exemplaren. De scenografie van de tentoonstelling is in handen van Anja Hellebaut.</p><p>Op zondag 20 september 2026 vindt halverwege de tentoonstelling een booktalk plaats rond het artistbook.</p><p>Het artistbook is nu al te reserveren via de <a href="../shop.html">shop</a>.</p>
+<div class="dn-prose"><p class="dn-lead">“allesgut is een boek en mogelijk een tentoonstelling, voor zover het tentoongesteld kan worden”, zegt Björn Wandels (°1979, Gent).</p><p>Dat klinkt als een woordspel, maar het is de kern van het werk. allesgut put uit een verzameling beeldmateriaal die Wandels gedurende lange tijd verzamelde, ordende en herordende. Beelden worden voor hem altijd variaties op beelden, "mogelijke andere beelden", die hun oorsprong hebben in een afwezig gehouden fotografische afdruk.</p><p>Het boek gaat niet over werken, het is er een. allesgut is in vorm en concept een autonoom werk.</p><p>De tentoonstelling vouwt de logica van het boek open in de ruimte van de galerie. Het boek vraagt tijd, de tentoonstelling geeft er ruimte aan.</p><p>Na de vitrine-projecties van 2024, toen zijn videowerk maandenlang vanuit de etalage de straat in keek, is allesgut Wandels' eerste ruimtelijke solotentoonstelling bij DeNode.</p><p>allesgut verschijnt bij MER Books in coproductie met Stichting DeNode, in een oplage van 400 exemplaren. De scenografie van de tentoonstelling is in handen van Anja Hellebaut.</p><p>Op zondag 20 september 2026 vindt halverwege de tentoonstelling een booktalk plaats rond het artistbook.</p><p>Het artistbook is <a href="../shop/allesgut.html">vanaf nu te koop</a>: je krijgt het op de opening, je haalt het daarna af in de stichting, of we sturen het op tegen verzendkost.</p>
 </div>
 <dl class="dn-dl">
 <dt>Kunstenaar</dt><dd><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd>
@@ -184,7 +195,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <dt>Locatie</dt><dd>nodenaysteen, Predikherenlei 4, Gent</dd>
 <dt>Event</dt><dd><a href="../event/vernissage-bjorn-wandels.html">Vernissage — allesgut</a></dd><dt>Event</dt><dd><a href="../event/bjorn-wandels-midexpo.html">Björn Wandels — booktalk</a></dd>
 <dt>Publicatie</dt><dd><a href="../shop/allesgut.html">Björn Wandels — allesgut</a> <span style="color:var(--muted)">— € 38 · + € 7 verzending</span></dd>
-
+<dt>Nieuwsbrief</dt><dd><a href="../nieuwsbrief/2026-09-vernissage-bjorn-wandels-allesgut.html">Björn Wandels — allesgut | opening &amp; boeklancering vrijdag 11 september 18u</a> <span style="color:var(--muted)">(01.09.26)</span></dd>
 </dl></div></div></section>
 <section class="dn-section" style="padding-top:0"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Teksten</h2></div>

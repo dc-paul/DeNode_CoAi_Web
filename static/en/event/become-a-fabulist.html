@@ -62,6 +62,17 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
 .dn-band__by{margin-top:14px;}
 
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
+   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
+#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
+@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -169,12 +180,12 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <div class="dn-tag" style="margin-bottom:14px" id="dn-ev-tag">OPEN CALL</div>
 <h1 class="dn-h2">Become a Fabulist — artist residency</h1>
-<dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>15 September – 15 October 2026</dd>
-<dt>Location</dt><dd>DeNode / Nodenaysteen, Predikherenlei 3, 9000 Gent</dd>
+<dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>15 September – 15 October 2026 · 5 free workshops, young and old</dd>
+<dt>Location</dt><dd>DeNode / Nodenaysteen, Predikherenlei 4, 9000 Gent</dd>
 <dt class="dn-ev-info">Info</dt><dd class="dn-ev-info"><a href="mailto:info@denode.be">info@denode.be</a></dd>
 
 </dl>
-<p style="margin-top:22px"><a class="dn-btn dn-btn--ghost" href="become-a-fabulist.ics" download>Add to calendar (.ics)</a></p>
+<p style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap"><a class="dn-btn dn-btn--ghost" href="become-a-fabulist-s1.ics" download>19 Sep · Happy Faces → calendar (.ics)</a><a class="dn-btn dn-btn--ghost" href="become-a-fabulist-s2.ics" download>26 Sep · Smile Invasion → calendar (.ics)</a><a class="dn-btn dn-btn--ghost" href="become-a-fabulist-s3.ics" download>3 Oct · Build a Humanimal → calendar (.ics)</a><a class="dn-btn dn-btn--ghost" href="become-a-fabulist-s4.ics" download>7 Oct · Stage the Exhibition → calendar (.ics)</a><a class="dn-btn dn-btn--ghost" href="become-a-fabulist-s5.ics" download>10 Oct · Invent New Fables → calendar (.ics)</a></p>
 </div></section>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/event/become-a-fabulist/affiche-become-a-fabulist.jpg" alt="Become a Fabulist — Foto: Mathieu Thomassin" data-cap="Become a Fabulist — Foto: Mathieu Thomassin"><figcaption>Become a Fabulist <span class="dn-credit">— Foto: Mathieu Thomassin</span></figcaption></figure>
 <p>Before <strong><a href="../expo/humanimality.html">Humanimality</a></strong> opens to the public, DeNode Foundation becomes the <strong>Fabulisterie</strong>. For one month, French artist <strong><a href="../kunstenaar/monsieur-terez.html">Monsieur Térez</a></strong> will transform the Foundation into an open studio where artworks, stories and characters gradually come to life. Visitors are invited to discover not only the finished exhibition, but also the creative process behind it.</p>
@@ -183,7 +194,18 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p>Throughout the residency, volunteers, schools, families and curious visitors are invited to take part in the making of the Fabulisterie. Together, they will help shape the exhibition by creating stories, experimenting with artistic techniques and inventing new Humanimals.</p>
 <p>No artistic experience is required — only curiosity, imagination and a willingness to ask the question that begins every fable: <strong>What if…?</strong></p>
 <p>The residency will include open studio moments, collaborative workshops, multilingual language games and opportunities to contribute to the evolving exhibition.</p>
-<p>By the time <strong>Humanimality</strong> opens on 16 October 2026, the Fabulisterie will have become a collective work — shaped by the artist, the participants and everyone who chose to become a Fabulist.</p></div><p style="margin-top:34px" id="dn-ev-mail"><a class="dn-btn" href="mailto:info@denode.be?subject=Become%20a%20Fabulist%20%E2%80%94%20joining%20the%20residency&body=Dear%20DeNode%20team%2C%0A%0AI%20would%20love%20to%20become%20a%20Fabulist%20during%20the%20residency%20of%20Monsieur%20T%C3%A9rez%20(15%20September%20%E2%80%93%2015%20October%202026).%0A%0AName%3A%0AEmail%3A%0APhone%3A%0AI%20am%20joining%20as%20(school%20%2F%20family%20%2F%20volunteer%20%2F%20visitor)%3A%0APreferred%20moment(s)%3A%0A%0ASee%20you%20there!">Register by email (pre-filled)</a></p></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-10-15'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archive";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
+<h2 class="dn-h3" id="the-workshops">The workshops</h2>
+<p><strong>For everyone — young and old.</strong> Children, parents, grandparents, neighbours, school groups: everyone is welcome, and building it together is exactly the point. No artistic experience needed.</p>
+<p>Five afternoons, each from <strong>2 pm to 5.30 pm</strong>. Taking part is <strong>free</strong> — join a single workshop or all five. One registration covers up to 4 people (count yourself in).</p>
+<ul>
+<li><strong>Saturday 19 September 2026</strong> — <em>Happy Faces</em></li>
+<li><strong>Saturday 26 September 2026</strong> — <em>Smile Invasion</em></li>
+<li><strong>Saturday 3 October 2026</strong> — <em>Build a Humanimal</em></li>
+<li><strong>Wednesday 7 October 2026</strong> — <em>Stage the Exhibition</em></li>
+<li><strong>Saturday 10 October 2026</strong> — <em>Invent New Fables</em></li>
+</ul>
+<p>Registration runs through the online form. Questions? Write to <a href="mailto:info@denode.be">info@denode.be</a>.</p>
+<p>By the time <strong>Humanimality</strong> opens on 16 October 2026, the Fabulisterie will have become a collective work — shaped by the artist, the participants and everyone who chose to become a Fabulist.</p></div><p style="margin-top:34px" id="dn-ev-form"><a class="dn-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe26Czgx1F39_xhAtzCQZcSyWIX4zon_sXef70Kg0MB72ch9g/viewform" target="_blank" rel="noopener">Register for the workshops →</a></p></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-10-15'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archive";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';var fk=document.getElementById('dn-ev-form');if(fk)fk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

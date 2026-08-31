@@ -62,6 +62,17 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
 .dn-band__by{margin-top:14px;}
 
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
+   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
+#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
+@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -181,7 +192,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p>Stichting DeNode is partner van het festival en koos apotheek Suys (Dorpsstraat 29) om er werk van Kat Bové in de schijnwerper te plaatsen. Haar zelfportretten, balancerend tussen ongenaakbaarheid en kwetsbaarheid, vinden tussen de zalven en pillen een even onverwacht als passend decor — wie haar werk kent, weet hoe vanzelfsprekend een apotheek bij haar universum aansluit.</p>
 <figure class="dn-fig"><img loading="lazy" src="/_assets/images/kunstenaar/kat-bove/Gofuckyourzalf.jpg" alt="Kat Bové — Go fük ur zalf" data-cap="Kat Bové — Go fük ur zalf"><figcaption>Kat Bové — Go fük ur zalf</figcaption></figure>
 <p>LARA Art Fest loopt van 28 augustus tot en met 6 september 2026; nadien volgen nog enkele weekendopeningen in september. Het volledige programma staat op <a href="https://artscenelaarne.be/" target="_blank" rel="noopener">artscenelaarne.be</a>.</p>
-<p>Lees meer over <a href="../kunstenaar/kat-bove.html">Kat Bové</a>, of ontdek haar kunstboek 'Give me a sketchbook to live in' in de <a href="../shop/kat-bove.html">shop</a>.</p></div></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-09-27'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archief";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
+<p>Lees meer over <a href="../kunstenaar/kat-bove.html">Kat Bové</a>, of ontdek haar kunstboek 'Give me a sketchbook to live in' in de <a href="../shop/kat-bove.html">shop</a>.</p></div></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-09-27'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archief";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';var fk=document.getElementById('dn-ev-form');if(fk)fk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

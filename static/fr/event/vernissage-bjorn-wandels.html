@@ -62,6 +62,17 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
 .dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
 .dn-band__by{margin-top:14px;}
 
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
+   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
+#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
+@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
 .dn-prose p{margin:0 0 1.15em;}
@@ -169,17 +180,17 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 
 <h1 class="dn-h2">Vernissage — allesgut</h1>
-<dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>vendredi 11 septembre 2026</dd>
+<dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>vendredi 11 septembre 2026, 18h – 21h</dd>
 <dt>Lieu</dt><dd>DeNode / Nodenaysteen, Predikherenlei 4, 9000 Gent</dd>
 
 <dt>Expo</dt><dd><a href="../expo/bjorn-wandels-allesgut.html">allesgut</a></dd>
-</dl>
-<p style="margin-top:22px"><a class="dn-btn dn-btn--ghost" href="vernissage-bjorn-wandels.ics" download>Ajouter à l'agenda (.ics)</a></p>
+<dt>Newsletter</dt><dd><a href="../nieuwsbrief/2026-09-vernissage-bjorn-wandels-allesgut.html">Björn Wandels — allesgut | vernissage &amp; lancement du livre vendredi 11 septembre, 18h</a> <span style="color:var(--muted)">(01.09.26)</span></dd></dl>
+<p style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap"><a class="dn-btn dn-btn--ghost" href="vernissage-bjorn-wandels-s1.ics" download>Vernissage &amp; lancement du livre → agenda (.ics)</a></p>
 </div></section>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><figure class="dn-fig"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt="Vernissage — allesgut" data-cap=""></figure>
-<p>Le vendredi 11 septembre 2026, DeNode inaugure l'exposition personnelle <a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> de <a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a>, à voir jusqu'au 4 octobre. L'heure du vernissage suivra.</p>
-<p>Le livre d'artiste <a href="../shop/allesgut.html">allesgut</a> (MER Books, édition de 400 exemplaires) est en vente et à retirer ce soir-là — € 38, ou expédié contre € 7 de frais d'envoi. À mi-parcours de l'exposition, le dimanche 20 septembre, suivra une <a href="bjorn-wandels-midexpo.html">rencontre</a> autour du livre.</p>
-<p><a href="../bezoek.html">nodenaysteen</a> se trouve au bord de la Lys, Predikherenlei 4 à Gand ; la rue est piétonne, le dernier bout se fait à pied le long de l'eau.</p></div></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-09-11'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archives";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
+<p>Le vendredi 11 septembre 2026, DeNode inaugure l'exposition personnelle <a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> de <a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a>, à voir jusqu'au 4 octobre. <strong>Le vernissage et le lancement du livre se déroulent de 18h à 21h.</strong></p>
+<p>Le livre d'artiste <a href="../shop/allesgut.html">allesgut</a> (MER Books, édition de 400 exemplaires) est en vente dès maintenant et vous sera remis ce soir-là — € 38. Si vous ne pouvez pas venir, retirez-le plus tard à la fondation ou faites-le expédier contre € 7 de frais ; et si vous avez payé les frais d'envoi mais passez quand même, nous les convertissons en jetons de boisson. À mi-parcours de l'exposition, le dimanche 20 septembre, suivra une <a href="bjorn-wandels-midexpo.html">rencontre</a> autour du livre.</p>
+<p><a href="../bezoek.html">nodenaysteen</a> se trouve au bord de la Lys, Predikherenlei 4 à Gand ; la rue est piétonne, le dernier bout se fait à pied le long de l'eau.</p></div></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-09-11'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archives";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';var fk=document.getElementById('dn-ev-form');if(fk)fk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
