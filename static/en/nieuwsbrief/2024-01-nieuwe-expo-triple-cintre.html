@@ -67,11 +67,23 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
    voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
 .dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
 #dn-expo-komend .dn-card{border-color:var(--accent);}
-/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
-   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
-#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
-@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+/* Uitgelicht: alle blokken even groot. De dubbele breedte voor het eerste blok is op
+   1 sep 2026 teruggedraaid — Paul wil Björn en Kat in evenwicht. De volgorde in home.md
+   bepaalt nog wel wie eerst staat. */
 .dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
+/* ONDERKAST-NAMEN (Paul 1 sep 2026, route B): werk- en merknamen houden hun eigen
+   schrijfwijze, ook als titel — "allesgut", "nodenaysteen". De Ink-stijl zet .dn-h1/.dn-h2/
+   .dn-h3/.dn-card h3/.dn-crumb in kapitalen; staat er zo'n naam in de kop, dan zet de
+   generator de klasse dn-asis en rendert de titel zoals ze geschreven is. Onderkast leest optisch
+   kleiner, dus de twee grote koppen krijgen ~8% meer korps en strakkere letterafstand.
+   NIET in denode-ink.css zetten: dat bestand wordt bij elke build uit INKDIR gekopieerd. */
+h1.dn-asis,h2.dn-asis,h3.dn-asis,.dn-card h3.dn-asis,.dn-crumb.dn-asis,.dn-asis{text-transform:none;}
+.dn-h1.dn-asis{font-size:clamp(48px,7vw,96px);letter-spacing:-.012em;}
+.dn-h2.dn-asis{font-size:clamp(30px,4.3vw,50px);letter-spacing:-.004em;}
+.dn-h3.dn-asis{letter-spacing:0;}
+.dn-card h3.dn-asis{font-size:23px;letter-spacing:0;}
+.dn-crumb.dn-asis{letter-spacing:.06em;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
@@ -174,11 +186,11 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </div></div>
 <div id="dn-mobielmenu"><a href="../expo/index.html">Exhibitions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artists</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Visit</a><a href="../over.html">About</a><a href="../zoeken.html">Search</a></div>
 </header>
-<div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Newsletter archive</a> / New exhibition Nodenaysteen: Triple Cintre — Ines Claus</div></div>
+<div class="dn-wrap"><div class="dn-crumb dn-asis"><a href="index.html">Newsletter archive</a> / New exhibition Nodenaysteen: Triple Cintre — Ines Claus</div></div>
 
 <section class="dn-section" style="padding-bottom:30px"><div class="dn-wrap">
 <div class="dn-tag" style="margin-bottom:14px">Newsletter</div>
-<h1 class="dn-h2">New exhibition Nodenaysteen: Triple Cintre — <a href="../kunstenaar/ines-claus.html">Ines Claus</a></h1>
+<h1 class="dn-h2 dn-asis">New exhibition Nodenaysteen: Triple Cintre — <a href="../kunstenaar/ines-claus.html">Ines Claus</a></h1>
 <p style="color:var(--muted);margin-top:14px">Originally sent by email on 26.01.24.</p>
 <dl class="dn-dl" style="margin-top:26px">
 <dt>Expo</dt><dd><a href="../expo/triple-cintre.html">Triple Cintre</a></dd>

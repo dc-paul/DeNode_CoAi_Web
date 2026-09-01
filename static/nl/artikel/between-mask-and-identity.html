@@ -67,11 +67,23 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
    voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
 .dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
 #dn-expo-komend .dn-card{border-color:var(--accent);}
-/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
-   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
-#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
-@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+/* Uitgelicht: alle blokken even groot. De dubbele breedte voor het eerste blok is op
+   1 sep 2026 teruggedraaid — Paul wil Björn en Kat in evenwicht. De volgorde in home.md
+   bepaalt nog wel wie eerst staat. */
 .dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
+/* ONDERKAST-NAMEN (Paul 1 sep 2026, route B): werk- en merknamen houden hun eigen
+   schrijfwijze, ook als titel — "allesgut", "nodenaysteen". De Ink-stijl zet .dn-h1/.dn-h2/
+   .dn-h3/.dn-card h3/.dn-crumb in kapitalen; staat er zo'n naam in de kop, dan zet de
+   generator de klasse dn-asis en rendert de titel zoals ze geschreven is. Onderkast leest optisch
+   kleiner, dus de twee grote koppen krijgen ~8% meer korps en strakkere letterafstand.
+   NIET in denode-ink.css zetten: dat bestand wordt bij elke build uit INKDIR gekopieerd. */
+h1.dn-asis,h2.dn-asis,h3.dn-asis,.dn-card h3.dn-asis,.dn-crumb.dn-asis,.dn-asis{text-transform:none;}
+.dn-h1.dn-asis{font-size:clamp(48px,7vw,96px);letter-spacing:-.012em;}
+.dn-h2.dn-asis{font-size:clamp(30px,4.3vw,50px);letter-spacing:-.004em;}
+.dn-h3.dn-asis{letter-spacing:0;}
+.dn-card h3.dn-asis{font-size:23px;letter-spacing:0;}
+.dn-crumb.dn-asis{letter-spacing:.06em;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
@@ -195,7 +207,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p>Tot mijn verbazing vrij veel. Er kwam persbelangstelling, mensen begonnen mijn werk te kopen en vooral: ze zagen er iets in, hadden er iets aan, werden erdoor geraakt. Ik hoorde iemand uitleggen dat hij het werk kocht voor zijn vriendin in de hoop dat ze er kracht uit zou putten. Een mooier compliment kan je mij niet geven. Het maakt het ook makkelijker om werken te laten gaan.</p>
 <h2 class="dn-h3" id="de-persaandacht-ging-voornamelijk-naar-het-feit-dat-je-airhostess-bent-en-zelfs-onderweg-constant-je-penselen-bovenhaalt">De persaandacht ging voornamelijk naar het feit dat je airhostess bent en zelfs onderweg constant je penselen bovenhaalt.</h2>
 <p>In het vliegtuig, aan het zoveelste zwembad met de zoveelste nieuwe crew… Die penselen reizen overal met me mee. Ik heb een hele map vol tekeningen van collega's. Voor mij is dat een veiligheid. Als we ergens twee drie dagen stranden met de crew wordt mijn hotelkamer mijn atelier. Wanneer ik me tussen de crew begeef, heb ik altijd mijn cocon van pen en papier bij de hand. Terwijl mijn collega's praten, hangen, spelen, zit ik hen te portretteren.</p>
-<h2 class="dn-h3" id="in-nodenaysteen-krijgen-we-de-portretten-van-je-collega-s-niet-te-zien-wat-mogen-we-van-who-is-your-god-where-is-she-verwachten">In Nodenaysteen krijgen we de portretten van je collega's niet te zien. Wat mogen we van WHO IS YOUR GOD, WHERE IS SHE verwachten?</h2>
+<h2 class="dn-h3 dn-asis" id="in-nodenaysteen-krijgen-we-de-portretten-van-je-collega-s-niet-te-zien-wat-mogen-we-van-who-is-your-god-where-is-she-verwachten">In Nodenaysteen krijgen we de portretten van je collega's niet te zien. Wat mogen we van WHO IS YOUR GOD, WHERE IS SHE verwachten?</h2>
 <p>Een zoektocht, of wat had je gedacht? (lacht) Ik laat er vooral veel zelfportretten zien, maar dan in een geïdealiseerde vorm, in de vorm die ik en bij uitbreiding veel mensen willen zijn: gevat, krachtig, met soms een dikke middelvinger naar de maatschappij. Verwacht vooral geen eenduidigheid, ik heb meer vragen dan antwoorden. Ieder beeld speelt met contrast, met verwarring, met een tegenstrijdigheid. De kwetsbaarheid van het naakte lichaam versus de kracht van de iconografie, het conflict tussen beeld en tekst, de humor van een boodschap versus de intrieste realiteit. Licht versus donker, kleur versus zwart. Ik wil tonen dat het oké is om beide in je te hebben, zolang je ergens 'goden' hebt om je de weg naar het licht te wijzen. Voor mij zijn dat vrouwen: dragers van de wereld, toonbeelden van kracht. Ik portretteer een aantal van mijn heldinnen, maar vooral ook die geïdealiseerde versie van mezelf, die als je goed kijkt altijd wel ergens een kwetsbaar kantje heeft. De titel van de tentoonstelling is trouwens geplukt uit het nummer Multi-Love van Unknown Mortal Orchestra, als een knipoog naar de manier waarop quotes uit muziek en literatuur mijn werk vaak binnensluipen.</p>
 <h2 class="dn-h3" id="tot-slot-nog-dit-je-hebt-jaren-enkel-voor-jezelf-geschilderd-dat-hoefde-geen-woorden-jij-begreep-perfect-wat-je-deed-hoe-is-het-om-plots-je-werk-te-moeten-uitleggen">Tot slot nog dit: je hebt jaren enkel voor jezelf geschilderd, dat hoefde geen woorden, jij begreep perfect wat je deed. Hoe is het om plots je werk te moeten uitleggen?</h2>
 <p>Ook dat is een zoektocht. Voor mij hoeven al die woorden eigenlijk niet. Laat mijn werken maar voor zich spreken. Ze schreeuwen al meer dan genoeg.</p></div>

@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OPENING OF NODENAYSTEEN — AN ART SPACE — DeNode Foundation</title>
+<title>Opening of nodenaysteen — an art space — DeNode Foundation</title>
 <meta name="description" content="An art space in Ghent">
-<meta property="og:title" content="OPENING OF NODENAYSTEEN — AN ART SPACE — DeNode Foundation">
+<meta property="og:title" content="Opening of nodenaysteen — an art space — DeNode Foundation">
 <meta property="og:description" content="An art space in Ghent">
 <meta property="og:image" content="https://www.denode.be/_assets/images/site/blog-opening-nodenaysteen.jpg">
 <meta property="og:type" content="website">
@@ -67,11 +67,23 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
    voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
 .dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
 #dn-expo-komend .dn-card{border-color:var(--accent);}
-/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
-   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
-#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
-@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+/* Uitgelicht: alle blokken even groot. De dubbele breedte voor het eerste blok is op
+   1 sep 2026 teruggedraaid — Paul wil Björn en Kat in evenwicht. De volgorde in home.md
+   bepaalt nog wel wie eerst staat. */
 .dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
+/* ONDERKAST-NAMEN (Paul 1 sep 2026, route B): werk- en merknamen houden hun eigen
+   schrijfwijze, ook als titel — "allesgut", "nodenaysteen". De Ink-stijl zet .dn-h1/.dn-h2/
+   .dn-h3/.dn-card h3/.dn-crumb in kapitalen; staat er zo'n naam in de kop, dan zet de
+   generator de klasse dn-asis en rendert de titel zoals ze geschreven is. Onderkast leest optisch
+   kleiner, dus de twee grote koppen krijgen ~8% meer korps en strakkere letterafstand.
+   NIET in denode-ink.css zetten: dat bestand wordt bij elke build uit INKDIR gekopieerd. */
+h1.dn-asis,h2.dn-asis,h3.dn-asis,.dn-card h3.dn-asis,.dn-crumb.dn-asis,.dn-asis{text-transform:none;}
+.dn-h1.dn-asis{font-size:clamp(48px,7vw,96px);letter-spacing:-.012em;}
+.dn-h2.dn-asis{font-size:clamp(30px,4.3vw,50px);letter-spacing:-.004em;}
+.dn-h3.dn-asis{letter-spacing:0;}
+.dn-card h3.dn-asis{font-size:23px;letter-spacing:0;}
+.dn-crumb.dn-asis{letter-spacing:.06em;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
@@ -174,15 +186,15 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </div></div>
 <div id="dn-mobielmenu"><a href="../expo/index.html">Exhibitions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artists</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Visit</a><a href="../over.html">About</a><a href="../zoeken.html">Search</a></div>
 </header>
-<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publications</a> / OPENING OF NODENAYSTEEN — AN ART SPACE</div></div>
+<div class="dn-wrap"><div class="dn-crumb dn-asis"><a href="../publicaties.html">Publications</a> / Opening of nodenaysteen — an art space</div></div>
 
 <section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
 <div class="dn-kicker">news · 2023-10-26</div>
-<h1 class="dn-h2" style="margin:10px 0 6px">OPENING OF NODENAYSTEEN — AN ART SPACE</h1>
+<h1 class="dn-h2 dn-asis" style="margin:10px 0 6px">Opening of nodenaysteen — an art space</h1>
 <div class="dn-serif-it" style="font-size:22px">An art space in Ghent</div>
 
 </div></section>
-<div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/_assets/images/site/blog-opening-nodenaysteen.jpg" alt="OPENING OF NODENAYSTEEN — AN ART SPACE"></figure></div>
+<div class="dn-wrap"><figure class="dn-fig" style="margin:0 0 40px"><img src="/_assets/images/site/blog-opening-nodenaysteen.jpg" alt="Opening of nodenaysteen — an art space"></figure></div>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><h2 class="dn-h3" id="we-are-just-starting">WE ARE JUST STARTING</h2>
 <p>This new place in the artistic landscape of Ghent invites diverse artists with their work from a love for art, music, technology, and much more. Located on the Leie, with a view of the Sint-Michielskerk and 't Pand (UGent), Nodenaysteen is a space dedicated to discovery, learning, and nurturing relationships with artists, collectors, enthusiasts, and passersby.</p>
 <p>The name Nodenaysteen refers to the old stone, of which a remnant can still be seen in the (little) garden. Traces of this patrician house can be found in the city archives dating back to 1357.</p>

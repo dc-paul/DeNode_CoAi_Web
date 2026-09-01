@@ -67,11 +67,23 @@ figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:no
    voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
 .dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
 #dn-expo-komend .dn-card{border-color:var(--accent);}
-/* Uitgelicht: het eerste blok uit home.md krijgt dubbele breedte — volgorde in home.md
-   bepaalt dus wat het meeste gewicht krijgt (Paul 31 aug 2026) */
-#dn-uitgelicht .dn-card:first-child{grid-column:span 2;}
-@media(max-width:560px){#dn-uitgelicht .dn-card:first-child{grid-column:auto;}}
+/* Uitgelicht: alle blokken even groot. De dubbele breedte voor het eerste blok is op
+   1 sep 2026 teruggedraaid — Paul wil Björn en Kat in evenwicht. De volgorde in home.md
+   bepaalt nog wel wie eerst staat. */
 .dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
+/* ONDERKAST-NAMEN (Paul 1 sep 2026, route B): werk- en merknamen houden hun eigen
+   schrijfwijze, ook als titel — "allesgut", "nodenaysteen". De Ink-stijl zet .dn-h1/.dn-h2/
+   .dn-h3/.dn-card h3/.dn-crumb in kapitalen; staat er zo'n naam in de kop, dan zet de
+   generator de klasse dn-asis en rendert de titel zoals ze geschreven is. Onderkast leest optisch
+   kleiner, dus de twee grote koppen krijgen ~8% meer korps en strakkere letterafstand.
+   NIET in denode-ink.css zetten: dat bestand wordt bij elke build uit INKDIR gekopieerd. */
+h1.dn-asis,h2.dn-asis,h3.dn-asis,.dn-card h3.dn-asis,.dn-crumb.dn-asis,.dn-asis{text-transform:none;}
+.dn-h1.dn-asis{font-size:clamp(48px,7vw,96px);letter-spacing:-.012em;}
+.dn-h2.dn-asis{font-size:clamp(30px,4.3vw,50px);letter-spacing:-.004em;}
+.dn-h3.dn-asis{letter-spacing:0;}
+.dn-card h3.dn-asis{font-size:23px;letter-spacing:0;}
+.dn-crumb.dn-asis{letter-spacing:.06em;}
 
 /* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
 .dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
@@ -195,7 +207,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <p>À ma grande surprise, pas mal de choses. Il y a eu de l'attention médiatique, les gens ont commencé à acheter mon travail et surtout : ils y voyaient quelque chose, en retiraient quelque chose, en étaient touchés. J'ai entendu quelqu'un expliquer qu'il achetait l'œuvre pour sa compagne dans l'espoir qu'elle y puise de la force. On ne peut pas me faire de plus beau compliment. Cela rend aussi plus facile de laisser partir les œuvres.</p>
 <h2 class="dn-h3" id="l-attention-de-la-presse-s-est-surtout-portee-sur-le-fait-que-tu-es-hotesse-de-l-air-et-que-meme-en-deplacement-tu-sors-constamment-tes-pinceaux">L'attention de la presse s'est surtout portée sur le fait que tu es hôtesse de l'air et que, même en déplacement, tu sors constamment tes pinceaux.</h2>
 <p>Dans l'avion, au énième bord de piscine avec le énième nouvel équipage… Ces pinceaux voyagent partout avec moi. J'ai tout un dossier plein de dessins de collègues. Pour moi, c'est une sécurité. Quand nous restons bloqués quelque part deux ou trois jours avec l'équipage, ma chambre d'hôtel devient mon atelier. Quand je suis parmi l'équipage, j'ai toujours mon cocon de stylo et de papier à portée de main. Pendant que mes collègues parlent, traînent, jouent, je les portraiture.</p>
-<h2 class="dn-h3" id="a-nodenaysteen-nous-ne-verrons-pas-les-portraits-de-tes-collegues-que-pouvons-nous-attendre-de-who-is-your-god-where-is-she">À Nodenaysteen, nous ne verrons pas les portraits de tes collègues. Que pouvons-nous attendre de WHO IS YOUR GOD, WHERE IS SHE ?</h2>
+<h2 class="dn-h3 dn-asis" id="a-nodenaysteen-nous-ne-verrons-pas-les-portraits-de-tes-collegues-que-pouvons-nous-attendre-de-who-is-your-god-where-is-she">À Nodenaysteen, nous ne verrons pas les portraits de tes collègues. Que pouvons-nous attendre de WHO IS YOUR GOD, WHERE IS SHE ?</h2>
 <p>Une quête, que croyais-tu ? (rires) J'y montre surtout beaucoup d'autoportraits, mais sous une forme idéalisée, sous la forme que moi, et par extension beaucoup de gens, voulons être : vive, puissante, avec parfois un bon doigt d'honneur à la société. Surtout, n'attendez aucune certitude, j'ai plus de questions que de réponses. Chaque image joue avec le contraste, avec la confusion, avec la contradiction. La vulnérabilité du corps nu face à la puissance de l'iconographie, le conflit entre l'image et le texte, l'humour d'un message face à la réalité profondément triste. Lumière contre obscurité, couleur contre noir. Je veux montrer qu'il est permis d'avoir les deux en soi, tant qu'on a quelque part des « dieux » pour nous montrer le chemin vers la lumière. Pour moi, ce sont des femmes : porteuses du monde, incarnations de la force. Je portraiture quelques-unes de mes héroïnes, mais surtout cette version idéalisée de moi-même qui, si l'on regarde bien, a toujours un côté vulnérable quelque part. Le titre de l'exposition est d'ailleurs tiré de la chanson Multi-Love de Unknown Mortal Orchestra, comme un clin d'œil à la manière dont des citations issues de la musique et de la littérature se glissent souvent dans mon travail.</p>
 <h2 class="dn-h3" id="enfin-ceci-pendant-des-annees-tu-as-peint-uniquement-pour-toi-cela-ne-necessitait-pas-de-mots-tu-comprenais-parfaitement-ce-que-tu-faisais-comment-est-ce-de-devoir-soudain-expliquer-ton-travail">Enfin ceci : pendant des années tu as peint uniquement pour toi, cela ne nécessitait pas de mots, tu comprenais parfaitement ce que tu faisais. Comment est-ce, de devoir soudain expliquer ton travail ?</h2>
 <p>Cela aussi est une quête. Pour moi, tous ces mots ne sont en réalité pas nécessaires. Laissez mes œuvres parler d'elles-mêmes. Elles crient déjà bien assez.</p></div>
