@@ -1,47 +1,47 @@
 {
-  "updated": "2026-09-02T03:37:58.368Z",
+  "updated": "2026-09-02T12:38:45.154Z",
   "posts": [
     {
       "img": "/assets/ig/1.jpg",
+      "permalink": "https://www.instagram.com/p/DcyMMhEABJ5/",
+      "caption": "WHO IS MONSIEUR TÉREZ? Behind Monsieur Térez is Régis Estérez, a French artist born in 1974, who lives and works in Pau (south of France) F…",
+      "type": "IMAGE",
+      "timestamp": "2026-09-02T12:04:33+0000"
+    },
+    {
+      "img": "/assets/ig/2.jpg",
       "permalink": "https://www.instagram.com/reel/DcvosXOgp4U/",
       "caption": "From archive to book. From book to space. allesgut brings together images collected, selected and rearranged by Björn Wandels over many yea…",
       "type": "VIDEO",
       "timestamp": "2026-09-01T12:15:42+0000"
     },
     {
-      "img": "/assets/ig/2.jpg",
+      "img": "/assets/ig/3.jpg",
       "permalink": "https://www.instagram.com/reel/Dctg2tXgT22/",
       "caption": "BECOME A FABULIST What if you could step inside the making of an exhibition? This September, Monsieur Térez opens the doors of THE FABULIST…",
       "type": "VIDEO",
       "timestamp": "2026-08-31T16:35:28+0000"
     },
     {
-      "img": "/assets/ig/3.jpg",
+      "img": "/assets/ig/4.jpg",
       "permalink": "https://www.instagram.com/p/DcqXJ92RyW8/",
       "caption": "A conversation with Björn Wandels Ahead of allesgut, opening at DeNode Foundation on September 11, we invite you to discover this in-depth …",
       "type": "IMAGE",
       "timestamp": "2026-08-30T11:08:01+0000"
     },
     {
-      "img": "/assets/ig/4.jpg",
+      "img": "/assets/ig/5.jpg",
       "permalink": "https://www.instagram.com/p/DcjE-wGgJg5/",
       "caption": "@whiteduckfinearts @denode_foundation @kat_bove Laarne Art",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-08-27T15:10:40+0000"
     },
     {
-      "img": "/assets/ig/5.jpg",
+      "img": "/assets/ig/6.jpg",
       "permalink": "https://www.instagram.com/p/Dci28LsgKca/",
       "caption": "Memory is not an archive Before language, sound and video entered his work, Björn Wandels spent years photographing something much closer: …",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-08-27T13:07:59+0000"
-    },
-    {
-      "img": "/assets/ig/6.jpg",
-      "permalink": "https://www.instagram.com/p/DcOsSgjgB7O/",
-      "caption": "Björn Wandels began with photography and self-portraiture. But over time, something shifted. Rather than simply using photography to repres…",
-      "type": "CAROUSEL_ALBUM",
-      "timestamp": "2026-08-19T17:10:06+0000"
     }
   ]
 }
