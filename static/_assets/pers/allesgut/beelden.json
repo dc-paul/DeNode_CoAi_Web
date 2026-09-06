@@ -28,14 +28,14 @@
         "bestand": "allesgut-01-logo.jpg",
         "w": 1332,
         "h": 1820,
-        "bytes": 553165,
+        "bytes": 553162,
         "cm": "11.3 × 15.4 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-01-logo-web.jpg",
         "w": 1171,
         "h": 1600,
-        "bytes": 220133
+        "bytes": 220130
       }
     },
     {
@@ -52,14 +52,14 @@
         "bestand": "allesgut-02-paars-silhouet.jpg",
         "w": 2599,
         "h": 3674,
-        "bytes": 303816,
+        "bytes": 303813,
         "cm": "22.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-02-paars-silhouet-web.jpg",
         "w": 1132,
         "h": 1600,
-        "bytes": 55386
+        "bytes": 55383
       }
     },
     {
@@ -76,14 +76,14 @@
         "bestand": "allesgut-03-figuur-in-stoel.jpg",
         "w": 2599,
         "h": 3674,
-        "bytes": 831973,
+        "bytes": 831970,
         "cm": "22.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-03-figuur-in-stoel-web.jpg",
         "w": 1132,
         "h": 1600,
-        "bytes": 184146
+        "bytes": 184143
       }
     },
     {
@@ -100,14 +100,14 @@
         "bestand": "allesgut-04-cover.jpg",
         "w": 2599,
         "h": 3674,
-        "bytes": 169872,
+        "bytes": 169869,
         "cm": "22.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-04-cover-web.jpg",
         "w": 1132,
         "h": 1600,
-        "bytes": 35536
+        "bytes": 35533
       }
     },
     {
@@ -124,14 +124,14 @@
         "bestand": "allesgut-05-naakt-en-rode-stoel.jpg",
         "w": 5197,
         "h": 3674,
-        "bytes": 2131405,
+        "bytes": 2131402,
         "cm": "44.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-05-naakt-en-rode-stoel-web.jpg",
         "w": 1600,
         "h": 1131,
-        "bytes": 235483
+        "bytes": 235480
       }
     },
     {
@@ -148,14 +148,14 @@
         "bestand": "allesgut-06-bloemen-en-figuur.jpg",
         "w": 5197,
         "h": 3674,
-        "bytes": 1943178,
+        "bytes": 1943175,
         "cm": "44.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-06-bloemen-en-figuur-web.jpg",
         "w": 1600,
         "h": 1131,
-        "bytes": 225463
+        "bytes": 225460
       }
     },
     {
@@ -172,14 +172,14 @@
         "bestand": "allesgut-07-gesplitst-gezicht.jpg",
         "w": 2599,
         "h": 3674,
-        "bytes": 411531,
+        "bytes": 411528,
         "cm": "22.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-07-gesplitst-gezicht-web.jpg",
         "w": 1132,
         "h": 1600,
-        "bytes": 84048
+        "bytes": 84045
       }
     },
     {
@@ -196,14 +196,14 @@
         "bestand": "allesgut-08-gezicht-in-licht.jpg",
         "w": 2599,
         "h": 3674,
-        "bytes": 920943,
+        "bytes": 920940,
         "cm": "22.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-08-gezicht-in-licht-web.jpg",
         "w": 1132,
         "h": 1600,
-        "bytes": 189373
+        "bytes": 189370
       }
     },
     {
@@ -220,14 +220,14 @@
         "bestand": "allesgut-09-konijnenoren.jpg",
         "w": 5197,
         "h": 3674,
-        "bytes": 2773018,
+        "bytes": 2773015,
         "cm": "44.0 × 31.1 cm @ 300 dpi"
       },
       "web": {
         "bestand": "allesgut-09-konijnenoren-web.jpg",
         "w": 1600,
         "h": 1131,
-        "bytes": 350448
+        "bytes": 350445
       }
     },
     {
@@ -253,20 +253,20 @@
         "bestand": "denode-foundation-logo.png",
         "w": 1808,
         "h": 1036,
-        "bytes": 46398,
+        "bytes": 46395,
         "cm": "15.3 × 8.8 cm @ 300 dpi"
       },
       "web": {
         "bestand": "denode-foundation-logo-web.png",
         "w": 1600,
         "h": 917,
-        "bytes": 149028
+        "bytes": 149025
       }
     }
   ],
   "zip": {
     "bestand": "allesgut-persmap.zip",
-    "bytes": 10120829,
+    "bytes": 10077612,
     "pdfs": [
       "persbericht-allesgut-bjorn-wandels-en.pdf",
       "persbericht-allesgut-bjorn-wandels-fr.pdf",
