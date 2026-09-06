@@ -22,6 +22,11 @@
 .dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */
+.dn-gal--pers figcaption{white-space:normal;overflow:visible;text-overflow:clip;text-transform:none;letter-spacing:.02em;font-size:12px;line-height:1.55;color:var(--ink);}
+.dn-gal--pers figcaption .dn-credit{display:block;font-size:11px;color:var(--muted);}
+.dn-gal--pers figcaption a{display:inline-block;margin-top:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.dn-gal--pers img{cursor:zoom-in;}
 /* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
 figure figcaption{color:var(--ink);}
 figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
@@ -184,7 +189,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
 <nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../programma.html">Programma</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Zoeken" title="Zoeken"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/event/become-a-fabulist.html">EN</a><a class="lg" href="../../fr/event/become-a-fabulist.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../programma.html">Programma</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a><a href="../zoeken.html">Zoeken</a></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../programma.html">Programma</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a><a href="../pers.html">Pers</a><a href="../zoeken.html">Zoeken</a></div>
 </header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Events</a> / Become a Fabulist — artist residency</div></div>
 
@@ -254,7 +259,8 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../collectie.html">Collectie</a></li>
 <li><a href="../shop.html">Shop</a></li>
 <li><a href="../event/index.html">Events</a></li>
-<li><a href="../geschiedenis.html">Geschiedenis</a></li></ul></div>
+<li><a href="../geschiedenis.html">Geschiedenis</a></li>
+<li><a href="../pers.html">Pers</a></li></ul></div>
 <div><h4>Betrokken</h4><ul class="fnav">
 <li><a href="../bezoek.html">Bezoek</a></li>
 <li><a href="../over.html">Over</a></li>

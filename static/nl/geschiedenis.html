@@ -22,6 +22,11 @@
 .dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */
+.dn-gal--pers figcaption{white-space:normal;overflow:visible;text-overflow:clip;text-transform:none;letter-spacing:.02em;font-size:12px;line-height:1.55;color:var(--ink);}
+.dn-gal--pers figcaption .dn-credit{display:block;font-size:11px;color:var(--muted);}
+.dn-gal--pers figcaption a{display:inline-block;margin-top:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.dn-gal--pers img{cursor:zoom-in;}
 /* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
 figure figcaption{color:var(--ink);}
 figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
@@ -184,7 +189,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <a class="dn-brand" href="index.html"><img src="../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
 <nav class="dn-nav"><ul><li><a href="expo/index.html">Tentoonstellingen</a></li><li><a href="programma.html">Programma</a></li><li><a href="kunstenaar/index.html">Kunstenaars</a></li><li><a href="publicaties.html">Publicaties</a></li><li><a href="shop.html">Shop</a></li><li><a href="bezoek.html">Bezoek</a></li><li><a href="over.html">Over</a></li><li><a class="dn-zoekicoon" href="zoeken.html" aria-label="Zoeken" title="Zoeken"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../en/geschiedenis.html">EN</a><a class="lg" href="../fr/geschiedenis.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="expo/index.html">Tentoonstellingen</a><a href="programma.html">Programma</a><a href="kunstenaar/index.html">Kunstenaars</a><a href="publicaties.html">Publicaties</a><a href="collectie.html">Collectie</a><a href="shop.html">Shop</a><a href="event/index.html">Events</a><a href="bezoek.html">Bezoek</a><a href="over.html">Over</a><a href="zoeken.html">Zoeken</a></div>
+<div id="dn-mobielmenu"><a href="expo/index.html">Tentoonstellingen</a><a href="programma.html">Programma</a><a href="kunstenaar/index.html">Kunstenaars</a><a href="publicaties.html">Publicaties</a><a href="collectie.html">Collectie</a><a href="shop.html">Shop</a><a href="event/index.html">Events</a><a href="bezoek.html">Bezoek</a><a href="over.html">Over</a><a href="pers.html">Pers</a><a href="zoeken.html">Zoeken</a></div>
 </header>
 <div class="dn-wrap"><div class="dn-crumb"><a href="over.html">Over</a> / Geschiedenis</div></div>
 
@@ -198,7 +203,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-tl-rij" data-d="2026-09-15" style="display:grid;grid-template-columns:56px 96px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(14,14,12,.15)"><span class="dates">15.09</span><span class="dn-kicker">Event</span><span><a href="event/become-a-fabulist.html">Become a Fabulist — artist residency</a> <span style="color:var(--muted)">— 15 september – 15 oktober 2026 · 5 gratis workshops, jong en oud</span></span></div>
 <div class="dn-tl-rij" data-d="2026-09-11" style="display:grid;grid-template-columns:56px 96px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(14,14,12,.15)"><span class="dates">11.09</span><span class="dn-kicker">Expo</span><span><a href="expo/bjorn-wandels-allesgut.html">allesgut</a> <span style="color:var(--muted)">— 11.09.26 – 04.10.26 · <a href="kunstenaar/bjorn-wandels.html">Björn Wandels</a></span></span></div>
 <div class="dn-tl-rij" data-d="2026-09-11" style="display:grid;grid-template-columns:56px 96px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(14,14,12,.15)"><span class="dates">11.09</span><span class="dn-kicker">Event</span><span><a href="event/vernissage-bjorn-wandels.html">Vernissage — allesgut</a> <span style="color:var(--muted)">— vrijdag 11 september 2026, 18u – 21u</span></span></div>
-<div id="dn-tl-vandaag" style="display:flex;align-items:center;gap:14px;margin:30px 0"><span style="flex:1;height:2px;background:#a23b2d"></span><span class="dn-kicker" style="color:#a23b2d">Vandaag · <span id="dn-tl-datum">03.09.2026</span></span><span style="flex:1;height:2px;background:#a23b2d"></span></div>
+<div id="dn-tl-vandaag" style="display:flex;align-items:center;gap:14px;margin:30px 0"><span style="flex:1;height:2px;background:#a23b2d"></span><span class="dn-kicker" style="color:#a23b2d">Vandaag · <span id="dn-tl-datum">06.09.2026</span></span><span style="flex:1;height:2px;background:#a23b2d"></span></div>
 <div class="dn-tl-rij" data-d="2026-08-29" style="display:grid;grid-template-columns:56px 96px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(14,14,12,.15)"><span class="dates">29.08</span><span class="dn-kicker">Event</span><span><a href="event/lara-art-fest-kat-bove.html">Kat Bové op LARA Art Fest, Laarne</a> <span style="color:var(--muted)">— Weekends vanaf 29 augustus 2026 · LARA Art Fest</span></span></div>
 <div class="dn-tl-rij" data-d="2026-07-15" style="display:grid;grid-template-columns:56px 96px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(14,14,12,.15)"><span class="dates">15.07</span><span class="dn-kicker">Event</span><span><a href="event/cutting-reality.html">Cutting Reality Workshop</a> <span style="color:var(--muted)">— Workshop 1: 15–16–17 juli 2026 · Workshop 2: 22–23–24 juli 2026</span></span></div>
 <div class="dn-tl-rij" data-d="2026-07-15" style="display:grid;grid-template-columns:56px 96px 1fr;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(14,14,12,.15)"><span class="dates">15.07</span><span class="dn-kicker">Mijlpaal</span><span>Nieuwe website — www.denode.be verhuist naar een eigen, volledig zelf beheerde drietalige site.</span></div>
@@ -274,7 +279,8 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="collectie.html">Collectie</a></li>
 <li><a href="shop.html">Shop</a></li>
 <li><a href="event/index.html">Events</a></li>
-<li><a href="geschiedenis.html">Geschiedenis</a></li></ul></div>
+<li><a href="geschiedenis.html">Geschiedenis</a></li>
+<li><a href="pers.html">Pers</a></li></ul></div>
 <div><h4>Betrokken</h4><ul class="fnav">
 <li><a href="bezoek.html">Bezoek</a></li>
 <li><a href="over.html">Over</a></li>

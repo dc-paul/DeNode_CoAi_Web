@@ -1,0 +1,278 @@
+{
+  "_doc": "Persbeelden allesgut (Björn Wandels). Bron: 300-dpi renders uit de druk-PDF BW-allesgut-04.pdf (elke pagina = spread). crop: 'links' | 'rechts' | 'spread'. Gegenereerd door tools/persbeelden.py — dit bestand is de enige bron voor bestandsnamen, crops, bijschriften en metadata.",
+  "reeks": "allesgut",
+  "kunstenaar": "Björn Wandels",
+  "copyright": "© 2026 Björn Wandels",
+  "credit": {
+    "nl": "Courtesy de kunstenaar en DeNode Foundation, Gent",
+    "en": "Courtesy the artist and DeNode Foundation, Ghent",
+    "fr": "Courtesy de l'artiste et de la DeNode Foundation, Gand"
+  },
+  "gebruik": {
+    "nl": "Vrij te gebruiken voor berichtgeving over de tentoonstelling allesgut (DeNode Foundation, 11.09 – 04.10.2026), met vermelding © Björn Wandels. Niet bijsnijden of bewerken zonder toestemming.",
+    "en": "Free to use for coverage of the exhibition allesgut (DeNode Foundation, 11.09 – 04.10.2026), with the credit © Björn Wandels. Please do not crop or alter without permission.",
+    "fr": "Libre d'utilisation pour la couverture de l'exposition allesgut (DeNode Foundation, 11.09 – 04.10.2026), avec la mention © Björn Wandels. Ne pas recadrer ni retoucher sans autorisation."
+  },
+  "beelden": [
+    {
+      "bestand": "allesgut-01-logo",
+      "bron": "logo_stamp.jpg",
+      "crop": "spread",
+      "pers": true,
+      "titel": {
+        "nl": "allesgut — logo (stempel)",
+        "en": "allesgut — logo (stamp)",
+        "fr": "allesgut — logo (tampon)"
+      },
+      "hires": {
+        "bestand": "allesgut-01-logo.jpg",
+        "w": 1332,
+        "h": 1820,
+        "bytes": 553165,
+        "cm": "11.3 × 15.4 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-01-logo-web.jpg",
+        "w": 1171,
+        "h": 1600,
+        "bytes": 220133
+      }
+    },
+    {
+      "bestand": "allesgut-02-paars-silhouet",
+      "bron": "page_8.png",
+      "crop": "rechts",
+      "pers": true,
+      "titel": {
+        "nl": "allesgut — paars silhouet",
+        "en": "allesgut — purple silhouette",
+        "fr": "allesgut — silhouette violette"
+      },
+      "hires": {
+        "bestand": "allesgut-02-paars-silhouet.jpg",
+        "w": 2599,
+        "h": 3674,
+        "bytes": 303816,
+        "cm": "22.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-02-paars-silhouet-web.jpg",
+        "w": 1132,
+        "h": 1600,
+        "bytes": 55386
+      }
+    },
+    {
+      "bestand": "allesgut-03-figuur-in-stoel",
+      "bron": "page_44.png",
+      "crop": "rechts",
+      "pers": true,
+      "titel": {
+        "nl": "allesgut — figuur in stoel",
+        "en": "allesgut — figure in a chair",
+        "fr": "allesgut — figure dans un fauteuil"
+      },
+      "hires": {
+        "bestand": "allesgut-03-figuur-in-stoel.jpg",
+        "w": 2599,
+        "h": 3674,
+        "bytes": 831973,
+        "cm": "22.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-03-figuur-in-stoel-web.jpg",
+        "w": 1132,
+        "h": 1600,
+        "bytes": 184146
+      }
+    },
+    {
+      "bestand": "allesgut-04-cover",
+      "bron": "page_1.png",
+      "crop": "spread",
+      "pers": false,
+      "titel": {
+        "nl": "allesgut — cover van het kunstenaarsboek (MER Books, 2026)",
+        "en": "allesgut — cover of the artist's book (MER Books, 2026)",
+        "fr": "allesgut — couverture du livre d'artiste (MER Books, 2026)"
+      },
+      "hires": {
+        "bestand": "allesgut-04-cover.jpg",
+        "w": 2599,
+        "h": 3674,
+        "bytes": 169872,
+        "cm": "22.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-04-cover-web.jpg",
+        "w": 1132,
+        "h": 1600,
+        "bytes": 35536
+      }
+    },
+    {
+      "bestand": "allesgut-05-naakt-en-rode-stoel",
+      "bron": "page_17.png",
+      "crop": "spread",
+      "pers": false,
+      "titel": {
+        "nl": "allesgut — naakt en rode stoel (spread)",
+        "en": "allesgut — nude and red chair (spread)",
+        "fr": "allesgut — nu et chaise rouge (double page)"
+      },
+      "hires": {
+        "bestand": "allesgut-05-naakt-en-rode-stoel.jpg",
+        "w": 5197,
+        "h": 3674,
+        "bytes": 2131405,
+        "cm": "44.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-05-naakt-en-rode-stoel-web.jpg",
+        "w": 1600,
+        "h": 1131,
+        "bytes": 235483
+      }
+    },
+    {
+      "bestand": "allesgut-06-bloemen-en-figuur",
+      "bron": "page_28.png",
+      "crop": "spread",
+      "pers": false,
+      "titel": {
+        "nl": "allesgut — bloemen en figuur (spread)",
+        "en": "allesgut — flowers and figure (spread)",
+        "fr": "allesgut — fleurs et figure (double page)"
+      },
+      "hires": {
+        "bestand": "allesgut-06-bloemen-en-figuur.jpg",
+        "w": 5197,
+        "h": 3674,
+        "bytes": 1943178,
+        "cm": "44.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-06-bloemen-en-figuur-web.jpg",
+        "w": 1600,
+        "h": 1131,
+        "bytes": 225463
+      }
+    },
+    {
+      "bestand": "allesgut-07-gesplitst-gezicht",
+      "bron": "page_23.png",
+      "crop": "rechts",
+      "pers": false,
+      "titel": {
+        "nl": "allesgut — gesplitst gezicht",
+        "en": "allesgut — split face",
+        "fr": "allesgut — visage scindé"
+      },
+      "hires": {
+        "bestand": "allesgut-07-gesplitst-gezicht.jpg",
+        "w": 2599,
+        "h": 3674,
+        "bytes": 411531,
+        "cm": "22.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-07-gesplitst-gezicht-web.jpg",
+        "w": 1132,
+        "h": 1600,
+        "bytes": 84048
+      }
+    },
+    {
+      "bestand": "allesgut-08-gezicht-in-licht",
+      "bron": "page_101.png",
+      "crop": "rechts",
+      "pers": false,
+      "titel": {
+        "nl": "allesgut — gezicht in licht",
+        "en": "allesgut — face in light",
+        "fr": "allesgut — visage dans la lumière"
+      },
+      "hires": {
+        "bestand": "allesgut-08-gezicht-in-licht.jpg",
+        "w": 2599,
+        "h": 3674,
+        "bytes": 920943,
+        "cm": "22.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-08-gezicht-in-licht-web.jpg",
+        "w": 1132,
+        "h": 1600,
+        "bytes": 189373
+      }
+    },
+    {
+      "bestand": "allesgut-09-konijnenoren",
+      "bron": "page_75.png",
+      "crop": "spread",
+      "pers": false,
+      "titel": {
+        "nl": "allesgut — figuren met konijnenoren (spread)",
+        "en": "allesgut — figures with rabbit ears (spread)",
+        "fr": "allesgut — figures aux oreilles de lapin (double page)"
+      },
+      "hires": {
+        "bestand": "allesgut-09-konijnenoren.jpg",
+        "w": 5197,
+        "h": 3674,
+        "bytes": 2773018,
+        "cm": "44.0 × 31.1 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "allesgut-09-konijnenoren-web.jpg",
+        "w": 1600,
+        "h": 1131,
+        "bytes": 350448
+      }
+    },
+    {
+      "bestand": "denode-foundation-logo",
+      "bron": "site-ink/assets/denode-logo-black.png",
+      "crop": "spread",
+      "formaat": "png",
+      "pers": true,
+      "maker": "Stichting DeNode",
+      "positie": "Uitgever / Publisher",
+      "copyright": "© Stichting DeNode",
+      "credit": {
+        "nl": "Logo van Stichting DeNode / DeNode Foundation — vrij te gebruiken bij berichtgeving",
+        "en": "Logo of Stichting DeNode / DeNode Foundation — free to use in coverage",
+        "fr": "Logo de la Stichting DeNode / DeNode Foundation — libre d'utilisation dans la couverture"
+      },
+      "titel": {
+        "nl": "DeNode Foundation — logo (zwart, transparant)",
+        "en": "DeNode Foundation — logo (black, transparent)",
+        "fr": "DeNode Foundation — logo (noir, transparent)"
+      },
+      "hires": {
+        "bestand": "denode-foundation-logo.png",
+        "w": 1808,
+        "h": 1036,
+        "bytes": 46398,
+        "cm": "15.3 × 8.8 cm @ 300 dpi"
+      },
+      "web": {
+        "bestand": "denode-foundation-logo-web.png",
+        "w": 1600,
+        "h": 917,
+        "bytes": 149028
+      }
+    }
+  ],
+  "zip": {
+    "bestand": "allesgut-persmap.zip",
+    "bytes": 10025157,
+    "pdfs": [
+      "persbericht-allesgut-bjorn-wandels-en.pdf",
+      "persbericht-allesgut-bjorn-wandels-fr.pdf",
+      "persbericht-allesgut-bjorn-wandels-nl.pdf"
+    ],
+    "beelden": 10
+  },
+  "gegenereerd": "2026-09-06"
+}

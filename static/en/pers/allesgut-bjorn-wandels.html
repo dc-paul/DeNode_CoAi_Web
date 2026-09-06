@@ -1,0 +1,292 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Björn Wandels — allesgut — DeNode Foundation</title>
+<meta name="description" content="Solo exhibition &amp; book launch">
+<meta property="og:title" content="Björn Wandels — allesgut — DeNode Foundation">
+<meta property="og:description" content="Solo exhibition &amp; book launch">
+<meta property="og:image" content="https://www.denode.be/_assets/pers/allesgut/allesgut-04-cover-web.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.denode.be/en/pers/allesgut-bjorn-wandels.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://www.denode.be/nl/pers/allesgut-bjorn-wandels.html"><link rel="alternate" hreflang="en" href="https://www.denode.be/en/pers/allesgut-bjorn-wandels.html"><link rel="alternate" hreflang="fr" href="https://www.denode.be/fr/pers/allesgut-bjorn-wandels.html"><link rel="alternate" hreflang="x-default" href="https://www.denode.be/nl/pers/allesgut-bjorn-wandels.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */
+.dn-gal--pers figcaption{white-space:normal;overflow:visible;text-overflow:clip;text-transform:none;letter-spacing:.02em;font-size:12px;line-height:1.55;color:var(--ink);}
+.dn-gal--pers figcaption .dn-credit{display:block;font-size:11px;color:var(--muted);}
+.dn-gal--pers figcaption a{display:inline-block;margin-top:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.dn-gal--pers img{cursor:zoom-in;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
+/* expo-kop-beeld: volledig getoond, gecentreerd, nooit gecropt (Kristof 9 jul 2026) */
+.dn-expokop{margin:0;text-align:center;}
+.dn-expokop img{max-width:100%;max-height:62vh;width:auto;height:auto;cursor:zoom-in;}
+/* expo-kop: titelblok naast het beeld (Paul 9 jul 2026) */
+.dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
+.dn-expokop2 .dn-expokop img{max-height:56vh;}
+@media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
+/* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
+.dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: alle blokken even groot. De dubbele breedte voor het eerste blok is op
+   1 sep 2026 teruggedraaid — Paul wil Björn en Kat in evenwicht. De volgorde in home.md
+   bepaalt nog wel wie eerst staat. */
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
+/* ONDERKAST-NAMEN (Paul 1 sep 2026, route B): werk- en merknamen houden hun eigen
+   schrijfwijze, ook als titel — "allesgut", "nodenaysteen". De Ink-stijl zet .dn-h1/.dn-h2/
+   .dn-h3/.dn-card h3/.dn-crumb in kapitalen; staat er zo'n naam in de kop, dan zet de
+   generator de klasse dn-asis en rendert de titel zoals ze geschreven is. Onderkast leest optisch
+   kleiner, dus de twee grote koppen krijgen ~8% meer korps en strakkere letterafstand.
+   NIET in denode-ink.css zetten: dat bestand wordt bij elke build uit INKDIR gekopieerd. */
+h1.dn-asis,h2.dn-asis,h3.dn-asis,.dn-card h3.dn-asis,.dn-crumb.dn-asis,.dn-asis{text-transform:none;}
+.dn-h1.dn-asis{font-size:clamp(48px,7vw,96px);letter-spacing:-.012em;}
+.dn-h2.dn-asis{font-size:clamp(30px,4.3vw,50px);letter-spacing:-.004em;}
+.dn-h3.dn-asis{letter-spacing:0;}
+.dn-card h3.dn-asis{font-size:23px;letter-spacing:0;}
+.dn-crumb.dn-asis{letter-spacing:.06em;}
+
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{border:1px solid var(--line);} /* sizing komt van de max-height-regel hierboven — width:100% rekte staande foto's uit (Paul 9 jul 2026) */
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+/* nieuwsbriefarchief: sobere tekstlijst — datum · titel · kunstenaars, geen kaarten/display-kapitalen (Paul 11 jul 2026) */
+.dn-nblijst{list-style:none;margin:0;padding:0;}
+.dn-nblijst li{border-bottom:1px solid var(--line);}
+.dn-nblijst a{display:block;padding:14px 0;text-decoration:none;color:var(--ink);font-family:var(--font-ui);font-size:15px;line-height:1.55;}
+.dn-nblijst .d{color:#7a7466;font-size:13px;letter-spacing:.08em;margin-right:14px;white-space:nowrap;}
+.dn-nblijst .t{font-weight:600;}
+.dn-nblijst .wie{color:#7a7466;}
+.dn-nblijst a:hover .t{color:var(--accent);}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+/* nav paste niet meer op één lijn na het Programma-item (Paul 9 jul 2026):
+   compactere typografie + hamburger springt al in vanaf 1120px i.p.v. 820px */
+.dn-nav ul{gap:20px;}
+.dn-nav a{letter-spacing:.09em;}
+@media(max-width:1120px){.dn-nav ul{display:none;}.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:contain;aspect-ratio:4/3;}
+/* kunstenaar-portretten in kaarten: nooit croppen — volledige foto zichtbaar; per-kunstenaar override via beeldFit/beeldFocus (Paul 9 jul 2026, consistent site-breed) */
+#dn-kgrid .dn-card .thumb img,#dn-kgrid2 .dn-card .thumb img{object-fit:contain;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna/Hilde): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* eyebrow ("KUNSTENAAR"/"EXPO"-label): ademruimte boven de display-titel — diakrieten (Ö) liepen tegen het label (Paul 9 jul 2026) */
+.dn-eyebrow{margin-bottom:12px;}
+/* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
+.dn-grid--team{grid-template-columns:repeat(2,1fr);}
+@media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): natuurlijke verhoudingen met hoogte-plafond — geen 3:2-letterbox meer (Paul 11 jul 2026: lange smalle werken zoals Ines Claus werden 'gepropt'), geen caption-herhaling */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{width:auto;max-width:100%;height:auto;max-height:70vh;object-fit:unset;display:block;margin:0 auto;}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+/* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
+   anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
+.dn-gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+.dn-gal figure{min-width:0;}
+.dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
+.dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* Instagram-blok: merknaam "DeNode" niet uppercasen + posts volledig tonen (portret-frame, geen crop) */
+#dn-ig-sectie .dn-h2{text-transform:none;}
+#dn-ig-grid .thumb{aspect-ratio:4/5;background:var(--paper2);}
+#dn-ig-grid .thumb img{object-fit:contain;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body>
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../programma.html">Programme</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Search" title="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/pers/allesgut-bjorn-wandels.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/pers/allesgut-bjorn-wandels.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Exhibitions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artists</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Visit</a><a href="../over.html">About</a><a href="../pers.html">Press</a><a href="../zoeken.html">Search</a></div>
+</header>
+<div class="dn-wrap"><div class="dn-crumb dn-asis"><a href="../pers.html">Press</a> / Björn Wandels — allesgut</div></div>
+
+<section class="dn-section"><div class="dn-wrap"><div class="dn-cols">
+<div>
+<div class="dn-eyebrow" style="margin-bottom:22px">Press release · Ghent, September 2026</div>
+<h1 class="dn-h1 dn-asis"><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a> — allesgut</h1>
+<div class="dn-serif-it" style="font-size:21px;margin-top:20px">Solo exhibition &amp; book launch</div>
+<div class="dn-kicker" style="margin-top:14px">Opening Fri 11.09.2026 · Exhibition 12.09 – 04.10.2026 · Book talk Sun 20.09.2026</div>
+<div class="dn-prose" style="margin-top:26px"><p><strong>Ghent, September 2026</strong> — DeNode Foundation presents <em>allesgut</em>, the first solo exhibition at DeNode by Ghent-based artist Björn Wandels (b. 1979), accompanied on Friday 11 September by the launch of an artist's book of the same name, published by MER Books. The opening and book launch take place on Friday 11 September from 6 to 9 pm; the exhibition runs until 4 October 2026.</p>
+<p>Can a book become an exhibition? With <em>allesgut</em>, Wandels presents a project in which book and exhibition are two forms of one autonomous artwork. The artist's book grew out of a long process of collecting, ordering and reordering images. Photography here is never simply a means of representation, but a way of questioning memory, perception and the position of the image itself.</p>
+<p>For Wandels, images never stand alone. They refer to other images, memories, absences and possible new connections. The family album, the personal archive and the act of reframing have long been part of this investigation. What appears to preserve a moment is already the result of selection, displacement and editing.</p>
+<p>The exhibition translates this logic into space. Rather than illustrating the book, it extends its way of thinking: sequences, repetitions and associations move beyond the page and are reconsidered through installation, scale and proximity. The book asks for time; the exhibition gives it room.</p>
+<blockquote class="dn-quote">allesgut is a book and possibly an exhibition, insofar as it can be exhibited. — Björn Wandels</blockquote>
+<h2 class="dn-h3" id="about-the-artist">About the artist</h2>
+<p>Björn Wandels (Ghent, 1979) works across a wide range of media in a hybrid practice. He paints photographs from the darkroom, photographs drawings and gives sound a cinematic form; through short videos and collage loops he builds installations in which poetry and typography also find a place. He studied photography for several years at KASK in Ghent. Following his vitrine projection at DeNode in 2024, <em>allesgut</em> is his first solo exhibition at DeNode Foundation.</p>
+<h2 class="dn-h3" id="the-book">The book</h2>
+<p>The artist's book <em>allesgut</em> is published by MER Books (Luc Derycke) in coproduction with DeNode Foundation, in an edition of 400 copies. It is on sale for € 38 at the gallery and via denode.be. The exhibition scenography is by Anja Hellebaut.</p>
+<h2 class="dn-h3" id="practical">Practical</h2>
+<ul>
+<li><strong>Venue:</strong> Galerie DeNode — nodenaysteen, Predikherenlei 4, 9000 Ghent, Belgium</li>
+<li><strong>Opening &amp; book launch:</strong> Friday 11 September 2026, 6 – 9 pm</li>
+<li><strong>Exhibition:</strong> 12 September – 4 October 2026 · Thu–Sat 2 – 6 pm, Sun 11 am – 5 pm, or by appointment</li>
+<li><strong>Book talk:</strong> Sunday 20 September 2026, 11 am – 1 pm — with Björn Wandels, Anja Hellebaut and Luc Derycke (MER Books)</li>
+<li><strong>Admission:</strong> free · the Predikherenlei is car-free (Parking Sint-Michiels is a 3-minute walk; free bicycle parking at Korenmarkt)</li>
+</ul>
+<h2 class="dn-h3" id="press">Press</h2>
+<p>Press contact: <a href="../kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a> — kristof@denode.be — +32 488 88 08 89. The press release (NL/EN/FR) and high-resolution images are available in the press kit at www.denode.be/en/pers.html. Interviews with the artist can be arranged on request.</p>
+<h2 class="dn-h3" id="about-denode-foundation">About DeNode Foundation</h2>
+<p>DeNode Foundation is a Ghent-based non-profit organisation dedicated to supporting contemporary art — a platform for research, creation and dialogue. The foundation focuses on long-term projects and in-depth research, where the process is at least as important as the end result. DeNode is a vibrant ecosystem where exhibitions, residencies, public programmes and editorial projects come together, bridging the Ghent scene and the international art field.</p>
+<p>Stichting DeNode · Galerie DeNode — nodenaysteen · Predikherenlei 4, 9000 Ghent · VAT BE1019591051 · denode.be</p></div>
+</div>
+<div>
+<figure class="dn-pubcover"><img src="/_assets/pers/allesgut/allesgut-04-cover-web.jpg" alt="Björn Wandels — allesgut"></figure>
+<h3 class="dn-h3" style="margin:26px 0 14px">Downloads</h3>
+<p style="margin:0"><a class="dn-btn" href="/_assets/pers/allesgut/allesgut-persmap.zip" download style="flex-direction:column;align-items:flex-start;gap:4px">Download the press kit · 10.0 MB<span style="opacity:.7;font-weight:400;letter-spacing:.04em;text-transform:none;font-size:12px">press release NL/EN/FR + 10 high-resolution images · zip</span></a></p>
+<p class="dn-note" style="margin:14px 0 0;text-transform:none;letter-spacing:.02em;font-size:12px">Press release only (PDF): <a href="/_assets/pers/allesgut/persbericht-allesgut-bjorn-wandels-nl.pdf" download style="color:var(--accent)">Nederlands</a> · <a href="/_assets/pers/allesgut/persbericht-allesgut-bjorn-wandels-en.pdf" download style="color:var(--accent)">English</a> · <a href="/_assets/pers/allesgut/persbericht-allesgut-bjorn-wandels-fr.pdf" download style="color:var(--accent)">Français</a></p>
+<dl class="dn-dl" style="margin-top:26px"><dt>Press release</dt><dd>Ghent, September 2026</dd><dt>Exhibition</dt><dd><a href="../expo/bjorn-wandels-allesgut.html">allesgut</a> · 11.09.26 – 04.10.26</dd><dt>Artist</dt><dd><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a></dd><dt>Press contact</dt><dd>Kristof Vander Cruyssen<br><a href="mailto:kristof@denode.be">kristof@denode.be</a><br><a href="tel:+32488880889">+32 488 88 08 89</a></dd></dl>
+</div></div></div></section>
+<section class="dn-section" style="padding-top:0"><div class="dn-wrap">
+<div class="dn-head" id="beelden"><h2 class="dn-h2">Press images</h2><a href="/_assets/pers/allesgut/allesgut-persmap.zip" download>Download the press kit · 10.0 MB</a></div>
+<p class="dn-note" style="margin:-16px 0 28px;max-width:80ch;text-transform:none;letter-spacing:0;font-size:13px">Free to use for coverage of the exhibition allesgut (DeNode Foundation, 11.09 – 04.10.2026), with the credit © Björn Wandels. Please do not crop or alter without permission.</p>
+<div class="dn-gal dn-gal--3 dn-gal--pers"><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-01-logo-web.jpg" alt="allesgut — logo (stamp)" data-cap="Björn Wandels, allesgut — logo (stamp) — © 2026 Björn Wandels">
+<figcaption>allesgut — logo (stamp)<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-01-logo.jpg" download style="color:var(--accent)">Download high resolution (1332 × 1820 px · 553 kB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-02-paars-silhouet-web.jpg" alt="allesgut — purple silhouette" data-cap="Björn Wandels, allesgut — purple silhouette — © 2026 Björn Wandels">
+<figcaption>allesgut — purple silhouette<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-02-paars-silhouet.jpg" download style="color:var(--accent)">Download high resolution (2599 × 3674 px · 304 kB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-03-figuur-in-stoel-web.jpg" alt="allesgut — figure in a chair" data-cap="Björn Wandels, allesgut — figure in a chair — © 2026 Björn Wandels">
+<figcaption>allesgut — figure in a chair<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-03-figuur-in-stoel.jpg" download style="color:var(--accent)">Download high resolution (2599 × 3674 px · 832 kB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-04-cover-web.jpg" alt="allesgut — cover of the artist's book (MER Books, 2026)" data-cap="Björn Wandels, allesgut — cover of the artist's book (MER Books, 2026) — © 2026 Björn Wandels">
+<figcaption>allesgut — cover of the artist's book (MER Books, 2026)<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-04-cover.jpg" download style="color:var(--accent)">Download high resolution (2599 × 3674 px · 170 kB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-05-naakt-en-rode-stoel-web.jpg" alt="allesgut — nude and red chair (spread)" data-cap="Björn Wandels, allesgut — nude and red chair (spread) — © 2026 Björn Wandels">
+<figcaption>allesgut — nude and red chair (spread)<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-05-naakt-en-rode-stoel.jpg" download style="color:var(--accent)">Download high resolution (5197 × 3674 px · 2.1 MB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-06-bloemen-en-figuur-web.jpg" alt="allesgut — flowers and figure (spread)" data-cap="Björn Wandels, allesgut — flowers and figure (spread) — © 2026 Björn Wandels">
+<figcaption>allesgut — flowers and figure (spread)<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-06-bloemen-en-figuur.jpg" download style="color:var(--accent)">Download high resolution (5197 × 3674 px · 1.9 MB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-07-gesplitst-gezicht-web.jpg" alt="allesgut — split face" data-cap="Björn Wandels, allesgut — split face — © 2026 Björn Wandels">
+<figcaption>allesgut — split face<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-07-gesplitst-gezicht.jpg" download style="color:var(--accent)">Download high resolution (2599 × 3674 px · 412 kB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-08-gezicht-in-licht-web.jpg" alt="allesgut — face in light" data-cap="Björn Wandels, allesgut — face in light — © 2026 Björn Wandels">
+<figcaption>allesgut — face in light<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-08-gezicht-in-licht.jpg" download style="color:var(--accent)">Download high resolution (2599 × 3674 px · 921 kB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/allesgut-09-konijnenoren-web.jpg" alt="allesgut — figures with rabbit ears (spread)" data-cap="Björn Wandels, allesgut — figures with rabbit ears (spread) — © 2026 Björn Wandels">
+<figcaption>allesgut — figures with rabbit ears (spread)<span class="dn-credit">© 2026 Björn Wandels · Courtesy the artist and DeNode Foundation, Ghent</span><a href="/_assets/pers/allesgut/allesgut-09-konijnenoren.jpg" download style="color:var(--accent)">Download high resolution (5197 × 3674 px · 2.8 MB) ↓</a></figcaption></figure><figure><img loading="lazy" src="/_assets/pers/allesgut/denode-foundation-logo-web.png" alt="DeNode Foundation — logo (black, transparent)" data-cap="Stichting DeNode, DeNode Foundation — logo (black, transparent) — © Stichting DeNode">
+<figcaption>DeNode Foundation — logo (black, transparent)<span class="dn-credit">© Stichting DeNode · Logo of Stichting DeNode / DeNode Foundation — free to use in coverage</span><a href="/_assets/pers/allesgut/denode-foundation-logo.png" download style="color:var(--accent)">Download high resolution (1808 × 1036 px · 46 kB) ↓</a></figcaption></figure></div></div></section><section class="dn-section" style="padding-top:0"><div class="dn-wrap"><p><a href="../pers.html">← Back to press</a></p></div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Discover</h4><ul class="fnav">
+<li><a href="../expo/index.html">Exhibitions</a></li>
+<li><a href="../kunstenaar/index.html">Artists</a></li>
+<li><a href="../publicaties.html">Publications</a></li>
+<li><a href="../collectie.html">Collection</a></li>
+<li><a href="../shop.html">Shop</a></li>
+<li><a href="../event/index.html">Events</a></li>
+<li><a href="../geschiedenis.html">History</a></li>
+<li><a href="../pers.html">Press</a></li></ul></div>
+<div><h4>Involved</h4><ul class="fnav">
+<li><a href="../bezoek.html">Visit</a></li>
+<li><a href="../over.html">About</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../nieuwsbrief.html">Newsletter</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">The DeNode Foundation is a home for contemporary art in the heart of Ghent.</span></div></div></footer>
+</body></html>

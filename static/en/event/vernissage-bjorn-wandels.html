@@ -22,6 +22,11 @@
 .dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */
+.dn-gal--pers figcaption{white-space:normal;overflow:visible;text-overflow:clip;text-transform:none;letter-spacing:.02em;font-size:12px;line-height:1.55;color:var(--ink);}
+.dn-gal--pers figcaption .dn-credit{display:block;font-size:11px;color:var(--muted);}
+.dn-gal--pers figcaption a{display:inline-block;margin-top:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.dn-gal--pers img{cursor:zoom-in;}
 /* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
 figure figcaption{color:var(--ink);}
 figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
@@ -184,7 +189,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
 <nav class="dn-nav"><ul><li><a href="../expo/index.html">Exhibitions</a></li><li><a href="../programma.html">Programme</a></li><li><a href="../kunstenaar/index.html">Artists</a></li><li><a href="../publicaties.html">Publications</a></li><li><a href="../shop.html">Shop</a></li><li><a href="../bezoek.html">Visit</a></li><li><a href="../over.html">About</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Search" title="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../../nl/event/vernissage-bjorn-wandels.html">NL</a><span class="lg active">EN</span><a class="lg" href="../../fr/event/vernissage-bjorn-wandels.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
 </div></div>
-<div id="dn-mobielmenu"><a href="../expo/index.html">Exhibitions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artists</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Visit</a><a href="../over.html">About</a><a href="../zoeken.html">Search</a></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Exhibitions</a><a href="../programma.html">Programme</a><a href="../kunstenaar/index.html">Artists</a><a href="../publicaties.html">Publications</a><a href="../collectie.html">Collection</a><a href="../shop.html">Shop</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Visit</a><a href="../over.html">About</a><a href="../pers.html">Press</a><a href="../zoeken.html">Search</a></div>
 </header>
 <div class="dn-wrap"><div class="dn-crumb dn-asis"><a href="index.html">Events</a> / Opening — allesgut</div></div>
 
@@ -239,7 +244,8 @@ lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedT
 <li><a href="../collectie.html">Collection</a></li>
 <li><a href="../shop.html">Shop</a></li>
 <li><a href="../event/index.html">Events</a></li>
-<li><a href="../geschiedenis.html">History</a></li></ul></div>
+<li><a href="../geschiedenis.html">History</a></li>
+<li><a href="../pers.html">Press</a></li></ul></div>
 <div><h4>Involved</h4><ul class="fnav">
 <li><a href="../bezoek.html">Visit</a></li>
 <li><a href="../over.html">About</a></li>
