@@ -1,47 +1,47 @@
 {
-  "updated": "2026-09-16T04:00:03.535Z",
+  "updated": "2026-09-16T13:15:28.464Z",
   "posts": [
     {
       "img": "/assets/ig/1.jpg",
+      "permalink": "https://www.instagram.com/reel/DdWLyv1Mnk7/",
+      "caption": "He’s here! Monsieur Térez has arrived at DeNode Foundation, and the Fabulisterie is about to begin. Our first Become a Fabulist workshop ta…",
+      "type": "VIDEO",
+      "timestamp": "2026-09-16T11:37:26+0000"
+    },
+    {
+      "img": "/assets/ig/2.jpg",
+      "permalink": "https://www.instagram.com/p/DdWIRIsAPvR/",
+      "caption": "ARTIST TALK — BJÖRN WANDELS / allesgut This Sunday, join us at DeNode Foundation for a conversation around Björn Wandels’ allesgut and the …",
+      "type": "CAROUSEL_ALBUM",
+      "timestamp": "2026-09-16T11:00:40+0000"
+    },
+    {
+      "img": "/assets/ig/3.jpg",
       "permalink": "https://www.instagram.com/p/DdO6fAgACwN/",
       "caption": "What an opening. 🤍 Thank you to everyone who came to celebrate the opening of Björn Wandels’ allesgut with us at DeNode Foundation. It was…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-13T15:45:32+0000"
     },
     {
-      "img": "/assets/ig/2.jpg",
+      "img": "/assets/ig/4.jpg",
       "permalink": "https://www.instagram.com/p/DdDs8C1keaJ/",
       "caption": "From image to language — allesgut At a certain point, Björn Wandels began treating language as he had once treated the photographic image: …",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-09T07:15:31+0000"
     },
     {
-      "img": "/assets/ig/3.jpg",
+      "img": "/assets/ig/5.jpg",
       "permalink": "https://www.instagram.com/p/Dc-0WJREYl7/",
       "caption": "There is one idea that appears again and again in Björn Wandels’ practice: INVERSE. Instead of perfecting a medium according to its own rul…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-07T09:44:03+0000"
     },
     {
-      "img": "/assets/ig/4.jpg",
+      "img": "/assets/ig/6.jpg",
       "permalink": "https://www.instagram.com/reel/Dc-xHZ9xT4l/",
       "caption": "WHAT IF YOU COULD BUILD AN EXHIBITION? Not just visit one. This September, step inside the world of Monsieur Térez. CUSTOMISE FURNITURE. PA…",
       "type": "VIDEO",
       "timestamp": "2026-09-07T09:21:18+0000"
-    },
-    {
-      "img": "/assets/ig/5.jpg",
-      "permalink": "https://www.instagram.com/p/Dc54G_mANFC/",
-      "caption": "Björn Wandels × Anja Hellebaut — shaping allesgut allesgut is also the result of a close collaboration between Björn Wandels and Anja Helle…",
-      "type": "CAROUSEL_ALBUM",
-      "timestamp": "2026-09-05T11:40:44+0000"
-    },
-    {
-      "img": "/assets/ig/6.jpg",
-      "permalink": "https://www.instagram.com/p/DcyMMhEABJ5/",
-      "caption": "WHO IS MONSIEUR TÉREZ? Behind Monsieur Térez is Régis Estérez, a French artist born in 1974, who lives and works in Pau (south of France) F…",
-      "type": "IMAGE",
-      "timestamp": "2026-09-02T12:04:33+0000"
     }
   ]
 }
