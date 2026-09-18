@@ -1,47 +1,47 @@
 {
-  "updated": "2026-09-18T12:48:18.552Z",
+  "updated": "2026-09-18T18:56:16.021Z",
   "posts": [
     {
       "img": "/assets/ig/1.jpg",
+      "permalink": "https://www.instagram.com/p/DdbpoXPAF9M/",
+      "caption": "KLAAR OM EEN FABULIST TE WORDEN? Monsieur Térez is er helemaal klaar voor, en DeNode Foundation kijkt ernaar uit om jullie te verwelkomen i…",
+      "type": "CAROUSEL_ALBUM",
+      "timestamp": "2026-09-18T14:28:24+0000"
+    },
+    {
+      "img": "/assets/ig/2.jpg",
+      "permalink": "https://www.instagram.com/p/DdboDMUgPoj/",
+      "caption": "Björn Wandels — allesgut ‘SCREEN’ edition Edition: 12 + 1 AP Dimensions: 27 × 39.2 cm Framed dimensions: 28 × 40 cm Technique: Archival pig…",
+      "type": "CAROUSEL_ALBUM",
+      "timestamp": "2026-09-18T14:14:35+0000"
+    },
+    {
+      "img": "/assets/ig/3.jpg",
       "permalink": "https://www.instagram.com/reel/DdWLyv1Mnk7/",
       "caption": "He’s here! Monsieur Térez has arrived at DeNode Foundation, and the Fabulisterie is about to begin. Our first Become a Fabulist workshop ta…",
       "type": "VIDEO",
       "timestamp": "2026-09-16T11:37:26+0000"
     },
     {
-      "img": "/assets/ig/2.jpg",
+      "img": "/assets/ig/4.jpg",
       "permalink": "https://www.instagram.com/p/DdWIRIsAPvR/",
       "caption": "ARTIST TALK — BJÖRN WANDELS / allesgut This Sunday, join us at DeNode Foundation for a conversation around Björn Wandels’ allesgut and the …",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-16T11:00:40+0000"
     },
     {
-      "img": "/assets/ig/3.jpg",
+      "img": "/assets/ig/5.jpg",
       "permalink": "https://www.instagram.com/p/DdO6fAgACwN/",
       "caption": "What an opening. 🤍 Thank you to everyone who came to celebrate the opening of Björn Wandels’ allesgut with us at DeNode Foundation. It was…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-13T15:45:32+0000"
     },
     {
-      "img": "/assets/ig/4.jpg",
+      "img": "/assets/ig/6.jpg",
       "permalink": "https://www.instagram.com/p/DdDs8C1keaJ/",
       "caption": "From image to language — allesgut At a certain point, Björn Wandels began treating language as he had once treated the photographic image: …",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-09T07:15:31+0000"
-    },
-    {
-      "img": "/assets/ig/5.jpg",
-      "permalink": "https://www.instagram.com/p/Dc-0WJREYl7/",
-      "caption": "There is one idea that appears again and again in Björn Wandels’ practice: INVERSE. Instead of perfecting a medium according to its own rul…",
-      "type": "CAROUSEL_ALBUM",
-      "timestamp": "2026-09-07T09:44:03+0000"
-    },
-    {
-      "img": "/assets/ig/6.jpg",
-      "permalink": "https://www.instagram.com/reel/Dc-xHZ9xT4l/",
-      "caption": "WHAT IF YOU COULD BUILD AN EXHIBITION? Not just visit one. This September, step inside the world of Monsieur Térez. CUSTOMISE FURNITURE. PA…",
-      "type": "VIDEO",
-      "timestamp": "2026-09-07T09:21:18+0000"
     }
   ]
 }
