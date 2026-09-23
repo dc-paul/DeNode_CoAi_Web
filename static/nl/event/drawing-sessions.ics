@@ -23,7 +23,7 @@ UID:drawing-sessions-s1-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20260924T193000
 DTEND;TZID=Europe/Brussels:20260924T213000
 SUMMARY:Modelstudie op donderdag — do 24 sep
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -31,7 +31,7 @@ UID:drawing-sessions-s2-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20261008T193000
 DTEND;TZID=Europe/Brussels:20261008T213000
 SUMMARY:Modelstudie op donderdag — do 8 okt
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -39,7 +39,7 @@ UID:drawing-sessions-s3-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20261022T193000
 DTEND;TZID=Europe/Brussels:20261022T213000
 SUMMARY:Modelstudie op donderdag — do 22 okt
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -47,7 +47,7 @@ UID:drawing-sessions-s4-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20261119T193000
 DTEND;TZID=Europe/Brussels:20261119T213000
 SUMMARY:Modelstudie op donderdag — do 19 nov
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -55,7 +55,7 @@ UID:drawing-sessions-s5-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20261203T193000
 DTEND;TZID=Europe/Brussels:20261203T213000
 SUMMARY:Modelstudie op donderdag — do 3 dec
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -63,7 +63,7 @@ UID:drawing-sessions-s6-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20261217T193000
 DTEND;TZID=Europe/Brussels:20261217T213000
 SUMMARY:Modelstudie op donderdag — do 17 dec
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 END:VCALENDAR

@@ -23,7 +23,7 @@ UID:drawing-sessions-s4-nl@denode.be
 DTSTART;TZID=Europe/Brussels:20261119T193000
 DTEND;TZID=Europe/Brussels:20261119T213000
 SUMMARY:Modelstudie op donderdag — do 19 nov
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/nl/event/drawing-sessions.html
 END:VEVENT
 END:VCALENDAR

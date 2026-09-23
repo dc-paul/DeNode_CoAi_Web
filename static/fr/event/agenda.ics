@@ -64,7 +64,7 @@ UID:drawing-sessions-s1-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20260924T193000
 DTEND;TZID=Europe/Brussels:20260924T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 24 sept
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -72,7 +72,7 @@ UID:drawing-sessions-s2-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20261008T193000
 DTEND;TZID=Europe/Brussels:20261008T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 8 oct
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -80,7 +80,7 @@ UID:drawing-sessions-s3-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20261022T193000
 DTEND;TZID=Europe/Brussels:20261022T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 22 oct
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -88,7 +88,7 @@ UID:drawing-sessions-s4-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20261119T193000
 DTEND;TZID=Europe/Brussels:20261119T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 19 nov
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -96,7 +96,7 @@ UID:drawing-sessions-s5-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20261203T193000
 DTEND;TZID=Europe/Brussels:20261203T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 3 déc
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
 END:VEVENT
 BEGIN:VEVENT
@@ -104,7 +104,47 @@ UID:drawing-sessions-s6-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20261217T193000
 DTEND;TZID=Europe/Brussels:20261217T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 17 déc
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ganda-2026-s1-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261127T170000
+DTEND;TZID=Europe/Brussels:20261127T220000
+SUMMARY:Parcours G.AN.D.A. — nocturne d'ouverture chez DeNode
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/ganda-2026.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ganda-2026-s2-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261128T110000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:Parcours G.AN.D.A. chez DeNode
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/ganda-2026.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ganda-2026-s3-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261129T110000
+DTEND;TZID=Europe/Brussels:20261129T180000
+SUMMARY:Parcours G.AN.D.A. chez DeNode
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/ganda-2026.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ganda-2026-s4-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T180000
+SUMMARY:Parcours G.AN.D.A. chez DeNode
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/ganda-2026.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ganda-2026-s5-fr@denode.be
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T180000
+SUMMARY:Parcours G.AN.D.A. chez DeNode
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/fr/event/ganda-2026.html
 END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,6 @@
 {
   "event/become-a-fabulist/affiche-become-a-fabulist.jpg": "Mathieu Thomassin",
+  "event/ganda-2026/affiche-ganda-2026.jpg": "G.AN.D.A. kunstroute",
   "expo/bjorn-wandels-allesgut/allesgut-beeldpaginas.jpg": "Anja Hellebaut, Mentormentor",
   "expo/exponential-1/Node_EXPOnential---2.jpg": "Paul De Cannière",
   "expo/exponential-1/Node_Philippe---1.jpg": "Paul De Cannière",
@@ -113,19 +114,19 @@
   "kunstenaar/monsieur-terez/monsieur-terez-portret-00.jpg": "Mathieu Thomassin",
   "kunstenaar/monsieur-terez/monsieur-terez-portret-01.jpg": "Mathieu Thomassin",
   "kunstenaar/robrecht-kessels/portret-robrecht-kessels.jpg": "Paul De Cannière",
-  "site/opencall-affiche.jpg": "DeNode",
-  "team-paul-de-canniere.jpg": "Steven Decroos",
-  "shop/bjorn-wandels-allesgut-boek/boek-staand.webp": "Pelle De Brabander",
   "shop/bjorn-wandels-allesgut-boek/boek-liggend.webp": "Pelle De Brabander",
   "shop/bjorn-wandels-allesgut-boek/boek-rug.webp": "Pelle De Brabander",
-  "shop/bjorn-wandels-allesgut-boek/open-voeten-tekst.webp": "Pelle De Brabander",
-  "shop/bjorn-wandels-allesgut-boek/open-ruiten.webp": "Pelle De Brabander",
-  "shop/bjorn-wandels-allesgut-boek/open-cut.webp": "Pelle De Brabander",
+  "shop/bjorn-wandels-allesgut-boek/boek-staand.webp": "Pelle De Brabander",
   "shop/bjorn-wandels-allesgut-boek/open-blauwe-haken.webp": "Pelle De Brabander",
   "shop/bjorn-wandels-allesgut-boek/open-blauwe-tekening.webp": "Pelle De Brabander",
+  "shop/bjorn-wandels-allesgut-boek/open-cut.webp": "Pelle De Brabander",
   "shop/bjorn-wandels-allesgut-boek/open-roze-zwart.webp": "Pelle De Brabander",
+  "shop/bjorn-wandels-allesgut-boek/open-ruiten.webp": "Pelle De Brabander",
+  "shop/bjorn-wandels-allesgut-boek/open-voeten-tekst.webp": "Pelle De Brabander",
   "shop/bjorn-wandels-allesgut-boek/spread-08-09.webp": "Björn Wandels",
+  "shop/bjorn-wandels-allesgut-boek/spread-136-137.webp": "Björn Wandels",
   "shop/bjorn-wandels-allesgut-boek/spread-30-31.webp": "Björn Wandels",
   "shop/bjorn-wandels-allesgut-boek/spread-76-77.webp": "Björn Wandels",
-  "shop/bjorn-wandels-allesgut-boek/spread-136-137.webp": "Björn Wandels"
+  "site/opencall-affiche.jpg": "DeNode",
+  "team-paul-de-canniere.jpg": "Steven Decroos"
 }

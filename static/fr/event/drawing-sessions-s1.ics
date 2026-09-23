@@ -23,7 +23,7 @@ UID:drawing-sessions-s1-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20260924T193000
 DTEND;TZID=Europe/Brussels:20260924T213000
 SUMMARY:Dessin d'après modèle\, le jeudi — jeu 24 sept
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 3\, 9000 Gent
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/fr/event/drawing-sessions.html
 END:VEVENT
 END:VCALENDAR
