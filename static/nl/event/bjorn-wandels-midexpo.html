@@ -160,6 +160,11 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 .dn-gal figure{min-width:0;}
 .dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
 .dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+/* tegelraster (dn-gal--tegels): beelden klein en egaal tonen, groot openen in de lightbox —
+   Paul 22 sep 2026: 'een na een bekijken, niet allemaal groot op het blad' */
+.dn-gal--tegels{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.dn-gal--tegels img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;max-height:none;cursor:zoom-in;}
+@media(max-width:720px){.dn-gal--tegels{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
 @media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
@@ -194,7 +199,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-wrap"><div class="dn-crumb"><a href="index.html">Events</a> / Björn Wandels — booktalk</div></div>
 
 <section class="dn-section" style="padding-bottom:30px"><div class="dn-wrap">
-
+<div class="dn-tag" style="margin-bottom:14px">Archief</div>
 
 <h1 class="dn-h2"><a href="../kunstenaar/bjorn-wandels.html">Björn Wandels</a> — booktalk</h1>
 <dl class="dn-dl" style="margin-top:26px"><dt>Datum</dt><dd>zondag 20 september 2026, 11u – 13u</dd>
@@ -202,10 +207,10 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 
 <dt>Expo</dt><dd><a href="../expo/bjorn-wandels-allesgut.html">allesgut</a></dd>
 <dt>Nieuwsbrief</dt><dd><a href="../nieuwsbrief/2026-09-vernissage-bjorn-wandels-allesgut.html">Björn Wandels — allesgut | opening &amp; boeklancering vrijdag 11 september 18u</a> <span style="color:var(--muted)">(01.09.26)</span><br><a href="../nieuwsbrief/2026-09-dit-weekend-bij-denode.html">Dit weekend bij DeNode: eerste Fabulist-workshop (za 14u) en booktalk allesgut (zo 11u)</a> <span style="color:var(--muted)">(17.09.26)</span></dd></dl>
-<p style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap"><a class="dn-btn dn-btn--ghost" href="bjorn-wandels-midexpo-s1.ics" download>Booktalk → agenda (.ics)</a></p>
+
 </div></section>
 <section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Op zondag 20 september 2026 van <strong>11u tot 13u</strong> vindt bij DeNode een booktalk plaats rond het artistbook <a href="../shop/allesgut.html"><strong>allesgut</strong></a> (MER Books, oplage 400 exemplaren), halverwege de solotentoonstelling van Björn Wandels.</p>
-<p>In gesprek: <strong>Björn Wandels</strong>, <strong>Anja Hellebaut</strong> — die ook de scenografie van de tentoonstelling ontwierp — en <strong>Luc Derycke</strong> (MER Books).</p></div></div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');if('2026-09-20'<d){var t=document.getElementById('dn-ev-tag');if(t)t.textContent="Archief";var mk=document.getElementById('dn-ev-mail');if(mk)mk.style.display='none';var fk=document.getElementById('dn-ev-form');if(fk)fk.style.display='none';[].slice.call(document.querySelectorAll('.dn-ev-info')).forEach(function(el){el.style.display='none'});}})();</script>
+<p>In gesprek: <strong>Björn Wandels</strong>, <strong>Anja Hellebaut</strong> — die ook de scenografie van de tentoonstelling ontwierp — en <strong>Luc Derycke</strong> (MER Books).</p></div></div></section>
 
 <div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
 <button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>

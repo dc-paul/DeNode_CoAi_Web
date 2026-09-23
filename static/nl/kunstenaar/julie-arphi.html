@@ -160,6 +160,11 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 .dn-gal figure{min-width:0;}
 .dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
 .dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+/* tegelraster (dn-gal--tegels): beelden klein en egaal tonen, groot openen in de lightbox —
+   Paul 22 sep 2026: 'een na een bekijken, niet allemaal groot op het blad' */
+.dn-gal--tegels{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.dn-gal--tegels img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;max-height:none;cursor:zoom-in;}
+@media(max-width:720px){.dn-gal--tegels{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
 @media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}

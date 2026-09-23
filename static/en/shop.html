@@ -160,6 +160,11 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 .dn-gal figure{min-width:0;}
 .dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
 .dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+/* tegelraster (dn-gal--tegels): beelden klein en egaal tonen, groot openen in de lightbox —
+   Paul 22 sep 2026: 'een na een bekijken, niet allemaal groot op het blad' */
+.dn-gal--tegels{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.dn-gal--tegels img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;max-height:none;cursor:zoom-in;}
+@media(max-width:720px){.dn-gal--tegels{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
 @media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
@@ -184,7 +189,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 #dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
 #dn-lb .close{top:10px;right:14px;font-size:26px;}
 @media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
-</style></head><body data-bron="en/pagina/shop" data-tekst="9518f2dd80">
+</style></head><body data-bron="en/pagina/shop" data-tekst="1c267354db">
 <header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
 <a class="dn-brand" href="index.html"><img src="../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
 <nav class="dn-nav"><ul><li><a href="expo/index.html">Exhibitions</a></li><li><a href="programma.html">Programme</a></li><li><a href="kunstenaar/index.html">Artists</a></li><li><a href="publicaties.html">Publications</a></li><li><a href="shop.html">Shop</a></li><li><a href="bezoek.html">Visit</a></li><li><a href="over.html">About</a></li><li><a class="dn-zoekicoon" href="zoeken.html" aria-label="Search" title="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><a class="lg" href="../nl/shop.html">NL</a><span class="lg active">EN</span><a class="lg" href="../fr/shop.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
@@ -198,6 +203,9 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <div class="dn-grid"><a class="dn-card" href="shop/allesgut.html"><div class="thumb"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt="Björn Wandels — allesgut" style="object-fit:contain"></div>
 <h3 class="dn-asis">Björn Wandels — allesgut</h3><div class="dates" style="color:var(--accent);margin:6px 0">€ 39 · + € 7 shipping</div>
 <p style="font-size:14px;line-height:1.5;margin:6px 0 12px">Artist book accompanying Björn Wandels' solo exhibition (11 September – 4 October 2026). On sale now: receive it at the opening, collect it at the foundation, or have it sent.</p>
+<span class="dn-btn dn-btn--ghost" style="font-size:11px;padding:10px 14px">More info →</span></a><a class="dn-card" href="shop/bjorn-wandels-screen.html"><div class="thumb"><img loading="lazy" src="/_assets/images/shop/bjorn-wandels-screen.webp" alt="Björn Wandels — allesgut ‘SCREEN’" style="object-fit:contain"></div>
+<h3 class="dn-asis">Björn Wandels — allesgut ‘SCREEN’</h3><div class="dates" style="color:var(--accent);margin:6px 0">€ 396 collected · € 426 shipped</div>
+<p style="font-size:14px;line-height:1.5;margin:6px 0 12px">Photographic edition accompanying the exhibition allesgut. Archival pigment print, mounted on aluminium, in a wooden frame. Edition of 12, numbered and signed — you choose your own copy.</p>
 <span class="dn-btn dn-btn--ghost" style="font-size:11px;padding:10px 14px">More info →</span></a><a class="dn-card" href="publicatie/john-robinson-people-ruin-paintings.html"><div class="thumb"><img loading="lazy" src="/_assets/images/publicatie/john-robinson-people-ruin-paintings/t-01.webp" alt="John Robinson — People Ruin Paintings" style="object-fit:contain"></div>
 <h3>John Robinson — People Ruin Paintings</h3><div class="dates" style="color:var(--accent);margin:6px 0">€ 15 · + € 7 shipping</div>
 <p style="font-size:14px;line-height:1.5;margin:6px 0 12px">Catalogue accompanying the solo exhibition <em>People Ruin Paintings</em> (2026). 44 pages, in English — browse it in full on the site, PDF free.</p>

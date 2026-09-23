@@ -60,14 +60,6 @@ LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/en/event/become-a-fabulist.html
 END:VEVENT
 BEGIN:VEVENT
-UID:bjorn-wandels-midexpo-s1-en@denode.be
-DTSTART;TZID=Europe/Brussels:20260920T110000
-DTEND;TZID=Europe/Brussels:20260920T130000
-SUMMARY:Booktalk — allesgut\, Björn Wandels
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://www.denode.be/en/event/bjorn-wandels-midexpo.html
-END:VEVENT
-BEGIN:VEVENT
 UID:drawing-sessions-s1-en@denode.be
 DTSTART;TZID=Europe/Brussels:20260924T193000
 DTEND;TZID=Europe/Brussels:20260924T213000

@@ -160,6 +160,11 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 .dn-gal figure{min-width:0;}
 .dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
 .dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+/* tegelraster (dn-gal--tegels): beelden klein en egaal tonen, groot openen in de lightbox —
+   Paul 22 sep 2026: 'een na een bekijken, niet allemaal groot op het blad' */
+.dn-gal--tegels{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.dn-gal--tegels img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;max-height:none;cursor:zoom-in;}
+@media(max-width:720px){.dn-gal--tegels{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
 @media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
@@ -203,11 +208,16 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 <h3>Robrecht Kessels — Vestiges LP</h3>
 <div class="who">DeNode Foundation</div>
 <div class="dates" style="color:var(--accent);margin-top:7px">price and release to follow</div></a><a class="dn-card" href="shop/allesgut.html">
-<div class="thumb"><img loading="lazy" src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt="Björn Wandels — allesgut" style="object-fit:contain"></div>
+<div class="thumb"><img loading="lazy" src="/_assets/images/shop/bjorn-wandels-allesgut-boek/boek-staand.webp" alt="Björn Wandels — allesgut" style="object-fit:contain"></div>
 <div class="dates">2026</div>
 <h3 class="dn-asis">Björn Wandels — allesgut</h3>
 <div class="who">MER Books · co-produced with DeNode Foundation</div>
-<div class="dates" style="color:var(--accent);margin-top:7px">€ 39 collected · € 46 shipped</div></a><a class="dn-card" href="publicatie/john-robinson-people-ruin-paintings.html">
+<div class="dates" style="color:var(--accent);margin-top:7px">€ 39 collected · € 46 shipped</div></a><a class="dn-card" href="shop/bjorn-wandels-screen.html">
+<div class="thumb"><img loading="lazy" src="/_assets/images/shop/bjorn-wandels-screen.webp" alt="Björn Wandels — allesgut ‘SCREEN’" style="object-fit:contain"></div>
+<div class="dates">2026</div>
+<h3 class="dn-asis">Björn Wandels — allesgut ‘SCREEN’</h3>
+
+<div class="dates" style="color:var(--accent);margin-top:7px">€ 396 collected · € 426 shipped</div></a><a class="dn-card" href="publicatie/john-robinson-people-ruin-paintings.html">
 <div class="thumb"><img loading="lazy" src="/_assets/images/publicatie/john-robinson-people-ruin-paintings/p-01.webp" alt="John Robinson — People Ruin Paintings" style="object-fit:contain"></div>
 <div class="dates">2026 · 44 p.</div>
 <h3>John Robinson — People Ruin Paintings</h3>
