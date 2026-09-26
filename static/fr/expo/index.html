@@ -20,6 +20,31 @@
    tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
 .dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
 .dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
+/* home-carrousel (Paul 26 sep 2026): hero-aankondigingen (lopende/komende expo + open calls)
+   wisselen om de 7s (Paul koos 7 i.p.v. 5) met dezelfde .9s-fade als het wisselbeeld. Dia's gestapeld in één
+   grid-cel → de hoogste dia bepaalt de hoogte, niets springt. Tabbalk = genummerde koppen;
+   een oxide haarlijn loopt vol in 7s en IS de timer (animationend → volgende dia), zodat
+   pauzeren (hover, focus, knop) de timer vanzelf stilzet. Reduced-motion: geen autoplay. */
+.dn-carr{display:grid;border-bottom:2px solid var(--ink);}
+.dn-carr>.dn-slide{grid-area:1/1;border-bottom:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s;}
+.dn-carr>.dn-slide.aan{opacity:1;visibility:visible;transition:opacity .9s ease,visibility 0s;}
+.dn-carr__nav{grid-area:2/1;display:flex;border-top:1px solid var(--ink);background:var(--paper);}
+.dn-carr__tab{flex:1;display:flex;align-items:baseline;gap:14px;min-width:0;text-align:left;background:none;border:0;border-right:1px solid var(--line);padding:15px var(--gutter) 16px;cursor:pointer;position:relative;font-family:var(--font-ui);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted);}
+.dn-carr__tab .n{font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:.02em;line-height:1;}
+.dn-carr__tab .k{white-space:nowrap;}
+.dn-carr__tab .t{font-family:var(--font-serif);font-style:italic;font-size:16px;letter-spacing:0;text-transform:none;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.dn-carr__tab:hover{color:var(--ink);}
+.dn-carr__tab.aan{color:var(--ink);}
+.dn-carr__tab.aan .k{color:var(--accent);}
+.dn-carr__tab::before{content:"";position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--accent);}
+.dn-carr__tab.aan::before{animation:dn-vul 7s linear forwards;}
+.dn-carr.pauze .dn-carr__tab.aan::before{animation-play-state:paused;}
+@keyframes dn-vul{from{width:0}to{width:100%}}
+.dn-carr__pp{flex:0 0 58px;background:none;border:0;cursor:pointer;color:var(--ink);font-family:var(--font-ui);font-size:13px;font-weight:700;}
+.dn-carr__pp:hover{color:var(--accent);}
+@media(prefers-reduced-motion:reduce){.dn-carr>.dn-slide{transition:none;}.dn-carr__tab.aan::before{animation:none;width:100%;}.dn-carr__pp{display:none;}}
+/* mobiel: tabbalk BOVEN de dia's — anders staat hij onder beeld + tekst, ver onder de vouw, en ziet niemand dat er meer is */
+@media(max-width:860px){.dn-carr>.dn-slide{grid-area:2/1;}.dn-carr__nav{grid-area:1/1;border-top:0;border-bottom:1px solid var(--ink);}.dn-carr__tab{padding:13px 16px 14px;gap:10px;}.dn-carr__tab::before{top:auto;bottom:-1px;}.dn-carr__tab .t{display:none;}}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */

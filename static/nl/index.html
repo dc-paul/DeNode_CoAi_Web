@@ -20,6 +20,31 @@
    tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
 .dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
 .dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
+/* home-carrousel (Paul 26 sep 2026): hero-aankondigingen (lopende/komende expo + open calls)
+   wisselen om de 7s (Paul koos 7 i.p.v. 5) met dezelfde .9s-fade als het wisselbeeld. Dia's gestapeld in één
+   grid-cel → de hoogste dia bepaalt de hoogte, niets springt. Tabbalk = genummerde koppen;
+   een oxide haarlijn loopt vol in 7s en IS de timer (animationend → volgende dia), zodat
+   pauzeren (hover, focus, knop) de timer vanzelf stilzet. Reduced-motion: geen autoplay. */
+.dn-carr{display:grid;border-bottom:2px solid var(--ink);}
+.dn-carr>.dn-slide{grid-area:1/1;border-bottom:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s;}
+.dn-carr>.dn-slide.aan{opacity:1;visibility:visible;transition:opacity .9s ease,visibility 0s;}
+.dn-carr__nav{grid-area:2/1;display:flex;border-top:1px solid var(--ink);background:var(--paper);}
+.dn-carr__tab{flex:1;display:flex;align-items:baseline;gap:14px;min-width:0;text-align:left;background:none;border:0;border-right:1px solid var(--line);padding:15px var(--gutter) 16px;cursor:pointer;position:relative;font-family:var(--font-ui);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted);}
+.dn-carr__tab .n{font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:.02em;line-height:1;}
+.dn-carr__tab .k{white-space:nowrap;}
+.dn-carr__tab .t{font-family:var(--font-serif);font-style:italic;font-size:16px;letter-spacing:0;text-transform:none;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.dn-carr__tab:hover{color:var(--ink);}
+.dn-carr__tab.aan{color:var(--ink);}
+.dn-carr__tab.aan .k{color:var(--accent);}
+.dn-carr__tab::before{content:"";position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--accent);}
+.dn-carr__tab.aan::before{animation:dn-vul 7s linear forwards;}
+.dn-carr.pauze .dn-carr__tab.aan::before{animation-play-state:paused;}
+@keyframes dn-vul{from{width:0}to{width:100%}}
+.dn-carr__pp{flex:0 0 58px;background:none;border:0;cursor:pointer;color:var(--ink);font-family:var(--font-ui);font-size:13px;font-weight:700;}
+.dn-carr__pp:hover{color:var(--accent);}
+@media(prefers-reduced-motion:reduce){.dn-carr>.dn-slide{transition:none;}.dn-carr__tab.aan::before{animation:none;width:100%;}.dn-carr__pp{display:none;}}
+/* mobiel: tabbalk BOVEN de dia's — anders staat hij onder beeld + tekst, ver onder de vouw, en ziet niemand dat er meer is */
+@media(max-width:860px){.dn-carr>.dn-slide{grid-area:2/1;}.dn-carr__nav{grid-area:1/1;border-top:0;border-bottom:1px solid var(--ink);}.dn-carr__tab{padding:13px 16px 14px;gap:10px;}.dn-carr__tab::before{top:auto;bottom:-1px;}.dn-carr__tab .t{display:none;}}
 /* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
 .dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */
@@ -198,15 +223,39 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </header>
 
 
-<section class="dn-hero"><div class="dn-hero__txt">
+<section class="dn-carr" id="dn-carr" aria-roledescription="carrousel" aria-label="Aankondigingen">
+<div class="dn-hero dn-slide" data-eind="2026-10-04" role="group" aria-roledescription="dia"><div class="dn-hero__txt">
 <div class="dn-eyebrow" style="margin-bottom:18px"><span id="dn-hero-lbl">Nu te zien</span> · 11.09.26 – 04.10.26<span id="dn-dagen" style="color:var(--ink)"></span></div>
 <h1 class="dn-h1 dn-asis">allesgut</h1>
 <div class="dn-serif-it" style="font-size:21px;margin:20px 0 24px"><a href="kunstenaar/bjorn-wandels.html">Björn Wandels</a></div>
 
 <p style="max-width:46ch;margin-bottom:26px">“allesgut is een boek en mogelijk een tentoonstelling, voor zover het tentoongesteld kan worden”, zegt Björn Wandels. allesgut verschijnt bij MER Books in coproductie met Stichting DeNode; de tentoonstelling vouwt de logica van het boek open in de ruimte van de galerie. Het boek vraagt tijd, de tentoonstelling geeft er ruimte aan.</p>
 <a class="dn-btn" id="dn-hero-btn" href="expo/bjorn-wandels-allesgut.html">Meer info</a></div>
-<div class="dn-hero__img"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt="allesgut"></div></section>
+<div class="dn-hero__img"><img src="/_assets/images/kunstenaar/bjorn-wandels/alles-gut-cover.jpg" alt="allesgut"></div></div>
+<div class="dn-hero dn-slide aan" data-eind="2026-11-18" role="group" aria-roledescription="dia"><div class="dn-hero__txt">
+<div class="dn-eyebrow" style="margin-bottom:18px">Open call · deadline 18.11.26<span class="dn-oc-dagen" data-eind="2026-11-18" style="color:var(--ink)"></span></div>
+<h2 class="dn-h1">Humain, trop humain</h2>
+<div class="dn-serif-it" style="font-size:21px;margin:20px 0 24px;max-width:40ch">Act I — What We Make · <a href="kunstenaar/kristof-vander-cruyssen.html">Kristof Vander Cruyssen</a></div>
+<p style="max-width:46ch;margin-bottom:26px">De geselecteerde kunstenaars nemen deel aan <em>Humain, trop humain – Act I</em>, de eerste tentoonstelling in de nieuwe cyclus van DeNode.</p>
+<a class="dn-btn" href="opencall.html">Lees de oproep</a></div>
+<div class="dn-hero__img"><img src="/_assets/images/site/opencall-affiche.jpg" alt="Open call — Humain, trop humain"></div></div>
+<div class="dn-carr__nav" role="tablist"><button type="button" class="dn-carr__tab" role="tab" data-i="0"><span class="n">01</span><span class="k">Open call</span><span class="t">Humain, trop humain</span></button><button type="button" class="dn-carr__tab" role="tab" data-i="1"><span class="n">02</span><span class="k">Nu te zien</span><span class="t">allesgut</span></button><button type="button" class="dn-carr__pp" aria-label="Pauzeer" data-pauze="Pauzeer" data-speel="Speel af">❙❙</button></div></section>
 
+<script>(function(){var c=document.getElementById('dn-carr');if(!c)return;var sl=[].slice.call(c.querySelectorAll('.dn-slide'));sl.push(sl.shift());var tb=[].slice.call(c.querySelectorAll('.dn-carr__tab')),pp=c.querySelector('.dn-carr__pp');var v=new Date(),vd=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');
+[].slice.call(c.querySelectorAll('.dn-oc-dagen')).forEach(function(e){var n=Math.ceil((new Date(e.getAttribute('data-eind')+'T23:59:59')-new Date())/864e5);if(n>1)e.textContent=' · '+"nog "+n+' '+"dagen";else if(n>=0)e.textContent=' · '+"laatste dag!";});
+var weg=sl.map(function(s){var e=s.getAttribute('data-eind');return !!(e&&e<vd);});if(weg.every(Boolean))weg[weg.length-1]=false;
+var idx=[];sl.forEach(function(s,i){if(weg[i]){s.remove();tb[i].remove();}else idx.push(i);});
+var nav=c.querySelector('.dn-carr__nav');if(idx.length<2){if(nav)nav.remove();sl[idx[0]].classList.add('aan');return;}
+idx.forEach(function(i,k){tb[i].querySelector('.n').textContent=('0'+(k+1)).slice(-2);});
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,cur=-1,handPauze=false;
+function toon(k){cur=k;idx.forEach(function(i,j){var a=j===k;sl[i].classList.toggle('aan',a);sl[i].setAttribute('aria-hidden',a?'false':'true');if('inert' in sl[i])sl[i].inert=!a;tb[i].classList.remove('aan');tb[i].setAttribute('aria-selected',a?'true':'false');});void c.offsetWidth;tb[idx[k]].classList.add('aan');}
+function volgende(){toon((cur+1)%idx.length);}
+idx.forEach(function(i,j){tb[i].addEventListener('click',function(){toon(j);});tb[i].addEventListener('animationend',function(){if(j===cur&&!rm)volgende();});});
+function zet(){c.classList.toggle('pauze',handPauze||c.matches(':hover')||c.contains(document.activeElement)&&document.activeElement!==document.body);}
+c.addEventListener('mouseenter',zet);c.addEventListener('mouseleave',function(){setTimeout(zet,0);});c.addEventListener('focusin',zet);c.addEventListener('focusout',function(){setTimeout(zet,0);});
+if(pp)pp.addEventListener('click',function(){handPauze=!handPauze;pp.textContent=handPauze?'▶':'❙❙';pp.setAttribute('aria-label',handPauze?pp.getAttribute('data-speel'):pp.getAttribute('data-pauze'));zet();});
+var x0=null;c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>50)toon((cur+(dx<0?1:idx.length-1))%idx.length);},{passive:true});
+toon(0);})();</script>
 <section class="dn-band"><div class="dn-wrap" style="display:flex;gap:36px;align-items:center;flex-wrap:wrap">
 <img src="../assets/denode-logo-white.png" alt="DeNode Foundation" style="width:96px">
 <div style="flex:1;min-width:min(60ch,100%)"><div class="dn-band__by" style="margin:0 0 10px">Stichting DeNode</div><div class="dn-band__q">Stichting DeNode is een huis voor actuele kunst in het hart van Gent. Met tentoonstellingen, residenties en internationale samenwerkingen geven we een plek aan kunstenaars, aan onderzoek en de ontmoeting eromheen. Kunst is voor ons geen luxe maar een manier om aandachtiger naar de wereld te kijken.</div></div></div></section>
@@ -216,7 +265,7 @@ img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:
 </div></section><script>(function(){var v=new Date();var vandaag=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');var n=0;[].slice.call(document.querySelectorAll('#dn-agenda .dn-card')).forEach(function(c){var e=c.getAttribute('data-eind');if(e&&e<vandaag){c.style.display='none';return;}var s=c.getAttribute('data-start');var g=c.querySelector('.dn-tag');if(s&&s<=vandaag&&g&&g.textContent==="Verwacht")g.textContent="Nu te zien";n++;if(n>6)c.style.display='none';});if(!n){var s=document.getElementById('dn-agenda-sectie');if(s)s.style.display='none';}})();</script><script>(function(){var e=document.getElementById('dn-dagen');var n=Math.ceil((new Date('2026-10-04T23:59:59')-new Date())/864e5);if(n>1)e.textContent=' · '+"nog "+n+' '+"dagen te zien";else if(n>=0)e.textContent=' · '+"laatste dag!";else e.textContent='';})();</script>
 <section class="dn-section" style="background:var(--paper2)" id="dn-oc-sectie"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Doe mee</h2><a href="programma.html">Programma →</a></div>
-<div class="dn-grid dn-grid--vol" id="dn-oc-grid"><a class="dn-card" href="event/become-a-fabulist.html" data-eind="2026-10-15"><div class="thumb"><img loading="lazy" src="/_assets/images/event/become-a-fabulist/affiche-become-a-fabulist.jpg" alt="Become a Fabulist — artist residency"></div><div class="dates">OPEN CALL · 15 september – 15 oktober 2026 · 5 gratis workshops, jong en oud</div><h3>Become a Fabulist — artist residency</h3><div class="who">Vóór Humanimality opent voor het publiek, wordt DeNode Foundation de Fabulisterie. Een maand lang vormt de Franse kunstenaar Monsieur Térez de…</div><div style="margin-top:10px;font-weight:600">Lees meer & doe mee →</div></a><a class="dn-card" href="opencall.html" data-eind="2026-11-18"><div class="thumb"><img loading="lazy" src="/_assets/images/site/opencall-affiche.jpg" alt="Open call — Humain, trop humain"></div><div class="dates">OPEN CALL · 18 september – 18 november 2026 · tentoonstelling opent 29 januari 2027</div><h3>Open call — Humain, trop humain</h3><div class="who">De geselecteerde kunstenaars nemen deel aan Humain, trop humain – Act I, de eerste tentoonstelling in de nieuwe cyclus van DeNode.</div><div style="margin-top:10px;font-weight:600">Lees meer & doe mee →</div></a><a class="dn-card" href="event/drawing-sessions.html" data-eind="2026-12-17"><div class="thumb"><img loading="lazy" src="/_assets/images/site/drawing-sessions.webp" alt="Modelstudie op donderdag"></div><div class="dates">herstart donderdag 24 september 2026 · om de twee weken, 19u30 – 21u30</div><h3>Modelstudie op donderdag</h3><div class="who">De tekensessies bij DeNode herstarten op donderdag 24 september 2026. Om de twee weken, telkens van 19u30 tot 21u30, in nodenaysteen, Predikherenlei…</div><div style="margin-top:10px;font-weight:600">Lees meer & doe mee →</div></a></div>
+<div class="dn-grid dn-grid--vol" id="dn-oc-grid"><a class="dn-card" href="event/become-a-fabulist.html" data-eind="2026-10-15"><div class="thumb"><img loading="lazy" src="/_assets/images/event/become-a-fabulist/affiche-become-a-fabulist.jpg" alt="Become a Fabulist — artist residency"></div><div class="dates">OPEN CALL · 15 september – 15 oktober 2026 · 5 gratis workshops, jong en oud</div><h3>Become a Fabulist — artist residency</h3><div class="who">Vóór Humanimality opent voor het publiek, wordt DeNode Foundation de Fabulisterie. Een maand lang vormt de Franse kunstenaar Monsieur Térez de…</div><div style="margin-top:10px;font-weight:600">Lees meer & doe mee →</div></a><a class="dn-card" href="event/drawing-sessions.html" data-eind="2026-12-17"><div class="thumb"><img loading="lazy" src="/_assets/images/site/drawing-sessions.webp" alt="Modelstudie op donderdag"></div><div class="dates">herstart donderdag 24 september 2026 · om de twee weken, 19u30 – 21u30</div><h3>Modelstudie op donderdag</h3><div class="who">De tekensessies bij DeNode herstarten op donderdag 24 september 2026. Om de twee weken, telkens van 19u30 tot 21u30, in nodenaysteen, Predikherenlei…</div><div style="margin-top:10px;font-weight:600">Lees meer & doe mee →</div></a></div>
 </div></section><script>(function(){var v=new Date();var d=v.getFullYear()+'-'+String(v.getMonth()+1).padStart(2,'0')+'-'+String(v.getDate()).padStart(2,'0');var n=0;[].slice.call(document.querySelectorAll('#dn-oc-grid .dn-card')).forEach(function(c){var e=c.getAttribute('data-eind');if(e&&e<d){c.style.display='none';return;}n++;});if(!n){var s=document.getElementById('dn-oc-sectie');if(s)s.style.display='none';}})();</script>
 <section class="dn-section"><div class="dn-wrap">
 <div class="dn-head"><h2 class="dn-h2">Uitgelicht</h2></div>
