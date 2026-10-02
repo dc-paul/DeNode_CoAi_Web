@@ -21,7 +21,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:vestiges-release-s1-en@denode.be
 DTSTART;TZID=Europe/Brussels:20261127T193000
-DTEND;TZID=Europe/Brussels:20261127T235900
+DTEND;TZID=Europe/Brussels:20261127T235500
 SUMMARY:Vestiges — album release Robrecht Kessels
 LOCATION:Academy One Studios\, Antwerpsesteenweg 197\, 9040 Gent
 URL:https://www.denode.be/en/event/vestiges-release.html
