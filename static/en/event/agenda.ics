@@ -148,6 +148,14 @@ LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
 URL:https://www.denode.be/en/event/ganda-2026.html
 END:VEVENT
 BEGIN:VEVENT
+UID:vernissage-humanimality-s1-en@denode.be
+DTSTART;TZID=Europe/Brussels:20261016T180000
+DTEND;TZID=Europe/Brussels:20261016T210000
+SUMMARY:Opening — Humanimality\, Monsieur Térez
+LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
+URL:https://www.denode.be/en/event/vernissage-humanimality.html
+END:VEVENT
+BEGIN:VEVENT
 UID:vestiges-release-s1-en@denode.be
 DTSTART;TZID=Europe/Brussels:20261127T193000
 DTEND;TZID=Europe/Brussels:20261127T235500
