@@ -19,22 +19,6 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:drawing-sessions-s1-fr@denode.be
-DTSTART;TZID=Europe/Brussels:20260924T193000
-DTEND;TZID=Europe/Brussels:20260924T213000
-SUMMARY:Dessin d'après modèle\, le jeudi — jeu 24 sept
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://www.denode.be/fr/event/drawing-sessions.html
-END:VEVENT
-BEGIN:VEVENT
-UID:drawing-sessions-s2-fr@denode.be
-DTSTART;TZID=Europe/Brussels:20261008T193000
-DTEND;TZID=Europe/Brussels:20261008T213000
-SUMMARY:Dessin d'après modèle\, le jeudi — jeu 8 oct
-LOCATION:DeNode / Nodenaysteen\, Predikherenlei 4\, 9000 Gent
-URL:https://www.denode.be/fr/event/drawing-sessions.html
-END:VEVENT
-BEGIN:VEVENT
 UID:drawing-sessions-s3-fr@denode.be
 DTSTART;TZID=Europe/Brussels:20261022T193000
 DTEND;TZID=Europe/Brussels:20261022T213000
