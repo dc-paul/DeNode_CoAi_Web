@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>De grote jacht op de Happy Faces · DeNode Foundation</title>
+<meta name="description" content="Monsieur Térez heeft 30 Happy Faces verstopt aan de muren van Gent. Kun jij ze allemaal vinden?">
+<link rel="canonical" href="https://www.denode.be/nl/happy-faces.html">
+<link rel="alternate" hreflang="nl" href="https://www.denode.be/nl/happy-faces.html">
+<link rel="alternate" hreflang="fr" href="https://www.denode.be/fr/happy-faces.html">
+<link rel="alternate" hreflang="en" href="https://www.denode.be/en/happy-faces.html">
+<link rel="stylesheet" href="../assets/denode-ink.css">
+<style>
+.hf-hero{display:grid;grid-template-columns:1.05fr 1fr;border-bottom:2px solid var(--ink)}
+.hf-hero .txt{padding:56px var(--gutter) 56px 0;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.hf-hero .img{position:relative;min-height:520px;background:var(--paper2);overflow:hidden}
+.hf-hero .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hf-hero .cnt{display:flex;align-items:baseline;gap:12px;font-family:var(--font-ui);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.hf-hero .cnt b{font-family:var(--font-display);font-size:44px;color:var(--ink);letter-spacing:0}
+.hf-lvls{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink)}
+.hf-lvl{padding:34px 32px;display:flex;flex-direction:column;gap:12px}
+.hf-lvl+.hf-lvl{border-left:2px solid var(--ink);background:var(--ink);color:var(--paper)}
+.hf-lvl+.hf-lvl .dn-eyebrow{color:#e8a99f}
+.hf-lvl .prize{font-family:var(--font-serif);font-size:20px;line-height:1.45}
+.fofi{margin:8px 0 0;background:#1c1c19;padding:14px}.fofi img{width:100%;max-height:620px;object-fit:contain}.fofi figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#98917f;margin-top:8px}
+.hf-lvl .big{font-family:var(--font-display);font-size:64px;line-height:1;font-weight:600}
+.hf-steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.hf-steps li{border-top:2px solid var(--ink);padding-top:16px;font-size:16px}
+.hf-steps .n{font-family:var(--font-display);font-size:40px;font-weight:600;display:block;line-height:1;margin-bottom:10px}
+.miss{background:#ffe9a8;outline:1px dashed var(--accent);color:var(--accent);font-family:var(--font-ui);font-size:12px;font-weight:700;padding:1px 6px;white-space:nowrap}
+.note{border:1px dashed var(--accent);color:var(--accent);background:#fbf3ef;font-family:var(--font-ui);font-size:12px;padding:10px 14px;margin-top:22px}
+.hf-mail{margin-top:30px;padding:20px 24px;background:var(--paper2);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.hf-mail a{color:var(--accent);font-weight:600}
+.hf-grid{list-style:none;display:grid;grid-template-columns:repeat(10,1fr);gap:10px}
+.t{position:relative;aspect-ratio:1;border:1px solid var(--line);background:var(--white);overflow:hidden}
+.t.off{display:flex;align-items:center;justify-content:center;color:#b9b2a3;background:transparent;border-style:dashed}
+.t.off svg{width:46%}
+.t img{width:100%;height:100%;object-fit:cover}
+.t .no{position:absolute;left:6px;top:5px;font-family:var(--font-ui);font-size:11px;font-weight:700;letter-spacing:.06em}
+.t.on .no{background:var(--ink);color:var(--paper);padding:1px 5px;left:0;top:0}
+.t .ok{position:absolute;right:0;bottom:0;background:var(--accent);color:var(--paper);font-family:var(--font-ui);font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:2px 5px}
+.hf-bar{height:8px;background:var(--paper2);margin:0 0 26px;position:relative}
+.hf-bar i{position:absolute;inset:0 auto 0 0;background:var(--ink)}
+.hf-rules{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.hf-rules ul{list-style:none}
+.hf-rules li{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.gold{border:2px solid var(--ink);padding:30px 28px;background:var(--white)}
+.gold p{font-family:var(--font-serif);font-size:22px;line-height:1.45;margin-top:10px}
+.hf-qr{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.hf-qr figure{background:var(--white);padding:18px;border:2px solid var(--ink);width:240px}
+.hf-qr figcaption{font-family:var(--font-ui);font-size:13px;font-weight:700;letter-spacing:.04em;text-align:center;margin-top:10px}
+.hf-foot{background:var(--ink);color:#c9c2b3;padding:46px 0;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.hf-foot img{width:120px;filter:invert(1);margin-bottom:16px}
+@media(max-width:960px){.hf-grid{grid-template-columns:repeat(6,1fr)}.hf-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.hf-hero{grid-template-columns:1fr}.hf-hero .txt{padding:34px 0}.hf-hero .img{min-height:380px;order:-1;margin:0 calc(-1*var(--gutter))}
+.hf-lvls,.hf-rules{grid-template-columns:1fr}.hf-lvl+.hf-lvl{border-left:0;border-top:2px solid var(--ink)}.hf-qr{grid-template-columns:1fr}}
+@media(max-width:560px){:root{--gutter:20px}.hf-grid{grid-template-columns:repeat(5,1fr);gap:6px}.hf-steps{grid-template-columns:1fr}.dn-section{padding:52px 0}.t .ok{display:none}}
+
+.hf-prz{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hf-card{border:2px solid var(--ink);padding:30px 28px;background:var(--white);display:flex;flex-direction:column;gap:12px}
+.hf-card+.hf-card{background:var(--ink);color:var(--paper)}
+.hf-card .tag{font-family:var(--font-ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.hf-card+.hf-card .tag{color:#c9c2b3}
+.hf-card p{font-family:var(--font-serif);font-size:19px;line-height:1.45}
+.hf-card a{color:inherit}
+.hf-win{margin-top:22px;font-family:var(--font-ui);font-size:15px;font-weight:700;letter-spacing:.04em}
+.note.fofi-n{color:#a23b2d;border-color:#a23b2d}
+.hf-steps5{list-style:none;display:flex;flex-direction:column;gap:0;max-width:820px}
+.hf-steps5 li{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:baseline;padding:18px 0;border-top:2px solid var(--ink);font-size:17px;line-height:1.5}
+.hf-steps5 .n{font-family:var(--font-display);font-size:32px;font-weight:600;color:#0e0e0c;line-height:1}
+.hf-steps5 .note{margin-top:10px;display:block}
+.hf-wall{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px}
+.st{cursor:pointer;background:none;border:0;padding:0;width:100%;text-align:left;font:inherit;color:inherit}
+.st .pile{display:block;position:relative;aspect-ratio:4/5;margin:0 14px 14px 0}
+.st .pile i{position:absolute;inset:0;background:var(--white);border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.st .pile i:nth-child(1){transform:translate(12px,12px) rotate(2.5deg)}
+.st .pile i:nth-child(2){transform:translate(6px,6px) rotate(-1.5deg)}
+.st .pile i:nth-child(3){transform:translate(9px,3px) rotate(1deg)}
+.st .pile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:6px solid var(--white);box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .2s}
+.st:hover .pile img,.st:focus-visible .pile img{transform:translate(-3px,-3px)}
+.st .badge{position:absolute;top:-10px;right:-10px;z-index:2;min-width:30px;height:30px;border-radius:15px;background:var(--ink);color:var(--paper);font-family:var(--font-ui);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 8px}
+.st .lc{display:block;font-size:13px;color:#6f6a5e;font-family:var(--font-ui);margin-top:4px}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(14,14,12,.97);display:none;flex-direction:column;align-items:center;justify-content:center;color:var(--paper);padding:56px 16px 24px}
+.lb.open{display:flex}
+.lb img{max-width:min(92vw,900px);max-height:72vh;object-fit:contain;border:6px solid var(--white)}
+.lb .cap{margin-top:14px;font-family:var(--font-ui);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.lb button{background:none;border:0;color:var(--paper);font:600 34px/1 var(--font-ui);cursor:pointer;padding:12px}
+.lb .x{position:absolute;top:10px;right:12px;font-size:30px}
+.lb .pv,.lb .nx{position:absolute;top:50%;transform:translateY(-50%)}
+.lb .pv{left:6px}.lb .nx{right:6px}
+@media(max-width:860px){.hf-prz{grid-template-columns:1fr}}
+@media(max-width:560px){.hf-wall{grid-template-columns:repeat(2,1fr);gap:28px 20px}.hf-steps5 li{grid-template-columns:44px 1fr}}
+</style>
+<style id="hf-riso-css">.hf-riso-stack img{grid-area:1/1;align-self:start}.hf-riso-stack img:nth-child(1){justify-self:start}.hf-riso-stack img:nth-child(2){justify-self:end;margin-top:30%}.hf-riso-stack img:nth-child(3){justify-self:center;margin-top:62%}</style><style id="hf-wall5">#tracker .hf-wall{grid-template-columns:repeat(5,1fr)!important;gap:18px!important}@media(max-width:900px){#tracker .hf-wall{grid-template-columns:repeat(3,1fr)!important}}@media(max-width:520px){#tracker .hf-wall{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}}</style><style id="hf-flb-css">.hf-found{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}.hf-found:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#hf-flb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:56px 16px 16px}
+#hf-flb.open{display:flex}#hf-flb .main{max-width:min(92vw,1100px);max-height:72vh;object-fit:contain;touch-action:pan-y}
+#hf-flb .strip{display:flex;gap:10px}#hf-flb .strip button{padding:0;border:2px solid transparent;background:none;cursor:pointer;opacity:.6}#hf-flb .strip button.on{border-color:#fff;opacity:1}#hf-flb .strip img{display:block;height:64px;width:auto}
+#hf-flb .x,#hf-flb .nv{position:absolute;background:none;border:0;color:#fff;font-size:34px;line-height:1;cursor:pointer;padding:10px}#hf-flb .x{top:8px;right:12px}#hf-flb .pv{left:6px;top:45%}#hf-flb .nx{right:6px;top:45%}
+@media(max-width:600px){#hf-flb .nv{display:none}#hf-flb .strip img{height:52px}}</style></head>
+<body><header class="dn-header"><div class="dn-wrap dn-navrow">
+<a class="dn-brand" href="/nl/index.html"><img src="../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="/nl/expo/index.html">Tentoonstellingen</a></li><li><a href="/nl/programma.html">Programma</a></li><li><a href="/nl/kunstenaar/index.html">Kunstenaars</a></li><li><a href="/nl/publicaties.html">Publicaties</a></li><li><a href="/nl/shop.html">Collect</a></li><li><a href="/nl/bezoek.html">Bezoek</a></li><li><a href="/nl/over.html">Over</a></li></ul>
+<div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="/en/happy-faces.html" lang="en">EN</a><a class="lg" href="/fr/happy-faces.html" lang="fr">FR</a></div></nav>
+</div></header>
+
+<main>
+<div class="dn-wrap">
+<div class="dn-crumb"><a href="/nl/expo/humanimality.html">Humanimality</a> / <a href="/nl/kunstenaar/monsieur-terez.html">Monsieur Térez</a> / Wedstrijd</div>
+<section class="hf-hero">
+<div class="txt">
+<span class="dn-eyebrow">🔎 Wedstrijd • Happy FACES</span>
+<h1 class="dn-h1">De grote jacht op de Happy Faces!</h1>
+<p class="dn-lead">Bericht aan alle ontdekkingsreizigers! Monsieur Térez heeft 30 Happy Faces verstopt aan de muren van Gent. Kun jij ze allemaal vinden? 🕵️‍♂️✨</p>
+<div class="cnt"><b>1/30</b> gevonden door de community · open tot en met 18 december 2026</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="dn-btn" href="#meedoen">Hoe doe je mee? →</a><a class="dn-btn dn-btn--ghost" href="#tracker">Bekijk de tracker</a></div>
+</div>
+<div class="img"><img src="happy-faces-img/foto1.jpeg" alt="Happy Faces van Monsieur Térez in het atelier"></div>
+</section>
+</div>
+
+<section class="dn-section" id="meedoen" style="background:var(--paper2)"><div class="dn-wrap">
+<div class="dn-head"><h2 class="dn-h2">Hoe doe je mee?</h2></div>
+<ol class="hf-steps5"><li><span class="n">1</span><span>Abonneer je op <a href="https://www.instagram.com/denode_foundation/" target="_blank" rel="noopener">@denode_foundation</a> en <a href="https://www.instagram.com/monsieur_terez/" target="_blank" rel="noopener">@monsieur_terez</a>.</span></li><li><span class="n">2</span><span>Schrijf <q>Ik doe mee!</q> onder de <a href="https://www.instagram.com/p/De9vIVAxJag/" target="_blank" rel="noopener">officiële wedstrijdpost</a> en tag twee vrienden: die reactie is je officiële inschrijving, want stories verdwijnen na 24 uur.</span></li><li><span class="n">3</span><span>Fotografeer zoveel mogelijk Happy Faces. Met minstens 5 verschillende maak je kans op de risografie. Wie als eerste alle 30 vindt, wint het originele kunstwerk (<a href="#prijzen">zie de prijzen</a>). Verklap de locaties niet publiek.</span></li><li><span class="n">4</span><span>Stuur je foto’s vóór <b>18/12</b> via DM naar <a href="https://www.instagram.com/denode_foundation/" target="_blank" rel="noopener">@denode_foundation</a>.</span></li></ol>
+<div class="hf-mail"><span>Geen Instagram? Mail je foto’s, naam en contactgegevens naar <a href="mailto:info@denode.be?subject=Happy%20Faces">info@denode.be</a></span><a class="dn-btn" href="mailto:info@denode.be?subject=Happy%20Faces">Mail je foto’s</a></div>
+<p class="dn-serif-it" style="font-size:22px;margin-top:30px">Laat de jacht beginnen... Veel succes allemaal! 🚀👀</p>
+</div></section>
+
+<section class="dn-section" id="prijzen"><div class="dn-wrap">
+<div class="dn-head"><h2 class="dn-h2">Twee prijzen</h2></div>
+<div class="hf-prz">
+<div class="hf-card"><span class="tag">vanaf 5 gezichten · loting</span><h3 class="dn-h3">De risografie</h3><p>Iedereen die minstens 5 verschillende Happy Faces fotografeert, maakt kans op een van de risografieën die Monsieur Térez met <a href="https://www.instagram.com/topocopy/" target="_blank" rel="noopener">Topo Copy</a> maakte.</p><figure class="hf-riso" style="margin:18px 0 0;padding:6px 8px 0"><div class="hf-riso-stack" style="display:grid"><img src="happy-faces-img/riso-cut2-g.jpg" alt="Risografie Monsieur Térez × Topo Copy (groen)" loading="lazy" style="display:block;position:relative;z-index:1;width:50%;height:auto;transform:rotate(-4deg);box-shadow:0 6px 18px rgba(0,0,0,.28);background:#fff"><img src="happy-faces-img/riso-cut2-p.jpg" alt="Risografie Monsieur Térez × Topo Copy (roze)" loading="lazy" style="display:block;position:relative;z-index:2;width:50%;height:auto;transform:rotate(3deg);box-shadow:0 6px 18px rgba(0,0,0,.28);background:#fff"><img src="happy-faces-img/riso-cut2-o.jpg" alt="Risografie Monsieur Térez × Topo Copy (oranje)" loading="lazy" style="display:block;position:relative;z-index:3;width:50%;height:auto;transform:rotate(-2deg);box-shadow:0 6px 18px rgba(0,0,0,.28);background:#fff"></div><figcaption style="font-size:.75em;opacity:.7;margin-top:14px;text-align:center">(c) Jolien Chielens</figcaption></figure></div>
+<div class="hf-card"><span class="tag">eerste met alle 30, anders de meeste gezichten, bij gelijkstand loting</span><h3 class="dn-h3">Het originele kunstwerk</h3><p><i>FOFI, La Camelopardalis</i> gaat naar de eerste die geldige foto’s van alle 30 instuurt. Vindt niemand ze alle 30 vóór 18/12, dan wint wie de meeste gezichten vond.</p><figure class="fofi"><img src="happy-faces-img/fofi-la-camelopardalis.jpg" alt="FOFI, La Camelopardalis — tekening op papier, 46 × 65 cm"><figcaption>Beeld © Monsieur Térez · bron: catalogus Humanimality (DeNode)</figcaption></figure></div>
+</div>
+<p class="hf-win">Winnaars bekend na 18/12</p>
+</div></section>
+
+<section class="dn-section" id="tracker" style="background:var(--paper2)"><div class="dn-wrap">
+<div class="dn-head"><h2 class="dn-h2">De posterwand</h2><span class="dn-kicker"><b style="font-family:var(--font-display);font-size:28px;color:var(--ink)">1/30</b></span></div>
+
+<ul class="hf-wall"><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><button type="button" class="hf-found" aria-label="Bekijk de gevonden Happy Face" data-imgs="happy-faces-img/found-01-full.jpg|happy-faces-img/found-01-d1.jpg" data-alts="Gevonden Happy Face op locatie|Detail van de Happy Face"><span class="pile" style="display:block;aspect-ratio:4/5"><img src="happy-faces-img/found-01.jpg" alt="Gevonden Happy Face" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></span></button></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li><li><div class="st" style="cursor:default"><span class="pile" style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--white);border:2px dashed #c9c2b3;font-family:var(--font-display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#98917f">Gezocht</span></div></li></ul>
+</div></section>
+
+<section class="dn-section"><div class="dn-wrap hf-rules">
+<div><div class="dn-head"><h2 class="dn-h2">⚠️ Reglement</h2></div>
+<ul><li>Minstens 5 verschillende Happy Faces geven een kans in de loting voor de risografie.</li><li>Eerste met geldige foto’s van alle 30: het originele kunstwerk. Niemand alle 30 op 18/12? Dan wint wie de meeste vond; bij gelijkstand beslist een loting.</li><li>1 deelname per persoon.</li><li>De wedstrijd sluit op 18/12/2026.</li><li>Winnaars worden bekendgemaakt na 18/12.</li></ul></div>
+<div class="gold"><span class="dn-eyebrow">⚠️ ⚠️ Gouden regel</span><p>Haal de Happy Faces niet van de muur! Laat ze hangen zodat andere jagers ook mee kunnen doen aan het avontuur. 💛</p></div>
+</div></section>
+
+<section class="dn-section"><div class="dn-wrap hf-qr">
+<figure><img src="happy-faces-img/qr-happy-faces.svg" alt="QR-code naar www.denode.be/happy-faces"><figcaption>www.denode.be/happy-faces</figcaption></figure>
+<div><span class="dn-eyebrow">Deel de jacht</span><h2 class="dn-h2" style="margin:8px 0 14px">Scan &amp; jaag mee</h2>
+<p style="max-width:52ch">Scan de code om deze pagina te openen.</p>
+<p style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap"><a class="dn-btn dn-btn--ghost" href="/nl/kunstenaar/monsieur-terez.html">Monsieur Térez →</a><a class="dn-btn dn-btn--ghost" href="/nl/expo/humanimality.html">Expo Humanimality →</a></p></div>
+</div></section>
+</main>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="expo/index.html">Tentoonstellingen</a></li>
+<li><a href="kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="publicaties.html">Publicaties</a></li>
+<li><a href="collectie.html">Collectie</a></li>
+<li><a href="shop.html">Collect</a></li>
+<li><a href="event/index.html">Events</a></li>
+<li><a href="geschiedenis.html">Geschiedenis</a></li>
+<li><a href="pers.html">Pers</a></li></ul></div>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="bezoek.html">Bezoek</a></li>
+<li><a href="over.html">Over</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="nieuwsbrief.html">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true"><button class="x" aria-label="Sluiten">×</button><button class="pv" aria-label="Vorige">‹</button><img src="" alt=""><button class="nx" aria-label="Volgende">›</button><div class="cap"></div></div>
+<script type="application/json" id="hf-data">{"stacks": [[1, 3, 5, 2], [2, 4], [3, 1, 4], [4], [5, 2, 1], [1, 5]], "loc": "Plek", "photo": "foto"}</script><script>(function(){var d=JSON.parse(document.getElementById('hf-data').textContent),lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=lb.querySelector('.cap'),s=0,k=0;
+function show(){var a=d.stacks[s];im.src='happy-faces-img/foto'+a[k]+'.jpeg';im.alt=d.loc+' '+(s+1)+' — '+d.photo+' '+(k+1);cp.textContent=d.loc+' '+String(s+1).padStart(2,'0')+' · '+(k+1)+' / '+a.length}
+function open(i){s=i;k=0;show();lb.classList.add('open');lb.querySelector('.x').focus()}
+function close(){lb.classList.remove('open')}
+function mv(n){var a=d.stacks[s];k=(k+n+a.length)%a.length;show()}
+document.querySelectorAll('.st').forEach(function(b){b.addEventListener('click',function(){open(+b.dataset.i)})});
+lb.querySelector('.x').onclick=close;lb.querySelector('.pv').onclick=function(){mv(-1)};lb.querySelector('.nx').onclick=function(){mv(1)};
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')mv(-1);if(e.key==='ArrowRight')mv(1)});
+var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)mv(dx<0?1:-1);x0=null});
+if(location.hash.indexOf('#lb')===0)open(+(location.hash.slice(3)||0));})();</script>
+<div id="hf-flb" role="dialog" aria-modal="true" aria-label="Bekijk de gevonden Happy Face"><button type="button" class="x" aria-label="Sluiten">×</button><button type="button" class="nv pv" aria-label="Vorige">‹</button><img class="main" src="" alt=""><button type="button" class="nv nx" aria-label="Volgende">›</button><div class="strip"></div></div><script id="hf-flb-js">(function(){var lb=document.getElementById('hf-flb');if(!lb)return;var mi=lb.querySelector('.main'),st=lb.querySelector('.strip'),imgs=[],alts=[],i=0,last=null,x0=null;
+function show(n){i=(n+imgs.length)%imgs.length;mi.src=imgs[i];mi.alt=alts[i]||'';[].forEach.call(st.children,function(b,k){b.classList.toggle('on',k===i);b.setAttribute('aria-current',k===i)})}
+function open(btn){imgs=btn.dataset.imgs.split('|');alts=(btn.dataset.alts||'').split('|');st.innerHTML='';imgs.forEach(function(u,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',(k+1)+'/'+imgs.length);b.innerHTML='<img src="'+u+'" alt="">';b.onclick=function(){show(k)};st.appendChild(b)});last=btn;lb.classList.add('open');document.body.style.overflow='hidden';show(0);lb.querySelector('.x').focus()}
+function close(){lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus()}
+document.querySelectorAll('.hf-found').forEach(function(b){b.addEventListener('click',function(){open(b)})});
+lb.querySelector('.x').onclick=close;lb.querySelector('.pv').onclick=function(){show(i-1)};lb.querySelector('.nx').onclick=function(){show(i+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(i+1);else if(e.key==='ArrowLeft')show(i-1);else if(e.key==='Tab'){var f=[].slice.call(lb.querySelectorAll('button'));var a=f.indexOf(document.activeElement);if(e.shiftKey&&a<=0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&a===f.length-1){e.preventDefault();f[0].focus()}}});
+mi.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});mi.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)show(i+(d<0?1:-1));x0=null})})();</script></body></html>

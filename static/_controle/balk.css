@@ -1,0 +1,14 @@
+#dn-ctl{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#f4f1ea;border-top:2px solid #0e0e0c;font:13px/1.4 Inter,system-ui,sans-serif;color:#0e0e0c;padding:8px 14px;box-shadow:0 -4px 18px rgba(0,0,0,.08)}
+#dn-ctl[hidden],#dn-ctl [hidden]{display:none!important}
+#dn-ctl .r{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;max-width:1240px;margin:0 auto}
+#dn-ctl .r+.r{margin-top:6px}
+#dn-ctl b{font-weight:600}
+#dn-ctl .s{opacity:.75}
+#dn-ctl button{font:inherit;font-weight:600;border:1.5px solid #0e0e0c;background:#0e0e0c;color:#f4f1ea;padding:6px 12px;border-radius:2px;cursor:pointer}
+#dn-ctl button.g{background:transparent;color:#0e0e0c}
+#dn-ctl button.w{border-color:#a23b2d;background:#a23b2d}
+#dn-ctl a{color:#a23b2d;text-decoration:underline}
+#dn-ctl .m{color:#a23b2d;font-weight:600}
+body.dn-ctl-aan{padding-bottom:64px}
+body.dn-ctl-edit [contenteditable="true"]{outline:2px dashed #a23b2d;outline-offset:6px}
+body.dn-ctl-edit [contenteditable="true"] a,body.dn-ctl-edit [contenteditable="true"] button{pointer-events:none}
