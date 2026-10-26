@@ -1,47 +1,47 @@
 {
-  "updated": "2026-10-26T16:23:52.388Z",
+  "updated": "2026-10-26T18:56:53.225Z",
   "posts": [
     {
       "img": "/assets/ig/1.jpg",
+      "permalink": "https://www.instagram.com/reel/De9vIVAxJag/",
+      "caption": "DE GROTE HAPPY FACES-SPEURTOCHT IS GEOPEND! Monsieur Térez heeft 30 Happy Faces verstopt op de muren van Gent. Aan jou om ze te vinden! 👀 …",
+      "type": "VIDEO",
+      "timestamp": "2026-10-26T16:44:30+0000"
+    },
+    {
+      "img": "/assets/ig/2.jpg",
       "permalink": "https://www.instagram.com/reel/DehTnPxA2UH/",
       "caption": "OPENING TOMORROW After several months of dialogue and creation, DeNode Foundation has given French artist Monsieur Térez carte blanche to t…",
       "type": "VIDEO",
       "timestamp": "2026-10-15T15:59:18+0000"
     },
     {
-      "img": "/assets/ig/2.jpg",
+      "img": "/assets/ig/3.jpg",
       "permalink": "https://www.instagram.com/reel/DeciWBosDQW/",
       "caption": "Et si l’humanité n’était pas le dernier mot de l’évolution ? Dans l’univers de Monsieur Térez, les Humanimaux ont leurs propres habitudes, …",
       "type": "VIDEO",
       "timestamp": "2026-10-13T19:25:08+0000"
     },
     {
-      "img": "/assets/ig/3.jpg",
+      "img": "/assets/ig/4.jpg",
       "permalink": "https://www.instagram.com/reel/DeZYnd4AM-s/",
       "caption": "",
       "type": "VIDEO",
       "timestamp": "2026-10-12T14:16:08+0000"
     },
     {
-      "img": "/assets/ig/4.jpg",
+      "img": "/assets/ig/5.jpg",
       "permalink": "https://www.instagram.com/reel/DeFTkG_R27D/",
       "caption": "La Fabulisterie is in motion. Taking shape, encounter after encounter. The Open Studio with Monsieur Térez continues as we create the exhib…",
       "type": "VIDEO",
       "timestamp": "2026-10-04T18:45:16+0000"
     },
     {
-      "img": "/assets/ig/5.jpg",
+      "img": "/assets/ig/6.jpg",
       "permalink": "https://www.instagram.com/p/Ddd0EK9EUdX/",
       "caption": "DeNode Foundation is pleased to present Humain, trop humain, a new exhibition cycle in two interconnected acts, inspired by Friedrich Nietz…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-09-19T10:38:03+0000"
-    },
-    {
-      "img": "/assets/ig/6.jpg",
-      "permalink": "https://www.instagram.com/p/DdbpoXPAF9M/",
-      "caption": "KLAAR OM EEN FABULIST TE WORDEN? Monsieur Térez is er helemaal klaar voor, en DeNode Foundation kijkt ernaar uit om jullie te verwelkomen i…",
-      "type": "CAROUSEL_ALBUM",
-      "timestamp": "2026-09-18T14:28:24+0000"
     }
   ]
 }
