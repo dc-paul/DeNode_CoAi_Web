@@ -1,0 +1,378 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interview met Monsieur Térez — DeNode Foundation</title>
+<meta name="description" content="Gent, Herfst 2026">
+<meta property="og:title" content="Interview met Monsieur Térez — DeNode Foundation">
+<meta property="og:description" content="Gent, Herfst 2026">
+<meta property="og:image" content="https://www.denode.be/_assets/images/interview/interview-monsieur-terez/monsieur-terez-interview-68.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.denode.be/nl/artikel/interview-monsieur-terez.html">
+<meta property="og:site_name" content="DeNode Foundation">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="nl" href="https://www.denode.be/nl/artikel/interview-monsieur-terez.html"><link rel="alternate" hreflang="en" href="https://www.denode.be/en/artikel/interview-monsieur-terez.html"><link rel="alternate" hreflang="fr" href="https://www.denode.be/fr/artikel/interview-monsieur-terez.html"><link rel="alternate" hreflang="x-default" href="https://www.denode.be/nl/artikel/interview-monsieur-terez.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/_assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/_assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/_assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../../assets/denode-ink.css"><style>
+/* home-hero: volledig beeld tonen i.p.v. croppen (Paul 4 jul 2026, experiment) —
+   langste zijde past exact, korte zijde krijgt bone-lucht errond */
+.dn-hero__img img{object-fit:contain;inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);}
+/* hero-wisselbeeld: recto/verso alterneren om de 5s via frontmatter 'wisselbeeld:' (Paul 8 jul 2026) —
+   tweede beeld gestapeld op het eerste; JS toggelt .aan; pointer-events volgen de zichtbaarheid (lightbox) */
+.dn-hero__img img.dn-wissel{opacity:0;transition:opacity .9s ease;pointer-events:none;}
+.dn-hero__img img.dn-wissel.aan{opacity:1;pointer-events:auto;}
+/* home-carrousel (Paul 26 sep 2026): hero-aankondigingen (lopende/komende expo + open calls)
+   wisselen om de 7s (Paul koos 7 i.p.v. 5) met dezelfde .9s-fade als het wisselbeeld. Dia's gestapeld in één
+   grid-cel → de hoogste dia bepaalt de hoogte, niets springt. Tabbalk = genummerde koppen;
+   een oxide haarlijn loopt vol in 7s en IS de timer (animationend → volgende dia), zodat
+   pauzeren (hover, focus, knop) de timer vanzelf stilzet. Reduced-motion: geen autoplay. */
+.dn-carr{display:grid;border-bottom:2px solid var(--ink);}
+.dn-carr>.dn-slide{grid-area:1/1;border-bottom:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s;}
+.dn-carr>.dn-slide.aan{opacity:1;visibility:visible;transition:opacity .9s ease,visibility 0s;}
+.dn-carr__nav{grid-area:2/1;display:flex;border-top:1px solid var(--ink);background:var(--paper);}
+.dn-carr__tab{flex:1;display:flex;align-items:baseline;gap:14px;min-width:0;text-align:left;background:none;border:0;border-right:1px solid var(--line);padding:15px var(--gutter) 16px;cursor:pointer;position:relative;font-family:var(--font-ui);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted);}
+.dn-carr__tab .n{font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:.02em;line-height:1;}
+.dn-carr__tab .k{white-space:nowrap;}
+.dn-carr__tab .t{font-family:var(--font-serif);font-style:italic;font-size:16px;letter-spacing:0;text-transform:none;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.dn-carr__tab:hover{color:var(--ink);}
+.dn-carr__tab.aan{color:var(--ink);}
+.dn-carr__tab.aan .k{color:var(--accent);}
+.dn-carr__tab::before{content:"";position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--accent);}
+.dn-carr__tab.aan::before{animation:dn-vul 7s linear forwards;}
+.dn-carr.pauze .dn-carr__tab.aan::before{animation-play-state:paused;}
+@keyframes dn-vul{from{width:0}to{width:100%}}
+.dn-carr__pp{flex:0 0 58px;background:none;border:0;cursor:pointer;color:var(--ink);font-family:var(--font-ui);font-size:13px;font-weight:700;}
+.dn-carr__pp:hover{color:var(--accent);}
+@media(prefers-reduced-motion:reduce){.dn-carr>.dn-slide{transition:none;}.dn-carr__tab.aan::before{animation:none;width:100%;}.dn-carr__pp{display:none;}}
+/* mobiel: tabbalk BOVEN de dia's — anders staat hij onder beeld + tekst, ver onder de vouw, en ziet niemand dat er meer is */
+@media(max-width:860px){.dn-carr>.dn-slide{grid-area:2/1;}.dn-carr__nav{grid-area:1/1;border-top:0;border-bottom:1px solid var(--ink);}.dn-carr__tab{padding:13px 16px 14px;gap:10px;}.dn-carr__tab::before{top:auto;bottom:-1px;}.dn-carr__tab .t{display:none;}}
+/* galerij-captions: 1 regel met ellipsis — geen overlap met volgend beeld (Paul 6 jul 2026) */
+.dn-gal figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* persmap (6 sep 2026): colofon naast elk beeld volledig leesbaar — geen afkap, geen kapitalen (titels dragen onderkast-namen) */
+.dn-gal--pers figcaption{white-space:normal;overflow:visible;text-overflow:clip;text-transform:none;letter-spacing:.02em;font-size:12px;line-height:1.55;color:var(--ink);}
+.dn-gal--pers figcaption .dn-credit{display:block;font-size:11px;color:var(--muted);}
+.dn-gal--pers figcaption a{display:inline-block;margin-top:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.dn-gal--pers img{cursor:zoom-in;}
+/* fotograaf-credit ondergeschikt aan kunstenaar/titel in captions (Paul 7 jul 2026) */
+figure figcaption{color:var(--ink);}
+figure figcaption .dn-credit{color:var(--muted);font-size:10px;text-transform:none;letter-spacing:.04em;}
+/* compacte kaarten voor groepsexpo-deelnemers op de kunstenaars-index (Paul 7 jul 2026) */
+.dn-grid--compact{grid-template-columns:repeat(6,1fr);gap:18px 16px;}
+@media(max-width:860px){.dn-grid--compact{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.dn-grid--compact{grid-template-columns:repeat(2,1fr);}}
+.dn-grid--compact .dn-card .thumb{aspect-ratio:1;margin-bottom:8px;}
+.dn-grid--compact .dn-card h3{font-size:14px;line-height:1.1;}
+.dn-grid--compact .dn-card .who{display:none;}
+/* expo-index: affiche/expo-beeld volledig tonen, niet croppen (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb img{object-fit:contain;}
+/* …en elke kaart als duidelijke eenheid kaderen, zodat een bijschrift nooit bij
+   het beeld erónder lijkt te horen (Paul 7 jul 2026: VIER ↔ AI Universe-verwarring) */
+.dn-grid--vol{row-gap:44px;}
+.dn-grid--vol .dn-card{border:1px solid var(--line);background:var(--paper2);padding:14px 16px 18px;}
+/* letterbox in dezelfde tint als de kaart — geen tweede kader-in-kader (Paul 7 jul 2026) */
+.dn-grid--vol .dn-card .thumb{background:transparent;}
+/* expo-kop-beeld: volledig getoond, gecentreerd, nooit gecropt (Kristof 9 jul 2026) */
+.dn-expokop{margin:0;text-align:center;}
+.dn-expokop img{max-width:100%;max-height:62vh;width:auto;height:auto;cursor:zoom-in;}
+/* expo-kop: titelblok naast het beeld (Paul 9 jul 2026) */
+.dn-expokop2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
+.dn-expokop2 .dn-expokop img{max-height:56vh;}
+@media(max-width:860px){.dn-expokop2{grid-template-columns:1fr;gap:28px;}}
+/* expo-kop-wisselbeelden (frontmatter kopwissel:): rustige cross-fade om de 2,5 s (fade 1,5 s) (Paul 10 jul 2026, Triple Cintre-flyers) */
+.dn-expokop--wissel{position:relative;}
+.dn-expokop--wissel img.dn-kw{opacity:0;transition:opacity 1.5s ease;}
+.dn-expokop--wissel img.dn-kw.aan{opacity:1;}
+.dn-expokop--wissel img.dn-kw:not(:first-child){position:absolute;top:0;left:50%;transform:translateX(-50%);max-height:56vh;}
+/* artikel-/prosebeelden begrensd — "foto's te groot" (Kristof 9 jul 2026); lightbox toont vol formaat */
+.dn-fig img{max-height:540px;width:auto;height:auto;max-width:100%;margin:0 auto;display:block;}
+/* zoekicoon in nav: op tekstformaat van de site, niet piepklein (Paul 7 jul 2026) */
+.dn-nav a.dn-zoekicoon{display:inline-flex;align-items:center;vertical-align:middle;}
+.dn-nav a.dn-zoekicoon svg{display:block;}
+/* dn-band subtieler (Paul 4 jul 2026): minder hoog, kleinere quote, kleiner logo */
+.dn-band{padding:28px 0;}
+.dn-band__q{font-size:clamp(18px,2.2vw,24px);max-width:none;}
+.dn-band__by{margin-top:14px;}
+
+/* expo-index in twee blokken (Paul 31 aug 2026): "nu & verwacht" vooraan met accentkader,
+   archief onder een scheidingslijn. Beelden blijven ONGEMOEID — ontkleuren/dimmen van
+   voorbije expo-beelden is expliciet afgewezen (Paul 31 aug 2026). */
+.dn-sublabel{font-family:var(--font-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 20px;}
+#dn-expo-komend .dn-card{border-color:var(--accent);}
+/* Uitgelicht: alle blokken even groot. De dubbele breedte voor het eerste blok is op
+   1 sep 2026 teruggedraaid — Paul wil Björn en Kat in evenwicht. De volgorde in home.md
+   bepaalt nog wel wie eerst staat. */
+.dn-expo-scheiding{border-top:1px solid var(--line);padding-top:34px;}
+
+/* ONDERKAST-NAMEN (Paul 1 sep 2026, route B): werk- en merknamen houden hun eigen
+   schrijfwijze, ook als titel — "allesgut", "nodenaysteen". De Ink-stijl zet .dn-h1/.dn-h2/
+   .dn-h3/.dn-card h3/.dn-crumb in kapitalen; staat er zo'n naam in de kop, dan zet de
+   generator de klasse dn-asis en rendert de titel zoals ze geschreven is. Onderkast leest optisch
+   kleiner, dus de twee grote koppen krijgen ~8% meer korps en strakkere letterafstand.
+   NIET in denode-ink.css zetten: dat bestand wordt bij elke build uit INKDIR gekopieerd. */
+h1.dn-asis,h2.dn-asis,h3.dn-asis,.dn-card h3.dn-asis,.dn-crumb.dn-asis,.dn-asis{text-transform:none;}
+.dn-h1.dn-asis{font-size:clamp(48px,7vw,96px);letter-spacing:-.012em;}
+.dn-h2.dn-asis{font-size:clamp(30px,4.3vw,50px);letter-spacing:-.004em;}
+.dn-h3.dn-asis{letter-spacing:0;}
+.dn-card h3.dn-asis{font-size:23px;letter-spacing:0;}
+.dn-crumb.dn-asis{letter-spacing:.06em;}
+
+/* render-laag aanvullingen (experiment) — hoort later in denode-ink.css */
+/* CALLOUT (Paul 14 okt 2026): kader voor één verwijzing — scherp, hairline, accent links */
+.dn-callout{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 22px;margin:1.6em 0;max-width:70ch;}
+.dn-callout .dn-eyebrow{display:block;margin-bottom:6px;}
+.dn-callout p{margin:0;font-family:var(--font-ui);font-weight:600;font-size:16px;color:var(--ink);}
+.dn-callout a{color:var(--accent);}
+.dn-prose{max-width:70ch;font-size:16.5px;line-height:1.72;color:#26251f;}
+.dn-prose p{margin:0 0 1.15em;}
+.dn-prose ul{margin:0 0 1.15em 1.2em;}
+.dn-prose a{color:var(--accent);}
+.dn-prose .dn-h3{margin:1.6em 0 .6em;}
+.dn-quote{font-family:var(--font-serif);font-style:italic;font-size:22px;line-height:1.5;border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:1.6em 0;color:#26251f;}
+.dn-fig{margin:2em 0;}
+.dn-fig img{border:1px solid var(--line);} /* sizing komt van de max-height-regel hierboven — width:100% rekte staande foto's uit (Paul 9 jul 2026) */
+.dn-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;}
+@media(max-width:860px){.dn-cols{grid-template-columns:1fr;}}
+.dn-rowlist{list-style:none;}
+.dn-rowlist li{border-bottom:1px solid #33322c;}
+.dn-rowlist a{display:flex;gap:26px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--paper);}
+.dn-rowlist .d{font-family:var(--font-ui);font-size:12px;letter-spacing:.14em;color:#98917f;min-width:150px;text-transform:uppercase;}
+.dn-rowlist .t{font-family:var(--font-display);font-size:20px;text-transform:uppercase;}
+.dn-rowlist a:hover .t{color:#e8a99f;}
+/* nieuwsbriefarchief: sobere tekstlijst — datum · titel · kunstenaars, geen kaarten/display-kapitalen (Paul 11 jul 2026) */
+.dn-nblijst{list-style:none;margin:0;padding:0;}
+.dn-nblijst li{border-bottom:1px solid var(--line);}
+.dn-nblijst a{display:block;padding:14px 0;text-decoration:none;color:var(--ink);font-family:var(--font-ui);font-size:15px;line-height:1.55;}
+.dn-nblijst .d{color:#7a7466;font-size:13px;letter-spacing:.08em;margin-right:14px;white-space:nowrap;}
+.dn-nblijst .t{font-weight:600;}
+.dn-nblijst .wie{color:#7a7466;}
+.dn-nblijst a:hover .t{color:var(--accent);}
+.dn-note{font-family:var(--font-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.dn-zoek{width:100%;max-width:420px;margin:0 0 30px;padding:13px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink);font-family:var(--font-ui);font-size:14px;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-zoek:focus{outline:2px solid var(--accent);}
+.dn-filterknoppen{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+.dn-filterknoppen button{font-family:var(--font-ui);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;}
+.dn-filterknoppen button.actief{background:var(--ink);color:var(--paper);}
+/* mobiel menu (hamburger) — blueprints §7 stond nog open */
+.dn-menuknop{display:none;background:none;border:1px solid var(--ink);color:var(--ink);font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;border-radius:0;-webkit-appearance:none;appearance:none;font-family:var(--font-ui);}
+@media(max-width:820px){.dn-menuknop{display:block;}}
+/* nav paste niet meer op één lijn na het Programma-item (Paul 9 jul 2026):
+   compactere typografie + hamburger springt al in vanaf 1120px i.p.v. 820px */
+.dn-nav ul{gap:20px;}
+.dn-nav a{letter-spacing:.09em;}
+@media(max-width:1120px){.dn-nav ul{display:none;}.dn-menuknop{display:block;}}
+#dn-mobielmenu{display:none;border-bottom:2px solid var(--ink);background:var(--paper);}
+#dn-mobielmenu.open{display:block;}
+#dn-mobielmenu a{display:block;padding:15px var(--gutter);font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);}
+#dn-mobielmenu a:active{color:var(--accent);}
+.dn-teaser{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);border:1px solid var(--line);}
+.dn-teaser img{width:100%;height:100%;object-fit:contain;aspect-ratio:4/3;}
+/* kunstenaar-portretten in kaarten: nooit croppen — volledige foto zichtbaar; per-kunstenaar override via beeldFit/beeldFocus (Paul 9 jul 2026, consistent site-breed) */
+#dn-kgrid .dn-card .thumb img,#dn-kgrid2 .dn-card .thumb img{object-fit:contain;}
+.dn-teaser .in{padding:30px 34px 30px 0;}
+@media(max-width:760px){.dn-teaser{grid-template-columns:1fr;}.dn-teaser .in{padding:24px;}}
+/* team-portretten (Paul/Kristof/Hanna/Hilde): klein, rond, enkel het gezicht — niet bombastisch */
+img[src*="/images/team-"]{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--ink);}
+.dn-fig img[src*="/images/team-"]{border:2px solid var(--ink);}
+/* eyebrow ("KUNSTENAAR"/"EXPO"-label): ademruimte boven de display-titel — diakrieten (Ö) liepen tegen het label (Paul 9 jul 2026) */
+.dn-eyebrow{margin-bottom:12px;}
+/* teamsectie: 2 per rij → 2×2-grid bij 4 leden, geen 3+1 (Paul 9 jul 2026) */
+.dn-grid--team{grid-template-columns:repeat(2,1fr);}
+@media(max-width:560px){.dn-grid--team{grid-template-columns:1fr;}}
+/* beeldserie met identiek bijschrift (dn-gal--serie): natuurlijke verhoudingen met hoogte-plafond — geen 3:2-letterbox meer (Paul 11 jul 2026: lange smalle werken zoals Ines Claus werden 'gepropt'), geen caption-herhaling */
+.dn-gal--serie{align-items:start;row-gap:18px;}
+/* serie-raster breekt uit de smalle 70ch-leeskolom naar de volle paginabreedte en schaalt mee met het venster (Paul 10 jul 2026); prose-kolom staat links in de wrap, dus verbreden = uitlijnen */
+.dn-prose .dn-gal--serie{width:min(calc(100vw - 2*var(--gutter)), calc(var(--wrap) - 2*var(--gutter)));}
+.dn-gal--serie figure{margin:0;}
+.dn-gal--serie img{width:auto;max-width:100%;height:auto;max-height:70vh;object-fit:unset;display:block;margin:0 auto;}
+/* zaalzicht-grid: 3 naast elkaar bij reeksen van ≥3 (Paul, 3 jul 2026) */
+/* minmax(0,1fr): intrinsieke beeldbreedte mag galerij-kolommen nooit oprekken —
+   anders schuiven werken uit beeld bij smaller venster (Paul 9 jul 2026) */
+.dn-gal{grid-template-columns:repeat(2,minmax(0,1fr));}
+.dn-gal figure{min-width:0;}
+.dn-gal img{width:auto;max-width:100%;height:auto;max-height:78vh;object-fit:unset;display:block;margin:0 auto;}
+.dn-gal--3{grid-template-columns:repeat(3,minmax(0,1fr));}
+/* tegelraster (dn-gal--tegels): beelden klein en egaal tonen, groot openen in de lightbox —
+   Paul 22 sep 2026: 'een na een bekijken, niet allemaal groot op het blad' */
+.dn-gal--tegels{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.dn-gal--tegels img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;max-height:none;cursor:zoom-in;}
+@media(max-width:720px){.dn-gal--tegels{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:900px){.dn-gal--3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:720px){.dn-gal{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:560px){.dn-gal--3{grid-template-columns:minmax(0,1fr);}}
+/* video-figuur */
+.dn-video{margin:2em 0;}
+.dn-video video{width:100%;border:1px solid var(--line);background:#000;}
+.dn-video figcaption{font-family:var(--font-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+/* Instagram-blok: merknaam "DeNode" niet uppercasen + posts volledig tonen (portret-frame, geen crop) */
+#dn-ig-sectie .dn-h2{text-transform:none;}
+#dn-ig-grid .thumb{aspect-ratio:4/5;background:var(--paper2);}
+#dn-ig-grid .thumb img{object-fit:contain;}
+/* lightbox — fullscreen beeldweergave met pijl-navigatie */
+.dn-gal img,.dn-fig img{cursor:zoom-in;}
+#dn-lb{position:fixed;inset:0;z-index:200;background:rgba(14,14,12,.96);display:none;align-items:center;justify-content:center;flex-direction:column;}
+#dn-lb.open{display:flex;}
+#dn-lb img{max-width:92vw;max-height:82vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,.6);}
+#dn-lb .cap{color:#cfc8b8;font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:16px;max-width:80ch;text-align:center;padding:0 20px;}
+#dn-lb .cnt{color:#7c7566;font-family:var(--font-ui);font-size:11px;letter-spacing:.14em;margin-top:6px;}
+#dn-lb button{position:absolute;background:none;border:0;color:var(--paper);cursor:pointer;font-size:34px;line-height:1;padding:18px;font-family:var(--font-ui);opacity:.75;}
+#dn-lb button:hover{opacity:1;color:#e8a99f;}
+#dn-lb .prev{left:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .next{right:6px;top:50%;transform:translateY(-50%);}
+#dn-lb .close{top:10px;right:14px;font-size:26px;}
+@media(max-width:700px){#dn-lb button{font-size:26px;padding:12px;}#dn-lb img{max-width:100vw;max-height:76vh;}}
+</style></head><body data-bron="nl/artikel/interview-monsieur-terez" data-tekst="1d77d445e4">
+<header class="dn-header"><div class="dn-wrap"><div class="dn-navrow">
+<a class="dn-brand" href="../index.html"><img src="../../assets/denode-logo-black.png" alt="DeNode Foundation"></a>
+<nav class="dn-nav"><ul><li><a href="../expo/index.html">Tentoonstellingen</a></li><li><a href="../programma.html">Programma</a></li><li><a href="../kunstenaar/index.html">Kunstenaars</a></li><li><a href="../publicaties.html">Publicaties</a></li><li><a href="../shop.html">Collect</a></li><li><a href="../bezoek.html">Bezoek</a></li><li><a href="../over.html">Over</a></li><li><a class="dn-zoekicoon" href="../zoeken.html" aria-label="Zoeken" title="Zoeken"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><line x1="16" y1="16" x2="21.5" y2="21.5"/></svg></a></li></ul><div class="dn-lang"><span class="lg active">NL</span><a class="lg" href="../../en/artikel/interview-monsieur-terez.html">EN</a><a class="lg" href="../../fr/artikel/interview-monsieur-terez.html">FR</a></div><button class="dn-menuknop" aria-label="menu" onclick="document.getElementById('dn-mobielmenu').classList.toggle('open')">☰</button></nav>
+</div></div>
+<div id="dn-mobielmenu"><a href="../expo/index.html">Tentoonstellingen</a><a href="../programma.html">Programma</a><a href="../kunstenaar/index.html">Kunstenaars</a><a href="../publicaties.html">Publicaties</a><a href="../collectie.html">Collectie</a><a href="../shop.html">Collect</a><a href="../event/index.html">Events</a><a href="../bezoek.html">Bezoek</a><a href="../over.html">Over</a><a href="../pers.html">Pers</a><a href="../zoeken.html">Zoeken</a></div>
+</header>
+<div class="dn-wrap"><div class="dn-crumb"><a href="../publicaties.html">Publicaties</a> / Interview met Monsieur Térez</div></div>
+
+<section class="dn-section" style="padding-bottom:40px"><div class="dn-wrap">
+<div class="dn-kicker">interview · 2026-10-14</div>
+<h1 class="dn-h2" style="margin:10px 0 6px">Interview met <a href="../kunstenaar/monsieur-terez.html">Monsieur Térez</a></h1>
+
+
+</div></section>
+
+<section style="padding-bottom:80px"><div class="dn-wrap"><div class="dn-prose"><p>Gent, Herfst 2026</p>
+<p>INTERVIEW MET MONSIEUR TEREZ (FR °1974 )</p>
+<p><em>Interview naar aanleiding van de EXPO Humanimality, Foundation DeNode, Predikherenlei 4, 9000 Gent. De expo loopt van 16 oktober tot 20 december 2026.</em></p>
+<p><em>Opening vrijdag 16 oktober vanaf 18u.</em></p>
+<p>Ik ontmoet Monsieur Térez op zijn residentie bij DeNode, waar hij verder werkt aan zijn serie <em>Become a Fabulist</em>.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-monsieur-terez/monsieur-terez-interview-68.jpg" alt="Hilde Van Canneyt in gesprek met Monsieur Térez tijdens zijn residentie bij DeNode Foundation — Foto: Paul De Cannière" data-cap="Hilde Van Canneyt in gesprek met Monsieur Térez tijdens zijn residentie bij DeNode Foundation — © Paul De Cannière"><figcaption><span class="dn-credit">© Paul De Cannière</span></figcaption></figure>
+<p><strong><a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a> (HVC): Bonjour ‘Monsieur Térez’. We staan hier in de tweede ruimte van Foundation DeNode, waar je momenteel resideert, maar daar komen we later op terug. Laten we bij het begin beginnen: hoe ben je “kunstenaar” geworden? Met details over het daarbij horende kleurrijke kunstenaarsleven natuurlijk!</strong></p>
+<p>Monsieur Térez (MT): (lacht) Eigenlijk heb ik het niet gekozen. Het heeft zich aan mij opgedrongen. Ik kom uit een milieu waar kunst helemaal niet aanwezig was. Het was een volks milieu met eerder arbeiders en landbouwers. Cultuur was bij ons thuis nauwelijks aanwezig. Het was dus geen bestemming die in de lijn lag van waar ik vandaan kom.</p>
+<p>Ik begon kunstgeschiedenis te studeren. Daarmee week ik al een beetje af van mijn milieu, want ik ben de eerste van mijn familie die naar de universiteit ging, en voor hen was dat al heel wat. In het begin ging het mij niet zozeer om de theorie: ik wilde kunst en cultuur verwerven die ik door mijn achtergrond niet had. Het heeft tijd gekost voor ik aanvaardde dat ik écht de artistieke weg zou kiezen, de praktische kunsten zou beoefenen en kunstenaar zou worden.</p>
+<p><strong>HVC: Wat vonden je ouders ervan dat hun zoon artistieke aspiraties had?</strong></p>
+<p>MT: Voor hen was het niet eens een beroep. Al steunden ze me en waren ze trots dat ik in een grote stad studeerde. Maar toen ik met een werkelijke artistieke activiteit begon, begrepen ze totaal niet wat ik deed en wat er in mijn praktijk op het spel stond. Toch waren ze er als steunende supporters. Ze hebben me nooit gezegd: ‘Jongen, ga nu aub een “echt” beroep uitoefenen! ” Ik zag wel dat het hen wel een beetje hun petje te boven ging. Mijn vader is intussen overleden, maar voor zijn dood had hij gelukkig goed begrepen dat dit mijn levensinvulling was.</p>
+<p><strong>HVC: Wanneer kwam de klik van theorie naar praktijk?</strong></p>
+<p>MT: Ik weet het zo niet. Vrij snel zat het ergens in mijn achterhoofd, maar ik zei tegen mezelf: ‘Dat is voor later, voor na mijn pensioen.’ Als student kunstgeschiedenis had ik wel al een atelier en een praktijk, maar dat bleef in mijn hoofd een hobby. Ik had nood aan een artistieke praktijk, zonder er verder een toekomst in te projecteren.</p>
+<p><strong>HVC: Werd je toen al geïnspireerd door bepaalde kunstenaars, tentoonstellingen die je omver bliezen? Ik denk door je beeldtaal spontaan aan het dadaïsme – ‘dada’, die de kunstwereld wakker schudde en de plaveide voor latere bewegingen zoals de CoBrA-beweging, of het latere surrealisme, pop-art of zelfs de vrolijke versie van Art Brut.</strong></p>
+<p>MT: Ik ging alles zien. Ik moest me voeden, want ik had geen culturele achtergrond: musea allerhande, van de oudheid over de renaissance, het classicisme, alles dat maar een ‘kunstgeschiedenis’ in zich had, ging ik zien.</p>
+<p><strong>HVC: Herinner je je nog hoe het ‘bricoleren’ begon?</strong></p>
+<p>MT: Ik startte met het maken van objecten, leunend bij design en eerder in de geest van kunstambacht, dat leek me ernstiger. (<em>lacht</em>) Daarna ben ik op het slechte pad geraakt. (<em>knipoogt</em>) Op een bepaald moment begon ik kleine sculpturen te creëren. Daarnaast ontwierp en produceerde ik lampen en werkte ik met design-uitgevers. De sculpturen werden middelgroot, daarna steeds groter, en na een tijd begon ik te exposeren.</p>
+<p><strong>HVC: Zolang ze een functie hadden, zag je ze niet als ‘kunst’.</strong></p>
+<p>MT: Toen ik unieke stukken begon te maken die geen functie meer hadden, noemde ik mezelf nog altijd geen kunstenaar: het was gewoon het vervolg van mijn aanpak. Ik had trouwens moeite om die benaming te aanvaarden. Ik hield me erg op de achtergrond met mijn artistieke praktijk en wilde mezelf niet op de voorgrond plaatsen. In se ben ik best verlegen.</p>
+<p><strong>HVC: Maar een mens wil ook graag kaas op de boterham en na een atelierdag liefst een degelijke slaapplaats…</strong></p>
+<p>MT: Ik bleef objecten produceren, die in vele winkels lagen en goed verkochten. Daarna begon ik tentoonstellingen op te bouwen en plotsklaps, voelde ik op een dag dat ik geen objecten meer te hoefde te maken… Het is organisch verlopen. Met de objecten begon ik rond mijn dertigste, vanaf mijn vijfendertigste creëerde ik alleen nog sculptuur, en sculptuur bleef mijn basis.</p>
+<p><strong>HVC: We zien hier op je residentieplaats en tevens ‘vrolijke en levendige’ voorbereidingsplek voor je solo bij DeNode Foundation te Gent, figuratieve, speelse sculpturen staan en hangen; kleurrijke dartele al dan niet herkenbare ‘dingen’, objecten met een guitige uitstraling, waarmee ik spontaan wil mee spelen.</strong></p>
+<p>MT: Leve een speelse dartele geest! Coloriet was altijd heel aanwezig in het design van mijn objecten. Kleur is voor mij onmisbaar in het creëren. Ik gebruik trouwens bewust geen zwart in mijn werk.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-monsieur-terez/humanimality-jolien-chielens-001.jpg" alt="Humanimality, DeNode Foundation (2026) — Foto: Jolien Chielens" data-cap="Humanimality, DeNode Foundation (2026) — © Jolien Chielens"><figcaption>Humanimality, DeNode Foundation (2026) <span class="dn-credit">— © Jolien Chielens</span></figcaption></figure>
+<p><strong>HVC: Nooit?</strong></p>
+<p>MT: Op oude kunstwerken kan je dat nog terugzien, maar nu helemaal niet meer. Dat heb ik bewust beslist.</p>
+<p><strong>HVC: Wat kwam er na de objecten en de sculptuur?</strong></p>
+<p>MT: Een tiental jaar maakte ik monumentale sculpturen in de publieke ruimte, meestal in opdracht. Vaak in hars, denk: epoxy en polyurethaan, soms in metaal of hout. Ik creëerde ook wandsculpturen en <em>murals</em>. Tot ik een tiental jaar geleden terug zin kreeg om terug te keren naar kleinere formaten.</p>
+<p><strong>HVC: Omdat al dat papierwerk om iets in de publieke ruimte op te zetten, of deelnemen aan openbare wedstrijden, zoveel tijd kost?</strong></p>
+<p>MT: Niet alleen het papierwerk: die projecten duren jaren, je werkt met steden samen… Ik wilde veel spontanere en directere dingen construeren, terug naar een direct publiek, mensen tegenover me hebben. Ik ben opnieuw gaan exposeren. Ik wilde ook op doek beginnen, experimenteren met eens andere media, maar ik vond het niet; ik probeerde en probeerde, maar was niet tevreden. Het heeft me een hele tijd gekost tegen ik tevreden was. Nu doe ik het al een aantal jaren. Ik heb mijn grafische taal ontwikkeld en vooral een brug geslagen tussen mijn sculptuur en mijn 2D -werk. Het is een dialoog tussen beiden, zodat er een samenhang is.</p>
+<p><strong>HVC: Over die directe interactie met het publiek, kan je daar iets over kwijt?</strong></p>
+<p>MT: Die is er altijd geweest. Zelfs toen ik monumentale stukken maakte, wilde ik dat mensen met mijn werk konden interageren: het aanraken, er iets aan toevoegen, etc.</p>
+<p><strong>HVC: Even over het geschreven woord dat ook naast je sculpturen en schilderijen bestaat. Het zijn altijd teksten die het personage definiëren, die er iets meer over vertellen. Bijvoorbeeld en kat die een personage wordt, onder de noemer antropomorfisme. En het is veelal iets grappigs, absurd, surrealistisch.</strong></p>
+<p>MT: Ik hou van die ironie, het absurde, de valse naïviteit.</p>
+<p><strong>HVC: Waarom noem je dat vals?</strong></p>
+<p>MT: Omdat mensen het anders letterlijk nemen… Het is bewust naïef om andere al dan niet serieuze dingen over te brengen.</p>
+<p><strong>HVC Speel je ook bewust met titels, om indirect naar ernstige dingen te verwijzen?</strong></p>
+<p>MT: Als je niet oplet, zie je alleen de kleuren en mis je de boodschap.</p>
+<p><strong>HVC: Als iemand vanuit de everydaylife je universum binnenstapt, wat wil je dat deze voelt?</strong></p>
+<p>MT: Als ik de taal van de kindertijd gebruik, is dat omdat de emotie het eerste is wat mensen aantrekt. De nostalgie, het sentiment; de kleuren die hen overspoelen en zin geven om verder te gaan. Het kunnen evengoed negatieve affecten zijn: sommigen vinden het echt onbeduidend. Maar dat is niet erg. Ik heb het intussen aanvaard. Als ik iedereen zou willen pleasen, zou dat nogal triest zijn.</p>
+<p><strong>HVC: Compromissen sluiten is veelal geen meerwaarde in de kunst, muziek en woord. Dan komt er iets “lukewarm” uit.</strong></p>
+<p>MT: Soms is de boodschap anekdotisch, andermaal humoristisch. Maar er kunnen ook kritischere boodschappen over de maatschappij in zitten. Het absurde is een manier om naar de maatschappij te kijken, naar haar ontsporingen, en die aan te klagen zonder er een polemiek van te maken. Ik wil gewoon uitdrukken: wat we meemaken is van de pot gerukt.</p>
+<p><strong>HVC: Zit er echt geen cynisme in?</strong></p>
+<p>MT: Ik gebruik nooit cynisme, wel ironie. En nooit een mening of een kritische beschouwing: ik plaats mezelf niet boven alles om te oordelen over wat er gebeurt. Ik ben geen zedenpreker.</p>
+<p><strong>HVC: Wil je ons een wolkje optimisme meegeven?</strong></p>
+<p>MT: Natuurlijk. Ik ben diep optimistisch. Dat belet me niet een kritische blik te hebben op wat er gebeurt, maar nooit met cynisme. Ik ben enerzijds optimistisch, anderzijds durf ik ook nogal fatalistisch uit de hoek te komen: ik wijs op de gebreken van onze samenleving, maar op mijn schaal. Het is het enige wat ik kan doen.</p>
+<p><strong>HVC: Je bent hier een maand in residentie, en daarna volgt je solotentoonstelling hier in dit mooie pand aan de Predikherenlei te Gent.</strong></p>
+<p>MT: Mijn hoofddoel is de voorbereiding van de tentoonstelling, die uit twee delen bestaat. De reeks die ik toon, gaat over het thema humanimaliteit. In het verlengde van alles wat ik net zei, toon ik een dystopisch universum waarin de humanimalen de mensheid hebben vervangen: de personages die over de aarde zullen heersen zodra de mens verdwenen is. Zij zijn de aflossing van de mensheid. Het is een manier om het over onszelf te hebben, over onze samenlevingen, over de ontsporingen van de mensheid, via dat universum. Want zij herhalen een beetje wat wij gedaan hebben; ze hebben dezelfde kijk op de dingen. Het is een manier om met onszelf te spotten en uit te drukken dat de geschiedenis zich altijd herhaalt, dat we niet leren uit onze fouten. Wat en wie daarna komt, zal weer hetzelfde doen helaas…</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-monsieur-terez/humanimality-jolien-chielens-066.jpg" alt="Humanimality, DeNode Foundation (2026) — Foto: Jolien Chielens" data-cap="Humanimality, DeNode Foundation (2026) — © Jolien Chielens"><figcaption>Humanimality, DeNode Foundation (2026) <span class="dn-credit">— © Jolien Chielens</span></figcaption></figure>
+<p><strong>HVC: …pindakaas. Denk aan een hamsterrad: het draait, en we komen altijd terug op hetzelfde punt uit.</strong></p>
+<p>MT: Precies. Er is ook een reeks met korte zinnen in dezelfde geest: zinnen uit het denkboek van de ‘humanimalen’. Zij willen de fout van de mensen niet herhalen, namelijk zwichten voor religie. Ze vertrouwen liever op een wetenschap: de patafysica, de wetenschap van het absurde van Alfred Jarry. De teksten komen uit zijn boek <em>Pensées d’Alfred</em>, hij schrijft bewust een beetje ontregeld.</p>
+<p><strong>HVC: Héérlijk! Daar herken ik me in! (knipoogt)</strong></p>
+<p>MT: Het tweede deel van de expo wordt interactiever. We wilden hier de <em>Fabulist Serie</em> maken, de plek waar de fabels worden uitgevonden, waar de creatie ontstaat. Er is het atelier, waar de personages geschilderd worden, en het boudoir, waar mensen de fabels kunnen schrijven. In het atelier staat altijd een werktafel waar iemand personages kan tekenen of schilderen die in dit universum zouden-kunnen passen.</p>
+<p><strong>HVC: Kunstenaars doen vaak een residentie om een nieuw atelier te vinden. Heb je alles in een camionette uit het Zuiden van Frankrijk meegebracht?</strong></p>
+<p>MT: Ik heb enorm veel thuis voorbereid, ik ben met een camion gekomen. Maar hier heb ik voorgesteld dit deel in te nemen met een scenografie, waaraan gewerkt wordt. Ik stelde ook voor om een installatie in de patio te maken, die nog niet begonnen is. Ik wil de tentoonstelling evenzo begeleiden met een stedelijke invasie van de <em>Happy Faces</em>: personages uit mijn universum die Gent zullen overspoelen en jullie hopelijk overal in de stad opduiken.</p>
+<p><strong>HVC: Doe je dat alleen, of met een leger andere (kunst)durvers?</strong></p>
+<p>MT: Alleen, soms met anderen. Daarna komt er een schattenjacht: mensen worden uitgenodigd om de Happy Faces op te sporen en ze kunnen ze deelnemen aan een wedstrijd. Je kunt reproducties winnen, en het origineel is voor wie er de meeste van vindt. Er komen er een veertigtal, op straat geplakt. Als niet iedereen ze vindt, is dat niet erg: het is gewoon – nogmaals – <em>pour jouer</em>, om te spelen. Deelnemen, ontdekken. Ook voor mij was het een manier om de stad te ontdekken: door de straten lopen om te zien waar de gezichten zich zouden kunnen verstoppen.</p>
+<p><strong>HVC: Wat vind je trouwens van onze stad? (Los van de te vele straatwerken op dit moment.) Is het je eerste visit in Gent?</strong></p>
+<p>MT: Ik was hier al twee keer, maar ik had de stad nooit echt ontdekt. Ik vind ze super, ik ben er dol op. Ik vind ze heel vrolijk.</p>
+<p><strong>HVC: Vrolijk? Dat moet ik onthouden op Gentse regenachtige grijze maandagochtenden. (knipoogt) Wat is voor jou het mooiste compliment?</strong></p>
+<p>MT: Wanneer een bezoeker van mijn expo ‘geraakt’ wordt, als iemand erin slaagt mijn universum binnen te stappen.</p>
+<p><strong>HVC: Kinderen houden van je werk. Het is kunst voor iedereen, wat niet betekent dat het niet voor highbrow-ers is. Vergelijk het met stripsverhalen: jongeren houden ervan, en wie iets van kunst kent, weet dat het meer is dan fantasie. Wat motiveert je in je praktijk?</strong></p>
+<p>MT: Kunst laat me toe veel te ontdekken, overal naartoe te gaan, mensen te ontmoeten. Het is een manier om uit te wisselen, in communicatie te zijn met anderen.</p>
+<p><strong>HVC: Toch vergeet men vaak de andere kant: de kunstenaar is soms de hele dag alleen, gaat vooral in gesprek met zijn objecten. Een voordeel van Gent: hier kan je als het ware tegen iemand spontaan vragen: ‘Doen we straks een terras?’</strong></p>
+<p>MT: Absoluut. Maar wat me elke dag motiveert om verder te doen, is het volgende project. Iets anders doen, iets wat ik nog niet gedaan heb.</p>
+<p><strong>HVC: Gebeurt het dat je een tentoonstelling ziet en denkt: dat wil ik ook?</strong></p>
+<p>MT: Natuurlijk, je wordt altijd geïnspireerd door wat je ziet, door het werk van anderen. Er zijn kunstenaars die me sterk gestimuleerd hebben: Hervé Di Rosa, een Franse kunstenaar, Jean Dubuffet, de propagandist van de term art brut. Zijn parcours en zijn benadering van kunst hebben me altijd erg geïnteresseerd.</p>
+<p><strong>HVC: Ken je het museum aan het France Lac Leman, waar je met de boot naar het Zwitserse Lausanne vaart? Daar heb je dat schitterend museum voor art brut. Zie je jouw insteek als iets even instinctiefs?</strong></p>
+<p>MT: Een instinctieve en niet-geleerde praktijk. Dat is wat Dubuffet verdedigde. Hij begon heel laat met kunst te creëren, zo rond zijn veertigste, vijfenveertigste. Hij had eerst een ander leven gehad, hij had geen kunstopleiding en daardoor volledig autodidact, met een heel instinctieve benadering. Dat spreekt me enorm aan.</p>
+<figure class="dn-fig"><img loading="lazy" src="/_assets/images/interview/interview-monsieur-terez/humanimality-jolien-chielens-288.jpg" alt="Humanimality, DeNode Foundation (2026) — Foto: Jolien Chielens" data-cap="Humanimality, DeNode Foundation (2026) — © Jolien Chielens"><figcaption>Humanimality, DeNode Foundation (2026) <span class="dn-credit">— © Jolien Chielens</span></figcaption></figure>
+<p><strong>HVC: Je woont in Frankrijk, in een rustig dorp, een drukke stad… ?</strong></p>
+<p>MT: Ik woon in de stad Pau, dat ligt tussen Biarritz en Lourdes in, in het zuidwesten.</p>
+<p><strong>HVC: Hoe ziet daar een atelierdag er doorgaans uit? In je pyjama sloffen naar je atelier? Ochtendgymnastiek? Of een koffie en een fikse ochtendwandeling?</strong></p>
+<p>MT: Ook thuis ga ik eerst en vooral een luchtje scheppen, wandelen, een koffie drinken, mensen zien. Daarna werk ik tot een uur of zes à acht uur, en dat is het. ’s Nachts werk ik niet (meer).</p>
+<p><strong>HVC: En ’s avonds, voor je televisie, noteer je dan soms ideeën in een schetsboek?</strong></p>
+<p>MT: Overal. Ik heb altijd een schriftje bij me. Inspiratie komt uit een film, een liedje, de straat, mensen die me iets vertellen…</p>
+<p><strong>HVC: En in het atelier: is het de onderschatte stilte, muziek of een potcast die je motiveert?</strong></p>
+<p>MT: Ik werk nooit met muziek. Ik creëer in stilte, want terwijl ik werk, blijft mijn geest dwalen. Als ik schilder, komen de dingen een beetje vanzelf, als een soort automatisch schrift en is mijn geest vrij om aan andere dingen te denken.</p>
+<p><strong>HVC: Cool! In het “highbrow” kunstmilieu – denk aan de befaamde ‘kunstsnobs’ – stoor je je soms aan hen als ze achteloos aan je werk voorbij gaan? Misschien wegens te – in hun ogen – ‘lichte’ werk dat je op het eerste gezicht maakt?</strong></p>
+<p>MT: Dat gaat eigenlijk langs me heen. In Frankrijk is het de instelling die de wet van de kunst dicteert. Ik ben daar van bij het begin mee geconfronteerd en werd door dat milieu volledig afgewezen. Daarom kwam ik zelfs terecht in de art brut en de <em>art singulier</em> – dat in de jaren 70 oppopte – en ‘zogenoemd’ marginale praktijken waren. Ik heb snel aanvaard dat die mensen niet met mij wilden samenwerken. Als mensen niet met mij willen collaboreren, ga ik de deur niet forceren; dat interesseert me niet. Ik heb andere gesprekspartners gevonden, die mijn aanpak wel begrijpen. En nu komen de instellingen eerder naar mij toe. Voor mij zijn het universums die parallel bestaan.</p>
+<p><strong>HVC: Ik begrijp je aanpak, daar kan je van op aan! Het is op het eerste zicht vrolijk, wat je doet, laten we de ‘vrolijkheid’ meer omarmen. En ja, achter en ‘blij’ schuilt eveneens een zwarte wolk. C’est la vie. Ik wens je veel succes! ik ben fan!</strong></p>
+<p>MT: Merci.</p>
+<p><strong>HVC: Oh ja, een absurde (Belgen)vraag: wat is je favoriete Belgische gerecht?</strong></p>
+<p>MT: Frieten, natuurlijk. (<em>lacht</em>)</p>
+<p><strong>HVC: Bon appetit Monsieur Térez!</strong></p>
+<p>Hilde Van Canneyt</p>
+<p><em>Interview naar aanleiding van de EXPO <a href="../expo/humanimality.html">Humanimality</a>, Foundation DeNode, Predikherenlei 4, 9000 Gent. De expo loopt van 16 oktober tot 20 december 2026. Welkom!</em></p>
+<p><a href="https://monsieurterez.art/" target="_blank" rel="noopener">monsieurterez.art</a> · Oorspronkelijk verschenen op <a href="https://www.hildevancanneyt.be/2026/10/14/interview-met-monsieur-terez/" target="_blank" rel="noopener">hildevancanneyt.be</a></p>
+<p><em>Foto's: <a href="../over.html#paul-de-canniere">Paul De Cannière</a> (interview), <a href="../kunstenaar/jolien-chielens.html">Jolien Chielens</a> (tentoonstelling).</em></p></div>
+<div class="dn-serif-it" style="font-size:18px;margin-top:44px">— <a href="../kunstenaar/hilde-van-canneyt.html">Hilde Van Canneyt</a></div>
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../expo/humanimality.html">Tentoonstellingen: Humanimality →</a></p>
+<p style="margin-top:40px"><a class="dn-btn dn-btn--ghost" href="../kunstenaar/monsieur-terez.html">Kunstenaar: Monsieur Térez →</a></p>
+</div></section>
+
+<div id="dn-lb" role="dialog" aria-label="beeld"><button class="close" aria-label="sluiten">×</button>
+<button class="prev" aria-label="vorige">←</button><img alt=""><div class="cap"></div><div class="cnt"></div>
+<button class="next" aria-label="volgende">→</button></div>
+<script>(function(){
+var lb=document.getElementById('dn-lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),cnt=lb.querySelector('.cnt');
+var beelden=[].slice.call(document.querySelectorAll('.dn-gal img,.dn-fig img,.dn-hero-full>img,.dn-hero__img img'))
+  .filter(function(el){return !el.closest('#dn-lb')&&!el.closest('a');});
+if(!beelden.length)return;
+var idx=0;
+function toon(i){idx=(i+beelden.length)%beelden.length;var el=beelden[idx];im.src=el.dataset.vol||el.currentSrc||el.src;
+  var fc=el.closest('figure')&&el.closest('figure').querySelector('figcaption');
+  cap.textContent=el.dataset.cap||(fc?fc.textContent:(el.alt||''));cnt.textContent=(idx+1)+' / '+beelden.length;}
+function open(i){toon(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function dicht(){lb.classList.remove('open');document.body.style.overflow='';}
+beelden.forEach(function(el,i){el.addEventListener('click',function(e){e.preventDefault();open(i);});});
+lb.querySelector('.close').onclick=dicht;
+lb.querySelector('.prev').onclick=function(e){e.stopPropagation();toon(idx-1);};
+lb.querySelector('.next').onclick=function(e){e.stopPropagation();toon(idx+1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===im&&false)dicht();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')dicht();else if(e.key==='ArrowLeft')toon(idx-1);else if(e.key==='ArrowRight')toon(idx+1);});
+var x0=null;
+lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;
+  if(Math.abs(dx)>40)toon(idx+(dx<0?1:-1));x0=null;},{passive:true});
+})();</script>
+<footer class="dn-footer"><div class="dn-wrap"><div class="cols">
+<div><img src="../../assets/denode-logo-white.png" alt="DeNode"><p>nodenaysteen — Predikherenlei 4, 9000 Gent<br><a href="mailto:info@denode.be">info@denode.be</a> · <a href="tel:+32488880889">+32 488 88 08 89</a></p></div>
+<div><h4>Ontdek</h4><ul class="fnav">
+<li><a href="../expo/index.html">Tentoonstellingen</a></li>
+<li><a href="../kunstenaar/index.html">Kunstenaars</a></li>
+<li><a href="../publicaties.html">Publicaties</a></li>
+<li><a href="../collectie.html">Collectie</a></li>
+<li><a href="../shop.html">Collect</a></li>
+<li><a href="../event/index.html">Events</a></li>
+<li><a href="../geschiedenis.html">Geschiedenis</a></li>
+<li><a href="../pers.html">Pers</a></li></ul></div>
+<div><h4>Betrokken</h4><ul class="fnav">
+<li><a href="../bezoek.html">Bezoek</a></li>
+<li><a href="../over.html">Over</a></li>
+<li><a href="mailto:info@denode.be">Contact</a></li>
+<li><a href="../nieuwsbrief.html">Nieuwsbrief</a></li>
+<li><a href="https://www.instagram.com/denode_foundation" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="../cookie.html">Cookie</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Stichting DeNode · Predikherenlei 4, 9000 Gent</span><span class="dn-serif-it">Stichting DeNode is een huis voor actuele kunst in het hart van Gent.</span></div></div></footer>
+
+</body></html>
