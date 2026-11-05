@@ -131,7 +131,7 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div className="fine">
-          <span>{f.copyright} · Predikherenlei 4, 9000 Gent</span>
+          <span>{f.copyright}</span>
           <span className="dn-serif-it text-[#98917f]">{t.refrain}</span>
         </div>
       </div>
