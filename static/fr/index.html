@@ -23,7 +23,7 @@
 /* home-carrousel (Paul 26 sep 2026): hero-aankondigingen (lopende/komende expo + open calls)
    wisselen om de 7s (Paul koos 7 i.p.v. 5) met dezelfde .9s-fade als het wisselbeeld. Dia's gestapeld in één
    grid-cel → de hoogste dia bepaalt de hoogte, niets springt. Tabbalk = genummerde koppen;
-   een oxide haarlijn loopt vol in 7s en IS de timer (animationend → volgende dia), zodat
+   een oxide haarlijn loopt vol in 12s (20 nov 2026: was 7s, op verzoek van Marian) en IS de timer (animationend → volgende dia), zodat
    pauzeren (hover, focus, knop) de timer vanzelf stilzet. Reduced-motion: geen autoplay. */
 .dn-carr{display:grid;border-bottom:2px solid var(--ink);}
 .dn-carr>.dn-slide{grid-area:1/1;border-bottom:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s;}
@@ -37,7 +37,7 @@
 .dn-carr__tab.aan{color:var(--ink);}
 .dn-carr__tab.aan .k{color:var(--accent);}
 .dn-carr__tab::before{content:"";position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--accent);}
-.dn-carr__tab.aan::before{animation:dn-vul 7s linear forwards;}
+.dn-carr__tab.aan::before{animation:dn-vul 12s linear forwards;}
 .dn-carr.pauze .dn-carr__tab.aan::before{animation-play-state:paused;}
 @keyframes dn-vul{from{width:0}to{width:100%}}
 .dn-carr__pp{flex:0 0 58px;background:none;border:0;cursor:pointer;color:var(--ink);font-family:var(--font-ui);font-size:13px;font-weight:700;}
