@@ -1,47 +1,47 @@
 {
-  "updated": "2026-11-22T05:46:43.782Z",
+  "updated": "2026-11-22T16:01:55.254Z",
   "posts": [
     {
       "img": "/assets/ig/1.jpg",
+      "permalink": "https://www.instagram.com/p/DgCXad1ETvv/",
+      "caption": "VESTIGES — SOLD OUT De releaseavond van Vestiges is uitverkocht. Bedankt voor jullie enthousiasme — we kijken ernaar uit om dit moment op 2…",
+      "type": "CAROUSEL_ALBUM",
+      "timestamp": "2026-11-22T08:22:23+0000"
+    },
+    {
+      "img": "/assets/ig/2.jpg",
       "permalink": "https://www.instagram.com/p/DgAZHEXET29/",
       "caption": "DE FABULISTERIE IS OPEN VOOR IEDEREEN Elke zaterdag tot eind november opent de Fabulisterie van 14 tot 18 uur haar deuren voor het publiek.…",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-11-21T13:58:44+0000"
     },
     {
-      "img": "/assets/ig/2.jpg",
+      "img": "/assets/ig/3.jpg",
       "permalink": "https://www.instagram.com/reel/DgAURprxrA6/",
       "caption": "In this interview, Monsieur Térez @monsieur_terez opens up and tells us about his journey, his imagination and the creatures that inhabit h…",
       "type": "VIDEO",
       "timestamp": "2026-11-21T13:17:27+0000"
     },
     {
-      "img": "/assets/ig/3.jpg",
+      "img": "/assets/ig/4.jpg",
       "permalink": "https://www.instagram.com/p/DfiH1CIER4N/",
       "caption": "VESTIGES — Robrecht Kessels’ album release On Friday 27 November, Robrecht Kessels presents Vestiges in Ghent: a record that grew out of a …",
       "type": "CAROUSEL_ALBUM",
       "timestamp": "2026-11-09T19:50:30+0000"
     },
     {
-      "img": "/assets/ig/4.jpg",
+      "img": "/assets/ig/5.jpg",
       "permalink": "https://www.instagram.com/p/DfcQMWdRDSo/",
       "caption": "THE BIRTH OF NEW HUMANIMALS What might a new Humanimal look like? What would it believe in? Where might it come from? Join us at DeNode on …",
       "type": "IMAGE",
       "timestamp": "2026-11-07T13:09:27+0000"
     },
     {
-      "img": "/assets/ig/5.jpg",
+      "img": "/assets/ig/6.jpg",
       "permalink": "https://www.instagram.com/reel/De9vIVAxJag/",
       "caption": "DE GROTE HAPPY FACES-SPEURTOCHT IS GEOPEND! Monsieur Térez heeft 30 Happy Faces verstopt op de muren van Gent. Aan jou om ze te vinden! 👀 …",
       "type": "VIDEO",
       "timestamp": "2026-10-26T16:44:30+0000"
-    },
-    {
-      "img": "/assets/ig/6.jpg",
-      "permalink": "https://www.instagram.com/reel/DehTnPxA2UH/",
-      "caption": "OPENING TOMORROW After several months of dialogue and creation, DeNode Foundation has given French artist Monsieur Térez carte blanche to t…",
-      "type": "VIDEO",
-      "timestamp": "2026-10-15T15:59:18+0000"
     }
   ]
 }
